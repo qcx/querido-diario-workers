@@ -104,3 +104,13 @@ export function fromISODate(isoDate: string): Date {
 export function getCurrentTimestamp(): string {
   return new Date().toISOString();
 }
+
+/**
+ * Formats a date to Brazilian format (DD-MM-YYYY)
+ * Used for Instar platform URL construction
+ * @param date Date object
+ * @returns Formatted date string (DD-MM-YYYY)
+ */
+export function formatBrazilianDate(date: Date): string {
+  return format(date, 'dd-MM-yyyy');
+}

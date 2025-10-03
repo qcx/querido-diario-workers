@@ -1,0 +1,35 @@
+[
+  {
+    "id": "mg_betim",
+    "name": "Betim - MG",
+    "territoryId": "3106705",
+    "spiderType": "instar",
+    "startDate": "2008-01-11",
+    "config": {
+      "type": "instar",
+      "url": "https://www.betim.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_campo_belo",
+    "name": "Campo Belo - MG",
+    "territoryId": "3111200",
+    "spiderType": "instar",
+    "startDate": "2016-01-05",
+    "config": {
+      "type": "instar",
+      "url": "https://www.campobelo.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_candeias",
+    "name": "Candeias - MG",
+    "territoryId": "3112000",
+    "spiderType": "instar",
+    "startDate": "2017-02-08",
+    "config": {
+      "type": "instar",
+      "url": "https://www.candeias.mg.gov.br/portal/diario-oficial"
+    }
+  }
+]
