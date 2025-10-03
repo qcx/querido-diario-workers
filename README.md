@@ -34,18 +34,19 @@ This is a TypeScript/Node.js port of the [querido-diario](https://github.com/okf
 ```
 querido-diario-workers/
 ├── src/
-│   ├── index.ts              # Dispatcher worker
-│   ├── consumer.ts           # Queue consumer worker
-│   ├── types/                # TypeScript interfaces
+│   ├── index.ts                  # Dispatcher worker
+│   ├── consumer.ts               # Queue consumer worker
+│   ├── types/                    # TypeScript interfaces
 │   ├── spiders/
-│   │   ├── base/             # Base spider classes
+│   │   ├── base/                 # Base spider classes
 │   │   │   ├── base-spider.ts
 │   │   │   └── doem-spider.ts
-│   │   ├── configs/          # Spider configurations
+│   │   ├── configs/              # Spider configurations
 │   │   │   └── doem-cities.json
-│   │   └── registry.ts       # Spider factory
-│   └── utils/                # Utilities (HTTP, parsing, dates, logging)
-├── wrangler.toml             # Cloudflare configuration
+│   │   └── registry.ts           # Spider factory
+│   └── utils/                    # Utilities (HTTP, parsing, dates, logging)
+├── wrangler.jsonc                # Dispatcher configuration
+├── wrangler.consumer.jsonc       # Consumer configuration
 ├── package.json
 ├── tsconfig.json
 └── README.md

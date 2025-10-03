@@ -8,12 +8,15 @@
     "test": "tests"
   },
   "scripts": {
-    "dev": "wrangler dev",
-    "dev:consumer": "wrangler dev src/consumer.ts",
-    "deploy": "wrangler deploy",
-    "deploy:consumer": "wrangler deploy src/consumer.ts --name querido-diario-consumer",
+    "dev": "wrangler dev --config wrangler.jsonc",
+    "dev:consumer": "wrangler dev --config wrangler.consumer.jsonc",
+    "deploy": "wrangler deploy --config wrangler.jsonc",
+    "deploy:consumer": "wrangler deploy --config wrangler.consumer.jsonc",
+    "deploy:all": "npm run deploy && npm run deploy:consumer",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx tsx test-local.ts",
+    "queue:create": "wrangler queues create gazette-crawl-queue",
+    "queue:create:dlq": "wrangler queues create gazette-crawl-dlq"
   },
   "keywords": [
     "cloudflare-workers",

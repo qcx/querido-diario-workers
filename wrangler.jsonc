@@ -1,0 +1,32 @@
+{
+  // Dispatcher Worker Configuration
+  "name": "querido-diario-dispatcher",
+  "main": "src/index.ts",
+  "compatibility_date": "2024-10-01",
+  "node_compat": true,
+
+  // Observability
+  "observability": {
+    "enabled": true
+  },
+
+  // Queue Producers - Dispatcher sends messages to the queue
+  "queues": {
+    "producers": [
+      {
+        "queue": "gazette-crawl-queue",
+        "binding": "CRAWL_QUEUE"
+      }
+    ]
+  },
+
+  // Environments
+  "env": {
+    "development": {
+      "name": "querido-diario-dispatcher-dev"
+    },
+    "production": {
+      "name": "querido-diario-dispatcher-prod"
+    }
+  }
+}
