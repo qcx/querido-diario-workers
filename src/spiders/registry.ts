@@ -1,7 +1,8 @@
 import { SpiderConfig, SpiderType, DateRange } from '../types';
-import { BaseSpider, DoemSpider, InstarSpider, ADiariosV1Spider, SigpubSpider } from './base';
+import { BaseSpider, DoemSpider, InstarSpider, DospSpider, ADiariosV1Spider, SigpubSpider } from './base';
 import doemCitiesConfig from './configs/doem-cities.json';
 import instarCitiesConfig from './configs/instar-cities.json';
+import dospCitiesConfig from './configs/dosp-cities.json';
 
 /**
  * Spider registry - maps spider IDs to configurations
@@ -24,6 +25,11 @@ class SpiderRegistry {
     
     // Load Instar cities
     for (const config of instarCitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load DOSP cities
+    for (const config of dospCitiesConfig as SpiderConfig[]) {
       this.configs.set(config.id, config);
     }
   }
@@ -67,6 +73,9 @@ class SpiderRegistry {
         
       case 'instar':
         return new InstarSpider(config, dateRange);
+        
+      case 'dosp':
+        return new DospSpider(config, dateRange);
         
       case 'sigpub':
         return new SigpubSpider(config, dateRange);

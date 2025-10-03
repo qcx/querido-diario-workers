@@ -1,0 +1,35 @@
+[
+  {
+    "id": "ce_horizonte",
+    "name": "Horizonte - CE",
+    "territoryId": "2305233",
+    "spiderType": "dosp",
+    "startDate": "2023-07-03",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/horizonte"
+    }
+  },
+  {
+    "id": "mg_itajuba",
+    "name": "Itajubá - MG",
+    "territoryId": "3132404",
+    "spiderType": "dosp",
+    "startDate": "2023-05-15",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/itajuba"
+    }
+  },
+  {
+    "id": "ms_deodapolis",
+    "name": "Deodápolis - MS",
+    "territoryId": "5003454",
+    "spiderType": "dosp",
+    "startDate": "2023-11-17",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/deodapolis"
+    }
+  }
+]

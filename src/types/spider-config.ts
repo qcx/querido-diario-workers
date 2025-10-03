@@ -6,6 +6,7 @@ export type SpiderType =
   | 'adiarios_v1'
   | 'adiarios_v2'
   | 'instar'
+  | 'dosp'
   | 'sigpub'
   | 'custom';
 
@@ -39,6 +40,7 @@ export type SpiderPlatformConfig =
   | DoemConfig
   | AdiariosConfig
   | InstarConfig
+  | DospConfig
   | SigpubConfig
   | CustomConfig;
 
@@ -50,6 +52,15 @@ export interface InstarConfig {
   /** Base URL for the Instar platform */
   url: string;
   // Add other Instar-specific configuration properties here if needed
+}
+
+/**
+ * Configuration for DOSP platform spiders
+ */
+export interface DospConfig {
+  type: 'dosp';
+  /** Start URL for the municipality (e.g., "https://www.imprensaoficialmunicipal.com.br/horizonte") */
+  url: string;
 }
 
 /**
