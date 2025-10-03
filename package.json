@@ -1,0 +1,39 @@
+{
+  "name": "querido-diario-workers",
+  "version": "1.0.0",
+  "description": "Serverless crawler for Brazilian official gazettes using Cloudflare Workers",
+  "main": "src/index.ts",
+  "type": "module",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "dev:consumer": "wrangler dev src/consumer.ts",
+    "deploy": "wrangler deploy",
+    "deploy:consumer": "wrangler deploy src/consumer.ts --name querido-diario-consumer",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cloudflare-workers",
+    "crawler",
+    "gazette",
+    "brazil",
+    "open-data"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "date-fns": "^4.1.0",
+    "hono": "^4.9.9"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20251003.0",
+    "@types/node": "^24.6.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.42.0"
+  }
+}

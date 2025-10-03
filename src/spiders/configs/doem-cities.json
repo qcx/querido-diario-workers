@@ -1,0 +1,552 @@
+[
+  {
+    "id": "ba_acajutiba",
+    "name": "Acajutiba - BA",
+    "territoryId": "2900306",
+    "spiderType": "doem",
+    "startDate": "2013-01-30",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/acajutiba"
+    }
+  },
+  {
+    "id": "ba_alagoinhas",
+    "name": "Alagoinhas - BA",
+    "territoryId": "2900702",
+    "spiderType": "doem",
+    "startDate": "2015-01-28",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/alagoinhas"
+    }
+  },
+  {
+    "id": "ba_alcobaca",
+    "name": "Alcobaca - BA",
+    "territoryId": "2900801",
+    "spiderType": "doem",
+    "startDate": "2017-03-03",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/alcobaca"
+    }
+  },
+  {
+    "id": "ba_angical",
+    "name": "Angical - BA",
+    "territoryId": "2901403",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/angical"
+    }
+  },
+  {
+    "id": "ba_banzae",
+    "name": "Banzae - BA",
+    "territoryId": "2902658",
+    "spiderType": "doem",
+    "startDate": "2017-02-02",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/banzae"
+    }
+  },
+  {
+    "id": "ba_barrocas_2017",
+    "name": "Barrocas - BA",
+    "territoryId": "2903276",
+    "spiderType": "doem",
+    "startDate": "2017-01-02",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/barrocas"
+    }
+  },
+  {
+    "id": "ba_brotas_de_macaubas",
+    "name": "Brotasdemacaubas - BA",
+    "territoryId": "2904506",
+    "spiderType": "doem",
+    "startDate": "2019-08-13",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/brotasdemacaubas"
+    }
+  },
+  {
+    "id": "ba_cachoeira_2017",
+    "name": "Cachoeira - BA",
+    "territoryId": "2904902",
+    "spiderType": "doem",
+    "startDate": "2017-01-03",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/cachoeira"
+    }
+  },
+  {
+    "id": "ba_cacule_2014",
+    "name": "Cacule - BA",
+    "territoryId": "2905008",
+    "spiderType": "doem",
+    "startDate": "2014-01-02",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/cacule"
+    }
+  },
+  {
+    "id": "ba_caetite",
+    "name": "Caetite - BA",
+    "territoryId": "2905206",
+    "spiderType": "doem",
+    "startDate": "2021-04-27",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/caetite"
+    }
+  },
+  {
+    "id": "ba_camamu_2017",
+    "name": "Camamu - BA",
+    "territoryId": "2905800",
+    "spiderType": "doem",
+    "startDate": "2017-01-03",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/camamu"
+    }
+  },
+  {
+    "id": "ba_campo_alegre_de_lourdes",
+    "name": "Campoalegredelourdes - BA",
+    "territoryId": "2905909",
+    "spiderType": "doem",
+    "startDate": "2020-11-30",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/campoalegredelourdes"
+    }
+  },
+  {
+    "id": "ba_campo_formoso",
+    "name": "Campoformoso - BA",
+    "territoryId": "2906006",
+    "spiderType": "doem",
+    "startDate": "2013-01-31",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/campoformoso"
+    }
+  },
+  {
+    "id": "ba_canudos",
+    "name": "Canudos - BA",
+    "territoryId": "2906824",
+    "spiderType": "doem",
+    "startDate": "2013-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/canudos"
+    }
+  },
+  {
+    "id": "ba_catolandia_2015",
+    "name": "Catolandia - BA",
+    "territoryId": "2907400",
+    "spiderType": "doem",
+    "startDate": "2015-05-06",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/catolandia"
+    }
+  },
+  {
+    "id": "ba_catu_2014",
+    "name": "Catu - BA",
+    "territoryId": "2907509",
+    "spiderType": "doem",
+    "startDate": "2014-07-17",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/catu"
+    }
+  },
+  {
+    "id": "ba_cicero_dantas",
+    "name": "Cicerodantas - BA",
+    "territoryId": "2907806",
+    "spiderType": "doem",
+    "startDate": "2012-01-03",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/cicerodantas"
+    }
+  },
+  {
+    "id": "ba_cipo",
+    "name": "Cipo - BA",
+    "territoryId": "2907905",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/cipo"
+    }
+  },
+  {
+    "id": "ba_correntina_2025",
+    "name": "Correntina - BA",
+    "territoryId": "2909307",
+    "spiderType": "doem",
+    "startDate": "2025-01-01",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/correntina"
+    }
+  },
+  {
+    "id": "ba_cotegipe",
+    "name": "Cotegipe - BA",
+    "territoryId": "2909406",
+    "spiderType": "doem",
+    "startDate": "2023-01-05",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/cotegipe"
+    }
+  },
+  {
+    "id": "ba_cristopolis",
+    "name": "Cristopolis - BA",
+    "territoryId": "2909703",
+    "spiderType": "doem",
+    "startDate": "2021-01-12",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/cristopolis"
+    }
+  },
+  {
+    "id": "ba_cruz_das_almas",
+    "name": "Cruzdasalmas - BA",
+    "territoryId": "2909802",
+    "spiderType": "doem",
+    "startDate": "2021-04-01",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/cruzdasalmas"
+    }
+  },
+  {
+    "id": "ba_esplanada",
+    "name": "Esplanada - BA",
+    "territoryId": "2910602",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/esplanada"
+    }
+  },
+  {
+    "id": "ba_formosa_do_rio_preto",
+    "name": "Formosadoriopreto - BA",
+    "territoryId": "2911105",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/formosadoriopreto"
+    }
+  },
+  {
+    "id": "ba_inhambupe",
+    "name": "Inhambupe - BA",
+    "territoryId": "2913705",
+    "spiderType": "doem",
+    "startDate": "2013-01-02",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/inhambupe"
+    }
+  },
+  {
+    "id": "ba_ipiau",
+    "name": "Ipiau - BA",
+    "territoryId": "2913903",
+    "spiderType": "doem",
+    "startDate": "2016-05-09",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/ipiau"
+    }
+  },
+  {
+    "id": "ba_irara",
+    "name": "Irara - BA",
+    "territoryId": "2914505",
+    "spiderType": "doem",
+    "startDate": "2014-04-24",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/irara"
+    }
+  },
+  {
+    "id": "ba_itaberaba",
+    "name": "Itaberaba - BA",
+    "territoryId": "2914703",
+    "spiderType": "doem",
+    "startDate": "2022-07-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/itaberaba"
+    }
+  },
+  {
+    "id": "ba_itamaraju",
+    "name": "Itamaraju - BA",
+    "territoryId": "2915601",
+    "spiderType": "doem",
+    "startDate": "2008-03-28",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/itamaraju"
+    }
+  },
+  {
+    "id": "ba_itapetinga",
+    "name": "Itapetinga - BA",
+    "territoryId": "2916401",
+    "spiderType": "doem",
+    "startDate": "2010-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/itapetinga"
+    }
+  },
+  {
+    "id": "ba_itapicuru",
+    "name": "Itapicuru - BA",
+    "territoryId": "2916500",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/itapicuru"
+    }
+  },
+  {
+    "id": "ba_ituacu",
+    "name": "Ituacu - BA",
+    "territoryId": "2917201",
+    "spiderType": "doem",
+    "startDate": "2015-02-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/ituacu"
+    }
+  },
+  {
+    "id": "ba_jaguaquara",
+    "name": "Jaguaquara - BA",
+    "territoryId": "2917607",
+    "spiderType": "doem",
+    "startDate": "2021-04-05",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/jaguaquara"
+    }
+  },
+  {
+    "id": "ba_juazeiro",
+    "name": "Juazeiro - BA",
+    "territoryId": "2918407",
+    "spiderType": "doem",
+    "startDate": "2013-02-01",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/juazeiro"
+    }
+  },
+  {
+    "id": "ba_laje",
+    "name": "Laje - BA",
+    "territoryId": "2918803",
+    "spiderType": "doem",
+    "startDate": "2020-01-08",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/laje"
+    }
+  },
+  {
+    "id": "ba_lajedao",
+    "name": "Lajedao - BA",
+    "territoryId": "2918902",
+    "spiderType": "doem",
+    "startDate": "2021-04-14",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/lajedao"
+    }
+  },
+  {
+    "id": "ba_macajuba",
+    "name": "Macajuba - BA",
+    "territoryId": "2919603",
+    "spiderType": "doem",
+    "startDate": "2014-03-17",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/macajuba"
+    }
+  },
+  {
+    "id": "ba_mascote",
+    "name": "Mascote - BA",
+    "territoryId": "2920908",
+    "spiderType": "doem",
+    "startDate": "2010-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/mascote"
+    }
+  },
+  {
+    "id": "ba_monte_santo",
+    "name": "Montesanto - BA",
+    "territoryId": "2921500",
+    "spiderType": "doem",
+    "startDate": "2021-01-02",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/montesanto"
+    }
+  },
+  {
+    "id": "ba_morro_do_chapeu",
+    "name": "Morrodochapeu - BA",
+    "territoryId": "2921708",
+    "spiderType": "doem",
+    "startDate": "2021-01-06",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/morrodochapeu"
+    }
+  },
+  {
+    "id": "ba_mucuri",
+    "name": "Mucuri - BA",
+    "territoryId": "2922003",
+    "spiderType": "doem",
+    "startDate": "2011-04-05",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/mucuri"
+    }
+  },
+  {
+    "id": "ba_prado",
+    "name": "Prado - BA",
+    "territoryId": "2925501",
+    "spiderType": "doem",
+    "startDate": "2013-02-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/prado"
+    }
+  },
+  {
+    "id": "ba_santa_cruz_cabralia",
+    "name": "Santacruzcabralia - BA",
+    "territoryId": "2927705",
+    "spiderType": "doem",
+    "startDate": "2017-01-09",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/santacruzcabralia"
+    }
+  },
+  {
+    "id": "ba_santa_luzia_2021",
+    "name": "Santaluzia - BA",
+    "territoryId": "2928059",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/santaluzia"
+    }
+  },
+  {
+    "id": "ba_santa_rita_de_cassia",
+    "name": "Santaritadecassia - BA",
+    "territoryId": "2928406",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/santaritadecassia"
+    }
+  },
+  {
+    "id": "ba_santo_estevao",
+    "name": "Santoestevao - BA",
+    "territoryId": "2928802",
+    "spiderType": "doem",
+    "startDate": "2017-01-06",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/santoestevao"
+    }
+  },
+  {
+    "id": "ba_satiro_dias",
+    "name": "Satirodias - BA",
+    "territoryId": "2929701",
+    "spiderType": "doem",
+    "startDate": "2021-03-30",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/satirodias"
+    }
+  },
+  {
+    "id": "ba_senhor_do_bonfim",
+    "name": "Senhordobonfim - BA",
+    "territoryId": "2930105",
+    "spiderType": "doem",
+    "startDate": "2013-01-03",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/senhordobonfim"
+    }
+  },
+  {
+    "id": "ba_sento_se",
+    "name": "Sentose - BA",
+    "territoryId": "2930204",
+    "spiderType": "doem",
+    "startDate": "2017-01-02",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/sentose"
+    }
+  },
+  {
+    "id": "ba_tapiramuta",
+    "name": "Tapiramuta - BA",
+    "territoryId": "2931301",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/tapiramuta"
+    }
+  }
+]
