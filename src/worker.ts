@@ -190,13 +190,20 @@ async function handleQueue(batch: MessageBatch<QueueMessage>, _env: Bindings): P
       const result: CrawlResult = {
         spiderId: queueMessage.spiderId,
         territoryId: queueMessage.territoryId,
-        success: true,
-        gazettesFound: gazettes.length,
-        dateRange: queueMessage.dateRange,
-        executionTimeMs,
+        gazettes,
+        stats: {
+          totalFound: gazettes.length,
+          dateRange: queueMessage.dateRange,
+          requestCount: spider.getRequestCount(),
+          executionTimeMs,
+        },
       };
 
-      logger.info('Crawl task completed', result);
+      logger.info('Crawl task completed', {
+        spiderId: result.spiderId,
+        totalFound: result.stats.totalFound,
+        executionTimeMs: result.stats.executionTimeMs,
+      });
 
       // Here you would typically:
       // 1. Store the gazettes in a database or storage
@@ -208,8 +215,7 @@ async function handleQueue(batch: MessageBatch<QueueMessage>, _env: Bindings): P
     } catch (error) {
       const executionTimeMs = Date.now() - startTime;
       
-      logger.error('Crawl task failed', {
-        error: error as Error,
+      logger.error('Crawl task failed', error as Error, {
         spiderId: message.body.spiderId,
         territoryId: message.body.territoryId,
       });
@@ -217,14 +223,21 @@ async function handleQueue(batch: MessageBatch<QueueMessage>, _env: Bindings): P
       const result: CrawlResult = {
         spiderId: message.body.spiderId,
         territoryId: message.body.territoryId,
-        success: false,
-        gazettesFound: 0,
-        dateRange: message.body.dateRange,
-        executionTimeMs,
-        error: (error as Error).message,
+        gazettes: [],
+        stats: {
+          totalFound: 0,
+          dateRange: message.body.dateRange,
+          executionTimeMs,
+        },
+        error: {
+          message: (error as Error).message,
+        },
       };
 
-      logger.error('Crawl result', result);
+      logger.error('Crawl failed', undefined, {
+        spiderId: result.spiderId,
+        errorMessage: result.error?.message,
+      });
 
       // Retry the message
       message.retry();

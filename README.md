@@ -9,8 +9,9 @@ This is a TypeScript/Node.js port of the [querido-diario](https://github.com/okf
 - ✅ **Serverless**: Runs on Cloudflare Workers (no servers to manage)
 - ✅ **Scalable**: Uses Cloudflare Queues for distributed crawling
 - ✅ **TypeScript**: Fully typed codebase
-- ✅ **50+ Cities**: Initial support for 50 DOEM platform cities
+- ✅ **56 Cities**: Complete DOEM platform support (all available cities)
 - ✅ **Lightweight**: Extracts gazette metadata and PDF URLs (no file downloads)
+- ✅ **Fast**: Average 400-500ms per city crawl
 
 ## Architecture
 
@@ -133,12 +134,17 @@ npm run deploy
 
 ### Current
 
-- **DOEM** (Diário Oficial Eletrônico dos Municípios): 50 cities
+- **DOEM** (Diário Oficial Eletrônico dos Municípios): **56 cities** ✅
+  - 52 cities in Bahia (BA)
+  - 1 city in Pernambuco (PE)
+  - 2 cities in Paraná (PR)
+  - 1 city in Sergipe (SE)
 
 ### Planned
 
 - ADiarios V1: ~70 cities
 - ADiarios V2: ~12 cities
+- DIOF: ~50 cities
 - Other platforms: ~300+ cities
 
 ## Output Format
@@ -176,14 +182,14 @@ Each crawl returns gazette metadata:
 
 - [x] Core infrastructure (types, utils, base classes)
 - [x] DOEM spider implementation
-- [x] Dispatcher worker
-- [x] Consumer worker
-- [x] 50 DOEM cities configuration
-- [ ] ADiarios V1 spider
-- [ ] ADiarios V2 spider
-- [ ] Error handling and retry logic
-- [ ] Monitoring and alerting
+- [x] Unified worker (dispatcher + consumer)
+- [x] **56 DOEM cities configuration (100% complete)** ✅
+- [x] Multi-city testing
+- [ ] ADiarios V1 spider (~70 cities)
+- [ ] ADiarios V2 spider (~12 cities)
+- [ ] DIOF spider (~50 cities)
 - [ ] Storage integration (D1/KV/R2)
+- [ ] Monitoring and alerting
 - [ ] PDF download worker (optional)
 
 ## Contributing

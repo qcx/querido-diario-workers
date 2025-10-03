@@ -12,6 +12,7 @@
     "deploy": "wrangler deploy --config wrangler.jsonc",
     "build": "tsc",
     "test": "npx tsx test-local.ts",
+    "test:multiple": "npx tsx test-multiple-cities.ts",
     "queue:create": "wrangler queues create gazette-crawl-queue",
     "queue:create:dlq": "wrangler queues create gazette-crawl-dlq"
   },

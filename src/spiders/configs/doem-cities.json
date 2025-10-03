@@ -548,5 +548,71 @@
       "type": "doem",
       "stateCityUrlPart": "ba/tapiramuta"
     }
+  },
+  {
+    "id": "ba_teolandia",
+    "name": "Teolandia - BA",
+    "territoryId": "2931608",
+    "spiderType": "doem",
+    "startDate": "2014-01-15",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/teolandia"
+    }
+  },
+  {
+    "id": "ba_tucano",
+    "name": "Tucano - BA",
+    "territoryId": "2931905",
+    "spiderType": "doem",
+    "startDate": "2013-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/tucano"
+    }
+  },
+  {
+    "id": "pe_petrolina",
+    "name": "Petrolina - PE",
+    "territoryId": "2611101",
+    "spiderType": "doem",
+    "startDate": "2014-03-06",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "pe/petrolina"
+    }
+  },
+  {
+    "id": "pr_ipiranga",
+    "name": "Ipiranga - PR",
+    "territoryId": "4110508",
+    "spiderType": "doem",
+    "startDate": "2015-09-28",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "pr/ipiranga"
+    }
+  },
+  {
+    "id": "pr_tamboara",
+    "name": "Tamboara - PR",
+    "territoryId": "4126702",
+    "spiderType": "doem",
+    "startDate": "2022-08-22",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "pr/tamboara"
+    }
+  },
+  {
+    "id": "se_nossa_senhora_do_socorro",
+    "name": "Nossasenhoradosocorro - SE",
+    "territoryId": "2804805",
+    "spiderType": "doem",
+    "startDate": "2022-11-07",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "se/nossasenhoradosocorro"
+    }
   }
 ]
