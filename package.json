@@ -9,10 +9,7 @@
   },
   "scripts": {
     "dev": "wrangler dev --config wrangler.jsonc",
-    "dev:consumer": "wrangler dev --config wrangler.consumer.jsonc",
     "deploy": "wrangler deploy --config wrangler.jsonc",
-    "deploy:consumer": "wrangler deploy --config wrangler.consumer.jsonc",
-    "deploy:all": "npm run deploy && npm run deploy:consumer",
     "build": "tsc",
     "test": "npx tsx test-local.ts",
     "queue:create": "wrangler queues create gazette-crawl-queue",

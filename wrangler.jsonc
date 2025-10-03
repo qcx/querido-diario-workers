@@ -1,21 +1,30 @@
 {
-  // Dispatcher Worker Configuration
-  "name": "querido-diario-dispatcher",
-  "main": "src/index.ts",
+  // Unified Worker Configuration - Dispatcher and Consumer
+  "name": "querido-diario-worker",
+  "main": "src/worker.ts",
   "compatibility_date": "2024-10-01",
-  "node_compat": true,
+  "compatibility_flags": ["nodejs_compat"],
 
   // Observability
   "observability": {
     "enabled": true
   },
 
-  // Queue Producers - Dispatcher sends messages to the queue
+  // Queue Configuration - Both Producer and Consumer
   "queues": {
     "producers": [
       {
         "queue": "gazette-crawl-queue",
         "binding": "CRAWL_QUEUE"
+      }
+    ],
+    "consumers": [
+      {
+        "queue": "gazette-crawl-queue",
+        "max_batch_size": 10,
+        "max_batch_timeout": 30,
+        "max_retries": 3,
+        "dead_letter_queue": "gazette-crawl-dlq"
       }
     ]
   },
@@ -23,10 +32,10 @@
   // Environments
   "env": {
     "development": {
-      "name": "querido-diario-dispatcher-dev"
+      "name": "querido-diario-worker-dev"
     },
     "production": {
-      "name": "querido-diario-dispatcher-prod"
+      "name": "querido-diario-worker-prod"
     }
   }
 }

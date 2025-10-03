@@ -68,30 +68,18 @@ npm install
 
 ### Development
 
-Run the dispatcher worker locally:
+Run the unified worker locally:
 
 ```bash
 npm run dev
 ```
 
-Run the consumer worker locally:
-
-```bash
-npm run dev:consumer
-```
-
 ### Deployment
 
-Deploy the dispatcher worker:
+Deploy the unified worker:
 
 ```bash
 npm run deploy
-```
-
-Deploy the consumer worker:
-
-```bash
-npm run deploy:consumer
 ```
 
 ## API Usage
