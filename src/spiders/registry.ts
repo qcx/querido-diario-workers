@@ -1,5 +1,5 @@
 import { SpiderConfig, SpiderType, DateRange } from '../types';
-import { BaseSpider, DoemSpider } from './base';
+import { BaseSpider, DoemSpider, InstarSpider, ADiariosV1Spider, SigpubSpider } from './base';
 import doemCitiesConfig from './configs/doem-cities.json';
 
 /**
@@ -54,8 +54,16 @@ class SpiderRegistry {
         return new DoemSpider(config, dateRange);
       
       case 'adiarios_v1':
+        return new ADiariosV1Spider(config, dateRange);
+        
       case 'adiarios_v2':
         throw new Error(`Spider type ${config.spiderType} not implemented yet`);
+        
+      case 'instar':
+        return new InstarSpider(config, dateRange);
+        
+      case 'sigpub':
+        return new SigpubSpider(config, dateRange);
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);

@@ -9,12 +9,16 @@ import { logger } from '../../utils/logger';
  */
 export abstract class BaseSpider {
   protected config: SpiderConfig;
+  protected spiderConfig: SpiderConfig;
+  protected dateRange: DateRange;
   protected startDate: Date;
   protected endDate: Date;
   protected requestCount: number = 0;
 
   constructor(config: SpiderConfig, dateRange: DateRange) {
     this.config = config;
+    this.spiderConfig = config;
+    this.dateRange = dateRange;
     this.startDate = fromISODate(dateRange.start);
     this.endDate = fromISODate(dateRange.end);
 

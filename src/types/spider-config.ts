@@ -6,6 +6,7 @@ export type SpiderType =
   | 'adiarios_v1'
   | 'adiarios_v2'
   | 'instar'
+  | 'sigpub'
   | 'custom';
 
 /**
@@ -38,6 +39,7 @@ export type SpiderPlatformConfig =
   | DoemConfig
   | AdiariosConfig
   | InstarConfig
+  | SigpubConfig
   | CustomConfig;
 
 /**
@@ -48,6 +50,16 @@ export interface InstarConfig {
   /** Base URL for the Instar platform */
   url: string;
   // Add other Instar-specific configuration properties here if needed
+}
+
+/**
+ * Configuration for Sigpub platform spiders
+ */
+export interface SigpubConfig {
+  type: 'sigpub';
+  /** Base URL for the Sigpub platform */
+  url: string;
+  // Add other Sigpub-specific configuration properties here if needed
 }
 
 /**
