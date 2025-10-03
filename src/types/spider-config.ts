@@ -5,6 +5,7 @@ export type SpiderType =
   | 'doem'
   | 'adiarios_v1'
   | 'adiarios_v2'
+  | 'instar'
   | 'custom';
 
 /**
@@ -36,7 +37,18 @@ export interface SpiderConfig {
 export type SpiderPlatformConfig = 
   | DoemConfig
   | AdiariosConfig
+  | InstarConfig
   | CustomConfig;
+
+/**
+ * Configuration for Instar platform spiders
+ */
+export interface InstarConfig {
+  type: 'instar';
+  /** Base URL for the Instar platform */
+  url: string;
+  // Add other Instar-specific configuration properties here if needed
+}
 
 /**
  * Configuration for DOEM platform spiders
