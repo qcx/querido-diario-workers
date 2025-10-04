@@ -1,0 +1,46 @@
+[
+  {
+    "id": "ma_bacabal",
+    "name": "Bacabal - MA",
+    "territoryId": "2101202",
+    "spiderType": "aplus",
+    "startDate": "2017-01-01",
+    "config": {
+      "type": "aplus",
+      "baseUrl": "https://www.bacabal.ma.gov.br/diario/"
+    }
+  },
+  {
+    "id": "ma_caxias_2021",
+    "name": "Caxias - MA",
+    "territoryId": "2103000",
+    "spiderType": "aplus",
+    "startDate": "2021-01-01",
+    "config": {
+      "type": "aplus",
+      "baseUrl": "https://dom.caxias.ma.gov.br/diario/"
+    }
+  },
+  {
+    "id": "ma_codo",
+    "name": "Codó - MA",
+    "territoryId": "2103307",
+    "spiderType": "aplus",
+    "startDate": "2017-01-01",
+    "config": {
+      "type": "aplus",
+      "baseUrl": "https://www.codo.ma.gov.br/diario/"
+    }
+  },
+  {
+    "id": "ma_santo_antonio_dos_lopes",
+    "name": "Santo Antônio dos Lopes - MA",
+    "territoryId": "2110302",
+    "spiderType": "aplus",
+    "startDate": "2017-01-01",
+    "config": {
+      "type": "aplus",
+      "baseUrl": "https://www.stoantoniodoslopes.ma.gov.br/diario/"
+    }
+  }
+]

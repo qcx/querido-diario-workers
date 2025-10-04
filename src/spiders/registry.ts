@@ -2,6 +2,11 @@ import { SpiderConfig, SpiderType, DateRange } from '../types';
 import { BaseSpider, DoemSpider, InstarSpider, DospSpider, DiofSpider, ADiariosV1Spider, SigpubSpider, BarcoDigitalSpider, SiganetSpider } from './base';
 import { DiarioOficialBRSpider } from './base/diario-oficial-br-spider';
 import { ModernizacaoSpider } from './base/modernizacao-spider';
+import { ADiariosV2Spider } from './base/adiarios-v2-spider';
+import { AplusSpider } from './base/aplus-spider';
+import { DioenetSpider } from './base/dioenet-spider';
+import { AdministracaoPublicaSpider } from './base/administracao-publica-spider';
+import { PtioSpider } from './base/ptio-spider';
 import doemCitiesConfig from './configs/doem-cities.json';
 import instarCitiesConfig from './configs/instar-cities.json';
 import dospCitiesConfig from './configs/dosp-cities.json';
@@ -11,6 +16,11 @@ import barcoDigitalCitiesConfig from './configs/barco_digital_cities.json';
 import siganetCitiesConfig from './configs/siganet_cities.json';
 import diarioOficialBRCitiesConfig from './configs/diario-oficial-br-cities.json';
 import modernizacaoCitiesConfig from './configs/modernizacao-cities.json';
+import adiariosV2CitiesConfig from './configs/adiarios-v2-cities.json';
+import aplusCitiesConfig from './configs/aplus-cities.json';
+import dioenetCitiesConfig from './configs/dioenet-cities.json';
+import administracaoPublicaCitiesConfig from './configs/administracao-publica-cities.json';
+import ptioCitiesConfig from './configs/ptio-cities.json';
 
 /**
  * Spider registry - maps spider IDs to configurations
@@ -70,6 +80,31 @@ class SpiderRegistry {
     for (const config of modernizacaoCitiesConfig as SpiderConfig[]) {
       this.configs.set(config.id, config);
     }
+    
+    // Load ADiarios V2 cities
+    for (const config of adiariosV2CitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load Aplus cities
+    for (const config of aplusCitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load Dioenet cities
+    for (const config of dioenetCitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load AdministracaoPublica cities
+    for (const config of administracaoPublicaCitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load PTIO cities
+    for (const config of ptioCitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
   }
 
   /**
@@ -107,7 +142,7 @@ class SpiderRegistry {
         return new ADiariosV1Spider(config, dateRange);
         
       case 'adiarios_v2':
-        throw new Error(`Spider type ${config.spiderType} not implemented yet`);
+        return new ADiariosV2Spider(config, dateRange);
         
       case 'instar':
         return new InstarSpider(config, dateRange);
@@ -132,6 +167,18 @@ class SpiderRegistry {
       
       case 'modernizacao':
         return new ModernizacaoSpider(config, dateRange);
+      
+      case 'aplus':
+        return new AplusSpider(config, dateRange);
+      
+      case 'dioenet':
+        return new DioenetSpider(config, dateRange);
+      
+      case 'administracao_publica':
+        return new AdministracaoPublicaSpider(config, dateRange);
+      
+      case 'ptio':
+        return new PtioSpider(config, dateRange);
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);

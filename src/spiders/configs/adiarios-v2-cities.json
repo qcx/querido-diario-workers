@@ -1,0 +1,57 @@
+[
+  {
+    "id": "rj_armacao_dos_buzios",
+    "name": "Armação dos Búzios - RJ",
+    "territoryId": "3300233",
+    "spiderType": "adiarios_v2",
+    "startDate": "2015-09-03",
+    "config": {
+      "type": "adiarios_v2",
+      "baseUrl": "https://buzios.aexecutivo.com.br"
+    }
+  },
+  {
+    "id": "rj_casimiro_de_abreu",
+    "name": "Casimiro de Abreu - RJ",
+    "territoryId": "3301306",
+    "spiderType": "adiarios_v2",
+    "startDate": "2017-01-04",
+    "config": {
+      "type": "adiarios_v2",
+      "baseUrl": "https://www.transparencia.casimirodeabreu.rj.gov.br"
+    }
+  },
+  {
+    "id": "rj_cordeiro",
+    "name": "Cordeiro - RJ",
+    "territoryId": "3301504",
+    "spiderType": "adiarios_v2",
+    "startDate": "2017-10-05",
+    "config": {
+      "type": "adiarios_v2",
+      "baseUrl": "https://www.transparencia.cordeiro.rj.gov.br"
+    }
+  },
+  {
+    "id": "rj_iguaba_grande",
+    "name": "Iguaba Grande - RJ",
+    "territoryId": "3301876",
+    "spiderType": "adiarios_v2",
+    "startDate": "2013-01-01",
+    "config": {
+      "type": "adiarios_v2",
+      "baseUrl": "https://portal.iguaba.rj.gov.br"
+    }
+  },
+  {
+    "id": "rj_quissama",
+    "name": "Quissamã - RJ",
+    "territoryId": "3304151",
+    "spiderType": "adiarios_v2",
+    "startDate": "2017-01-31",
+    "config": {
+      "type": "adiarios_v2",
+      "baseUrl": "https://portal.quissama.rj.gov.br"
+    }
+  }
+]

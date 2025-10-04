@@ -1,0 +1,35 @@
+[
+  {
+    "id": "rj_areal",
+    "name": "Areal - RJ",
+    "territoryId": "3300225",
+    "spiderType": "ptio",
+    "startDate": "2006-08-01",
+    "config": {
+      "type": "ptio",
+      "baseUrl": "http://rj.portaldatransparencia.com.br/prefeitura/areal/"
+    }
+  },
+  {
+    "id": "rj_comendador_levy_gasparian",
+    "name": "Comendador Levy Gasparian - RJ",
+    "territoryId": "3300951",
+    "spiderType": "ptio",
+    "startDate": "2013-11-26",
+    "config": {
+      "type": "ptio",
+      "baseUrl": "http://rj.portaldatransparencia.com.br/prefeitura/comendadorlevygasparian/"
+    }
+  },
+  {
+    "id": "rj_sapucaia",
+    "name": "Sapucaia - RJ",
+    "territoryId": "3305406",
+    "spiderType": "ptio",
+    "startDate": "2019-01-16",
+    "config": {
+      "type": "ptio",
+      "baseUrl": "http://rj.portaldatransparencia.com.br/prefeitura/sapucaia/"
+    }
+  }
+]

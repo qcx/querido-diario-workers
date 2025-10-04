@@ -9,4 +9,9 @@ export * from './barco-digital-spider';
 export * from './siganet-spider';
 export * from './diario-oficial-br-spider';
 export * from './modernizacao-spider';
+export * from './adiarios-v2-spider';
+export * from './aplus-spider';
+export * from './dioenet-spider';
+export * from './administracao-publica-spider';
+export * from './ptio-spider';
 
