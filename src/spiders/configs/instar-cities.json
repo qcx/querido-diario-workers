@@ -3,8 +3,8 @@
     "id": "mg_betim",
     "name": "Betim - MG",
     "territoryId": "3106705",
-    "spiderType": "instar",
     "startDate": "2008-01-11",
+    "spiderType": "instar",
     "config": {
       "type": "instar",
       "url": "https://www.betim.mg.gov.br/portal/diario-oficial"
@@ -14,8 +14,8 @@
     "id": "mg_campo_belo",
     "name": "Campo Belo - MG",
     "territoryId": "3111200",
-    "spiderType": "instar",
     "startDate": "2016-01-05",
+    "spiderType": "instar",
     "config": {
       "type": "instar",
       "url": "https://www.campobelo.mg.gov.br/portal/diario-oficial"
@@ -25,11 +25,1199 @@
     "id": "mg_candeias",
     "name": "Candeias - MG",
     "territoryId": "3112000",
-    "spiderType": "instar",
     "startDate": "2017-02-08",
+    "spiderType": "instar",
     "config": {
       "type": "instar",
       "url": "https://www.candeias.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_carmo_da_cachoeira",
+    "name": "Carmo Da Cachoeira - MG",
+    "territoryId": "3113909",
+    "startDate": "2018-01-03",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.carmodacachoeira.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_carmo_do_rio_claro",
+    "name": "Carmo Do Rio Claro - MG",
+    "territoryId": "3114402",
+    "startDate": "2021-05-14",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.carmodorioclaro.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_contagem",
+    "name": "Contagem - MG",
+    "territoryId": "3118601",
+    "startDate": "2005-01-31",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://portal.contagem.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_crucilandia",
+    "name": "Crucilandia - MG",
+    "territoryId": "3120607",
+    "startDate": "2015-03-31",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "http://www.prefeituradecrucilandia.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_itauna",
+    "name": "Itauna - MG",
+    "territoryId": "3133808",
+    "startDate": "2013-06-20",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.itauna.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_januaria",
+    "name": "Januaria - MG",
+    "territoryId": "3135209",
+    "startDate": "2022-04-29",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.januaria.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_juatuba",
+    "name": "Juatuba - MG",
+    "territoryId": "3136652",
+    "startDate": "2016-01-05",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.juatuba.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_nova_serrana",
+    "name": "Nova Serrana - MG",
+    "territoryId": "3145208",
+    "startDate": "2015-10-27",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.novaserrana.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_onca_de_pitangui",
+    "name": "Onca De Pitangui - MG",
+    "territoryId": "3145802",
+    "startDate": "2021-05-24",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.oncadopitangui.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_piranguinho",
+    "name": "Piranguinho - MG",
+    "territoryId": "3151008",
+    "startDate": "2018-07-30",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.piranguinho.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_salinas",
+    "name": "Salinas - MG",
+    "territoryId": "3157005",
+    "startDate": "2017-02-01",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.salinas.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_taiobeiras",
+    "name": "Taiobeiras - MG",
+    "territoryId": "3168002",
+    "startDate": "2022-12-31",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.taiobeiras.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mg_varzea_da_palma",
+    "name": "Varzea Da Palma - MG",
+    "territoryId": "3170800",
+    "startDate": "2022-09-30",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.varzeadapalma.mg.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "ms_bela_vista",
+    "name": "Bela Vista - MS",
+    "territoryId": "5002100",
+    "startDate": "2011-11-16",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.belavista.ms.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "ms_costa_rica",
+    "name": "Costa Rica - MS",
+    "territoryId": "5003256",
+    "startDate": "2005-01-03",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.costarica.ms.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "ms_inocencia",
+    "name": "Inocencia - MS",
+    "territoryId": "5004403",
+    "startDate": "2013-10-17",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.inocencia.ms.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "ms_maracaju",
+    "name": "Maracaju - MS",
+    "territoryId": "5005400",
+    "startDate": "2013-03-14",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.maracaju.ms.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "mt_cotriguacu",
+    "name": "Cotriguacu - MT",
+    "territoryId": "5103379",
+    "startDate": "2023-11-17",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.cotriguacu.mt.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "pr_antonio_olinto",
+    "name": "Antonio Olinto - PR",
+    "territoryId": "4101309",
+    "startDate": "2016-06-14",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://antonioolinto.pr.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "pr_jaboti",
+    "name": "Jaboti - PR",
+    "territoryId": "4111704",
+    "startDate": "2018-01-03",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "http://www.jaboti.pr.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "pr_primeiro_de_maio",
+    "name": "Primeiro De Maio - PR",
+    "territoryId": "4120507",
+    "startDate": "2022-04-14",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.primeirodemaio.pr.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "pr_santo_antonio_do_paraiso",
+    "name": "Santo Antonio Do Paraiso - PR",
+    "territoryId": "4124301",
+    "startDate": "2012-12-27",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.pmsantoantoniodoparaiso.pr.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "pr_sao_joao_do_triunfo",
+    "name": "Sao Joao Do Triunfo - PR",
+    "territoryId": "4125100",
+    "startDate": "2013-04-10",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.sjtriunfo.pr.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "pr_sao_mateus_do_sul",
+    "name": "Sao Mateus Do Sul - PR",
+    "territoryId": "4125605",
+    "startDate": "2010-12-10",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.saomateusdosul.pr.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "rj_belford_roxo",
+    "name": "Belford Roxo - RJ",
+    "territoryId": "3300456",
+    "startDate": "2019-01-02",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.belfordr.instartecnologia.com.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "rj_cabo_frio",
+    "name": "Cabo Frio - RJ",
+    "territoryId": "3300704",
+    "startDate": "2020-07-29",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.cabofrio.instartecnologia.com.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "rs_cachoeira_do_sul",
+    "name": "Cachoeira Do Sul - RS",
+    "territoryId": "4303004",
+    "startDate": "2021-10-27",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.cachoeiradosul.rs.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "rs_cerrito",
+    "name": "Cerrito - RS",
+    "territoryId": "4305124",
+    "startDate": "2019-09-09",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.cerrito.rs.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "rs_sao_francisco_de_paula",
+    "name": "Sao Francisco De Paula - RS",
+    "territoryId": "4318200",
+    "startDate": "2023-08-31",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "http://www.saofranciscodepaula.rs.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "rs_vera_cruz",
+    "name": "Vera Cruz - RS",
+    "territoryId": "4322707",
+    "startDate": "2018-05-02",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.veracruz.rs.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_aguas_de_sao_pedro",
+    "name": "Aguas De Sao Pedro - SP",
+    "territoryId": "3500600",
+    "startDate": "2021-05-18",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.aguasdesaopedro.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_alto_alegre",
+    "name": "Alto Alegre - SP",
+    "territoryId": "3501103",
+    "startDate": "2018-07-03",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.altoalegre.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_alvares_florence",
+    "name": "Alvares Florence - SP",
+    "territoryId": "3501202",
+    "startDate": "2013-03-13",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.alvaresflorence.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_andradina",
+    "name": "Andradina - SP",
+    "territoryId": "3502101",
+    "startDate": "2021-03-03",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.andradina.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_aparecida",
+    "name": "Aparecida - SP",
+    "territoryId": "3502507",
+    "startDate": "2021-08-23",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.aparecida.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_aracariguama",
+    "name": "Aracariguama - SP",
+    "territoryId": "3502754",
+    "startDate": "2019-09-06",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.aracariguama.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_arapei",
+    "name": "Arapei - SP",
+    "territoryId": "3503158",
+    "startDate": "2021-05-27",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.arapei.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_avanhandava",
+    "name": "Avanhandava - SP",
+    "territoryId": "3504404",
+    "startDate": "2022-01-07",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.avanhandava.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_barao_de_antonina",
+    "name": "Barao De Antonina - SP",
+    "territoryId": "3505005",
+    "startDate": "2019-01-03",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.baraodeantonina.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_barbosa",
+    "name": "Barbosa - SP",
+    "territoryId": "3505104",
+    "startDate": "2021-01-21",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.barbosa.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_brejo_alegre",
+    "name": "Brejo Alegre - SP",
+    "territoryId": "3507753",
+    "startDate": "2021-10-21",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "http://www.brejoalegre.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_charqueada",
+    "name": "Charqueada - SP",
+    "territoryId": "3511706",
+    "startDate": "2009-01-09",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.charqueada.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_coronel_macedo",
+    "name": "Coronel Macedo - SP",
+    "territoryId": "3512605",
+    "startDate": "2017-05-29",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "http://www.coronelmacedo.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_dracena",
+    "name": "Dracena - SP",
+    "territoryId": "3514403",
+    "startDate": "2020-11-24",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.dracena.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_eldorado",
+    "name": "Eldorado - SP",
+    "territoryId": "3514809",
+    "startDate": "2018-12-04",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.eldorado.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_floreal",
+    "name": "Floreal - SP",
+    "territoryId": "3515905",
+    "startDate": "2022-11-09",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.floreal.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_general_salgado",
+    "name": "General Salgado - SP",
+    "territoryId": "3516903",
+    "startDate": "2022-01-13",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.generalsalgado.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_glicerio",
+    "name": "Glicerio - SP",
+    "territoryId": "3517109",
+    "startDate": "2019-01-08",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.glicerio.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_ibitinga",
+    "name": "Ibitinga - SP",
+    "territoryId": "3519600",
+    "startDate": "2019-04-30",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.ibitinga.instarbr.com.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_iepe",
+    "name": "Iepe - SP",
+    "territoryId": "3519907",
+    "startDate": "2019-10-16",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.iepe.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_igaracu_do_tiete",
+    "name": "Igaracu Do Tiete - SP",
+    "territoryId": "3520004",
+    "startDate": "2021-01-01",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.igaracudotiete.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_iracemapolis",
+    "name": "Iracemapolis - SP",
+    "territoryId": "3521408",
+    "startDate": "2017-01-02",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.iracemapolis.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_irapuru",
+    "name": "Irapuru - SP",
+    "territoryId": "3521606",
+    "startDate": "2023-03-10",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "http://www.irapuru.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_itapirapua_paulista",
+    "name": "Itapirapua Paulista - SP",
+    "territoryId": "3522653",
+    "startDate": "2019-05-24",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.itapirapuapaulista.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_itapolis",
+    "name": "Itapolis - SP",
+    "territoryId": "3522703",
+    "startDate": "2017-01-11",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.itapolis.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_itaporanga",
+    "name": "Itaporanga - SP",
+    "territoryId": "3522802",
+    "startDate": "2011-06-07",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.itaporanga.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_itapui",
+    "name": "Itapui - SP",
+    "territoryId": "3522901",
+    "startDate": "2017-12-15",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.itapui.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_itariri",
+    "name": "Itariri - SP",
+    "territoryId": "3523305",
+    "startDate": "2023-02-24",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.itariri.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_itobi",
+    "name": "Itobi - SP",
+    "territoryId": "3523800",
+    "startDate": "2011-04-01",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.itobi.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_jaboticabal",
+    "name": "Jaboticabal - SP",
+    "territoryId": "3524303",
+    "startDate": "2009-08-21",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.jaboticabal.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_joanopolis",
+    "name": "Joanopolis - SP",
+    "territoryId": "3525508",
+    "startDate": "2013-01-30",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.joanopolis.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_joao_ramalho",
+    "name": "Joao Ramalho - SP",
+    "territoryId": "3525607",
+    "startDate": "2020-03-24",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.joaoramalho.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_junqueiropolis",
+    "name": "Junqueiropolis - SP",
+    "territoryId": "3526001",
+    "startDate": "2020-10-24",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.junqueiropolis.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_lagoinha",
+    "name": "Lagoinha - SP",
+    "territoryId": "3526308",
+    "startDate": "2021-11-25",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.lagoinha.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_lavinia",
+    "name": "Lavinia - SP",
+    "territoryId": "3526506",
+    "startDate": "2019-02-21",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "http://www.lavinia.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_luiziania",
+    "name": "Luiziania - SP",
+    "territoryId": "3527702",
+    "startDate": "2021-04-06",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.luiziania.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_macaubal",
+    "name": "Macaubal - SP",
+    "territoryId": "3528106",
+    "startDate": "2023-06-21",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://macaubal.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_marilia",
+    "name": "Marilia - SP",
+    "territoryId": "3529005",
+    "startDate": "2009-06-01",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.marilia.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_mira_estrela",
+    "name": "Mira Estrela - SP",
+    "territoryId": "3530003",
+    "startDate": "2021-02-16",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.miraestrela.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_mirante_do_paranapanema",
+    "name": "Mirante Do Paranapanema - SP",
+    "territoryId": "3530201",
+    "startDate": "2019-05-07",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.mirantedoparanapanema.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_monte_alto_2017",
+    "name": "Monte Alto 2017 - SP",
+    "territoryId": "3531308",
+    "startDate": "2017-09-11",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.montealto.instaridc.com.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_monte_mor",
+    "name": "Monte Mor - SP",
+    "territoryId": "3531803",
+    "startDate": "2019-09-20",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.montemor.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_nhandeara",
+    "name": "Nhandeara - SP",
+    "territoryId": "3532603",
+    "startDate": "2023-08-17",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.nhandeara.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_nova_castilho",
+    "name": "Nova Castilho - SP",
+    "territoryId": "3532868",
+    "startDate": "2021-01-29",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.novacastilho.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_nova_luzitania",
+    "name": "Nova Luzitania - SP",
+    "territoryId": "3533304",
+    "startDate": "2022-10-31",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.novaluzitania.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_ourinhos",
+    "name": "Ourinhos - SP",
+    "territoryId": "3534708",
+    "startDate": "2005-01-20",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.ourinhos.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_palmital",
+    "name": "Palmital - SP",
+    "territoryId": "3535309",
+    "startDate": "2005-06-11",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.palmital.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_parisi",
+    "name": "Parisi - SP",
+    "territoryId": "3536257",
+    "startDate": "2015-02-27",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.parisi.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_patrocinio_paulista",
+    "name": "Patrocinio Paulista - SP",
+    "territoryId": "3536307",
+    "startDate": "2017-08-18",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.patrociniopaulista.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_paulinia",
+    "name": "Paulinia - SP",
+    "territoryId": "3536505",
+    "startDate": "2012-01-04",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.paulinia.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_penapolis",
+    "name": "Penapolis - SP",
+    "territoryId": "3537305",
+    "startDate": "2017-01-03",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.penapolis.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_piedade",
+    "name": "Piedade - SP",
+    "territoryId": "3537800",
+    "startDate": "2018-10-11",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.piedade.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_pindorama",
+    "name": "Pindorama - SP",
+    "territoryId": "3538105",
+    "startDate": "2022-04-29",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.pindorama.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_planalto",
+    "name": "Planalto - SP",
+    "territoryId": "3539608",
+    "startDate": "2021-10-10",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.planalto.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_poloni",
+    "name": "Poloni - SP",
+    "territoryId": "3539905",
+    "startDate": "2022-11-04",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.poloni.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_pontes_gestal",
+    "name": "Pontes Gestal - SP",
+    "territoryId": "3540309",
+    "startDate": "2021-07-14",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.pontesgestal.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_porangaba",
+    "name": "Porangaba - SP",
+    "territoryId": "3540507",
+    "startDate": "2020-10-06",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "http://www.porangaba.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_potirendaba",
+    "name": "Potirendaba - SP",
+    "territoryId": "3540804",
+    "startDate": "2024-01-21",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.potirendaba.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_pratania",
+    "name": "Pratania - SP",
+    "territoryId": "3541059",
+    "startDate": "2019-05-13",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.pratania.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_presidente_epitacio",
+    "name": "Presidente Epitacio - SP",
+    "territoryId": "3541307",
+    "startDate": "2019-10-18",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.presidenteepitacio.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_santa_ernestina",
+    "name": "Santa Ernestina - SP",
+    "territoryId": "3546504",
+    "startDate": "2019-08-19",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.santaernestina.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_santa_maria_da_serra",
+    "name": "Santa Maria Da Serra - SP",
+    "territoryId": "3547007",
+    "startDate": "2022-03-16",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.santamariadaserra.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_santo_andre",
+    "name": "Santo Andre - SP",
+    "territoryId": "3547809",
+    "startDate": "2010-01-05",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://web.santoandre.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_sao_manuel",
+    "name": "Sao Manuel - SP",
+    "territoryId": "3550100",
+    "startDate": "2016-06-07",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "http://www.saomanuel.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_sao_pedro",
+    "name": "Sao Pedro - SP",
+    "territoryId": "3550407",
+    "startDate": "2021-05-25",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.saopedro.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_sao_roque",
+    "name": "Sao Roque - SP",
+    "territoryId": "3550605",
+    "startDate": "2020-05-08",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.saoroque.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_sarutaia",
+    "name": "Sarutaia - SP",
+    "territoryId": "3551207",
+    "startDate": "2020-03-13",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.sarutaia.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_sebastianopolis_do_sul",
+    "name": "Sebastianopolis Do Sul - SP",
+    "territoryId": "3551306",
+    "startDate": "2020-05-26",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.sebastianopolisdosul.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_tapirai",
+    "name": "Tapirai - SP",
+    "territoryId": "3553500",
+    "startDate": "2019-09-03",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.tapirai.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_taquaral",
+    "name": "Taquaral - SP",
+    "territoryId": "3553658",
+    "startDate": "2017-01-03",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.taquaral.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_terra_roxa",
+    "name": "Terra Roxa - SP",
+    "territoryId": "3554409",
+    "startDate": "2022-06-29",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.terraroxa.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_turiuba",
+    "name": "Turiuba - SP",
+    "territoryId": "3555208",
+    "startDate": "2020-06-19",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.turiuba.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_uniao_paulista",
+    "name": "Uniao Paulista - SP",
+    "territoryId": "3555703",
+    "startDate": "2023-01-11",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://uniaopaulista.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_valinhos",
+    "name": "Valinhos - SP",
+    "territoryId": "3556206",
+    "startDate": "2004-12-12",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.valinhos.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_valparaiso",
+    "name": "Valparaiso - SP",
+    "territoryId": "3556305",
+    "startDate": "2021-11-19",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.valparaiso.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_vera_cruz",
+    "name": "Vera Cruz - SP",
+    "territoryId": "3556602",
+    "startDate": "2018-02-01",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.veracruz.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_vinhedo",
+    "name": "Vinhedo - SP",
+    "territoryId": "3556701",
+    "startDate": "2010-12-09",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.vinhedo.sp.gov.br/portal/diario-oficial"
+    }
+  },
+  {
+    "id": "sp_votorantim",
+    "name": "Votorantim - SP",
+    "territoryId": "3557006",
+    "startDate": "2018-04-20",
+    "spiderType": "instar",
+    "config": {
+      "type": "instar",
+      "url": "https://www.votorantim.sp.gov.br/portal/diario-oficial"
     }
   }
 ]

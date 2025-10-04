@@ -3,8 +3,8 @@
     "id": "ap_tartarugalzinho",
     "name": "Tartarugalzinho - AP",
     "territoryId": "1600709",
-    "spiderType": "adiarios_v1",
     "startDate": "2017-05-16",
+    "spiderType": "adiarios_v1",
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.tartarugalzinho.ap.gov.br"
@@ -14,8 +14,8 @@
     "id": "ce_aurora",
     "name": "Aurora - CE",
     "territoryId": "2301703",
-    "spiderType": "adiarios_v1",
     "startDate": "2021-08-02",
+    "spiderType": "adiarios_v1",
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.aurora.ce.gov.br"
@@ -23,13 +23,354 @@
   },
   {
     "id": "ce_caninde",
-    "name": "Canindé - CE",
+    "name": "Caninde - CE",
     "territoryId": "2302800",
-    "spiderType": "adiarios_v1",
     "startDate": "2017-08-03",
+    "spiderType": "adiarios_v1",
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.caninde.ce.gov.br"
+    }
+  },
+  {
+    "id": "ce_caririacu",
+    "name": "Caririacu - CE",
+    "territoryId": "2303204",
+    "startDate": "2018-01-23",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.caririacu.ce.gov.br"
+    }
+  },
+  {
+    "id": "ce_caucaia",
+    "name": "Caucaia - CE",
+    "territoryId": "2303709",
+    "startDate": "2002-06-03",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.caucaia.ce.gov.br"
+    }
+  },
+  {
+    "id": "ce_cedro",
+    "name": "Cedro - CE",
+    "territoryId": "2303808",
+    "startDate": "2018-01-01",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.cedro.ce.gov.br"
+    }
+  },
+  {
+    "id": "ce_crateus",
+    "name": "Crateus - CE",
+    "territoryId": "2304103",
+    "startDate": "2017-12-21",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.crateus.ce.gov.br"
+    }
+  },
+  {
+    "id": "ce_general_sampaio",
+    "name": "General Sampaio - CE",
+    "territoryId": "2304608",
+    "startDate": "2016-09-15",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.general.ce.gov.br"
+    }
+  },
+  {
+    "id": "ce_hidrolandia",
+    "name": "Hidrolandia - CE",
+    "territoryId": "2305209",
+    "startDate": "2007-04-09",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.hidrolandia.ce.gov.br"
+    }
+  },
+  {
+    "id": "ce_itaitinga",
+    "name": "Itaitinga - CE",
+    "territoryId": "2306256",
+    "startDate": "2018-04-25",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.itaitinga.ce.gov.br"
+    }
+  },
+  {
+    "id": "ce_jaguaribe",
+    "name": "Jaguaribe - CE",
+    "territoryId": "2306900",
+    "startDate": "2006-06-23",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.jaguaribe.ce.gov.br"
+    }
+  },
+  {
+    "id": "ce_juazeiro_do_norte",
+    "name": "Juazeiro Do Norte - CE",
+    "territoryId": "2307304",
+    "startDate": "2021-01-12",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.juazeiro.ce.gov.br"
+    }
+  },
+  {
+    "id": "ma_anajatuba",
+    "name": "Anajatuba - MA",
+    "territoryId": "2100709",
+    "startDate": "2021-02-12",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.anajatuba.ma.gov.br"
+    }
+  },
+  {
+    "id": "ma_bom_jardim",
+    "name": "Bom Jardim - MA",
+    "territoryId": "2102002",
+    "startDate": "2017-07-19",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.bom.ma.gov.br"
+    }
+  },
+  {
+    "id": "ma_bom_lugar",
+    "name": "Bom Lugar - MA",
+    "territoryId": "2102077",
+    "startDate": "2013-01-13",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.bom.ma.gov.br"
+    }
+  },
+  {
+    "id": "ma_buriticupu",
+    "name": "Buriticupu - MA",
+    "territoryId": "2102325",
+    "startDate": "2018-05-07",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.buriticupu.ma.gov.br"
+    }
+  },
+  {
+    "id": "ma_itapecuru_mirim",
+    "name": "Itapecuru Mirim - MA",
+    "territoryId": "2105401",
+    "startDate": "2021-03-29",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.itapecuru.ma.gov.br"
+    }
+  },
+  {
+    "id": "ma_maracacume",
+    "name": "Maracacume - MA",
+    "territoryId": "2106326",
+    "startDate": "2019-10-20",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.maracacume.ma.gov.br"
+    }
+  },
+  {
+    "id": "pa_garrafao_do_norte",
+    "name": "Garrafao Do Norte - PA",
+    "territoryId": "1503077",
+    "startDate": "2018-07-31",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.garrafao.pa.gov.br"
+    }
+  },
+  {
+    "id": "pb_jacarau",
+    "name": "Jacarau - PB",
+    "territoryId": "2507309",
+    "startDate": "2019-03-07",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.jacarau.pb.gov.br"
+    }
+  },
+  {
+    "id": "pb_jerico",
+    "name": "Jerico - PB",
+    "territoryId": "2507408",
+    "startDate": "2021-06-01",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.jerico.pb.gov.br"
+    }
+  },
+  {
+    "id": "pb_marizopolis",
+    "name": "Marizopolis - PB",
+    "territoryId": "2509156",
+    "startDate": "2021-01-27",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.marizopolis.pb.gov.br"
+    }
+  },
+  {
+    "id": "pb_piloezinhos",
+    "name": "Piloezinhos - PB",
+    "territoryId": "2511707",
+    "startDate": "2022-06-01",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.piloezinhos.pb.gov.br"
+    }
+  },
+  {
+    "id": "pb_riachao",
+    "name": "Riachao - PB",
+    "territoryId": "2512747",
+    "startDate": "2024-02-29",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.riachao.pb.gov.br"
+    }
+  },
+  {
+    "id": "pb_sao_jose_dos_ramos",
+    "name": "Sao Jose Dos Ramos - PB",
+    "territoryId": "2514453",
+    "startDate": "2021-01-04",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.sao.pb.gov.br"
+    }
+  },
+  {
+    "id": "pb_serraria",
+    "name": "Serraria - PB",
+    "territoryId": "2515906",
+    "startDate": "2024-03-01",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.serraria.pb.gov.br"
+    }
+  },
+  {
+    "id": "pb_sertaozinho",
+    "name": "Sertaozinho - PB",
+    "territoryId": "2515930",
+    "startDate": "2024-02-01",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.sertaozinho.pb.gov.br"
+    }
+  },
+  {
+    "id": "pb_tacima",
+    "name": "Tacima - PB",
+    "territoryId": "2516409",
+    "startDate": "2024-01-26",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.tacima.pb.gov.br"
+    }
+  },
+  {
+    "id": "pe_moreilandia",
+    "name": "Moreilandia - PE",
+    "territoryId": "2614303",
+    "startDate": "2021-04-09",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.moreilandia.pe.gov.br"
+    }
+  },
+  {
+    "id": "rn_pau_dos_ferros_2022",
+    "name": "Pau Dos Ferros 2022 - RN",
+    "territoryId": "2409407",
+    "startDate": "2022-09-28",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.pau.rn.gov.br"
+    }
+  },
+  {
+    "id": "rn_santa_cruz",
+    "name": "Santa Cruz - RN",
+    "territoryId": "2411205",
+    "startDate": "2022-01-04",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.santa.rn.gov.br"
+    }
+  },
+  {
+    "id": "rn_sao_francisco_do_oeste",
+    "name": "Sao Francisco Do Oeste - RN",
+    "territoryId": "2411908",
+    "startDate": "2023-02-07",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.sao.rn.gov.br"
+    }
+  },
+  {
+    "id": "rn_taboleiro_grande",
+    "name": "Taboleiro Grande - RN",
+    "territoryId": "2413805",
+    "startDate": "2013-01-28",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.taboleiro.rn.gov.br"
+    }
+  },
+  {
+    "id": "to_axixa_do_tocantins",
+    "name": "Axixa Do Tocantins - TO",
+    "territoryId": "1702901",
+    "startDate": "2021-08-16",
+    "spiderType": "adiarios_v1",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.axixa.to.gov.br"
     }
   }
 ]

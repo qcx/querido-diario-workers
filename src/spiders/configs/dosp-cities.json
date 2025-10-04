@@ -3,8 +3,8 @@
     "id": "ce_horizonte",
     "name": "Horizonte - CE",
     "territoryId": "2305233",
-    "spiderType": "dosp",
     "startDate": "2023-07-03",
+    "spiderType": "dosp",
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/horizonte"
@@ -12,24 +12,453 @@
   },
   {
     "id": "mg_itajuba",
-    "name": "Itajubá - MG",
+    "name": "Itajuba - MG",
     "territoryId": "3132404",
-    "spiderType": "dosp",
     "startDate": "2023-05-15",
+    "spiderType": "dosp",
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/itajuba"
     }
   },
   {
-    "id": "ms_deodapolis",
-    "name": "Deodápolis - MS",
-    "territoryId": "5003454",
+    "id": "mg_uberaba_2021",
+    "name": "Uberaba 2021 - MG",
+    "territoryId": "3170107",
+    "startDate": "2021-09-01",
     "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/uberaba"
+    }
+  },
+  {
+    "id": "ms_deodapolis",
+    "name": "Deodapolis - MS",
+    "territoryId": "5003454",
     "startDate": "2023-11-17",
+    "spiderType": "dosp",
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/deodapolis"
+    }
+  },
+  {
+    "id": "ms_gloria_de_dourados",
+    "name": "Gloria De Dourados - MS",
+    "territoryId": "5004007",
+    "startDate": "2023-11-07",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/gloria_de_dourados"
+    }
+  },
+  {
+    "id": "ms_paranhos",
+    "name": "Paranhos - MS",
+    "territoryId": "5006358",
+    "startDate": "2023-07-13",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/paranhos"
+    }
+  },
+  {
+    "id": "ms_rio_brilhante",
+    "name": "Rio Brilhante - MS",
+    "territoryId": "5007208",
+    "startDate": "2024-02-01",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/rio_brilhante"
+    }
+  },
+  {
+    "id": "pe_cabrobo",
+    "name": "Cabrobo - PE",
+    "territoryId": "2603009",
+    "startDate": "2019-04-08",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/cabrobo"
+    }
+  },
+  {
+    "id": "pr_cafelandia",
+    "name": "Cafelandia - PR",
+    "territoryId": "4103453",
+    "startDate": "2017-06-12",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/cafelandia"
+    }
+  },
+  {
+    "id": "pr_cafezal_do_sul",
+    "name": "Cafezal Do Sul - PR",
+    "territoryId": "4103479",
+    "startDate": "2016-04-14",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/cafezal_do_sul"
+    }
+  },
+  {
+    "id": "pr_carambei",
+    "name": "Carambei - PR",
+    "territoryId": "4104659",
+    "startDate": "2022-11-09",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/carambei"
+    }
+  },
+  {
+    "id": "rj_sao_jose_do_vale_do_rio_preto",
+    "name": "Sao Jose Do Vale Do Rio Preto - RJ",
+    "territoryId": "3305158",
+    "startDate": "2023-05-24",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/sao_jose_do_vale_do_rio_preto"
+    }
+  },
+  {
+    "id": "rs_marau",
+    "name": "Marau - RS",
+    "territoryId": "4311809",
+    "startDate": "2017-10-10",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/marau"
+    }
+  },
+  {
+    "id": "rs_quatro_irmaos",
+    "name": "Quatro Irmaos - RS",
+    "territoryId": "4315313",
+    "startDate": "2024-05-14",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/quatro_irmaos"
+    }
+  },
+  {
+    "id": "rs_santa_clara_do_sul",
+    "name": "Santa Clara Do Sul - RS",
+    "territoryId": "4316758",
+    "startDate": "2017-09-05",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/santa_clara_do_sul"
+    }
+  },
+  {
+    "id": "rs_tres_arroios",
+    "name": "Tres Arroios - RS",
+    "territoryId": "4321634",
+    "startDate": "2017-04-26",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/tres_arroios"
+    }
+  },
+  {
+    "id": "sp_adolfo",
+    "name": "Adolfo - SP",
+    "territoryId": "3500204",
+    "startDate": "2015-05-14",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/adolfo"
+    }
+  },
+  {
+    "id": "sp_aguai",
+    "name": "Aguai - SP",
+    "territoryId": "3500303",
+    "startDate": "2022-10-19",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/aguai"
+    }
+  },
+  {
+    "id": "sp_aguas_da_prata",
+    "name": "Aguas Da Prata - SP",
+    "territoryId": "3500402",
+    "startDate": "2018-08-23",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/aguas_da_prata"
+    }
+  },
+  {
+    "id": "sp_aracatuba",
+    "name": "Aracatuba - SP",
+    "territoryId": "3502804",
+    "startDate": "2020-04-22",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/aracatuba"
+    }
+  },
+  {
+    "id": "sp_avare",
+    "name": "Avare - SP",
+    "territoryId": "3504503",
+    "startDate": "2018-10-03",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/avare"
+    }
+  },
+  {
+    "id": "sp_birigui",
+    "name": "Birigui - SP",
+    "territoryId": "3506508",
+    "startDate": "2016-12-28",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/birigui"
+    }
+  },
+  {
+    "id": "sp_botucatu",
+    "name": "Botucatu - SP",
+    "territoryId": "3507506",
+    "startDate": "2000-01-06",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/botucatu"
+    }
+  },
+  {
+    "id": "sp_braganca_paulista",
+    "name": "Braganca Paulista - SP",
+    "territoryId": "3507605",
+    "startDate": "2019-01-04",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/braganca_paulista"
+    }
+  },
+  {
+    "id": "sp_campo_limpo_paulista",
+    "name": "Campo Limpo Paulista - SP",
+    "territoryId": "3509601",
+    "startDate": "2022-01-07",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/campo_limpo_paulista"
+    }
+  },
+  {
+    "id": "sp_catanduva",
+    "name": "Catanduva - SP",
+    "territoryId": "3511102",
+    "startDate": "2016-03-18",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/catanduva"
+    }
+  },
+  {
+    "id": "sp_cunha",
+    "name": "Cunha - SP",
+    "territoryId": "3513603",
+    "startDate": "2021-10-19",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/cunha"
+    }
+  },
+  {
+    "id": "sp_dirce_reis",
+    "name": "Dirce Reis - SP",
+    "territoryId": "3513850",
+    "startDate": "2019-04-04",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/dirce_reis"
+    }
+  },
+  {
+    "id": "sp_guaracai",
+    "name": "Guaracai - SP",
+    "territoryId": "3517802",
+    "startDate": "2018-09-27",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/guaracai"
+    }
+  },
+  {
+    "id": "sp_itapeva",
+    "name": "Itapeva - SP",
+    "territoryId": "3522406",
+    "startDate": "2017-12-18",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/itapeva"
+    }
+  },
+  {
+    "id": "sp_itapevi",
+    "name": "Itapevi - SP",
+    "territoryId": "3522505",
+    "startDate": "2018-12-21",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/itapevi"
+    }
+  },
+  {
+    "id": "sp_itu",
+    "name": "Itu - SP",
+    "territoryId": "3523909",
+    "startDate": "2019-08-15",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/itu"
+    }
+  },
+  {
+    "id": "sp_jandira",
+    "name": "Jandira - SP",
+    "territoryId": "3525003",
+    "startDate": "2022-03-22",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/jandira"
+    }
+  },
+  {
+    "id": "sp_jau_2023",
+    "name": "Jau 2023 - SP",
+    "territoryId": "3525300",
+    "startDate": "2023-01-06",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/jau"
+    }
+  },
+  {
+    "id": "sp_mogi_guacu",
+    "name": "Mogi Guacu - SP",
+    "territoryId": "3530706",
+    "startDate": "2022-01-20",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/mogi_guacu"
+    }
+  },
+  {
+    "id": "sp_monteiro_lobato",
+    "name": "Monteiro Lobato - SP",
+    "territoryId": "3531704",
+    "startDate": "2020-11-26",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/monteiro_lobato"
+    }
+  },
+  {
+    "id": "sp_rio_claro",
+    "name": "Rio Claro - SP",
+    "territoryId": "3543907",
+    "startDate": "2006-05-23",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/rio_claro"
+    }
+  },
+  {
+    "id": "sp_salto",
+    "name": "Salto - SP",
+    "territoryId": "3545209",
+    "startDate": "2018-02-01",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/salto"
+    }
+  },
+  {
+    "id": "sp_sao_bernardo_do_campo",
+    "name": "Sao Bernardo Do Campo - SP",
+    "territoryId": "3548708",
+    "startDate": "2017-05-12",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/sao_bernardo_do_campo"
+    }
+  },
+  {
+    "id": "sp_sertaozinho",
+    "name": "Sertaozinho - SP",
+    "territoryId": "3551702",
+    "startDate": "2019-08-07",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/sertaozinho"
+    }
+  },
+  {
+    "id": "sp_tremembe",
+    "name": "Tremembe - SP",
+    "territoryId": "3554805",
+    "startDate": "2016-05-11",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/tremembe"
+    }
+  },
+  {
+    "id": "sp_votuporanga",
+    "name": "Votuporanga - SP",
+    "territoryId": "3557105",
+    "startDate": "2015-10-05",
+    "spiderType": "dosp",
+    "config": {
+      "type": "dosp",
+      "url": "https://www.imprensaoficialmunicipal.com.br/votuporanga"
     }
   }
 ]

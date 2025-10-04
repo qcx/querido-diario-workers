@@ -3,8 +3,8 @@
     "id": "al_igaci",
     "name": "Igaci - AL",
     "territoryId": "2703106",
-    "spiderType": "diof",
     "startDate": "2015-07-17",
+    "spiderType": "diof",
     "config": {
       "type": "diof",
       "website": "https://diario.igaci.al.gov.br",
@@ -13,10 +13,10 @@
   },
   {
     "id": "ba_abare",
-    "name": "Abaré - BA",
+    "name": "Abare - BA",
     "territoryId": "2900207",
-    "spiderType": "diof",
     "startDate": "2007-01-09",
+    "spiderType": "diof",
     "config": {
       "type": "diof",
       "website": "https://sai.io.org.br/ba/abare/site/diariooficial",
@@ -27,11 +27,215 @@
     "id": "ba_adustina",
     "name": "Adustina - BA",
     "territoryId": "2900355",
-    "spiderType": "diof",
     "startDate": "2017-01-03",
+    "spiderType": "diof",
     "config": {
       "type": "diof",
       "website": "https://diario.adustina.ba.gov.br",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_almadina",
+    "name": "Almadina - BA",
+    "territoryId": "2900900",
+    "startDate": "2005-01-03",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://diario.almadina.ba.gov.br",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_anage",
+    "name": "Anage - BA",
+    "territoryId": "2901205",
+    "startDate": "2007-01-12",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://diario.anage.ba.gov.br",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_andorinha",
+    "name": "Andorinha - BA",
+    "territoryId": "2901353",
+    "startDate": "2013-01-02",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://sai.io.org.br/ba/andorinha/site/diariooficial",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_antas",
+    "name": "Antas - BA",
+    "territoryId": "2901601",
+    "startDate": "2013-02-21",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://diario.antas.ba.gov.br/",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_apuarema",
+    "name": "Apuarema - BA",
+    "territoryId": "2901957",
+    "startDate": "2009-01-23",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://diario.apuarema.ba.gov.br",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_aracas",
+    "name": "Aracas - BA",
+    "territoryId": "2902054",
+    "startDate": "2014-11-27",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://diario.aracas.ba.gov.br",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_aramari",
+    "name": "Aramari - BA",
+    "territoryId": "2902203",
+    "startDate": "2009-02-12",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://diario.aramari.ba.gov.br",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_arataca",
+    "name": "Arataca - BA",
+    "territoryId": "2902252",
+    "startDate": "2005-01-13",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://diario.arataca.ba.gov.br",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_itatim",
+    "name": "Itatim - BA",
+    "territoryId": "2916856",
+    "startDate": "2009-01-01",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://diario.itatim.ba.gov.br",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_jaborandi",
+    "name": "Jaborandi - BA",
+    "territoryId": "2917359",
+    "startDate": "2022-03-04",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://sai.io.org.br/ba/jaborandi/site/diariooficial",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_jeremoabo",
+    "name": "Jeremoabo - BA",
+    "territoryId": "2918100",
+    "startDate": "2010-07-08",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://diario.jeremoabo.ba.gov.br",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_lauro_de_freitas",
+    "name": "Lauro De Freitas - BA",
+    "territoryId": "2919207",
+    "startDate": "2013-07-31",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://sai.io.org.br/ba/laurodefreitas/site/diariooficial",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_luis_eduardo_magalhaes",
+    "name": "Luis Eduardo Magalhaes - BA",
+    "territoryId": "2919553",
+    "startDate": "2017-01-04",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://sai.io.org.br/ba/luiseduardomagalhaes/site/diariooficial",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_maragogipe",
+    "name": "Maragogipe - BA",
+    "territoryId": "2920601",
+    "startDate": "2011-02-02",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://sai.io.org.br/ba/maragojipe/site/diariooficial",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_riachao_das_neves",
+    "name": "Riachao Das Neves - BA",
+    "territoryId": "2926202",
+    "startDate": "2010-02-04",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://sai.io.org.br/ba/riachaodasneves/site/diariooficial",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_santa_luzia_2024",
+    "name": "Santa Luzia 2024 - BA",
+    "territoryId": "2928059",
+    "startDate": "2024-01-05",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://diario.santaluzia.ba.gov.br",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "se_estancia",
+    "name": "Estancia - SE",
+    "territoryId": "2802106",
+    "startDate": "2016-04-28",
+    "spiderType": "diof",
+    "config": {
+      "type": "diof",
+      "website": "https://diario.estancia.se.gov.br",
       "power": "executive"
     }
   }
