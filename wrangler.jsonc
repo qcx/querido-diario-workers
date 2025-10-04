@@ -10,6 +10,11 @@
     "enabled": true
   },
 
+  // Browser Rendering
+  "browser": {
+    "binding": "BROWSER"
+  },
+
   // Queue Configuration - Both Producer and Consumer
   "queues": {
     "producers": [

@@ -133,7 +133,7 @@ class SpiderRegistry {
   /**
    * Creates a spider instance from configuration
    */
-  createSpider(config: SpiderConfig, dateRange: DateRange): BaseSpider {
+  createSpider(config: SpiderConfig, dateRange: DateRange, browser?: Fetcher): BaseSpider {
     switch (config.spiderType) {
       case 'doem':
         return new DoemSpider(config, dateRange);
@@ -142,7 +142,11 @@ class SpiderRegistry {
         return new ADiariosV1Spider(config, dateRange);
         
       case 'adiarios_v2':
-        return new ADiariosV2Spider(config, dateRange);
+        const spider = new ADiariosV2Spider(config, dateRange);
+        if (browser) {
+          spider.setBrowser(browser);
+        }
+        return spider;
         
       case 'instar':
         return new InstarSpider(config, dateRange);

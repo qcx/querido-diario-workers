@@ -10,6 +10,7 @@ import { toISODate } from './utils/date-utils';
 
 type Bindings = {
   CRAWL_QUEUE: Queue<QueueMessage>;
+  BROWSER: Fetcher;
 };
 
 // Create Hono app for HTTP handling
@@ -180,7 +181,7 @@ async function handleQueue(batch: MessageBatch<QueueMessage>, _env: Bindings): P
       };
 
       // Create spider instance
-      const spider = spiderRegistry.createSpider(config, queueMessage.dateRange);
+      const spider = spiderRegistry.createSpider(config, queueMessage.dateRange, _env.BROWSER);
 
       // Execute crawl
       const gazettes = await spider.crawl();
