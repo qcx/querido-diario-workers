@@ -38,7 +38,7 @@ export interface SpiderConfig {
   spiderType: SpiderType;
   
   /** Earliest date available for this municipality (ISO format) */
-  startDate: string;
+  startDate?: string;
   
   /** Platform-specific configuration */
   config: SpiderPlatformConfig;

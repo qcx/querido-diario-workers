@@ -158,7 +158,7 @@ export class TestRunner {
    * Runs tests in parallel with worker pool
    */
   private async runTestsInParallel(cities: SpiderConfig[]): Promise<void> {
-    const workers = this.config.parallelWorkers;
+    const workers = this.config.parallelWorkers || 10; // Default to 10 if undefined
     const chunks: SpiderConfig[][] = [];
 
     // Split cities into chunks for parallel processing
@@ -292,12 +292,20 @@ export class TestRunner {
    */
   private getDateRange(): DateRange {
     const end = new Date();
-    const start = subDays(end, this.config.searchDays);
+    const searchDays = this.config.searchDays || 7; // Default to 7 if undefined
+    const start = subDays(end, searchDays);
 
-    return {
+    // Validate dates
+    if (isNaN(start.getTime()) || isNaN(end.getTime())) {
+      throw new Error('Invalid date range');
+    }
+
+    const range = {
       start: format(start, 'yyyy-MM-dd'),
       end: format(end, 'yyyy-MM-dd'),
     };
+
+    return range;
   }
 
   /**

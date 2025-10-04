@@ -23,9 +23,11 @@ export abstract class BaseSpider {
     this.endDate = fromISODate(dateRange.end);
 
     // Ensure startDate is not before spider's earliest available date
-    const spiderStartDate = fromISODate(config.startDate);
-    if (this.startDate < spiderStartDate) {
-      this.startDate = spiderStartDate;
+    if (config.startDate) {
+      const spiderStartDate = fromISODate(config.startDate);
+      if (this.startDate < spiderStartDate) {
+        this.startDate = spiderStartDate;
+      }
     }
 
     logger.setContext({
