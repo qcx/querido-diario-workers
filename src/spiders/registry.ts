@@ -7,6 +7,8 @@ import { AplusSpider } from './base/aplus-spider';
 import { DioenetSpider } from './base/dioenet-spider';
 import { AdministracaoPublicaSpider } from './base/administracao-publica-spider';
 import { PtioSpider } from './base/ptio-spider';
+import { MunicipioOnlineSpider } from './base/municipio-online-spider';
+import { AtendeV2Spider } from './base/atende-v2-spider';
 import doemCitiesConfig from './configs/doem-cities.json';
 import instarCitiesConfig from './configs/instar-cities.json';
 import dospCitiesConfig from './configs/dosp-cities.json';
@@ -21,6 +23,8 @@ import aplusCitiesConfig from './configs/aplus-cities.json';
 import dioenetCitiesConfig from './configs/dioenet-cities.json';
 import administracaoPublicaCitiesConfig from './configs/administracao-publica-cities.json';
 import ptioCitiesConfig from './configs/ptio-cities.json';
+import municipioOnlineCitiesConfig from './configs/municipio-online-cities.json';
+import atendeV2CitiesConfig from './configs/atende-v2-cities.json';
 
 /**
  * Spider registry - maps spider IDs to configurations
@@ -105,6 +109,16 @@ class SpiderRegistry {
     for (const config of ptioCitiesConfig as SpiderConfig[]) {
       this.configs.set(config.id, config);
     }
+    
+    // Load MunicipioOnline cities
+    for (const config of municipioOnlineCitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load AtendeV2 cities
+    for (const config of atendeV2CitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
   }
 
   /**
@@ -183,6 +197,12 @@ class SpiderRegistry {
       
       case 'ptio':
         return new PtioSpider(config, dateRange);
+      
+      case 'municipio_online':
+        return new MunicipioOnlineSpider(config, dateRange);
+      
+      case 'atende_v2':
+        return new AtendeV2Spider(config, dateRange);
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);

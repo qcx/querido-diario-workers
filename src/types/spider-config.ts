@@ -17,6 +17,8 @@ export type SpiderType =
   | 'dioenet'
   | 'administracao_publica'
   | 'ptio'
+  | 'municipio_online'
+  | 'atende_v2'
   | 'custom';
 
 /**
@@ -60,6 +62,8 @@ export type SpiderPlatformConfig =
   | DioenetConfig
   | AdministracaoPublicaConfig
   | PtioConfig
+  | MunicipioOnlineConfig
+  | AtendeV2Config
   | CustomConfig;
 
 /**
@@ -186,4 +190,15 @@ export interface AdministracaoPublicaConfig {
 export interface PtioConfig {
   type: 'ptio';
   baseUrl: string;
+}
+
+export interface MunicipioOnlineConfig {
+  type: 'municipio_online';
+  urlUf: string;
+  urlCity: string;
+}
+
+export interface AtendeV2Config {
+  type: 'atende_v2';
+  citySubdomain: string;
 }
