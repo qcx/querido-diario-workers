@@ -1,0 +1,970 @@
+[
+  {
+    "id": "go_5200134",
+    "name": "Acreúna",
+    "stateCode": "GO",
+    "territoryId": "5200134",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "4939"
+    }
+  },
+  {
+    "id": "go_5200159",
+    "name": "Adelândia",
+    "stateCode": "GO",
+    "territoryId": "5200159",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "815253"
+    }
+  },
+  {
+    "id": "go_5200308",
+    "name": "Alexânia",
+    "stateCode": "GO",
+    "territoryId": "5200308",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "14250"
+    }
+  },
+  {
+    "id": "go_5200555",
+    "name": "Alto Horizonte",
+    "stateCode": "GO",
+    "territoryId": "5200555",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "46032"
+    }
+  },
+  {
+    "id": "go_5200605",
+    "name": "Alto Paraíso de Goiás",
+    "stateCode": "GO",
+    "territoryId": "5200605",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "102860"
+    }
+  },
+  {
+    "id": "go_5200803",
+    "name": "Alvorada do Norte",
+    "stateCode": "GO",
+    "territoryId": "5200803",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "7898"
+    }
+  },
+  {
+    "id": "go_5200902",
+    "name": "Amorinópolis",
+    "stateCode": "GO",
+    "territoryId": "5200902",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "2960"
+    }
+  },
+  {
+    "id": "go_5201454",
+    "name": "Aparecida do Rio Doce",
+    "stateCode": "GO",
+    "territoryId": "5201454",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "9778"
+    }
+  },
+  {
+    "id": "go_5201702",
+    "name": "Aragarças",
+    "stateCode": "GO",
+    "territoryId": "5201702",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "16162"
+    }
+  },
+  {
+    "id": "go_5201801",
+    "name": "Aragoiânia",
+    "stateCode": "GO",
+    "territoryId": "5201801",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "46171"
+    }
+  },
+  {
+    "id": "go_5202155",
+    "name": "Araguapaz",
+    "stateCode": "GO",
+    "territoryId": "5202155",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "541352"
+    }
+  },
+  {
+    "id": "go_5201603",
+    "name": "Araçu",
+    "stateCode": "GO",
+    "territoryId": "5201603",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "286004"
+    }
+  },
+  {
+    "id": "go_5202353",
+    "name": "Arenópolis",
+    "stateCode": "GO",
+    "territoryId": "5202353",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "165814"
+    }
+  },
+  {
+    "id": "go_5202809",
+    "name": "Avelinópolis",
+    "stateCode": "GO",
+    "territoryId": "5202809",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "286065"
+    }
+  },
+  {
+    "id": "go_5203401",
+    "name": "Bom Jardim de Goiás",
+    "stateCode": "GO",
+    "territoryId": "5203401",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "9252"
+    }
+  },
+  {
+    "id": "go_5203559",
+    "name": "Bonfinópolis",
+    "stateCode": "GO",
+    "territoryId": "5203559",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "102711"
+    }
+  },
+  {
+    "id": "go_5203906",
+    "name": "Buriti Alegre",
+    "stateCode": "GO",
+    "territoryId": "5203906",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "9682"
+    }
+  },
+  {
+    "id": "go_5203962",
+    "name": "Buritinópolis",
+    "stateCode": "GO",
+    "territoryId": "5203962",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "22116"
+    }
+  },
+  {
+    "id": "go_5204102",
+    "name": "Cachoeira Alta",
+    "stateCode": "GO",
+    "territoryId": "5204102",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "11779"
+    }
+  },
+  {
+    "id": "go_5204250",
+    "name": "Cachoeira Dourada",
+    "stateCode": "GO",
+    "territoryId": "5204250",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "217942"
+    }
+  },
+  {
+    "id": "go_5204201",
+    "name": "Cachoeira de Goiás",
+    "stateCode": "GO",
+    "territoryId": "5204201",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "4161"
+    }
+  },
+  {
+    "id": "go_5204557",
+    "name": "Caldazinha",
+    "stateCode": "GO",
+    "territoryId": "5204557",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "46285"
+    }
+  },
+  {
+    "id": "go_5204706",
+    "name": "Campinorte",
+    "stateCode": "GO",
+    "territoryId": "5204706",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "4578"
+    }
+  },
+  {
+    "id": "go_5204805",
+    "name": "Campo Alegre de Goiás",
+    "stateCode": "GO",
+    "territoryId": "5204805",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "55678"
+    }
+  },
+  {
+    "id": "go_5204854",
+    "name": "Campo Limpo de Goiás",
+    "stateCode": "GO",
+    "territoryId": "5204854",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "1201073"
+    }
+  },
+  {
+    "id": "go_5204904",
+    "name": "Campos Belos",
+    "stateCode": "GO",
+    "territoryId": "5204904",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "3690"
+    }
+  },
+  {
+    "id": "go_5205000",
+    "name": "Carmo do Rio Verde",
+    "stateCode": "GO",
+    "territoryId": "5205000",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "113220"
+    }
+  },
+  {
+    "id": "go_5205059",
+    "name": "Castelândia",
+    "stateCode": "GO",
+    "territoryId": "5205059",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "4017"
+    }
+  },
+  {
+    "id": "go_5204300",
+    "name": "Caçu",
+    "stateCode": "GO",
+    "territoryId": "5204300",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "2682"
+    }
+  },
+  {
+    "id": "go_5205901",
+    "name": "Corumbaíba",
+    "stateCode": "GO",
+    "territoryId": "5205901",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "3757"
+    }
+  },
+  {
+    "id": "go_5206206",
+    "name": "Cristalina",
+    "stateCode": "GO",
+    "territoryId": "5206206",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "46421"
+    }
+  },
+  {
+    "id": "go_5206503",
+    "name": "Cromínia",
+    "stateCode": "GO",
+    "territoryId": "5206503",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "128848"
+    }
+  },
+  {
+    "id": "go_5206701",
+    "name": "Damianópolis",
+    "stateCode": "GO",
+    "territoryId": "5206701",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "16966"
+    }
+  },
+  {
+    "id": "go_5206800",
+    "name": "Damolândia",
+    "stateCode": "GO",
+    "territoryId": "5206800",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "8596"
+    }
+  },
+  {
+    "id": "go_5206909",
+    "name": "Davinópolis",
+    "stateCode": "GO",
+    "territoryId": "5206909",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "1472953"
+    }
+  },
+  {
+    "id": "go_5207402",
+    "name": "Edéia",
+    "stateCode": "GO",
+    "territoryId": "5207402",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "103960"
+    }
+  },
+  {
+    "id": "go_5207535",
+    "name": "Faina",
+    "stateCode": "GO",
+    "territoryId": "5207535",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "46446"
+    }
+  },
+  {
+    "id": "go_5207808",
+    "name": "Firminópolis",
+    "stateCode": "GO",
+    "territoryId": "5207808",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "9578"
+    }
+  },
+  {
+    "id": "go_5208103",
+    "name": "Formoso",
+    "stateCode": "GO",
+    "territoryId": "5208103",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "156803"
+    }
+  },
+  {
+    "id": "go_5208509",
+    "name": "Goiandira",
+    "stateCode": "GO",
+    "territoryId": "5208509",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "4335"
+    }
+  },
+  {
+    "id": "go_5208806",
+    "name": "Goianira",
+    "stateCode": "GO",
+    "territoryId": "5208806",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "46585"
+    }
+  },
+  {
+    "id": "go_5209101",
+    "name": "Goiatuba",
+    "stateCode": "GO",
+    "territoryId": "5209101",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "3818"
+    }
+  },
+  {
+    "id": "go_5209150",
+    "name": "Gouvelândia",
+    "stateCode": "GO",
+    "territoryId": "5209150",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "9806"
+    }
+  },
+  {
+    "id": "go_5209606",
+    "name": "Heitoraí",
+    "stateCode": "GO",
+    "territoryId": "5209606",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "15909"
+    }
+  },
+  {
+    "id": "go_5209705",
+    "name": "Hidrolândia",
+    "stateCode": "GO",
+    "territoryId": "5209705",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "54390"
+    }
+  },
+  {
+    "id": "go_5209937",
+    "name": "Inaciolândia",
+    "stateCode": "GO",
+    "territoryId": "5209937",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "218796"
+    }
+  },
+  {
+    "id": "go_5209952",
+    "name": "Indiara",
+    "stateCode": "GO",
+    "territoryId": "5209952",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "47636"
+    }
+  },
+  {
+    "id": "go_5210000",
+    "name": "Inhumas",
+    "stateCode": "GO",
+    "territoryId": "5210000",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "28352"
+    }
+  },
+  {
+    "id": "go_5210109",
+    "name": "Ipameri",
+    "stateCode": "GO",
+    "territoryId": "5210109",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "3847"
+    }
+  },
+  {
+    "id": "go_5210208",
+    "name": "Iporá",
+    "stateCode": "GO",
+    "territoryId": "5210208",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "7486"
+    }
+  },
+  {
+    "id": "go_5210307",
+    "name": "Israelândia",
+    "stateCode": "GO",
+    "territoryId": "5210307",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "79867"
+    }
+  },
+  {
+    "id": "go_5210562",
+    "name": "Itaguari",
+    "stateCode": "GO",
+    "territoryId": "5210562",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "298298"
+    }
+  },
+  {
+    "id": "go_5210604",
+    "name": "Itaguaru",
+    "stateCode": "GO",
+    "territoryId": "5210604",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "11854"
+    }
+  },
+  {
+    "id": "go_5210802",
+    "name": "Itajá",
+    "stateCode": "GO",
+    "territoryId": "5210802",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "953365"
+    }
+  },
+  {
+    "id": "go_5211404",
+    "name": "Itauçu",
+    "stateCode": "GO",
+    "territoryId": "5211404",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "381832"
+    }
+  },
+  {
+    "id": "go_5211602",
+    "name": "Ivolândia",
+    "stateCode": "GO",
+    "territoryId": "5211602",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "13837"
+    }
+  },
+  {
+    "id": "go_5212006",
+    "name": "Jaupaci",
+    "stateCode": "GO",
+    "territoryId": "5212006",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "9717"
+    }
+  },
+  {
+    "id": "go_5212253",
+    "name": "Lagoa Santa",
+    "stateCode": "GO",
+    "territoryId": "5212253",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "9219"
+    }
+  },
+  {
+    "id": "go_5212709",
+    "name": "Mambaí",
+    "stateCode": "GO",
+    "territoryId": "5212709",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "59095"
+    }
+  },
+  {
+    "id": "go_5213400",
+    "name": "Moiporá",
+    "stateCode": "GO",
+    "territoryId": "5213400",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "95772"
+    }
+  },
+  {
+    "id": "go_5213756",
+    "name": "Montividiu",
+    "stateCode": "GO",
+    "territoryId": "5213756",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "20989"
+    }
+  },
+  {
+    "id": "go_5213772",
+    "name": "Montividiu do Norte",
+    "stateCode": "GO",
+    "territoryId": "5213772",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "72140"
+    }
+  },
+  {
+    "id": "go_5213806",
+    "name": "Morrinhos",
+    "stateCode": "GO",
+    "territoryId": "5213806",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "12396"
+    }
+  },
+  {
+    "id": "go_5213905",
+    "name": "Mossâmedes",
+    "stateCode": "GO",
+    "territoryId": "5213905",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "83964"
+    }
+  },
+  {
+    "id": "go_5214101",
+    "name": "Mutunópolis",
+    "stateCode": "GO",
+    "territoryId": "5214101",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "4465"
+    }
+  },
+  {
+    "id": "go_5214408",
+    "name": "Nazário",
+    "stateCode": "GO",
+    "territoryId": "5214408",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "164256"
+    }
+  },
+  {
+    "id": "go_5214507",
+    "name": "Nerópolis",
+    "stateCode": "GO",
+    "territoryId": "5214507",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "47377"
+    }
+  },
+  {
+    "id": "go_5215900",
+    "name": "Palminópolis",
+    "stateCode": "GO",
+    "territoryId": "5215900",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "10987"
+    }
+  },
+  {
+    "id": "go_5216452",
+    "name": "Perolândia",
+    "stateCode": "GO",
+    "territoryId": "5216452",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "94178"
+    }
+  },
+  {
+    "id": "go_5217203",
+    "name": "Piranhas",
+    "stateCode": "GO",
+    "territoryId": "5217203",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "113090"
+    }
+  },
+  {
+    "id": "go_5217302",
+    "name": "Pirenópolis",
+    "stateCode": "GO",
+    "territoryId": "5217302",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "4154"
+    }
+  },
+  {
+    "id": "go_5218003",
+    "name": "Porangatu",
+    "stateCode": "GO",
+    "territoryId": "5218003",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "47652"
+    }
+  },
+  {
+    "id": "go_5218300",
+    "name": "Posse",
+    "stateCode": "GO",
+    "territoryId": "5218300",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "97953"
+    }
+  },
+  {
+    "id": "go_5218391",
+    "name": "Professor Jamil",
+    "stateCode": "GO",
+    "territoryId": "5218391",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "170001"
+    }
+  },
+  {
+    "id": "go_5218904",
+    "name": "Rubiataba",
+    "stateCode": "GO",
+    "territoryId": "5218904",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "964559"
+    }
+  },
+  {
+    "id": "go_5219258",
+    "name": "Santa Fé de Goiás",
+    "stateCode": "GO",
+    "territoryId": "5219258",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "76735"
+    }
+  },
+  {
+    "id": "go_5219407",
+    "name": "Santa Rita do Araguaia",
+    "stateCode": "GO",
+    "territoryId": "5219407",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "4902"
+    }
+  },
+  {
+    "id": "go_5219605",
+    "name": "Santa Tereza de Goiás",
+    "stateCode": "GO",
+    "territoryId": "5219605",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "8558"
+    }
+  },
+  {
+    "id": "go_5219738",
+    "name": "Santo Antônio de Goiás",
+    "stateCode": "GO",
+    "territoryId": "5219738",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "10203"
+    }
+  },
+  {
+    "id": "go_5220157",
+    "name": "São Luiz do Norte",
+    "stateCode": "GO",
+    "territoryId": "5220157",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "4208"
+    }
+  },
+  {
+    "id": "go_5220207",
+    "name": "São Miguel do Araguaia",
+    "stateCode": "GO",
+    "territoryId": "5220207",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "47884"
+    }
+  },
+  {
+    "id": "go_5220264",
+    "name": "São Miguel do Passa Quatro",
+    "stateCode": "GO",
+    "territoryId": "5220264",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "3621"
+    }
+  },
+  {
+    "id": "go_5220405",
+    "name": "São Simão",
+    "stateCode": "GO",
+    "territoryId": "5220405",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "1302"
+    }
+  },
+  {
+    "id": "go_5221007",
+    "name": "Taquaral de Goiás",
+    "stateCode": "GO",
+    "territoryId": "5221007",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "47892"
+    }
+  },
+  {
+    "id": "go_5221304",
+    "name": "Três Ranchos",
+    "stateCode": "GO",
+    "territoryId": "5221304",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "47902"
+    }
+  },
+  {
+    "id": "go_5221577",
+    "name": "Uirapuru",
+    "stateCode": "GO",
+    "territoryId": "5221577",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "10052"
+    }
+  },
+  {
+    "id": "go_5200175",
+    "name": "Água Fria de Goiás",
+    "stateCode": "GO",
+    "territoryId": "5200175",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "64715"
+    }
+  },
+  {
+    "id": "go_5200258",
+    "name": "Águas Lindas de Goiás",
+    "stateCode": "GO",
+    "territoryId": "5200258",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "entityId": "44796"
+    }
+  }
+]

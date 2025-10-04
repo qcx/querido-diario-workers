@@ -9,6 +9,7 @@ import { AdministracaoPublicaSpider } from './base/administracao-publica-spider'
 import { PtioSpider } from './base/ptio-spider';
 import { MunicipioOnlineSpider } from './base/municipio-online-spider';
 import { AtendeV2Spider } from './base/atende-v2-spider';
+import { DomScSpider } from './base/dom-sc-spider';
 import doemCitiesConfig from './configs/doem-cities.json';
 import instarCitiesConfig from './configs/instar-cities.json';
 import dospCitiesConfig from './configs/dosp-cities.json';
@@ -25,6 +26,7 @@ import administracaoPublicaCitiesConfig from './configs/administracao-publica-ci
 import ptioCitiesConfig from './configs/ptio-cities.json';
 import municipioOnlineCitiesConfig from './configs/municipio-online-cities.json';
 import atendeV2CitiesConfig from './configs/atende-v2-cities.json';
+import domScCitiesConfig from './configs/dom-sc-cities.json';
 import sigpubCitiesConfig from './configs/sigpub-cities.json';
 
 /**
@@ -121,6 +123,11 @@ class SpiderRegistry {
       this.configs.set(config.id, config);
     }
     
+    // Load DOM/SC cities
+    for (const config of domScCitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
     // Load SIGPub cities
     for (const config of sigpubCitiesConfig as SpiderConfig[]) {
       this.configs.set(config.id, config);
@@ -209,6 +216,9 @@ class SpiderRegistry {
       
       case 'atende_v2':
         return new AtendeV2Spider(config, dateRange);
+      
+      case 'dom_sc':
+        return new DomScSpider(config, dateRange);
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);

@@ -1,0 +1,1318 @@
+[
+  {
+    "nome_domsc": "Abdon Batista",
+    "nome_ibge": "Abdon Batista",
+    "codigo_ibge": 4200051,
+    "latitude": -27.6126,
+    "longitude": -51.0233
+  },
+  {
+    "nome_domsc": "Abelardo Luz",
+    "nome_ibge": "Abelardo Luz",
+    "codigo_ibge": 4200101,
+    "latitude": -26.5716,
+    "longitude": -52.3229
+  },
+  {
+    "nome_domsc": "Alfredo Wagner",
+    "nome_ibge": "Alfredo Wagner",
+    "codigo_ibge": 4200705,
+    "latitude": -27.7001,
+    "longitude": -49.3273
+  },
+  {
+    "nome_domsc": "Alto Bela Vista",
+    "nome_ibge": "Alto Bela Vista",
+    "codigo_ibge": 4200754,
+    "latitude": -27.4333,
+    "longitude": -51.9044
+  },
+  {
+    "nome_domsc": "Anchieta",
+    "nome_ibge": "Anchieta",
+    "codigo_ibge": 4200804,
+    "latitude": -26.5382,
+    "longitude": -53.3319
+  },
+  {
+    "nome_domsc": "Angelina",
+    "nome_ibge": "Angelina",
+    "codigo_ibge": 4200903,
+    "latitude": -27.5704,
+    "longitude": -48.9879
+  },
+  {
+    "nome_domsc": "Anita Garibaldi",
+    "nome_ibge": "Anita Garibaldi",
+    "codigo_ibge": 4201000,
+    "latitude": -27.6897,
+    "longitude": -51.1271
+  },
+  {
+    "nome_domsc": "Araquari",
+    "nome_ibge": "Araquari",
+    "codigo_ibge": 4201307,
+    "latitude": -26.3754,
+    "longitude": -48.7188
+  },
+  {
+    "nome_domsc": "Arroio Trinta",
+    "nome_ibge": "Arroio Trinta",
+    "codigo_ibge": 4201604,
+    "latitude": -26.9257,
+    "longitude": -51.3407
+  },
+  {
+    "nome_domsc": "Arvoredo",
+    "nome_ibge": "Arvoredo",
+    "codigo_ibge": 4201653,
+    "latitude": -27.0748,
+    "longitude": -52.4543
+  },
+  {
+    "nome_domsc": "Ascurra",
+    "nome_ibge": "Ascurra",
+    "codigo_ibge": 4201703,
+    "latitude": -26.9548,
+    "longitude": -49.3783
+  },
+  {
+    "nome_domsc": "Atalanta",
+    "nome_ibge": "Atalanta",
+    "codigo_ibge": 4201802,
+    "latitude": -27.4219,
+    "longitude": -49.7789
+  },
+  {
+    "nome_domsc": "Aurora",
+    "nome_ibge": "Aurora",
+    "codigo_ibge": 4201901,
+    "latitude": -27.3098,
+    "longitude": -49.6295
+  },
+  {
+    "nome_domsc": "Bandeirante",
+    "nome_ibge": "Bandeirante",
+    "codigo_ibge": 4202081,
+    "latitude": -26.7705,
+    "longitude": -53.6413
+  },
+  {
+    "nome_domsc": "Barra Bonita",
+    "nome_ibge": "Barra Bonita",
+    "codigo_ibge": 4202099,
+    "latitude": -26.654,
+    "longitude": -53.44
+  },
+  {
+    "nome_domsc": "Barra Velha",
+    "nome_ibge": "Barra Velha",
+    "codigo_ibge": 4202107,
+    "latitude": -26.637,
+    "longitude": -48.6933
+  },
+  {
+    "nome_domsc": "Bela Vista do Toldo",
+    "nome_ibge": "Bela Vista do Toldo",
+    "codigo_ibge": 4202131,
+    "latitude": -26.2746,
+    "longitude": -50.4664
+  },
+  {
+    "nome_domsc": "Belmonte",
+    "nome_ibge": "Belmonte",
+    "codigo_ibge": 4202156,
+    "latitude": -26.843,
+    "longitude": -53.5758
+  },
+  {
+    "nome_domsc": "Benedito Novo",
+    "nome_ibge": "Benedito Novo",
+    "codigo_ibge": 4202206,
+    "latitude": -26.781,
+    "longitude": -49.3593
+  },
+  {
+    "nome_domsc": "Blumenau",
+    "nome_ibge": "Blumenau",
+    "codigo_ibge": 4202404,
+    "latitude": -26.9155,
+    "longitude": -49.0709
+  },
+  {
+    "nome_domsc": "Bocaina do Sul",
+    "nome_ibge": "Bocaina do Sul",
+    "codigo_ibge": 4202438,
+    "latitude": -27.7455,
+    "longitude": -49.9423
+  },
+  {
+    "nome_domsc": "Bom Jardim da Serra",
+    "nome_ibge": "Bom Jardim da Serra",
+    "codigo_ibge": 4202503,
+    "latitude": -28.3377,
+    "longitude": -49.6373
+  },
+  {
+    "nome_domsc": "Bom Jesus",
+    "nome_ibge": "Bom Jesus",
+    "codigo_ibge": 4202537,
+    "latitude": -26.7326,
+    "longitude": -52.3919
+  },
+  {
+    "nome_domsc": "Bom Jesus do Oeste",
+    "nome_ibge": "Bom Jesus do Oeste",
+    "codigo_ibge": 4202578,
+    "latitude": -26.6927,
+    "longitude": -53.0967
+  },
+  {
+    "nome_domsc": "Bom Retiro",
+    "nome_ibge": "Bom Retiro",
+    "codigo_ibge": 4202602,
+    "latitude": -27.799,
+    "longitude": -49.487
+  },
+  {
+    "nome_domsc": "Bombinhas",
+    "nome_ibge": "Bombinhas",
+    "codigo_ibge": 4202453,
+    "latitude": -27.1382,
+    "longitude": -48.5146
+  },
+  {
+    "nome_domsc": "Brusque",
+    "nome_ibge": "Brusque",
+    "codigo_ibge": 4202909,
+    "latitude": -27.0977,
+    "longitude": -48.9107
+  },
+  {
+    "nome_domsc": "Caibi",
+    "nome_ibge": "Caibi",
+    "codigo_ibge": 4203105,
+    "latitude": -27.0741,
+    "longitude": -53.2458
+  },
+  {
+    "nome_domsc": "Calmon",
+    "nome_ibge": "Calmon",
+    "codigo_ibge": 4203154,
+    "latitude": -26.5942,
+    "longitude": -51.095
+  },
+  {
+    "nome_domsc": "Campo Alegre",
+    "nome_ibge": "Campo Alegre",
+    "codigo_ibge": 4203303,
+    "latitude": -26.195,
+    "longitude": -49.2676
+  },
+  {
+    "nome_domsc": "Campo Belo do Sul",
+    "nome_ibge": "Campo Belo do Sul",
+    "codigo_ibge": 4203402,
+    "latitude": -27.8975,
+    "longitude": -50.7595
+  },
+  {
+    "nome_domsc": "Campos Novos",
+    "nome_ibge": "Campos Novos",
+    "codigo_ibge": 4203600,
+    "latitude": -27.4002,
+    "longitude": -51.2276
+  },
+  {
+    "nome_domsc": "Canelinha",
+    "nome_ibge": "Canelinha",
+    "codigo_ibge": 4203709,
+    "latitude": -27.2616,
+    "longitude": -48.7658
+  },
+  {
+    "nome_domsc": "Canoinhas",
+    "nome_ibge": "Canoinhas",
+    "codigo_ibge": 4203808,
+    "latitude": -26.1766,
+    "longitude": -50.395
+  },
+  {
+    "nome_domsc": "Capinzal",
+    "nome_ibge": "Capinzal",
+    "codigo_ibge": 4203907,
+    "latitude": -27.3473,
+    "longitude": -51.6057
+  },
+  {
+    "nome_domsc": "Capivari de Baixo",
+    "nome_ibge": "Capivari de Baixo",
+    "codigo_ibge": 4203956,
+    "latitude": -28.4498,
+    "longitude": -48.9631
+  },
+  {
+    "nome_domsc": "Catanduvas",
+    "nome_ibge": "Catanduvas",
+    "codigo_ibge": 4204004,
+    "latitude": -27.069,
+    "longitude": -51.6602
+  },
+  {
+    "nome_domsc": "Caxambu do Sul",
+    "nome_ibge": "Caxambu do Sul",
+    "codigo_ibge": 4204103,
+    "latitude": -27.1624,
+    "longitude": -52.8807
+  },
+  {
+    "nome_domsc": "Celso Ramos",
+    "nome_ibge": "Celso Ramos",
+    "codigo_ibge": 4204152,
+    "latitude": -27.6327,
+    "longitude": -51.335
+  },
+  {
+    "nome_domsc": "Cerro Negro",
+    "nome_ibge": "Cerro Negro",
+    "codigo_ibge": 4204178,
+    "latitude": -27.7942,
+    "longitude": -50.8673
+  },
+  {
+    "nome_domsc": "Cocal do Sul",
+    "nome_ibge": "Cocal do Sul",
+    "codigo_ibge": 4204251,
+    "latitude": -28.5986,
+    "longitude": -49.3335
+  },
+  {
+    "nome_domsc": "Cordilheira Alta",
+    "nome_ibge": "Cordilheira Alta",
+    "codigo_ibge": 4204350,
+    "latitude": -26.9844,
+    "longitude": -52.6056
+  },
+  {
+    "nome_domsc": "Coronel Freitas",
+    "nome_ibge": "Coronel Freitas",
+    "codigo_ibge": 4204400,
+    "latitude": -26.9057,
+    "longitude": -52.7011
+  },
+  {
+    "nome_domsc": "Coronel Martins",
+    "nome_ibge": "Coronel Martins",
+    "codigo_ibge": 4204459,
+    "latitude": -26.511,
+    "longitude": -52.6694
+  },
+  {
+    "nome_domsc": "Correia Pinto",
+    "nome_ibge": "Correia Pinto",
+    "codigo_ibge": 4204558,
+    "latitude": -27.5877,
+    "longitude": -50.3614
+  },
+  {
+    "nome_domsc": "Curitibanos",
+    "nome_ibge": "Curitibanos",
+    "codigo_ibge": 4204806,
+    "latitude": -27.2824,
+    "longitude": -50.5816
+  },
+  {
+    "nome_domsc": "Descanso",
+    "nome_ibge": "Descanso",
+    "codigo_ibge": 4204905,
+    "latitude": -26.827,
+    "longitude": -53.5034
+  },
+  {
+    "nome_domsc": "Dionisio Cerqueira",
+    "nome_ibge": "Dionísio Cerqueira",
+    "codigo_ibge": 4205001,
+    "latitude": -26.2648,
+    "longitude": -53.6351
+  },
+  {
+    "nome_domsc": "Dona Emma",
+    "nome_ibge": "Dona Emma",
+    "codigo_ibge": 4205100,
+    "latitude": -26.981,
+    "longitude": -49.7261
+  },
+  {
+    "nome_domsc": "Doutor Pedrinho",
+    "nome_ibge": "Doutor Pedrinho",
+    "codigo_ibge": 4205159,
+    "latitude": -26.7174,
+    "longitude": -49.4795
+  },
+  {
+    "nome_domsc": "Entre Rios",
+    "nome_ibge": "Entre Rios",
+    "codigo_ibge": 4205175,
+    "latitude": -26.7225,
+    "longitude": -52.5585
+  },
+  {
+    "nome_domsc": "Ermo",
+    "nome_ibge": "Ermo",
+    "codigo_ibge": 4205191,
+    "latitude": -28.9869,
+    "longitude": -49.643
+  },
+  {
+    "nome_domsc": "Erval Velho",
+    "nome_ibge": "Erval Velho",
+    "codigo_ibge": 4205209,
+    "latitude": -27.2743,
+    "longitude": -51.443
+  },
+  {
+    "nome_domsc": "Faxinal dos Guedes",
+    "nome_ibge": "Faxinal dos Guedes",
+    "codigo_ibge": 4205308,
+    "latitude": -26.8451,
+    "longitude": -52.2596
+  },
+  {
+    "nome_domsc": "Formosa do Sul",
+    "nome_ibge": "Formosa do Sul",
+    "codigo_ibge": 4205431,
+    "latitude": -26.6453,
+    "longitude": -52.7946
+  },
+  {
+    "nome_domsc": "Forquilhinha",
+    "nome_ibge": "Forquilhinha",
+    "codigo_ibge": 4205456,
+    "latitude": -28.7454,
+    "longitude": -49.4785
+  },
+  {
+    "nome_domsc": "Fraiburgo",
+    "nome_ibge": "Fraiburgo",
+    "codigo_ibge": 4205506,
+    "latitude": -27.0233,
+    "longitude": -50.92
+  },
+  {
+    "nome_domsc": "Garopaba",
+    "nome_ibge": "Garopaba",
+    "codigo_ibge": 4205704,
+    "latitude": -28.0275,
+    "longitude": -48.6192
+  },
+  {
+    "nome_domsc": "Garuva",
+    "nome_ibge": "Garuva",
+    "codigo_ibge": 4205803,
+    "latitude": -26.0292,
+    "longitude": -48.852
+  },
+  {
+    "nome_domsc": "Gaspar",
+    "nome_ibge": "Gaspar",
+    "codigo_ibge": 4205902,
+    "latitude": -26.9336,
+    "longitude": -48.9534
+  },
+  {
+    "nome_domsc": "Governador Celso Ramos",
+    "nome_ibge": "Governador Celso Ramos",
+    "codigo_ibge": 4206009,
+    "latitude": -27.3172,
+    "longitude": -48.5576
+  },
+  {
+    "nome_domsc": "Gravatal",
+    "nome_ibge": "Gravatal",
+    "codigo_ibge": 4206207,
+    "latitude": -28.3208,
+    "longitude": -49.0427
+  },
+  {
+    "nome_domsc": "Guabiruba",
+    "nome_ibge": "Guabiruba",
+    "codigo_ibge": 4206306,
+    "latitude": -27.0808,
+    "longitude": -48.9804
+  },
+  {
+    "nome_domsc": "Guaraciaba",
+    "nome_ibge": "Guaraciaba",
+    "codigo_ibge": 4206405,
+    "latitude": -26.6042,
+    "longitude": -53.5243
+  },
+  {
+    "nome_domsc": "Guaramirim",
+    "nome_ibge": "Guaramirim",
+    "codigo_ibge": 4206504,
+    "latitude": -26.4688,
+    "longitude": -49.0026
+  },
+  {
+    "nome_domsc": "Herval d'Oeste",
+    "nome_ibge": "Herval d'Oeste",
+    "codigo_ibge": 4206702,
+    "latitude": -27.1903,
+    "longitude": -51.4917
+  },
+  {
+    "nome_domsc": "Ibiam",
+    "nome_ibge": "Ibiam",
+    "codigo_ibge": 4206751,
+    "latitude": -27.1847,
+    "longitude": -51.2352
+  },
+  {
+    "nome_domsc": "Ibirama",
+    "nome_ibge": "Ibirama",
+    "codigo_ibge": 4206900,
+    "latitude": -27.0547,
+    "longitude": -49.5193
+  },
+  {
+    "nome_domsc": "Ilhota",
+    "nome_ibge": "Ilhota",
+    "codigo_ibge": 4207106,
+    "latitude": -26.9023,
+    "longitude": -48.8251
+  },
+  {
+    "nome_domsc": "Imbituba",
+    "nome_ibge": "Imbituba",
+    "codigo_ibge": 4207304,
+    "latitude": -28.2284,
+    "longitude": -48.6659
+  },
+  {
+    "nome_domsc": "Imbuia",
+    "nome_ibge": "Imbuia",
+    "codigo_ibge": 4207403,
+    "latitude": -27.4908,
+    "longitude": -49.4218
+  },
+  {
+    "nome_domsc": "Indaial",
+    "nome_ibge": "Indaial",
+    "codigo_ibge": 4207502,
+    "latitude": -26.8992,
+    "longitude": -49.2354
+  },
+  {
+    "nome_domsc": "Ipira",
+    "nome_ibge": "Ipira",
+    "codigo_ibge": 4207601,
+    "latitude": -27.4038,
+    "longitude": -51.7758
+  },
+  {
+    "nome_domsc": "Ipumirim",
+    "nome_ibge": "Ipumirim",
+    "codigo_ibge": 4207700,
+    "latitude": -27.0772,
+    "longitude": -52.1289
+  },
+  {
+    "nome_domsc": "Iraceminha",
+    "nome_ibge": "Iraceminha",
+    "codigo_ibge": 4207759,
+    "latitude": -26.8215,
+    "longitude": -53.2767
+  },
+  {
+    "nome_domsc": "Irani",
+    "nome_ibge": "Irani",
+    "codigo_ibge": 4207809,
+    "latitude": -27.0287,
+    "longitude": -51.9012
+  },
+  {
+    "nome_domsc": "Irati",
+    "nome_ibge": "Irati",
+    "codigo_ibge": 4207858,
+    "latitude": -26.6539,
+    "longitude": -52.8955
+  },
+  {
+    "nome_domsc": "Itapema",
+    "nome_ibge": "Itapema",
+    "codigo_ibge": 4208302,
+    "latitude": -27.0861,
+    "longitude": -48.616
+  },
+  {
+    "nome_domsc": "Itapiranga",
+    "nome_ibge": "Itapiranga",
+    "codigo_ibge": 4208401,
+    "latitude": -27.1659,
+    "longitude": -53.7166
+  },
+  {
+    "nome_domsc": "Ituporanga",
+    "nome_ibge": "Ituporanga",
+    "codigo_ibge": 4208500,
+    "latitude": -27.4101,
+    "longitude": -49.5963
+  },
+  {
+    "nome_domsc": "Jacinto Machado",
+    "nome_ibge": "Jacinto Machado",
+    "codigo_ibge": 4208708,
+    "latitude": -28.9961,
+    "longitude": -49.7623
+  },
+  {
+    "nome_domsc": "Jaguaruna",
+    "nome_ibge": "Jaguaruna",
+    "codigo_ibge": 4208807,
+    "latitude": -28.6146,
+    "longitude": -49.0296
+  },
+  {
+    "nome_domsc": "Joinville",
+    "nome_ibge": "Joinville",
+    "codigo_ibge": 4209102,
+    "latitude": -26.3045,
+    "longitude": -48.8487
+  },
+  {
+    "nome_domsc": "Lages",
+    "nome_ibge": "Lages",
+    "codigo_ibge": 4209300,
+    "latitude": -27.815,
+    "longitude": -50.3259
+  },
+  {
+    "nome_domsc": "Laguna",
+    "nome_ibge": "Laguna",
+    "codigo_ibge": 4209409,
+    "latitude": -28.4843,
+    "longitude": -48.7772
+  },
+  {
+    "nome_domsc": "Lajeado Grande",
+    "nome_ibge": "Lajeado Grande",
+    "codigo_ibge": 4209458,
+    "latitude": -26.8576,
+    "longitude": -52.5648
+  },
+  {
+    "nome_domsc": "Lauro Muller",
+    "nome_ibge": "Lauro Muller",
+    "codigo_ibge": 4209607,
+    "latitude": -28.3859,
+    "longitude": -49.4035
+  },
+  {
+    "nome_domsc": "Lebon Regis",
+    "nome_ibge": "Lebon Régis",
+    "codigo_ibge": 4209706,
+    "latitude": -26.928,
+    "longitude": -50.6921
+  },
+  {
+    "nome_domsc": "Leoberto Leal",
+    "nome_ibge": "Leoberto Leal",
+    "codigo_ibge": 4209805,
+    "latitude": -27.5081,
+    "longitude": -49.2789
+  },
+  {
+    "nome_domsc": "Lontras",
+    "nome_ibge": "Lontras",
+    "codigo_ibge": 4209904,
+    "latitude": -27.1684,
+    "longitude": -49.535
+  },
+  {
+    "nome_domsc": "Luiz Alves",
+    "nome_ibge": "Luiz Alves",
+    "codigo_ibge": 4210001,
+    "latitude": -26.7151,
+    "longitude": -48.9322
+  },
+  {
+    "nome_domsc": "Luzerna",
+    "nome_ibge": "Luzerna",
+    "codigo_ibge": 4210035,
+    "latitude": -27.1304,
+    "longitude": -51.4682
+  },
+  {
+    "nome_domsc": "Macieira",
+    "nome_ibge": "Macieira",
+    "codigo_ibge": 4210050,
+    "latitude": -26.8552,
+    "longitude": -51.3705
+  },
+  {
+    "nome_domsc": "Mafra",
+    "nome_ibge": "Mafra",
+    "codigo_ibge": 4210100,
+    "latitude": -26.1159,
+    "longitude": -49.8086
+  },
+  {
+    "nome_domsc": "Major Gercino",
+    "nome_ibge": "Major Gercino",
+    "codigo_ibge": 4210209,
+    "latitude": -27.4192,
+    "longitude": -48.9488
+  },
+  {
+    "nome_domsc": "Major Vieira",
+    "nome_ibge": "Major Vieira",
+    "codigo_ibge": 4210308,
+    "latitude": -26.3709,
+    "longitude": -50.3266
+  },
+  {
+    "nome_domsc": "Maravilha",
+    "nome_ibge": "Maravilha",
+    "codigo_ibge": 4210506,
+    "latitude": -26.7665,
+    "longitude": -53.1737
+  },
+  {
+    "nome_domsc": "Marema",
+    "nome_ibge": "Marema",
+    "codigo_ibge": 4210555,
+    "latitude": -26.8024,
+    "longitude": -52.6264
+  },
+  {
+    "nome_domsc": "Massaranduba",
+    "nome_ibge": "Massaranduba",
+    "codigo_ibge": 4210605,
+    "latitude": -26.6109,
+    "longitude": -49.0054
+  },
+  {
+    "nome_domsc": "Matos Costa",
+    "nome_ibge": "Matos Costa",
+    "codigo_ibge": 4210704,
+    "latitude": -26.4709,
+    "longitude": -51.1501
+  },
+  {
+    "nome_domsc": "Meleiro",
+    "nome_ibge": "Meleiro",
+    "codigo_ibge": 4210803,
+    "latitude": -28.8244,
+    "longitude": -49.6378
+  },
+  {
+    "nome_domsc": "Mirim Doce",
+    "nome_ibge": "Mirim Doce",
+    "codigo_ibge": 4210852,
+    "latitude": -27.197,
+    "longitude": -50.0786
+  },
+  {
+    "nome_domsc": "Modelo",
+    "nome_ibge": "Modelo",
+    "codigo_ibge": 4210902,
+    "latitude": -26.7729,
+    "longitude": -53.04
+  },
+  {
+    "nome_domsc": "Monte Carlo",
+    "nome_ibge": "Monte Carlo",
+    "codigo_ibge": 4211058,
+    "latitude": -27.2239,
+    "longitude": -50.9808
+  },
+  {
+    "nome_domsc": "Monte Castelo",
+    "nome_ibge": "Monte Castelo",
+    "codigo_ibge": 4211108,
+    "latitude": -26.461,
+    "longitude": -50.2327
+  },
+  {
+    "nome_domsc": "Morro Grande",
+    "nome_ibge": "Morro Grande",
+    "codigo_ibge": 4211256,
+    "latitude": -28.8006,
+    "longitude": -49.7214
+  },
+  {
+    "nome_domsc": "Navegantes",
+    "nome_ibge": "Navegantes",
+    "codigo_ibge": 4211306,
+    "latitude": -26.8943,
+    "longitude": -48.6546
+  },
+  {
+    "nome_domsc": "Nova Erechim",
+    "nome_ibge": "Nova Erechim",
+    "codigo_ibge": 4211405,
+    "latitude": -26.8982,
+    "longitude": -52.9066
+  },
+  {
+    "nome_domsc": "Nova Itaberaba",
+    "nome_ibge": "Nova Itaberaba",
+    "codigo_ibge": 4211454,
+    "latitude": -26.9428,
+    "longitude": -52.8141
+  },
+  {
+    "nome_domsc": "Nova Trento",
+    "nome_ibge": "Nova Trento",
+    "codigo_ibge": 4211504,
+    "latitude": -27.278,
+    "longitude": -48.9298
+  },
+  {
+    "nome_domsc": "Nova Veneza",
+    "nome_ibge": "Nova Veneza",
+    "codigo_ibge": 4211603,
+    "latitude": -28.6338,
+    "longitude": -49.5055
+  },
+  {
+    "nome_domsc": "Novo Horizonte",
+    "nome_ibge": "Novo Horizonte",
+    "codigo_ibge": 4211652,
+    "latitude": -26.4442,
+    "longitude": -52.8281
+  },
+  {
+    "nome_domsc": "Orleans",
+    "nome_ibge": "Orleans",
+    "codigo_ibge": 4211702,
+    "latitude": -28.3487,
+    "longitude": -49.2986
+  },
+  {
+    "nome_domsc": "Ouro",
+    "nome_ibge": "Ouro",
+    "codigo_ibge": 4211801,
+    "latitude": -27.3379,
+    "longitude": -51.6194
+  },
+  {
+    "nome_domsc": "Ouro Verde",
+    "nome_ibge": "Ouro Verde",
+    "codigo_ibge": 4211850,
+    "latitude": -26.692,
+    "longitude": -52.3108
+  },
+  {
+    "nome_domsc": "Paial",
+    "nome_ibge": "Paial",
+    "codigo_ibge": 4211876,
+    "latitude": -27.2541,
+    "longitude": -52.4975
+  },
+  {
+    "nome_domsc": "Painel",
+    "nome_ibge": "Painel",
+    "codigo_ibge": 4211892,
+    "latitude": -27.9234,
+    "longitude": -50.0972
+  },
+  {
+    "nome_domsc": "Palma Sola",
+    "nome_ibge": "Palma Sola",
+    "codigo_ibge": 4212007,
+    "latitude": -26.3471,
+    "longitude": -53.2771
+  },
+  {
+    "nome_domsc": "Palmeira",
+    "nome_ibge": "Palmeira",
+    "codigo_ibge": 4212056,
+    "latitude": -27.583,
+    "longitude": -50.1577
+  },
+  {
+    "nome_domsc": "Palmitos",
+    "nome_ibge": "Palmitos",
+    "codigo_ibge": 4212106,
+    "latitude": -27.0702,
+    "longitude": -53.1586
+  },
+  {
+    "nome_domsc": "Papanduva",
+    "nome_ibge": "Papanduva",
+    "codigo_ibge": 4212205,
+    "latitude": -26.3777,
+    "longitude": -50.1419
+  },
+  {
+    "nome_domsc": "Passo de Torres",
+    "nome_ibge": "Passo de Torres",
+    "codigo_ibge": 4212254,
+    "latitude": -29.3099,
+    "longitude": -49.722
+  },
+  {
+    "nome_domsc": "Passos Maia",
+    "nome_ibge": "Passos Maia",
+    "codigo_ibge": 4212270,
+    "latitude": -26.7829,
+    "longitude": -52.0568
+  },
+  {
+    "nome_domsc": "Paulo Lopes",
+    "nome_ibge": "Paulo Lopes",
+    "codigo_ibge": 4212304,
+    "latitude": -27.9607,
+    "longitude": -48.6864
+  },
+  {
+    "nome_domsc": "Pedras Grandes",
+    "nome_ibge": "Pedras Grandes",
+    "codigo_ibge": 4212403,
+    "latitude": -28.4339,
+    "longitude": -49.1949
+  },
+  {
+    "nome_domsc": "Penha",
+    "nome_ibge": "Penha",
+    "codigo_ibge": 4212502,
+    "latitude": -26.7754,
+    "longitude": -48.6465
+  },
+  {
+    "nome_domsc": "Peritiba",
+    "nome_ibge": "Peritiba",
+    "codigo_ibge": 4212601,
+    "latitude": -27.3754,
+    "longitude": -51.9018
+  },
+  {
+    "nome_domsc": "Pescaria Brava",
+    "nome_ibge": "Pescaria Brava",
+    "codigo_ibge": 4212650,
+    "latitude": -28.3966,
+    "longitude": -48.8864
+  },
+  {
+    "nome_domsc": "Pinhalzinho",
+    "nome_ibge": "Pinhalzinho",
+    "codigo_ibge": 4212908,
+    "latitude": -26.8495,
+    "longitude": -52.9913
+  },
+  {
+    "nome_domsc": "Pinheiro Preto",
+    "nome_ibge": "Pinheiro Preto",
+    "codigo_ibge": 4213005,
+    "latitude": -27.0483,
+    "longitude": -51.2243
+  },
+  {
+    "nome_domsc": "Piratuba",
+    "nome_ibge": "Piratuba",
+    "codigo_ibge": 4213104,
+    "latitude": -27.4242,
+    "longitude": -51.7668
+  },
+  {
+    "nome_domsc": "Planalto Alegre",
+    "nome_ibge": "Planalto Alegre",
+    "codigo_ibge": 4213153,
+    "latitude": -27.0704,
+    "longitude": -52.867
+  },
+  {
+    "nome_domsc": "Pomerode",
+    "nome_ibge": "Pomerode",
+    "codigo_ibge": 4213203,
+    "latitude": -26.7384,
+    "longitude": -49.1785
+  },
+  {
+    "nome_domsc": "Ponte Alta",
+    "nome_ibge": "Ponte Alta",
+    "codigo_ibge": 4213302,
+    "latitude": -27.4835,
+    "longitude": -50.3764
+  },
+  {
+    "nome_domsc": "Ponte Alta do Norte",
+    "nome_ibge": "Ponte Alta do Norte",
+    "codigo_ibge": 4213351,
+    "latitude": -27.1591,
+    "longitude": -50.4659
+  },
+  {
+    "nome_domsc": "Ponte Serrada",
+    "nome_ibge": "Ponte Serrada",
+    "codigo_ibge": 4213401,
+    "latitude": -26.8733,
+    "longitude": -52.0112
+  },
+  {
+    "nome_domsc": "Porto Belo",
+    "nome_ibge": "Porto Belo",
+    "codigo_ibge": 4213500,
+    "latitude": -27.1586,
+    "longitude": -48.5469
+  },
+  {
+    "nome_domsc": "Pouso Redondo",
+    "nome_ibge": "Pouso Redondo",
+    "codigo_ibge": 4213708,
+    "latitude": -27.2567,
+    "longitude": -49.9301
+  },
+  {
+    "nome_domsc": "Praia Grande",
+    "nome_ibge": "Praia Grande",
+    "codigo_ibge": 4213807,
+    "latitude": -29.1918,
+    "longitude": -49.9525
+  },
+  {
+    "nome_domsc": "Presidente Castello Branco",
+    "nome_ibge": "Presidente Castello Branco",
+    "codigo_ibge": 4213906,
+    "latitude": -27.2218,
+    "longitude": -51.8089
+  },
+  {
+    "nome_domsc": "Presidente Nereu",
+    "nome_ibge": "Presidente Nereu",
+    "codigo_ibge": 4214102,
+    "latitude": -27.2768,
+    "longitude": -49.3889
+  },
+  {
+    "nome_domsc": "Princesa",
+    "nome_ibge": "Princesa",
+    "codigo_ibge": 4214151,
+    "latitude": -26.4441,
+    "longitude": -53.5994
+  },
+  {
+    "nome_domsc": "Quilombo",
+    "nome_ibge": "Quilombo",
+    "codigo_ibge": 4214201,
+    "latitude": -26.7264,
+    "longitude": -52.724
+  },
+  {
+    "nome_domsc": "Rancho Queimado",
+    "nome_ibge": "Rancho Queimado",
+    "codigo_ibge": 4214300,
+    "latitude": -27.6727,
+    "longitude": -49.0191
+  },
+  {
+    "nome_domsc": "Rio Fortuna",
+    "nome_ibge": "Rio Fortuna",
+    "codigo_ibge": 4214904,
+    "latitude": -28.1244,
+    "longitude": -49.1068
+  },
+  {
+    "nome_domsc": "Rio Negrinho",
+    "nome_ibge": "Rio Negrinho",
+    "codigo_ibge": 4215000,
+    "latitude": -26.2591,
+    "longitude": -49.5177
+  },
+  {
+    "nome_domsc": "Rio Rufino",
+    "nome_ibge": "Rio Rufino",
+    "codigo_ibge": 4215059,
+    "latitude": -27.8592,
+    "longitude": -49.7754
+  },
+  {
+    "nome_domsc": "Rio das Antas",
+    "nome_ibge": "Rio das Antas",
+    "codigo_ibge": 4214409,
+    "latitude": -26.8946,
+    "longitude": -51.0674
+  },
+  {
+    "nome_domsc": "Rio do Campo",
+    "nome_ibge": "Rio do Campo",
+    "codigo_ibge": 4214508,
+    "latitude": -26.9452,
+    "longitude": -50.136
+  },
+  {
+    "nome_domsc": "Rio do Oeste",
+    "nome_ibge": "Rio do Oeste",
+    "codigo_ibge": 4214607,
+    "latitude": -27.1952,
+    "longitude": -49.7989
+  },
+  {
+    "nome_domsc": "Rio do Sul",
+    "nome_ibge": "Rio do Sul",
+    "codigo_ibge": 4214805,
+    "latitude": -27.2156,
+    "longitude": -49.643
+  },
+  {
+    "nome_domsc": "Rio dos Cedros",
+    "nome_ibge": "Rio dos Cedros",
+    "codigo_ibge": 4214706,
+    "latitude": -26.7398,
+    "longitude": -49.2718
+  },
+  {
+    "nome_domsc": "Riqueza",
+    "nome_ibge": "Riqueza",
+    "codigo_ibge": 4215075,
+    "latitude": -27.0653,
+    "longitude": -53.3265
+  },
+  {
+    "nome_domsc": "Rodeio",
+    "nome_ibge": "Rodeio",
+    "codigo_ibge": 4215109,
+    "latitude": -26.9243,
+    "longitude": -49.3649
+  },
+  {
+    "nome_domsc": "Salete",
+    "nome_ibge": "Salete",
+    "codigo_ibge": 4215307,
+    "latitude": -26.9798,
+    "longitude": -49.9988
+  },
+  {
+    "nome_domsc": "Saltinho",
+    "nome_ibge": "Saltinho",
+    "codigo_ibge": 4215356,
+    "latitude": -26.6049,
+    "longitude": -53.0578
+  },
+  {
+    "nome_domsc": "Salto Veloso",
+    "nome_ibge": "Salto Veloso",
+    "codigo_ibge": 4215406,
+    "latitude": -26.903,
+    "longitude": -51.4043
+  },
+  {
+    "nome_domsc": "Santa Cecilia",
+    "nome_ibge": "Santa Cecília",
+    "codigo_ibge": 4215505,
+    "latitude": -26.9592,
+    "longitude": -50.4252
+  },
+  {
+    "nome_domsc": "Santa Helena",
+    "nome_ibge": "Santa Helena",
+    "codigo_ibge": 4215554,
+    "latitude": -26.937,
+    "longitude": -53.6214
+  },
+  {
+    "nome_domsc": "Santa Rosa de Lima",
+    "nome_ibge": "Santa Rosa de Lima",
+    "codigo_ibge": 4215604,
+    "latitude": -28.0331,
+    "longitude": -49.133
+  },
+  {
+    "nome_domsc": "Santa Rosa do Sul",
+    "nome_ibge": "Santa Rosa do Sul",
+    "codigo_ibge": 4215653,
+    "latitude": -29.1313,
+    "longitude": -49.7109
+  },
+  {
+    "nome_domsc": "Santa Terezinha",
+    "nome_ibge": "Santa Terezinha",
+    "codigo_ibge": 4215679,
+    "latitude": -26.7813,
+    "longitude": -50.009
+  },
+  {
+    "nome_domsc": "Santa Terezinha do Progresso",
+    "nome_ibge": "Santa Terezinha do Progresso",
+    "codigo_ibge": 4215687,
+    "latitude": -26.624,
+    "longitude": -53.1997
+  },
+  {
+    "nome_domsc": "Santiago do Sul",
+    "nome_ibge": "Santiago do Sul",
+    "codigo_ibge": 4215695,
+    "latitude": -26.6388,
+    "longitude": -52.6799
+  },
+  {
+    "nome_domsc": "Santo Amaro da Imperatriz",
+    "nome_ibge": "Santo Amaro da Imperatriz",
+    "codigo_ibge": 4215703,
+    "latitude": -27.6852,
+    "longitude": -48.7813
+  },
+  {
+    "nome_domsc": "Saudades",
+    "nome_ibge": "Saudades",
+    "codigo_ibge": 4217303,
+    "latitude": -26.9317,
+    "longitude": -53.0021
+  },
+  {
+    "nome_domsc": "Schroeder",
+    "nome_ibge": "Schroeder",
+    "codigo_ibge": 4217402,
+    "latitude": -26.4116,
+    "longitude": -49.074
+  },
+  {
+    "nome_domsc": "Seara",
+    "nome_ibge": "Seara",
+    "codigo_ibge": 4217501,
+    "latitude": -27.1564,
+    "longitude": -52.299
+  },
+  {
+    "nome_domsc": "Serra Alta",
+    "nome_ibge": "Serra Alta",
+    "codigo_ibge": 4217550,
+    "latitude": -26.7229,
+    "longitude": -53.0409
+  },
+  {
+    "nome_domsc": "Sombrio",
+    "nome_ibge": "Sombrio",
+    "codigo_ibge": 4217709,
+    "latitude": -29.108,
+    "longitude": -49.6328
+  },
+  {
+    "nome_domsc": "Sul Brasil",
+    "nome_ibge": "Sul Brasil",
+    "codigo_ibge": 4217758,
+    "latitude": -26.7351,
+    "longitude": -52.964
+  },
+  {
+    "nome_domsc": "Tigrinhos",
+    "nome_ibge": "Tigrinhos",
+    "codigo_ibge": 4217956,
+    "latitude": -26.6876,
+    "longitude": -53.1545
+  },
+  {
+    "nome_domsc": "Tijucas",
+    "nome_ibge": "Tijucas",
+    "codigo_ibge": 4218004,
+    "latitude": -27.2354,
+    "longitude": -48.6322
+  },
+  {
+    "nome_domsc": "Treviso",
+    "nome_ibge": "Treviso",
+    "codigo_ibge": 4218350,
+    "latitude": -28.5097,
+    "longitude": -49.4634
+  },
+  {
+    "nome_domsc": "Treze de Maio",
+    "nome_ibge": "Treze de Maio",
+    "codigo_ibge": 4218400,
+    "latitude": -28.5537,
+    "longitude": -49.1565
+  },
+  {
+    "nome_domsc": "Trombudo Central",
+    "nome_ibge": "Trombudo Central",
+    "codigo_ibge": 4218608,
+    "latitude": -27.3033,
+    "longitude": -49.793
+  },
+  {
+    "nome_domsc": "Turvo",
+    "nome_ibge": "Turvo",
+    "codigo_ibge": 4218806,
+    "latitude": -28.9272,
+    "longitude": -49.6831
+  },
+  {
+    "nome_domsc": "Urubici",
+    "nome_ibge": "Urubici",
+    "codigo_ibge": 4218905,
+    "latitude": -28.0157,
+    "longitude": -49.5925
+  },
+  {
+    "nome_domsc": "Urupema",
+    "nome_ibge": "Urupema",
+    "codigo_ibge": 4218954,
+    "latitude": -27.9557,
+    "longitude": -49.8729
+  },
+  {
+    "nome_domsc": "Urussanga",
+    "nome_ibge": "Urussanga",
+    "codigo_ibge": 4219002,
+    "latitude": -28.518,
+    "longitude": -49.3238
+  },
+  {
+    "nome_domsc": "Vargem",
+    "nome_ibge": "Vargem",
+    "codigo_ibge": 4219150,
+    "latitude": -27.4867,
+    "longitude": -50.9724
+  },
+  {
+    "nome_domsc": "Vargem Bonita",
+    "nome_ibge": "Vargem Bonita",
+    "codigo_ibge": 4219176,
+    "latitude": -27.0055,
+    "longitude": -51.7402
+  },
+  {
+    "nome_domsc": "Vidal Ramos",
+    "nome_ibge": "Vidal Ramos",
+    "codigo_ibge": 4219200,
+    "latitude": -27.3886,
+    "longitude": -49.3593
+  },
+  {
+    "nome_domsc": "Videira",
+    "nome_ibge": "Videira",
+    "codigo_ibge": 4219309,
+    "latitude": -27.0086,
+    "longitude": -51.1543
+  },
+  {
+    "nome_domsc": "Vitor Meireles",
+    "nome_ibge": "Vitor Meireles",
+    "codigo_ibge": 4219358,
+    "latitude": -26.8782,
+    "longitude": -49.8328
+  },
+  {
+    "nome_domsc": "Witmarsum",
+    "nome_ibge": "Witmarsum",
+    "codigo_ibge": 4219408,
+    "latitude": -26.9275,
+    "longitude": -49.7947
+  },
+  {
+    "nome_domsc": "Xavantina",
+    "nome_ibge": "Xavantina",
+    "codigo_ibge": 4219606,
+    "latitude": -27.0667,
+    "longitude": -52.343
+  },
+  {
+    "nome_domsc": "Xaxim",
+    "nome_ibge": "Xaxim",
+    "codigo_ibge": 4219705,
+    "latitude": -26.9596,
+    "longitude": -52.5374
+  }
+]

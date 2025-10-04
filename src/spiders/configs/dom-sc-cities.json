@@ -1,0 +1,3542 @@
+[
+  {
+    "id": "sc_4200051",
+    "name": "Abdon Batista",
+    "stateCode": "SC",
+    "territoryId": "4200051",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Abdon Batista",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4200101",
+    "name": "Abelardo Luz",
+    "stateCode": "SC",
+    "territoryId": "4200101",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Abelardo Luz",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4200200",
+    "name": "Agrolândia",
+    "stateCode": "SC",
+    "territoryId": "4200200",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Agrolândia",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4200309",
+    "name": "Agronômica",
+    "stateCode": "SC",
+    "territoryId": "4200309",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Agronômica",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4200705",
+    "name": "Alfredo Wagner",
+    "stateCode": "SC",
+    "territoryId": "4200705",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Alfredo Wagner",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4200754",
+    "name": "Alto Bela Vista",
+    "stateCode": "SC",
+    "territoryId": "4200754",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Alto Bela Vista",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4200804",
+    "name": "Anchieta",
+    "stateCode": "SC",
+    "territoryId": "4200804",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Anchieta",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4200903",
+    "name": "Angelina",
+    "stateCode": "SC",
+    "territoryId": "4200903",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Angelina",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4201000",
+    "name": "Anita Garibaldi",
+    "stateCode": "SC",
+    "territoryId": "4201000",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Anita Garibaldi",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4201109",
+    "name": "Anitápolis",
+    "stateCode": "SC",
+    "territoryId": "4201109",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Anitápolis",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4201208",
+    "name": "Antônio Carlos",
+    "stateCode": "SC",
+    "territoryId": "4201208",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Antônio Carlos",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4201257",
+    "name": "Apiúna",
+    "stateCode": "SC",
+    "territoryId": "4201257",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Apiúna",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4201273",
+    "name": "Arabutã",
+    "stateCode": "SC",
+    "territoryId": "4201273",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Arabutã",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4201307",
+    "name": "Araquari",
+    "stateCode": "SC",
+    "territoryId": "4201307",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Araquari",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4201406",
+    "name": "Araranguá",
+    "stateCode": "SC",
+    "territoryId": "4201406",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Araranguá",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4201505",
+    "name": "Armazém",
+    "stateCode": "SC",
+    "territoryId": "4201505",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Armazém",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4201604",
+    "name": "Arroio Trinta",
+    "stateCode": "SC",
+    "territoryId": "4201604",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Arroio Trinta",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4201653",
+    "name": "Arvoredo",
+    "stateCode": "SC",
+    "territoryId": "4201653",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Arvoredo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4201703",
+    "name": "Ascurra",
+    "stateCode": "SC",
+    "territoryId": "4201703",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ascurra",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4201802",
+    "name": "Atalanta",
+    "stateCode": "SC",
+    "territoryId": "4201802",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Atalanta",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4201901",
+    "name": "Aurora",
+    "stateCode": "SC",
+    "territoryId": "4201901",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Aurora",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4201950",
+    "name": "Balneário Arroio do Silva",
+    "stateCode": "SC",
+    "territoryId": "4201950",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Balneário Arroio do Silva",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202057",
+    "name": "Balneário Barra do Sul",
+    "stateCode": "SC",
+    "territoryId": "4202057",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Balneário Barra do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202008",
+    "name": "Balneário Camboriú",
+    "stateCode": "SC",
+    "territoryId": "4202008",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Balneário Camboriú",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202073",
+    "name": "Balneário Gaivota",
+    "stateCode": "SC",
+    "territoryId": "4202073",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Balneário Gaivota",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212809",
+    "name": "Balneário Piçarras",
+    "stateCode": "SC",
+    "territoryId": "4212809",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Balneário Piçarras",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4220000",
+    "name": "Balneário Rincão",
+    "stateCode": "SC",
+    "territoryId": "4220000",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Balneário Rincão",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202081",
+    "name": "Bandeirante",
+    "stateCode": "SC",
+    "territoryId": "4202081",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Bandeirante",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202099",
+    "name": "Barra Bonita",
+    "stateCode": "SC",
+    "territoryId": "4202099",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Barra Bonita",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202107",
+    "name": "Barra Velha",
+    "stateCode": "SC",
+    "territoryId": "4202107",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Barra Velha",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202131",
+    "name": "Bela Vista do Toldo",
+    "stateCode": "SC",
+    "territoryId": "4202131",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Bela Vista do Toldo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202156",
+    "name": "Belmonte",
+    "stateCode": "SC",
+    "territoryId": "4202156",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Belmonte",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202206",
+    "name": "Benedito Novo",
+    "stateCode": "SC",
+    "territoryId": "4202206",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Benedito Novo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202305",
+    "name": "Biguaçu",
+    "stateCode": "SC",
+    "territoryId": "4202305",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Biguaçu",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202404",
+    "name": "Blumenau",
+    "stateCode": "SC",
+    "territoryId": "4202404",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Blumenau",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202438",
+    "name": "Bocaina do Sul",
+    "stateCode": "SC",
+    "territoryId": "4202438",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Bocaina do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202503",
+    "name": "Bom Jardim da Serra",
+    "stateCode": "SC",
+    "territoryId": "4202503",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Bom Jardim da Serra",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202537",
+    "name": "Bom Jesus",
+    "stateCode": "SC",
+    "territoryId": "4202537",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Bom Jesus",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202578",
+    "name": "Bom Jesus do Oeste",
+    "stateCode": "SC",
+    "territoryId": "4202578",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Bom Jesus do Oeste",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202602",
+    "name": "Bom Retiro",
+    "stateCode": "SC",
+    "territoryId": "4202602",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Bom Retiro",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202453",
+    "name": "Bombinhas",
+    "stateCode": "SC",
+    "territoryId": "4202453",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Bombinhas",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202701",
+    "name": "Botuverá",
+    "stateCode": "SC",
+    "territoryId": "4202701",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Botuverá",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202800",
+    "name": "Braço do Norte",
+    "stateCode": "SC",
+    "territoryId": "4202800",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Braço do Norte",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202859",
+    "name": "Braço do Trombudo",
+    "stateCode": "SC",
+    "territoryId": "4202859",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Braço do Trombudo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202875",
+    "name": "Brunópolis",
+    "stateCode": "SC",
+    "territoryId": "4202875",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Brunópolis",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4202909",
+    "name": "Brusque",
+    "stateCode": "SC",
+    "territoryId": "4202909",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Brusque",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4203105",
+    "name": "Caibi",
+    "stateCode": "SC",
+    "territoryId": "4203105",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Caibi",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4203154",
+    "name": "Calmon",
+    "stateCode": "SC",
+    "territoryId": "4203154",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Calmon",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4203204",
+    "name": "Camboriú",
+    "stateCode": "SC",
+    "territoryId": "4203204",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Camboriú",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4203303",
+    "name": "Campo Alegre",
+    "stateCode": "SC",
+    "territoryId": "4203303",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Campo Alegre",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4203402",
+    "name": "Campo Belo do Sul",
+    "stateCode": "SC",
+    "territoryId": "4203402",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Campo Belo do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4203501",
+    "name": "Campo Erê",
+    "stateCode": "SC",
+    "territoryId": "4203501",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Campo Erê",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4203600",
+    "name": "Campos Novos",
+    "stateCode": "SC",
+    "territoryId": "4203600",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Campos Novos",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4203709",
+    "name": "Canelinha",
+    "stateCode": "SC",
+    "territoryId": "4203709",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Canelinha",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4203808",
+    "name": "Canoinhas",
+    "stateCode": "SC",
+    "territoryId": "4203808",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Canoinhas",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4203907",
+    "name": "Capinzal",
+    "stateCode": "SC",
+    "territoryId": "4203907",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Capinzal",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4203956",
+    "name": "Capivari de Baixo",
+    "stateCode": "SC",
+    "territoryId": "4203956",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Capivari de Baixo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4203253",
+    "name": "Capão Alto",
+    "stateCode": "SC",
+    "territoryId": "4203253",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Capão Alto",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204004",
+    "name": "Catanduvas",
+    "stateCode": "SC",
+    "territoryId": "4204004",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Catanduvas",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204103",
+    "name": "Caxambu do Sul",
+    "stateCode": "SC",
+    "territoryId": "4204103",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Caxambu do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4203006",
+    "name": "Caçador",
+    "stateCode": "SC",
+    "territoryId": "4203006",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Caçador",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204152",
+    "name": "Celso Ramos",
+    "stateCode": "SC",
+    "territoryId": "4204152",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Celso Ramos",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204178",
+    "name": "Cerro Negro",
+    "stateCode": "SC",
+    "territoryId": "4204178",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Cerro Negro",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204194",
+    "name": "Chapadão do Lageado",
+    "stateCode": "SC",
+    "territoryId": "4204194",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Chapadão do Lageado",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204202",
+    "name": "Chapecó",
+    "stateCode": "SC",
+    "territoryId": "4204202",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Chapecó",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204251",
+    "name": "Cocal do Sul",
+    "stateCode": "SC",
+    "territoryId": "4204251",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Cocal do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204301",
+    "name": "Concórdia",
+    "stateCode": "SC",
+    "territoryId": "4204301",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Concórdia",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204350",
+    "name": "Cordilheira Alta",
+    "stateCode": "SC",
+    "territoryId": "4204350",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Cordilheira Alta",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204400",
+    "name": "Coronel Freitas",
+    "stateCode": "SC",
+    "territoryId": "4204400",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Coronel Freitas",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204459",
+    "name": "Coronel Martins",
+    "stateCode": "SC",
+    "territoryId": "4204459",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Coronel Martins",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204558",
+    "name": "Correia Pinto",
+    "stateCode": "SC",
+    "territoryId": "4204558",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Correia Pinto",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204509",
+    "name": "Corupá",
+    "stateCode": "SC",
+    "territoryId": "4204509",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Corupá",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204608",
+    "name": "Criciúma",
+    "stateCode": "SC",
+    "territoryId": "4204608",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Criciúma",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204707",
+    "name": "Cunha Porã",
+    "stateCode": "SC",
+    "territoryId": "4204707",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Cunha Porã",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204756",
+    "name": "Cunhataí",
+    "stateCode": "SC",
+    "territoryId": "4204756",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Cunhataí",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204806",
+    "name": "Curitibanos",
+    "stateCode": "SC",
+    "territoryId": "4204806",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Curitibanos",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4204905",
+    "name": "Descanso",
+    "stateCode": "SC",
+    "territoryId": "4204905",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Descanso",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205001",
+    "name": "Dionísio Cerqueira",
+    "stateCode": "SC",
+    "territoryId": "4205001",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Dionísio Cerqueira",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205100",
+    "name": "Dona Emma",
+    "stateCode": "SC",
+    "territoryId": "4205100",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Dona Emma",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205159",
+    "name": "Doutor Pedrinho",
+    "stateCode": "SC",
+    "territoryId": "4205159",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Doutor Pedrinho",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205175",
+    "name": "Entre Rios",
+    "stateCode": "SC",
+    "territoryId": "4205175",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Entre Rios",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205191",
+    "name": "Ermo",
+    "stateCode": "SC",
+    "territoryId": "4205191",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ermo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205209",
+    "name": "Erval Velho",
+    "stateCode": "SC",
+    "territoryId": "4205209",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Erval Velho",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205308",
+    "name": "Faxinal dos Guedes",
+    "stateCode": "SC",
+    "territoryId": "4205308",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Faxinal dos Guedes",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205357",
+    "name": "Flor do Sertão",
+    "stateCode": "SC",
+    "territoryId": "4205357",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Flor do Sertão",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205407",
+    "name": "Florianópolis",
+    "stateCode": "SC",
+    "territoryId": "4205407",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Florianópolis",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205431",
+    "name": "Formosa do Sul",
+    "stateCode": "SC",
+    "territoryId": "4205431",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Formosa do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205456",
+    "name": "Forquilhinha",
+    "stateCode": "SC",
+    "territoryId": "4205456",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Forquilhinha",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205506",
+    "name": "Fraiburgo",
+    "stateCode": "SC",
+    "territoryId": "4205506",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Fraiburgo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205555",
+    "name": "Frei Rogério",
+    "stateCode": "SC",
+    "territoryId": "4205555",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Frei Rogério",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205605",
+    "name": "Galvão",
+    "stateCode": "SC",
+    "territoryId": "4205605",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Galvão",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205704",
+    "name": "Garopaba",
+    "stateCode": "SC",
+    "territoryId": "4205704",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Garopaba",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205803",
+    "name": "Garuva",
+    "stateCode": "SC",
+    "territoryId": "4205803",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Garuva",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4205902",
+    "name": "Gaspar",
+    "stateCode": "SC",
+    "territoryId": "4205902",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Gaspar",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4206009",
+    "name": "Governador Celso Ramos",
+    "stateCode": "SC",
+    "territoryId": "4206009",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Governador Celso Ramos",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4206207",
+    "name": "Gravatal",
+    "stateCode": "SC",
+    "territoryId": "4206207",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Gravatal",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4206108",
+    "name": "Grão Pará",
+    "stateCode": "SC",
+    "territoryId": "4206108",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Grão Pará",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4206306",
+    "name": "Guabiruba",
+    "stateCode": "SC",
+    "territoryId": "4206306",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Guabiruba",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4206405",
+    "name": "Guaraciaba",
+    "stateCode": "SC",
+    "territoryId": "4206405",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Guaraciaba",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4206504",
+    "name": "Guaramirim",
+    "stateCode": "SC",
+    "territoryId": "4206504",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Guaramirim",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4206603",
+    "name": "Guarujá do Sul",
+    "stateCode": "SC",
+    "territoryId": "4206603",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Guarujá do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4206652",
+    "name": "Guatambú",
+    "stateCode": "SC",
+    "territoryId": "4206652",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Guatambú",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4206702",
+    "name": "Herval d'Oeste",
+    "stateCode": "SC",
+    "territoryId": "4206702",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Herval d'Oeste",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4206751",
+    "name": "Ibiam",
+    "stateCode": "SC",
+    "territoryId": "4206751",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ibiam",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4206801",
+    "name": "Ibicaré",
+    "stateCode": "SC",
+    "territoryId": "4206801",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ibicaré",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4206900",
+    "name": "Ibirama",
+    "stateCode": "SC",
+    "territoryId": "4206900",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ibirama",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207106",
+    "name": "Ilhota",
+    "stateCode": "SC",
+    "territoryId": "4207106",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ilhota",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207205",
+    "name": "Imaruí",
+    "stateCode": "SC",
+    "territoryId": "4207205",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Imaruí",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207304",
+    "name": "Imbituba",
+    "stateCode": "SC",
+    "territoryId": "4207304",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Imbituba",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207403",
+    "name": "Imbuia",
+    "stateCode": "SC",
+    "territoryId": "4207403",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Imbuia",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207502",
+    "name": "Indaial",
+    "stateCode": "SC",
+    "territoryId": "4207502",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Indaial",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207577",
+    "name": "Iomerê",
+    "stateCode": "SC",
+    "territoryId": "4207577",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Iomerê",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207601",
+    "name": "Ipira",
+    "stateCode": "SC",
+    "territoryId": "4207601",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ipira",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207650",
+    "name": "Iporã do Oeste",
+    "stateCode": "SC",
+    "territoryId": "4207650",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Iporã do Oeste",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207684",
+    "name": "Ipuaçu",
+    "stateCode": "SC",
+    "territoryId": "4207684",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ipuaçu",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207700",
+    "name": "Ipumirim",
+    "stateCode": "SC",
+    "territoryId": "4207700",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ipumirim",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207759",
+    "name": "Iraceminha",
+    "stateCode": "SC",
+    "territoryId": "4207759",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Iraceminha",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207809",
+    "name": "Irani",
+    "stateCode": "SC",
+    "territoryId": "4207809",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Irani",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207858",
+    "name": "Irati",
+    "stateCode": "SC",
+    "territoryId": "4207858",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Irati",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207908",
+    "name": "Irineópolis",
+    "stateCode": "SC",
+    "territoryId": "4207908",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Irineópolis",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4208104",
+    "name": "Itaiópolis",
+    "stateCode": "SC",
+    "territoryId": "4208104",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Itaiópolis",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4208203",
+    "name": "Itajaí",
+    "stateCode": "SC",
+    "territoryId": "4208203",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Itajaí",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4208302",
+    "name": "Itapema",
+    "stateCode": "SC",
+    "territoryId": "4208302",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Itapema",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4208401",
+    "name": "Itapiranga",
+    "stateCode": "SC",
+    "territoryId": "4208401",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Itapiranga",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4208450",
+    "name": "Itapoá",
+    "stateCode": "SC",
+    "territoryId": "4208450",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Itapoá",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4208500",
+    "name": "Ituporanga",
+    "stateCode": "SC",
+    "territoryId": "4208500",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ituporanga",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4208005",
+    "name": "Itá",
+    "stateCode": "SC",
+    "territoryId": "4208005",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Itá",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4207007",
+    "name": "Içara",
+    "stateCode": "SC",
+    "territoryId": "4207007",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Içara",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4208609",
+    "name": "Jaborá",
+    "stateCode": "SC",
+    "territoryId": "4208609",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Jaborá",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4208708",
+    "name": "Jacinto Machado",
+    "stateCode": "SC",
+    "territoryId": "4208708",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Jacinto Machado",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4208807",
+    "name": "Jaguaruna",
+    "stateCode": "SC",
+    "territoryId": "4208807",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Jaguaruna",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4208906",
+    "name": "Jaraguá do Sul",
+    "stateCode": "SC",
+    "territoryId": "4208906",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Jaraguá do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4208955",
+    "name": "Jardinópolis",
+    "stateCode": "SC",
+    "territoryId": "4208955",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Jardinópolis",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4209003",
+    "name": "Joaçaba",
+    "stateCode": "SC",
+    "territoryId": "4209003",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Joaçaba",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4209102",
+    "name": "Joinville",
+    "stateCode": "SC",
+    "territoryId": "4209102",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Joinville",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4209151",
+    "name": "José Boiteux",
+    "stateCode": "SC",
+    "territoryId": "4209151",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de José Boiteux",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4209177",
+    "name": "Jupiá",
+    "stateCode": "SC",
+    "territoryId": "4209177",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Jupiá",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4209201",
+    "name": "Lacerdópolis",
+    "stateCode": "SC",
+    "territoryId": "4209201",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Lacerdópolis",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4209300",
+    "name": "Lages",
+    "stateCode": "SC",
+    "territoryId": "4209300",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Lages",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4209409",
+    "name": "Laguna",
+    "stateCode": "SC",
+    "territoryId": "4209409",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Laguna",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4209458",
+    "name": "Lajeado Grande",
+    "stateCode": "SC",
+    "territoryId": "4209458",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Lajeado Grande",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4209508",
+    "name": "Laurentino",
+    "stateCode": "SC",
+    "territoryId": "4209508",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Laurentino",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4209607",
+    "name": "Lauro Muller",
+    "stateCode": "SC",
+    "territoryId": "4209607",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Lauro Muller",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4209706",
+    "name": "Lebon Régis",
+    "stateCode": "SC",
+    "territoryId": "4209706",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Lebon Régis",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4209805",
+    "name": "Leoberto Leal",
+    "stateCode": "SC",
+    "territoryId": "4209805",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Leoberto Leal",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4209854",
+    "name": "Lindóia do Sul",
+    "stateCode": "SC",
+    "territoryId": "4209854",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Lindóia do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4209904",
+    "name": "Lontras",
+    "stateCode": "SC",
+    "territoryId": "4209904",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Lontras",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4210001",
+    "name": "Luiz Alves",
+    "stateCode": "SC",
+    "territoryId": "4210001",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Luiz Alves",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4210035",
+    "name": "Luzerna",
+    "stateCode": "SC",
+    "territoryId": "4210035",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Luzerna",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4210050",
+    "name": "Macieira",
+    "stateCode": "SC",
+    "territoryId": "4210050",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Macieira",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4210100",
+    "name": "Mafra",
+    "stateCode": "SC",
+    "territoryId": "4210100",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Mafra",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4210209",
+    "name": "Major Gercino",
+    "stateCode": "SC",
+    "territoryId": "4210209",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Major Gercino",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4210308",
+    "name": "Major Vieira",
+    "stateCode": "SC",
+    "territoryId": "4210308",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Major Vieira",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4210407",
+    "name": "Maracajá",
+    "stateCode": "SC",
+    "territoryId": "4210407",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Maracajá",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4210506",
+    "name": "Maravilha",
+    "stateCode": "SC",
+    "territoryId": "4210506",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Maravilha",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4210555",
+    "name": "Marema",
+    "stateCode": "SC",
+    "territoryId": "4210555",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Marema",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4210605",
+    "name": "Massaranduba",
+    "stateCode": "SC",
+    "territoryId": "4210605",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Massaranduba",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4210704",
+    "name": "Matos Costa",
+    "stateCode": "SC",
+    "territoryId": "4210704",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Matos Costa",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4210803",
+    "name": "Meleiro",
+    "stateCode": "SC",
+    "territoryId": "4210803",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Meleiro",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4210852",
+    "name": "Mirim Doce",
+    "stateCode": "SC",
+    "territoryId": "4210852",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Mirim Doce",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4210902",
+    "name": "Modelo",
+    "stateCode": "SC",
+    "territoryId": "4210902",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Modelo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211009",
+    "name": "Mondaí",
+    "stateCode": "SC",
+    "territoryId": "4211009",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Mondaí",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211058",
+    "name": "Monte Carlo",
+    "stateCode": "SC",
+    "territoryId": "4211058",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Monte Carlo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211108",
+    "name": "Monte Castelo",
+    "stateCode": "SC",
+    "territoryId": "4211108",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Monte Castelo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211256",
+    "name": "Morro Grande",
+    "stateCode": "SC",
+    "territoryId": "4211256",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Morro Grande",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211207",
+    "name": "Morro da Fumaça",
+    "stateCode": "SC",
+    "territoryId": "4211207",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Morro da Fumaça",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211306",
+    "name": "Navegantes",
+    "stateCode": "SC",
+    "territoryId": "4211306",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Navegantes",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211405",
+    "name": "Nova Erechim",
+    "stateCode": "SC",
+    "territoryId": "4211405",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Nova Erechim",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211454",
+    "name": "Nova Itaberaba",
+    "stateCode": "SC",
+    "territoryId": "4211454",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Nova Itaberaba",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211504",
+    "name": "Nova Trento",
+    "stateCode": "SC",
+    "territoryId": "4211504",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Nova Trento",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211603",
+    "name": "Nova Veneza",
+    "stateCode": "SC",
+    "territoryId": "4211603",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Nova Veneza",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211652",
+    "name": "Novo Horizonte",
+    "stateCode": "SC",
+    "territoryId": "4211652",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Novo Horizonte",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211702",
+    "name": "Orleans",
+    "stateCode": "SC",
+    "territoryId": "4211702",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Orleans",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211751",
+    "name": "Otacílio Costa",
+    "stateCode": "SC",
+    "territoryId": "4211751",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Otacílio Costa",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211801",
+    "name": "Ouro",
+    "stateCode": "SC",
+    "territoryId": "4211801",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ouro",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211850",
+    "name": "Ouro Verde",
+    "stateCode": "SC",
+    "territoryId": "4211850",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ouro Verde",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211876",
+    "name": "Paial",
+    "stateCode": "SC",
+    "territoryId": "4211876",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Paial",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211892",
+    "name": "Painel",
+    "stateCode": "SC",
+    "territoryId": "4211892",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Painel",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4211900",
+    "name": "Palhoça",
+    "stateCode": "SC",
+    "territoryId": "4211900",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Palhoça",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212007",
+    "name": "Palma Sola",
+    "stateCode": "SC",
+    "territoryId": "4212007",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Palma Sola",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212056",
+    "name": "Palmeira",
+    "stateCode": "SC",
+    "territoryId": "4212056",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Palmeira",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212106",
+    "name": "Palmitos",
+    "stateCode": "SC",
+    "territoryId": "4212106",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Palmitos",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212205",
+    "name": "Papanduva",
+    "stateCode": "SC",
+    "territoryId": "4212205",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Papanduva",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212239",
+    "name": "Paraíso",
+    "stateCode": "SC",
+    "territoryId": "4212239",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Paraíso",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212254",
+    "name": "Passo de Torres",
+    "stateCode": "SC",
+    "territoryId": "4212254",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Passo de Torres",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212270",
+    "name": "Passos Maia",
+    "stateCode": "SC",
+    "territoryId": "4212270",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Passos Maia",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212304",
+    "name": "Paulo Lopes",
+    "stateCode": "SC",
+    "territoryId": "4212304",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Paulo Lopes",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212403",
+    "name": "Pedras Grandes",
+    "stateCode": "SC",
+    "territoryId": "4212403",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Pedras Grandes",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212502",
+    "name": "Penha",
+    "stateCode": "SC",
+    "territoryId": "4212502",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Penha",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212601",
+    "name": "Peritiba",
+    "stateCode": "SC",
+    "territoryId": "4212601",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Peritiba",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212650",
+    "name": "Pescaria Brava",
+    "stateCode": "SC",
+    "territoryId": "4212650",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Pescaria Brava",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212700",
+    "name": "Petrolândia",
+    "stateCode": "SC",
+    "territoryId": "4212700",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Petrolândia",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4212908",
+    "name": "Pinhalzinho",
+    "stateCode": "SC",
+    "territoryId": "4212908",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Pinhalzinho",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4213005",
+    "name": "Pinheiro Preto",
+    "stateCode": "SC",
+    "territoryId": "4213005",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Pinheiro Preto",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4213104",
+    "name": "Piratuba",
+    "stateCode": "SC",
+    "territoryId": "4213104",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Piratuba",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4213153",
+    "name": "Planalto Alegre",
+    "stateCode": "SC",
+    "territoryId": "4213153",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Planalto Alegre",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4213203",
+    "name": "Pomerode",
+    "stateCode": "SC",
+    "territoryId": "4213203",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Pomerode",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4213302",
+    "name": "Ponte Alta",
+    "stateCode": "SC",
+    "territoryId": "4213302",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ponte Alta",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4213351",
+    "name": "Ponte Alta do Norte",
+    "stateCode": "SC",
+    "territoryId": "4213351",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ponte Alta do Norte",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4213401",
+    "name": "Ponte Serrada",
+    "stateCode": "SC",
+    "territoryId": "4213401",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Ponte Serrada",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4213500",
+    "name": "Porto Belo",
+    "stateCode": "SC",
+    "territoryId": "4213500",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Porto Belo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4213609",
+    "name": "Porto União",
+    "stateCode": "SC",
+    "territoryId": "4213609",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Porto União",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4213708",
+    "name": "Pouso Redondo",
+    "stateCode": "SC",
+    "territoryId": "4213708",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Pouso Redondo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4213807",
+    "name": "Praia Grande",
+    "stateCode": "SC",
+    "territoryId": "4213807",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Praia Grande",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4213906",
+    "name": "Presidente Castello Branco",
+    "stateCode": "SC",
+    "territoryId": "4213906",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Presidente Castello Branco",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4214003",
+    "name": "Presidente Getúlio",
+    "stateCode": "SC",
+    "territoryId": "4214003",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Presidente Getúlio",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4214102",
+    "name": "Presidente Nereu",
+    "stateCode": "SC",
+    "territoryId": "4214102",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Presidente Nereu",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4214151",
+    "name": "Princesa",
+    "stateCode": "SC",
+    "territoryId": "4214151",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Princesa",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4214201",
+    "name": "Quilombo",
+    "stateCode": "SC",
+    "territoryId": "4214201",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Quilombo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4214300",
+    "name": "Rancho Queimado",
+    "stateCode": "SC",
+    "territoryId": "4214300",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Rancho Queimado",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4214904",
+    "name": "Rio Fortuna",
+    "stateCode": "SC",
+    "territoryId": "4214904",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Rio Fortuna",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215000",
+    "name": "Rio Negrinho",
+    "stateCode": "SC",
+    "territoryId": "4215000",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Rio Negrinho",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215059",
+    "name": "Rio Rufino",
+    "stateCode": "SC",
+    "territoryId": "4215059",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Rio Rufino",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4214409",
+    "name": "Rio das Antas",
+    "stateCode": "SC",
+    "territoryId": "4214409",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Rio das Antas",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4214508",
+    "name": "Rio do Campo",
+    "stateCode": "SC",
+    "territoryId": "4214508",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Rio do Campo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4214607",
+    "name": "Rio do Oeste",
+    "stateCode": "SC",
+    "territoryId": "4214607",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Rio do Oeste",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4214805",
+    "name": "Rio do Sul",
+    "stateCode": "SC",
+    "territoryId": "4214805",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Rio do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4214706",
+    "name": "Rio dos Cedros",
+    "stateCode": "SC",
+    "territoryId": "4214706",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Rio dos Cedros",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215075",
+    "name": "Riqueza",
+    "stateCode": "SC",
+    "territoryId": "4215075",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Riqueza",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215109",
+    "name": "Rodeio",
+    "stateCode": "SC",
+    "territoryId": "4215109",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Rodeio",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215208",
+    "name": "Romelândia",
+    "stateCode": "SC",
+    "territoryId": "4215208",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Romelândia",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215307",
+    "name": "Salete",
+    "stateCode": "SC",
+    "territoryId": "4215307",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Salete",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215356",
+    "name": "Saltinho",
+    "stateCode": "SC",
+    "territoryId": "4215356",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Saltinho",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215406",
+    "name": "Salto Veloso",
+    "stateCode": "SC",
+    "territoryId": "4215406",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Salto Veloso",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215455",
+    "name": "Sangão",
+    "stateCode": "SC",
+    "territoryId": "4215455",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Sangão",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215505",
+    "name": "Santa Cecília",
+    "stateCode": "SC",
+    "territoryId": "4215505",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Santa Cecília",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215554",
+    "name": "Santa Helena",
+    "stateCode": "SC",
+    "territoryId": "4215554",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Santa Helena",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215604",
+    "name": "Santa Rosa de Lima",
+    "stateCode": "SC",
+    "territoryId": "4215604",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Santa Rosa de Lima",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215653",
+    "name": "Santa Rosa do Sul",
+    "stateCode": "SC",
+    "territoryId": "4215653",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Santa Rosa do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215679",
+    "name": "Santa Terezinha",
+    "stateCode": "SC",
+    "territoryId": "4215679",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Santa Terezinha",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215687",
+    "name": "Santa Terezinha do Progresso",
+    "stateCode": "SC",
+    "territoryId": "4215687",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Santa Terezinha do Progresso",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215695",
+    "name": "Santiago do Sul",
+    "stateCode": "SC",
+    "territoryId": "4215695",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Santiago do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215703",
+    "name": "Santo Amaro da Imperatriz",
+    "stateCode": "SC",
+    "territoryId": "4215703",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Santo Amaro da Imperatriz",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217303",
+    "name": "Saudades",
+    "stateCode": "SC",
+    "territoryId": "4217303",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Saudades",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217402",
+    "name": "Schroeder",
+    "stateCode": "SC",
+    "territoryId": "4217402",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Schroeder",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217501",
+    "name": "Seara",
+    "stateCode": "SC",
+    "territoryId": "4217501",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Seara",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217550",
+    "name": "Serra Alta",
+    "stateCode": "SC",
+    "territoryId": "4217550",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Serra Alta",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217600",
+    "name": "Siderópolis",
+    "stateCode": "SC",
+    "territoryId": "4217600",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Siderópolis",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217709",
+    "name": "Sombrio",
+    "stateCode": "SC",
+    "territoryId": "4217709",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Sombrio",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217758",
+    "name": "Sul Brasil",
+    "stateCode": "SC",
+    "territoryId": "4217758",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Sul Brasil",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215802",
+    "name": "São Bento do Sul",
+    "stateCode": "SC",
+    "territoryId": "4215802",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São Bento do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215752",
+    "name": "São Bernardino",
+    "stateCode": "SC",
+    "territoryId": "4215752",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São Bernardino",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4215901",
+    "name": "São Bonifácio",
+    "stateCode": "SC",
+    "territoryId": "4215901",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São Bonifácio",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4216008",
+    "name": "São Carlos",
+    "stateCode": "SC",
+    "territoryId": "4216008",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São Carlos",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4216057",
+    "name": "São Cristovão do Sul",
+    "stateCode": "SC",
+    "territoryId": "4216057",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São Cristovão do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4216107",
+    "name": "São Domingos",
+    "stateCode": "SC",
+    "territoryId": "4216107",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São Domingos",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4216206",
+    "name": "São Francisco do Sul",
+    "stateCode": "SC",
+    "territoryId": "4216206",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São Francisco do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4216503",
+    "name": "São Joaquim",
+    "stateCode": "SC",
+    "territoryId": "4216503",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São Joaquim",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4216602",
+    "name": "São José",
+    "stateCode": "SC",
+    "territoryId": "4216602",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São José",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4216701",
+    "name": "São José do Cedro",
+    "stateCode": "SC",
+    "territoryId": "4216701",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São José do Cedro",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4216800",
+    "name": "São José do Cerrito",
+    "stateCode": "SC",
+    "territoryId": "4216800",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São José do Cerrito",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4216305",
+    "name": "São João Batista",
+    "stateCode": "SC",
+    "territoryId": "4216305",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São João Batista",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4216354",
+    "name": "São João do Itaperiú",
+    "stateCode": "SC",
+    "territoryId": "4216354",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São João do Itaperiú",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4216255",
+    "name": "São João do Oeste",
+    "stateCode": "SC",
+    "territoryId": "4216255",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São João do Oeste",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4216404",
+    "name": "São João do Sul",
+    "stateCode": "SC",
+    "territoryId": "4216404",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São João do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4216909",
+    "name": "São Lourenço do Oeste",
+    "stateCode": "SC",
+    "territoryId": "4216909",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São Lourenço do Oeste",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217006",
+    "name": "São Ludgero",
+    "stateCode": "SC",
+    "territoryId": "4217006",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São Ludgero",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217105",
+    "name": "São Martinho",
+    "stateCode": "SC",
+    "territoryId": "4217105",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São Martinho",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217154",
+    "name": "São Miguel da Boa Vista",
+    "stateCode": "SC",
+    "territoryId": "4217154",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São Miguel da Boa Vista",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217204",
+    "name": "São Miguel do Oeste",
+    "stateCode": "SC",
+    "territoryId": "4217204",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São Miguel do Oeste",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217253",
+    "name": "São Pedro de Alcântara",
+    "stateCode": "SC",
+    "territoryId": "4217253",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de São Pedro de Alcântara",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217808",
+    "name": "Taió",
+    "stateCode": "SC",
+    "territoryId": "4217808",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Taió",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217907",
+    "name": "Tangará",
+    "stateCode": "SC",
+    "territoryId": "4217907",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Tangará",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4217956",
+    "name": "Tigrinhos",
+    "stateCode": "SC",
+    "territoryId": "4217956",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Tigrinhos",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218004",
+    "name": "Tijucas",
+    "stateCode": "SC",
+    "territoryId": "4218004",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Tijucas",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218103",
+    "name": "Timbé do Sul",
+    "stateCode": "SC",
+    "territoryId": "4218103",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Timbé do Sul",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218202",
+    "name": "Timbó",
+    "stateCode": "SC",
+    "territoryId": "4218202",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Timbó",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218251",
+    "name": "Timbó Grande",
+    "stateCode": "SC",
+    "territoryId": "4218251",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Timbó Grande",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218350",
+    "name": "Treviso",
+    "stateCode": "SC",
+    "territoryId": "4218350",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Treviso",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218509",
+    "name": "Treze Tílias",
+    "stateCode": "SC",
+    "territoryId": "4218509",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Treze Tílias",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218400",
+    "name": "Treze de Maio",
+    "stateCode": "SC",
+    "territoryId": "4218400",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Treze de Maio",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218608",
+    "name": "Trombudo Central",
+    "stateCode": "SC",
+    "territoryId": "4218608",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Trombudo Central",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218301",
+    "name": "Três Barras",
+    "stateCode": "SC",
+    "territoryId": "4218301",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Três Barras",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218707",
+    "name": "Tubarão",
+    "stateCode": "SC",
+    "territoryId": "4218707",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Tubarão",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218756",
+    "name": "Tunápolis",
+    "stateCode": "SC",
+    "territoryId": "4218756",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Tunápolis",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218806",
+    "name": "Turvo",
+    "stateCode": "SC",
+    "territoryId": "4218806",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Turvo",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218855",
+    "name": "União do Oeste",
+    "stateCode": "SC",
+    "territoryId": "4218855",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de União do Oeste",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218905",
+    "name": "Urubici",
+    "stateCode": "SC",
+    "territoryId": "4218905",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Urubici",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4218954",
+    "name": "Urupema",
+    "stateCode": "SC",
+    "territoryId": "4218954",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Urupema",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4219002",
+    "name": "Urussanga",
+    "stateCode": "SC",
+    "territoryId": "4219002",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Urussanga",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4219150",
+    "name": "Vargem",
+    "stateCode": "SC",
+    "territoryId": "4219150",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Vargem",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4219176",
+    "name": "Vargem Bonita",
+    "stateCode": "SC",
+    "territoryId": "4219176",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Vargem Bonita",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4219101",
+    "name": "Vargeão",
+    "stateCode": "SC",
+    "territoryId": "4219101",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Vargeão",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4219200",
+    "name": "Vidal Ramos",
+    "stateCode": "SC",
+    "territoryId": "4219200",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Vidal Ramos",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4219309",
+    "name": "Videira",
+    "stateCode": "SC",
+    "territoryId": "4219309",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Videira",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4219358",
+    "name": "Vitor Meireles",
+    "stateCode": "SC",
+    "territoryId": "4219358",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Vitor Meireles",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4219408",
+    "name": "Witmarsum",
+    "stateCode": "SC",
+    "territoryId": "4219408",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Witmarsum",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4219507",
+    "name": "Xanxerê",
+    "stateCode": "SC",
+    "territoryId": "4219507",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Xanxerê",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4219606",
+    "name": "Xavantina",
+    "stateCode": "SC",
+    "territoryId": "4219606",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Xavantina",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4219705",
+    "name": "Xaxim",
+    "stateCode": "SC",
+    "territoryId": "4219705",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Xaxim",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4219853",
+    "name": "Zortéa",
+    "stateCode": "SC",
+    "territoryId": "4219853",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Zortéa",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4200408",
+    "name": "Água Doce",
+    "stateCode": "SC",
+    "territoryId": "4200408",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Água Doce",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4200556",
+    "name": "Águas Frias",
+    "stateCode": "SC",
+    "territoryId": "4200556",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Águas Frias",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4200606",
+    "name": "Águas Mornas",
+    "stateCode": "SC",
+    "territoryId": "4200606",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Águas Mornas",
+      "type": "dom_sc"
+    }
+  },
+  {
+    "id": "sc_4200507",
+    "name": "Águas de Chapecó",
+    "stateCode": "SC",
+    "territoryId": "4200507",
+    "spiderType": "dom-sc",
+    "config": {
+      "url": "https://diariomunicipal.sc.gov.br/",
+      "entityName": "Prefeitura Municipal de Águas de Chapecó",
+      "type": "dom_sc"
+    }
+  }
+]

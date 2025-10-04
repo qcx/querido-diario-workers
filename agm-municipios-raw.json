@@ -1,0 +1,492 @@
+[
+  {
+    "nome": "Abadia",
+    "value": "12489",
+    "text_original": "Município de Abadia"
+  },
+  {
+    "nome": "Acreúna",
+    "value": "4939",
+    "text_original": "Município de Acreúna"
+  },
+  {
+    "nome": "Adelândia",
+    "value": "815253",
+    "text_original": "Município de Adelândia"
+  },
+  {
+    "nome": "Água Fria de Goiás",
+    "value": "64715",
+    "text_original": "Município de Água Fria de Goiás"
+  },
+  {
+    "nome": "Águas Lindas de Goiás",
+    "value": "44796",
+    "text_original": "Município de Águas Lindas de Goiás"
+  },
+  {
+    "nome": "Alexânia",
+    "value": "14250",
+    "text_original": "Município de Alexânia"
+  },
+  {
+    "nome": "Alto Horizonte",
+    "value": "46032",
+    "text_original": "Município de Alto Horizonte"
+  },
+  {
+    "nome": "Alto Paraíso de Goiás",
+    "value": "102860",
+    "text_original": "Município de Alto Paraíso de Goiás"
+  },
+  {
+    "nome": "Alvorada do Norte",
+    "value": "7898",
+    "text_original": "Município de Alvorada do Norte"
+  },
+  {
+    "nome": "Amorinópolis",
+    "value": "2960",
+    "text_original": "Município de Amorinópolis"
+  },
+  {
+    "nome": "Aparecida do Rio Doce",
+    "value": "9778",
+    "text_original": "Município de Aparecida do Rio Doce"
+  },
+  {
+    "nome": "Araçu",
+    "value": "286004",
+    "text_original": "Município de Araçu"
+  },
+  {
+    "nome": "Aragarças",
+    "value": "16162",
+    "text_original": "Município de Aragarças"
+  },
+  {
+    "nome": "Aragoiânia",
+    "value": "46171",
+    "text_original": "Município de Aragoiânia"
+  },
+  {
+    "nome": "Araguapaz",
+    "value": "541352",
+    "text_original": "Município de Araguapaz"
+  },
+  {
+    "nome": "Arenópolis",
+    "value": "165814",
+    "text_original": "Município de Arenópolis"
+  },
+  {
+    "nome": "Avelinópolis",
+    "value": "286065",
+    "text_original": "Município de Avelinópolis"
+  },
+  {
+    "nome": "Bom Jardim de Goiás",
+    "value": "9252",
+    "text_original": "Município de Bom Jardim de Goiás"
+  },
+  {
+    "nome": "Bonfinópolis",
+    "value": "102711",
+    "text_original": "Município de Bonfinópolis"
+  },
+  {
+    "nome": "Buriti Alegre",
+    "value": "9682",
+    "text_original": "Município de Buriti Alegre"
+  },
+  {
+    "nome": "Buritinópolis",
+    "value": "22116",
+    "text_original": "Município de Buritinópolis"
+  },
+  {
+    "nome": "Cachoeira Alta",
+    "value": "11779",
+    "text_original": "Município de Cachoeira Alta"
+  },
+  {
+    "nome": "Cachoeira de Goiás",
+    "value": "4161",
+    "text_original": "Município de Cachoeira de Goiás"
+  },
+  {
+    "nome": "Cachoeira Dourada",
+    "value": "217942",
+    "text_original": "Município de Cachoeira Dourada"
+  },
+  {
+    "nome": "Caçu",
+    "value": "2682",
+    "text_original": "Município de Caçu"
+  },
+  {
+    "nome": "Caldazinha",
+    "value": "46285",
+    "text_original": "Município de Caldazinha"
+  },
+  {
+    "nome": "Campestre",
+    "value": "13828",
+    "text_original": "Município de Campestre"
+  },
+  {
+    "nome": "Campinorte",
+    "value": "4578",
+    "text_original": "Município de Campinorte"
+  },
+  {
+    "nome": "Campo Alegre de Goiás",
+    "value": "55678",
+    "text_original": "Município de Campo Alegre de Goiás"
+  },
+  {
+    "nome": "Campo Limpo de Goiás",
+    "value": "1201073",
+    "text_original": "Município de Campo Limpo de Goiás"
+  },
+  {
+    "nome": "Campos Belos",
+    "value": "3690",
+    "text_original": "Município de Campos Belos"
+  },
+  {
+    "nome": "Carmo do Rio Verde",
+    "value": "113220",
+    "text_original": "Município de Carmo do Rio Verde"
+  },
+  {
+    "nome": "Castelândia",
+    "value": "4017",
+    "text_original": "Município de Castelândia"
+  },
+  {
+    "nome": "Corumbá",
+    "value": "11491",
+    "text_original": "Município de Corumbá"
+  },
+  {
+    "nome": "Corumbaíba",
+    "value": "3757",
+    "text_original": "Município de Corumbaíba"
+  },
+  {
+    "nome": "Cristalina",
+    "value": "46421",
+    "text_original": "Município de Cristalina"
+  },
+  {
+    "nome": "Crominia",
+    "value": "128848",
+    "text_original": "Município de Crominia"
+  },
+  {
+    "nome": "Damianopolis",
+    "value": "16966",
+    "text_original": "Município de Damianopolis"
+  },
+  {
+    "nome": "Damolândia",
+    "value": "8596",
+    "text_original": "Município de Damolândia"
+  },
+  {
+    "nome": "Davinópolis",
+    "value": "1472953",
+    "text_original": "Município de Davinópolis"
+  },
+  {
+    "nome": "Divinópolis",
+    "value": "16457",
+    "text_original": "Município de Divinópolis"
+  },
+  {
+    "nome": "Edéia",
+    "value": "103960",
+    "text_original": "Município de Edéia"
+  },
+  {
+    "nome": "Faina",
+    "value": "46446",
+    "text_original": "Município de Faina"
+  },
+  {
+    "nome": "Firminópolis",
+    "value": "9578",
+    "text_original": "Município de Firminópolis"
+  },
+  {
+    "nome": "Formoso",
+    "value": "156803",
+    "text_original": "Município de Formoso"
+  },
+  {
+    "nome": "Goiandira",
+    "value": "4335",
+    "text_original": "Município de Goiandira"
+  },
+  {
+    "nome": "Goianira",
+    "value": "46585",
+    "text_original": "Município de Goianira"
+  },
+  {
+    "nome": "Goiatuba",
+    "value": "3818",
+    "text_original": "Município de Goiatuba"
+  },
+  {
+    "nome": "Gouvelândia",
+    "value": "9806",
+    "text_original": "Município de Gouvelândia"
+  },
+  {
+    "nome": "Guarani",
+    "value": "12277",
+    "text_original": "Município de Guarani"
+  },
+  {
+    "nome": "Heitoraí",
+    "value": "15909",
+    "text_original": "Município de Heitoraí"
+  },
+  {
+    "nome": "Hidrolandia",
+    "value": "54390",
+    "text_original": "Município de Hidrolandia"
+  },
+  {
+    "nome": "Inaciolândia",
+    "value": "218796",
+    "text_original": "Município de Inaciolândia"
+  },
+  {
+    "nome": "Indiara",
+    "value": "47636",
+    "text_original": "Município de Indiara"
+  },
+  {
+    "nome": "Inhumas",
+    "value": "28352",
+    "text_original": "Município de Inhumas"
+  },
+  {
+    "nome": "Ipameri",
+    "value": "3847",
+    "text_original": "Município de Ipameri"
+  },
+  {
+    "nome": "Ipiranga",
+    "value": "74458",
+    "text_original": "Município de Ipiranga"
+  },
+  {
+    "nome": "Iporá",
+    "value": "7486",
+    "text_original": "Município de Iporá"
+  },
+  {
+    "nome": "Israelândia",
+    "value": "79867",
+    "text_original": "Município de Israelândia"
+  },
+  {
+    "nome": "Itaguari",
+    "value": "298298",
+    "text_original": "Município de Itaguari"
+  },
+  {
+    "nome": "Itaguaru",
+    "value": "11854",
+    "text_original": "Município de Itaguaru"
+  },
+  {
+    "nome": "Itajá",
+    "value": "953365",
+    "text_original": "Município de Itajá"
+  },
+  {
+    "nome": "Itauçu",
+    "value": "381832",
+    "text_original": "Município de Itauçu"
+  },
+  {
+    "nome": "Ivolândia",
+    "value": "13837",
+    "text_original": "Município de Ivolândia"
+  },
+  {
+    "nome": "Jaupaci",
+    "value": "9717",
+    "text_original": "Município de Jaupaci"
+  },
+  {
+    "nome": "Lagoa Santa",
+    "value": "9219",
+    "text_original": "Município de Lagoa Santa"
+  },
+  {
+    "nome": "Mambai",
+    "value": "59095",
+    "text_original": "Município de Mambai"
+  },
+  {
+    "nome": "Moiporá",
+    "value": "95772",
+    "text_original": "Município de Moiporá"
+  },
+  {
+    "nome": "Montes Claros",
+    "value": "16304",
+    "text_original": "Município de Montes Claros"
+  },
+  {
+    "nome": "Montividiu",
+    "value": "20989",
+    "text_original": "Município de Montividiu"
+  },
+  {
+    "nome": "Montividiu do Norte",
+    "value": "72140",
+    "text_original": "Município de Montividiu do Norte"
+  },
+  {
+    "nome": "Morrinhos",
+    "value": "12396",
+    "text_original": "Município de Morrinhos"
+  },
+  {
+    "nome": "Mossâmedes",
+    "value": "83964",
+    "text_original": "Município de Mossâmedes"
+  },
+  {
+    "nome": "Mutunópolis",
+    "value": "4465",
+    "text_original": "Município de Mutunópolis"
+  },
+  {
+    "nome": "Nazário",
+    "value": "164256",
+    "text_original": "Município de Nazário"
+  },
+  {
+    "nome": "Nerópolis",
+    "value": "47377",
+    "text_original": "Município de Nerópolis"
+  },
+  {
+    "nome": "Palmeiras",
+    "value": "9298",
+    "text_original": "Município de Palmeiras"
+  },
+  {
+    "nome": "Palminópolis",
+    "value": "10987",
+    "text_original": "Município de Palminópolis"
+  },
+  {
+    "nome": "Perolândia",
+    "value": "94178",
+    "text_original": "Município de Perolândia"
+  },
+  {
+    "nome": "Petrolina",
+    "value": "47634",
+    "text_original": "Município de Petrolina"
+  },
+  {
+    "nome": " Pilar",
+    "value": "2180585",
+    "text_original": "Município de  Pilar"
+  },
+  {
+    "nome": "Piranhas",
+    "value": "113090",
+    "text_original": "Município de Piranhas"
+  },
+  {
+    "nome": "Pirenópolis",
+    "value": "4154",
+    "text_original": "Município de Pirenópolis"
+  },
+  {
+    "nome": "Porangatu",
+    "value": "47652",
+    "text_original": "Município de Porangatu"
+  },
+  {
+    "nome": "Posse",
+    "value": "97953",
+    "text_original": "Município de Posse"
+  },
+  {
+    "nome": "Professor Jamil",
+    "value": "170001",
+    "text_original": "Município de Professor Jamil"
+  },
+  {
+    "nome": "Rubiataba",
+    "value": "964559",
+    "text_original": "Município de Rubiataba"
+  },
+  {
+    "nome": "Santa Fé de Goiás",
+    "value": "76735",
+    "text_original": "Município de Santa Fé de Goiás"
+  },
+  {
+    "nome": "Santa Rita do Araguaia",
+    "value": "4902",
+    "text_original": "Município de Santa Rita do Araguaia"
+  },
+  {
+    "nome": "Santa Tereza de Goiás",
+    "value": "8558",
+    "text_original": "Município de Santa Tereza de Goiás"
+  },
+  {
+    "nome": "Santo Antônio de Goiás",
+    "value": "10203",
+    "text_original": "Município de Santo Antônio de Goiás"
+  },
+  {
+    "nome": "São Luiz do Norte",
+    "value": "4208",
+    "text_original": "Município de São Luiz do Norte"
+  },
+  {
+    "nome": "São Miguel do Araguaia",
+    "value": "47884",
+    "text_original": "Município de São Miguel do Araguaia"
+  },
+  {
+    "nome": "São Miguel do Passa Quatro",
+    "value": "3621",
+    "text_original": "Município de São Miguel do Passa Quatro"
+  },
+  {
+    "nome": "São Simão",
+    "value": "1302",
+    "text_original": "Município de São Simão"
+  },
+  {
+    "nome": "Taquaral De Goiás",
+    "value": "47892",
+    "text_original": "Município de Taquaral De Goiás"
+  },
+  {
+    "nome": "Três Ranchos",
+    "value": "47902",
+    "text_original": "Município de Três Ranchos"
+  },
+  {
+    "nome": "Uirapuru",
+    "value": "10052",
+    "text_original": "Município de Uirapuru"
+  }
+]

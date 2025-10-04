@@ -19,6 +19,7 @@ export type SpiderType =
   | 'ptio'
   | 'municipio_online'
   | 'atende_v2'
+  | 'dom_sc'
   | 'custom';
 
 /**
@@ -64,6 +65,7 @@ export type SpiderPlatformConfig =
   | PtioConfig
   | MunicipioOnlineConfig
   | AtendeV2Config
+  | DomScConfig
   | CustomConfig;
 
 /**
@@ -202,4 +204,12 @@ export interface MunicipioOnlineConfig {
 export interface AtendeV2Config {
   type: 'atende_v2';
   citySubdomain: string;
+}
+
+export interface DomScConfig {
+  type: 'dom_sc';
+  /** Base URL for the DOM/SC platform */
+  url: string;
+  /** Entity name for search (e.g., "Prefeitura Municipal de Florianópolis") */
+  entityName: string;
 }
