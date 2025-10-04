@@ -17,11 +17,25 @@
     ]
   },
 
-  // KV namespace for storing analysis results
+  // Queue producers
+  "queues": {
+    "producers": [
+      {
+        "binding": "WEBHOOK_QUEUE",
+        "queue": "querido-diario-webhook-queue"
+      }
+    ]
+  },
+
+  // KV namespaces
   "kv_namespaces": [
     {
       "binding": "ANALYSIS_RESULTS",
       "id": "YOUR_KV_NAMESPACE_ID_HERE"
+    },
+    {
+      "binding": "WEBHOOK_SUBSCRIPTIONS",
+      "id": "YOUR_SUBSCRIPTIONS_KV_ID"
     }
   ],
 

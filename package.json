@@ -27,7 +27,10 @@
     "dev:ocr": "wrangler dev --config wrangler-ocr.jsonc",
     "dev:analysis": "wrangler dev --config wrangler-analysis.jsonc",
     "deploy:analysis": "wrangler deploy --config wrangler-analysis.jsonc",
-    "queue:create:analysis": "wrangler queues create querido-diario-analysis-queue"
+    "queue:create:analysis": "wrangler queues create querido-diario-analysis-queue",
+    "dev:webhook": "wrangler dev --config wrangler-webhook.jsonc",
+    "deploy:webhook": "wrangler deploy --config wrangler-webhook.jsonc",
+    "queue:create:webhook": "wrangler queues create querido-diario-webhook-queue"
   },
   "keywords": [
     "cloudflare-workers",

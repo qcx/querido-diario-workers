@@ -1,0 +1,47 @@
+{
+  // Webhook Worker Configuration
+  "name": "querido-diario-webhook-worker",
+  "main": "src/webhook-worker.ts",
+  "compatibility_date": "2024-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // Observability
+  "observability": {
+    "enabled": true
+  },
+
+  // Queue Configuration - Consumer only
+  "queues": {
+    "consumers": [
+      {
+        "queue": "querido-diario-webhook-queue",
+        "max_batch_size": 10,
+        "max_batch_timeout": 30,
+        "max_retries": 3,
+        "dead_letter_queue": "querido-diario-webhook-dlq"
+      }
+    ]
+  },
+
+  // KV Namespaces
+  "kv_namespaces": [
+    {
+      "binding": "WEBHOOK_SUBSCRIPTIONS",
+      "id": "YOUR_SUBSCRIPTIONS_KV_ID"
+    },
+    {
+      "binding": "WEBHOOK_DELIVERY_LOGS",
+      "id": "YOUR_DELIVERY_LOGS_KV_ID"
+    }
+  ],
+
+  // Environments
+  "env": {
+    "development": {
+      "name": "querido-diario-webhook-worker-dev"
+    },
+    "production": {
+      "name": "querido-diario-webhook-worker-prod"
+    }
+  }
+}

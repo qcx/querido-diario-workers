@@ -9,6 +9,8 @@ import { logger } from './utils';
 export interface Env {
   ANALYSIS_QUEUE: Queue<AnalysisQueueMessage>;
   ANALYSIS_RESULTS: KVNamespace;
+  WEBHOOK_QUEUE?: Queue;
+  WEBHOOK_SUBSCRIPTIONS?: KVNamespace;
   OPENAI_API_KEY: string;
 }
 
@@ -102,6 +104,31 @@ async function processAnalysisMessage(
 
   // Store results
   await storeAnalysisResults(analysis, env);
+
+  // Send to webhooks if configured
+  if (env.WEBHOOK_QUEUE && env.WEBHOOK_SUBSCRIPTIONS) {
+    try {
+      const { WebhookSenderService } = await import('./services/webhook-sender');
+      const webhookSender = new WebhookSenderService(
+        env.WEBHOOK_QUEUE,
+        env.WEBHOOK_SUBSCRIPTIONS
+      );
+      
+      const sentCount = await webhookSender.processAnalysis(analysis);
+      
+      if (sentCount > 0) {
+        logger.info(`Sent analysis to ${sentCount} webhook(s)`, {
+          jobId,
+          sentCount,
+        });
+      }
+    } catch (error: any) {
+      logger.error('Failed to send webhooks', error, {
+        jobId,
+      });
+      // Don't fail the analysis if webhook sending fails
+    }
+  }
 
   logger.info(`Analysis completed and stored for job ${jobId}`, {
     jobId,
