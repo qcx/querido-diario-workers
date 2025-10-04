@@ -16,11 +16,14 @@ Para evitar conflitos:
 
 Estou migrando o projeto **Querido Diário** para **Cloudflare Workers** (Node.js + TypeScript). O repositório está em https://github.com/qcx/querido-diario-workers.
 
-### Status Atual (Commit e7a213a)
+### Status Atual (Após sessão de 04/10/2025)
 
-- **316 cidades migradas** de 474 (66.7%) ✅
-- **14 classes base implementadas**
+- **364 cidades migradas** de 474 (76.8%) ✅
+- **16 classes base implementadas**
 - **SIGPub implementado mas subutilizado** (apenas 3 cidades de AL e SP)
+- **Últimos commits:**
+  - `feat: Implementa o spider MunicipioOnline e adiciona 26 cidades`
+  - `feat: Implementa o spider AtendeV2 e adiciona 22 cidades`
 
 ### Oportunidade Identificada
 
@@ -44,8 +47,8 @@ Atualmente temos apenas 3 cidades configuradas, mas a plataforma suporta muito m
 
 ### Resultado Esperado
 
-- **416+ cidades funcionais** (316 + 100)
-- **Cobertura:** 87.8%
+- **464+ cidades funcionais** (364 + 100)
+- **Cobertura:** 97.9%
 - **Maior salto de cobertura em uma única sessão** 🚀
 
 ---
@@ -526,8 +529,8 @@ Olá! Estou continuando a migração do Querido Diário para Cloudflare Workers.
 ⚠️ IMPORTANTE: Esta é uma SESSÃO PARALELA. Trabalhe em branch separada: feature/sigpub-multi-regional
 
 Repositório: https://github.com/qcx/querido-diario-workers
-Status: 316 cidades migradas (66.7%)
-Último commit: e7a213a
+Status: 364 cidades migradas (76.8%)
+Branch atual: main
 
 Objetivo: Expandir SIGPub Multi-Regional para adicionar 100+ cidades de 5 estados
 
@@ -538,17 +541,17 @@ Estados prioritários:
 4. Rio Grande do Norte - ~167 municípios
 5. Maranhão - ~217 municípios
 
-Meta: 416+ cidades (87.8%) - maior salto de cobertura em uma sessão!
+Meta: 464+ cidades (97.9%) - maior salto de cobertura em uma sessão!
 
 Detalhes completos em: ~/querido-diario-workers/NEXT_SESSION_PROMPT_SIGPUB.md
 
 Por favor:
-1. Pesquise e mapeie estados disponíveis no SIGPub
-2. Extraia lista de municípios dos 5 estados prioritários
-3. Crie configurações em sigpub-cities.json
-4. Teste com 2 estados
-5. Commit em branch feature/sigpub-multi-regional
-6. NÃO faça merge (esperar outra sessão)
+1. Crie branch feature/sigpub-multi-regional
+2. Pesquise e mapeie estados disponíveis no SIGPub
+3. Extraia lista de municípios dos 5 estados prioritários
+4. Crie configurações em sigpub-cities.json
+5. Teste com 2 estados
+6. Commit em branch (NÃO merge)
 
 Obrigado!
 ```
