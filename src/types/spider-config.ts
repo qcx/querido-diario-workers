@@ -11,6 +11,12 @@ export type SpiderType =
   | 'sigpub'
   | 'barco_digital'
   | 'siganet'
+  | 'diario_oficial_br'
+  | 'modernizacao'
+  | 'aplus'
+  | 'dioenet'
+  | 'administracao_publica'
+  | 'ptio'
   | 'custom';
 
 /**
@@ -48,6 +54,12 @@ export type SpiderPlatformConfig =
   | SigpubConfig
   | BarcoDigitalConfig
   | SiganetConfig
+  | DiarioOficialBRConfig
+  | ModernizacaoConfig
+  | AplusConfig
+  | DioenetConfig
+  | AdministracaoPublicaConfig
+  | PtioConfig
   | CustomConfig;
 
 /**
@@ -141,5 +153,35 @@ export interface BarcoDigitalConfig {
 
 export interface SiganetConfig {
   type: 'siganet';
+  baseUrl: string;
+}
+
+export interface DiarioOficialBRConfig {
+  type: 'diario_oficial_br';
+  baseUrl: string;
+}
+
+export interface ModernizacaoConfig {
+  type: 'modernizacao';
+  fecamUrl?: string;
+}
+
+export interface AplusConfig {
+  type: 'aplus';
+  baseUrl: string;
+}
+
+export interface DioenetConfig {
+  type: 'dioenet';
+  baseUrl: string;
+}
+
+export interface AdministracaoPublicaConfig {
+  type: 'administracao_publica';
+  token: string;
+}
+
+export interface PtioConfig {
+  type: 'ptio';
   baseUrl: string;
 }
