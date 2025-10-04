@@ -9,7 +9,7 @@ This is a TypeScript/Node.js port of the [querido-diario](https://github.com/okf
 - ✅ **Serverless**: Runs on Cloudflare Workers (no servers to manage)
 - ✅ **Scalable**: Uses Cloudflare Queues for distributed crawling
 - ✅ **TypeScript**: Fully typed codebase
-- ✅ **56 Cities**: Complete DOEM platform support (all available cities)
+- ✅ **316 Cities**: 14 platform types implemented (66.7% coverage)
 - ✅ **Lightweight**: Extracts gazette metadata and PDF URLs (no file downloads)
 - ✅ **Fast**: Average 400-500ms per city crawl
 
@@ -140,12 +140,29 @@ npm run deploy
   - 2 cities in Paraná (PR)
   - 1 city in Sergipe (SE)
 
+## Supported Platforms
+
+| Platform | Cities | Status |
+|----------|--------|--------|
+| **Instar** | 111 | ✅ |
+| **DOEM** | 56 | ✅ |
+| **DOSP** | 42 | ✅ |
+| **ADiarios V1** | 34 | ✅ |
+| **DIOF** | 20 | ✅ |
+| **DiarioOficialBR** | 10 | ✅ |
+| **Siganet** | 10 | ✅ |
+| **Modernizacao** | 7 | ✅ |
+| **BarcoDigital** | 7 | ✅ |
+| **ADiarios V2** | 5 | ⚠️ Stub |
+| **Aplus** | 4 | ✅ |
+| **Dioenet** | 4 | ✅ |
+| **AdministracaoPublica** | 3 | ✅ |
+| **PTIO** | 3 | ✅ |
+| **Total** | **316** | **66.7%** |
+
 ### Planned
 
-- ADiarios V1: ~70 cities
-- ADiarios V2: ~12 cities
-- DIOF: ~50 cities
-- Other platforms: ~300+ cities
+- Other platforms: ~158 cities remaining
 
 ## Output Format
 
@@ -181,13 +198,22 @@ Each crawl returns gazette metadata:
 ## Development Roadmap
 
 - [x] Core infrastructure (types, utils, base classes)
-- [x] DOEM spider implementation
+- [x] DOEM spider implementation (56 cities) ✅
 - [x] Unified worker (dispatcher + consumer)
-- [x] **56 DOEM cities configuration (100% complete)** ✅
-- [x] Multi-city testing
-- [ ] ADiarios V1 spider (~70 cities)
-- [ ] ADiarios V2 spider (~12 cities)
-- [ ] DIOF spider (~50 cities)
+- [x] Instar spider (111 cities) ✅
+- [x] DOSP spider (42 cities) ✅
+- [x] ADiarios V1 spider (34 cities) ✅
+- [x] DIOF spider (20 cities) ✅
+- [x] BarcoDigital spider (7 cities) ✅
+- [x] Siganet spider (10 cities) ✅
+- [x] DiarioOficialBR spider (10 cities) ✅
+- [x] Modernizacao spider (7 cities) ✅
+- [x] Aplus spider (4 cities) ✅
+- [x] Dioenet spider (4 cities) ✅
+- [x] AdministracaoPublica spider (3 cities) ✅
+- [x] PTIO spider (3 cities) ✅
+- [ ] ADiarios V2 spider (5 cities) - requires browser automation
+- [ ] Remaining platforms (~158 cities)
 - [ ] Storage integration (D1/KV/R2)
 - [ ] Monitoring and alerting
 - [ ] PDF download worker (optional)
