@@ -11,10 +11,10 @@ export class MistralOcrService {
 
   constructor(config: MistralOcrConfig) {
     this.config = {
-      endpoint: 'https://api.mistral.ai/v1/chat/completions',
-      model: 'pixtral-12b-2409',
-      maxPages: 50,
-      timeout: 60000,
+      endpoint: 'https://api.mistral.ai/v1/ocr',
+      model: 'mistral-ocr-latest',
+      maxPages: 1000,
+      timeout: 120000,
       ...config,
     };
   }
@@ -32,14 +32,8 @@ export class MistralOcrService {
     });
 
     try {
-      // Download PDF
-      const pdfBuffer = await this.downloadPdf(message.pdfUrl);
-      
-      // Convert PDF to base64
-      const base64Pdf = this.bufferToBase64(pdfBuffer);
-      
-      // Call Mistral API
-      const extractedText = await this.callMistralApi(base64Pdf, message.jobId);
+      // Call Mistral API with PDF URL directly
+      const extractedText = await this.callMistralApi(message.pdfUrl, message.jobId);
       
       const processingTimeMs = Date.now() - startTime;
       
@@ -115,27 +109,16 @@ export class MistralOcrService {
   /**
    * Call Mistral API for OCR
    */
-  private async callMistralApi(base64Pdf: string, jobId: string): Promise<string> {
-    logger.debug(`Calling Mistral API for job ${jobId}`);
+  private async callMistralApi(pdfUrl: string, jobId: string): Promise<string> {
+    logger.debug(`Calling Mistral OCR API for job ${jobId}`);
 
     const payload = {
       model: this.config.model,
-      messages: [
-        {
-          role: 'user',
-          content: [
-            {
-              type: 'text',
-              text: 'Extract all text from this PDF document. Return only the extracted text, without any additional commentary or formatting.',
-            },
-            {
-              type: 'image_url',
-              image_url: `data:application/pdf;base64,${base64Pdf}`,
-            },
-          ],
-        },
-      ],
-      max_tokens: 16000,
+      document: {
+        type: 'document_url',
+        document_url: pdfUrl,
+      },
+      include_image_base64: false,
     };
 
     const response = await fetch(this.config.endpoint!, {
@@ -150,16 +133,32 @@ export class MistralOcrService {
 
     if (!response.ok) {
       const errorText = await response.text();
-      throw new Error(`Mistral API error: ${response.status} - ${errorText}`);
+      throw new Error(`Mistral OCR API error: ${response.status} - ${errorText}`);
     }
 
     const result: any = await response.json();
     
-    if (!result.choices || result.choices.length === 0) {
-      throw new Error('No response from Mistral API');
+    if (!result.pages || !Array.isArray(result.pages) || result.pages.length === 0) {
+      throw new Error('No pages in Mistral OCR response');
     }
 
-    return result.choices[0].message.content;
+    // Extract markdown from all pages and concatenate
+    const extractedText = result.pages
+      .map((page: any) => page.markdown || '')
+      .filter((text: string) => text.length > 0)
+      .join('\n\n---\n\n');
+
+    if (!extractedText) {
+      throw new Error('No text extracted from PDF');
+    }
+
+    logger.info(`Extracted text from ${result.pages.length} pages`, {
+      jobId,
+      pagesProcessed: result.usage_info?.pages_processed,
+      docSizeBytes: result.usage_info?.doc_size_bytes,
+    });
+
+    return extractedText;
   }
 
   /**
