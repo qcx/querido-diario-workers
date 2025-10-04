@@ -25,6 +25,7 @@ import administracaoPublicaCitiesConfig from './configs/administracao-publica-ci
 import ptioCitiesConfig from './configs/ptio-cities.json';
 import municipioOnlineCitiesConfig from './configs/municipio-online-cities.json';
 import atendeV2CitiesConfig from './configs/atende-v2-cities.json';
+import sigpubCitiesConfig from './configs/sigpub-cities.json';
 
 /**
  * Spider registry - maps spider IDs to configurations
@@ -117,6 +118,11 @@ class SpiderRegistry {
     
     // Load AtendeV2 cities
     for (const config of atendeV2CitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load SIGPub cities
+    for (const config of sigpubCitiesConfig as SpiderConfig[]) {
       this.configs.set(config.id, config);
     }
   }

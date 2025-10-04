@@ -103,7 +103,8 @@ export interface SigpubConfig {
   type: 'sigpub';
   /** Base URL for the Sigpub platform */
   url: string;
-  // Add other Sigpub-specific configuration properties here if needed
+  /** Entity ID for the association (e.g., "365" for AMUPE) */
+  entityId: string;
 }
 
 /**
