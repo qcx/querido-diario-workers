@@ -1,0 +1,46 @@
+[
+  {
+    "id": "pe_amupe",
+    "name": "Associação Municipalista de Pernambuco - AMUPE",
+    "territoryId": "2600000",
+    "spiderType": "sigpub",
+    "startDate": "2009-01-01",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/amupe/"
+    }
+  },
+  {
+    "id": "ce_aprece",
+    "name": "Associação dos Municípios do Estado do Ceará - APRECE",
+    "territoryId": "2300000",
+    "spiderType": "sigpub",
+    "startDate": "2009-01-01",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aprece/"
+    }
+  },
+  {
+    "id": "pb_famup",
+    "name": "Federação das Associações de Municípios da Paraíba - FAMUP",
+    "territoryId": "2500000",
+    "spiderType": "sigpub",
+    "startDate": "2009-01-01",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/famup/"
+    }
+  },
+  {
+    "id": "rn_femurn",
+    "name": "Federação dos Municípios do Estado do Rio Grande do Norte - FEMURN",
+    "territoryId": "2400000",
+    "spiderType": "sigpub",
+    "startDate": "2009-01-01",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/femurn/"
+    }
+  }
+]
