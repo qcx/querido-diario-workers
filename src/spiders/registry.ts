@@ -3,6 +3,7 @@ import { BaseSpider, DoemSpider, InstarSpider, DospSpider, ADiariosV1Spider, Sig
 import doemCitiesConfig from './configs/doem-cities.json';
 import instarCitiesConfig from './configs/instar-cities.json';
 import dospCitiesConfig from './configs/dosp-cities.json';
+import adiariosV1CitiesConfig from './configs/adiarios-v1-cities.json';
 
 /**
  * Spider registry - maps spider IDs to configurations
@@ -30,6 +31,11 @@ class SpiderRegistry {
     
     // Load DOSP cities
     for (const config of dospCitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load ADiarios V1 cities
+    for (const config of adiariosV1CitiesConfig as SpiderConfig[]) {
       this.configs.set(config.id, config);
     }
   }

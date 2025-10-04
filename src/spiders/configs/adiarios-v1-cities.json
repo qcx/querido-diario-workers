@@ -1,0 +1,35 @@
+[
+  {
+    "id": "ap_tartarugalzinho",
+    "name": "Tartarugalzinho - AP",
+    "territoryId": "1600709",
+    "spiderType": "adiarios_v1",
+    "startDate": "2017-05-16",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.tartarugalzinho.ap.gov.br"
+    }
+  },
+  {
+    "id": "ce_aurora",
+    "name": "Aurora - CE",
+    "territoryId": "2301703",
+    "spiderType": "adiarios_v1",
+    "startDate": "2021-08-02",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.aurora.ce.gov.br"
+    }
+  },
+  {
+    "id": "ce_caninde",
+    "name": "Canindé - CE",
+    "territoryId": "2302800",
+    "spiderType": "adiarios_v1",
+    "startDate": "2017-08-03",
+    "config": {
+      "type": "adiarios_v1",
+      "baseUrl": "https://www.caninde.ce.gov.br"
+    }
+  }
+]
