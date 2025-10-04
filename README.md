@@ -9,26 +9,28 @@ This is a TypeScript/Node.js port of the [querido-diario](https://github.com/okf
 - ✅ **Serverless**: Runs on Cloudflare Workers (no servers to manage)
 - ✅ **Scalable**: Uses Cloudflare Queues for distributed crawling
 - ✅ **TypeScript**: Fully typed codebase
-- ✅ **1,767 Cities**: 17 platform types implemented (**25.2% national coverage**)
+- ✅ **1,937 Cities**: 17 platform types implemented (**28.2% national coverage**)
 - ✅ **Lightweight**: Extracts gazette metadata and PDF URLs (no file downloads)
 - ✅ **Fast**: Average 400-500ms per city crawl
 
 ## 📊 National Coverage
 
-**1,403 of 5,570 Brazilian municipalities (25.19%)**
+**1,573 of 5,570 Brazilian municipalities (28.24%)**
 
 ### Coverage by State
 
 | UF | Total | Covered | Coverage | Progress |
 |----|-------|---------|----------|----------|
+| **MT** | 141 | 139 | **98.6%** | `███████████████████░` |
 | **PE** | 185 | 182 | **98.4%** | `███████████████████░` |
 | **RN** | 167 | 160 | **95.8%** | `███████████████████░` |
 | **CE** | 184 | 127 | **69.0%** | `█████████████░░░░░░░` |
 | **MG** | 853 | 474 | **55.6%** | `███████████░░░░░░░░░` |
 | **RS** | 497 | 262 | **52.7%** | `██████████░░░░░░░░░░` |
 | **PR** | 399 | 176 | **44.1%** | `████████░░░░░░░░░░░░` |
+| **PI** | 224 | 31 | **13.8%** | `██░░░░░░░░░░░░░░░░░░` |
 | **PB** | 223 | 22 | **9.9%** | `█░░░░░░░░░░░░░░░░░░░` |
-| Other states | 3,062 | 0 | 0.0% | `░░░░░░░░░░░░░░░░░░░░` |
+| Other states | 2,897 | 0 | 0.0% | `░░░░░░░░░░░░░░░░░░░░` |
 
 *Last updated: 2025-10-04*
 
@@ -163,7 +165,7 @@ npm run deploy
 
 | Platform | Cities | Status |
 |----------|--------|--------|
-| **SIGPub** | 1,403 | ✅ |
+| **SIGPub** | 1,573 | ✅ |
 | **Instar** | 111 | ✅ |
 | **DOEM** | 56 | ✅ |
 | **DOSP** | 42 | ✅ |
@@ -180,7 +182,7 @@ npm run deploy
 | **Dioenet** | 4 | ✅ |
 | **AdministracaoPublica** | 3 | ✅ |
 | **PTIO** | 3 | ✅ |
-| **Total** | **1,767** | **25.2%** |
+| **Total** | **1,937** | **28.2%** |
 
 ### Planned
 
