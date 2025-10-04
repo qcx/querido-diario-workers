@@ -1,0 +1,84 @@
+{
+  "executionId": "test-2025-10-04T15-09-10-463Z-0hhvlt",
+  "config": {
+    "mode": "single",
+    "parallelWorkers": 1,
+    "timeoutPerCity": 120000,
+    "searchDays": 7,
+    "rateLimitPerDomain": 5,
+    "requestDelay": 500,
+    "maxRetries": 3,
+    "samplePercentage": 10,
+    "verbose": true,
+    "outputDir": "./test-results",
+    "cities": [
+      "pe_2600104"
+    ],
+    "skipCities": []
+  },
+  "startedAt": "2025-10-04T15:09:10.463Z",
+  "completedAt": "2025-10-04T15:09:10.471Z",
+  "totalExecutionTime": 8,
+  "results": [
+    {
+      "cityId": "pe_2600104",
+      "cityName": "Afogados da Ingazeira",
+      "territoryId": "2600104",
+      "spiderType": "sigpub",
+      "status": "error",
+      "gazettesFound": 0,
+      "executionTime": 3,
+      "requestCount": 0,
+      "dateRange": {
+        "start": "2025-09-27",
+        "end": "2025-10-04"
+      },
+      "error": {
+        "message": "Cannot read properties of undefined (reading 'split')",
+        "stack": "TypeError: Cannot read properties of undefined (reading 'split')\n    at splitDateString (file:///home/ubuntu/querido-diario-workers/node_modules/date-fns/parseISO.js:105:28)\n    at parseISO (file:///home/ubuntu/querido-diario-workers/node_modules/date-fns/parseISO.js:49:23)\n    at fromISODate (/home/ubuntu/querido-diario-workers/src/utils/date-utils.ts:97:10)\n    at new BaseSpider (/home/ubuntu/querido-diario-workers/src/spiders/base/base-spider.ts:43:29)\n    at new SigpubSpider (/home/ubuntu/querido-diario-workers/src/spiders/base/sigpub-spider.ts:21:5)\n    at SpiderRegistry.createSpider (/home/ubuntu/querido-diario-workers/src/spiders/registry.ts:181:16)\n    at TestRunner.testCity (/home/ubuntu/querido-diario-workers/src/testing/test-runner.ts:220:37)\n    at <anonymous> (/home/ubuntu/querido-diario-workers/src/testing/test-runner.ts:184:49)\n    at Array.map (<anonymous>)\n    at TestRunner.runTestsInParallel (/home/ubuntu/querido-diario-workers/src/testing/test-runner.ts:184:30)"
+      },
+      "validations": {
+        "urlAccessible": false,
+        "canFetchGazettes": false,
+        "validStructure": false,
+        "validMetadata": false,
+        "pdfUrlsAccessible": false,
+        "details": []
+      },
+      "testedAt": "2025-10-04T15:09:10.471Z"
+    }
+  ],
+  "summary": {
+    "totalTested": 1,
+    "successful": 0,
+    "failed": 0,
+    "skipped": 0,
+    "timeouts": 0,
+    "errors": 1,
+    "successRate": 0,
+    "avgExecutionTime": 3,
+    "totalGazettesFound": 0,
+    "byPlatform": [
+      {
+        "platform": "sigpub",
+        "total": 1,
+        "successful": 0,
+        "failed": 1,
+        "successRate": 0,
+        "avgExecutionTime": 3
+      }
+    ],
+    "byStatus": {
+      "success": 0,
+      "failure": 0,
+      "skipped": 0,
+      "timeout": 0,
+      "error": 1
+    }
+  },
+  "systemInfo": {
+    "nodeVersion": "v22.13.0",
+    "platform": "linux",
+    "memory": 31206056
+  }
+}

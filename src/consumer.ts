@@ -1,17 +1,22 @@
-import { QueueMessage, CrawlResult, SpiderConfig } from './types';
+import { QueueMessage, CrawlResult, SpiderConfig, OcrQueueMessage } from './types';
 import { spiderRegistry } from './spiders/registry';
 import { logger } from './utils/logger';
+import { OcrQueueSender } from './services/ocr-queue-sender';
 
 export interface Env {
-  // Add any environment bindings here if needed
+  // Queue bindings
+  OCR_QUEUE?: Queue<OcrQueueMessage>;
 }
 
 /**
  * Queue consumer handler
  */
 export default {
-  async queue(batch: MessageBatch<QueueMessage>, _env: Env): Promise<void> {
+  async queue(batch: MessageBatch<QueueMessage>, env: Env): Promise<void> {
     logger.info('Processing queue batch', { batchSize: batch.messages.length });
+
+    // Initialize OCR queue sender
+    const ocrSender = new OcrQueueSender(env.OCR_QUEUE);
 
     for (const message of batch.messages) {
       const startTime = Date.now();
@@ -64,6 +69,19 @@ export default {
           executionTimeMs,
           requestCount: spider.getRequestCount(),
         });
+
+        // Send gazettes to OCR queue
+        if (gazettes.length > 0 && ocrSender.isEnabled()) {
+          try {
+            await ocrSender.sendGazettes(gazettes, queueMessage.spiderId);
+            logger.info('Gazettes sent to OCR queue', {
+              count: gazettes.length,
+            });
+          } catch (error) {
+            logger.error('Failed to send gazettes to OCR queue', error as Error);
+            // Don't fail the entire task if OCR queueing fails
+          }
+        }
 
         // Log result (in production, you might want to store this in a database or KV)
         console.log(JSON.stringify(result));

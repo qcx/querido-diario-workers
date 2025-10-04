@@ -1,0 +1,46 @@
+{
+  // OCR Worker Configuration
+  "name": "querido-diario-ocr-worker",
+  "main": "src/ocr-worker.ts",
+  "compatibility_date": "2024-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // Observability
+  "observability": {
+    "enabled": true
+  },
+
+  // Queue Configuration - Consumer only
+  "queues": {
+    "consumers": [
+      {
+        "queue": "gazette-ocr-queue",
+        "max_batch_size": 5,
+        "max_batch_timeout": 60,
+        "max_retries": 3,
+        "dead_letter_queue": "gazette-ocr-dlq"
+      }
+    ]
+  },
+
+  // KV Namespace for storing OCR results
+  "kv_namespaces": [
+    {
+      "binding": "OCR_RESULTS",
+      "id": "YOUR_KV_NAMESPACE_ID"
+    }
+  ],
+
+  // Secrets (set via wrangler secret put)
+  // - MISTRAL_API_KEY: Your Mistral API key
+
+  // Environments
+  "env": {
+    "development": {
+      "name": "querido-diario-ocr-worker-dev"
+    },
+    "production": {
+      "name": "querido-diario-ocr-worker-prod"
+    }
+  }
+}

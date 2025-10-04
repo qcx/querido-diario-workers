@@ -20,7 +20,11 @@
     "test:city": "npx tsx scripts/test-city.ts",
     "test:platform": "npx tsx scripts/test-platform.ts",
     "queue:create": "wrangler queues create gazette-crawl-queue",
-    "queue:create:dlq": "wrangler queues create gazette-crawl-dlq"
+    "queue:create:dlq": "wrangler queues create gazette-crawl-dlq",
+    "queue:create:ocr": "wrangler queues create gazette-ocr-queue",
+    "queue:create:ocr:dlq": "wrangler queues create gazette-ocr-dlq",
+    "deploy:ocr": "wrangler deploy --config wrangler-ocr.jsonc",
+    "dev:ocr": "wrangler dev --config wrangler-ocr.jsonc"
   },
   "keywords": [
     "cloudflare-workers",

@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Report - test-2025-10-04T15-15-08-278Z-7hm0xh</title>
+  <style>
+    
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+      header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; }
+      header h1 { font-size: 2em; margin-bottom: 10px; }
+      .execution-id { opacity: 0.9; font-size: 0.9em; }
+      section { background: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+      h2 { font-size: 1.5em; margin-bottom: 20px; color: #667eea; }
+      .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
+      .stat-card { background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center; border-left: 4px solid #667eea; }
+      .stat-card.success { border-left-color: #28a745; }
+      .stat-card.danger { border-left-color: #dc3545; }
+      .stat-card.warning { border-left-color: #ffc107; }
+      .stat-value { font-size: 2.5em; font-weight: bold; color: #667eea; }
+      .stat-card.success .stat-value { color: #28a745; }
+      .stat-card.danger .stat-value { color: #dc3545; }
+      .stat-card.warning .stat-value { color: #ffc107; }
+      .stat-label { color: #666; margin-top: 5px; }
+      .success-rate { margin: 30px 0; }
+      .success-rate h3 { font-size: 1.2em; margin-bottom: 10px; }
+      .progress-bar { background: #e9ecef; height: 30px; border-radius: 15px; overflow: hidden; }
+      .progress-fill { height: 100%; background: linear-gradient(90deg, #28a745, #20c997); transition: width 0.3s; }
+      .success-rate.warning .progress-fill { background: linear-gradient(90deg, #ffc107, #fd7e14); }
+      .success-rate.danger .progress-fill { background: linear-gradient(90deg, #dc3545, #c82333); }
+      .percentage { text-align: center; font-size: 1.5em; font-weight: bold; margin-top: 10px; }
+      .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
+      .info-item { background: #f8f9fa; padding: 15px; border-radius: 5px; }
+      table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+      th, td { padding: 12px; text-align: left; border-bottom: 1px solid #dee2e6; }
+      th { background: #f8f9fa; font-weight: 600; color: #495057; }
+      tr:hover { background: #f8f9fa; }
+      .success { color: #28a745; }
+      .danger { color: #dc3545; }
+      .mini-progress { display: inline-block; width: 60px; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; vertical-align: middle; margin-right: 8px; }
+      .mini-progress-fill { height: 100%; background: #28a745; }
+      .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: 600; }
+      .badge-success { background: #d4edda; color: #155724; }
+      .badge-danger { background: #f8d7da; color: #721c24; }
+      .badge-warning { background: #fff3cd; color: #856404; }
+      .badge-secondary { background: #e2e3e5; color: #383d41; }
+      .error-msg { color: #dc3545; font-size: 0.9em; }
+      .filter-buttons { margin-bottom: 15px; }
+      .filter-buttons button { padding: 8px 16px; margin-right: 10px; border: 1px solid #dee2e6; background: white; border-radius: 5px; cursor: pointer; }
+      .filter-buttons button.active { background: #667eea; color: white; border-color: #667eea; }
+      .failure-card { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #dc3545; }
+      .failure-card h4 { margin-bottom: 10px; }
+      .validations { margin-top: 10px; }
+      .validations ul { margin-left: 20px; margin-top: 5px; }
+      .success-message { color: #28a745; font-size: 1.1em; text-align: center; padding: 20px; }
+      .note { color: #666; font-style: italic; margin-top: 15px; text-align: center; }
+      footer { text-align: center; color: #666; padding: 30px 0; font-size: 0.9em; }
+      .status-success { background: #d4edda !important; }
+      .status-failure { background: #f8d7da !important; }
+      .status-timeout { background: #fff3cd !important; }
+      .status-error { background: #f8d7da !important; }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🧪 Test Execution Report</h1>
+      <p class="execution-id">Execution ID: test-2025-10-04T15-15-08-278Z-7hm0xh</p>
+    </header>
+
+    
+    <section class="summary">
+      <h2>📊 Summary</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value">194</div>
+          <div class="stat-label">Total Tested</div>
+        </div>
+        <div class="stat-card success">
+          <div class="stat-value">193</div>
+          <div class="stat-label">Successful</div>
+        </div>
+        <div class="stat-card danger">
+          <div class="stat-value">1</div>
+          <div class="stat-label">Failed</div>
+        </div>
+        <div class="stat-card warning">
+          <div class="stat-value">0</div>
+          <div class="stat-label">Timeouts</div>
+        </div>
+      </div>
+
+      <div class="success-rate success">
+        <h3>Success Rate</h3>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 99.48453608247422%"></div>
+        </div>
+        <p class="percentage">99.48%</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <strong>Total Gazettes Found:</strong> 444
+        </div>
+        <div class="info-item">
+          <strong>Avg Execution Time:</strong> 2.25s
+        </div>
+        <div class="info-item">
+          <strong>Started:</strong> 10/4/2025, 11:15:08 AM
+        </div>
+        <div class="info-item">
+          <strong>Completed:</strong> 10/4/2025, 11:16:44 AM
+        </div>
+      </div>
+    </section>
+    
+    <section class="platforms">
+      <h2>🏢 Platform Breakdown</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th>Total</th>
+            <th>Success</th>
+            <th>Failed</th>
+            <th>Success Rate</th>
+            <th>Avg Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        <tr>
+          <td>sigpub</td>
+          <td>141</td>
+          <td class="success">140</td>
+          <td class="danger">1</td>
+          <td>
+            <div class="mini-progress">
+              <div class="mini-progress-fill" style="width: 99.29078014184397%"></div>
+            </div>
+            99.3%
+          </td>
+          <td>2.13s</td>
+        </tr>
+      
+        <tr>
+          <td>dioenet</td>
+          <td>1</td>
+          <td class="success">1</td>
+          <td class="danger">0</td>
+          <td>
+            <div class="mini-progress">
+              <div class="mini-progress-fill" style="width: 100%"></div>
+            </div>
+            100.0%
+          </td>
+          <td>2.70s</td>
+        </tr>
+      
+        <tr>
+          <td>instar</td>
+          <td>12</td>
+          <td class="success">12</td>
+          <td class="danger">0</td>
+          <td>
+            <div class="mini-progress">
+              <div class="mini-progress-fill" style="width: 100%"></div>
+            </div>
+            100.0%
+          </td>
+          <td>2.20s</td>
+        </tr>
+      
+        <tr>
+          <td>dosp</td>
+          <td>11</td>
+          <td class="success">11</td>
+          <td class="danger">0</td>
+          <td>
+            <div class="mini-progress">
+              <div class="mini-progress-fill" style="width: 100%"></div>
+            </div>
+            100.0%
+          </td>
+          <td>1.56s</td>
+        </tr>
+      
+        <tr>
+          <td>modernizacao</td>
+          <td>2</td>
+          <td class="success">2</td>
+          <td class="danger">0</td>
+          <td>
+            <div class="mini-progress">
+              <div class="mini-progress-fill" style="width: 100%"></div>
+            </div>
+            100.0%
+          </td>
+          <td>5.71s</td>
+        </tr>
+      
+        <tr>
+          <td>adiarios_v2</td>
+          <td>2</td>
+          <td class="success">2</td>
+          <td class="danger">0</td>
+          <td>
+            <div class="mini-progress">
+              <div class="mini-progress-fill" style="width: 100%"></div>
+            </div>
+            100.0%
+          </td>
+          <td>7ms</td>
+        </tr>
+      
+        <tr>
+          <td>adiarios_v1</td>
+          <td>8</td>
+          <td class="success">8</td>
+          <td class="danger">0</td>
+          <td>
+            <div class="mini-progress">
+              <div class="mini-progress-fill" style="width: 100%"></div>
+            </div>
+            100.0%
+          </td>
+          <td>3.76s</td>
+        </tr>
+      
+        <tr>
+          <td>aplus</td>
+          <td>2</td>
+          <td class="success">2</td>
+          <td class="danger">0</td>
+          <td>
+            <div class="mini-progress">
+              <div class="mini-progress-fill" style="width: 100%"></div>
+            </div>
+            100.0%
+          </td>
+          <td>5.93s</td>
+        </tr>
+      
+        <tr>
+          <td>diof</td>
+          <td>4</td>
+          <td class="success">4</td>
+          <td class="danger">0</td>
+          <td>
+            <div class="mini-progress">
+              <div class="mini-progress-fill" style="width: 100%"></div>
+            </div>
+            100.0%
+          </td>
+          <td>3.03s</td>
+        </tr>
+      
+        <tr>
+          <td>doem</td>
+          <td>5</td>
+          <td class="success">5</td>
+          <td class="danger">0</td>
+          <td>
+            <div class="mini-progress">
+              <div class="mini-progress-fill" style="width: 100%"></div>
+            </div>
+            100.0%
+          </td>
+          <td>1.47s</td>
+        </tr>
+      
+        <tr>
+          <td>siganet</td>
+          <td>2</td>
+          <td class="success">2</td>
+          <td class="danger">0</td>
+          <td>
+            <div class="mini-progress">
+              <div class="mini-progress-fill" style="width: 100%"></div>
+            </div>
+            100.0%
+          </td>
+          <td>477ms</td>
+        </tr>
+      
+        <tr>
+          <td>barco_digital</td>
+          <td>3</td>
+          <td class="success">3</td>
+          <td class="danger">0</td>
+          <td>
+            <div class="mini-progress">
+              <div class="mini-progress-fill" style="width: 100%"></div>
+            </div>
+            100.0%
+          </td>
+          <td>4.36s</td>
+        </tr>
+      
+        <tr>
+          <td>atende_v2</td>
+          <td>1</td>
+          <td class="success">1</td>
+          <td class="danger">0</td>
+          <td>
+            <div class="mini-progress">
+              <div class="mini-progress-fill" style="width: 100%"></div>
+            </div>
+            100.0%
+          </td>
+          <td>3.73s</td>
+        </tr>
+      
+        </tbody>
+      </table>
+    </section>
+    
+    <section class="results">
+      <h2>📋 Test Results</h2>
+      <div class="filter-buttons">
+        <button onclick="filterResults('all')" class="active">All</button>
+        <button onclick="filterResults('success')">Success</button>
+        <button onclick="filterResults('failure')">Failed</button>
+        <button onclick="filterResults('timeout')">Timeout</button>
+        <button onclick="filterResults('error')">Error</button>
+      </div>
+      <table id="results-table">
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>City ID</th>
+            <th>City Name</th>
+            <th>Platform</th>
+            <th>Gazettes</th>
+            <th>Time</th>
+            <th>Error</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rn_2404408</td>
+          <td>Grossos</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.27s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rj_sumidouro</td>
+          <td>Sumidouro - RJ</td>
+          <td>dioenet</td>
+          <td>0</td>
+          <td>2.70s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>sp_mira_estrela</td>
+          <td>Mira Estrela - SP</td>
+          <td>instar</td>
+          <td>5</td>
+          <td>5.91s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_tres_arroios</td>
+          <td>Tres Arroios - RS</td>
+          <td>dosp</td>
+          <td>3</td>
+          <td>1.87s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>sp_braganca_paulista</td>
+          <td>Braganca Paulista - SP</td>
+          <td>dosp</td>
+          <td>6</td>
+          <td>2.07s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rj_sao_joao_de_meriti</td>
+          <td>São João de Meriti - RJ</td>
+          <td>modernizacao</td>
+          <td>4</td>
+          <td>5.31s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>sp_piedade</td>
+          <td>Piedade - SP</td>
+          <td>instar</td>
+          <td>3</td>
+          <td>1.88s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rj_iguaba_grande</td>
+          <td>Iguaba Grande - RJ</td>
+          <td>adiarios_v2</td>
+          <td>0</td>
+          <td>6ms</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>ma_bom_lugar</td>
+          <td>Bom Lugar - MA</td>
+          <td>adiarios_v1</td>
+          <td>0</td>
+          <td>6.41s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>ma_bacabal</td>
+          <td>Bacabal - MA</td>
+          <td>aplus</td>
+          <td>0</td>
+          <td>470ms</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>pb_jerico</td>
+          <td>Jerico - PB</td>
+          <td>adiarios_v1</td>
+          <td>0</td>
+          <td>784ms</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>pb_sao_jose_dos_ramos</td>
+          <td>Sao Jose Dos Ramos - PB</td>
+          <td>adiarios_v1</td>
+          <td>0</td>
+          <td>6.17s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_taiobeiras</td>
+          <td>Taiobeiras - MG</td>
+          <td>instar</td>
+          <td>4</td>
+          <td>2.06s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>pb_sertaozinho</td>
+          <td>Sertaozinho - PB</td>
+          <td>adiarios_v1</td>
+          <td>0</td>
+          <td>1.11s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4308250</td>
+          <td>Floriano Peixoto</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.50s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mt_5106273</td>
+          <td>Novo Horizonte do Norte</td>
+          <td>sigpub</td>
+          <td>0</td>
+          <td>1.73s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>pr_4116604</td>
+          <td>Nova América da Colina</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.73s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>pr_4108502</td>
+          <td>General Carneiro</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.71s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4318705</td>
+          <td>São Leopoldo</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.51s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4315008</td>
+          <td>Porto Lucena</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.50s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3103900</td>
+          <td>Araújos</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.33s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>pr_4127965</td>
+          <td>Turvo</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.37s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>pr_4117008</td>
+          <td>Nova Fátima</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.48s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3112109</td>
+          <td>Caparaó</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.34s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3135407</td>
+          <td>Jeceaba</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.25s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4320321</td>
+          <td>Senador Salgado Filho</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.22s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3136520</td>
+          <td>José Gonçalves de Minas</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.31s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3120805</td>
+          <td>Cruzília</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.30s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3133204</td>
+          <td>Itanhomi</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.28s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3104205</td>
+          <td>Arcos</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.29s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4321352</td>
+          <td>Tavares</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.93s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3132107</td>
+          <td>Itacarambi</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.01s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3145901</td>
+          <td>Ouro Branco</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.01s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>pr_4125357</td>
+          <td>São Jorge do Patrocínio</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.03s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3120904</td>
+          <td>Curvelo</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.02s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>pr_4126652</td>
+          <td>Sulina</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.03s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>pr_4123824</td>
+          <td>Santa Lúcia</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.05s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3121803</td>
+          <td>Dionísio</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.98s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3131000</td>
+          <td>Inhaúma</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.02s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4310553</td>
+          <td>Itacurubi</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.91s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3130309</td>
+          <td>Iguatama</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.03s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3120300</td>
+          <td>Cristália</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.04s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3135209</td>
+          <td>Januária</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.98s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3135001</td>
+          <td>Jaguaraçu</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.04s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3120409</td>
+          <td>Cristiano Otoni</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.98s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4319604</td>
+          <td>São Sepé</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.87s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3135456</td>
+          <td>Jenipapo de Minas</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.02s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3117900</td>
+          <td>Congonhal</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.05s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4315057</td>
+          <td>Porto Mauá</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.81s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3127206</td>
+          <td>Funilândia</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.07s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3120102</td>
+          <td>Couto de Magalhães de Minas</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.96s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4317004</td>
+          <td>Santana da Boa Vista</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.99s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3125408</td>
+          <td>Felício dos Santos</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.01s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3139706</td>
+          <td>Maravilhas</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.00s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3134707</td>
+          <td>Jacinto</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.06s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3147956</td>
+          <td>Patis</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.08s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4320305</td>
+          <td>Selbach</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.98s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3150703</td>
+          <td>Pirajuba</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.95s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3169307</td>
+          <td>Três Corações</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.08s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4321204</td>
+          <td>Taquara</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.02s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3150208</td>
+          <td>Piedade de Ponte Nova</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.99s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3143153</td>
+          <td>Monte Formoso</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.05s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4314035</td>
+          <td>Pareci Novo</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.96s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3136504</td>
+          <td>Jordânia</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.07s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3162658</td>
+          <td>São João do Pacuí</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.06s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3144656</td>
+          <td>Ninheira</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.97s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3161502</td>
+          <td>São Geraldo</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.02s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3162302</td>
+          <td>São João da Mata</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>1.99s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>pr_4127403</td>
+          <td>Terra Roxa</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.16s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3136603</td>
+          <td>Nova União</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.27s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3138682</td>
+          <td>Luislândia</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.06s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4317103</td>
+          <td>Sant'Ana do Livramento</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.31s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4308458</td>
+          <td>Fortaleza dos Valos</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.06s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>pr_4127007</td>
+          <td>Teixeira Soares</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.07s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>ba_luis_eduardo_magalhaes</td>
+          <td>Luis Eduardo Magalhaes - BA</td>
+          <td>diof</td>
+          <td>0</td>
+          <td>847ms</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3159100</td>
+          <td>Santana dos Montes</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.05s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3115102</td>
+          <td>Cássia</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.01s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_uberaba_2021</td>
+          <td>Uberaba 2021 - MG</td>
+          <td>dosp</td>
+          <td>5</td>
+          <td>1.55s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3161304</td>
+          <td>São Francisco de Sales</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.08s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>sp_itu</td>
+          <td>Itu - SP</td>
+          <td>dosp</td>
+          <td>6</td>
+          <td>1.73s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3160306</td>
+          <td>Santo Antônio do Jacinto</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.26s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rj_quissama</td>
+          <td>Quissamã - RJ</td>
+          <td>adiarios_v2</td>
+          <td>0</td>
+          <td>7ms</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3135357</td>
+          <td>Japonvar</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.26s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rn_santa_cruz</td>
+          <td>Santa Cruz - RN</td>
+          <td>adiarios_v1</td>
+          <td>0</td>
+          <td>6.02s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>ba_cristopolis</td>
+          <td>Cristopolis - BA</td>
+          <td>doem</td>
+          <td>5</td>
+          <td>1.61s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>sp_birigui</td>
+          <td>Birigui - SP</td>
+          <td>dosp</td>
+          <td>9</td>
+          <td>1.67s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>pr_4122305</td>
+          <td>Rio Negro</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.07s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3126505</td>
+          <td>Francisco Badaró</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.31s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>ma_bacuri</td>
+          <td>Bacuri - MA</td>
+          <td>siganet</td>
+          <td>0</td>
+          <td>945ms</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>ce_2313203</td>
+          <td>Tamboril</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.27s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>ce_2301257</td>
+          <td>Ararendá</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.08s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3140555</td>
+          <td>Mata Verde</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.31s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>ce_2306900</td>
+          <td>Jaguaribe</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.13s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>ce_2307635</td>
+          <td>Madalena</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.16s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_3170750</td>
+          <td>Varjão de Minas</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.30s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>mg_carmo_da_cachoeira</td>
+          <td>Carmo Da Cachoeira - MG</td>
+          <td>instar</td>
+          <td>5</td>
+          <td>2.99s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>ba_caetite</td>
+          <td>Caetite - BA</td>
+          <td>doem</td>
+          <td>17</td>
+          <td>1.86s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>rs_4313060</td>
+          <td>Nova Hartz</td>
+          <td>sigpub</td>
+          <td>2</td>
+          <td>2.13s</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>sp_jandira</td>
+          <td>Jandira - SP</td>
+          <td>dosp</td>
+          <td>0</td>
+          <td>469ms</td>
+          <td>-</td>
+        </tr>
+      
+        <tr class="status-success">
+          <td><span class="badge badge-success">✅ Success</span></td>
+          <td>to_aparecida_do_rio_negro</td>
+          <td>Aparecida Do Rio Negro - TO</td>
+          <td>barco_digital</td>
+          <td>2</td>
+          <td>3.58s</td>
+          <td>-</td>
+        </tr>
+      
+        </tbody>
+      </table>
+      <p class="note">Showing first 100 of 194 results</p>
+    </section>
+    
+    <section class="failures">
+      <h2>❌ Failures (1)</h2>
+      
+        <div class="failure-card">
+          <h4><span class="badge badge-danger">❌ Failure</span> mg_3153707 - Quartel Geral</h4>
+          <p><strong>Platform:</strong> sigpub</p>
+          
+          
+      <div class="validations">
+        <strong>Failed Validations:</strong>
+        <ul><li>pdf_urls_accessible: 1/2 sampled PDF URLs are inaccessible</li></ul>
+      </div>
+        </div>
+      
+      
+    </section>
+
+    <footer>
+      <p>Generated at 10/4/2025, 11:16:44 AM</p>
+      <p>Querido Diário Workers - Automated Testing System</p>
+    </footer>
+  </div>
+
+  <script>
+    
+      function filterResults(status) {
+        const table = document.getElementById('results-table');
+        const rows = table.querySelectorAll('tbody tr');
+        const buttons = document.querySelectorAll('.filter-buttons button');
+
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        rows.forEach(row => {
+          if (status === 'all' || row.classList.contains('status-' + status)) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      }
+    
+  </script>
+</body>
+</html>

@@ -21,6 +21,10 @@
       {
         "queue": "gazette-crawl-queue",
         "binding": "CRAWL_QUEUE"
+      },
+      {
+        "queue": "gazette-ocr-queue",
+        "binding": "OCR_QUEUE"
       }
     ],
     "consumers": [

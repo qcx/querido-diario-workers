@@ -1,0 +1,476 @@
+{
+  "executionId": "test-2025-10-04T15-42-15-352Z-zk1fe1",
+  "config": {
+    "mode": "until",
+    "timeoutPerCity": 60000,
+    "rateLimitPerDomain": 5,
+    "requestDelay": 500,
+    "maxRetries": 3,
+    "outputDir": "./test-results",
+    "targetGazettes": 10,
+    "skipCities": []
+  },
+  "startedAt": "2025-10-04T15:42:15.353Z",
+  "completedAt": "2025-10-04T15:42:27.908Z",
+  "totalExecutionTime": 12555,
+  "results": [
+    {
+      "cityId": "pe_2609709",
+      "cityName": "Orobó",
+      "territoryId": "2609709",
+      "spiderType": "sigpub",
+      "status": "success",
+      "gazettesFound": 2,
+      "executionTime": 2223,
+      "requestCount": 1,
+      "dateRange": {
+        "start": "2025-09-27",
+        "end": "2025-10-04"
+      },
+      "validations": {
+        "urlAccessible": false,
+        "canFetchGazettes": true,
+        "validStructure": true,
+        "validMetadata": true,
+        "pdfUrlsAccessible": true,
+        "details": [
+          {
+            "name": "structure_valid",
+            "passed": true,
+            "message": "Gazettes array is valid"
+          },
+          {
+            "name": "all_gazettes_valid",
+            "passed": true,
+            "message": "All 2 gazettes have valid structure"
+          },
+          {
+            "name": "metadata_valid",
+            "passed": true,
+            "message": "All gazettes have correct territoryId"
+          },
+          {
+            "name": "power_valid",
+            "passed": true,
+            "message": "All gazettes have valid power"
+          },
+          {
+            "name": "scraped_at_recent",
+            "passed": true,
+            "message": "All gazettes have recent scrapedAt timestamp"
+          },
+          {
+            "name": "pdf_urls_accessible",
+            "passed": true,
+            "message": "All 2 sampled PDF URLs are accessible"
+          },
+          {
+            "name": "dates_ordered",
+            "passed": true,
+            "message": "Gazette dates are in chronological order"
+          },
+          {
+            "name": "dates_valid",
+            "passed": true,
+            "message": "All gazette dates are valid"
+          },
+          {
+            "name": "dates_not_future",
+            "passed": true,
+            "message": "No gazettes have future dates"
+          },
+          {
+            "name": "execution_time",
+            "passed": true,
+            "message": "Execution time (2221ms) is within acceptable range",
+            "context": {
+              "executionTime": 2221
+            }
+          },
+          {
+            "name": "request_count",
+            "passed": true,
+            "message": "Spider made 1 HTTP requests",
+            "context": {
+              "requestCount": 1
+            }
+          }
+        ]
+      },
+      "testedAt": "2025-10-04T15:42:17.577Z"
+    },
+    {
+      "cityId": "mg_3111507",
+      "cityName": "Campos Altos",
+      "territoryId": "3111507",
+      "spiderType": "sigpub",
+      "status": "success",
+      "gazettesFound": 2,
+      "executionTime": 2046,
+      "requestCount": 1,
+      "dateRange": {
+        "start": "2025-09-27",
+        "end": "2025-10-04"
+      },
+      "validations": {
+        "urlAccessible": false,
+        "canFetchGazettes": true,
+        "validStructure": true,
+        "validMetadata": true,
+        "pdfUrlsAccessible": true,
+        "details": [
+          {
+            "name": "structure_valid",
+            "passed": true,
+            "message": "Gazettes array is valid"
+          },
+          {
+            "name": "all_gazettes_valid",
+            "passed": true,
+            "message": "All 2 gazettes have valid structure"
+          },
+          {
+            "name": "metadata_valid",
+            "passed": true,
+            "message": "All gazettes have correct territoryId"
+          },
+          {
+            "name": "power_valid",
+            "passed": true,
+            "message": "All gazettes have valid power"
+          },
+          {
+            "name": "scraped_at_recent",
+            "passed": true,
+            "message": "All gazettes have recent scrapedAt timestamp"
+          },
+          {
+            "name": "pdf_urls_accessible",
+            "passed": true,
+            "message": "All 2 sampled PDF URLs are accessible"
+          },
+          {
+            "name": "dates_ordered",
+            "passed": true,
+            "message": "Gazette dates are in chronological order"
+          },
+          {
+            "name": "dates_valid",
+            "passed": true,
+            "message": "All gazette dates are valid"
+          },
+          {
+            "name": "dates_not_future",
+            "passed": true,
+            "message": "No gazettes have future dates"
+          },
+          {
+            "name": "execution_time",
+            "passed": true,
+            "message": "Execution time (2045ms) is within acceptable range",
+            "context": {
+              "executionTime": 2045
+            }
+          },
+          {
+            "name": "request_count",
+            "passed": true,
+            "message": "Spider made 1 HTTP requests",
+            "context": {
+              "requestCount": 1
+            }
+          }
+        ]
+      },
+      "testedAt": "2025-10-04T15:42:20.124Z"
+    },
+    {
+      "cityId": "mg_3137908",
+      "cityName": "Lamim",
+      "territoryId": "3137908",
+      "spiderType": "sigpub",
+      "status": "success",
+      "gazettesFound": 2,
+      "executionTime": 1949,
+      "requestCount": 1,
+      "dateRange": {
+        "start": "2025-09-27",
+        "end": "2025-10-04"
+      },
+      "validations": {
+        "urlAccessible": false,
+        "canFetchGazettes": true,
+        "validStructure": true,
+        "validMetadata": true,
+        "pdfUrlsAccessible": true,
+        "details": [
+          {
+            "name": "structure_valid",
+            "passed": true,
+            "message": "Gazettes array is valid"
+          },
+          {
+            "name": "all_gazettes_valid",
+            "passed": true,
+            "message": "All 2 gazettes have valid structure"
+          },
+          {
+            "name": "metadata_valid",
+            "passed": true,
+            "message": "All gazettes have correct territoryId"
+          },
+          {
+            "name": "power_valid",
+            "passed": true,
+            "message": "All gazettes have valid power"
+          },
+          {
+            "name": "scraped_at_recent",
+            "passed": true,
+            "message": "All gazettes have recent scrapedAt timestamp"
+          },
+          {
+            "name": "pdf_urls_accessible",
+            "passed": true,
+            "message": "All 2 sampled PDF URLs are accessible"
+          },
+          {
+            "name": "dates_ordered",
+            "passed": true,
+            "message": "Gazette dates are in chronological order"
+          },
+          {
+            "name": "dates_valid",
+            "passed": true,
+            "message": "All gazette dates are valid"
+          },
+          {
+            "name": "dates_not_future",
+            "passed": true,
+            "message": "No gazettes have future dates"
+          },
+          {
+            "name": "execution_time",
+            "passed": true,
+            "message": "Execution time (1949ms) is within acceptable range",
+            "context": {
+              "executionTime": 1949
+            }
+          },
+          {
+            "name": "request_count",
+            "passed": true,
+            "message": "Spider made 1 HTTP requests",
+            "context": {
+              "requestCount": 1
+            }
+          }
+        ]
+      },
+      "testedAt": "2025-10-04T15:42:22.573Z"
+    },
+    {
+      "cityId": "rs_4308250",
+      "cityName": "Floriano Peixoto",
+      "territoryId": "4308250",
+      "spiderType": "sigpub",
+      "status": "success",
+      "gazettesFound": 2,
+      "executionTime": 1943,
+      "requestCount": 1,
+      "dateRange": {
+        "start": "2025-09-27",
+        "end": "2025-10-04"
+      },
+      "validations": {
+        "urlAccessible": false,
+        "canFetchGazettes": true,
+        "validStructure": true,
+        "validMetadata": true,
+        "pdfUrlsAccessible": true,
+        "details": [
+          {
+            "name": "structure_valid",
+            "passed": true,
+            "message": "Gazettes array is valid"
+          },
+          {
+            "name": "all_gazettes_valid",
+            "passed": true,
+            "message": "All 2 gazettes have valid structure"
+          },
+          {
+            "name": "metadata_valid",
+            "passed": true,
+            "message": "All gazettes have correct territoryId"
+          },
+          {
+            "name": "power_valid",
+            "passed": true,
+            "message": "All gazettes have valid power"
+          },
+          {
+            "name": "scraped_at_recent",
+            "passed": true,
+            "message": "All gazettes have recent scrapedAt timestamp"
+          },
+          {
+            "name": "pdf_urls_accessible",
+            "passed": true,
+            "message": "All 2 sampled PDF URLs are accessible"
+          },
+          {
+            "name": "dates_ordered",
+            "passed": true,
+            "message": "Gazette dates are in chronological order"
+          },
+          {
+            "name": "dates_valid",
+            "passed": true,
+            "message": "All gazette dates are valid"
+          },
+          {
+            "name": "dates_not_future",
+            "passed": true,
+            "message": "No gazettes have future dates"
+          },
+          {
+            "name": "execution_time",
+            "passed": true,
+            "message": "Execution time (1942ms) is within acceptable range",
+            "context": {
+              "executionTime": 1942
+            }
+          },
+          {
+            "name": "request_count",
+            "passed": true,
+            "message": "Spider made 1 HTTP requests",
+            "context": {
+              "requestCount": 1
+            }
+          }
+        ]
+      },
+      "testedAt": "2025-10-04T15:42:25.016Z"
+    },
+    {
+      "cityId": "rs_4307302",
+      "cityName": "Erval Seco",
+      "territoryId": "4307302",
+      "spiderType": "sigpub",
+      "status": "success",
+      "gazettesFound": 2,
+      "executionTime": 1889,
+      "requestCount": 1,
+      "dateRange": {
+        "start": "2025-09-27",
+        "end": "2025-10-04"
+      },
+      "validations": {
+        "urlAccessible": false,
+        "canFetchGazettes": true,
+        "validStructure": true,
+        "validMetadata": true,
+        "pdfUrlsAccessible": true,
+        "details": [
+          {
+            "name": "structure_valid",
+            "passed": true,
+            "message": "Gazettes array is valid"
+          },
+          {
+            "name": "all_gazettes_valid",
+            "passed": true,
+            "message": "All 2 gazettes have valid structure"
+          },
+          {
+            "name": "metadata_valid",
+            "passed": true,
+            "message": "All gazettes have correct territoryId"
+          },
+          {
+            "name": "power_valid",
+            "passed": true,
+            "message": "All gazettes have valid power"
+          },
+          {
+            "name": "scraped_at_recent",
+            "passed": true,
+            "message": "All gazettes have recent scrapedAt timestamp"
+          },
+          {
+            "name": "pdf_urls_accessible",
+            "passed": true,
+            "message": "All 2 sampled PDF URLs are accessible"
+          },
+          {
+            "name": "dates_ordered",
+            "passed": true,
+            "message": "Gazette dates are in chronological order"
+          },
+          {
+            "name": "dates_valid",
+            "passed": true,
+            "message": "All gazette dates are valid"
+          },
+          {
+            "name": "dates_not_future",
+            "passed": true,
+            "message": "No gazettes have future dates"
+          },
+          {
+            "name": "execution_time",
+            "passed": true,
+            "message": "Execution time (1889ms) is within acceptable range",
+            "context": {
+              "executionTime": 1889
+            }
+          },
+          {
+            "name": "request_count",
+            "passed": true,
+            "message": "Spider made 1 HTTP requests",
+            "context": {
+              "requestCount": 1
+            }
+          }
+        ]
+      },
+      "testedAt": "2025-10-04T15:42:27.406Z"
+    }
+  ],
+  "summary": {
+    "totalTested": 5,
+    "successful": 5,
+    "failed": 0,
+    "skipped": 0,
+    "timeouts": 0,
+    "errors": 0,
+    "successRate": 100,
+    "avgExecutionTime": 2010,
+    "totalGazettesFound": 10,
+    "byPlatform": [
+      {
+        "platform": "sigpub",
+        "total": 5,
+        "successful": 5,
+        "failed": 0,
+        "successRate": 100,
+        "avgExecutionTime": 2010
+      }
+    ],
+    "byStatus": {
+      "success": 5,
+      "failure": 0,
+      "skipped": 0,
+      "timeout": 0,
+      "error": 0
+    }
+  },
+  "systemInfo": {
+    "nodeVersion": "v22.13.0",
+    "platform": "linux",
+    "memory": 28010320
+  }
+}

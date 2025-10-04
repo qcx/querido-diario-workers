@@ -1,0 +1,142 @@
+{
+  "executionId": "test-2025-10-04T15-10-48-994Z-gajynf",
+  "config": {
+    "mode": "single",
+    "parallelWorkers": 1,
+    "timeoutPerCity": 120000,
+    "searchDays": 7,
+    "rateLimitPerDomain": 5,
+    "requestDelay": 500,
+    "maxRetries": 3,
+    "samplePercentage": 10,
+    "verbose": true,
+    "outputDir": "./test-results",
+    "cities": [
+      "pe_2600104"
+    ],
+    "skipCities": []
+  },
+  "startedAt": "2025-10-04T15:10:48.995Z",
+  "completedAt": "2025-10-04T15:10:51.362Z",
+  "totalExecutionTime": 2367,
+  "results": [
+    {
+      "cityId": "pe_2600104",
+      "cityName": "Afogados da Ingazeira",
+      "territoryId": "2600104",
+      "spiderType": "sigpub",
+      "status": "success",
+      "gazettesFound": 2,
+      "executionTime": 2366,
+      "requestCount": 1,
+      "dateRange": {
+        "start": "2025-09-27",
+        "end": "2025-10-04"
+      },
+      "validations": {
+        "urlAccessible": false,
+        "canFetchGazettes": true,
+        "validStructure": true,
+        "validMetadata": true,
+        "pdfUrlsAccessible": true,
+        "details": [
+          {
+            "name": "structure_valid",
+            "passed": true,
+            "message": "Gazettes array is valid"
+          },
+          {
+            "name": "all_gazettes_valid",
+            "passed": true,
+            "message": "All 2 gazettes have valid structure"
+          },
+          {
+            "name": "metadata_valid",
+            "passed": true,
+            "message": "All gazettes have correct territoryId"
+          },
+          {
+            "name": "power_valid",
+            "passed": true,
+            "message": "All gazettes have valid power"
+          },
+          {
+            "name": "scraped_at_recent",
+            "passed": true,
+            "message": "All gazettes have recent scrapedAt timestamp"
+          },
+          {
+            "name": "pdf_urls_accessible",
+            "passed": true,
+            "message": "All 2 sampled PDF URLs are accessible"
+          },
+          {
+            "name": "dates_ordered",
+            "passed": true,
+            "message": "Gazette dates are in chronological order"
+          },
+          {
+            "name": "dates_valid",
+            "passed": true,
+            "message": "All gazette dates are valid"
+          },
+          {
+            "name": "dates_not_future",
+            "passed": true,
+            "message": "No gazettes have future dates"
+          },
+          {
+            "name": "execution_time",
+            "passed": true,
+            "message": "Execution time (2364ms) is within acceptable range",
+            "context": {
+              "executionTime": 2364
+            }
+          },
+          {
+            "name": "request_count",
+            "passed": true,
+            "message": "Spider made 1 HTTP requests",
+            "context": {
+              "requestCount": 1
+            }
+          }
+        ]
+      },
+      "testedAt": "2025-10-04T15:10:51.362Z"
+    }
+  ],
+  "summary": {
+    "totalTested": 1,
+    "successful": 1,
+    "failed": 0,
+    "skipped": 0,
+    "timeouts": 0,
+    "errors": 0,
+    "successRate": 100,
+    "avgExecutionTime": 2366,
+    "totalGazettesFound": 2,
+    "byPlatform": [
+      {
+        "platform": "sigpub",
+        "total": 1,
+        "successful": 1,
+        "failed": 0,
+        "successRate": 100,
+        "avgExecutionTime": 2366
+      }
+    ],
+    "byStatus": {
+      "success": 1,
+      "failure": 0,
+      "skipped": 0,
+      "timeout": 0,
+      "error": 0
+    }
+  },
+  "systemInfo": {
+    "nodeVersion": "v22.13.0",
+    "platform": "linux",
+    "memory": 25175864
+  }
+}
