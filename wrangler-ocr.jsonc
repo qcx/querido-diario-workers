@@ -10,7 +10,7 @@
     "enabled": true
   },
 
-  // Queue Configuration - Consumer only
+  // Queue Configuration - Consumer and Producer
   "queues": {
     "consumers": [
       {
@@ -19,6 +19,12 @@
         "max_batch_timeout": 60,
         "max_retries": 3,
         "dead_letter_queue": "gazette-ocr-dlq"
+      }
+    ],
+    "producers": [
+      {
+        "binding": "ANALYSIS_QUEUE",
+        "queue": "querido-diario-analysis-queue"
       }
     ]
   },

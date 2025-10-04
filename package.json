@@ -24,7 +24,10 @@
     "queue:create:ocr": "wrangler queues create gazette-ocr-queue",
     "queue:create:ocr:dlq": "wrangler queues create gazette-ocr-dlq",
     "deploy:ocr": "wrangler deploy --config wrangler-ocr.jsonc",
-    "dev:ocr": "wrangler dev --config wrangler-ocr.jsonc"
+    "dev:ocr": "wrangler dev --config wrangler-ocr.jsonc",
+    "dev:analysis": "wrangler dev --config wrangler-analysis.jsonc",
+    "deploy:analysis": "wrangler deploy --config wrangler-analysis.jsonc",
+    "queue:create:analysis": "wrangler queues create querido-diario-analysis-queue"
   },
   "keywords": [
     "cloudflare-workers",

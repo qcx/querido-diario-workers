@@ -1,0 +1,35 @@
+{
+  "name": "querido-diario-analysis-worker",
+  "main": "src/analysis-worker.ts",
+  "compatibility_date": "2024-10-01",
+  "node_compat": true,
+
+  // Queue consumer configuration
+  "queues": {
+    "consumers": [
+      {
+        "queue": "querido-diario-analysis-queue",
+        "max_batch_size": 5,
+        "max_batch_timeout": 30,
+        "max_retries": 3,
+        "dead_letter_queue": "querido-diario-analysis-dlq"
+      }
+    ]
+  },
+
+  // KV namespace for storing analysis results
+  "kv_namespaces": [
+    {
+      "binding": "ANALYSIS_RESULTS",
+      "id": "YOUR_KV_NAMESPACE_ID_HERE"
+    }
+  ],
+
+  // Environment variables
+  "vars": {
+    "ENVIRONMENT": "production"
+  }
+
+  // Secrets (set via wrangler secret put)
+  // - OPENAI_API_KEY: OpenAI API key for AI analysis
+}

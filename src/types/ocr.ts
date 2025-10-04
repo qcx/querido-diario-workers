@@ -48,6 +48,21 @@ export interface OcrResult {
   /** Extracted text from the PDF */
   extractedText?: string;
   
+  /** Original PDF URL */
+  pdfUrl: string;
+  
+  /** IBGE territory code */
+  territoryId: string;
+  
+  /** Publication date (YYYY-MM-DD) */
+  publicationDate: string;
+  
+  /** Edition number if available */
+  editionNumber?: string;
+  
+  /** Spider that found this gazette */
+  spiderId: string;
+  
   /** Number of pages processed */
   pagesProcessed?: number;
   
@@ -63,6 +78,13 @@ export interface OcrResult {
   
   /** Timestamp when processing completed */
   completedAt: string;
+  
+  /** Additional metadata */
+  metadata?: {
+    power?: string;
+    isExtraEdition?: boolean;
+    sourceText?: string;
+  };
 }
 
 /**

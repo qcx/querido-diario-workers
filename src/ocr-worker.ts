@@ -2,13 +2,14 @@
  * OCR Worker - Processes PDF documents using Mistral OCR
  */
 
-import { OcrQueueMessage, OcrResult } from './types';
+import { OcrQueueMessage, OcrResult, AnalysisQueueMessage } from './types';
 import { MistralOcrService } from './services/mistral-ocr';
 import { logger } from './utils';
 
 export interface Env {
   // Queue bindings
   OCR_QUEUE: Queue<OcrQueueMessage>;
+  ANALYSIS_QUEUE?: Queue<AnalysisQueueMessage>;
   
   // Secrets
   MISTRAL_API_KEY: string;
@@ -67,6 +68,29 @@ export default {
           );
         }
 
+        // Send to analysis queue if OCR was successful
+        if (result.status === 'success' && env.ANALYSIS_QUEUE) {
+          try {
+            const analysisMessage: AnalysisQueueMessage = {
+              jobId: `analysis-${ocrMessage.jobId}`,
+              ocrResult: result,
+              queuedAt: new Date().toISOString(),
+            };
+
+            await env.ANALYSIS_QUEUE.send(analysisMessage);
+
+            logger.info(`Sent OCR result to analysis queue`, {
+              jobId: ocrMessage.jobId,
+              analysisJobId: analysisMessage.jobId,
+            });
+          } catch (error: any) {
+            logger.error(`Failed to send to analysis queue`, error, {
+              jobId: ocrMessage.jobId,
+            });
+            // Don't fail the OCR job if analysis queueing fails
+          }
+        }
+
         // Acknowledge message
         message.ack();
 
@@ -74,6 +98,7 @@ export default {
           jobId: ocrMessage.jobId,
           status: result.status,
           textLength: result.extractedText?.length || 0,
+          sentToAnalysis: result.status === 'success' && !!env.ANALYSIS_QUEUE,
         });
       } catch (error: any) {
         logger.error(`Error processing OCR message`, error, {
