@@ -1,6 +1,7 @@
 import { SpiderConfig, SpiderType, DateRange } from '../types';
 import { BaseSpider, DoemSpider, InstarSpider, DospSpider, DiofSpider, ADiariosV1Spider, SigpubSpider, BarcoDigitalSpider, SiganetSpider } from './base';
 import { DiarioOficialBRSpider } from './base/diario-oficial-br-spider';
+import { ModernizacaoSpider } from './base/modernizacao-spider';
 import doemCitiesConfig from './configs/doem-cities.json';
 import instarCitiesConfig from './configs/instar-cities.json';
 import dospCitiesConfig from './configs/dosp-cities.json';
@@ -9,6 +10,7 @@ import adiariosV1CitiesConfig from './configs/adiarios-v1-cities.json';
 import barcoDigitalCitiesConfig from './configs/barco_digital_cities.json';
 import siganetCitiesConfig from './configs/siganet_cities.json';
 import diarioOficialBRCitiesConfig from './configs/diario-oficial-br-cities.json';
+import modernizacaoCitiesConfig from './configs/modernizacao-cities.json';
 
 /**
  * Spider registry - maps spider IDs to configurations
@@ -61,6 +63,11 @@ class SpiderRegistry {
     
     // Load DiarioOficialBR cities
     for (const config of diarioOficialBRCitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load Modernizacao cities
+    for (const config of modernizacaoCitiesConfig as SpiderConfig[]) {
       this.configs.set(config.id, config);
     }
   }
@@ -122,6 +129,9 @@ class SpiderRegistry {
       
       case 'diario_oficial_br':
         return new DiarioOficialBRSpider(config, dateRange);
+      
+      case 'modernizacao':
+        return new ModernizacaoSpider(config, dateRange);
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);

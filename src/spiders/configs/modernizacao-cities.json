@@ -1,0 +1,83 @@
+[
+  {
+    "id": "rj_itaguai",
+    "name": "Itaguaí - RJ",
+    "territoryId": "3302007",
+    "spiderType": "modernizacao",
+    "startDate": "2013-02-19",
+    "config": {
+      "type": "modernizacao",
+      "domain": "portal.transparencia.itaguai.rj.gov.br",
+      "power": "executive_legislative"
+    }
+  },
+  {
+    "id": "rj_mesquita",
+    "name": "Mesquita - RJ",
+    "territoryId": "3302858",
+    "spiderType": "modernizacao",
+    "startDate": "2015-07-15",
+    "config": {
+      "type": "modernizacao",
+      "domain": "transparencia.mesquita.rj.gov.br",
+      "verSubpath": "ver20240713",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "rj_miguel_pereira",
+    "name": "Miguel Pereira - RJ",
+    "territoryId": "3302908",
+    "spiderType": "modernizacao",
+    "startDate": "2021-09-03",
+    "config": {
+      "type": "modernizacao",
+      "domain": "transparencia.miguelpereira.rj.gov.br"
+    }
+  },
+  {
+    "id": "rj_quatis",
+    "name": "Quatis - RJ",
+    "territoryId": "3304128",
+    "spiderType": "modernizacao",
+    "startDate": "2021-01-11",
+    "config": {
+      "type": "modernizacao",
+      "domain": "transparencia.quatis.rj.gov.br"
+    }
+  },
+  {
+    "id": "rj_queimados",
+    "name": "Queimados - RJ",
+    "territoryId": "3304144",
+    "spiderType": "modernizacao",
+    "startDate": "2018-01-03",
+    "config": {
+      "type": "modernizacao",
+      "domain": "transparencia.queimados.rj.gov.br"
+    }
+  },
+  {
+    "id": "rj_sao_joao_de_meriti",
+    "name": "São João de Meriti - RJ",
+    "territoryId": "3305109",
+    "spiderType": "modernizacao",
+    "startDate": "2017-01-01",
+    "config": {
+      "type": "modernizacao",
+      "domain": "transparencia.meriti.rj.gov.br"
+    }
+  },
+  {
+    "id": "rj_sao_pedro_da_aldeia",
+    "name": "São Pedro da Aldeia - RJ",
+    "territoryId": "3305208",
+    "spiderType": "modernizacao",
+    "startDate": "2018-01-15",
+    "config": {
+      "type": "modernizacao",
+      "domain": "transparencia.pmspa.rj.gov.br",
+      "verSubpath": "ver20240713"
+    }
+  }
+]

@@ -163,7 +163,9 @@ export interface DiarioOficialBRConfig {
 
 export interface ModernizacaoConfig {
   type: 'modernizacao';
-  fecamUrl?: string;
+  domain: string;
+  verSubpath?: string;
+  power?: 'executive' | 'legislative' | 'executive_legislative';
 }
 
 export interface AplusConfig {
