@@ -10217,5 +10217,5219 @@
       "url": "https://www.diariomunicipal.com.br/amp/",
       "entityId": "16858"
     }
+  },
+  {
+    "id": "mg_3100104",
+    "name": "Abadia dos Dourados",
+    "stateCode": "MG",
+    "territoryId": "3100104",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "40180"
+    }
+  },
+  {
+    "id": "mg_3103751",
+    "name": "Araporã",
+    "stateCode": "MG",
+    "territoryId": "3103751",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "294659"
+    }
+  },
+  {
+    "id": "mg_3104205",
+    "name": "Arcos",
+    "stateCode": "MG",
+    "territoryId": "3104205",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "90942"
+    }
+  },
+  {
+    "id": "mg_3104403",
+    "name": "Argirita",
+    "stateCode": "MG",
+    "territoryId": "3104403",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "743428"
+    }
+  },
+  {
+    "id": "mg_3104601",
+    "name": "Astolfo Dutra",
+    "stateCode": "MG",
+    "territoryId": "3104601",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2196570"
+    }
+  },
+  {
+    "id": "mg_3105400",
+    "name": "Barão de Cocais",
+    "stateCode": "MG",
+    "territoryId": "3105400",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "170643"
+    }
+  },
+  {
+    "id": "mg_3105905",
+    "name": "Barroso",
+    "stateCode": "MG",
+    "territoryId": "3105905",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "60668"
+    }
+  },
+  {
+    "id": "mg_3106002",
+    "name": "Bela Vista de Minas",
+    "stateCode": "MG",
+    "territoryId": "3106002",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1586681"
+    }
+  },
+  {
+    "id": "mg_3106309",
+    "name": "Belo Oriente",
+    "stateCode": "MG",
+    "territoryId": "3106309",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "158974"
+    }
+  },
+  {
+    "id": "mg_3107000",
+    "name": "Biquinhas",
+    "stateCode": "MG",
+    "territoryId": "3107000",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2060007"
+    }
+  },
+  {
+    "id": "mg_3108404",
+    "name": "Botelhos",
+    "stateCode": "MG",
+    "territoryId": "3108404",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2539134"
+    }
+  },
+  {
+    "id": "mg_3108552",
+    "name": "Brasilândia de Minas",
+    "stateCode": "MG",
+    "territoryId": "3108552",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2243108"
+    }
+  },
+  {
+    "id": "mg_3108800",
+    "name": "Braúnas",
+    "stateCode": "MG",
+    "territoryId": "3108800",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "643704"
+    }
+  },
+  {
+    "id": "mg_3109204",
+    "name": "Buenópolis",
+    "stateCode": "MG",
+    "territoryId": "3109204",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2118317"
+    }
+  },
+  {
+    "id": "mg_3109303",
+    "name": "Buritis",
+    "stateCode": "MG",
+    "territoryId": "3109303",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "916234"
+    }
+  },
+  {
+    "id": "mg_3109501",
+    "name": "Cabo Verde",
+    "stateCode": "MG",
+    "territoryId": "3109501",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "118945"
+    }
+  },
+  {
+    "id": "mg_3109907",
+    "name": "Caetanópolis",
+    "stateCode": "MG",
+    "territoryId": "3109907",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2244438"
+    }
+  },
+  {
+    "id": "mg_3110905",
+    "name": "Campanha",
+    "stateCode": "MG",
+    "territoryId": "3110905",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2009182"
+    }
+  },
+  {
+    "id": "mg_3111507",
+    "name": "Campos Altos",
+    "stateCode": "MG",
+    "territoryId": "3111507",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "12567"
+    }
+  },
+  {
+    "id": "mg_3112703",
+    "name": "Capitão Enéas",
+    "stateCode": "MG",
+    "territoryId": "3112703",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2901677"
+    }
+  },
+  {
+    "id": "mg_3112802",
+    "name": "Capitólio",
+    "stateCode": "MG",
+    "territoryId": "3112802",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2057782"
+    }
+  },
+  {
+    "id": "mg_3114006",
+    "name": "Carmo da Mata",
+    "stateCode": "MG",
+    "territoryId": "3114006",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2060616"
+    }
+  },
+  {
+    "id": "mg_3114204",
+    "name": "Carmo do Cajuru",
+    "stateCode": "MG",
+    "territoryId": "3114204",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "83365"
+    }
+  },
+  {
+    "id": "mg_3114550",
+    "name": "Carneirinho",
+    "stateCode": "MG",
+    "territoryId": "3114550",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2272819"
+    }
+  },
+  {
+    "id": "mg_3115003",
+    "name": "Cascalho Rico",
+    "stateCode": "MG",
+    "territoryId": "3115003",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1399912"
+    }
+  },
+  {
+    "id": "mg_3115102",
+    "name": "Cássia",
+    "stateCode": "MG",
+    "territoryId": "3115102",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1792262"
+    }
+  },
+  {
+    "id": "mg_3115359",
+    "name": "Catas Altas",
+    "stateCode": "MG",
+    "territoryId": "3115359",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "93469"
+    }
+  },
+  {
+    "id": "mg_3115904",
+    "name": "Chácara",
+    "stateCode": "MG",
+    "territoryId": "3115904",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2948749"
+    }
+  },
+  {
+    "id": "mg_3116159",
+    "name": "Chapada Gaúcha",
+    "stateCode": "MG",
+    "territoryId": "3116159",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1387099"
+    }
+  },
+  {
+    "id": "mg_3116605",
+    "name": "Cláudio",
+    "stateCode": "MG",
+    "territoryId": "3116605",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2858014"
+    }
+  },
+  {
+    "id": "mg_3118205",
+    "name": "Conquista",
+    "stateCode": "MG",
+    "territoryId": "3118205",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "116669"
+    }
+  },
+  {
+    "id": "mg_3119104",
+    "name": "Corinto",
+    "stateCode": "MG",
+    "territoryId": "3119104",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1967239"
+    }
+  },
+  {
+    "id": "mg_3119609",
+    "name": "Coronel Pacheco",
+    "stateCode": "MG",
+    "territoryId": "3119609",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2630233"
+    }
+  },
+  {
+    "id": "mg_3119955",
+    "name": "Córrego Fundo",
+    "stateCode": "MG",
+    "territoryId": "3119955",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3092376"
+    }
+  },
+  {
+    "id": "mg_3120904",
+    "name": "Curvelo",
+    "stateCode": "MG",
+    "territoryId": "3120904",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "39298"
+    }
+  },
+  {
+    "id": "mg_3121506",
+    "name": "Desterro do Melo",
+    "stateCode": "MG",
+    "territoryId": "3121506",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "135607"
+    }
+  },
+  {
+    "id": "mg_3121605",
+    "name": "Diamantina",
+    "stateCode": "MG",
+    "territoryId": "3121605",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "21672"
+    }
+  },
+  {
+    "id": "mg_3121902",
+    "name": "Divinésia",
+    "stateCode": "MG",
+    "territoryId": "3121902",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "16185"
+    }
+  },
+  {
+    "id": "mg_3122702",
+    "name": "Dom Silvério",
+    "stateCode": "MG",
+    "territoryId": "3122702",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2968141"
+    }
+  },
+  {
+    "id": "mg_3126109",
+    "name": "Formiga",
+    "stateCode": "MG",
+    "territoryId": "3126109",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "9715"
+    }
+  },
+  {
+    "id": "mg_3127800",
+    "name": "Grão Mogol",
+    "stateCode": "MG",
+    "territoryId": "3127800",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "22681"
+    }
+  },
+  {
+    "id": "mg_3128204",
+    "name": "Guaraciaba",
+    "stateCode": "MG",
+    "territoryId": "3128204",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "107635"
+    }
+  },
+  {
+    "id": "mg_3128709",
+    "name": "Guaxupé",
+    "stateCode": "MG",
+    "territoryId": "3128709",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "169074"
+    }
+  },
+  {
+    "id": "mg_3129103",
+    "name": "Gurinhatã",
+    "stateCode": "MG",
+    "territoryId": "3129103",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2161126"
+    }
+  },
+  {
+    "id": "mg_3129509",
+    "name": "Ibiá",
+    "stateCode": "MG",
+    "territoryId": "3129509",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1680121"
+    }
+  },
+  {
+    "id": "mg_3130051",
+    "name": "Icaraí de Minas",
+    "stateCode": "MG",
+    "territoryId": "3130051",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "798516"
+    }
+  },
+  {
+    "id": "mg_3131000",
+    "name": "Inhaúma",
+    "stateCode": "MG",
+    "territoryId": "3131000",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1852367"
+    }
+  },
+  {
+    "id": "mg_3131505",
+    "name": "Ipuiúna",
+    "stateCode": "MG",
+    "territoryId": "3131505",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2258530"
+    }
+  },
+  {
+    "id": "mg_3132206",
+    "name": "Itaguara",
+    "stateCode": "MG",
+    "territoryId": "3132206",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2538997"
+    }
+  },
+  {
+    "id": "mg_3133105",
+    "name": "Itanhandu",
+    "stateCode": "MG",
+    "territoryId": "3133105",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2119839"
+    }
+  },
+  {
+    "id": "mg_3133600",
+    "name": "Itapeva",
+    "stateCode": "MG",
+    "territoryId": "3133600",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "744"
+    }
+  },
+  {
+    "id": "mg_3134806",
+    "name": "Jacuí",
+    "stateCode": "MG",
+    "territoryId": "3134806",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "171642"
+    }
+  },
+  {
+    "id": "mg_3135803",
+    "name": "Jequitinhonha",
+    "stateCode": "MG",
+    "territoryId": "3135803",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "268555"
+    }
+  },
+  {
+    "id": "mg_3136207",
+    "name": "João Monlevade",
+    "stateCode": "MG",
+    "territoryId": "3136207",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "13706"
+    }
+  },
+  {
+    "id": "mg_3136959",
+    "name": "Juvenília",
+    "stateCode": "MG",
+    "territoryId": "3136959",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2306013"
+    }
+  },
+  {
+    "id": "mg_3137205",
+    "name": "Lagoa da Prata",
+    "stateCode": "MG",
+    "territoryId": "3137205",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "104890"
+    }
+  },
+  {
+    "id": "mg_3137601",
+    "name": "Lagoa Santa",
+    "stateCode": "MG",
+    "territoryId": "3137601",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "267597"
+    }
+  },
+  {
+    "id": "mg_3138302",
+    "name": "Leandro Ferreira",
+    "stateCode": "MG",
+    "territoryId": "3138302",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2410536"
+    }
+  },
+  {
+    "id": "mg_3138401",
+    "name": "Leopoldina",
+    "stateCode": "MG",
+    "territoryId": "3138401",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1093070"
+    }
+  },
+  {
+    "id": "mg_3140001",
+    "name": "Mariana",
+    "stateCode": "MG",
+    "territoryId": "3140001",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "992393"
+    }
+  },
+  {
+    "id": "mg_3140506",
+    "name": "Martinho Campos",
+    "stateCode": "MG",
+    "territoryId": "3140506",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1779398"
+    }
+  },
+  {
+    "id": "mg_3140803",
+    "name": "Matias Barbosa",
+    "stateCode": "MG",
+    "territoryId": "3140803",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1287378"
+    }
+  },
+  {
+    "id": "mg_3142403",
+    "name": "Moema",
+    "stateCode": "MG",
+    "territoryId": "3142403",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2749272"
+    }
+  },
+  {
+    "id": "mg_3144300",
+    "name": "Nanuque",
+    "stateCode": "MG",
+    "territoryId": "3144300",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "118746"
+    }
+  },
+  {
+    "id": "mg_3144409",
+    "name": "Natércia",
+    "stateCode": "MG",
+    "territoryId": "3144409",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "771491"
+    }
+  },
+  {
+    "id": "mg_3144508",
+    "name": "Nazareno",
+    "stateCode": "MG",
+    "territoryId": "3144508",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "83281"
+    }
+  },
+  {
+    "id": "mg_3144607",
+    "name": "Nepomuceno",
+    "stateCode": "MG",
+    "territoryId": "3144607",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "40898"
+    }
+  },
+  {
+    "id": "mg_3144706",
+    "name": "Nova Era",
+    "stateCode": "MG",
+    "territoryId": "3144706",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1766747"
+    }
+  },
+  {
+    "id": "mg_3145901",
+    "name": "Ouro Branco",
+    "stateCode": "MG",
+    "territoryId": "3145901",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2107854"
+    }
+  },
+  {
+    "id": "mg_3146008",
+    "name": "Ouro Fino",
+    "stateCode": "MG",
+    "territoryId": "3146008",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "90672"
+    }
+  },
+  {
+    "id": "mg_3147006",
+    "name": "Paracatu",
+    "stateCode": "MG",
+    "territoryId": "3147006",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "160657"
+    }
+  },
+  {
+    "id": "mg_3147105",
+    "name": "Pará de Minas",
+    "stateCode": "MG",
+    "territoryId": "3147105",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "13702"
+    }
+  },
+  {
+    "id": "mg_3148103",
+    "name": "Patrocínio",
+    "stateCode": "MG",
+    "territoryId": "3148103",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "60326"
+    }
+  },
+  {
+    "id": "mg_3148202",
+    "name": "Patrocínio do Muriaé",
+    "stateCode": "MG",
+    "territoryId": "3148202",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2212138"
+    }
+  },
+  {
+    "id": "mg_3148400",
+    "name": "Paulistas",
+    "stateCode": "MG",
+    "territoryId": "3148400",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2308552"
+    }
+  },
+  {
+    "id": "mg_3148608",
+    "name": "Peçanha",
+    "stateCode": "MG",
+    "territoryId": "3148608",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2652931"
+    }
+  },
+  {
+    "id": "mg_3149804",
+    "name": "Perdizes",
+    "stateCode": "MG",
+    "territoryId": "3149804",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2803043"
+    }
+  },
+  {
+    "id": "mg_3151206",
+    "name": "Pirapora",
+    "stateCode": "MG",
+    "territoryId": "3151206",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "765448"
+    }
+  },
+  {
+    "id": "mg_3151305",
+    "name": "Piraúba",
+    "stateCode": "MG",
+    "territoryId": "3151305",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3094859"
+    }
+  },
+  {
+    "id": "mg_3151404",
+    "name": "Pitangui",
+    "stateCode": "MG",
+    "territoryId": "3151404",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2514435"
+    }
+  },
+  {
+    "id": "mg_3151602",
+    "name": "Planura",
+    "stateCode": "MG",
+    "territoryId": "3151602",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2105521"
+    }
+  },
+  {
+    "id": "mg_3151701",
+    "name": "Poço Fundo",
+    "stateCode": "MG",
+    "territoryId": "3151701",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "41608"
+    }
+  },
+  {
+    "id": "mg_3151800",
+    "name": "Poços de Caldas",
+    "stateCode": "MG",
+    "territoryId": "3151800",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "128186"
+    }
+  },
+  {
+    "id": "mg_3152105",
+    "name": "Ponte Nova",
+    "stateCode": "MG",
+    "territoryId": "3152105",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2240854"
+    }
+  },
+  {
+    "id": "mg_3152808",
+    "name": "Prata",
+    "stateCode": "MG",
+    "territoryId": "3152808",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3097049"
+    }
+  },
+  {
+    "id": "mg_3152907",
+    "name": "Pratápolis",
+    "stateCode": "MG",
+    "territoryId": "3152907",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2679454"
+    }
+  },
+  {
+    "id": "mg_3154101",
+    "name": "Recreio",
+    "stateCode": "MG",
+    "territoryId": "3154101",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1571286"
+    }
+  },
+  {
+    "id": "mg_3154150",
+    "name": "Reduto",
+    "stateCode": "MG",
+    "territoryId": "3154150",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2168354"
+    }
+  },
+  {
+    "id": "mg_3154606",
+    "name": "Ribeirão das Neves",
+    "stateCode": "MG",
+    "territoryId": "3154606",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1499212"
+    }
+  },
+  {
+    "id": "mg_3155504",
+    "name": "Rio Paranaíba",
+    "stateCode": "MG",
+    "territoryId": "3155504",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "14060"
+    }
+  },
+  {
+    "id": "mg_3156452",
+    "name": "Rosário da Limeira",
+    "stateCode": "MG",
+    "territoryId": "3156452",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3020773"
+    }
+  },
+  {
+    "id": "mg_3156502",
+    "name": "Rubelita",
+    "stateCode": "MG",
+    "territoryId": "3156502",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "44040"
+    }
+  },
+  {
+    "id": "mg_3156809",
+    "name": "Sabinópolis",
+    "stateCode": "MG",
+    "territoryId": "3156809",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2423227"
+    }
+  },
+  {
+    "id": "mg_3157203",
+    "name": "Santa Bárbara",
+    "stateCode": "MG",
+    "territoryId": "3157203",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "18307"
+    }
+  },
+  {
+    "id": "mg_3157658",
+    "name": "Santa Helena de Minas",
+    "stateCode": "MG",
+    "territoryId": "3157658",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2258364"
+    }
+  },
+  {
+    "id": "mg_3158409",
+    "name": "Santana de Cataguases",
+    "stateCode": "MG",
+    "territoryId": "3158409",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2818116"
+    }
+  },
+  {
+    "id": "mg_3159704",
+    "name": "Santa Rosa da Serra",
+    "stateCode": "MG",
+    "territoryId": "3159704",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2896650"
+    }
+  },
+  {
+    "id": "mg_3160801",
+    "name": "São Bento Abade",
+    "stateCode": "MG",
+    "territoryId": "3160801",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "68489"
+    }
+  },
+  {
+    "id": "mg_3161106",
+    "name": "São Francisco",
+    "stateCode": "MG",
+    "territoryId": "3161106",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "489139"
+    }
+  },
+  {
+    "id": "mg_3161403",
+    "name": "São Francisco do Glória",
+    "stateCode": "MG",
+    "territoryId": "3161403",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2392283"
+    }
+  },
+  {
+    "id": "mg_3162450",
+    "name": "São João das Missões",
+    "stateCode": "MG",
+    "territoryId": "3162450",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3118324"
+    }
+  },
+  {
+    "id": "mg_3163706",
+    "name": "São Lourenço",
+    "stateCode": "MG",
+    "territoryId": "3163706",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "23631"
+    }
+  },
+  {
+    "id": "mg_3163904",
+    "name": "São Pedro da União",
+    "stateCode": "MG",
+    "territoryId": "3163904",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2290589"
+    }
+  },
+  {
+    "id": "mg_3165602",
+    "name": "Senador Cortes",
+    "stateCode": "MG",
+    "territoryId": "3165602",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2665066"
+    }
+  },
+  {
+    "id": "mg_3167103",
+    "name": "Serro",
+    "stateCode": "MG",
+    "territoryId": "3167103",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2873104"
+    }
+  },
+  {
+    "id": "mg_3167509",
+    "name": "Simão Pereira",
+    "stateCode": "MG",
+    "territoryId": "3167509",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "95565"
+    }
+  },
+  {
+    "id": "mg_3168101",
+    "name": "Tapira",
+    "stateCode": "MG",
+    "territoryId": "3168101",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1619399"
+    }
+  },
+  {
+    "id": "mg_3168606",
+    "name": "Teófilo Otoni",
+    "stateCode": "MG",
+    "territoryId": "3168606",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "138616"
+    }
+  },
+  {
+    "id": "mg_3169208",
+    "name": "Tombos",
+    "stateCode": "MG",
+    "territoryId": "3169208",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "805509"
+    }
+  },
+  {
+    "id": "mg_3169307",
+    "name": "Três Corações",
+    "stateCode": "MG",
+    "territoryId": "3169307",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "108298"
+    }
+  },
+  {
+    "id": "mg_3169406",
+    "name": "Três Pontas",
+    "stateCode": "MG",
+    "territoryId": "3169406",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "95889"
+    }
+  },
+  {
+    "id": "mg_3169703",
+    "name": "Turmalina",
+    "stateCode": "MG",
+    "territoryId": "3169703",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2960352"
+    }
+  },
+  {
+    "id": "mg_3169901",
+    "name": "Ubá",
+    "stateCode": "MG",
+    "territoryId": "3169901",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1491383"
+    }
+  },
+  {
+    "id": "mg_3170529",
+    "name": "Urucuia",
+    "stateCode": "MG",
+    "territoryId": "3170529",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1866744"
+    }
+  },
+  {
+    "id": "mg_3171105",
+    "name": "Veríssimo",
+    "stateCode": "MG",
+    "territoryId": "3171105",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "12938"
+    }
+  },
+  {
+    "id": "mg_3171303",
+    "name": "Viçosa",
+    "stateCode": "MG",
+    "territoryId": "3171303",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "239337"
+    }
+  },
+  {
+    "id": "mg_3171600",
+    "name": "Virgem da Lapa",
+    "stateCode": "MG",
+    "territoryId": "3171600",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "146283"
+    }
+  },
+  {
+    "id": "mg_3100401",
+    "name": "Acaiaca",
+    "stateCode": "MG",
+    "territoryId": "3100401",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "11098"
+    }
+  },
+  {
+    "id": "mg_3100500",
+    "name": "Açucena",
+    "stateCode": "MG",
+    "territoryId": "3100500",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "403"
+    }
+  },
+  {
+    "id": "mg_3100708",
+    "name": "Água Comprida",
+    "stateCode": "MG",
+    "territoryId": "3100708",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "33706"
+    }
+  },
+  {
+    "id": "mg_3101003",
+    "name": "Águas Vermelhas",
+    "stateCode": "MG",
+    "territoryId": "3101003",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "59742"
+    }
+  },
+  {
+    "id": "mg_3101300",
+    "name": "Alagoa",
+    "stateCode": "MG",
+    "territoryId": "3101300",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "419"
+    }
+  },
+  {
+    "id": "mg_3101508",
+    "name": "Além Paraíba",
+    "stateCode": "MG",
+    "territoryId": "3101508",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "15607"
+    }
+  },
+  {
+    "id": "mg_3102407",
+    "name": "Alvorada de Minas",
+    "stateCode": "MG",
+    "territoryId": "3102407",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "319"
+    }
+  },
+  {
+    "id": "mg_3102605",
+    "name": "Andradas",
+    "stateCode": "MG",
+    "territoryId": "3102605",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "327"
+    }
+  },
+  {
+    "id": "mg_3103207",
+    "name": "Araçaí",
+    "stateCode": "MG",
+    "territoryId": "3103207",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "353"
+    }
+  },
+  {
+    "id": "mg_3103405",
+    "name": "Araçuaí",
+    "stateCode": "MG",
+    "territoryId": "3103405",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "7346"
+    }
+  },
+  {
+    "id": "mg_3103900",
+    "name": "Araújos",
+    "stateCode": "MG",
+    "territoryId": "3103900",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1855"
+    }
+  },
+  {
+    "id": "mg_3104007",
+    "name": "Araxá",
+    "stateCode": "MG",
+    "territoryId": "3104007",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "411"
+    }
+  },
+  {
+    "id": "mg_3104502",
+    "name": "Arinos",
+    "stateCode": "MG",
+    "territoryId": "3104502",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "21847"
+    }
+  },
+  {
+    "id": "mg_3104700",
+    "name": "Ataléia",
+    "stateCode": "MG",
+    "territoryId": "3104700",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "16914"
+    }
+  },
+  {
+    "id": "mg_3104908",
+    "name": "Baependi",
+    "stateCode": "MG",
+    "territoryId": "3104908",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "4521"
+    }
+  },
+  {
+    "id": "mg_3105202",
+    "name": "Bandeira",
+    "stateCode": "MG",
+    "territoryId": "3105202",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1131"
+    }
+  },
+  {
+    "id": "mg_3105608",
+    "name": "Barbacena",
+    "stateCode": "MG",
+    "territoryId": "3105608",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "752"
+    }
+  },
+  {
+    "id": "mg_3105707",
+    "name": "Barra Longa",
+    "stateCode": "MG",
+    "territoryId": "3105707",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "10815"
+    }
+  },
+  {
+    "id": "mg_3106507",
+    "name": "Berilo",
+    "stateCode": "MG",
+    "territoryId": "3106507",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "356"
+    }
+  },
+  {
+    "id": "mg_3106655",
+    "name": "Berizal",
+    "stateCode": "MG",
+    "territoryId": "3106655",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "50649"
+    }
+  },
+  {
+    "id": "mg_3107109",
+    "name": "Boa Esperança",
+    "stateCode": "MG",
+    "territoryId": "3107109",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "833"
+    }
+  },
+  {
+    "id": "mg_3107703",
+    "name": "Bom Jesus do Amparo",
+    "stateCode": "MG",
+    "territoryId": "3107703",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "420"
+    }
+  },
+  {
+    "id": "mg_3107901",
+    "name": "Bom Repouso",
+    "stateCode": "MG",
+    "territoryId": "3107901",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "40155"
+    }
+  },
+  {
+    "id": "mg_3108206",
+    "name": "Bonfinópolis de Minas",
+    "stateCode": "MG",
+    "territoryId": "3108206",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "82569"
+    }
+  },
+  {
+    "id": "mg_3108255",
+    "name": "Bonito de Minas",
+    "stateCode": "MG",
+    "territoryId": "3108255",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "9338"
+    }
+  },
+  {
+    "id": "mg_3108503",
+    "name": "Botumirim",
+    "stateCode": "MG",
+    "territoryId": "3108503",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "37459"
+    }
+  },
+  {
+    "id": "mg_3108701",
+    "name": "Brás Pires",
+    "stateCode": "MG",
+    "territoryId": "3108701",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "299"
+    }
+  },
+  {
+    "id": "mg_3109105",
+    "name": "Bueno Brandão",
+    "stateCode": "MG",
+    "territoryId": "3109105",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "373"
+    }
+  },
+  {
+    "id": "mg_3109402",
+    "name": "Buritizeiro",
+    "stateCode": "MG",
+    "territoryId": "3109402",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1084"
+    }
+  },
+  {
+    "id": "mg_3109451",
+    "name": "Cabeceira Grande",
+    "stateCode": "MG",
+    "territoryId": "3109451",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "227"
+    }
+  },
+  {
+    "id": "mg_3109709",
+    "name": "Cachoeira de Minas",
+    "stateCode": "MG",
+    "territoryId": "3109709",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "759"
+    }
+  },
+  {
+    "id": "mg_3109808",
+    "name": "Cachoeira Dourada",
+    "stateCode": "MG",
+    "territoryId": "3109808",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "5878"
+    }
+  },
+  {
+    "id": "mg_3110202",
+    "name": "Cajuri",
+    "stateCode": "MG",
+    "territoryId": "3110202",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "44805"
+    }
+  },
+  {
+    "id": "mg_3110806",
+    "name": "Campanário",
+    "stateCode": "MG",
+    "territoryId": "3110806",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "333"
+    }
+  },
+  {
+    "id": "mg_3111002",
+    "name": "Campestre",
+    "stateCode": "MG",
+    "territoryId": "3111002",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "401"
+    }
+  },
+  {
+    "id": "mg_3111408",
+    "name": "Campo Florido",
+    "stateCode": "MG",
+    "territoryId": "3111408",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "23246"
+    }
+  },
+  {
+    "id": "mg_3112000",
+    "name": "Candeias",
+    "stateCode": "MG",
+    "territoryId": "3112000",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "23274"
+    }
+  },
+  {
+    "id": "mg_3112653",
+    "name": "Capitão Andrade",
+    "stateCode": "MG",
+    "territoryId": "3112653",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "39067"
+    }
+  },
+  {
+    "id": "mg_3113305",
+    "name": "Carangola",
+    "stateCode": "MG",
+    "territoryId": "3113305",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1584752"
+    }
+  },
+  {
+    "id": "mg_3113503",
+    "name": "Carbonita",
+    "stateCode": "MG",
+    "territoryId": "3113503",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "11172"
+    }
+  },
+  {
+    "id": "mg_3113701",
+    "name": "Carlos Chagas",
+    "stateCode": "MG",
+    "territoryId": "3113701",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "25628"
+    }
+  },
+  {
+    "id": "mg_3113909",
+    "name": "Carmo da Cachoeira",
+    "stateCode": "MG",
+    "territoryId": "3113909",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "806"
+    }
+  },
+  {
+    "id": "mg_3114105",
+    "name": "Carmo de Minas",
+    "stateCode": "MG",
+    "territoryId": "3114105",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "18053"
+    }
+  },
+  {
+    "id": "mg_3114907",
+    "name": "Casa Grande",
+    "stateCode": "MG",
+    "territoryId": "3114907",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "321"
+    }
+  },
+  {
+    "id": "mg_3115300",
+    "name": "Cataguases",
+    "stateCode": "MG",
+    "territoryId": "3115300",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1637"
+    }
+  },
+  {
+    "id": "mg_3115706",
+    "name": "Central de Minas",
+    "stateCode": "MG",
+    "territoryId": "3115706",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1109"
+    }
+  },
+  {
+    "id": "mg_3115805",
+    "name": "Centralina",
+    "stateCode": "MG",
+    "territoryId": "3115805",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "42929"
+    }
+  },
+  {
+    "id": "mg_3116100",
+    "name": "Chapada do Norte",
+    "stateCode": "MG",
+    "territoryId": "3116100",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "389"
+    }
+  },
+  {
+    "id": "mg_3116308",
+    "name": "Cipotânea",
+    "stateCode": "MG",
+    "territoryId": "3116308",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "66129"
+    }
+  },
+  {
+    "id": "mg_3116407",
+    "name": "Claraval",
+    "stateCode": "MG",
+    "territoryId": "3116407",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "8994"
+    }
+  },
+  {
+    "id": "mg_3116506",
+    "name": "Claro dos Poções",
+    "stateCode": "MG",
+    "territoryId": "3116506",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "10394"
+    }
+  },
+  {
+    "id": "mg_3116902",
+    "name": "Comendador Gomes",
+    "stateCode": "MG",
+    "territoryId": "3116902",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "68141"
+    }
+  },
+  {
+    "id": "mg_3117504",
+    "name": "Conceição do Mato Dentro",
+    "stateCode": "MG",
+    "territoryId": "3117504",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "68107"
+    }
+  },
+  {
+    "id": "mg_3117702",
+    "name": "Conceição do Rio Verde",
+    "stateCode": "MG",
+    "territoryId": "3117702",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1584489"
+    }
+  },
+  {
+    "id": "mg_3117836",
+    "name": "Cônego Marinho",
+    "stateCode": "MG",
+    "territoryId": "3117836",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "4796"
+    }
+  },
+  {
+    "id": "mg_3117900",
+    "name": "Congonhal",
+    "stateCode": "MG",
+    "territoryId": "3117900",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "86940"
+    }
+  },
+  {
+    "id": "mg_3118304",
+    "name": "Conselheiro Lafaiete",
+    "stateCode": "MG",
+    "territoryId": "3118304",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "778"
+    }
+  },
+  {
+    "id": "mg_3118502",
+    "name": "Consolação",
+    "stateCode": "MG",
+    "territoryId": "3118502",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1069"
+    }
+  },
+  {
+    "id": "mg_3118700",
+    "name": "Coqueiral",
+    "stateCode": "MG",
+    "territoryId": "3118700",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1499"
+    }
+  },
+  {
+    "id": "mg_3118809",
+    "name": "Coração de Jesus",
+    "stateCode": "MG",
+    "territoryId": "3118809",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "10651"
+    }
+  },
+  {
+    "id": "mg_3119203",
+    "name": "Coroaci",
+    "stateCode": "MG",
+    "territoryId": "3119203",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "568"
+    }
+  },
+  {
+    "id": "mg_3119708",
+    "name": "Coronel Xavier Chaves",
+    "stateCode": "MG",
+    "territoryId": "3119708",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "20818"
+    }
+  },
+  {
+    "id": "mg_3119807",
+    "name": "Córrego Danta",
+    "stateCode": "MG",
+    "territoryId": "3119807",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "8217"
+    }
+  },
+  {
+    "id": "mg_3120102",
+    "name": "Couto de Magalhães de Minas",
+    "stateCode": "MG",
+    "territoryId": "3120102",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "4519"
+    }
+  },
+  {
+    "id": "mg_3120300",
+    "name": "Cristália",
+    "stateCode": "MG",
+    "territoryId": "3120300",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "9677"
+    }
+  },
+  {
+    "id": "mg_3120409",
+    "name": "Cristiano Otoni",
+    "stateCode": "MG",
+    "territoryId": "3120409",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "10055"
+    }
+  },
+  {
+    "id": "mg_3120805",
+    "name": "Cruzília",
+    "stateCode": "MG",
+    "territoryId": "3120805",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "531"
+    }
+  },
+  {
+    "id": "mg_3121407",
+    "name": "Desterro de Entre Rios",
+    "stateCode": "MG",
+    "territoryId": "3121407",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1366"
+    }
+  },
+  {
+    "id": "mg_3121803",
+    "name": "Dionísio",
+    "stateCode": "MG",
+    "territoryId": "3121803",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "51127"
+    }
+  },
+  {
+    "id": "mg_3122108",
+    "name": "Divino das Laranjeiras",
+    "stateCode": "MG",
+    "territoryId": "3122108",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "394"
+    }
+  },
+  {
+    "id": "mg_3122306",
+    "name": "Divinópolis",
+    "stateCode": "MG",
+    "territoryId": "3122306",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "760"
+    }
+  },
+  {
+    "id": "mg_3122355",
+    "name": "Divisa Alegre",
+    "stateCode": "MG",
+    "territoryId": "3122355",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "354"
+    }
+  },
+  {
+    "id": "mg_3122470",
+    "name": "Dom Bosco",
+    "stateCode": "MG",
+    "territoryId": "3122470",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "8816"
+    }
+  },
+  {
+    "id": "mg_3122603",
+    "name": "Dom Joaquim",
+    "stateCode": "MG",
+    "territoryId": "3122603",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "352"
+    }
+  },
+  {
+    "id": "mg_3123205",
+    "name": "Dores do Indaiá",
+    "stateCode": "MG",
+    "territoryId": "3123205",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "22709"
+    }
+  },
+  {
+    "id": "mg_3123304",
+    "name": "Dores do Turvo",
+    "stateCode": "MG",
+    "territoryId": "3123304",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "18120"
+    }
+  },
+  {
+    "id": "mg_3123700",
+    "name": "Engenheiro Caldas",
+    "stateCode": "MG",
+    "territoryId": "3123700",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "345"
+    }
+  },
+  {
+    "id": "mg_3124609",
+    "name": "Estrela Dalva",
+    "stateCode": "MG",
+    "territoryId": "3124609",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "9333"
+    }
+  },
+  {
+    "id": "mg_3124708",
+    "name": "Estrela do Indaiá",
+    "stateCode": "MG",
+    "territoryId": "3124708",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1404"
+    }
+  },
+  {
+    "id": "mg_3124807",
+    "name": "Estrela do Sul",
+    "stateCode": "MG",
+    "territoryId": "3124807",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "38645"
+    }
+  },
+  {
+    "id": "mg_3125408",
+    "name": "Felício dos Santos",
+    "stateCode": "MG",
+    "territoryId": "3125408",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "793"
+    }
+  },
+  {
+    "id": "mg_3125606",
+    "name": "Felisburgo",
+    "stateCode": "MG",
+    "territoryId": "3125606",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1264"
+    }
+  },
+  {
+    "id": "mg_3125705",
+    "name": "Felixlândia",
+    "stateCode": "MG",
+    "territoryId": "3125705",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "38481"
+    }
+  },
+  {
+    "id": "mg_3126208",
+    "name": "Formoso",
+    "stateCode": "MG",
+    "territoryId": "3126208",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "37717"
+    }
+  },
+  {
+    "id": "mg_3126505",
+    "name": "Francisco Badaró",
+    "stateCode": "MG",
+    "territoryId": "3126505",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "811"
+    }
+  },
+  {
+    "id": "mg_3126703",
+    "name": "Francisco Sá",
+    "stateCode": "MG",
+    "territoryId": "3126703",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "11826"
+    }
+  },
+  {
+    "id": "mg_3126802",
+    "name": "Frei Gaspar",
+    "stateCode": "MG",
+    "territoryId": "3126802",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1261"
+    }
+  },
+  {
+    "id": "mg_3126901",
+    "name": "Frei Inocêncio",
+    "stateCode": "MG",
+    "territoryId": "3126901",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "69002"
+    }
+  },
+  {
+    "id": "mg_3127057",
+    "name": "Fronteira dos Vales",
+    "stateCode": "MG",
+    "territoryId": "3127057",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "884"
+    }
+  },
+  {
+    "id": "mg_3127206",
+    "name": "Funilândia",
+    "stateCode": "MG",
+    "territoryId": "3127206",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "19451"
+    }
+  },
+  {
+    "id": "mg_3127305",
+    "name": "Galiléia",
+    "stateCode": "MG",
+    "territoryId": "3127305",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "7412"
+    }
+  },
+  {
+    "id": "mg_3127370",
+    "name": "Goiabeira",
+    "stateCode": "MG",
+    "territoryId": "3127370",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "372"
+    }
+  },
+  {
+    "id": "mg_3127602",
+    "name": "Gouveia",
+    "stateCode": "MG",
+    "territoryId": "3127602",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "36675"
+    }
+  },
+  {
+    "id": "mg_3128402",
+    "name": "Guarani",
+    "stateCode": "MG",
+    "territoryId": "3128402",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "9376"
+    }
+  },
+  {
+    "id": "mg_3128600",
+    "name": "Guarda-Mor",
+    "stateCode": "MG",
+    "territoryId": "3128600",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "8890"
+    }
+  },
+  {
+    "id": "mg_3129202",
+    "name": "Heliodora",
+    "stateCode": "MG",
+    "territoryId": "3129202",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1515"
+    }
+  },
+  {
+    "id": "mg_3130309",
+    "name": "Iguatama",
+    "stateCode": "MG",
+    "territoryId": "3130309",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "44303"
+    }
+  },
+  {
+    "id": "mg_3130705",
+    "name": "Indianópolis",
+    "stateCode": "MG",
+    "territoryId": "3130705",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "564"
+    }
+  },
+  {
+    "id": "mg_3131208",
+    "name": "Ipanema",
+    "stateCode": "MG",
+    "territoryId": "3131208",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "38462"
+    }
+  },
+  {
+    "id": "mg_3131802",
+    "name": "Itabirinha",
+    "stateCode": "MG",
+    "territoryId": "3131802",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "224"
+    }
+  },
+  {
+    "id": "mg_3132107",
+    "name": "Itacarambi",
+    "stateCode": "MG",
+    "territoryId": "3132107",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "804"
+    }
+  },
+  {
+    "id": "mg_3132602",
+    "name": "Itamarati de Minas",
+    "stateCode": "MG",
+    "territoryId": "3132602",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "38667"
+    }
+  },
+  {
+    "id": "mg_3132800",
+    "name": "Itambé do Mato Dentro",
+    "stateCode": "MG",
+    "territoryId": "3132800",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "52108"
+    }
+  },
+  {
+    "id": "mg_3133204",
+    "name": "Itanhomi",
+    "stateCode": "MG",
+    "territoryId": "3133204",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1074"
+    }
+  },
+  {
+    "id": "mg_3133501",
+    "name": "Itapecerica",
+    "stateCode": "MG",
+    "territoryId": "3133501",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1091"
+    }
+  },
+  {
+    "id": "mg_3133709",
+    "name": "Itatiaiuçu",
+    "stateCode": "MG",
+    "territoryId": "3133709",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "63610"
+    }
+  },
+  {
+    "id": "mg_3134400",
+    "name": "Iturama",
+    "stateCode": "MG",
+    "territoryId": "3134400",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "232"
+    }
+  },
+  {
+    "id": "mg_3134707",
+    "name": "Jacinto",
+    "stateCode": "MG",
+    "territoryId": "3134707",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "516"
+    }
+  },
+  {
+    "id": "mg_3135001",
+    "name": "Jaguaraçu",
+    "stateCode": "MG",
+    "territoryId": "3135001",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2380"
+    }
+  },
+  {
+    "id": "mg_3135209",
+    "name": "Januária",
+    "stateCode": "MG",
+    "territoryId": "3135209",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "4044"
+    }
+  },
+  {
+    "id": "mg_3135308",
+    "name": "Japaraíba",
+    "stateCode": "MG",
+    "territoryId": "3135308",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "743"
+    }
+  },
+  {
+    "id": "mg_3135357",
+    "name": "Japonvar",
+    "stateCode": "MG",
+    "territoryId": "3135357",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "19336"
+    }
+  },
+  {
+    "id": "mg_3135407",
+    "name": "Jeceaba",
+    "stateCode": "MG",
+    "territoryId": "3135407",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "101458"
+    }
+  },
+  {
+    "id": "mg_3135456",
+    "name": "Jenipapo de Minas",
+    "stateCode": "MG",
+    "territoryId": "3135456",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "835"
+    }
+  },
+  {
+    "id": "mg_3135704",
+    "name": "Jequitibá",
+    "stateCode": "MG",
+    "territoryId": "3135704",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "9650"
+    }
+  },
+  {
+    "id": "mg_3136306",
+    "name": "João Pinheiro",
+    "stateCode": "MG",
+    "territoryId": "3136306",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "428"
+    }
+  },
+  {
+    "id": "mg_3136504",
+    "name": "Jordânia",
+    "stateCode": "MG",
+    "territoryId": "3136504",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "79730"
+    }
+  },
+  {
+    "id": "mg_3136520",
+    "name": "José Gonçalves de Minas",
+    "stateCode": "MG",
+    "territoryId": "3136520",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "9712"
+    }
+  },
+  {
+    "id": "mg_3136579",
+    "name": "Josenópolis",
+    "stateCode": "MG",
+    "territoryId": "3136579",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "9953"
+    }
+  },
+  {
+    "id": "mg_3136801",
+    "name": "Juramento",
+    "stateCode": "MG",
+    "territoryId": "3136801",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "300"
+    }
+  },
+  {
+    "id": "mg_3137106",
+    "name": "Lagamar",
+    "stateCode": "MG",
+    "territoryId": "3137106",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "799"
+    }
+  },
+  {
+    "id": "mg_3137304",
+    "name": "Lagoa dos Patos",
+    "stateCode": "MG",
+    "territoryId": "3137304",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1452"
+    }
+  },
+  {
+    "id": "mg_3137809",
+    "name": "Lambari",
+    "stateCode": "MG",
+    "territoryId": "3137809",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "9291"
+    }
+  },
+  {
+    "id": "mg_3137908",
+    "name": "Lamim",
+    "stateCode": "MG",
+    "territoryId": "3137908",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "19715"
+    }
+  },
+  {
+    "id": "mg_3138005",
+    "name": "Laranjal",
+    "stateCode": "MG",
+    "territoryId": "3138005",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "8202"
+    }
+  },
+  {
+    "id": "mg_3138351",
+    "name": "Leme do Prado",
+    "stateCode": "MG",
+    "territoryId": "3138351",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "772"
+    }
+  },
+  {
+    "id": "mg_3138625",
+    "name": "Limeira do Oeste",
+    "stateCode": "MG",
+    "territoryId": "3138625",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "767"
+    }
+  },
+  {
+    "id": "mg_3138682",
+    "name": "Luislândia",
+    "stateCode": "MG",
+    "territoryId": "3138682",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2732"
+    }
+  },
+  {
+    "id": "mg_3138807",
+    "name": "Luz",
+    "stateCode": "MG",
+    "territoryId": "3138807",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "567"
+    }
+  },
+  {
+    "id": "mg_3139706",
+    "name": "Maravilhas",
+    "stateCode": "MG",
+    "territoryId": "3139706",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "4042"
+    }
+  },
+  {
+    "id": "mg_3139805",
+    "name": "Mar de Espanha",
+    "stateCode": "MG",
+    "territoryId": "3139805",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "7750"
+    }
+  },
+  {
+    "id": "mg_3140555",
+    "name": "Mata Verde",
+    "stateCode": "MG",
+    "territoryId": "3140555",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "10873"
+    }
+  },
+  {
+    "id": "mg_3140605",
+    "name": "Materlândia",
+    "stateCode": "MG",
+    "territoryId": "3140605",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "391"
+    }
+  },
+  {
+    "id": "mg_3171501",
+    "name": "Mathias Lobato",
+    "stateCode": "MG",
+    "territoryId": "3171501",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "369"
+    }
+  },
+  {
+    "id": "mg_3140852",
+    "name": "Matias Cardoso",
+    "stateCode": "MG",
+    "territoryId": "3140852",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "903"
+    }
+  },
+  {
+    "id": "mg_3141207",
+    "name": "Matutina",
+    "stateCode": "MG",
+    "territoryId": "3141207",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1126"
+    }
+  },
+  {
+    "id": "mg_3141306",
+    "name": "Medeiros",
+    "stateCode": "MG",
+    "territoryId": "3141306",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "8214"
+    }
+  },
+  {
+    "id": "mg_3141504",
+    "name": "Mendes Pimentel",
+    "stateCode": "MG",
+    "territoryId": "3141504",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1603"
+    }
+  },
+  {
+    "id": "mg_3141702",
+    "name": "Mesquita",
+    "stateCode": "MG",
+    "territoryId": "3141702",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1151"
+    }
+  },
+  {
+    "id": "mg_3141801",
+    "name": "Minas Novas",
+    "stateCode": "MG",
+    "territoryId": "3141801",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "21131"
+    }
+  },
+  {
+    "id": "mg_3142007",
+    "name": "Mirabela",
+    "stateCode": "MG",
+    "territoryId": "3142007",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "10905"
+    }
+  },
+  {
+    "id": "mg_3142106",
+    "name": "Miradouro",
+    "stateCode": "MG",
+    "territoryId": "3142106",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "10867"
+    }
+  },
+  {
+    "id": "mg_3143104",
+    "name": "Monte Carmelo",
+    "stateCode": "MG",
+    "territoryId": "3143104",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "57279"
+    }
+  },
+  {
+    "id": "mg_3143153",
+    "name": "Monte Formoso",
+    "stateCode": "MG",
+    "territoryId": "3143153",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "335"
+    }
+  },
+  {
+    "id": "mg_3143450",
+    "name": "Montezuma",
+    "stateCode": "MG",
+    "territoryId": "3143450",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "298"
+    }
+  },
+  {
+    "id": "mg_3143906",
+    "name": "Muriaé",
+    "stateCode": "MG",
+    "territoryId": "3143906",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "37073"
+    }
+  },
+  {
+    "id": "mg_3144359",
+    "name": "Naque",
+    "stateCode": "MG",
+    "territoryId": "3144359",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "13881"
+    }
+  },
+  {
+    "id": "mg_3144375",
+    "name": "Natalândia",
+    "stateCode": "MG",
+    "territoryId": "3144375",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "82005"
+    }
+  },
+  {
+    "id": "mg_3144656",
+    "name": "Ninheira",
+    "stateCode": "MG",
+    "territoryId": "3144656",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "58540"
+    }
+  },
+  {
+    "id": "mg_3144672",
+    "name": "Nova Belém",
+    "stateCode": "MG",
+    "territoryId": "3144672",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1071"
+    }
+  },
+  {
+    "id": "mg_3145000",
+    "name": "Nova Ponte",
+    "stateCode": "MG",
+    "territoryId": "3145000",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "84207"
+    }
+  },
+  {
+    "id": "mg_3136603",
+    "name": "Nova União",
+    "stateCode": "MG",
+    "territoryId": "3136603",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "39977"
+    }
+  },
+  {
+    "id": "mg_3145703",
+    "name": "Oliveira Fortes",
+    "stateCode": "MG",
+    "territoryId": "3145703",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "41899"
+    }
+  },
+  {
+    "id": "mg_3145802",
+    "name": "Onça de Pitangui",
+    "stateCode": "MG",
+    "territoryId": "3145802",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "22065"
+    }
+  },
+  {
+    "id": "mg_3146404",
+    "name": "Paineiras",
+    "stateCode": "MG",
+    "territoryId": "3146404",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1344"
+    }
+  },
+  {
+    "id": "mg_3146503",
+    "name": "Pains",
+    "stateCode": "MG",
+    "territoryId": "3146503",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "225"
+    }
+  },
+  {
+    "id": "mg_3146701",
+    "name": "Palma",
+    "stateCode": "MG",
+    "territoryId": "3146701",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3906"
+    }
+  },
+  {
+    "id": "mg_3147956",
+    "name": "Patis",
+    "stateCode": "MG",
+    "territoryId": "3147956",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "9331"
+    }
+  },
+  {
+    "id": "mg_3148301",
+    "name": "Paula Cândido",
+    "stateCode": "MG",
+    "territoryId": "3148301",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "22058"
+    }
+  },
+  {
+    "id": "mg_3148756",
+    "name": "Pedra Bonita",
+    "stateCode": "MG",
+    "territoryId": "3148756",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "4383"
+    }
+  },
+  {
+    "id": "mg_3148905",
+    "name": "Pedra do Indaiá",
+    "stateCode": "MG",
+    "territoryId": "3148905",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "843"
+    }
+  },
+  {
+    "id": "mg_3149200",
+    "name": "Pedrinópolis",
+    "stateCode": "MG",
+    "territoryId": "3149200",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "9301"
+    }
+  },
+  {
+    "id": "mg_3149309",
+    "name": "Pedro Leopoldo",
+    "stateCode": "MG",
+    "territoryId": "3149309",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "4507"
+    }
+  },
+  {
+    "id": "mg_3149705",
+    "name": "Perdigão",
+    "stateCode": "MG",
+    "territoryId": "3149705",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "37946"
+    }
+  },
+  {
+    "id": "mg_3149903",
+    "name": "Perdões",
+    "stateCode": "MG",
+    "territoryId": "3149903",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "435"
+    }
+  },
+  {
+    "id": "mg_3150000",
+    "name": "Pescador",
+    "stateCode": "MG",
+    "territoryId": "3150000",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "84745"
+    }
+  },
+  {
+    "id": "mg_3150208",
+    "name": "Piedade de Ponte Nova",
+    "stateCode": "MG",
+    "territoryId": "3150208",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "65277"
+    }
+  },
+  {
+    "id": "mg_3150505",
+    "name": "Pimenta",
+    "stateCode": "MG",
+    "territoryId": "3150505",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "405"
+    }
+  },
+  {
+    "id": "mg_3150703",
+    "name": "Pirajuba",
+    "stateCode": "MG",
+    "territoryId": "3150703",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "65210"
+    }
+  },
+  {
+    "id": "mg_3150802",
+    "name": "Piranga",
+    "stateCode": "MG",
+    "territoryId": "3150802",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "39232"
+    }
+  },
+  {
+    "id": "mg_3151008",
+    "name": "Piranguinho",
+    "stateCode": "MG",
+    "territoryId": "3151008",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "18986"
+    }
+  },
+  {
+    "id": "mg_3151107",
+    "name": "Pirapetinga",
+    "stateCode": "MG",
+    "territoryId": "3151107",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "8258"
+    }
+  },
+  {
+    "id": "mg_3152501",
+    "name": "Pouso Alegre",
+    "stateCode": "MG",
+    "territoryId": "3152501",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "14062"
+    }
+  },
+  {
+    "id": "mg_3153004",
+    "name": "Pratinha",
+    "stateCode": "MG",
+    "territoryId": "3153004",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "91858"
+    }
+  },
+  {
+    "id": "mg_3153707",
+    "name": "Quartel Geral",
+    "stateCode": "MG",
+    "territoryId": "3153707",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "802"
+    }
+  },
+  {
+    "id": "mg_3153806",
+    "name": "Queluzito",
+    "stateCode": "MG",
+    "territoryId": "3153806",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "508"
+    }
+  },
+  {
+    "id": "mg_3154507",
+    "name": "Riacho dos Machados",
+    "stateCode": "MG",
+    "territoryId": "3154507",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3949"
+    }
+  },
+  {
+    "id": "mg_3155009",
+    "name": "Rio Doce",
+    "stateCode": "MG",
+    "territoryId": "3155009",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "8737"
+    }
+  },
+  {
+    "id": "mg_3155207",
+    "name": "Rio Espera",
+    "stateCode": "MG",
+    "territoryId": "3155207",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "48324"
+    }
+  },
+  {
+    "id": "mg_3155900",
+    "name": "Rio Preto",
+    "stateCode": "MG",
+    "territoryId": "3155900",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "21727"
+    }
+  },
+  {
+    "id": "mg_3156007",
+    "name": "Rio Vermelho",
+    "stateCode": "MG",
+    "territoryId": "3156007",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "228"
+    }
+  },
+  {
+    "id": "mg_3156304",
+    "name": "Rodeiro",
+    "stateCode": "MG",
+    "territoryId": "3156304",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "6286"
+    }
+  },
+  {
+    "id": "mg_3157252",
+    "name": "Santa Bárbara do Leste",
+    "stateCode": "MG",
+    "territoryId": "3157252",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "771"
+    }
+  },
+  {
+    "id": "mg_3157500",
+    "name": "Santa Efigênia de Minas",
+    "stateCode": "MG",
+    "territoryId": "3157500",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "71857"
+    }
+  },
+  {
+    "id": "mg_3157807",
+    "name": "Santa Luzia",
+    "stateCode": "MG",
+    "territoryId": "3157807",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "77658"
+    }
+  },
+  {
+    "id": "mg_3157906",
+    "name": "Santa Margarida",
+    "stateCode": "MG",
+    "territoryId": "3157906",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "7617"
+    }
+  },
+  {
+    "id": "mg_3158102",
+    "name": "Santa Maria do Salto",
+    "stateCode": "MG",
+    "territoryId": "3158102",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "556"
+    }
+  },
+  {
+    "id": "mg_3158300",
+    "name": "Santana da Vargem",
+    "stateCode": "MG",
+    "territoryId": "3158300",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "18051"
+    }
+  },
+  {
+    "id": "mg_3159001",
+    "name": "Santana do Riacho",
+    "stateCode": "MG",
+    "territoryId": "3159001",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "11234"
+    }
+  },
+  {
+    "id": "mg_3159100",
+    "name": "Santana dos Montes",
+    "stateCode": "MG",
+    "territoryId": "3159100",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "7911"
+    }
+  },
+  {
+    "id": "mg_3159209",
+    "name": "Santa Rita de Caldas",
+    "stateCode": "MG",
+    "territoryId": "3159209",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1522068"
+    }
+  },
+  {
+    "id": "mg_3159803",
+    "name": "Santa Vitória",
+    "stateCode": "MG",
+    "territoryId": "3159803",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "41508"
+    }
+  },
+  {
+    "id": "mg_3160009",
+    "name": "Santo Antônio do Aventureiro",
+    "stateCode": "MG",
+    "territoryId": "3160009",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "10035"
+    }
+  },
+  {
+    "id": "mg_3160207",
+    "name": "Santo Antônio do Itambé",
+    "stateCode": "MG",
+    "territoryId": "3160207",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "7459"
+    }
+  },
+  {
+    "id": "mg_3160306",
+    "name": "Santo Antônio do Jacinto",
+    "stateCode": "MG",
+    "territoryId": "3160306",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "15749"
+    }
+  },
+  {
+    "id": "mg_3160405",
+    "name": "Santo Antônio do Monte",
+    "stateCode": "MG",
+    "territoryId": "3160405",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2036"
+    }
+  },
+  {
+    "id": "mg_3161056",
+    "name": "São Félix de Minas",
+    "stateCode": "MG",
+    "territoryId": "3161056",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1149"
+    }
+  },
+  {
+    "id": "mg_3161304",
+    "name": "São Francisco de Sales",
+    "stateCode": "MG",
+    "territoryId": "3161304",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "14197"
+    }
+  },
+  {
+    "id": "mg_3161502",
+    "name": "São Geraldo",
+    "stateCode": "MG",
+    "territoryId": "3161502",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "12382"
+    }
+  },
+  {
+    "id": "mg_3161700",
+    "name": "São Gonçalo do Abaeté",
+    "stateCode": "MG",
+    "territoryId": "3161700",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "399"
+    }
+  },
+  {
+    "id": "mg_3125507",
+    "name": "São Gonçalo do Rio Preto",
+    "stateCode": "MG",
+    "territoryId": "3125507",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "410"
+    }
+  },
+  {
+    "id": "mg_3162104",
+    "name": "São Gotardo",
+    "stateCode": "MG",
+    "territoryId": "3162104",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1139"
+    }
+  },
+  {
+    "id": "mg_3162302",
+    "name": "São João da Mata",
+    "stateCode": "MG",
+    "territoryId": "3162302",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1077"
+    }
+  },
+  {
+    "id": "mg_3162401",
+    "name": "São João da Ponte",
+    "stateCode": "MG",
+    "territoryId": "3162401",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1670"
+    }
+  },
+  {
+    "id": "mg_3162658",
+    "name": "São João do Pacuí",
+    "stateCode": "MG",
+    "territoryId": "3162658",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "20803"
+    }
+  },
+  {
+    "id": "mg_3162807",
+    "name": "São João Evangelista",
+    "stateCode": "MG",
+    "territoryId": "3162807",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "503"
+    }
+  },
+  {
+    "id": "mg_3163409",
+    "name": "São José do Goiabal",
+    "stateCode": "MG",
+    "territoryId": "3163409",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "229"
+    }
+  },
+  {
+    "id": "mg_3164704",
+    "name": "São Sebastião do Paraíso",
+    "stateCode": "MG",
+    "territoryId": "3164704",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "340"
+    }
+  },
+  {
+    "id": "mg_3165206",
+    "name": "São Thomé das Letras",
+    "stateCode": "MG",
+    "territoryId": "3165206",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "4395"
+    }
+  },
+  {
+    "id": "mg_3165800",
+    "name": "Senador José Bento",
+    "stateCode": "MG",
+    "territoryId": "3165800",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "504"
+    }
+  },
+  {
+    "id": "mg_3165909",
+    "name": "Senador Modestino Gonçalves",
+    "stateCode": "MG",
+    "territoryId": "3165909",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "42150"
+    }
+  },
+  {
+    "id": "mg_3166501",
+    "name": "Serra Azul de Minas",
+    "stateCode": "MG",
+    "territoryId": "3166501",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2068"
+    }
+  },
+  {
+    "id": "mg_3166907",
+    "name": "Serrania",
+    "stateCode": "MG",
+    "territoryId": "3166907",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "89761"
+    }
+  },
+  {
+    "id": "mg_3167301",
+    "name": "Silveirânia",
+    "stateCode": "MG",
+    "territoryId": "3167301",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1744"
+    }
+  },
+  {
+    "id": "mg_3167806",
+    "name": "Soledade de Minas",
+    "stateCode": "MG",
+    "territoryId": "3167806",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "561"
+    }
+  },
+  {
+    "id": "mg_3168408",
+    "name": "Tarumirim",
+    "stateCode": "MG",
+    "territoryId": "3168408",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "323"
+    }
+  },
+  {
+    "id": "mg_3168507",
+    "name": "Teixeiras",
+    "stateCode": "MG",
+    "territoryId": "3168507",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "89991"
+    }
+  },
+  {
+    "id": "mg_3169356",
+    "name": "Três Marias",
+    "stateCode": "MG",
+    "territoryId": "3169356",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3103"
+    }
+  },
+  {
+    "id": "mg_3169604",
+    "name": "Tupaciguara",
+    "stateCode": "MG",
+    "territoryId": "3169604",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3543"
+    }
+  },
+  {
+    "id": "mg_3170008",
+    "name": "Ubaí",
+    "stateCode": "MG",
+    "territoryId": "3170008",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "748"
+    }
+  },
+  {
+    "id": "mg_3170305",
+    "name": "Umburatiba",
+    "stateCode": "MG",
+    "territoryId": "3170305",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "41723"
+    }
+  },
+  {
+    "id": "mg_3170438",
+    "name": "União de Minas",
+    "stateCode": "MG",
+    "territoryId": "3170438",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "320"
+    }
+  },
+  {
+    "id": "mg_3170578",
+    "name": "Vargem Alegre",
+    "stateCode": "MG",
+    "territoryId": "3170578",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1600"
+    }
+  },
+  {
+    "id": "mg_3170651",
+    "name": "Vargem Grande do Rio Pardo",
+    "stateCode": "MG",
+    "territoryId": "3170651",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "344"
+    }
+  },
+  {
+    "id": "mg_3170750",
+    "name": "Varjão de Minas",
+    "stateCode": "MG",
+    "territoryId": "3170750",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "79760"
+    }
+  },
+  {
+    "id": "mg_3170909",
+    "name": "Varzelândia",
+    "stateCode": "MG",
+    "territoryId": "3170909",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3752"
+    }
+  },
+  {
+    "id": "mg_3171030",
+    "name": "Verdelândia",
+    "stateCode": "MG",
+    "territoryId": "3171030",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "7780"
+    }
+  },
+  {
+    "id": "mg_3171204",
+    "name": "Vespasiano",
+    "stateCode": "MG",
+    "territoryId": "3171204",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "577"
+    }
+  },
+  {
+    "id": "mg_3172103",
+    "name": "Volta Grande",
+    "stateCode": "MG",
+    "territoryId": "3172103",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "13955"
+    }
+  },
+  {
+    "id": "mg_3100203",
+    "name": "Abaeté",
+    "stateCode": "MG",
+    "territoryId": "3100203",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1913769"
+    }
+  },
+  {
+    "id": "mg_3101201",
+    "name": "Aiuruoca",
+    "stateCode": "MG",
+    "territoryId": "3101201",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2132421"
+    }
+  },
+  {
+    "id": "mg_3101805",
+    "name": "Alpercata",
+    "stateCode": "MG",
+    "territoryId": "3101805",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "830489"
+    }
+  },
+  {
+    "id": "mg_3102001",
+    "name": "Alterosa",
+    "stateCode": "MG",
+    "territoryId": "3102001",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "749988"
+    }
+  },
+  {
+    "id": "mg_3102209",
+    "name": "Alvarenga",
+    "stateCode": "MG",
+    "territoryId": "3102209",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "740820"
+    }
+  },
+  {
+    "id": "mg_3103108",
+    "name": "Antônio Prado de Minas",
+    "stateCode": "MG",
+    "territoryId": "3103108",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2883750"
+    }
+  },
+  {
+    "id": "mg_3103801",
+    "name": "Arapuá",
+    "stateCode": "MG",
+    "territoryId": "3103801",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2948680"
+    }
+  },
+  {
+    "id": "mg_3105301",
+    "name": "Bandeira do Sul",
+    "stateCode": "MG",
+    "territoryId": "3105301",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "153939"
+    }
+  },
+  {
+    "id": "mg_3106903",
+    "name": "Bicas",
+    "stateCode": "MG",
+    "territoryId": "3106903",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2189450"
+    }
+  },
+  {
+    "id": "mg_3107307",
+    "name": "Bocaiúva",
+    "stateCode": "MG",
+    "territoryId": "3107307",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2192382"
+    }
+  },
+  {
+    "id": "mg_3107406",
+    "name": "Bom Despacho",
+    "stateCode": "MG",
+    "territoryId": "3107406",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2231221"
+    }
+  },
+  {
+    "id": "mg_3107604",
+    "name": "Bom Jesus da Penha",
+    "stateCode": "MG",
+    "territoryId": "3107604",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2806657"
+    }
+  },
+  {
+    "id": "mg_3108107",
+    "name": "Bonfim",
+    "stateCode": "MG",
+    "territoryId": "3108107",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2188244"
+    }
+  },
+  {
+    "id": "mg_3108305",
+    "name": "Borda da Mata",
+    "stateCode": "MG",
+    "territoryId": "3108305",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "159022"
+    }
+  },
+  {
+    "id": "mg_3108909",
+    "name": "Brazópolis",
+    "stateCode": "MG",
+    "territoryId": "3108909",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "121889"
+    }
+  },
+  {
+    "id": "mg_3110103",
+    "name": "Caiana",
+    "stateCode": "MG",
+    "territoryId": "3110103",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2849842"
+    }
+  },
+  {
+    "id": "mg_3110301",
+    "name": "Caldas",
+    "stateCode": "MG",
+    "territoryId": "3110301",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "90669"
+    }
+  },
+  {
+    "id": "mg_3110608",
+    "name": "Cambuí",
+    "stateCode": "MG",
+    "territoryId": "3110608",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1176925"
+    }
+  },
+  {
+    "id": "mg_3110707",
+    "name": "Cambuquira",
+    "stateCode": "MG",
+    "territoryId": "3110707",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1036769"
+    }
+  },
+  {
+    "id": "mg_3111150",
+    "name": "Campo Azul",
+    "stateCode": "MG",
+    "territoryId": "3111150",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1068020"
+    }
+  },
+  {
+    "id": "mg_3111309",
+    "name": "Campo do Meio",
+    "stateCode": "MG",
+    "territoryId": "3111309",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "93863"
+    }
+  },
+  {
+    "id": "mg_3111705",
+    "name": "Canaã",
+    "stateCode": "MG",
+    "territoryId": "3111705",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "97699"
+    }
+  },
+  {
+    "id": "mg_3112109",
+    "name": "Caparaó",
+    "stateCode": "MG",
+    "territoryId": "3112109",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2027795"
+    }
+  },
+  {
+    "id": "mg_3114303",
+    "name": "Carmo do Paranaíba",
+    "stateCode": "MG",
+    "territoryId": "3114303",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "95321"
+    }
+  },
+  {
+    "id": "mg_3114808",
+    "name": "Carvalhos",
+    "stateCode": "MG",
+    "territoryId": "3114808",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3150620"
+    }
+  },
+  {
+    "id": "mg_3115409",
+    "name": "Catas Altas da Noruega",
+    "stateCode": "MG",
+    "territoryId": "3115409",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "747297"
+    }
+  },
+  {
+    "id": "mg_3115458",
+    "name": "Catuji",
+    "stateCode": "MG",
+    "territoryId": "3115458",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1724955"
+    }
+  },
+  {
+    "id": "mg_3115607",
+    "name": "Cedro do Abaeté",
+    "stateCode": "MG",
+    "territoryId": "3115607",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2454764"
+    }
+  },
+  {
+    "id": "mg_3116209",
+    "name": "Chiador",
+    "stateCode": "MG",
+    "territoryId": "3116209",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "789022"
+    }
+  },
+  {
+    "id": "mg_3116704",
+    "name": "Coimbra",
+    "stateCode": "MG",
+    "territoryId": "3116704",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "841158"
+    }
+  },
+  {
+    "id": "mg_3117207",
+    "name": "Conceição das Pedras",
+    "stateCode": "MG",
+    "territoryId": "3117207",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1929714"
+    }
+  },
+  {
+    "id": "mg_3117876",
+    "name": "Confins",
+    "stateCode": "MG",
+    "territoryId": "3117876",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "103104"
+    }
+  },
+  {
+    "id": "mg_3119906",
+    "name": "Córrego do Bom Jesus",
+    "stateCode": "MG",
+    "territoryId": "3119906",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1521964"
+    }
+  },
+  {
+    "id": "mg_3122009",
+    "name": "Divino",
+    "stateCode": "MG",
+    "territoryId": "3122009",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "867983"
+    }
+  },
+  {
+    "id": "mg_3122207",
+    "name": "Divinolândia de Minas",
+    "stateCode": "MG",
+    "territoryId": "3122207",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2955377"
+    }
+  },
+  {
+    "id": "mg_3123007",
+    "name": "Dores de Campos",
+    "stateCode": "MG",
+    "territoryId": "3123007",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2269422"
+    }
+  },
+  {
+    "id": "mg_3124005",
+    "name": "Ervália",
+    "stateCode": "MG",
+    "territoryId": "3124005",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "107685"
+    }
+  },
+  {
+    "id": "mg_3124500",
+    "name": "Estiva",
+    "stateCode": "MG",
+    "territoryId": "3124500",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "898137"
+    }
+  },
+  {
+    "id": "mg_3124906",
+    "name": "Eugenópolis",
+    "stateCode": "MG",
+    "territoryId": "3124906",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2506255"
+    }
+  },
+  {
+    "id": "mg_3125200",
+    "name": "Fama",
+    "stateCode": "MG",
+    "territoryId": "3125200",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1490708"
+    }
+  },
+  {
+    "id": "mg_3125309",
+    "name": "Faria Lemos",
+    "stateCode": "MG",
+    "territoryId": "3125309",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2782889"
+    }
+  },
+  {
+    "id": "mg_3126000",
+    "name": "Florestal",
+    "stateCode": "MG",
+    "territoryId": "3126000",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1687576"
+    }
+  },
+  {
+    "id": "mg_3126752",
+    "name": "Franciscópolis",
+    "stateCode": "MG",
+    "territoryId": "3126752",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "929455"
+    }
+  },
+  {
+    "id": "mg_3127008",
+    "name": "Fronteira",
+    "stateCode": "MG",
+    "territoryId": "3127008",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "45273"
+    }
+  },
+  {
+    "id": "mg_3127404",
+    "name": "Gonçalves",
+    "stateCode": "MG",
+    "territoryId": "3127404",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2245383"
+    }
+  },
+  {
+    "id": "mg_3128501",
+    "name": "Guarará",
+    "stateCode": "MG",
+    "territoryId": "3128501",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2372390"
+    }
+  },
+  {
+    "id": "mg_3129707",
+    "name": "Ibiraci",
+    "stateCode": "MG",
+    "territoryId": "3129707",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "225857"
+    }
+  },
+  {
+    "id": "mg_3129905",
+    "name": "Ibitiúra de Minas",
+    "stateCode": "MG",
+    "territoryId": "3129905",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1534668"
+    }
+  },
+  {
+    "id": "mg_3131109",
+    "name": "Inimutaba",
+    "stateCode": "MG",
+    "territoryId": "3131109",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1073213"
+    }
+  },
+  {
+    "id": "mg_3131158",
+    "name": "Ipaba",
+    "stateCode": "MG",
+    "territoryId": "3131158",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "39656"
+    }
+  },
+  {
+    "id": "mg_3131604",
+    "name": "Iraí de Minas",
+    "stateCode": "MG",
+    "territoryId": "3131604",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3152026"
+    }
+  },
+  {
+    "id": "mg_3132305",
+    "name": "Itaipé",
+    "stateCode": "MG",
+    "territoryId": "3132305",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1566185"
+    }
+  },
+  {
+    "id": "mg_3133006",
+    "name": "Itamonte",
+    "stateCode": "MG",
+    "territoryId": "3133006",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2900060"
+    }
+  },
+  {
+    "id": "mg_3134004",
+    "name": "Itinga",
+    "stateCode": "MG",
+    "territoryId": "3134004",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "912250"
+    }
+  },
+  {
+    "id": "mg_3135076",
+    "name": "Jampruca",
+    "stateCode": "MG",
+    "territoryId": "3135076",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "945232"
+    }
+  },
+  {
+    "id": "mg_3137502",
+    "name": "Lagoa Formosa",
+    "stateCode": "MG",
+    "territoryId": "3137502",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1631277"
+    }
+  },
+  {
+    "id": "mg_3138104",
+    "name": "Lassance",
+    "stateCode": "MG",
+    "territoryId": "3138104",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "144249"
+    }
+  },
+  {
+    "id": "mg_3138609",
+    "name": "Lima Duarte",
+    "stateCode": "MG",
+    "territoryId": "3138609",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "166227"
+    }
+  },
+  {
+    "id": "mg_3138658",
+    "name": "Lontra",
+    "stateCode": "MG",
+    "territoryId": "3138658",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "268950"
+    }
+  },
+  {
+    "id": "mg_3138708",
+    "name": "Luminárias",
+    "stateCode": "MG",
+    "territoryId": "3138708",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1008881"
+    }
+  },
+  {
+    "id": "mg_3138906",
+    "name": "Machacalis",
+    "stateCode": "MG",
+    "territoryId": "3138906",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "389213"
+    }
+  },
+  {
+    "id": "mg_3139201",
+    "name": "Malacacheta",
+    "stateCode": "MG",
+    "territoryId": "3139201",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "383739"
+    }
+  },
+  {
+    "id": "mg_3139904",
+    "name": "Maria da Fé",
+    "stateCode": "MG",
+    "territoryId": "3139904",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "144988"
+    }
+  },
+  {
+    "id": "mg_3140209",
+    "name": "Maripá de Minas",
+    "stateCode": "MG",
+    "territoryId": "3140209",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2458839"
+    }
+  },
+  {
+    "id": "mg_3140704",
+    "name": "Mateus Leme",
+    "stateCode": "MG",
+    "territoryId": "3140704",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "923974"
+    }
+  },
+  {
+    "id": "mg_3141009",
+    "name": "Mato Verde",
+    "stateCode": "MG",
+    "territoryId": "3141009",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "142446"
+    }
+  },
+  {
+    "id": "mg_3142205",
+    "name": "Miraí",
+    "stateCode": "MG",
+    "territoryId": "3142205",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1299352"
+    }
+  },
+  {
+    "id": "mg_3142304",
+    "name": "Moeda",
+    "stateCode": "MG",
+    "territoryId": "3142304",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1079582"
+    }
+  },
+  {
+    "id": "mg_3143500",
+    "name": "Morada Nova de Minas",
+    "stateCode": "MG",
+    "territoryId": "3143500",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3073731"
+    }
+  },
+  {
+    "id": "mg_3145109",
+    "name": "Nova Resende",
+    "stateCode": "MG",
+    "territoryId": "3145109",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "91974"
+    }
+  },
+  {
+    "id": "mg_3145307",
+    "name": "Novo Cruzeiro",
+    "stateCode": "MG",
+    "territoryId": "3145307",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "18173"
+    }
+  },
+  {
+    "id": "mg_3145356",
+    "name": "Novo Oriente de Minas",
+    "stateCode": "MG",
+    "territoryId": "3145356",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "142604"
+    }
+  },
+  {
+    "id": "mg_3145851",
+    "name": "Oratórios",
+    "stateCode": "MG",
+    "territoryId": "3145851",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "146096"
+    }
+  },
+  {
+    "id": "mg_3147303",
+    "name": "Paraisópolis",
+    "stateCode": "MG",
+    "territoryId": "3147303",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3208302"
+    }
+  },
+  {
+    "id": "mg_3147501",
+    "name": "Passabém",
+    "stateCode": "MG",
+    "territoryId": "3147501",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "143578"
+    }
+  },
+  {
+    "id": "mg_3148509",
+    "name": "Pavão",
+    "stateCode": "MG",
+    "territoryId": "3148509",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1856337"
+    }
+  },
+  {
+    "id": "mg_3148707",
+    "name": "Pedra Azul",
+    "stateCode": "MG",
+    "territoryId": "3148707",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "22639"
+    }
+  },
+  {
+    "id": "mg_3148806",
+    "name": "Pedra do Anta",
+    "stateCode": "MG",
+    "territoryId": "3148806",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1298941"
+    }
+  },
+  {
+    "id": "mg_3149002",
+    "name": "Pedra Dourada",
+    "stateCode": "MG",
+    "territoryId": "3149002",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "273955"
+    }
+  },
+  {
+    "id": "mg_3150307",
+    "name": "Piedade do Rio Grande",
+    "stateCode": "MG",
+    "territoryId": "3150307",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "805472"
+    }
+  },
+  {
+    "id": "mg_3150570",
+    "name": "Pintópolis",
+    "stateCode": "MG",
+    "territoryId": "3150570",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "802461"
+    }
+  },
+  {
+    "id": "mg_3152303",
+    "name": "Porto Firme",
+    "stateCode": "MG",
+    "territoryId": "3152303",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "970710"
+    }
+  },
+  {
+    "id": "mg_3152600",
+    "name": "Pouso Alto",
+    "stateCode": "MG",
+    "territoryId": "3152600",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3157967"
+    }
+  },
+  {
+    "id": "mg_3152709",
+    "name": "Prados",
+    "stateCode": "MG",
+    "territoryId": "3152709",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "157573"
+    }
+  },
+  {
+    "id": "mg_3153608",
+    "name": "Prudente de Morais",
+    "stateCode": "MG",
+    "territoryId": "3153608",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "756887"
+    }
+  },
+  {
+    "id": "mg_3154002",
+    "name": "Raul Soares",
+    "stateCode": "MG",
+    "territoryId": "3154002",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3027243"
+    }
+  },
+  {
+    "id": "mg_3154903",
+    "name": "Rio Casca",
+    "stateCode": "MG",
+    "territoryId": "3154903",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2257338"
+    }
+  },
+  {
+    "id": "mg_3155801",
+    "name": "Rio Pomba",
+    "stateCode": "MG",
+    "territoryId": "3155801",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2116568"
+    }
+  },
+  {
+    "id": "mg_3156403",
+    "name": "Romaria",
+    "stateCode": "MG",
+    "territoryId": "3156403",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2273547"
+    }
+  },
+  {
+    "id": "mg_3156601",
+    "name": "Rubim",
+    "stateCode": "MG",
+    "territoryId": "3156601",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "133885"
+    }
+  },
+  {
+    "id": "mg_3157302",
+    "name": "Santa Bárbara do Tugúrio",
+    "stateCode": "MG",
+    "territoryId": "3157302",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1466343"
+    }
+  },
+  {
+    "id": "mg_3157609",
+    "name": "Santa Fé de Minas",
+    "stateCode": "MG",
+    "territoryId": "3157609",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1033773"
+    }
+  },
+  {
+    "id": "mg_3157708",
+    "name": "Santa Juliana",
+    "stateCode": "MG",
+    "territoryId": "3157708",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "799103"
+    }
+  },
+  {
+    "id": "mg_3158607",
+    "name": "Santana do Deserto",
+    "stateCode": "MG",
+    "territoryId": "3158607",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "254675"
+    }
+  },
+  {
+    "id": "mg_3158805",
+    "name": "Santana do Jacaré",
+    "stateCode": "MG",
+    "territoryId": "3158805",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "254868"
+    }
+  },
+  {
+    "id": "mg_3159407",
+    "name": "Santa Rita de Ibitipoca",
+    "stateCode": "MG",
+    "territoryId": "3159407",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2342297"
+    }
+  },
+  {
+    "id": "mg_3160108",
+    "name": "Santo Antônio do Grama",
+    "stateCode": "MG",
+    "territoryId": "3160108",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "984379"
+    }
+  },
+  {
+    "id": "mg_3160454",
+    "name": "Santo Antônio do Retiro",
+    "stateCode": "MG",
+    "territoryId": "3160454",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "17245"
+    }
+  },
+  {
+    "id": "mg_3160504",
+    "name": "Santo Antônio do Rio Abaixo",
+    "stateCode": "MG",
+    "territoryId": "3160504",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "148554"
+    }
+  },
+  {
+    "id": "mg_3160702",
+    "name": "Santos Dumont",
+    "stateCode": "MG",
+    "territoryId": "3160702",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2075046"
+    }
+  },
+  {
+    "id": "mg_3162005",
+    "name": "São Gonçalo do Sapucaí",
+    "stateCode": "MG",
+    "territoryId": "3162005",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1048535"
+    }
+  },
+  {
+    "id": "mg_3162906",
+    "name": "São João Nepomuceno",
+    "stateCode": "MG",
+    "territoryId": "3162906",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "58995"
+    }
+  },
+  {
+    "id": "mg_3163607",
+    "name": "São José do Mantimento",
+    "stateCode": "MG",
+    "territoryId": "3163607",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "314170"
+    }
+  },
+  {
+    "id": "mg_3163805",
+    "name": "São Miguel do Anta",
+    "stateCode": "MG",
+    "territoryId": "3163805",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2294425"
+    }
+  },
+  {
+    "id": "mg_3164001",
+    "name": "São Pedro dos Ferros",
+    "stateCode": "MG",
+    "territoryId": "3164001",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "150901"
+    }
+  },
+  {
+    "id": "mg_3164308",
+    "name": "São Roque de Minas",
+    "stateCode": "MG",
+    "territoryId": "3164308",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2007597"
+    }
+  },
+  {
+    "id": "mg_3164803",
+    "name": "São Sebastião do Rio Preto",
+    "stateCode": "MG",
+    "territoryId": "3164803",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "410622"
+    }
+  },
+  {
+    "id": "mg_3165107",
+    "name": "São Tomás de Aquino",
+    "stateCode": "MG",
+    "territoryId": "3165107",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "152089"
+    }
+  },
+  {
+    "id": "mg_3166204",
+    "name": "Senhora dos Remédios",
+    "stateCode": "MG",
+    "territoryId": "3166204",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "102741"
+    }
+  },
+  {
+    "id": "mg_3166303",
+    "name": "Sericita",
+    "stateCode": "MG",
+    "territoryId": "3166303",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1659590"
+    }
+  },
+  {
+    "id": "mg_3166956",
+    "name": "Serranópolis de Minas",
+    "stateCode": "MG",
+    "territoryId": "3166956",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1315641"
+    }
+  },
+  {
+    "id": "mg_3165552",
+    "name": "Setubinha",
+    "stateCode": "MG",
+    "territoryId": "3165552",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "40004"
+    }
+  },
+  {
+    "id": "mg_3167400",
+    "name": "Silvianópolis",
+    "stateCode": "MG",
+    "territoryId": "3167400",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1618963"
+    }
+  },
+  {
+    "id": "mg_3168002",
+    "name": "Taiobeiras",
+    "stateCode": "MG",
+    "territoryId": "3168002",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "129420"
+    }
+  },
+  {
+    "id": "mg_3168200",
+    "name": "Tapiraí",
+    "stateCode": "MG",
+    "territoryId": "3168200",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2203708"
+    }
+  },
+  {
+    "id": "mg_3168804",
+    "name": "Tiradentes",
+    "stateCode": "MG",
+    "territoryId": "3168804",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "105122"
+    }
+  },
+  {
+    "id": "mg_3169059",
+    "name": "Tocos do Moji",
+    "stateCode": "MG",
+    "territoryId": "3169059",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2790058"
+    }
+  },
+  {
+    "id": "mg_3169109",
+    "name": "Toledo",
+    "stateCode": "MG",
+    "territoryId": "3169109",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "3024549"
+    }
+  },
+  {
+    "id": "mg_3169802",
+    "name": "Turvolândia",
+    "stateCode": "MG",
+    "territoryId": "3169802",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "161498"
+    }
+  },
+  {
+    "id": "mg_3170057",
+    "name": "Ubaporanga",
+    "stateCode": "MG",
+    "territoryId": "3170057",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "151675"
+    }
+  },
+  {
+    "id": "mg_3170479",
+    "name": "Uruana de Minas",
+    "stateCode": "MG",
+    "territoryId": "3170479",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "157754"
+    }
+  },
+  {
+    "id": "mg_3170503",
+    "name": "Urucânia",
+    "stateCode": "MG",
+    "territoryId": "3170503",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "1793263"
+    }
+  },
+  {
+    "id": "mg_3171006",
+    "name": "Vazante",
+    "stateCode": "MG",
+    "territoryId": "3171006",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "78689"
+    }
+  },
+  {
+    "id": "mg_3171402",
+    "name": "Vieiras",
+    "stateCode": "MG",
+    "territoryId": "3171402",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "948802"
+    }
+  },
+  {
+    "id": "mg_3171907",
+    "name": "Virgolândia",
+    "stateCode": "MG",
+    "territoryId": "3171907",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "758042"
+    }
+  },
+  {
+    "id": "mg_3172004",
+    "name": "Visconde do Rio Branco",
+    "stateCode": "MG",
+    "territoryId": "3172004",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "107885"
+    }
+  },
+  {
+    "id": "mg_3121704",
+    "name": "Diogo de Vasconcelos",
+    "stateCode": "MG",
+    "territoryId": "3121704",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "83393"
+    }
+  },
+  {
+    "id": "mg_3165008",
+    "name": "São Tiago",
+    "stateCode": "MG",
+    "territoryId": "3165008",
+    "spiderType": "sigpub",
+    "config": {
+      "url": "https://www.diariomunicipal.com.br/amm-mg/",
+      "entityId": "2872389"
+    }
   }
 ]
