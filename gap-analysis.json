@@ -1,0 +1,273 @@
+{
+  "summary": {
+    "totalBrazilMunicipalities": 5569,
+    "currentCoverage": 1892,
+    "coveragePercentage": 33.97,
+    "gap": 3677
+  },
+  "gaps": [
+    {
+      "state": "SP",
+      "name": "São Paulo",
+      "region": "Sudeste",
+      "total": 645,
+      "covered": 0,
+      "gap": 645,
+      "percentage": 0
+    },
+    {
+      "state": "BA",
+      "name": "Bahia",
+      "region": "Nordeste",
+      "total": 417,
+      "covered": 0,
+      "gap": 417,
+      "percentage": 0
+    },
+    {
+      "state": "MG",
+      "name": "Minas Gerais",
+      "region": "Sudeste",
+      "total": 853,
+      "covered": 474,
+      "gap": 379,
+      "percentage": 55.6
+    },
+    {
+      "state": "SC",
+      "name": "Santa Catarina",
+      "region": "Sul",
+      "total": 295,
+      "covered": 0,
+      "gap": 295,
+      "percentage": 0
+    },
+    {
+      "state": "GO",
+      "name": "Goiás",
+      "region": "Centro-Oeste",
+      "total": 246,
+      "covered": 0,
+      "gap": 246,
+      "percentage": 0
+    },
+    {
+      "state": "RS",
+      "name": "Rio Grande do Sul",
+      "region": "Sul",
+      "total": 497,
+      "covered": 262,
+      "gap": 235,
+      "percentage": 52.7
+    },
+    {
+      "state": "PR",
+      "name": "Paraná",
+      "region": "Sul",
+      "total": 399,
+      "covered": 176,
+      "gap": 223,
+      "percentage": 44.1
+    },
+    {
+      "state": "MA",
+      "name": "Maranhão",
+      "region": "Nordeste",
+      "total": 217,
+      "covered": 0,
+      "gap": 217,
+      "percentage": 0
+    },
+    {
+      "state": "PB",
+      "name": "Paraíba",
+      "region": "Nordeste",
+      "total": 223,
+      "covered": 22,
+      "gap": 201,
+      "percentage": 9.9
+    },
+    {
+      "state": "PI",
+      "name": "Piauí",
+      "region": "Nordeste",
+      "total": 224,
+      "covered": 31,
+      "gap": 193,
+      "percentage": 13.8
+    },
+    {
+      "state": "PA",
+      "name": "Pará",
+      "region": "Norte",
+      "total": 144,
+      "covered": 0,
+      "gap": 144,
+      "percentage": 0
+    },
+    {
+      "state": "TO",
+      "name": "Tocantins",
+      "region": "Norte",
+      "total": 139,
+      "covered": 0,
+      "gap": 139,
+      "percentage": 0
+    },
+    {
+      "state": "AL",
+      "name": "Alagoas",
+      "region": "Nordeste",
+      "total": 102,
+      "covered": 0,
+      "gap": 102,
+      "percentage": 0
+    },
+    {
+      "state": "RJ",
+      "name": "Rio de Janeiro",
+      "region": "Sudeste",
+      "total": 92,
+      "covered": 0,
+      "gap": 92,
+      "percentage": 0
+    },
+    {
+      "state": "MS",
+      "name": "Mato Grosso do Sul",
+      "region": "Centro-Oeste",
+      "total": 79,
+      "covered": 0,
+      "gap": 79,
+      "percentage": 0
+    },
+    {
+      "state": "ES",
+      "name": "Espírito Santo",
+      "region": "Sudeste",
+      "total": 78,
+      "covered": 0,
+      "gap": 78,
+      "percentage": 0
+    },
+    {
+      "state": "SE",
+      "name": "Sergipe",
+      "region": "Nordeste",
+      "total": 75,
+      "covered": 0,
+      "gap": 75,
+      "percentage": 0
+    },
+    {
+      "state": "AM",
+      "name": "Amazonas",
+      "region": "Norte",
+      "total": 62,
+      "covered": 0,
+      "gap": 62,
+      "percentage": 0
+    },
+    {
+      "state": "CE",
+      "name": "Ceará",
+      "region": "Nordeste",
+      "total": 184,
+      "covered": 127,
+      "gap": 57,
+      "percentage": 69
+    },
+    {
+      "state": "RO",
+      "name": "Rondônia",
+      "region": "Norte",
+      "total": 52,
+      "covered": 0,
+      "gap": 52,
+      "percentage": 0
+    },
+    {
+      "state": "AC",
+      "name": "Acre",
+      "region": "Norte",
+      "total": 22,
+      "covered": 0,
+      "gap": 22,
+      "percentage": 0
+    },
+    {
+      "state": "AP",
+      "name": "Amapá",
+      "region": "Norte",
+      "total": 16,
+      "covered": 0,
+      "gap": 16,
+      "percentage": 0
+    },
+    {
+      "state": "RR",
+      "name": "Roraima",
+      "region": "Norte",
+      "total": 15,
+      "covered": 0,
+      "gap": 15,
+      "percentage": 0
+    },
+    {
+      "state": "RN",
+      "name": "Rio Grande do Norte",
+      "region": "Nordeste",
+      "total": 167,
+      "covered": 160,
+      "gap": 7,
+      "percentage": 95.8
+    },
+    {
+      "state": "MT",
+      "name": "Mato Grosso",
+      "region": "Centro-Oeste",
+      "total": 142,
+      "covered": 139,
+      "gap": 3,
+      "percentage": 97.9
+    },
+    {
+      "state": "PE",
+      "name": "Pernambuco",
+      "region": "Nordeste",
+      "total": 184,
+      "covered": 182,
+      "gap": 2,
+      "percentage": 98.9
+    },
+    {
+      "state": "DF",
+      "name": "Distrito Federal",
+      "region": "Centro-Oeste",
+      "total": 1,
+      "covered": 0,
+      "gap": 1,
+      "percentage": 0
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "strategy": "Focus on states with large gaps",
+      "states": "SP, BA, SC, GO, PR",
+      "potential": 1826
+    },
+    {
+      "priority": "HIGH",
+      "strategy": "Establish presence in uncovered states",
+      "states": "SP, BA, SC, GO, MA, PA, TO, AL, RJ, MS, ES, SE, AM, RO, AC, AP, RR, DF",
+      "potential": 2697
+    },
+    {
+      "priority": "MEDIUM",
+      "strategy": "Complete coverage in partially covered states",
+      "states": "MG, RS, CE",
+      "potential": 671
+    }
+  ]
+}
