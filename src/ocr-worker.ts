@@ -40,6 +40,18 @@ export default {
           territoryId: ocrMessage.territoryId,
         });
 
+        // Check if already processed (KV cache)
+        if (env.OCR_RESULTS) {
+          const cached = await env.OCR_RESULTS.get(`ocr:${ocrMessage.jobId}`);
+          if (cached) {
+            logger.info(`OCR job ${ocrMessage.jobId} already processed (cache hit)`, {
+              jobId: ocrMessage.jobId,
+            });
+            message.ack();
+            continue;
+          }
+        }
+
         // Process the PDF
         const result = await ocrService.processPdf(ocrMessage);
         results.push(result);

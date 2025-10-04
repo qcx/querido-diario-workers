@@ -12,6 +12,8 @@ This is a TypeScript/Node.js port of the [querido-diario](https://github.com/okf
 - ✅ **1,937 Cities**: 17 platform types implemented (**28.2% national coverage**)
 - ✅ **Lightweight**: Extracts gazette metadata and PDF URLs (no file downloads)
 - ✅ **Fast**: Average 400-500ms per city crawl
+- ✅ **OCR Integration**: Automatic PDF text extraction with Mistral OCR API
+- ✅ **Smart Caching**: KV-based deduplication to avoid reprocessing
 
 ## 📊 National Coverage
 
@@ -37,18 +39,31 @@ This is a TypeScript/Node.js port of the [querido-diario](https://github.com/okf
 ## Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                   Cloudflare Infrastructure                  │
-├─────────────────────────────────────────────────────────────┤
-│                                                               │
-│  HTTP Request → Dispatcher Worker → Queue → Consumer Worker │
-│                                                               │
-│  1. POST /crawl with city list                              │
-│  2. Enqueue tasks to Cloudflare Queue                       │
-│  3. Consumer workers process each city                       │
-│  4. Return gazette metadata + PDF URLs                       │
-│                                                               │
-└─────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────┐
+│                      Cloudflare Infrastructure                        │
+├──────────────────────────────────────────────────────────────────────┤
+│                                                                        │
+│  HTTP Request → Dispatcher Worker → Crawl Queue → Consumer Worker    │
+│                                          ↓                             │
+│                                    Gazettes Found                     │
+│                                          ↓                             │
+│                                     OCR Queue → OCR Worker            │
+│                                                    ↓                   │
+│                                              Mistral OCR API          │
+│                                                    ↓                   │
+│                                              Extracted Text           │
+│                                                    ↓                   │
+│                                              KV Storage (optional)    │
+│                                                                        │
+│  1. POST /crawl with city list                                       │
+│  2. Enqueue tasks to Cloudflare Queue                                │
+│  3. Consumer workers process each city                                │
+│  4. Return gazette metadata + PDF URLs                                │
+│  5. Automatically send PDFs to OCR queue                              │
+│  6. OCR worker processes PDFs with Mistral                            │
+│  7. Store extracted text in KV                                        │
+│                                                                        │
+└──────────────────────────────────────────────────────────────────────┘
 ```
 
 ## Project Structure
@@ -58,7 +73,14 @@ querido-diario-workers/
 ├── src/
 │   ├── index.ts                  # Dispatcher worker
 │   ├── consumer.ts               # Queue consumer worker
+│   ├── ocr-worker.ts             # OCR processing worker
 │   ├── types/                    # TypeScript interfaces
+│   │   ├── gazette.ts
+│   │   ├── spider-config.ts
+│   │   └── ocr.ts                # OCR types
+│   ├── services/
+│   │   ├── mistral-ocr.ts        # Mistral OCR service
+│   │   └── ocr-queue-sender.ts   # OCR queue sender
 │   ├── spiders/
 │   │   ├── base/                 # Base spider classes
 │   │   │   ├── base-spider.ts
@@ -66,12 +88,17 @@ querido-diario-workers/
 │   │   ├── configs/              # Spider configurations
 │   │   │   └── doem-cities.json
 │   │   └── registry.ts           # Spider factory
+│   ├── testing/                  # Automated testing system
+│   │   ├── test-runner.ts
+│   │   └── validators/
 │   └── utils/                    # Utilities (HTTP, parsing, dates, logging)
-├── wrangler.jsonc                # Dispatcher configuration
-├── wrangler.consumer.jsonc       # Consumer configuration
+├── wrangler.jsonc                # Main worker configuration
+├── wrangler-ocr.jsonc            # OCR worker configuration
 ├── package.json
 ├── tsconfig.json
-└── README.md
+├── README.md
+├── OCR_SYSTEM_DOCUMENTATION.md   # OCR system docs
+└── QUICK_START_OCR.md            # OCR quick start guide
 ```
 
 ## Getting Started
@@ -187,6 +214,51 @@ npm run deploy
 ### Planned
 
 - Other platforms: ~158 cities remaining
+
+## OCR System
+
+### Overview
+
+The OCR system automatically processes PDF documents from gazettes using **Mistral OCR API** (`mistral-ocr-latest`). When gazettes are found by spiders, their PDF URLs are automatically sent to an OCR queue for text extraction.
+
+### Features
+
+- ✅ **Automatic Processing**: PDFs are sent to OCR queue automatically after crawling
+- ✅ **Smart Caching**: Checks KV storage before processing to avoid duplicates
+- ✅ **Mistral OCR**: Uses state-of-the-art `mistral-ocr-latest` model
+- ✅ **Markdown Output**: Extracted text in clean markdown format
+- ✅ **Batch Processing**: Processes up to 5 PDFs simultaneously
+- ✅ **Error Handling**: Automatic retries and Dead Letter Queue for failures
+- ✅ **Metadata Preservation**: Maintains all gazette metadata with extracted text
+
+### Configuration
+
+See [OCR_SYSTEM_DOCUMENTATION.md](OCR_SYSTEM_DOCUMENTATION.md) and [QUICK_START_OCR.md](QUICK_START_OCR.md) for detailed setup instructions.
+
+**Quick setup:**
+
+```bash
+# 1. Configure Mistral API key
+wrangler secret put MISTRAL_API_KEY --config wrangler-ocr.jsonc
+
+# 2. Deploy OCR worker
+npm run deploy:ocr
+
+# 3. (Optional) Create KV namespace for caching
+wrangler kv:namespace create "OCR_RESULTS"
+```
+
+### Performance
+
+- **Processing Time**: ~700ms for simple PDFs, 2-5s per page for complex documents
+- **Throughput**: 300-600 gazettes per hour
+- **Limits**: 50MB max file size, 1000 pages max per document
+
+### Cost Estimation
+
+- **Cloudflare**: Free tier covers most usage (100k requests/day)
+- **Mistral OCR**: ~$0.01 per page
+- **Example**: 1,000 gazettes/day ≈ $10-20/day
 
 ## Output Format
 
