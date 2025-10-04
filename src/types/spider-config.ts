@@ -10,6 +10,7 @@ export type SpiderType =
   | 'diof'
   | 'sigpub'
   | 'barco_digital'
+  | 'siganet'
   | 'custom';
 
 /**
@@ -46,6 +47,7 @@ export type SpiderPlatformConfig =
   | DiofConfig
   | SigpubConfig
   | BarcoDigitalConfig
+  | SiganetConfig
   | CustomConfig;
 
 /**
@@ -134,5 +136,10 @@ export interface DateRange {
 
 export interface BarcoDigitalConfig {
   type: 'barco_digital';
+  baseUrl: string;
+}
+
+export interface SiganetConfig {
+  type: 'siganet';
   baseUrl: string;
 }

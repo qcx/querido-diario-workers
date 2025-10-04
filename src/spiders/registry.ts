@@ -1,10 +1,12 @@
 import { SpiderConfig, SpiderType, DateRange } from '../types';
-import { BaseSpider, DoemSpider, InstarSpider, DospSpider, DiofSpider, ADiariosV1Spider, SigpubSpider } from './base';
+import { BaseSpider, DoemSpider, InstarSpider, DospSpider, DiofSpider, ADiariosV1Spider, SigpubSpider, BarcoDigitalSpider, SiganetSpider } from './base';
 import doemCitiesConfig from './configs/doem-cities.json';
 import instarCitiesConfig from './configs/instar-cities.json';
 import dospCitiesConfig from './configs/dosp-cities.json';
 import diofCitiesConfig from './configs/diof-cities.json';
 import adiariosV1CitiesConfig from './configs/adiarios-v1-cities.json';
+import barcoDigitalCitiesConfig from './configs/barco_digital_cities.json';
+import siganetCitiesConfig from './configs/siganet_cities.json';
 
 /**
  * Spider registry - maps spider IDs to configurations
@@ -42,6 +44,16 @@ class SpiderRegistry {
     
     // Load ADiarios V1 cities
     for (const config of adiariosV1CitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load BarcoDigital cities
+    for (const config of barcoDigitalCitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load Siganet cities
+    for (const config of siganetCitiesConfig as SpiderConfig[]) {
       this.configs.set(config.id, config);
     }
   }
@@ -94,6 +106,12 @@ class SpiderRegistry {
         
       case 'sigpub':
         return new SigpubSpider(config, dateRange);
+      
+      case 'barco_digital':
+        return new BarcoDigitalSpider(config, dateRange);
+      
+      case 'siganet':
+        return new SiganetSpider(config, dateRange);
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);

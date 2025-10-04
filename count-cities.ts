@@ -1,6 +1,6 @@
 import { spiderRegistry } from './src/spiders/registry';
 
-const types = ['instar', 'dosp', 'adiarios_v1', 'diof', 'doem'];
+const types = ['instar', 'dosp', 'adiarios_v1', 'diof', 'doem', 'barco_digital', 'siganet'];
 
 console.log('\n=== Total de cidades registradas ===\n');
 
