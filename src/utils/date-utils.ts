@@ -114,3 +114,14 @@ export function getCurrentTimestamp(): string {
 export function formatBrazilianDate(date: Date): string {
   return format(date, 'dd-MM-yyyy');
 }
+
+/**
+ * Generates a sequence of Date objects for the first day of each month in a range
+ * Used for APIs that require monthly iteration
+ * @param startDate Start date
+ * @param endDate End date
+ * @returns Array of Date objects (first day of each month)
+ */
+export function getMonthlySequence(startDate: Date, endDate: Date): Date[] {
+  return eachMonthOfInterval({ start: startDate, end: endDate });
+}

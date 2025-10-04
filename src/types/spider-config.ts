@@ -9,6 +9,7 @@ export type SpiderType =
   | 'dosp'
   | 'diof'
   | 'sigpub'
+  | 'barco_digital'
   | 'custom';
 
 /**
@@ -44,6 +45,7 @@ export type SpiderPlatformConfig =
   | DospConfig
   | DiofConfig
   | SigpubConfig
+  | BarcoDigitalConfig
   | CustomConfig;
 
 /**
@@ -128,4 +130,9 @@ export interface DateRange {
   
   /** End date (ISO format) */
   end: string;
+}
+
+export interface BarcoDigitalConfig {
+  type: 'barco_digital';
+  baseUrl: string;
 }

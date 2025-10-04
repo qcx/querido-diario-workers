@@ -5,4 +5,5 @@ export * from './dosp-spider';
 export * from './diof-spider';
 export * from './adiarios-v1-spider';
 export * from './sigpub-spider';
+export * from './barco-digital-spider';
 
