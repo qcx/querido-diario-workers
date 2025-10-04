@@ -57,12 +57,17 @@ export class TestRunner {
     this.log('info', `Starting test execution: ${this.executionId}`);
     this.log('info', `Mode: ${this.config.mode}`);
 
-    // Get cities to test based on mode
-    const citiesToTest = this.getCitiesToTest();
-    this.log('info', `Total cities to test: ${citiesToTest.length}`);
+    // Handle 'until' mode differently
+    if (this.config.mode === 'until') {
+      await this.runUntilMode();
+    } else {
+      // Get cities to test based on mode
+      const citiesToTest = this.getCitiesToTest();
+      this.log('info', `Total cities to test: ${citiesToTest.length}`);
 
-    // Run tests in parallel with worker pool
-    await this.runTestsInParallel(citiesToTest);
+      // Run tests in parallel with worker pool
+      await this.runTestsInParallel(citiesToTest);
+    }
 
     // Generate summary
     const summary = this.generateSummary();
@@ -123,6 +128,10 @@ export class TestRunner {
         // For now, return empty array (to be implemented with persistent storage)
         this.log('warn', 'Regression mode not yet fully implemented, running sample instead');
         return this.getSampleCities(allConfigs);
+
+      case 'until':
+        // For until mode, return empty array - cities will be selected dynamically
+        return [];
 
       default:
         throw new Error(`Unknown test mode: ${this.config.mode}`);
@@ -387,6 +396,72 @@ export class TestRunner {
         error: errors,
       },
     };
+  }
+
+  /**
+   * Runs tests in 'until' mode - collects gazettes until target is reached
+   */
+  private async runUntilMode(): Promise<void> {
+    const targetGazettes = this.config.targetGazettes || 15;
+    const allConfigs = spiderRegistry.getAllConfigs();
+    const availableConfigs = this.filterSkippedCities(allConfigs);
+    
+    this.log('info', `Target: ${targetGazettes} gazettes from different origins`);
+    this.log('info', `Available cities: ${availableConfigs.length}`);
+    
+    let totalGazettesCollected = 0;
+    const testedCityIds = new Set<string>();
+    const originMap = new Map<string, number>(); // Track gazettes per origin
+    
+    let iteration = 0;
+    const maxIterations = 1000; // Safety limit
+    
+    while (totalGazettesCollected < targetGazettes && iteration < maxIterations) {
+      iteration++;
+      
+      // Get untested cities
+      const untestedCities = availableConfigs.filter(c => !testedCityIds.has(c.id));
+      
+      if (untestedCities.length === 0) {
+        this.log('warn', 'No more cities to test, stopping');
+        break;
+      }
+      
+      // Select random city
+      const randomIndex = Math.floor(Math.random() * untestedCities.length);
+      const selectedCity = untestedCities[randomIndex];
+      
+      this.log('info', `Iteration ${iteration}: Testing ${selectedCity.id} (${selectedCity.name})`);
+      
+      // Test the city
+      const result = await this.testCity(selectedCity);
+      this.results.push(result);
+      testedCityIds.add(selectedCity.id);
+      
+      // Count gazettes if successful
+      if (result.status === 'success' && result.gazettesFound > 0) {
+        totalGazettesCollected += result.gazettesFound;
+        
+        // Track by origin (platform)
+        const origin = result.spiderType;
+        originMap.set(origin, (originMap.get(origin) || 0) + result.gazettesFound);
+        
+        this.log('info', `✓ Found ${result.gazettesFound} gazettes. Total: ${totalGazettesCollected}/${targetGazettes}`);
+        this.log('info', `Origins: ${Array.from(originMap.entries()).map(([k, v]) => `${k}:${v}`).join(', ')}`);
+      } else {
+        this.log('info', `✗ No gazettes found or test failed`);
+      }
+      
+      // Add small delay between iterations
+      await this.sleep(this.config.requestDelay || 500);
+    }
+    
+    if (iteration >= maxIterations) {
+      this.log('warn', `Reached maximum iterations (${maxIterations}), stopping`);
+    }
+    
+    this.log('info', `Collection completed: ${totalGazettesCollected} gazettes from ${originMap.size} different origins`);
+    this.log('info', `Cities tested: ${testedCityIds.size}`);
   }
 
   /**

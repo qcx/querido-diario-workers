@@ -7,7 +7,7 @@ import { SpiderConfig, SpiderType } from '../types';
 /**
  * Test execution mode
  */
-export type TestMode = 'full' | 'sample' | 'platform' | 'regression' | 'single';
+export type TestMode = 'full' | 'sample' | 'platform' | 'regression' | 'single' | 'until';
 
 /**
  * Test result status
@@ -50,6 +50,9 @@ export interface TestConfig {
   
   /** Sample size percentage (for sample mode) */
   samplePercentage?: number;
+  
+  /** Target number of gazettes to collect (for until mode) */
+  targetGazettes?: number;
   
   /** Enable verbose logging */
   verbose?: boolean;

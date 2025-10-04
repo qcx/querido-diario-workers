@@ -16,6 +16,7 @@
     "test:automated": "npx tsx scripts/run-tests.ts",
     "test:automated:full": "npx tsx scripts/run-tests.ts full",
     "test:automated:sample": "npx tsx scripts/run-tests.ts sample",
+    "test:automated:until": "npx tsx scripts/run-tests.ts until",
     "test:city": "npx tsx scripts/test-city.ts",
     "test:platform": "npx tsx scripts/test-platform.ts",
     "queue:create": "wrangler queues create gazette-crawl-queue",

@@ -62,6 +62,15 @@ export const TEST_PRESETS: Record<TestMode, Partial<TestConfig>> = {
     searchDays: 7,
     verbose: true,
   },
+  
+  until: {
+    mode: 'until',
+    parallelWorkers: 5,
+    timeoutPerCity: 60000,
+    searchDays: 7,
+    targetGazettes: 15,
+    verbose: true,
+  },
 };
 
 /**
@@ -208,6 +217,16 @@ export function validateTestConfig(config: TestConfig): string[] {
   if (config.mode === 'sample' && config.samplePercentage) {
     if (config.samplePercentage < 1 || config.samplePercentage > 100) {
       errors.push('samplePercentage must be between 1 and 100');
+    }
+  }
+  
+  if (config.mode === 'until' && !config.targetGazettes) {
+    errors.push('targetGazettes must be specified when mode is "until"');
+  }
+  
+  if (config.mode === 'until' && config.targetGazettes) {
+    if (config.targetGazettes < 1) {
+      errors.push('targetGazettes must be at least 1');
     }
   }
   

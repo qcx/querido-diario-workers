@@ -8,17 +8,20 @@
  *   - sample: Run sample test (default, 10% of cities)
  *   - full: Run full test (all cities)
  *   - regression: Run regression test (previously failed cities)
+ *   - until: Collect gazettes until target is reached
  * 
  * Options:
  *   --workers <n>: Number of parallel workers (default: 10)
  *   --days <n>: Number of days to search (default: 7)
  *   --sample <n>: Sample percentage for sample mode (default: 10)
+ *   --target <n>: Target number of gazettes for until mode (default: 15)
  *   --verbose: Enable verbose logging
  * 
  * Examples:
  *   npx tsx scripts/run-tests.ts
  *   npx tsx scripts/run-tests.ts full
  *   npx tsx scripts/run-tests.ts sample --workers 15 --days 3
+ *   npx tsx scripts/run-tests.ts until --target 20
  */
 
 import {
@@ -37,6 +40,7 @@ interface CliOptions {
   workers?: number;
   days?: number;
   sample?: number;
+  target?: number;
   verbose?: boolean;
 }
 
@@ -59,6 +63,9 @@ function parseArgs(): CliOptions {
     } else if (arg === '--sample' && args[i + 1]) {
       options.sample = parseInt(args[i + 1], 10);
       i++;
+    } else if (arg === '--target' && args[i + 1]) {
+      options.target = parseInt(args[i + 1], 10);
+      i++;
     } else if (arg === '--verbose') {
       options.verbose = true;
     }
@@ -75,6 +82,7 @@ async function main() {
   if (options.workers) console.log(`Workers: ${options.workers}`);
   if (options.days) console.log(`Search Days: ${options.days}`);
   if (options.sample) console.log(`Sample: ${options.sample}%`);
+  if (options.target) console.log(`Target Gazettes: ${options.target}`);
   console.log('');
 
   try {
@@ -83,6 +91,7 @@ async function main() {
       parallelWorkers: options.workers,
       searchDays: options.days,
       samplePercentage: options.sample,
+      targetGazettes: options.target,
       verbose: options.verbose,
       outputDir: './test-results',
     });
