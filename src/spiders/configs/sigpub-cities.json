@@ -7,7 +7,8 @@
     "startDate": "2009-01-01",
     "config": {
       "type": "sigpub",
-      "url": "https://www.diariomunicipal.com.br/amupe/"
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "entityId": "365"
     }
   },
   {
@@ -18,7 +19,8 @@
     "startDate": "2009-01-01",
     "config": {
       "type": "sigpub",
-      "url": "https://www.diariomunicipal.com.br/aprece/"
+      "url": "https://www.diariomunicipal.com.br/aprece/",
+      "entityId": "764"
     }
   },
   {
@@ -29,7 +31,8 @@
     "startDate": "2009-01-01",
     "config": {
       "type": "sigpub",
-      "url": "https://www.diariomunicipal.com.br/famup/"
+      "url": "https://www.diariomunicipal.com.br/famup/",
+      "entityId": "334"
     }
   },
   {
@@ -40,7 +43,8 @@
     "startDate": "2009-01-01",
     "config": {
       "type": "sigpub",
-      "url": "https://www.diariomunicipal.com.br/femurn/"
+      "url": "https://www.diariomunicipal.com.br/femurn/",
+      "entityId": "296"
     }
   }
 ]
