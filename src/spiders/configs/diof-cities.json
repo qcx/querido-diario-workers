@@ -1,0 +1,38 @@
+[
+  {
+    "id": "al_igaci",
+    "name": "Igaci - AL",
+    "territoryId": "2703106",
+    "spiderType": "diof",
+    "startDate": "2015-07-17",
+    "config": {
+      "type": "diof",
+      "website": "https://diario.igaci.al.gov.br",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_abare",
+    "name": "Abaré - BA",
+    "territoryId": "2900207",
+    "spiderType": "diof",
+    "startDate": "2007-01-09",
+    "config": {
+      "type": "diof",
+      "website": "https://sai.io.org.br/ba/abare/site/diariooficial",
+      "power": "executive"
+    }
+  },
+  {
+    "id": "ba_adustina",
+    "name": "Adustina - BA",
+    "territoryId": "2900355",
+    "spiderType": "diof",
+    "startDate": "2017-01-03",
+    "config": {
+      "type": "diof",
+      "website": "https://diario.adustina.ba.gov.br",
+      "power": "executive"
+    }
+  }
+]

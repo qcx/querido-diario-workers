@@ -7,6 +7,7 @@ export type SpiderType =
   | 'adiarios_v2'
   | 'instar'
   | 'dosp'
+  | 'diof'
   | 'sigpub'
   | 'custom';
 
@@ -41,6 +42,7 @@ export type SpiderPlatformConfig =
   | AdiariosConfig
   | InstarConfig
   | DospConfig
+  | DiofConfig
   | SigpubConfig
   | CustomConfig;
 
@@ -61,6 +63,17 @@ export interface DospConfig {
   type: 'dosp';
   /** Start URL for the municipality (e.g., "https://www.imprensaoficialmunicipal.com.br/horizonte") */
   url: string;
+}
+
+/**
+ * Configuration for DIOF platform spiders
+ */
+export interface DiofConfig {
+  type: 'diof';
+  /** Website URL for the municipality (e.g., "https://diario.igaci.al.gov.br") */
+  website: string;
+  /** Power of the gazette (executive, legislative, or executive_legislative) */
+  power: 'executive' | 'legislative' | 'executive_legislative';
 }
 
 /**
