@@ -19930,5 +19930,749 @@
       "entityId": "44796",
       "type": "sigpub"
     }
+  },
+  {
+    "id": "am_1300029",
+    "name": "Alvarães",
+    "stateCode": "AM",
+    "territoryId": "1300029",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300060",
+    "name": "Amaturá",
+    "stateCode": "AM",
+    "territoryId": "1300060",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300086",
+    "name": "Anamã",
+    "stateCode": "AM",
+    "territoryId": "1300086",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300102",
+    "name": "Anori",
+    "stateCode": "AM",
+    "territoryId": "1300102",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300144",
+    "name": "Apuí",
+    "stateCode": "AM",
+    "territoryId": "1300144",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300201",
+    "name": "Atalaia do Norte",
+    "stateCode": "AM",
+    "territoryId": "1300201",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300300",
+    "name": "Autazes",
+    "stateCode": "AM",
+    "territoryId": "1300300",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300409",
+    "name": "Barcelos",
+    "stateCode": "AM",
+    "territoryId": "1300409",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300508",
+    "name": "Barreirinha",
+    "stateCode": "AM",
+    "territoryId": "1300508",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300607",
+    "name": "Benjamin Constant",
+    "stateCode": "AM",
+    "territoryId": "1300607",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300631",
+    "name": "Beruri",
+    "stateCode": "AM",
+    "territoryId": "1300631",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300680",
+    "name": "Boa Vista do Ramos",
+    "stateCode": "AM",
+    "territoryId": "1300680",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300706",
+    "name": "Boca do Acre",
+    "stateCode": "AM",
+    "territoryId": "1300706",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300805",
+    "name": "Borba",
+    "stateCode": "AM",
+    "territoryId": "1300805",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300839",
+    "name": "Caapiranga",
+    "stateCode": "AM",
+    "territoryId": "1300839",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1300904",
+    "name": "Canutama",
+    "stateCode": "AM",
+    "territoryId": "1300904",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1301001",
+    "name": "Carauari",
+    "stateCode": "AM",
+    "territoryId": "1301001",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1301100",
+    "name": "Careiro",
+    "stateCode": "AM",
+    "territoryId": "1301100",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1301159",
+    "name": "Careiro da Várzea",
+    "stateCode": "AM",
+    "territoryId": "1301159",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1301209",
+    "name": "Coari",
+    "stateCode": "AM",
+    "territoryId": "1301209",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1301308",
+    "name": "Codajás",
+    "stateCode": "AM",
+    "territoryId": "1301308",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1301407",
+    "name": "Eirunepé",
+    "stateCode": "AM",
+    "territoryId": "1301407",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1301506",
+    "name": "Envira",
+    "stateCode": "AM",
+    "territoryId": "1301506",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1301605",
+    "name": "Fonte Boa",
+    "stateCode": "AM",
+    "territoryId": "1301605",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1301654",
+    "name": "Guajará",
+    "stateCode": "AM",
+    "territoryId": "1301654",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1301704",
+    "name": "Humaitá",
+    "stateCode": "AM",
+    "territoryId": "1301704",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1301803",
+    "name": "Ipixuna",
+    "stateCode": "AM",
+    "territoryId": "1301803",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1301852",
+    "name": "Iranduba",
+    "stateCode": "AM",
+    "territoryId": "1301852",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1301902",
+    "name": "Itacoatiara",
+    "stateCode": "AM",
+    "territoryId": "1301902",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1301951",
+    "name": "Itamarati",
+    "stateCode": "AM",
+    "territoryId": "1301951",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1302009",
+    "name": "Itapiranga",
+    "stateCode": "AM",
+    "territoryId": "1302009",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1302108",
+    "name": "Japurá",
+    "stateCode": "AM",
+    "territoryId": "1302108",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1302207",
+    "name": "Juruá",
+    "stateCode": "AM",
+    "territoryId": "1302207",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1302306",
+    "name": "Jutaí",
+    "stateCode": "AM",
+    "territoryId": "1302306",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1302405",
+    "name": "Lábrea",
+    "stateCode": "AM",
+    "territoryId": "1302405",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1302504",
+    "name": "Manacapuru",
+    "stateCode": "AM",
+    "territoryId": "1302504",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1302553",
+    "name": "Manaquiri",
+    "stateCode": "AM",
+    "territoryId": "1302553",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1302603",
+    "name": "Manaus",
+    "stateCode": "AM",
+    "territoryId": "1302603",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1302702",
+    "name": "Manicoré",
+    "stateCode": "AM",
+    "territoryId": "1302702",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1302801",
+    "name": "Maraã",
+    "stateCode": "AM",
+    "territoryId": "1302801",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1302900",
+    "name": "Maués",
+    "stateCode": "AM",
+    "territoryId": "1302900",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1303007",
+    "name": "Nhamundá",
+    "stateCode": "AM",
+    "territoryId": "1303007",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1303106",
+    "name": "Nova Olinda do Norte",
+    "stateCode": "AM",
+    "territoryId": "1303106",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1303205",
+    "name": "Novo Airão",
+    "stateCode": "AM",
+    "territoryId": "1303205",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1303304",
+    "name": "Novo Aripuanã",
+    "stateCode": "AM",
+    "territoryId": "1303304",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1303403",
+    "name": "Parintins",
+    "stateCode": "AM",
+    "territoryId": "1303403",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1303502",
+    "name": "Pauini",
+    "stateCode": "AM",
+    "territoryId": "1303502",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1303536",
+    "name": "Presidente Figueiredo",
+    "stateCode": "AM",
+    "territoryId": "1303536",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1303569",
+    "name": "Rio Preto da Eva",
+    "stateCode": "AM",
+    "territoryId": "1303569",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1303601",
+    "name": "Santa Isabel do Rio Negro",
+    "stateCode": "AM",
+    "territoryId": "1303601",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1303700",
+    "name": "Santo Antônio do Içá",
+    "stateCode": "AM",
+    "territoryId": "1303700",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1303809",
+    "name": "São Gabriel da Cachoeira",
+    "stateCode": "AM",
+    "territoryId": "1303809",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1303908",
+    "name": "São Paulo de Olivença",
+    "stateCode": "AM",
+    "territoryId": "1303908",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1303957",
+    "name": "São Sebastião do Uatumã",
+    "stateCode": "AM",
+    "territoryId": "1303957",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1304005",
+    "name": "Silves",
+    "stateCode": "AM",
+    "territoryId": "1304005",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1304062",
+    "name": "Tabatinga",
+    "stateCode": "AM",
+    "territoryId": "1304062",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1304104",
+    "name": "Tapauá",
+    "stateCode": "AM",
+    "territoryId": "1304104",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1304203",
+    "name": "Tefé",
+    "stateCode": "AM",
+    "territoryId": "1304203",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1304237",
+    "name": "Tonantins",
+    "stateCode": "AM",
+    "territoryId": "1304237",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1304260",
+    "name": "Uarini",
+    "stateCode": "AM",
+    "territoryId": "1304260",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1304302",
+    "name": "Urucará",
+    "stateCode": "AM",
+    "territoryId": "1304302",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
+  },
+  {
+    "id": "am_1304401",
+    "name": "Urucurituba",
+    "stateCode": "AM",
+    "territoryId": "1304401",
+    "spiderType": "sigpub",
+    "config": {
+      "type": "sigpub",
+      "url": "https://www.diariomunicipal.com.br/aam/",
+      "entityId": "0"
+    }
   }
 ]

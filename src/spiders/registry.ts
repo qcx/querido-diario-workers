@@ -10,7 +10,11 @@ import { PtioSpider } from './base/ptio-spider';
 import { MunicipioOnlineSpider } from './base/municipio-online-spider';
 import { AtendeV2Spider } from './base/atende-v2-spider';
 import { DomScSpider } from './base/dom-sc-spider';
+import { DiarioBaSpider } from './base/diario-ba-spider';
+import { AmmMtSpider } from './base/amm-mt-spider';
 import doemCitiesConfig from './configs/doem-cities.json';
+import diarioBaCitiesConfig from './configs/diario-ba-cities.json';
+import ammMtCitiesConfig from './configs/amm-mt-cities.json';
 import instarCitiesConfig from './configs/instar-cities.json';
 import dospCitiesConfig from './configs/dosp-cities.json';
 import diofCitiesConfig from './configs/diof-cities.json';
@@ -128,6 +132,18 @@ class SpiderRegistry {
       this.configs.set(config.id, config);
     }
     
+    // Load Diário BA cities
+    const diarioBaData = diarioBaCitiesConfig as any;
+    for (const config of diarioBaData.municipalities as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load AMM-MT cities
+    const ammMtData = ammMtCitiesConfig as any;
+    for (const config of ammMtData.municipalities as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
     // Load SIGPub cities
     for (const config of sigpubCitiesConfig as SpiderConfig[]) {
       this.configs.set(config.id, config);
@@ -219,6 +235,12 @@ class SpiderRegistry {
       
       case 'dom_sc':
         return new DomScSpider(config, dateRange);
+      
+      case 'diario-ba':
+        return new DiarioBaSpider(config, dateRange);
+      
+      case 'amm-mt':
+        return new AmmMtSpider(config, dateRange);
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);

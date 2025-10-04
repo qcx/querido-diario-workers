@@ -20,6 +20,8 @@ export type SpiderType =
   | 'municipio_online'
   | 'atende_v2'
   | 'dom_sc'
+  | 'diario-ba'
+  | 'amm-mt'
   | 'custom';
 
 /**
@@ -66,6 +68,8 @@ export type SpiderPlatformConfig =
   | MunicipioOnlineConfig
   | AtendeV2Config
   | DomScConfig
+  | DiarioBaConfig
+  | AmmMtConfig
   | CustomConfig;
 
 /**
@@ -212,4 +216,18 @@ export interface DomScConfig {
   url: string;
   /** Entity name for search (e.g., "Prefeitura Municipal de Florianópolis") */
   entityName: string;
+}
+
+export interface DiarioBaConfig {
+  /** Base URL for the Diário Oficial BA platform */
+  url: string;
+  /** City name as used in the site dropdown (e.g., "SALVADOR") */
+  cityName: string;
+}
+
+export interface AmmMtConfig {
+  /** Base URL for the AMM-MT platform */
+  url: string;
+  /** City name for the municipality */
+  cityName: string;
 }

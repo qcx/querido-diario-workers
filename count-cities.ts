@@ -1,6 +1,6 @@
 import { spiderRegistry } from './src/spiders/registry';
 
-const types = ['instar', 'dosp', 'adiarios_v1', 'adiarios_v2', 'diof', 'doem', 'barco_digital', 'siganet', 'diario_oficial_br', 'modernizacao', 'aplus', 'dioenet', 'administracao_publica', 'ptio', 'municipio_online', 'atende_v2', 'sigpub'];
+const types = ['instar', 'dosp', 'adiarios_v1', 'adiarios_v2', 'diof', 'doem', 'barco_digital', 'siganet', 'diario_oficial_br', 'modernizacao', 'aplus', 'dioenet', 'administracao_publica', 'ptio', 'municipio_online', 'atende_v2', 'dom_sc', 'diario-ba', 'amm-mt', 'sigpub'];
 
 console.log('\n=== Total de cidades registradas ===\n');
 
