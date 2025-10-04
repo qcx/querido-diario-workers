@@ -46,7 +46,10 @@
     "cheerio": "^1.1.2",
     "date-fns": "^4.1.0",
     "hono": "^4.9.9",
-    "node-html-parser": "^7.0.1"
+    "node-html-parser": "^7.0.1",
+    "playwright": "^1.55.1",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20251003.0",
