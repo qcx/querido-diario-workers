@@ -82,9 +82,25 @@ export class DiofSpider extends BaseSpider {
       // Method 2: SAI site - extract from iframe
       logger.info(`Extracting client_id from SAI site`);
       const html = await this.fetch(website);
-      const iframeMatch = html.match(/src="[^"]*[?&]c=(\d+)/);
-      if (iframeMatch) {
-        this.clientId = iframeMatch[1];
+      
+      // Try multiple patterns to extract client_id
+      let clientMatch = html.match(/src="[^"]*[?&]c=(\d+)/);
+      if (!clientMatch) {
+        clientMatch = html.match(/[?&]c=(\d+)/);
+      }
+      if (!clientMatch) {
+        clientMatch = html.match(/cliente['":\s]*(\d+)/i);
+      }
+      if (!clientMatch) {
+        clientMatch = html.match(/client_id['":\s]*(\d+)/i);
+      }
+      
+      if (clientMatch) {
+        this.clientId = clientMatch[1];
+        logger.info(`Found client_id using pattern matching: ${this.clientId}`);
+      } else {
+        logger.warn(`Could not extract client_id from SAI site HTML`);
+        logger.debug(`HTML sample: ${html.substring(0, 1000)}`);
       }
     } else if (website.includes('dom.imap')) {
       // Method 3: IMAP site - extract from URL parameter
@@ -184,14 +200,28 @@ export class DiofSpider extends BaseSpider {
         return gazettes;
       }
       
-      const data = await response.json() as Array<{ elements: Array<{
-        dat_envio: string;
-        des_arquivoa4: string;
-        cod_documento: string;
-      }> }>;
+      const apiResponse = await response.json() as {
+        data: Array<{
+          key: string;
+          elements: Array<{
+            dat_envio: string;
+            des_arquivoa4: string;
+            cod_documento: string;
+          }>
+        }>;
+        page: number | null;
+        pages: number;
+        count: number;
+      };
+      
+      // Check if we have data
+      if (!apiResponse.data || !Array.isArray(apiResponse.data)) {
+        logger.warn(`No data returned from API for interval ${interval.start} to ${interval.end}`);
+        return gazettes;
+      }
       
       // Process each gazette date group
-      for (const dateGroup of data) {
+      for (const dateGroup of apiResponse.data) {
         for (const gazette of dateGroup.elements) {
           const parsedGazette = await this.parseGazetteItem(gazette);
           if (parsedGazette) {
