@@ -9,7 +9,7 @@ This is a TypeScript/Node.js port of the [querido-diario](https://github.com/okf
 - ✅ **Serverless**: Runs on Cloudflare Workers (no servers to manage)
 - ✅ **Scalable**: Uses Cloudflare Queues for distributed crawling
 - ✅ **TypeScript**: Fully typed codebase
-- ✅ **316 Cities**: 14 platform types implemented (66.7% coverage)
+- ✅ **364 Cities**: 16 platform types implemented (76.8% coverage) ✅)848 new) (76.8% coverage)
 - ✅ **Lightweight**: Extracts gazette metadata and PDF URLs (no file downloads)
 - ✅ **Fast**: Average 400-500ms per city crawl
 
@@ -158,7 +158,9 @@ npm run deploy
 | **Dioenet** | 4 | ✅ |
 | **AdministracaoPublica** | 3 | ✅ |
 | **PTIO** | 3 | ✅ |
-| **Total** | **316** | **66.7%** |
+| **MunicipioOnline** | 26 | ✅ |
+| **AtendeV2** | 22 | ✅ |
+| **Total** | **364** | **76.8%** |
 
 ### Planned
 
