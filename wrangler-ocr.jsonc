@@ -1,6 +1,7 @@
 {
   // OCR Worker Configuration
   "name": "querido-diario-ocr-worker",
+  "account_id": "dd6e3021bfaef6eec1a68e26a593f4ca",
   "main": "src/ocr-worker.ts",
   "compatibility_date": "2024-10-01",
   "compatibility_flags": ["nodejs_compat"],
@@ -15,7 +16,7 @@
     "consumers": [
       {
         "queue": "gazette-ocr-queue",
-        "max_batch_size": 5,
+        "max_batch_size": 1,
         "max_batch_timeout": 60,
         "max_retries": 3,
         "dead_letter_queue": "gazette-ocr-dlq"
@@ -33,7 +34,15 @@
   "kv_namespaces": [
     {
       "binding": "OCR_RESULTS",
-      "id": "YOUR_KV_NAMESPACE_ID"
+      "id": "c4ef3be0866640e58ee549af2295711b"
+    }
+  ],
+
+  // R2 Bucket for storing PDFs
+  "r2_buckets": [
+    {
+      "bucket_name": "gazette-pdfs",
+      "binding": "GAZETTE_PDFS"
     }
   ],
 

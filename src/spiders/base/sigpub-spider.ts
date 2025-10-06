@@ -28,12 +28,8 @@ export class SigpubSpider extends BaseSpider {
     const gazettes: Gazette[] = [];
 
     try {
-      // Option 1: Use Cloudflare Browser Rendering (recommended)
-      if (this.browser) {
-        return await this.crawlWithBrowser();
-      }
-      
-      // Option 2: Fallback to direct URL construction (if browser not available)
+      // Always use direct URL construction for now
+      // TODO: Implement browser rendering when needed
       return await this.crawlWithDirectUrls();
       
     } catch (error) {
@@ -123,15 +119,22 @@ export class SigpubSpider extends BaseSpider {
     try {
       const response = await this.fetch(this.sigpubConfig.url);
       
+      logger.debug(`Fetched HTML (first 500 chars): ${response.substring(0, 500)}`);
+      
       // Extract PDF URLs from the HTML
       const pdfUrlRegex = /https:\/\/www-storage\.voxtecnologia\.com\.br\/\?m=sigpub\.publicacao&f=\d+&i=publicado_\d+_(\d{4}-\d{2}-\d{2})_[a-f0-9]+\.pdf/g;
       
       const matches = response.matchAll(pdfUrlRegex);
+      let matchCount = 0;
       
       for (const match of matches) {
+        matchCount++;
         const url = match[0];
         const dateStr = match[1];
-        const gazetteDate = new Date(dateStr);
+        const gazetteDate = new Date(dateStr + 'T00:00:00.000Z'); // Force UTC to match range dates
+        
+        logger.debug(`Match ${matchCount}: Date ${dateStr}, URL: ${url.substring(0, 100)}...`);
+        logger.debug(`Date range check: ${dateStr} is in range ${this.dateRange.start} to ${this.dateRange.end}? ${this.isInDateRange(gazetteDate)}`);
         
         if (this.isInDateRange(gazetteDate)) {
           gazettes.push(this.createGazette(gazetteDate, url, {
@@ -142,7 +145,7 @@ export class SigpubSpider extends BaseSpider {
         }
       }
       
-      logger.info(`Found ${gazettes.length} gazettes using direct URL extraction`);
+      logger.info(`Found ${gazettes.length} gazettes from ${matchCount} matches using direct URL extraction`);
       
     } catch (error) {
       logger.error('Error in direct URL extraction:', error as Error);

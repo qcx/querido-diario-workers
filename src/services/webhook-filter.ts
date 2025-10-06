@@ -42,16 +42,45 @@ export class WebhookFilterService {
       }
     }
 
-    // Minimum confidence filter
-    if (filters.minConfidence !== undefined) {
-      const highConfidenceRatio = analysis.summary.highConfidenceFindings / analysis.summary.totalFindings;
-      if (highConfidenceRatio < filters.minConfidence) {
-        logger.debug('Analysis does not meet minimum confidence', {
-          highConfidenceRatio,
+    // Minimum confidence filter - check only relevant category findings
+    if (filters.minConfidence !== undefined && filters.categories && filters.categories.length > 0) {
+      // Get all findings from analysis
+      const allFindings: Finding[] = analysis.analyses.flatMap(a => a.findings);
+      
+      // Filter findings by category (similar to extractFindings but without confidence filter)
+      const categoryFindings = allFindings.filter(finding => {
+        const findingCategory = finding.data.category || finding.type.split(':')[1];
+        return filters.categories!.includes(findingCategory);
+      });
+      
+      if (categoryFindings.length === 0) {
+        logger.debug('No findings found for target categories', {
+          filterCategories: filters.categories,
+          totalFindings: allFindings.length,
+        });
+        return false;
+      }
+      
+      // Calculate confidence ratio based on category-specific findings only
+      const highConfidenceCount = categoryFindings.filter(f => f.confidence >= filters.minConfidence).length;
+      const categoryConfidenceRatio = highConfidenceCount / categoryFindings.length;
+      
+      if (categoryConfidenceRatio < 0.5) { // At least 50% of category findings should meet confidence
+        logger.debug('Category findings do not meet minimum confidence', {
+          categoryFindings: categoryFindings.length,
+          highConfidenceCount,
+          categoryConfidenceRatio,
           minConfidence: filters.minConfidence,
         });
         return false;
       }
+      
+      logger.debug('Category confidence check passed', {
+        categoryFindings: categoryFindings.length,
+        highConfidenceCount,
+        categoryConfidenceRatio,
+        minConfidence: filters.minConfidence,
+      });
     }
 
     // Minimum findings filter

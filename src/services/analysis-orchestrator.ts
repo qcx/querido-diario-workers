@@ -75,7 +75,7 @@ export class AnalysisOrchestrator {
   /**
    * Analyze OCR result with all enabled analyzers
    */
-  async analyze(ocrResult: OcrResult): Promise<GazetteAnalysis> {
+  async analyze(ocrResult: OcrResult, territoryId?: string): Promise<GazetteAnalysis> {
     const startTime = Date.now();
     const jobId = `analysis-${ocrResult.jobId}-${Date.now()}`;
 
@@ -113,7 +113,7 @@ export class AnalysisOrchestrator {
     const gazetteAnalysis: GazetteAnalysis = {
       jobId,
       ocrJobId: ocrResult.jobId,
-      territoryId: ocrResult.territoryId,
+      territoryId: territoryId || ocrResult.territoryId || 'unknown',
       publicationDate: ocrResult.publicationDate,
       analyzedAt: new Date().toISOString(),
       extractedText: ocrResult.extractedText || '',
@@ -121,10 +121,11 @@ export class AnalysisOrchestrator {
       analyses,
       summary,
       metadata: {
-        spiderId: ocrResult.spiderId,
+        spiderId: ocrResult.spiderId || territoryId?.split('_')[0] + '_' + territoryId?.split('_')[1] || 'unknown',
         editionNumber: ocrResult.editionNumber,
         power: ocrResult.metadata?.power,
         isExtraEdition: ocrResult.metadata?.isExtraEdition,
+        pdfUrl: ocrResult.pdfUrl || `https://gazette.${territoryId || 'unknown'}.pdf`,
       },
     };
 

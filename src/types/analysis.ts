@@ -117,11 +117,14 @@ export type EntityType =
   | 'decree_reference';
 
 /**
- * Message for analysis queue
+ * Message for analysis queue (lightweight - references OCR result in KV)
  */
 export interface AnalysisQueueMessage {
   jobId: string;
-  ocrResult: OcrResult;
+  ocrJobId: string; // Reference to OCR result in KV storage
+  territoryId: string;
+  gazetteDate: string;
+  pdfUrl?: string;
   analyzers?: string[]; // Specific analyzers to run, or all if undefined
   queuedAt: string;
 }

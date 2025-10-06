@@ -90,11 +90,17 @@ export interface WebhookNotification {
   /** Gazette information */
   gazette: {
     territoryId: string;
-    territoryName?: string;
+    territoryName: string;
+    cityName: string;
+    stateCode: string;
+    stateName: string;
+    region: string;
+    formattedName: string;
     publicationDate: string;
     editionNumber?: string;
     pdfUrl: string;
     spiderId: string;
+    spiderType: string;
   };
   
   /** Analysis summary */
@@ -103,13 +109,35 @@ export interface WebhookNotification {
     totalFindings: number;
     highConfidenceFindings: number;
     categories: string[];
+    processingTimeMs: number;
+    analyzedAt: string;
+    textLength: number;
   };
   
   /** Matched findings */
   findings: WebhookFinding[];
   
-  /** Metadata */
-  metadata?: Record<string, any>;
+  /** Concurso-specific data (when event is concurso.detected) */
+  concurso?: {
+    totalVagas: number;
+    cargos: Array<{
+      cargo: string;
+      vagas: number;
+    }>;
+    inscricoes?: any;
+    provas?: any;
+    taxas?: any[];
+    keywords: string[];
+  };
+  
+  /** Enhanced metadata */
+  metadata: {
+    power?: string;
+    isExtraEdition?: boolean;
+    webhookVersion: string;
+    source: string;
+    crawledAt: string;
+  };
 }
 
 /**

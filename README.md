@@ -71,34 +71,33 @@ This is a TypeScript/Node.js port of the [querido-diario](https://github.com/okf
 ```
 querido-diario-workers/
 ├── src/
-│   ├── index.ts                  # Dispatcher worker
-│   ├── consumer.ts               # Queue consumer worker
+│   ├── worker.ts                 # Main worker (dispatcher + consumer)
 │   ├── ocr-worker.ts             # OCR processing worker
+│   ├── analysis-worker.ts        # AI analysis worker
+│   ├── webhook-worker.ts         # Notification worker
+│   ├── r2-server.ts              # R2 PDF server
 │   ├── types/                    # TypeScript interfaces
-│   │   ├── gazette.ts
-│   │   ├── spider-config.ts
-│   │   └── ocr.ts                # OCR types
-│   ├── services/
-│   │   ├── mistral-ocr.ts        # Mistral OCR service
-│   │   └── ocr-queue-sender.ts   # OCR queue sender
-│   ├── spiders/
-│   │   ├── base/                 # Base spider classes
-│   │   │   ├── base-spider.ts
-│   │   │   └── doem-spider.ts
-│   │   ├── configs/              # Spider configurations
-│   │   │   └── doem-cities.json
+│   ├── services/                 # Core services
+│   │   ├── mistral-ocr.ts        # Mistral OCR integration
+│   │   ├── analysis-orchestrator.ts  # AI analysis
+│   │   └── webhook-sender.ts     # Webhook notifications
+│   ├── spiders/                  # Spider system
+│   │   ├── base/                 # 23 spider implementations
+│   │   ├── configs/              # 20 platform configs (2,792 cities)
 │   │   └── registry.ts           # Spider factory
+│   ├── analyzers/                # AI analysis modules
 │   ├── testing/                  # Automated testing system
-│   │   ├── test-runner.ts
-│   │   └── validators/
-│   └── utils/                    # Utilities (HTTP, parsing, dates, logging)
-├── wrangler.jsonc                # Main worker configuration
-├── wrangler-ocr.jsonc            # OCR worker configuration
-├── package.json
-├── tsconfig.json
-├── README.md
-├── OCR_SYSTEM_DOCUMENTATION.md   # OCR system docs
-└── QUICK_START_OCR.md            # OCR quick start guide
+│   └── utils/                    # Utilities
+├── scripts/                      # Management scripts
+│   ├── remote-crawl.ts           # Remote execution
+│   ├── find-city.ts              # City lookup
+│   ├── setup-concursos-webhook.ts # Webhook setup
+│   ├── test-city.ts              # Single city testing
+│   └── test-platform.ts          # Platform testing
+├── wrangler*.jsonc               # Worker configurations (5)
+├── ARCHITECTURE.md               # Complete system architecture
+├── FLOW_REVIEW.md                # This document
+└── CITY_ID_STANDARDIZATION_PLAN.md # City naming standards
 ```
 
 ## Getting Started

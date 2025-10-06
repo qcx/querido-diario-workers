@@ -1,0 +1,22 @@
+{
+  // R2 Server Configuration
+  "name": "gazette-pdfs",
+  "account_id": "dd6e3021bfaef6eec1a68e26a593f4ca",
+  "main": "src/r2-server.ts",
+  "compatibility_date": "2024-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // R2 Bucket
+  "r2_buckets": [
+    {
+      "bucket_name": "gazette-pdfs",
+      "binding": "GAZETTE_PDFS"
+    }
+  ],
+
+  // Observability
+  "observability": {
+    "enabled": true
+  }
+}
+

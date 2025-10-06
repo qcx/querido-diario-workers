@@ -1,6 +1,7 @@
 {
   // Webhook Worker Configuration
   "name": "querido-diario-webhook-worker",
+  "account_id": "dd6e3021bfaef6eec1a68e26a593f4ca",
   "main": "src/webhook-worker.ts",
   "compatibility_date": "2024-10-01",
   "compatibility_flags": ["nodejs_compat"],
@@ -15,7 +16,7 @@
     "consumers": [
       {
         "queue": "querido-diario-webhook-queue",
-        "max_batch_size": 10,
+        "max_batch_size": 1,
         "max_batch_timeout": 30,
         "max_retries": 3,
         "dead_letter_queue": "querido-diario-webhook-dlq"
@@ -27,11 +28,11 @@
   "kv_namespaces": [
     {
       "binding": "WEBHOOK_SUBSCRIPTIONS",
-      "id": "YOUR_SUBSCRIPTIONS_KV_ID"
+      "id": "e92d5d945523420ba0fa684fbb2f7347"
     },
     {
       "binding": "WEBHOOK_DELIVERY_LOGS",
-      "id": "YOUR_DELIVERY_LOGS_KV_ID"
+      "id": "2a247b53d02044eab077db8772f9ff69"
     }
   ],
 

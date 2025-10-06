@@ -8,8 +8,9 @@ import { logger } from '../utils';
 
 export class MistralOcrService {
   private config: MistralOcrConfig;
+  private r2Bucket?: R2Bucket;
 
-  constructor(config: MistralOcrConfig) {
+  constructor(config: MistralOcrConfig & { r2Bucket?: R2Bucket }) {
     this.config = {
       endpoint: 'https://api.mistral.ai/v1/ocr',
       model: 'mistral-ocr-latest',
@@ -17,6 +18,7 @@ export class MistralOcrService {
       timeout: 120000,
       ...config,
     };
+    this.r2Bucket = config.r2Bucket;
   }
 
   /**
@@ -112,13 +114,46 @@ export class MistralOcrService {
   private async callMistralApi(pdfUrl: string, jobId: string): Promise<string> {
     logger.debug(`Calling Mistral OCR API for job ${jobId}`);
 
+    let finalPdfUrl = pdfUrl;
+
+    // If R2 is configured, download and upload to R2
+    if (this.r2Bucket) {
+      try {
+        logger.info(`Downloading PDF from ${pdfUrl} for R2 upload`);
+        
+        // Download PDF
+        const pdfResponse = await fetch(pdfUrl);
+        if (!pdfResponse.ok) {
+          throw new Error(`Failed to download PDF: ${pdfResponse.status}`);
+        }
+        
+        const pdfData = await pdfResponse.arrayBuffer();
+        const key = `pdfs/${jobId}_${Date.now()}.pdf`;
+        
+        // Upload to R2
+        logger.info(`Uploading PDF to R2: ${key}`);
+        await this.r2Bucket.put(key, pdfData, {
+          httpMetadata: {
+            contentType: 'application/pdf',
+          },
+        });
+        
+        // Get R2 public URL
+        finalPdfUrl = `https://gazette-pdfs.qconcursos.workers.dev/${key}`;
+        logger.info(`Using R2 URL for OCR: ${finalPdfUrl}`);
+      } catch (error: any) {
+        logger.error(`Failed to upload to R2, using original URL`, error);
+        // Fallback to original URL
+      }
+    }
+
     const payload = {
       model: this.config.model,
       document: {
         type: 'document_url',
-        document_url: pdfUrl,
+        document_url: finalPdfUrl
       },
-      include_image_base64: false,
+      include_image_base64: false
     };
 
     const response = await fetch(this.config.endpoint!, {
@@ -175,5 +210,56 @@ export class MistralOcrService {
     }
 
     return results;
+  }
+  
+  /**
+   * Generate mock OCR response for testing
+   */
+  private generateMockOcrResponse(pdfUrl: string, jobId: string): string {
+    logger.info(`Generating mock OCR response for job ${jobId}`);
+    
+    // Generate realistic mock content based on the URL
+    const mockContent = `
+# DIÁRIO OFICIAL - EDIÇÃO Nº 112
+
+**Data: 03 de Outubro de 2025**
+**Município: ${pdfUrl.includes('aam') ? 'Manaus - AM' : 'Município'}**
+
+## ATOS DO PODER EXECUTIVO
+
+### DECRETO Nº 2025/2025
+
+O PREFEITO MUNICIPAL, no uso de suas atribuições legais, DECRETA:
+
+Art. 1º - Fica autorizada a abertura de CONCURSO PÚBLICO para provimento de vagas no quadro permanente de servidores municipais.
+
+Art. 2º - As vagas disponíveis são:
+- 50 vagas para Professor de Educação Básica
+- 30 vagas para Enfermeiro
+- 20 vagas para Analista de Sistemas
+- 15 vagas para Engenheiro Civil
+
+### EDITAL DE CONCURSO PÚBLICO Nº 001/2025
+
+A Prefeitura Municipal torna público a abertura de inscrições para o CONCURSO PÚBLICO destinado ao preenchimento de vagas e formação de cadastro reserva.
+
+**PERÍODO DE INSCRIÇÕES**: 10/10/2025 a 10/11/2025
+**TAXA DE INSCRIÇÃO**: R$ 80,00 a R$ 120,00 conforme o cargo
+**PROVAS**: 15/12/2025
+
+Os candidatos aprovados serão nomeados sob o regime estatutário.
+
+### PROCESSO SELETIVO SIMPLIFICADO Nº 002/2025
+
+Fica aberto PROCESSO SELETIVO para contratação temporária de:
+- 10 Médicos Clínico Geral
+- 5 Psicólogos
+
+**Mock OCR generated for testing purposes**
+**Job ID**: ${jobId}
+**PDF URL**: ${pdfUrl}
+`;
+    
+    return mockContent;
   }
 }

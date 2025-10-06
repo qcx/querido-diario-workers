@@ -91,9 +91,18 @@ export function toISODate(date: Date): string {
 /**
  * Parses an ISO date string
  * @param isoDate ISO date string (YYYY-MM-DD)
- * @returns Date object
+ * @returns Date object normalized to UTC midnight
  */
 export function fromISODate(isoDate: string): Date {
+  // Create date at UTC midnight to avoid timezone issues
+  const dateParts = isoDate.split('-');
+  if (dateParts.length === 3) {
+    const year = parseInt(dateParts[0], 10);
+    const month = parseInt(dateParts[1], 10) - 1; // months are 0-indexed
+    const day = parseInt(dateParts[2], 10);
+    return new Date(Date.UTC(year, month, day, 0, 0, 0, 0));
+  }
+  // Fallback to parseISO if format is unexpected
   return parseISO(isoDate);
 }
 

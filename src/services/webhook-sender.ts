@@ -11,6 +11,7 @@ import {
   WebhookFinding,
 } from '../types';
 import { WebhookFilterService } from './webhook-filter';
+import { TerritoryService } from './territory-service';
 import { logger } from '../utils';
 
 export class WebhookSenderService {
@@ -23,9 +24,10 @@ export class WebhookSenderService {
   }
 
   /**
-   * Process analysis and send to matching webhooks
+   * Process analysis and collect webhook messages for matching subscriptions
    */
-  async processAnalysis(analysis: GazetteAnalysis): Promise<number> {
+  async processAnalysisForWebhooks(analysis: GazetteAnalysis): Promise<WebhookQueueMessage[]> {
+    const webhookMessages: WebhookQueueMessage[] = [];
     logger.info('Processing analysis for webhooks', {
       jobId: analysis.jobId,
       territoryId: analysis.territoryId,
@@ -75,12 +77,19 @@ export class WebhookSenderService {
           findings
         );
 
-        // Send to queue
-        await this.sendToQueue(subscription, notification);
-
+        // Create webhook message
+        const message: WebhookQueueMessage = {
+          messageId: `msg-${Date.now()}-${Math.random().toString(36).substring(7)}`,
+          subscriptionId: subscription.id,
+          notification,
+          queuedAt: new Date().toISOString(),
+          attempts: 0,
+        };
+        
+        webhookMessages.push(message);
         sentCount++;
 
-        logger.info('Sent analysis to webhook queue', {
+        logger.info('Prepared webhook message', {
           subscriptionId: subscription.id,
           clientId: subscription.clientId,
           findingsCount: findings.length,
@@ -92,7 +101,12 @@ export class WebhookSenderService {
       }
     }
 
-    return sentCount;
+    logger.info(`Collected ${webhookMessages.length} webhook messages`, {
+      analysisJobId: analysis.jobId,
+      messageCount: webhookMessages.length,
+    });
+    
+    return webhookMessages;
   }
 
   /**
@@ -124,7 +138,7 @@ export class WebhookSenderService {
   }
 
   /**
-   * Create webhook notification
+   * Create enriched webhook notification
    */
   private createNotification(
     subscription: WebhookSubscription,
@@ -140,6 +154,12 @@ export class WebhookSenderService {
       event = 'licitacao.detected';
     }
 
+    // Get enriched territory information
+    const territoryInfo = TerritoryService.createEnrichedTerritoryInfo(analysis.territoryId);
+
+    // Extract concurso-specific data from findings
+    const concursoData = this.extractConcursoData(findings, analysis);
+
     return {
       notificationId: `notif-${Date.now()}-${Math.random().toString(36).substring(7)}`,
       subscriptionId: subscription.id,
@@ -148,58 +168,134 @@ export class WebhookSenderService {
       timestamp: new Date().toISOString(),
       gazette: {
         territoryId: analysis.territoryId,
-        territoryName: this.getTerritoryName(analysis.territoryId),
+        territoryName: territoryInfo.territoryName,
+        cityName: territoryInfo.cityName,
+        stateCode: territoryInfo.stateCode,
+        stateName: territoryInfo.stateName,
+        region: territoryInfo.region,
+        formattedName: territoryInfo.formattedName,
         publicationDate: analysis.publicationDate,
         editionNumber: analysis.metadata?.editionNumber,
         pdfUrl: this.getPdfUrl(analysis),
-        spiderId: analysis.metadata?.spiderId || 'unknown',
+        spiderId: analysis.metadata?.spiderId || analysis.territoryId || 'unknown',
+        spiderType: territoryInfo.spiderType,
       },
       analysis: {
         jobId: analysis.jobId,
         totalFindings: analysis.summary.totalFindings,
         highConfidenceFindings: analysis.summary.highConfidenceFindings,
         categories: analysis.summary.categories,
+        processingTimeMs: analysis.analyses.reduce((total, a) => total + (a.processingTimeMs || 0), 0),
+        analyzedAt: analysis.analyzedAt,
+        textLength: analysis.textLength,
       },
       findings,
+      concurso: event === 'concurso.detected' ? concursoData : undefined,
       metadata: {
         power: analysis.metadata?.power,
         isExtraEdition: analysis.metadata?.isExtraEdition,
+        webhookVersion: '2.0',
+        source: 'querido-diario',
+        crawledAt: new Date().toISOString(),
       },
     };
   }
 
   /**
-   * Send notification to webhook queue
+   * Send webhook messages in batch
    */
-  private async sendToQueue(
-    subscription: WebhookSubscription,
-    notification: WebhookNotification
-  ): Promise<void> {
-    const message: WebhookQueueMessage = {
-      messageId: `msg-${Date.now()}-${Math.random().toString(36).substring(7)}`,
-      subscriptionId: subscription.id,
-      notification,
-      queuedAt: new Date().toISOString(),
-      attempts: 0,
-    };
+  async sendWebhookBatch(messages: WebhookQueueMessage[]): Promise<void> {
+    if (messages.length === 0) {
+      return;
+    }
 
-    await this.webhookQueue.send(message);
+    try {
+      // Wrap messages for Cloudflare Queue format
+      const wrappedMessages = messages.map(msg => ({ body: msg }));
+      await this.webhookQueue.sendBatch(wrappedMessages);
+      
+      logger.info(`Sent ${messages.length} webhook messages in batch`, {
+        count: messages.length,
+      });
+    } catch (error: any) {
+      logger.error(`Failed to send webhook batch`, error, {
+        count: messages.length,
+      });
+      
+      // Fallback to individual sends
+      for (const message of messages) {
+        try {
+          await this.webhookQueue.send(message);
+        } catch (individualError: any) {
+          logger.error(`Failed to send individual webhook message`, individualError, {
+            messageId: message.messageId,
+          });
+        }
+      }
+    }
   }
 
   /**
-   * Get territory name (placeholder - should use a territory database)
+   * Extract concurso-specific data from findings
    */
-  private getTerritoryName(_territoryId: string): string {
-    // TODO: Implement territory name lookup
-    return _territoryId;
+  private extractConcursoData(findings: WebhookFinding[], analysis: GazetteAnalysis): any {
+    const concursoData: any = {
+      totalVagas: 0,
+      cargos: [],
+      inscricoes: null,
+      provas: null,
+      taxas: [],
+      keywords: []
+    };
+
+    for (const finding of findings) {
+      // Extract keywords
+      if (finding.data.keyword) {
+        concursoData.keywords.push(finding.data.keyword);
+      }
+
+      // Extract job positions and vacancies
+      if (finding.data.cargo && finding.data.vagas) {
+        concursoData.cargos.push({
+          cargo: finding.data.cargo,
+          vagas: finding.data.vagas
+        });
+        concursoData.totalVagas += finding.data.vagas;
+      }
+
+      // Extract registration dates
+      if (finding.data.inscricoes) {
+        concursoData.inscricoes = finding.data.inscricoes;
+      }
+
+      // Extract exam dates
+      if (finding.data.provas) {
+        concursoData.provas = finding.data.provas;
+      }
+
+      // Extract fees
+      if (finding.data.taxas) {
+        concursoData.taxas.push(finding.data.taxas);
+      }
+    }
+
+    // Remove duplicates from keywords
+    concursoData.keywords = [...new Set(concursoData.keywords)];
+
+    // Only return if we found concurso-specific data
+    if (concursoData.totalVagas > 0 || concursoData.keywords.length > 0) {
+      return concursoData;
+    }
+
+    return null;
   }
 
   /**
    * Get PDF URL from analysis
    */
-  private getPdfUrl(_analysis: GazetteAnalysis): string {
-    // TODO: Get from OCR result or metadata
-    return 'https://example.com/gazette.pdf';
+  private getPdfUrl(analysis: GazetteAnalysis): string {
+    // Get PDF URL from OCR result metadata or construct a more meaningful placeholder
+    return analysis.metadata?.pdfUrl || `https://gazette-${analysis.territoryId}-${analysis.publicationDate}.pdf`;
   }
 
   /**

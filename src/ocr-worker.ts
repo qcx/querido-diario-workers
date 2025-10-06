@@ -16,6 +16,9 @@ export interface Env {
   
   // Optional: KV for storing results
   OCR_RESULTS?: KVNamespace;
+  
+  // R2 bucket for storing PDFs
+  GAZETTE_PDFS?: R2Bucket;
 }
 
 /**
@@ -27,9 +30,11 @@ export default {
 
     const ocrService = new MistralOcrService({
       apiKey: env.MISTRAL_API_KEY,
+      r2Bucket: env.GAZETTE_PDFS,
     });
 
     const results: OcrResult[] = [];
+    const successfulResults: { ocrMessage: OcrQueueMessage; result: OcrResult }[] = [];
 
     for (const message of batch.messages) {
       try {
@@ -41,6 +46,8 @@ export default {
           territoryId: ocrMessage.territoryId,
         });
 
+        let result: OcrResult;
+
         // Check if already processed (KV cache)
         if (env.OCR_RESULTS) {
           const cached = await env.OCR_RESULTS.get(`ocr:${ocrMessage.jobId}`);
@@ -48,47 +55,30 @@ export default {
             logger.info(`OCR job ${ocrMessage.jobId} already processed (cache hit)`, {
               jobId: ocrMessage.jobId,
             });
-            message.ack();
-            continue;
+            result = JSON.parse(cached);
+          } else {
+            // Process the PDF
+            result = await ocrService.processPdf(ocrMessage);
+            
+            // Store result in KV if available
+            await env.OCR_RESULTS.put(
+              `ocr:${ocrMessage.jobId}`,
+              JSON.stringify(result),
+              {
+                expirationTtl: 86400 * 7, // 7 days
+              }
+            );
           }
+        } else {
+          // No KV storage available, always process
+          result = await ocrService.processPdf(ocrMessage);
         }
 
-        // Process the PDF
-        const result = await ocrService.processPdf(ocrMessage);
         results.push(result);
 
-        // Store result in KV if available
-        if (env.OCR_RESULTS) {
-          await env.OCR_RESULTS.put(
-            `ocr:${ocrMessage.jobId}`,
-            JSON.stringify(result),
-            {
-              expirationTtl: 86400 * 7, // 7 days
-            }
-          );
-        }
-
-        // Send to analysis queue if OCR was successful
-        if (result.status === 'success' && env.ANALYSIS_QUEUE) {
-          try {
-            const analysisMessage: AnalysisQueueMessage = {
-              jobId: `analysis-${ocrMessage.jobId}`,
-              ocrResult: result,
-              queuedAt: new Date().toISOString(),
-            };
-
-            await env.ANALYSIS_QUEUE.send(analysisMessage);
-
-            logger.info(`Sent OCR result to analysis queue`, {
-              jobId: ocrMessage.jobId,
-              analysisJobId: analysisMessage.jobId,
-            });
-          } catch (error: any) {
-            logger.error(`Failed to send to analysis queue`, error, {
-              jobId: ocrMessage.jobId,
-            });
-            // Don't fail the OCR job if analysis queueing fails
-          }
+        // Collect successful OCR results for batch sending (both cached and new)
+        if (result.status === 'success') {
+          successfulResults.push({ ocrMessage, result });
         }
 
         // Acknowledge message
@@ -98,7 +88,6 @@ export default {
           jobId: ocrMessage.jobId,
           status: result.status,
           textLength: result.extractedText?.length || 0,
-          sentToAnalysis: result.status === 'success' && !!env.ANALYSIS_QUEUE,
         });
       } catch (error: any) {
         logger.error(`Error processing OCR message`, error, {
@@ -110,10 +99,53 @@ export default {
       }
     }
 
+    // Send successful results to analysis queue in batch
+    if (successfulResults.length > 0 && env.ANALYSIS_QUEUE) {
+      try {
+        const analysisMessages: AnalysisQueueMessage[] = successfulResults.map(({ ocrMessage, result }) => ({
+          jobId: `analysis-${ocrMessage.jobId}`,
+          ocrJobId: ocrMessage.jobId,
+          territoryId: ocrMessage.territoryId,
+          gazetteDate: ocrMessage.publicationDate,
+          pdfUrl: ocrMessage.pdfUrl,
+          queuedAt: new Date().toISOString(),
+        }));
+
+        // Wrap messages for Cloudflare Queue format and send in batch
+        const wrappedMessages = analysisMessages.map(msg => ({ body: msg }));
+        await env.ANALYSIS_QUEUE.sendBatch(wrappedMessages);
+
+        logger.info(`Sent ${analysisMessages.length} OCR results to analysis queue in batch`, {
+          count: analysisMessages.length,
+        });
+      } catch (error: any) {
+        logger.error(`Failed to send batch to analysis queue`, error);
+        // Fallback to individual sends
+        for (const { ocrMessage, result } of successfulResults) {
+          try {
+            const analysisMessage: AnalysisQueueMessage = {
+              jobId: `analysis-${ocrMessage.jobId}`,
+              ocrJobId: ocrMessage.jobId,
+              territoryId: ocrMessage.territoryId,
+              gazetteDate: ocrMessage.publicationDate,
+              pdfUrl: ocrMessage.pdfUrl,
+              queuedAt: new Date().toISOString(),
+            };
+            await env.ANALYSIS_QUEUE.send(analysisMessage);
+          } catch (individualError: any) {
+            logger.error(`Failed to send individual analysis message`, individualError, {
+              jobId: ocrMessage.jobId,
+            });
+          }
+        }
+      }
+    }
+
     logger.info(`OCR Worker: Batch processing completed`, {
       total: batch.messages.length,
       successful: results.filter(r => r.status === 'success').length,
       failed: results.filter(r => r.status === 'failure').length,
+      sentToAnalysis: successfulResults.length,
     });
   },
 };
