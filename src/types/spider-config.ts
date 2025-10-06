@@ -88,7 +88,15 @@ export interface InstarConfig {
 export interface DospConfig {
   type: 'dosp';
   /** Start URL for the municipality (e.g., "https://www.imprensaoficialmunicipal.com.br/horizonte") */
-  url: string;
+  url?: string;
+  /** API URL for DOE SP direct access (e.g., "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured") */
+  apiUrl?: string;
+  /** Journal ID for DOE SP API (defaults to Municípios) */
+  journalId?: string;
+  /** Section ID for DOE SP API (defaults to Atos Municipais) */
+  sectionId?: string;
+  /** Territory ID filter for specific municipalities in DOE SP */
+  territoryFilter?: string;
 }
 
 /**

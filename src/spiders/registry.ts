@@ -32,6 +32,7 @@ import municipioOnlineCitiesConfig from './configs/municipio-online-cities.json'
 import atendeV2CitiesConfig from './configs/atende-v2-cities.json';
 import domScCitiesConfig from './configs/dom-sc-cities.json';
 import sigpubCitiesConfig from './configs/sigpub-cities.json';
+import doeSpCitiesConfig from './configs/doe-sp-cities.json';
 
 /**
  * Spider registry - maps spider IDs to configurations
@@ -146,6 +147,11 @@ class SpiderRegistry {
     
     // Load SIGPub cities
     for (const config of sigpubCitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load DOE SP cities
+    for (const config of doeSpCitiesConfig as SpiderConfig[]) {
       this.configs.set(config.id, config);
     }
   }
