@@ -178,6 +178,14 @@ export interface WebhookQueueMessage {
   
   /** Attempt count */
   attempts?: number;
+  
+  /** Metadata for processing */
+  metadata?: {
+    /** Crawl job ID for telemetry */
+    crawlJobId?: string;
+    /** Territory ID for telemetry */
+    territoryId?: string;
+  };
 }
 
 /**
@@ -190,8 +198,8 @@ export interface WebhookDeliveryResult {
   /** Subscription ID */
   subscriptionId: string;
   
-  /** Delivery status */
-  status: 'success' | 'failure' | 'retry';
+  /** Delivery status - matches database webhook_status enum */
+  status: 'sent' | 'failed' | 'retry' | 'pending';
   
   /** HTTP status code */
   statusCode?: number;

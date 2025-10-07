@@ -1,8 +1,8 @@
-# Querido Diário Workers - Complete System Architecture
+# Goodfellow - Complete System Architecture
 
 ## 🏗️ System Overview
 
-The Querido Diário Workers system is a distributed Cloudflare Workers-based infrastructure designed to crawl, process, and analyze Brazilian official gazettes from 2,792 municipalities across 20 different platforms.
+Goodfellow is a unified Cloudflare Worker that processes Brazilian official gazettes from 3,107 municipalities across 20+ different platforms. While it runs as a single worker, it maintains a queue-based architecture where each execution does ONE job and dies.
 
 ## 🔄 Complete Data Flow
 
@@ -50,14 +50,15 @@ The Querido Diário Workers system is a distributed Cloudflare Workers-based inf
 
 ## 🏭 Infrastructure Components
 
-### Workers (5)
-| Worker | File | Purpose |
-|--------|------|---------|
-| **querido-diario-worker** | `src/worker.ts` | Main dispatcher + queue consumer |
-| **querido-diario-ocr-worker** | `src/ocr-worker.ts` | PDF OCR processing |
-| **querido-diario-analysis-worker** | `src/analysis-worker.ts` | Content analysis |
-| **querido-diario-webhook-worker** | `src/webhook-worker.ts` | Notifications |
-| **gazette-pdfs** | `src/r2-server.ts` | R2 PDF server |
+### Goodfellow Worker (Unified)
+| Component | File | Purpose |
+|-----------|------|---------|
+| **Goodfellow** | `src/goodfellow-worker.ts` | Main entry point (HTTP + all queues) |
+| **Crawl Processor** | `src/goodfellow/crawl-processor.ts` | Crawl queue consumer |
+| **OCR Processor** | `src/goodfellow/ocr-processor.ts` | OCR queue consumer |
+| **Analysis Processor** | `src/goodfellow/analysis-processor.ts` | Analysis queue consumer |
+| **Webhook Processor** | `src/goodfellow/webhook-processor.ts` | Webhook queue consumer |
+| **R2 PDF Server** | `src/r2-server.ts` | R2 PDF server (separate) |
 
 ### Queues (4)
 | Queue | Consumer | Producer |

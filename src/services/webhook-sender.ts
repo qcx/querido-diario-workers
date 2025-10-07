@@ -28,7 +28,11 @@ export class WebhookSenderService {
   /**
    * Process analysis and collect webhook messages for matching subscriptions
    */
-  async processAnalysisForWebhooks(analysis: GazetteAnalysis): Promise<WebhookQueueMessage[]> {
+  async processAnalysisForWebhooks(
+    analysis: GazetteAnalysis, 
+    crawlJobId?: string,
+    territoryId?: string
+  ): Promise<WebhookQueueMessage[]> {
     const webhookMessages: WebhookQueueMessage[] = [];
     logger.info('Processing analysis for webhooks', {
       jobId: analysis.jobId,
@@ -40,7 +44,7 @@ export class WebhookSenderService {
 
     if (subscriptions.length === 0) {
       logger.info('No active webhook subscriptions');
-      return 0;
+      return [];
     }
 
     let sentCount = 0;
@@ -86,6 +90,10 @@ export class WebhookSenderService {
           notification,
           queuedAt: new Date().toISOString(),
           attempts: 0,
+          metadata: {
+            crawlJobId: crawlJobId || analysis.jobId,
+            territoryId: territoryId || analysis.territoryId,
+          },
         };
         
         webhookMessages.push(message);
@@ -379,8 +387,9 @@ export class WebhookSenderService {
    * Get PDF URL from analysis
    */
   private getPdfUrl(analysis: GazetteAnalysis): string {
-    // Get PDF URL from OCR result metadata or construct a more meaningful placeholder
-    return analysis.metadata?.pdfUrl || `https://gazette-${analysis.territoryId}-${analysis.publicationDate}.pdf`;
+    // TODO: Get PDF URL from gazette record in database
+    // For now, construct a placeholder URL
+    return `https://querido-diario.ok.org.br/diarios/${analysis.territoryId}/${analysis.publicationDate}`;
   }
 
   /**

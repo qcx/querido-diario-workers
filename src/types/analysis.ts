@@ -59,6 +59,8 @@ export interface GazetteAnalysis {
     highConfidenceFindings: number;
     categories: string[];
     keywords: string[];
+    deduplicationApplied?: boolean;
+    duplicatesRemoved?: number;
   };
   
   // Metadata

@@ -35,7 +35,7 @@ export class MistralOcrService {
 
     try {
       // Call Mistral API with PDF URL directly
-      const { extractedText, pagesProcessed } = await this.callMistralApi(message.pdfUrl, message.jobId);
+      const { extractedText, pagesProcessed, pdfR2Key } = await this.callMistralApi(message.pdfUrl, message.jobId);
       
       const processingTimeMs = Date.now() - startTime;
       
@@ -50,6 +50,7 @@ export class MistralOcrService {
         status: 'success',
         extractedText,
         pdfUrl: message.pdfUrl,
+        pdfR2Key,
         territoryId: message.territoryId,
         publicationDate: message.publicationDate,
         editionNumber: message.editionNumber,
@@ -124,10 +125,11 @@ export class MistralOcrService {
   /**
    * Call Mistral API for OCR
    */
-  private async callMistralApi(pdfUrl: string, jobId: string): Promise<{extractedText: string, pagesProcessed: number}> {
+  private async callMistralApi(pdfUrl: string, jobId: string): Promise<{extractedText: string, pagesProcessed: number, pdfR2Key?: string}> {
     logger.debug(`Calling Mistral OCR API for job ${jobId}`);
 
     let finalPdfUrl = pdfUrl;
+    let pdfR2Key: string | undefined;
 
     // If R2 is configured, download and upload to R2
     if (this.r2Bucket) {
@@ -142,6 +144,7 @@ export class MistralOcrService {
         
         const pdfData = await pdfResponse.arrayBuffer();
         const key = `pdfs/${jobId}_${Date.now()}.pdf`;
+        pdfR2Key = key; // Store the R2 key
         
         // Upload to R2
         logger.info(`Uploading PDF to R2: ${key}`);
@@ -206,7 +209,7 @@ export class MistralOcrService {
       docSizeBytes: result.usage_info?.doc_size_bytes,
     });
 
-    return { extractedText, pagesProcessed: result.pages.length };
+    return { extractedText, pagesProcessed: result.pages.length, pdfR2Key };
   }
 
   /**

@@ -33,6 +33,9 @@ export interface OcrQueueMessage {
     isExtraEdition?: boolean;
     sourceText?: string;
     crawlJobId?: string;
+    detectedDocumentType?: string;
+    detectedCategories?: string[];
+    keyEntities?: Record<string, any>;
   };
 }
 
@@ -51,6 +54,9 @@ export interface OcrResult {
   
   /** Original PDF URL */
   pdfUrl: string;
+  
+  /** R2 bucket key for the PDF */
+  pdfR2Key?: string;
   
   /** IBGE territory code */
   territoryId: string;
@@ -92,6 +98,9 @@ export interface OcrResult {
     isExtraEdition?: boolean;
     sourceText?: string;
     crawlJobId?: string;
+    detectedDocumentType?: string;
+    detectedCategories?: string[];
+    keyEntities?: Record<string, any>;
   };
 }
 

@@ -7,6 +7,7 @@ import {
   GazetteAnalysis,
   AnalysisResult,
   AnalysisConfig,
+  Finding,
 } from '../types';
 import {
   BaseAnalyzer,
@@ -16,6 +17,13 @@ import {
   ConcursoAnalyzer,
 } from '../analyzers';
 import { logger } from '../utils';
+
+interface AnalysisContext {
+  documentTypes: Array<{ type: string; confidence: number }>;
+  categories: Set<string>;
+  highConfidenceFindings: Finding[];
+  keyEntities: Record<string, any>;
+}
 
 export class AnalysisOrchestrator {
   private analyzers: BaseAnalyzer[] = [];
@@ -99,24 +107,42 @@ export class AnalysisOrchestrator {
     });
 
     const analyses: AnalysisResult[] = [];
+    const context: AnalysisContext = {
+      documentTypes: [],
+      categories: new Set<string>(),
+      highConfidenceFindings: [],
+      keyEntities: {},
+    };
 
-    // Run analyzers sequentially (could be parallelized if needed)
-    for (const analyzer of this.analyzers) {
+    // Phase 1: Run pattern-based analyzers first (keyword, concurso)
+    const patternAnalyzers = this.analyzers.filter(a => 
+      ['keyword', 'concurso', 'entity'].includes(a.getType())
+    );
+    
+    for (const analyzer of patternAnalyzers) {
       try {
         const result = await analyzer.analyze(ocrResult);
         analyses.push(result);
+        this.updateContext(context, result);
       } catch (error: any) {
-        logger.error(`Analyzer ${analyzer.getId()} failed`, error);
-        analyses.push({
-          analyzerId: analyzer.getId(),
-          analyzerType: analyzer.getType(),
-          status: 'failure',
-          findings: [],
-          processingTimeMs: 0,
-          error: {
-            message: error.message,
-          },
-        });
+        logger.error(`Pattern analyzer ${analyzer.getId()} failed`, error);
+        analyses.push(this.createFailureResult(analyzer, error));
+      }
+    }
+
+    // Phase 2: Run AI analyzer with enriched context
+    const aiAnalyzers = this.analyzers.filter(a => a.getType() === 'ai');
+    
+    for (const analyzer of aiAnalyzers) {
+      try {
+        // Enhance AI analyzer with context if possible
+        const enrichedOcrResult = this.enrichOcrResultWithContext(ocrResult, context);
+        const result = await analyzer.analyze(enrichedOcrResult);
+        analyses.push(result);
+        this.updateContext(context, result);
+      } catch (error: any) {
+        logger.error(`AI analyzer ${analyzer.getId()} failed`, error);
+        analyses.push(this.createFailureResult(analyzer, error));
       }
     }
 
@@ -213,5 +239,81 @@ export class AnalysisOrchestrator {
    */
   getAnalyzers(): BaseAnalyzer[] {
     return [...this.analyzers];
+  }
+
+  /**
+   * Update analysis context with findings
+   */
+  private updateContext(context: AnalysisContext, result: AnalysisResult): void {
+    if (result.status !== 'success') return;
+
+    for (const finding of result.findings) {
+      // Track high confidence findings
+      if (finding.confidence >= 0.8) {
+        context.highConfidenceFindings.push(finding);
+      }
+
+      // Track document types (from concurso analyzer)
+      if (finding.type === 'concurso' && finding.data.documentType) {
+        context.documentTypes.push({
+          type: finding.data.documentType,
+          confidence: finding.confidence,
+        });
+      }
+
+      // Track categories
+      if (finding.data.category) {
+        context.categories.add(finding.data.category);
+      }
+
+      // Track key entities
+      if (finding.type.startsWith('entity:')) {
+        const entityType = finding.type.split(':')[1];
+        if (!context.keyEntities[entityType]) {
+          context.keyEntities[entityType] = [];
+        }
+        context.keyEntities[entityType].push(finding.data);
+      }
+    }
+  }
+
+  /**
+   * Enrich OCR result with analysis context for AI
+   */
+  private enrichOcrResultWithContext(ocrResult: OcrResult, context: AnalysisContext): OcrResult {
+    // If we detected specific document types, add context to metadata
+    if (context.documentTypes.length > 0) {
+      const primaryDocType = context.documentTypes
+        .sort((a, b) => b.confidence - a.confidence)[0];
+      
+      return {
+        ...ocrResult,
+        metadata: {
+          ...ocrResult.metadata,
+          detectedDocumentType: primaryDocType.type,
+          detectedCategories: Array.from(context.categories),
+          keyEntities: context.keyEntities,
+        },
+      };
+    }
+
+    return ocrResult;
+  }
+
+  /**
+   * Create failure result for analyzer
+   */
+  private createFailureResult(analyzer: BaseAnalyzer, error: any): AnalysisResult {
+    return {
+      analyzerId: analyzer.getId(),
+      analyzerType: analyzer.getType(),
+      status: 'failure',
+      findings: [],
+      processingTimeMs: 0,
+      error: {
+        message: error.message,
+        code: error.code,
+      },
+    };
   }
 }

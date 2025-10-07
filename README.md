@@ -1,17 +1,20 @@
-# Querido Diário Workers
+# Goodfellow
 
-Serverless crawler for Brazilian official gazettes (diários oficiais) using **Cloudflare Workers** and **Queues**.
+Unified gazette processing pipeline for Brazilian official gazettes using **Cloudflare Workers** and **Queues**.
 
 ## Features
 
+- ✅ **Unified Architecture**: Single worker handles all pipeline stages
+- ✅ **Queue-Based Processing**: Each execution does ONE job and dies
 - ✅ **Serverless**: Runs on Cloudflare Workers (no servers to manage)
-- ✅ **Scalable**: Uses Cloudflare Queues for distributed crawling
+- ✅ **Scalable**: Uses Cloudflare Queues for distributed processing
 - ✅ **TypeScript**: Fully typed codebase
 - ✅ **3,107 Cities**: 3,341 total configs with fallback system (**55.8% national coverage**)
-- ✅ **Lightweight**: Extracts gazette metadata and PDF URLs (no file downloads)
-- ✅ **Fast**: Average 400-500ms per city crawl
 - ✅ **OCR Integration**: Automatic PDF text extraction with Mistral OCR API
+- ✅ **AI Analysis**: OpenAI-powered content analysis and categorization
+- ✅ **Webhook Notifications**: Real-time alerts for relevant content
 - ✅ **Smart Caching**: KV-based deduplication to avoid reprocessing
+- ✅ **Fast**: Average 400-500ms per city crawl
 
 ## 📊 National Coverage
 
@@ -35,89 +38,92 @@ Serverless crawler for Brazilian official gazettes (diários oficiais) using **C
 | **MG** | Minas Gerais | 853 | 486 | 492 | **57.0%** | +6 | `███████████░░░░░░░░░` |
 | **RS** | Rio Grande do Sul | 497 | 278 | 281 | **55.9%** | +3 | `███████████░░░░░░░░░` |
 | **PR** | Paraná | 399 | 197 | 199 | **49.4%** | +2 | `██████████░░░░░░░░░░` |
-| **SE** | Sergipe | 75 | 28 | 28 | **37.3%** | +0 | `███████░░░░░░░░░░░░░` |
-| **GO** | Goiás | 246 | 88 | 88 | **35.8%** | +0 | `███████░░░░░░░░░░░░░` |
-| **RO** | Rondônia | 52 | 16 | 17 | **30.8%** | +1 | `██████░░░░░░░░░░░░░░` |
-| **ES** | Espírito Santo | 78 | 23 | 25 | **29.5%** | +2 | `██████░░░░░░░░░░░░░░` |
-| **RJ** | Rio de Janeiro | 92 | 20 | 20 | **21.7%** | +0 | `████░░░░░░░░░░░░░░░░` |
-| **PI** | Piauí | 224 | 31 | 31 | **13.8%** | +0 | `███░░░░░░░░░░░░░░░░░` |
-| **PB** | Paraíba | 223 | 30 | 31 | **13.5%** | +1 | `███░░░░░░░░░░░░░░░░░` |
-| **TO** | Tocantins | 139 | 18 | 18 | **12.9%** | +0 | `███░░░░░░░░░░░░░░░░░` |
-| **MA** | Maranhão | 217 | 23 | 23 | **10.6%** | +0 | `██░░░░░░░░░░░░░░░░░░` |
-| **MS** | Mato Grosso do Sul | 79 | 8 | 8 | **10.1%** | +0 | `██░░░░░░░░░░░░░░░░░░` |
-| **AP** | Amapá | 16 | 1 | 1 | **6.3%** | +0 | `█░░░░░░░░░░░░░░░░░░░` |
-| **AL** | Alagoas | 102 | 1 | 1 | **1.0%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
-| **PA** | Pará | 144 | 1 | 1 | **0.7%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
-| **DF** | Distrito Federal | 1 | 0 | 0 | **0.0%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
-| **RR** | Roraima | 15 | 0 | 0 | **0.0%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
-
-
-*Sistema de fallback implementado: múltiplas configurações por território garantem maior confiabilidade.*
 
 *Last updated: 2025-10-07*
 
 ## Architecture
 
+### Goodfellow Unified Worker
+
 ```
-┌──────────────────────────────────────────────────────────────────────┐
-│                      Cloudflare Infrastructure                        │
-├──────────────────────────────────────────────────────────────────────┤
-│                                                                        │
-│  HTTP Request → Dispatcher Worker → Crawl Queue → Consumer Worker    │
-│                                          ↓                             │
-│                                    Gazettes Found                     │
-│                                          ↓                             │
-│                                     OCR Queue → OCR Worker            │
-│                                                    ↓                   │
-│                                              Mistral OCR API          │
-│                                                    ↓                   │
-│                                              Extracted Text           │
-│                                                    ↓                   │
-│                                              KV Storage (optional)    │
-│                                                                        │
-│  1. POST /crawl with city list                                       │
-│  2. Enqueue tasks to Cloudflare Queue                                │
-│  3. Consumer workers process each city                                │
-│  4. Return gazette metadata + PDF URLs                                │
-│  5. Automatically send PDFs to OCR queue                              │
-│  6. OCR worker processes PDFs with Mistral                            │
-│  7. Store extracted text in KV                                        │
-│                                                                        │
-└──────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────┐
+│                            GOODFELLOW                                    │
+│                       (Unified Worker Pipeline)                          │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  HTTP Request                                                            │
+│       ↓                                                                  │
+│  [Goodfellow HTTP Handler]                                              │
+│       ↓                                                                  │
+│  gazette-crawl-queue → [Goodfellow Crawl Processor] → Dies             │
+│                                      ↓                                   │
+│                        gazette-ocr-queue → [Goodfellow OCR Processor]   │
+│                                                ↓        → Dies           │
+│                        querido-diario-analysis-queue                    │
+│                                      ↓                                   │
+│                        [Goodfellow Analysis Processor] → Dies           │
+│                                      ↓                                   │
+│                        querido-diario-webhook-queue                     │
+│                                      ↓                                   │
+│                        [Goodfellow Webhook Processor] → Dies            │
+│                                      ↓                                   │
+│                              Webhook Delivered                           │
+│                                                                          │
+│  Key: Each processor execution does ONE job then dies                   │
+│       Queue-based architecture preserved for reliability                │
+│       Single codebase for easier development and testing                │
+│                                                                          │
+└─────────────────────────────────────────────────────────────────────────┘
 ```
+
+### Why Goodfellow?
+
+**Before** (Multi-Worker):
+- 4 separate worker deployments
+- Complex local testing (queues don't work locally)
+- Difficult to debug across workers
+- More deployment overhead
+
+**After** (Goodfellow):
+- 1 unified worker deployment
+- Easy local testing (all in one codebase)
+- Simple debugging (complete pipeline in one place)
+- Same reliability (queue architecture preserved)
 
 ## Project Structure
 
 ```
-querido-diario-workers/
+goodfellow/
 ├── src/
-│   ├── worker.ts                 # Main worker (dispatcher + consumer)
-│   ├── ocr-worker.ts             # OCR processing worker
-│   ├── analysis-worker.ts        # AI analysis worker
-│   ├── webhook-worker.ts         # Notification worker
-│   ├── r2-server.ts              # R2 PDF server
-│   ├── types/                    # TypeScript interfaces
-│   ├── services/                 # Core services
-│   │   ├── mistral-ocr.ts        # Mistral OCR integration
+│   ├── goodfellow-worker.ts       # Unified worker entry point
+│   ├── goodfellow/                # Queue processors
+│   │   ├── crawl-processor.ts     # Crawl queue consumer
+│   │   ├── ocr-processor.ts       # OCR queue consumer
+│   │   ├── analysis-processor.ts  # Analysis queue consumer
+│   │   └── webhook-processor.ts   # Webhook queue consumer
+│   ├── types/                     # TypeScript interfaces
+│   ├── services/                  # Core services
+│   │   ├── mistral-ocr.ts         # Mistral OCR integration
 │   │   ├── analysis-orchestrator.ts  # AI analysis
-│   │   └── webhook-sender.ts     # Webhook notifications
-│   ├── spiders/                  # Spider system
-│   │   ├── base/                 # 25 spider implementations
-│   │   ├── configs/              # 22 platform configs (3,146 cities)
-│   │   └── registry.ts           # Spider factory
-│   ├── analyzers/                # AI analysis modules
-│   ├── testing/                  # Automated testing system
-│   └── utils/                    # Utilities
-├── scripts/                      # Management scripts
-│   ├── remote-crawl.ts           # Remote execution
-│   ├── find-city.ts              # City lookup
-│   ├── setup-concursos-webhook.ts # Webhook setup
-│   ├── test-city.ts              # Single city testing
-│   └── test-platform.ts          # Platform testing
-├── wrangler*.jsonc               # Worker configurations (5)
-├── ARCHITECTURE.md               # Complete system architecture
-├── FLOW_REVIEW.md                # This document
-└── CITY_ID_STANDARDIZATION_PLAN.md # City naming standards
+│   │   ├── webhook-sender.ts      # Webhook notifications
+│   │   └── database/              # PostgreSQL integration
+│   ├── spiders/                   # Spider system
+│   │   ├── base/                  # 25 spider implementations
+│   │   ├── configs/               # 22 platform configs (3,341 cities)
+│   │   └── registry.ts            # Spider factory
+│   ├── analyzers/                 # AI analysis modules
+│   ├── testing/                   # Automated testing system
+│   └── utils/                     # Utilities
+├── scripts/                       # Management scripts
+│   ├── remote-crawl.ts            # Remote execution
+│   ├── find-city.ts               # City lookup
+│   ├── deploy-goodfellow.ts       # Deployment script
+│   ├── disable-old-workers.ts     # Migration helper
+│   └── test-local-pipeline.ts     # Local testing
+├── wrangler-goodfellow.jsonc      # Unified configuration
+├── ARCHITECTURE.md                # Complete system architecture
+├── GOODFELLOW_MIGRATION_GUIDE.md  # Migration documentation
+└── SINGLE_VS_MULTI_WORKER_ANALYSIS.md  # Architecture comparison
 ```
 
 ## Getting Started
@@ -125,42 +131,62 @@ querido-diario-workers/
 ### Prerequisites
 
 - Node.js 18+
-- npm or pnpm
+- Bun or npm
 - Cloudflare account (for deployment)
+- Mistral API key (for OCR)
+- OpenAI API key (for AI analysis)
 
 ### Installation
 
 ```bash
-npm install
+bun install
 ```
 
 ### Development
 
-Run the unified worker locally:
+Run Goodfellow locally:
 
 ```bash
-npm run dev
+bun run goodfellow:dev
 ```
 
 ### Deployment
 
-Deploy the unified worker:
+#### Deploy to Staging
 
 ```bash
-npm run deploy
+# Set up secrets
+wrangler secret put MISTRAL_API_KEY --config wrangler-goodfellow.jsonc --env staging
+wrangler secret put OPENAI_API_KEY --config wrangler-goodfellow.jsonc --env staging
+wrangler secret put DATABASE_URL --config wrangler-goodfellow.jsonc --env staging
+
+# Deploy
+bun run goodfellow:deploy:staging
+```
+
+#### Deploy to Production
+
+```bash
+# Set up secrets
+wrangler secret put MISTRAL_API_KEY --config wrangler-goodfellow.jsonc --env production
+wrangler secret put OPENAI_API_KEY --config wrangler-goodfellow.jsonc --env production
+wrangler secret put DATABASE_URL --config wrangler-goodfellow.jsonc --env production
+
+# Deploy
+bun run goodfellow:deploy:production
 ```
 
 ## API Usage
 
 ### Start a Crawl
 
-**POST** `/crawl`
+**POST** `/crawl/cities`
 
 ```json
 {
-  "cities": ["ba_acajutiba", "ba_alagoinhas"],
-  "startDate": "2024-01-01",
-  "endDate": "2024-12-31"
+  "cities": ["am_1300144", "ba_2927408"],
+  "startDate": "2025-10-01",
+  "endDate": "2025-10-03"
 }
 ```
 
@@ -169,8 +195,27 @@ npm run deploy
 ```json
 {
   "success": true,
+  "message": "Crawl initiated for specified cities",
+  "crawlJobId": "crawl_abc123",
   "tasksEnqueued": 2,
-  "cities": ["ba_acajutiba", "ba_alagoinhas"]
+  "cities": [
+    {"id": "am_1300144", "name": "Apuí - AM"},
+    {"id": "ba_2927408", "name": "Salvador - BA"}
+  ],
+  "dateRange": {
+    "start": "2025-10-01",
+    "end": "2025-10-03"
+  }
+}
+```
+
+### Crawl Today & Yesterday
+
+**POST** `/crawl/today-yesterday`
+
+```json
+{
+  "platform": "sigpub"
 }
 ```
 
@@ -178,163 +223,162 @@ npm run deploy
 
 **GET** `/spiders`
 
+**GET** `/spiders?type=sigpub`
+
+### Health Check
+
+**GET** `/health/queue`
+
 ```json
 {
-  "total": 50,
-  "spiders": [
-    {
-      "id": "ba_acajutiba",
-      "name": "Acajutiba - BA",
-      "territoryId": "2900306",
-      "type": "doem",
-      "startDate": "2013-01-30"
-    }
-  ]
+  "status": "healthy",
+  "timestamp": "2025-10-07T12:00:00.000Z",
+  "queues": {
+    "crawl": {"configured": true},
+    "ocr": {"configured": true},
+    "analysis": {"configured": true},
+    "webhook": {"configured": true}
+  },
+  "config": {
+    "totalCitiesConfigured": 3341,
+    "batchSize": 100,
+    "expectedBatches": 34
+  }
 }
 ```
-
-### Filter by Type
-
-**GET** `/spiders?type=doem`
 
 ## Supported Platforms
 
 | Platform | Cities | Status |
 |----------|--------|--------|
-| **SIGPub** | 1,573 | ✅ |
+| **SIG Pub** | 1,723 | ✅ |
+| **Diário BA** | 407 | ✅ |
+| **DOM-SC** | 295 | ✅ |
 | **Instar** | 111 | ✅ |
 | **DOEM** | 56 | ✅ |
 | **DOSP** | 42 | ✅ |
 | **ADiarios V1** | 34 | ✅ |
 | **MunicipioOnline** | 26 | ✅ |
-| **AtendeV2** | 22 | ✅ |
-| **DIOF** | 20 | ✅ |
-| **DiarioOficialBR** | 10 | ✅ |
-| **Siganet** | 10 | ✅ |
-| **Modernizacao** | 7 | ✅ |
-| **BarcoDigital** | 7 | ✅ |
-| **ADiarios V2** | 5 | ⚠️ Stub |
-| **Aplus** | 4 | ✅ |
-| **Dioenet** | 4 | ✅ |
-| **AdministracaoPublica** | 3 | ✅ |
-| **PTIO** | 3 | ✅ |
+| **Atende V2** | 22 | ✅ |
 | **Acre** | 22 | ✅ |
-| **Espírito Santo** | 78 | ✅ |
-| **Total** | **2,037** | **36.6%** |
+| **DIOF** | 20 | ✅ |
+| **Others** | ~100 | ✅ |
+| **Total** | **3,341** | **55.8%** |
 
-### Platform Architecture Models
+See [ARCHITECTURE.md](ARCHITECTURE.md) for complete platform details.
 
-- **🔌 API-First** (Espírito Santo): JSON API with structured metadata
-- **🔍 Keyword Search** (Acre): Centralized HTML with search functionality  
-- **📄 Individual Sites** (Most platforms): Per-municipality websites
-- **🔄 Fallback System**: Multiple configs per territory for reliability
+## Pipeline Stages
 
-### Remaining Work
+### 1. Crawl
+- Spiders scrape gazette websites
+- Extracts metadata and PDF URLs
+- Sends to OCR queue
 
-- Other platforms: ~58 cities remaining
-- Rondônia state gazette integration
-- Advanced fallback mechanisms
+### 2. OCR
+- Downloads PDFs from source
+- Uploads to R2 storage (optional)
+- Processes with Mistral OCR API
+- Stores text in KV and database
+- Sends to analysis queue
 
-## OCR System
+### 3. Analysis
+- Keyword detection
+- Entity extraction
+- AI-powered categorization
+- Concurso público detection
+- Stores results in database
+- Sends relevant findings to webhook queue
 
-### Overview
+### 4. Webhook
+- Filters by subscriptions
+- Matches keywords/categories
+- Delivers notifications to endpoints
+- Tracks delivery status
 
-The OCR system automatically processes PDF documents from gazettes using **Mistral OCR API** (`mistral-ocr-latest`). When gazettes are found by spiders, their PDF URLs are automatically sent to an OCR queue for text extraction.
+## Local Testing
 
-### Features
-
-- ✅ **Automatic Processing**: PDFs are sent to OCR queue automatically after crawling
-- ✅ **Smart Caching**: Checks KV storage before processing to avoid duplicates
-- ✅ **Mistral OCR**: Uses state-of-the-art `mistral-ocr-latest` model
-- ✅ **Markdown Output**: Extracted text in clean markdown format
-- ✅ **Batch Processing**: Processes up to 5 PDFs simultaneously
-- ✅ **Error Handling**: Automatic retries and Dead Letter Queue for failures
-- ✅ **Metadata Preservation**: Maintains all gazette metadata with extracted text
-
-### Configuration
-
-See [OCR_SYSTEM_DOCUMENTATION.md](OCR_SYSTEM_DOCUMENTATION.md) and [QUICK_START_OCR.md](QUICK_START_OCR.md) for detailed setup instructions.
-
-**Quick setup:**
+### Test Complete Pipeline
 
 ```bash
-# 1. Configure Mistral API key
-wrangler secret put MISTRAL_API_KEY --config wrangler-ocr.jsonc
+# Test with mock data (no API calls)
+bun run test:local -- --city am_1300144
 
-# 2. Deploy OCR worker
-npm run deploy:ocr
+# Test with real OCR
+bun run test:local -- --city am_1300144 --enable-ocr
 
-# 3. (Optional) Create KV namespace for caching
-wrangler kv:namespace create "OCR_RESULTS"
+# Test with real webhooks
+bun run test:local -- --city am_1300144 --real-webhook
 ```
 
-### Performance
+### Test Single City
 
-- **Processing Time**: ~700ms for simple PDFs, 2-5s per page for complex documents
-- **Throughput**: 300-600 gazettes per hour
-- **Limits**: 50MB max file size, 1000 pages max per document
+```bash
+bun run test:city am_1300144
+```
 
-### Cost Estimation
+### Find Cities
 
-- **Cloudflare**: Free tier covers most usage (100k requests/day)
+```bash
+bun run find:city manaus
+```
+
+## Migration from Multi-Worker
+
+If migrating from the previous 4-worker architecture, see [GOODFELLOW_MIGRATION_GUIDE.md](GOODFELLOW_MIGRATION_GUIDE.md) for complete instructions.
+
+Quick overview:
+1. Deploy Goodfellow alongside existing workers
+2. Monitor for 24-48 hours
+3. Gradually disable old worker queue consumers
+4. Route HTTP traffic to Goodfellow
+5. Delete old workers after verification
+6. Clean up codebase
+
+## Monitoring
+
+### Key Metrics
+
+- **Queue Depths**: Monitor in Cloudflare dashboard
+- **Worker Invocations**: Check analytics for execution patterns
+- **Error Rates**: Track in observability logs
+- **Database Metrics**: Monitor gazette/OCR/analysis record creation
+- **Webhook Deliveries**: Track success rates
+
+### Cloudflare Dashboard
+
+1. Navigate to Workers & Pages → goodfellow
+2. Check Metrics tab for invocations and errors
+3. Check Logs tab for detailed execution logs
+4. Navigate to Queues to monitor queue depths
+
+## Cost Estimation
+
+- **Cloudflare Workers**: Free tier covers most usage (100k requests/day)
+- **Cloudflare Queues**: $0.40 per million messages
+- **Cloudflare KV**: $0.50 per million reads, $5 per million writes
+- **Cloudflare R2**: $0.015 per GB stored
 - **Mistral OCR**: ~$0.01 per page
-- **Example**: 1,000 gazettes/day ≈ $10-20/day
+- **OpenAI API**: ~$0.0001 per token
 
-## Output Format
-
-Each crawl returns gazette metadata:
-
-```json
-{
-  "spiderId": "ba_acajutiba",
-  "territoryId": "2900306",
-  "gazettes": [
-    {
-      "date": "2024-01-15",
-      "editionNumber": "1234",
-      "fileUrl": "https://doem.org.br/ba/acajutiba/diarios/...",
-      "isExtraEdition": false,
-      "power": "executive_legislative",
-      "territoryId": "2900306",
-      "scrapedAt": "2024-10-03T16:30:00.000Z"
-    }
-  ],
-  "stats": {
-    "totalFound": 1,
-    "dateRange": {
-      "start": "2024-01-01",
-      "end": "2024-12-31"
-    },
-    "requestCount": 12,
-    "executionTimeMs": 3450
-  }
-}
-```
+**Example monthly cost** (processing 1,000 gazettes/day):
+- Cloudflare: ~$10-20/month
+- Mistral OCR: ~$300-600/month (3-5 pages per gazette)
+- OpenAI: ~$50-100/month
+- **Total**: ~$360-720/month
 
 ## Development Roadmap
 
-- [x] Core infrastructure (types, utils, base classes)
-- [x] DOEM spider implementation (56 cities) ✅
-- [x] Unified worker (dispatcher + consumer)
-- [x] Instar spider (111 cities) ✅
-- [x] DOSP spider (42 cities) ✅
-- [x] ADiarios V1 spider (34 cities) ✅
-- [x] DIOF spider (20 cities) ✅
-- [x] BarcoDigital spider (7 cities) ✅
-- [x] Siganet spider (10 cities) ✅
-- [x] DiarioOficialBR spider (10 cities) ✅
-- [x] Modernizacao spider (7 cities) ✅
-- [x] Aplus spider (4 cities) ✅
-- [x] Dioenet spider (4 cities) ✅
-- [x] AdministracaoPublica spider (3 cities) ✅
-- [x] PTIO spider (3 cities) ✅
-- [x] Acre spider (22 cities) ✅ **NEW**
-- [x] Espírito Santo spider (78 cities) ✅ **NEW**
-- [ ] ADiarios V2 spider (5 cities) - requires browser automation
-- [ ] Remaining platforms (~158 cities)
-- [ ] Storage integration (D1/KV/R2)
-- [ ] Monitoring and alerting
-- [ ] PDF download worker (optional)
+- [x] Core infrastructure and 20+ spider platforms ✅
+- [x] Unified worker architecture ✅
+- [x] OCR processing with Mistral ✅
+- [x] AI analysis with OpenAI ✅
+- [x] Webhook notifications ✅
+- [x] Database integration (PostgreSQL) ✅
+- [x] **Goodfellow unified worker** ✅ **NEW**
+- [ ] Enhanced monitoring and alerting
+- [ ] Admin dashboard
+- [ ] Expand coverage to remaining municipalities
+- [ ] Performance optimizations
 
 ## Contributing
 
@@ -349,3 +393,7 @@ Contributions are welcome! Please:
 ## License
 
 MIT License
+
+---
+
+**Goodfellow** - Named for its mission to be a good fellow to Brazilian municipalities, helping make official gazette data more accessible and useful.

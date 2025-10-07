@@ -1,7 +1,7 @@
 {
-  "name": "querido-diario-workers",
-  "version": "1.0.0",
-  "description": "Serverless crawler for Brazilian official gazettes using Cloudflare Workers",
+  "name": "goodfellow",
+  "version": "2.0.0",
+  "description": "Unified gazette processing pipeline for Brazilian official gazettes",
   "main": "src/index.ts",
   "type": "module",
   "directories": {
@@ -38,7 +38,15 @@
     "queue:create:analysis": "wrangler queues create querido-diario-analysis-queue",
     "dev:webhook": "wrangler dev --config wrangler-webhook.jsonc",
     "deploy:webhook": "wrangler deploy --config wrangler-webhook.jsonc",
-    "queue:create:webhook": "wrangler queues create querido-diario-webhook-queue"
+    "queue:create:webhook": "wrangler queues create querido-diario-webhook-queue",
+    "deploy:staging": "wrangler deploy --config wrangler-goodfellow.jsonc --env staging",
+    "deploy:goodfellow": "npx tsx scripts/deploy-goodfellow.ts",
+    "deploy:goodfellow:production": "npx tsx scripts/deploy-goodfellow.ts --production",
+    "old:dev": "wrangler dev --config archive/old-configs/wrangler.jsonc",
+    "old:deploy": "wrangler deploy --config archive/old-configs/wrangler.jsonc",
+    "old:deploy:ocr": "wrangler deploy --config archive/old-configs/wrangler-ocr.jsonc",
+    "old:deploy:analysis": "wrangler deploy --config archive/old-configs/wrangler-analysis.jsonc",
+    "old:deploy:webhook": "wrangler deploy --config archive/old-configs/wrangler-webhook.jsonc"
   },
   "keywords": [
     "cloudflare-workers",

@@ -21,23 +21,38 @@ export class AIAnalyzer extends BaseAnalyzer {
     super('ai-analyzer', 'ai', config);
     
     this.apiKey = config.apiKey;
-    this.model = config.model || 'gpt-4.1-mini';
+    this.model = config.model || 'gpt-4o-mini';
     this.prompts = config.prompts || this.getDefaultPrompts();
   }
 
   protected async performAnalysis(ocrResult: OcrResult): Promise<Finding[]> {
     const findings: Finding[] = [];
 
-    // Limit text length to avoid token limits
-    const maxTextLength = 8000;
+    // GPT-4o-mini supports 16k tokens (~64k characters)
+    // Using 50k chars to leave room for prompts and responses
+    const maxTextLength = 50000;
     const extractedText = ocrResult.extractedText || '';
     const text = extractedText.length > maxTextLength
       ? extractedText.substring(0, maxTextLength) + '...'
       : extractedText;
 
-    for (const prompt of this.prompts) {
+    // Check if we have detected document type context
+    const detectedDocType = ocrResult.metadata?.detectedDocumentType;
+    const detectedCategories = ocrResult.metadata?.detectedCategories || [];
+    
+    // Use context-aware prompts if document type is detected
+    let prompts = this.prompts;
+    if (detectedDocType) {
+      const contextPrompts = this.getContextAwarePrompts(detectedDocType, detectedCategories);
+      if (contextPrompts.length > 0) {
+        prompts = [...contextPrompts, ...this.prompts.filter(p => p.name === 'urgency_assessment')];
+        logger.info(`Using context-aware prompts for document type: ${detectedDocType}`);
+      }
+    }
+
+    for (const prompt of prompts) {
       try {
-        const result = await this.runAIAnalysis(text, prompt);
+        const result = await this.runAIAnalysis(text, prompt, ocrResult.metadata);
         findings.push(...result);
       } catch (error: any) {
         logger.error(`AI analysis failed for prompt ${prompt.name}`, error);
@@ -50,7 +65,7 @@ export class AIAnalyzer extends BaseAnalyzer {
   /**
    * Run AI analysis with a specific prompt
    */
-  private async runAIAnalysis(text: string, prompt: AIAnalysisPrompt): Promise<Finding[]> {
+  private async runAIAnalysis(text: string, prompt: AIAnalysisPrompt, metadata?: any): Promise<Finding[]> {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -231,5 +246,131 @@ Consider:
    */
   getPrompts(): AIAnalysisPrompt[] {
     return [...this.prompts];
+  }
+
+  /**
+   * Get context-aware prompts based on detected document type
+   */
+  private getContextAwarePrompts(
+    documentType: string,
+    categories: string[]
+  ): AIAnalysisPrompt[] {
+    const contextPrompts: AIAnalysisPrompt[] = [];
+
+    // Concurso-specific prompts
+    if (documentType.includes('edital_abertura') || categories.includes('concurso_publico_abertura')) {
+      contextPrompts.push({
+        name: 'concurso_edital_extraction',
+        prompt: `You are analyzing a Brazilian public job opening announcement (Edital de Abertura de Concurso Público).
+
+Extract the following structured information in JSON format:
+{
+  "findings": [
+    {
+      "type": "concurso_details",
+      "confidence": 0.0-1.0,
+      "description": "brief description",
+      "data": {
+        "orgao": "organization name",
+        "editalNumero": "edital number",
+        "totalVagas": number,
+        "cargos": [
+          {
+            "nome": "position name",
+            "vagas": number,
+            "requisitos": "requirements",
+            "salario": "salary",
+            "cargaHoraria": "workload"
+          }
+        ],
+        "inscricoes": {
+          "inicio": "start date",
+          "fim": "end date",
+          "site": "registration website",
+          "taxa": "registration fee"
+        },
+        "etapas": ["stage1", "stage2"],
+        "cronograma": [
+          {
+            "evento": "event name",
+            "data": "date"
+          }
+        ],
+        "banca": "organizing company"
+      }
+    }
+  ]
+}
+
+Focus on extracting accurate, actionable information for job seekers.`,
+        maxTokens: 1500,
+        temperature: 0.1,
+      });
+    }
+
+    // Licitação-specific prompts
+    if (categories.includes('licitacao')) {
+      contextPrompts.push({
+        name: 'licitacao_extraction',
+        prompt: `You are analyzing a Brazilian public bidding document (Licitação).
+
+Extract the following structured information in JSON format:
+{
+  "findings": [
+    {
+      "type": "licitacao_details",
+      "confidence": 0.0-1.0,
+      "description": "brief description",
+      "data": {
+        "modalidade": "pregão/tomada de preços/concorrência",
+        "numero": "number",
+        "objeto": "object description",
+        "valorEstimado": "estimated value",
+        "dataAbertura": "opening date",
+        "horario": "time",
+        "local": "location",
+        "prazoEntrega": "delivery deadline",
+        "contatoInformacoes": "contact info"
+      }
+    }
+  ]
+}`,
+        maxTokens: 1000,
+        temperature: 0.1,
+      });
+    }
+
+    // Contract-specific prompts
+    if (documentType.includes('contrato') || categories.includes('contrato')) {
+      contextPrompts.push({
+        name: 'contract_extraction',
+        prompt: `You are analyzing a Brazilian government contract.
+
+Extract key contract information in JSON format:
+{
+  "findings": [
+    {
+      "type": "contract_details",
+      "confidence": 0.0-1.0,
+      "description": "brief description",
+      "data": {
+        "numeroContrato": "contract number",
+        "contratante": "contracting party",
+        "contratado": "contracted party",
+        "objeto": "object",
+        "valor": "value",
+        "prazo": "duration",
+        "dataAssinatura": "signature date",
+        "vigencia": "validity period"
+      }
+    }
+  ]
+}`,
+        maxTokens: 800,
+        temperature: 0.1,
+      });
+    }
+
+    return contextPrompts;
   }
 }
