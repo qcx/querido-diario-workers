@@ -44,7 +44,7 @@ export class KeywordAnalyzer extends BaseAnalyzer {
 
       let match;
       while ((match = regex.exec(searchText)) !== null) {
-        const context = this.extractContext(text, match.index, 100);
+        const context = this.extractContext(text, match.index, 300);
         
         findings.push(
           this.createFinding(
@@ -110,20 +110,132 @@ export class KeywordAnalyzer extends BaseAnalyzer {
    */
   private getDefaultPatterns(): KeywordPattern[] {
     return [
-      // Concursos Públicos
+      // Concursos Públicos - Gerais
       {
         category: 'concurso_publico',
         keywords: [
           'concurso público',
           'concurso',
-          'edital de concurso',
           'seleção pública',
           'processo seletivo',
+        ],
+        caseSensitive: false,
+        wholeWord: false,
+        weight: 0.8,
+      },
+
+      // Concursos Públicos - Edital de Abertura
+      {
+        category: 'concurso_publico_abertura',
+        keywords: [
+          'edital de abertura',
+          'edital de concurso',
+          'torna público',
+          'abertura de inscrições',
           'inscrições abertas',
+          'realização de concurso público',
+          'concurso público para provimento',
+        ],
+        caseSensitive: false,
+        wholeWord: false,
+        weight: 0.95,
+      },
+
+      // Concursos Públicos - Convocação
+      {
+        category: 'concurso_publico_convocacao',
+        keywords: [
+          'convocação',
+          'convoca',
+          'candidatos aprovados',
+          'candidatos convocados',
+          'chamada',
+          'apresentação',
+          'posse',
+          'nomeação',
+        ],
+        caseSensitive: false,
+        wholeWord: false,
+        weight: 0.92,
+      },
+
+      // Concursos Públicos - Homologação
+      {
+        category: 'concurso_publico_homologacao',
+        keywords: [
+          'homologação',
+          'homologa',
+          'resultado final',
+          'classificação final',
+          'aprovação do resultado',
+        ],
+        caseSensitive: false,
+        wholeWord: false,
+        weight: 0.93,
+      },
+
+      // Concursos Públicos - Retificação
+      {
+        category: 'concurso_publico_retificacao',
+        keywords: [
+          'retificação do edital',
+          'retifica',
+          'alteração do edital',
+          'correção',
+          'errata',
+          'onde se lê',
         ],
         caseSensitive: false,
         wholeWord: false,
         weight: 0.9,
+      },
+
+      // Concursos Públicos - Prorrogação
+      {
+        category: 'concurso_publico_prorrogacao',
+        keywords: [
+          'prorrogação',
+          'prorroga',
+          'extensão de prazo',
+          'adiamento',
+          'nova data',
+        ],
+        caseSensitive: false,
+        wholeWord: false,
+        weight: 0.88,
+      },
+
+      // Concursos Públicos - Cancelamento
+      {
+        category: 'concurso_publico_cancelamento',
+        keywords: [
+          'cancelamento',
+          'cancela',
+          'suspensão',
+          'suspende',
+          'anulação',
+          'revogação',
+        ],
+        caseSensitive: false,
+        wholeWord: false,
+        weight: 0.91,
+      },
+
+      // Concursos Públicos - Resultados
+      {
+        category: 'concurso_publico_resultado',
+        keywords: [
+          'resultado',
+          'classificação',
+          'aprovados',
+          'gabarito',
+          'nota',
+          'pontuação',
+          'lista de classificados',
+        ],
+        caseSensitive: false,
+        wholeWord: false,
+        weight: 0.85,
       },
       
       // Licitações

@@ -21,6 +21,12 @@ export interface QueueMessage {
   
   /** Optional retry count */
   retryCount?: number;
+  
+  /** Additional metadata */
+  metadata?: {
+    crawlJobId?: string;
+    [key: string]: any;
+  };
 }
 
 /**
@@ -42,5 +48,6 @@ export interface DispatchResponse {
   success: boolean;
   tasksEnqueued: number;
   cities: string[];
+  crawlJobId?: string;
   error?: string;
 }

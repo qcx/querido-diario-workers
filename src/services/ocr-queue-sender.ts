@@ -28,7 +28,7 @@ export class OcrQueueSender {
   /**
    * Send a single gazette to OCR queue
    */
-  async sendGazette(gazette: Gazette, spiderId: string): Promise<void> {
+  async sendGazette(gazette: Gazette, spiderId: string, crawlJobId?: string): Promise<void> {
     if (!this.enabled) {
       return;
     }
@@ -45,6 +45,7 @@ export class OcrQueueSender {
         power: gazette.power,
         isExtraEdition: gazette.isExtraEdition,
         sourceText: gazette.sourceText,
+        crawlJobId: crawlJobId,
       },
     };
 
@@ -69,7 +70,7 @@ export class OcrQueueSender {
   /**
    * Send multiple gazettes to OCR queue in batch
    */
-  async sendGazettes(gazettes: Gazette[], spiderId: string): Promise<void> {
+  async sendGazettes(gazettes: Gazette[], spiderId: string, crawlJobId?: string): Promise<void> {
     if (!this.enabled || gazettes.length === 0) {
       return;
     }
@@ -86,6 +87,7 @@ export class OcrQueueSender {
         power: gazette.power,
         isExtraEdition: gazette.isExtraEdition,
         sourceText: gazette.sourceText,
+        crawlJobId: crawlJobId,
       },
     }));
 

@@ -4,18 +4,19 @@ import { spiderRegistry } from './spiders/registry';
 import { logger } from './utils/logger';
 import { toISODate } from './utils/date-utils';
 import { MistralOcrService } from './services/mistral-ocr';
-import { AnalysisOrchestrator, AnalysisConfig } from './services/analysis-orchestrator';
-import { WebhookSenderService } from './services/webhook-sender';
+import { AnalysisOrchestrator } from './services/analysis-orchestrator';
+import { AnalysisConfig } from './types';
+// import { WebhookSenderService } from './services/webhook-sender';
 import { WebhookFilterService } from './services/webhook-filter';
 import type { 
-  SpiderConfig, 
+  // SpiderConfig, 
   DateRange, 
   OcrQueueMessage, 
   OcrResult, 
-  AnalysisQueueMessage, 
+  // AnalysisQueueMessage, 
   GazetteAnalysis,
   WebhookSubscription,
-  WebhookQueueMessage 
+  // WebhookQueueMessage 
 } from './types';
 
 /**
@@ -291,6 +292,14 @@ async function performAnalysis(ocrResults: OcrResult[], env: LocalTestEnv) {
           priority: 2,
           timeout: 15000,
         },
+        concurso: {
+          enabled: true,
+          priority: 1.5, // High priority for concurso detection
+          timeout: 20000,
+          useAIExtraction: !!env.OPENAI_API_KEY,
+          apiKey: env.OPENAI_API_KEY,
+          model: 'gpt-4o-mini',
+        },
         ai: {
           enabled: !!env.OPENAI_API_KEY,
           priority: 3,
@@ -309,10 +318,9 @@ async function performAnalysis(ocrResults: OcrResult[], env: LocalTestEnv) {
         const analysis = await orchestrator.analyze(ocrResult, ocrResult.territoryId);
         analyses.push(analysis);
         
-        // Check if concurso was detected
-        const hasConcurso = analysis.findings && analysis.findings.some(finding => 
-          finding.categories?.includes('concurso_publico') && finding.confidence >= 0.7
-        );
+        // Check if concurso was detected - look in summary and specific analyzers
+        const hasConcurso = analysis.summary.categories.includes('concurso_publico') ||
+          analysis.analyses.some(a => a.analyzerId === 'concurso-analyzer' && a.findings.length > 0);
         
         if (hasConcurso) {
           concursosDetected++;

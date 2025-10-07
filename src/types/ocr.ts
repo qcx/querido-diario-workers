@@ -32,6 +32,7 @@ export interface OcrQueueMessage {
     power?: string;
     isExtraEdition?: boolean;
     sourceText?: string;
+    crawlJobId?: string;
   };
 }
 
@@ -69,6 +70,12 @@ export interface OcrResult {
   /** Processing time in milliseconds */
   processingTimeMs?: number;
   
+  /** OCR confidence score */
+  confidence?: number;
+  
+  /** Detected language */
+  language?: string;
+  
   /** Error information if processing failed */
   error?: {
     message: string;
@@ -84,6 +91,7 @@ export interface OcrResult {
     power?: string;
     isExtraEdition?: boolean;
     sourceText?: string;
+    crawlJobId?: string;
   };
 }
 

@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generatedAt": "2025-10-06T21:58:55.614Z",
-    "totalTerritories": 3046,
-    "totalConfigurations": 3277,
-    "totalFallbacks": 231,
-    "nationalCoverage": 54.68581687612208
+    "generatedAt": "2025-10-07T12:57:39.014Z",
+    "totalTerritories": 3107,
+    "totalConfigurations": 3341,
+    "totalFallbacks": 234,
+    "nationalCoverage": 55.78096947935368
   },
   "territories": [
     {
@@ -62182,6 +62182,1182 @@
         },
         "stateCode": "SE",
         "source": "doem-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200013",
+      "name": "Acrelândia",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200013",
+        "name": "Acrelândia",
+        "stateCode": "AC",
+        "territoryId": "1200013",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Acrelândia",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200054",
+      "name": "Assis Brasil",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200054",
+        "name": "Assis Brasil",
+        "stateCode": "AC",
+        "territoryId": "1200054",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Assis Brasil",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200104",
+      "name": "Brasiléia",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200104",
+        "name": "Brasiléia",
+        "stateCode": "AC",
+        "territoryId": "1200104",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Brasiléia",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200138",
+      "name": "Bujari",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200138",
+        "name": "Bujari",
+        "stateCode": "AC",
+        "territoryId": "1200138",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Bujari",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200179",
+      "name": "Capixaba",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200179",
+        "name": "Capixaba",
+        "stateCode": "AC",
+        "territoryId": "1200179",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Capixaba",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200203",
+      "name": "Cruzeiro do Sul",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200203",
+        "name": "Cruzeiro do Sul",
+        "stateCode": "AC",
+        "territoryId": "1200203",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Cruzeiro do Sul",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200252",
+      "name": "Epitaciolândia",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200252",
+        "name": "Epitaciolândia",
+        "stateCode": "AC",
+        "territoryId": "1200252",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Epitaciolândia",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200302",
+      "name": "Feijó",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200302",
+        "name": "Feijó",
+        "stateCode": "AC",
+        "territoryId": "1200302",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Feijó",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200328",
+      "name": "Jordão",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200328",
+        "name": "Jordão",
+        "stateCode": "AC",
+        "territoryId": "1200328",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Jordão",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200336",
+      "name": "Mâncio Lima",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200336",
+        "name": "Mâncio Lima",
+        "stateCode": "AC",
+        "territoryId": "1200336",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Mâncio Lima",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200344",
+      "name": "Manoel Urbano",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200344",
+        "name": "Manoel Urbano",
+        "stateCode": "AC",
+        "territoryId": "1200344",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Manoel Urbano",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200351",
+      "name": "Marechal Thaumaturgo",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200351",
+        "name": "Marechal Thaumaturgo",
+        "stateCode": "AC",
+        "territoryId": "1200351",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Marechal Thaumaturgo",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200385",
+      "name": "Plácido de Castro",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200385",
+        "name": "Plácido de Castro",
+        "stateCode": "AC",
+        "territoryId": "1200385",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Plácido de Castro",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200393",
+      "name": "Porto Acre",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200393",
+        "name": "Porto Acre",
+        "stateCode": "AC",
+        "territoryId": "1200393",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Porto Acre",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200401",
+      "name": "Porto Walter",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200401",
+        "name": "Porto Walter",
+        "stateCode": "AC",
+        "territoryId": "1200401",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Porto Walter",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200427",
+      "name": "Rio Branco",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200427",
+        "name": "Rio Branco",
+        "stateCode": "AC",
+        "territoryId": "1200427",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Rio Branco",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200435",
+      "name": "Rodrigues Alves",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200435",
+        "name": "Rodrigues Alves",
+        "stateCode": "AC",
+        "territoryId": "1200435",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Rodrigues Alves",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200450",
+      "name": "Santa Rosa do Purus",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200450",
+        "name": "Santa Rosa do Purus",
+        "stateCode": "AC",
+        "territoryId": "1200450",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Santa Rosa do Purus",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200500",
+      "name": "Sena Madureira",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200500",
+        "name": "Sena Madureira",
+        "stateCode": "AC",
+        "territoryId": "1200500",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Sena Madureira",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200609",
+      "name": "Senador Guiomard",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200609",
+        "name": "Senador Guiomard",
+        "stateCode": "AC",
+        "territoryId": "1200609",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Senador Guiomard",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200708",
+      "name": "Tarauacá",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200708",
+        "name": "Tarauacá",
+        "stateCode": "AC",
+        "territoryId": "1200708",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Tarauacá",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1200807",
+      "name": "Xapuri",
+      "stateCode": "AC",
+      "primary": {
+        "id": "ac_1200807",
+        "name": "Xapuri",
+        "stateCode": "AC",
+        "territoryId": "1200807",
+        "spiderType": "acre",
+        "config": {
+          "type": "acre",
+          "cityName": "Xapuri",
+          "power": "executive_legislative"
+        },
+        "source": "acre-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3205002",
+      "name": "Vitória",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3205002",
+        "name": "Vitória",
+        "stateCode": "ES",
+        "territoryId": "3205002",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3205010",
+      "name": "Serra",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3205010",
+        "name": "Serra",
+        "stateCode": "ES",
+        "territoryId": "3205010",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3201308",
+      "name": "Cariacica",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3201308",
+        "name": "Cariacica",
+        "stateCode": "ES",
+        "territoryId": "3201308",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": [
+        {
+          "id": "es_3201308",
+          "name": "Brejetuba",
+          "stateCode": "ES",
+          "territoryId": "3201308",
+          "spiderType": "espirito_santo",
+          "config": {
+            "type": "espirito_santo",
+            "power": "executive_legislative"
+          },
+          "source": "espirito-santo-cities.json"
+        }
+      ]
+    },
+    {
+      "territoryId": "3205200",
+      "name": "Vila Velha",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3205200",
+        "name": "Vila Velha",
+        "stateCode": "ES",
+        "territoryId": "3205200",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3201209",
+      "name": "Cachoeiro de Itapemirim",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3201209",
+        "name": "Cachoeiro de Itapemirim",
+        "stateCode": "ES",
+        "territoryId": "3201209",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": [
+        {
+          "id": "es_3201209",
+          "name": "Bom Jesus do Norte",
+          "stateCode": "ES",
+          "territoryId": "3201209",
+          "spiderType": "espirito_santo",
+          "config": {
+            "type": "espirito_santo",
+            "power": "executive_legislative"
+          },
+          "source": "espirito-santo-cities.json"
+        }
+      ]
+    },
+    {
+      "territoryId": "3201605",
+      "name": "Colatina",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3201605",
+        "name": "Colatina",
+        "stateCode": "ES",
+        "territoryId": "3201605",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3203205",
+      "name": "Linhares",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3203205",
+        "name": "Linhares",
+        "stateCode": "ES",
+        "territoryId": "3203205",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3203809",
+      "name": "Nova Venécia",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3203809",
+        "name": "Nova Venécia",
+        "stateCode": "ES",
+        "territoryId": "3203809",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3204203",
+      "name": "Guarapari",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3204203",
+        "name": "Guarapari",
+        "stateCode": "ES",
+        "territoryId": "3204203",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3204906",
+      "name": "São Mateus",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3204906",
+        "name": "São Mateus",
+        "stateCode": "ES",
+        "territoryId": "3204906",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3200169",
+      "name": "Afonso Cláudio",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3200169",
+        "name": "Afonso Cláudio",
+        "stateCode": "ES",
+        "territoryId": "3200169",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3200201",
+      "name": "Águia Branca",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3200201",
+        "name": "Águia Branca",
+        "stateCode": "ES",
+        "territoryId": "3200201",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3200300",
+      "name": "Água Doce do Norte",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3200300",
+        "name": "Água Doce do Norte",
+        "stateCode": "ES",
+        "territoryId": "3200300",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3200359",
+      "name": "Alegre",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3200359",
+        "name": "Alegre",
+        "stateCode": "ES",
+        "territoryId": "3200359",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3200409",
+      "name": "Alfredo Chaves",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3200409",
+        "name": "Alfredo Chaves",
+        "stateCode": "ES",
+        "territoryId": "3200409",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3200508",
+      "name": "Alto Rio Novo",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3200508",
+        "name": "Alto Rio Novo",
+        "stateCode": "ES",
+        "territoryId": "3200508",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3200607",
+      "name": "Anchieta",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3200607",
+        "name": "Anchieta",
+        "stateCode": "ES",
+        "territoryId": "3200607",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3200706",
+      "name": "Apiacá",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3200706",
+        "name": "Apiacá",
+        "stateCode": "ES",
+        "territoryId": "3200706",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3200805",
+      "name": "Aracruz",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3200805",
+        "name": "Aracruz",
+        "stateCode": "ES",
+        "territoryId": "3200805",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3200904",
+      "name": "Atilio Vivacqua",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3200904",
+        "name": "Atilio Vivacqua",
+        "stateCode": "ES",
+        "territoryId": "3200904",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3201001",
+      "name": "Baixo Guandu",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3201001",
+        "name": "Baixo Guandu",
+        "stateCode": "ES",
+        "territoryId": "3201001",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3201100",
+      "name": "Barra de São Francisco",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3201100",
+        "name": "Barra de São Francisco",
+        "stateCode": "ES",
+        "territoryId": "3201100",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "3201159",
+      "name": "Boa Esperança",
+      "stateCode": "ES",
+      "primary": {
+        "id": "es_3201159",
+        "name": "Boa Esperança",
+        "stateCode": "ES",
+        "territoryId": "3201159",
+        "spiderType": "espirito_santo",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        },
+        "source": "espirito-santo-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100015",
+      "name": "Alta Floresta D'Oeste",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100015",
+        "name": "Alta Floresta D'Oeste",
+        "stateCode": "RO",
+        "territoryId": "1100015",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Alta Floresta D'Oeste",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100023",
+      "name": "Ariquemes",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100023",
+        "name": "Ariquemes",
+        "stateCode": "RO",
+        "territoryId": "1100023",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Ariquemes",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100049",
+      "name": "Cabixi",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100049",
+        "name": "Cabixi",
+        "stateCode": "RO",
+        "territoryId": "1100049",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Cabixi",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100056",
+      "name": "Cacoal",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100056",
+        "name": "Cacoal",
+        "stateCode": "RO",
+        "territoryId": "1100056",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Cacoal",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100924",
+      "name": "Cerejeiras",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100924",
+        "name": "Cerejeiras",
+        "stateCode": "RO",
+        "territoryId": "1100924",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Cerejeiras",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": [
+        {
+          "id": "ro_1100924",
+          "name": "Corumbiara",
+          "stateCode": "RO",
+          "territoryId": "1100924",
+          "spiderType": "rondonia",
+          "config": {
+            "type": "rondonia",
+            "cityName": "Corumbiara",
+            "power": "executive_legislative"
+          },
+          "source": "rondonia-cities.json"
+        }
+      ]
+    },
+    {
+      "territoryId": "1100106",
+      "name": "Colorado do Oeste",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100106",
+        "name": "Colorado do Oeste",
+        "stateCode": "RO",
+        "territoryId": "1100106",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Colorado do Oeste",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100155",
+      "name": "Guajará-Mirim",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100155",
+        "name": "Guajará-Mirim",
+        "stateCode": "RO",
+        "territoryId": "1100155",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Guajará-Mirim",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100189",
+      "name": "Jaru",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100189",
+        "name": "Jaru",
+        "stateCode": "RO",
+        "territoryId": "1100189",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Jaru",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100205",
+      "name": "Ji-Paraná",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100205",
+        "name": "Ji-Paraná",
+        "stateCode": "RO",
+        "territoryId": "1100205",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Ji-Paraná",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100254",
+      "name": "Ouro Preto do Oeste",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100254",
+        "name": "Ouro Preto do Oeste",
+        "stateCode": "RO",
+        "territoryId": "1100254",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Ouro Preto do Oeste",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100262",
+      "name": "Pimenta Bueno",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100262",
+        "name": "Pimenta Bueno",
+        "stateCode": "RO",
+        "territoryId": "1100262",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Pimenta Bueno",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100288",
+      "name": "Porto Velho",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100288",
+        "name": "Porto Velho",
+        "stateCode": "RO",
+        "territoryId": "1100288",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Porto Velho",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100296",
+      "name": "Presidente Médici",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100296",
+        "name": "Presidente Médici",
+        "stateCode": "RO",
+        "territoryId": "1100296",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Presidente Médici",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100320",
+      "name": "Rio Crespo",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100320",
+        "name": "Rio Crespo",
+        "stateCode": "RO",
+        "territoryId": "1100320",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Rio Crespo",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100338",
+      "name": "Rolim de Moura",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100338",
+        "name": "Rolim de Moura",
+        "stateCode": "RO",
+        "territoryId": "1100338",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Rolim de Moura",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
+      },
+      "fallbacks": []
+    },
+    {
+      "territoryId": "1100379",
+      "name": "Vilhena",
+      "stateCode": "RO",
+      "primary": {
+        "id": "ro_1100379",
+        "name": "Vilhena",
+        "stateCode": "RO",
+        "territoryId": "1100379",
+        "spiderType": "rondonia",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Vilhena",
+          "power": "executive_legislative"
+        },
+        "source": "rondonia-cities.json"
       },
       "fallbacks": []
     }

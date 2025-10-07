@@ -7,7 +7,7 @@ Serverless crawler for Brazilian official gazettes (diários oficiais) using **C
 - ✅ **Serverless**: Runs on Cloudflare Workers (no servers to manage)
 - ✅ **Scalable**: Uses Cloudflare Queues for distributed crawling
 - ✅ **TypeScript**: Fully typed codebase
-- ✅ **3,146 Cities**: 3,377 total configs with fallback system (**56.5% national coverage**)
+- ✅ **3,107 Cities**: 3,341 total configs with fallback system (**55.8% national coverage**)
 - ✅ **Lightweight**: Extracts gazette metadata and PDF URLs (no file downloads)
 - ✅ **Fast**: Average 400-500ms per city crawl
 - ✅ **OCR Integration**: Automatic PDF text extraction with Mistral OCR API
@@ -15,15 +15,16 @@ Serverless crawler for Brazilian official gazettes (diários oficiais) using **C
 
 ## 📊 National Coverage
 
-**3,146 of 5,570 Brazilian municipalities (56.5%)**
+**3,107 of 5,570 Brazilian municipalities (55.8%)**
 
-**🔄 Fallback System**: 3,377 total configurations providing 231 fallbacks for improved reliability.
+**🔄 Fallback System**: 3,341 total configurations providing 234 fallbacks for improved reliability.
 
 ### Coverage by State
 
 | UF | Estado | Total | Únicos | Configs | Cobertura | Fallbacks | Progresso |
-|----|--------|-------|---------|---------|-----------|-----------|-----------|
+|----|--------|-------|---------|---------|-----------|-----------|-------|
 | **MT** | Mato Grosso | 141 | 142 | 143 | **100.7%** | +1 | `████████████████████` |
+| **AC** | Acre | 22 | 22 | 22 | **100.0%** | +0 | `████████████████████` |
 | **AM** | Amazonas | 62 | 62 | 62 | **100.0%** | +0 | `████████████████████` |
 | **SC** | Santa Catarina | 295 | 295 | 295 | **100.0%** | +0 | `████████████████████` |
 | **PE** | Pernambuco | 185 | 182 | 185 | **98.4%** | +3 | `████████████████████` |
@@ -36,6 +37,8 @@ Serverless crawler for Brazilian official gazettes (diários oficiais) using **C
 | **PR** | Paraná | 399 | 197 | 199 | **49.4%** | +2 | `██████████░░░░░░░░░░` |
 | **SE** | Sergipe | 75 | 28 | 28 | **37.3%** | +0 | `███████░░░░░░░░░░░░░` |
 | **GO** | Goiás | 246 | 88 | 88 | **35.8%** | +0 | `███████░░░░░░░░░░░░░` |
+| **RO** | Rondônia | 52 | 16 | 17 | **30.8%** | +1 | `██████░░░░░░░░░░░░░░` |
+| **ES** | Espírito Santo | 78 | 23 | 25 | **29.5%** | +2 | `██████░░░░░░░░░░░░░░` |
 | **RJ** | Rio de Janeiro | 92 | 20 | 20 | **21.7%** | +0 | `████░░░░░░░░░░░░░░░░` |
 | **PI** | Piauí | 224 | 31 | 31 | **13.8%** | +0 | `███░░░░░░░░░░░░░░░░░` |
 | **PB** | Paraíba | 223 | 30 | 31 | **13.5%** | +1 | `███░░░░░░░░░░░░░░░░░` |
@@ -45,15 +48,13 @@ Serverless crawler for Brazilian official gazettes (diários oficiais) using **C
 | **AP** | Amapá | 16 | 1 | 1 | **6.3%** | +0 | `█░░░░░░░░░░░░░░░░░░░` |
 | **AL** | Alagoas | 102 | 1 | 1 | **1.0%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
 | **PA** | Pará | 144 | 1 | 1 | **0.7%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
-| **AC** | Acre | 22 | 22 | 22 | **100.0%** | +0 | `████████████████████` |
 | **DF** | Distrito Federal | 1 | 0 | 0 | **0.0%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
-| **ES** | Espírito Santo | 78 | 78 | 78 | **100.0%** | +0 | `████████████████████` |
-| **RO** | Rondônia | 52 | 0 | 0 | **0.0%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
 | **RR** | Roraima | 15 | 0 | 0 | **0.0%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
+
 
 *Sistema de fallback implementado: múltiplas configurações por território garantem maior confiabilidade.*
 
-*Last updated: 2025-10-06 (New: Acre and Espírito Santo - 100% coverage)*
+*Last updated: 2025-10-07*
 
 ## Architecture
 

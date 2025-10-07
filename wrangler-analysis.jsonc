@@ -43,8 +43,19 @@
   // Environment variables
   "vars": {
     "ENVIRONMENT": "production"
+  },
+
+  // Environments
+  "env": {
+    "development": {
+      "name": "querido-diario-analysis-worker-dev"
+    },
+    "production": {
+      "name": "querido-diario-analysis-worker-prod"
+    }
   }
 
   // Secrets (set via wrangler secret put)
   // - OPENAI_API_KEY: OpenAI API key for AI analysis
+  // - DATABASE_URL: PostgreSQL connection string
 }

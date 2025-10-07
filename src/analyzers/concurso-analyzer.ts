@@ -1,0 +1,566 @@
+/**
+ * Concurso Analyzer - Specialized analyzer for public contest documents
+ * Detects document types and extracts structured data
+ */
+
+import { BaseAnalyzer } from './base-analyzer';
+import { OcrResult, Finding, AnalyzerConfig, ConcursoData, ConcursoDocumentType } from '../types';
+import { 
+  CONCURSO_PATTERNS, 
+  EXTRACTION_PATTERNS, 
+  hasConcursoKeywords,
+  calculateTypeConfidence
+} from './patterns/concurso-patterns';
+import { logger } from '../utils';
+
+export interface ConcursoAnalyzerConfig extends AnalyzerConfig {
+  useAIExtraction?: boolean;
+  apiKey?: string;
+  model?: string;
+}
+
+export class ConcursoAnalyzer extends BaseAnalyzer {
+  private useAIExtraction: boolean;
+  private apiKey?: string;
+  private model: string;
+
+  constructor(config: ConcursoAnalyzerConfig = { enabled: true }) {
+    super('concurso-analyzer', 'concurso', config);
+    
+    this.useAIExtraction = config.useAIExtraction ?? false;
+    this.apiKey = config.apiKey;
+    this.model = config.model || 'gpt-4o-mini';
+  }
+
+  protected async performAnalysis(ocrResult: OcrResult): Promise<Finding[]> {
+    const text = ocrResult.extractedText || '';
+    const findings: Finding[] = [];
+
+    // Quick check: does this contain concurso keywords?
+    if (!hasConcursoKeywords(text)) {
+      logger.debug('No concurso keywords found, skipping detailed analysis');
+      return findings;
+    }
+
+    // Step 1: Detect document type
+    const documentTypeResult = this.detectDocumentType(text);
+    
+    if (!documentTypeResult) {
+      logger.debug('Could not classify concurso document type');
+      return findings;
+    }
+
+    logger.info('Detected concurso document', {
+      documentType: documentTypeResult.type,
+      confidence: documentTypeResult.confidence,
+    });
+
+    // Step 2: Extract structured data using patterns
+    const patternData = this.extractDataWithPatterns(text, documentTypeResult.type);
+
+    // Step 3: If AI extraction is enabled and we have high confidence, enhance with AI
+    let finalData = patternData;
+    let extractionMethod: 'pattern' | 'ai' | 'hybrid' = 'pattern';
+
+    if (this.useAIExtraction && this.apiKey && documentTypeResult.confidence >= 0.7) {
+      logger.info('Using AI to extract structured data', {
+        documentType: documentTypeResult.type,
+      });
+
+      try {
+        const aiData = await this.extractDataWithAI(text, documentTypeResult.type, patternData);
+        if (aiData) {
+          finalData = this.mergeExtractedData(patternData, aiData);
+          extractionMethod = 'hybrid';
+        }
+      } catch (error) {
+        logger.error('AI extraction failed, using pattern-based data only', error as Error);
+      }
+    }
+
+    // Step 4: Create finding with all extracted data
+    const concursoData: ConcursoData = {
+      documentType: documentTypeResult.type,
+      documentTypeConfidence: documentTypeResult.confidence,
+      ...finalData,
+    };
+
+    findings.push(
+      this.createFinding(
+        'concurso',
+        {
+          category: 'concurso_publico',
+          concursoData,
+          extractionMethod,
+          documentType: documentTypeResult.type,
+        },
+        documentTypeResult.confidence,
+        this.extractRelevantContext(text, documentTypeResult.type)
+      )
+    );
+
+    return findings;
+  }
+
+  /**
+   * Detect the type of concurso document
+   */
+  private detectDocumentType(text: string): { type: ConcursoDocumentType; confidence: number } | null {
+    const lowerText = text.toLowerCase();
+    const results: Array<{ type: ConcursoDocumentType; confidence: number }> = [];
+
+    for (const pattern of CONCURSO_PATTERNS) {
+      let patternMatches = 0;
+      let keywordMatches = 0;
+
+      // Check regex patterns
+      for (const regex of pattern.patterns) {
+        if (regex.test(text)) {
+          patternMatches++;
+        }
+      }
+
+      // Check exclude patterns
+      if (pattern.excludePatterns) {
+        for (const excludeRegex of pattern.excludePatterns) {
+          if (excludeRegex.test(text)) {
+            patternMatches = Math.max(0, patternMatches - 1);
+          }
+        }
+      }
+
+      // Check keywords
+      for (const keyword of pattern.keywords) {
+        if (lowerText.includes(keyword.toLowerCase())) {
+          keywordMatches++;
+        }
+      }
+
+      // Calculate confidence
+      if (patternMatches > 0 || keywordMatches > 0) {
+        const confidence = calculateTypeConfidence(
+          patternMatches,
+          pattern.patterns.length,
+          keywordMatches,
+          pattern.weight
+        );
+
+        results.push({
+          type: pattern.documentType,
+          confidence,
+        });
+      }
+    }
+
+    // Sort by confidence and return the best match
+    results.sort((a, b) => b.confidence - a.confidence);
+
+    if (results.length > 0 && results[0].confidence >= 0.5) {
+      return results[0];
+    }
+
+    // Fallback: if we detected concurso keywords but couldn't classify type
+    if (hasConcursoKeywords(text)) {
+      return {
+        type: 'nao_classificado',
+        confidence: 0.6,
+      };
+    }
+
+    return null;
+  }
+
+  /**
+   * Extract structured data using regex patterns
+   */
+  private extractDataWithPatterns(text: string, documentType: ConcursoDocumentType): Partial<ConcursoData> {
+    const data: Partial<ConcursoData> = {};
+
+    // Extract edital number
+    for (const pattern of EXTRACTION_PATTERNS.editalNumero) {
+      const match = text.match(pattern);
+      if (match) {
+        data.editalNumero = match[1];
+        break;
+      }
+    }
+
+    // Extract organization
+    for (const pattern of EXTRACTION_PATTERNS.orgao) {
+      const match = text.match(pattern);
+      if (match) {
+        data.orgao = match[1].trim();
+        break;
+      }
+    }
+
+    // Extract vacancies (only for relevant document types)
+    if (['edital_abertura', 'convocacao', 'homologacao'].includes(documentType)) {
+      const vagasMatch = text.match(EXTRACTION_PATTERNS.vagas[0]);
+      if (vagasMatch) {
+        data.vagas = {
+          total: parseInt(vagasMatch[1], 10),
+        };
+      }
+    }
+
+    // Extract dates
+    const datas: any = {};
+    
+    const inscricoesMatch = text.match(EXTRACTION_PATTERNS.inscricoes[0]);
+    if (inscricoesMatch) {
+      datas.inscricoesInicio = inscricoesMatch[1];
+      datas.inscricoesFim = inscricoesMatch[2];
+    }
+
+    const provaMatch = text.match(EXTRACTION_PATTERNS.prova[0]);
+    if (provaMatch) {
+      datas.prova = provaMatch[1];
+    }
+
+    if (Object.keys(datas).length > 0) {
+      data.datas = datas;
+    }
+
+    // Extract registration fee
+    const taxaMatch = text.match(EXTRACTION_PATTERNS.taxa[0]);
+    if (taxaMatch) {
+      data.taxas = [{
+        valor: this.parseMoneyValue(taxaMatch[1]),
+      }];
+    }
+
+    // Extract banca
+    for (const pattern of EXTRACTION_PATTERNS.banca) {
+      const match = text.match(pattern);
+      if (match) {
+        if (pattern.source.includes('cnpj')) {
+          data.banca = { ...data.banca, cnpj: match[1] };
+        } else {
+          data.banca = { ...data.banca, nome: match[1].trim() };
+        }
+      }
+    }
+
+    // Extract cities (for multi-city support)
+    for (const pattern of EXTRACTION_PATTERNS.cidades) {
+      const match = text.match(pattern);
+      if (match) {
+        const cidadesText = match[1];
+        const cidades = cidadesText.split(/[,;]/).map(c => c.trim()).filter(c => c.length > 0);
+        data.cidades = cidades.map(nome => ({ nome }));
+        break;
+      }
+    }
+
+    return data;
+  }
+
+  /**
+   * Extract structured data using OpenAI
+   */
+  private async extractDataWithAI(
+    text: string,
+    documentType: ConcursoDocumentType,
+    patternData: Partial<ConcursoData>
+  ): Promise<Partial<ConcursoData> | null> {
+    if (!this.apiKey) {
+      return null;
+    }
+
+    try {
+      // Limit text size for API call (use relevant context)
+      const contextText = this.extractRelevantContext(text, documentType);
+      
+      const prompt = this.buildExtractionPrompt(documentType, contextText, patternData);
+
+      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${this.apiKey}`,
+        },
+        body: JSON.stringify({
+          model: this.model,
+          messages: [
+            {
+              role: 'system',
+              content: 'You are a specialized assistant for extracting structured data from Brazilian public contest (concurso público) documents. Always respond with valid JSON.',
+            },
+            {
+              role: 'user',
+              content: prompt,
+            },
+          ],
+          temperature: 0.1,
+          max_tokens: 1500,
+          response_format: { type: 'json_object' },
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`OpenAI API error: ${response.statusText}`);
+      }
+
+      const result = await response.json() as any;
+      const content = result.choices?.[0]?.message?.content;
+
+      if (!content) {
+        return null;
+      }
+
+      return JSON.parse(content);
+    } catch (error) {
+      logger.error('AI extraction failed', error as Error);
+      return null;
+    }
+  }
+
+  /**
+   * Build prompt for AI extraction
+   */
+  private buildExtractionPrompt(
+    documentType: ConcursoDocumentType,
+    text: string,
+    patternData: Partial<ConcursoData>
+  ): string {
+    const prompts: Record<ConcursoDocumentType, string> = {
+      edital_abertura: `Extract detailed information from this PUBLIC CONTEST OPENING NOTICE (Edital de Abertura):
+
+${text}
+
+Pattern-based data already extracted (enhance/correct if needed):
+${JSON.stringify(patternData, null, 2)}
+
+Extract and return JSON with:
+{
+  "orgao": "organization name",
+  "editalNumero": "edital number",
+  "vagas": {
+    "total": number,
+    "porCargo": [{"cargo": "position name", "vagas": number, "salario": number, "requisitos": "requirements"}],
+    "reservaPCD": number
+  },
+  "datas": {
+    "inscricoesInicio": "DD/MM/YYYY",
+    "inscricoesFim": "DD/MM/YYYY",
+    "prova": "DD/MM/YYYY"
+  },
+  "taxas": [{"cargo": "position", "valor": number}],
+  "banca": {"nome": "organization", "cnpj": "XX.XXX.XXX/XXXX-XX"},
+  "cidades": [{"nome": "city name", "vagas": number}]
+}`,
+
+      convocacao: `Extract information from this CANDIDATE CONVOCATION (Convocação):
+
+${text}
+
+Pattern-based data:
+${JSON.stringify(patternData, null, 2)}
+
+Extract and return JSON with:
+{
+  "orgao": "organization",
+  "editalNumero": "related edital number",
+  "vagas": {"porCargo": [{"cargo": "position", "vagas": number}]},
+  "datas": {"apresentacao": "DD/MM/YYYY"},
+  "observacoes": ["important notes"]
+}`,
+
+      homologacao: `Extract information from this RESULT HOMOLOGATION (Homologação):
+
+${text}
+
+Pattern-based data:
+${JSON.stringify(patternData, null, 2)}
+
+Extract and return JSON with:
+{
+  "orgao": "organization",
+  "editalNumero": "edital number",
+  "vagas": {"total": number, "porCargo": [{"cargo": "position", "vagas": number}]},
+  "status": "homologated/approved"
+}`,
+
+      edital_retificacao: `Extract changes from this EDITAL CORRECTION (Retificação):
+
+${text}
+
+Pattern-based data:
+${JSON.stringify(patternData, null, 2)}
+
+Extract and return JSON with what was changed:
+{
+  "orgao": "organization",
+  "editalNumero": "edital being corrected",
+  "observacoes": ["list of changes"]
+}`,
+
+      prorrogacao: `Extract information from this DEADLINE EXTENSION (Prorrogação):
+
+${text}
+
+Extract and return JSON:
+{
+  "orgao": "organization",
+  "editalNumero": "edital number",
+  "datas": {"inscricoesInicio": "DD/MM/YYYY", "inscricoesFim": "DD/MM/YYYY", "prova": "DD/MM/YYYY"},
+  "observacoes": ["what was extended"]
+}`,
+
+      cancelamento: `Extract information from this CANCELLATION (Cancelamento):
+
+${text}
+
+Extract and return JSON:
+{
+  "orgao": "organization",
+  "editalNumero": "edital number",
+  "status": "cancelled/suspended",
+  "observacoes": ["reason for cancellation"]
+}`,
+
+      resultado_parcial: `Extract information from this PARTIAL RESULT:
+
+${text}
+
+Extract and return JSON:
+{
+  "orgao": "organization",
+  "editalNumero": "edital number",
+  "status": "partial result phase",
+  "observacoes": ["which phase/stage"]
+}`,
+
+      gabarito: `Extract information from this ANSWER KEY (Gabarito):
+
+${text}
+
+Extract and return JSON:
+{
+  "orgao": "organization",
+  "editalNumero": "edital number",
+  "observacoes": ["preliminary/final answer key"]
+}`,
+
+      nao_classificado: `Extract any available information from this UNCLASSIFIED concurso document:
+
+${text}
+
+Extract and return JSON with any identifiable fields:
+{
+  "orgao": "organization if found",
+  "editalNumero": "edital number if found",
+  "observacoes": ["any relevant information"]
+}`,
+    };
+
+    return prompts[documentType];
+  }
+
+  /**
+   * Merge pattern-based and AI-extracted data
+   */
+  private mergeExtractedData(
+    patternData: Partial<ConcursoData>,
+    aiData: Partial<ConcursoData>
+  ): Partial<ConcursoData> {
+    // AI data takes precedence, but we keep pattern data as fallback
+    return {
+      ...patternData,
+      ...aiData,
+      // Merge nested objects carefully
+      vagas: aiData.vagas || patternData.vagas,
+      datas: { ...patternData.datas, ...aiData.datas },
+      banca: { ...patternData.banca, ...aiData.banca },
+      cidades: aiData.cidades || patternData.cidades,
+      observacoes: [
+        ...(patternData.observacoes || []),
+        ...(aiData.observacoes || []),
+      ],
+    };
+  }
+
+  /**
+   * Extract relevant context around concurso information
+   */
+  private extractRelevantContext(text: string, documentType: ConcursoDocumentType): string {
+    // For AI extraction, we want the most relevant part of the document
+    // Limit to ~3000 characters to save on API costs
+    
+    const maxLength = 3000;
+    
+    if (text.length <= maxLength) {
+      return text;
+    }
+
+    // Find the most relevant section based on document type
+    const keywords: Record<ConcursoDocumentType, string[]> = {
+      edital_abertura: ['edital', 'vagas', 'inscrições', 'cargo'],
+      convocacao: ['convocação', 'aprovados', 'apresentação'],
+      homologacao: ['homologação', 'resultado final', 'classificação'],
+      edital_retificacao: ['retificação', 'alteração', 'onde se lê'],
+      prorrogacao: ['prorrogação', 'prazo', 'data'],
+      cancelamento: ['cancelamento', 'suspensão'],
+      resultado_parcial: ['resultado', 'classificação', 'aprovados'],
+      gabarito: ['gabarito', 'resposta'],
+      nao_classificado: ['concurso', 'edital'],
+    };
+
+    const relevantKeywords = keywords[documentType];
+    
+    // Find section with most keyword matches
+    const chunkSize = maxLength;
+    let bestChunk = text.substring(0, chunkSize);
+    let bestScore = 0;
+
+    for (let i = 0; i < text.length - chunkSize; i += chunkSize / 2) {
+      const chunk = text.substring(i, i + chunkSize);
+      const lowerChunk = chunk.toLowerCase();
+      
+      const score = relevantKeywords.reduce((acc, kw) => {
+        return acc + (lowerChunk.includes(kw.toLowerCase()) ? 1 : 0);
+      }, 0);
+
+      if (score > bestScore) {
+        bestScore = score;
+        bestChunk = chunk;
+      }
+    }
+
+    return bestChunk;
+  }
+
+  /**
+   * Parse money value from string
+   */
+  private parseMoneyValue(value: string): number {
+    // Remove dots (thousand separators) and replace comma with dot (decimal)
+    const normalized = value.replace(/\./g, '').replace(',', '.');
+    return parseFloat(normalized);
+  }
+
+  /**
+   * Get metadata about concurso findings
+   */
+  protected getMetadata(findings: Finding[]): Record<string, any> {
+    const documentTypes: Record<string, number> = {};
+    let hasAIExtraction = false;
+
+    for (const finding of findings) {
+      if (finding.data.documentType) {
+        documentTypes[finding.data.documentType] = (documentTypes[finding.data.documentType] || 0) + 1;
+      }
+      if (finding.data.extractionMethod === 'ai' || finding.data.extractionMethod === 'hybrid') {
+        hasAIExtraction = true;
+      }
+    }
+
+    return {
+      ...super.getMetadata(findings),
+      documentTypes,
+      hasAIExtraction,
+      uniqueDocumentTypes: Object.keys(documentTypes),
+    };
+  }
+}

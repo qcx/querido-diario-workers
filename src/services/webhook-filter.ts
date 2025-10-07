@@ -62,7 +62,7 @@ export class WebhookFilterService {
       }
       
       // Calculate confidence ratio based on category-specific findings only
-      const highConfidenceCount = categoryFindings.filter(f => f.confidence >= filters.minConfidence).length;
+      const highConfidenceCount = categoryFindings.filter(f => f.confidence >= (filters.minConfidence ?? 0)).length;
       const categoryConfidenceRatio = highConfidenceCount / categoryFindings.length;
       
       if (categoryConfidenceRatio < 0.5) { // At least 50% of category findings should meet confidence
@@ -178,16 +178,33 @@ export class WebhookFilterService {
     territories?: string[]
   ): WebhookFilters {
     return {
-      categories: ['concurso_publico'],
+      categories: [
+        'concurso_publico',
+        'concurso_publico_abertura',
+        'concurso_publico_convocacao',
+        'concurso_publico_homologacao',
+        'concurso_publico_retificacao',
+        'concurso_publico_prorrogacao',
+        'concurso_publico_cancelamento',
+        'concurso_publico_resultado',
+      ],
       keywords: [
         'concurso público',
         'concurso',
         'edital de concurso',
+        'edital de abertura',
         'seleção pública',
         'processo seletivo',
         'inscrições abertas',
         'vagas',
         'candidatos aprovados',
+        'convocação',
+        'homologação',
+        'retificação',
+        'prorrogação',
+        'cancelamento',
+        'resultado',
+        'gabarito',
       ],
       minConfidence,
       minFindings: 1,

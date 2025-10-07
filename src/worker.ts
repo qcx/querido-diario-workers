@@ -4,12 +4,19 @@ import { spiderRegistry } from './spiders/registry';
 import { logger } from './utils/logger';
 import { toISODate } from './utils/date-utils';
 import { OcrQueueSender } from './services/ocr-queue-sender';
+import { 
+  getDatabase, 
+  TelemetryService, 
+  GazetteRepository, 
+  ErrorTracker,
+  DatabaseEnv 
+} from './services/database';
 
 /**
  * Unified Worker that handles both HTTP requests (dispatcher) and queue processing (consumer)
  */
 
-type Bindings = {
+type Bindings = DatabaseEnv & {
   CRAWL_QUEUE: Queue<QueueMessage>;
   OCR_QUEUE: Queue<any>;
   BROWSER: Fetcher;
@@ -31,25 +38,29 @@ app.get('/', (c) => {
 });
 
 /**
- * Enhanced queue message sender with detailed logging
+ * Enhanced queue message sender with detailed logging and crawl job tracking
  */
 async function sendMessagesToQueue(
   queue: Queue,
   configs: SpiderConfig[],
   dateRange: DateRange,
+  crawlJobId: string,
   logger: any
 ): Promise<{ enqueuedCount: number; failedCount: number }> {
   let enqueuedCount = 0;
   let failedCount = 0;
   const BATCH_SIZE = 100; // Cloudflare Workers Queue batch limit
 
-  // Prepare all messages
+  // Prepare all messages with crawl job ID
   const messages: QueueMessage[] = configs.map(config => ({
     spiderId: config.id,
     territoryId: config.territoryId,    
     spiderType: config.spiderType,
     config: config.config,
     dateRange,
+    metadata: {
+      crawlJobId,
+    }
   }));
 
   logger.info(`🚀 Starting to enqueue ${messages.length} messages in ${Math.ceil(messages.length / BATCH_SIZE)} batches`);
@@ -118,7 +129,7 @@ async function sendMessagesToQueue(
 }
 
 /**
- * Dispatch crawl jobs to the queue
+ * Dispatch crawl jobs to the queue with telemetry tracking
  */
 app.post('/crawl', async (c) => {
   try {
@@ -155,9 +166,43 @@ app.post('/crawl', async (c) => {
       }, 400);
     }
 
+    // Initialize database services
+    const db = getDatabase(c.env);
+    const telemetry = new TelemetryService(db);
+
+    // Create crawl job for telemetry tracking
+    const crawlJobId = await telemetry.trackCrawlJobStart({
+      jobType: 'manual',
+      totalCities: configs.length,
+      startDate: dateRange.start,
+      endDate: dateRange.end,
+      metadata: {
+        requestType: 'manual',
+        requestedCities: request.cities,
+        userAgent: c.req.header('user-agent'),
+      }
+    });
+
+    logger.info('Created crawl job', { crawlJobId, totalCities: configs.length });
+
     // Enqueue tasks using enhanced sender with detailed logging
     const queue = c.env.CRAWL_QUEUE;
-    const { enqueuedCount, failedCount } = await sendMessagesToQueue(queue, configs, dateRange, logger);
+    const { enqueuedCount, failedCount } = await sendMessagesToQueue(
+      queue, 
+      configs, 
+      dateRange, 
+      crawlJobId, 
+      logger
+    );
+
+    // Update crawl job with results
+    await telemetry.updateCrawlJob(crawlJobId, {
+      status: failedCount === 0 ? 'running' : 'failed',
+      metadata: {
+        enqueuedCount,
+        failedCount,
+      }
+    });
 
     const success = failedCount === 0;
     const status = success ? 200 : (enqueuedCount > 0 ? 207 : 500); // 207 = partial success
@@ -166,6 +211,7 @@ app.post('/crawl', async (c) => {
       success,
       tasksEnqueued: enqueuedCount,
       cities: configs.map(c => c.id),
+      crawlJobId, // Include crawl job ID in response
       ...(failedCount > 0 && {
         error: `${failedCount} tasks failed to enqueue`,
         failedCount
@@ -207,7 +253,26 @@ app.post('/crawl/today-yesterday', async (c) => {
       ? allConfigs.filter(config => config.spiderType === platform)
       : allConfigs;
 
+    // Initialize database services
+    const db = getDatabase(c.env);
+    const telemetry = new TelemetryService(db);
+
+    // Create crawl job for telemetry tracking
+    const crawlJobId = await telemetry.trackCrawlJobStart({
+      jobType: 'scheduled',
+      totalCities: configs.length,
+      startDate,
+      endDate,
+      platformFilter: platform,
+      metadata: {
+        requestType: 'today-yesterday',
+        platform: platform || 'all',
+        userAgent: c.req.header('user-agent'),
+      }
+    });
+
     logger.info('Enqueueing crawl tasks', {
+      crawlJobId,
       totalCities: configs.length,
       platform: platform || 'all',
       dateRange: { startDate, endDate }
@@ -216,7 +281,16 @@ app.post('/crawl/today-yesterday', async (c) => {
     // Enqueue tasks using enhanced sender with detailed logging
     const queue = c.env.CRAWL_QUEUE;
     const dateRange = { start: startDate, end: endDate };
-    const { enqueuedCount, failedCount } = await sendMessagesToQueue(queue, configs, dateRange, logger);
+    const { enqueuedCount, failedCount } = await sendMessagesToQueue(queue, configs, dateRange, crawlJobId, logger);
+
+    // Update crawl job with results
+    await telemetry.updateCrawlJob(crawlJobId, {
+      status: failedCount === 0 ? 'running' : 'failed',
+      metadata: {
+        enqueuedCount,
+        failedCount,
+      }
+    });
 
     const success = failedCount === 0;
     const status = success ? 200 : (enqueuedCount > 0 ? 207 : 500);
@@ -224,6 +298,7 @@ app.post('/crawl/today-yesterday', async (c) => {
     return c.json({
       success,
       message: 'Crawl initiated for today and yesterday',
+      crawlJobId,
       tasksEnqueued: enqueuedCount,
       totalCities: configs.length,
       dateRange: { startDate, endDate },
@@ -276,9 +351,36 @@ app.post('/crawl/cities', async (c) => {
       }, 400);
     }
 
+    // Initialize database services
+    const db = getDatabase(c.env);
+    const telemetry = new TelemetryService(db);
+
+    // Create crawl job for telemetry tracking  
+    const crawlJobId = await telemetry.trackCrawlJobStart({
+      jobType: 'cities',
+      totalCities: configs.length,
+      startDate: dateRange.start,
+      endDate: dateRange.end,
+      metadata: {
+        requestType: 'cities',
+        requestedCities: cities,
+        validCities: configs.map(c => c.id),
+        userAgent: c.req.header('user-agent'),
+      }
+    });
+
     // Enqueue tasks using enhanced sender with detailed logging
     const queue = c.env.CRAWL_QUEUE;
-    const { enqueuedCount, failedCount } = await sendMessagesToQueue(queue, configs, dateRange, logger);
+    const { enqueuedCount, failedCount } = await sendMessagesToQueue(queue, configs, dateRange, crawlJobId, logger);
+
+    // Update crawl job with results
+    await telemetry.updateCrawlJob(crawlJobId, {
+      status: failedCount === 0 ? 'running' : 'failed',
+      metadata: {
+        enqueuedCount,
+        failedCount,
+      }
+    });
 
     const success = failedCount === 0;
     const status = success ? 200 : (enqueuedCount > 0 ? 207 : 500);
@@ -286,6 +388,7 @@ app.post('/crawl/cities', async (c) => {
     return c.json({
       success,
       message: 'Crawl initiated for specified cities',
+      crawlJobId,
       tasksEnqueued: enqueuedCount,
       cities: configs.map(c => ({ id: c.id, name: c.name })),
       dateRange,
@@ -393,26 +496,44 @@ function getDateRange(startDate?: string, endDate?: string): DateRange {
 }
 
 /**
- * Queue consumer handler
+ * Queue consumer handler with telemetry and database integration
  */
 async function handleQueue(batch: MessageBatch<QueueMessage>, _env: Bindings): Promise<void> {
   logger.info('Processing queue batch', { batchSize: batch.messages.length });
 
+  // Initialize database services
+  const db = getDatabase(_env);
+  const telemetry = new TelemetryService(db);
+  const gazetteRepo = new GazetteRepository(db);
+  const errorTracker = new ErrorTracker(db);
+
   for (const message of batch.messages) {
     const startTime = Date.now();
+    const queueMessage = message.body;
+    const crawlJobId = queueMessage.metadata?.crawlJobId || 'unknown';
     
     try {
-      const queueMessage = message.body;
-      
       logger.setContext({
         spiderId: queueMessage.spiderId,
         territoryId: queueMessage.territoryId,
+        crawlJobId,
       });
 
       logger.info('Processing crawl task', {
         spiderType: queueMessage.spiderType,
         dateRange: queueMessage.dateRange,
+        crawlJobId,
       });
+
+      // Track crawl start
+      await telemetry.trackCityStep(
+        crawlJobId,
+        queueMessage.territoryId,
+        queueMessage.spiderId,
+        queueMessage.spiderType,
+        'crawl_start',
+        'started'
+      );
 
       // Get spider configuration
       const config: SpiderConfig = {
@@ -450,6 +571,35 @@ async function handleQueue(batch: MessageBatch<QueueMessage>, _env: Bindings): P
         executionTimeMs: result.stats.executionTimeMs,
       });
 
+      // Save gazettes to database registry if any were found
+      if (gazettes.length > 0) {
+        try {
+          const gazetteJobIds = await gazetteRepo.registerGazettes(gazettes, crawlJobId);
+          
+          logger.info('Gazettes registered in database', {
+            spiderId: queueMessage.spiderId,
+            count: gazettes.length,
+            gazetteJobIds: gazetteJobIds.length,
+          });
+        } catch (error) {
+          logger.error('Failed to register gazettes in database', error as Error, {
+            spiderId: queueMessage.spiderId,
+            count: gazettes.length,
+          });
+          
+          // Track the database error
+          await errorTracker.trackDatabaseError(
+            'main-worker',
+            'register_gazettes',
+            error as Error,
+            'INSERT INTO gazette_registry',
+            crawlJobId
+          ).catch(() => {});
+          
+          // Don't fail the crawl task if database registration fails
+        }
+      }
+
       // Send gazettes to OCR queue if any were found
       logger.info('OCR Queue check', {
         gazettesLength: gazettes.length,
@@ -460,7 +610,7 @@ async function handleQueue(batch: MessageBatch<QueueMessage>, _env: Bindings): P
       if (gazettes.length > 0 && _env.OCR_QUEUE) {
         try {
           const ocrSender = new OcrQueueSender(_env.OCR_QUEUE);
-          await ocrSender.sendGazettes(gazettes, queueMessage.spiderId);
+          await ocrSender.sendGazettes(gazettes, queueMessage.spiderId, crawlJobId);
           
           logger.info('Gazettes sent to OCR queue', {
             spiderId: queueMessage.spiderId,
@@ -471,6 +621,22 @@ async function handleQueue(batch: MessageBatch<QueueMessage>, _env: Bindings): P
             spiderId: queueMessage.spiderId,
             count: gazettes.length,
           });
+          
+          // Track queue delivery error
+          await errorTracker.trackError({
+            workerName: 'main-worker',
+            operationType: 'queue_send_ocr',
+            severity: 'error',
+            errorMessage: (error as Error).message,
+            stackTrace: (error as Error).stack,
+            jobId: crawlJobId,
+            territoryId: queueMessage.territoryId,
+            context: {
+              spiderId: queueMessage.spiderId,
+              gazetteCount: gazettes.length
+            }
+          }).catch(() => {});
+          
           // Don't fail the crawl task if OCR queueing fails
         }
       }
@@ -479,29 +645,66 @@ async function handleQueue(batch: MessageBatch<QueueMessage>, _env: Bindings): P
       message.ack();
     } catch (error) {
       const executionTimeMs = Date.now() - startTime;
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       
       logger.error('Crawl task failed', error as Error, {
-        spiderId: message.body.spiderId,
-        territoryId: message.body.territoryId,
+        spiderId: queueMessage.spiderId,
+        territoryId: queueMessage.territoryId,
+        crawlJobId,
       });
 
+      // Track crawl failure
+      try {
+        await telemetry.trackCityStep(
+          crawlJobId,
+          queueMessage.territoryId,
+          queueMessage.spiderId,
+          queueMessage.spiderType,
+          'crawl_end',
+          'failed',
+          {
+            executionTimeMs,
+            errorMessage,
+          }
+        );
+      } catch (telemetryError) {
+        logger.error('Failed to track crawl failure', { 
+          telemetryError,
+          crawlJobId 
+        });
+      }
+
+      // Track the critical error that stopped the crawl
+      await errorTracker.trackCriticalError(
+        'main-worker',
+        'crawl_processing',
+        error as Error,
+        {
+          spiderId: queueMessage.spiderId,
+          territoryId: queueMessage.territoryId,
+          crawlJobId,
+          executionTimeMs
+        }
+      ).catch(() => {});
+
       const result: CrawlResult = {
-        spiderId: message.body.spiderId,
-        territoryId: message.body.territoryId,
+        spiderId: queueMessage.spiderId,
+        territoryId: queueMessage.territoryId,
         gazettes: [],
         stats: {
           totalFound: 0,
-          dateRange: message.body.dateRange,
+          dateRange: queueMessage.dateRange,
           executionTimeMs,
         },
         error: {
-          message: (error as Error).message,
+          message: errorMessage,
         },
       };
 
       logger.error('Crawl failed', undefined, {
         spiderId: result.spiderId,
         errorMessage: result.error?.message,
+        crawlJobId,
       });
 
       // Retry the message

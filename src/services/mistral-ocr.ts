@@ -35,7 +35,7 @@ export class MistralOcrService {
 
     try {
       // Call Mistral API with PDF URL directly
-      const extractedText = await this.callMistralApi(message.pdfUrl, message.jobId);
+      const { extractedText, pagesProcessed } = await this.callMistralApi(message.pdfUrl, message.jobId);
       
       const processingTimeMs = Date.now() - startTime;
       
@@ -49,8 +49,15 @@ export class MistralOcrService {
         jobId: message.jobId,
         status: 'success',
         extractedText,
+        pdfUrl: message.pdfUrl,
+        territoryId: message.territoryId,
+        publicationDate: message.publicationDate,
+        editionNumber: message.editionNumber,
+        spiderId: message.spiderId,
+        pagesProcessed,
         processingTimeMs,
         completedAt: new Date().toISOString(),
+        metadata: message.metadata,
       };
     } catch (error: any) {
       const processingTimeMs = Date.now() - startTime;
@@ -63,6 +70,11 @@ export class MistralOcrService {
       return {
         jobId: message.jobId,
         status: 'failure',
+        pdfUrl: message.pdfUrl,
+        territoryId: message.territoryId,
+        publicationDate: message.publicationDate,
+        editionNumber: message.editionNumber,
+        spiderId: message.spiderId,
         error: {
           message: error.message,
           code: error.code,
@@ -70,6 +82,7 @@ export class MistralOcrService {
         },
         processingTimeMs,
         completedAt: new Date().toISOString(),
+        metadata: message.metadata,
       };
     }
   }
@@ -111,7 +124,7 @@ export class MistralOcrService {
   /**
    * Call Mistral API for OCR
    */
-  private async callMistralApi(pdfUrl: string, jobId: string): Promise<string> {
+  private async callMistralApi(pdfUrl: string, jobId: string): Promise<{extractedText: string, pagesProcessed: number}> {
     logger.debug(`Calling Mistral OCR API for job ${jobId}`);
 
     let finalPdfUrl = pdfUrl;
@@ -193,7 +206,7 @@ export class MistralOcrService {
       docSizeBytes: result.usage_info?.doc_size_bytes,
     });
 
-    return extractedText;
+    return { extractedText, pagesProcessed: result.pages.length };
   }
 
   /**

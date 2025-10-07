@@ -48,6 +48,7 @@
 
   // Secrets (set via wrangler secret put)
   // - MISTRAL_API_KEY: Your Mistral API key
+  // - DATABASE_URL: PostgreSQL connection string
 
   // Environments
   "env": {

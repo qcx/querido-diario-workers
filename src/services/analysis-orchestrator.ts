@@ -13,6 +13,7 @@ import {
   KeywordAnalyzer,
   AIAnalyzer,
   EntityExtractor,
+  ConcursoAnalyzer,
 } from '../analyzers';
 import { logger } from '../utils';
 
@@ -56,6 +57,18 @@ export class AnalysisOrchestrator {
         new EntityExtractor({
           ...this.config.analyzers.entity,
           entityTypes: this.config.analyzers.entity.entityTypes,
+        })
+      );
+    }
+
+    // Concurso Analyzer
+    if (this.config.analyzers.concurso?.enabled) {
+      this.analyzers.push(
+        new ConcursoAnalyzer({
+          ...this.config.analyzers.concurso,
+          useAIExtraction: this.config.analyzers.concurso.useAIExtraction,
+          apiKey: this.config.analyzers.concurso.apiKey,
+          model: this.config.analyzers.concurso.model,
         })
       );
     }
@@ -125,7 +138,6 @@ export class AnalysisOrchestrator {
         editionNumber: ocrResult.editionNumber,
         power: ocrResult.metadata?.power,
         isExtraEdition: ocrResult.metadata?.isExtraEdition,
-        pdfUrl: ocrResult.pdfUrl || `https://gazette.${territoryId || 'unknown'}.pdf`,
       },
     };
 

@@ -9,6 +9,8 @@ import {
   WebhookNotification,
   WebhookQueueMessage,
   WebhookFinding,
+  ConcursoData,
+  ConcursoFinding,
 } from '../types';
 import { WebhookFilterService } from './webhook-filter';
 import { TerritoryService } from './territory-service';
@@ -239,13 +241,81 @@ export class WebhookSenderService {
    * Extract concurso-specific data from findings
    */
   private extractConcursoData(findings: WebhookFinding[], analysis: GazetteAnalysis): any {
+    // Look for structured concurso data from ConcursoAnalyzer first
+    const concursoFindings = analysis.analyses?.find(a => a.analyzerId === 'concurso-analyzer')?.findings || [];
+    
+    if (concursoFindings.length > 0) {
+      const structuredFinding = concursoFindings.find(f => f.data.concursoData) as ConcursoFinding;
+      
+      if (structuredFinding?.data.concursoData) {
+        const structured = structuredFinding.data.concursoData as ConcursoData;
+        
+        return {
+          // Document classification
+          documentType: structured.documentType,
+          documentTypeConfidence: structured.documentTypeConfidence,
+          extractionMethod: structuredFinding.data.extractionMethod,
+          
+          // Basic information
+          orgao: structured.orgao,
+          editalNumero: structured.editalNumero,
+          
+          // Vacancies data
+          totalVagas: structured.vagas?.total || 0,
+          cargos: structured.vagas?.porCargo?.map(cargo => ({
+            cargo: cargo.cargo,
+            vagas: cargo.vagas,
+            salario: cargo.salario,
+            requisitos: cargo.requisitos,
+            jornada: cargo.jornada,
+          })) || [],
+          reservaPCD: structured.vagas?.reservaPCD,
+          reservaAmplaConcorrencia: structured.vagas?.reservaAmplaConcorrencia,
+          
+          // Important dates
+          inscricoesInicio: structured.datas?.inscricoesInicio,
+          inscricoesFim: structured.datas?.inscricoesFim,
+          prova: structured.datas?.prova,
+          provaObjetiva: structured.datas?.provaObjetiva,
+          provaPratica: structured.datas?.provaPratica,
+          resultado: structured.datas?.resultado,
+          recursos: structured.datas?.recursos,
+          
+          // Fees
+          taxas: structured.taxas || [],
+          
+          // Organization/Banca
+          banca: structured.banca,
+          
+          // Multi-city support
+          cidades: structured.cidades,
+          
+          // Status and notes
+          status: structured.status,
+          observacoes: structured.observacoes,
+          
+          // Legacy fields for backward compatibility
+          keywords: this.extractKeywordsFromFindings(findings),
+        };
+      }
+    }
+
+    // Fallback to legacy extraction for backward compatibility
+    return this.extractLegacyConcursoData(findings);
+  }
+
+  /**
+   * Legacy extraction method for backward compatibility
+   */
+  private extractLegacyConcursoData(findings: WebhookFinding[]): any {
     const concursoData: any = {
       totalVagas: 0,
       cargos: [],
       inscricoes: null,
       provas: null,
       taxas: [],
-      keywords: []
+      keywords: [],
+      extractionMethod: 'legacy'
     };
 
     for (const finding of findings) {
@@ -288,6 +358,21 @@ export class WebhookSenderService {
     }
 
     return null;
+  }
+
+  /**
+   * Extract keywords from findings for compatibility
+   */
+  private extractKeywordsFromFindings(findings: WebhookFinding[]): string[] {
+    const keywords: string[] = [];
+    
+    for (const finding of findings) {
+      if (finding.data.keyword) {
+        keywords.push(finding.data.keyword);
+      }
+    }
+    
+    return [...new Set(keywords)];
   }
 
   /**

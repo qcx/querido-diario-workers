@@ -127,6 +127,10 @@ export interface AnalysisQueueMessage {
   pdfUrl?: string;
   analyzers?: string[]; // Specific analyzers to run, or all if undefined
   queuedAt: string;
+  metadata?: {
+    crawlJobId?: string;
+    [key: string]: any;
+  };
 }
 
 /**
@@ -147,5 +151,100 @@ export interface AnalysisConfig {
     category?: AnalyzerConfig & {
       categories?: string[];
     };
+    concurso?: AnalyzerConfig & {
+      useAIExtraction?: boolean;
+      apiKey?: string;
+      model?: string;
+    };
+  };
+}
+
+/**
+ * Concurso Document Types
+ */
+export type ConcursoDocumentType =
+  | 'edital_abertura'      // New concurso being launched
+  | 'edital_retificacao'   // Changes to existing edital
+  | 'convocacao'           // Call for approved candidates
+  | 'homologacao'          // Final result approval
+  | 'prorrogacao'          // Deadline extension
+  | 'cancelamento'         // Cancellation or suspension
+  | 'resultado_parcial'    // Partial results
+  | 'gabarito'             // Answer key
+  | 'nao_classificado';    // Fallback: Document not classified
+
+/**
+ * Structured data extracted from concurso documents
+ */
+export interface ConcursoData {
+  // Document classification
+  documentType: ConcursoDocumentType;
+  documentTypeConfidence: number; // 0-1
+  
+  // Basic information
+  orgao?: string;              // Organization
+  editalNumero?: string;       // Edital number
+  
+  // Job positions and vacancies
+  vagas?: {
+    total?: number;
+    porCargo?: Array<{
+      cargo: string;
+      vagas: number;
+      requisitos?: string;
+      salario?: number;
+      jornada?: string;
+    }>;
+    reservaPCD?: number;
+    reservaAmplaConcorrencia?: number;
+  };
+  
+  // Important dates
+  datas?: {
+    inscricoesInicio?: string;
+    inscricoesFim?: string;
+    prova?: string;
+    provaObjetiva?: string;
+    provaPratica?: string;
+    resultado?: string;
+    recursos?: string;
+  };
+  
+  // Fees
+  taxas?: Array<{
+    cargo?: string;
+    valor: number;
+  }>;
+  
+  // Organizing institution
+  banca?: {
+    nome?: string;
+    cnpj?: string;
+  };
+  
+  // Multi-city support
+  cidades?: Array<{
+    nome: string;
+    territoryId?: string;
+    vagas?: number;
+  }>;
+  
+  // Current status
+  status?: string;
+  
+  // Additional context
+  observacoes?: string[];
+}
+
+/**
+ * Concurso-specific finding
+ */
+export interface ConcursoFinding extends Finding {
+  type: 'concurso';
+  data: {
+    category: 'concurso_publico';
+    concursoData?: ConcursoData;
+    extractionMethod: 'pattern' | 'ai' | 'hybrid';
+    [key: string]: any;
   };
 }

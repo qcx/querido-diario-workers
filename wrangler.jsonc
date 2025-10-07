@@ -39,6 +39,9 @@
     ]
   },
 
+  // Secrets (set via wrangler secret put)
+  // - DATABASE_URL: PostgreSQL connection string
+
   // Environments
   "env": {
     "development": {

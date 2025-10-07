@@ -5,8 +5,16 @@
 import { AnalysisQueueMessage, GazetteAnalysis, AnalysisConfig } from './types';
 import { AnalysisOrchestrator } from './services/analysis-orchestrator';
 import { logger } from './utils';
+import { 
+  getDatabase, 
+  TelemetryService, 
+  AnalysisRepository,
+  ConcursoRepository,
+  ErrorTracker,
+  DatabaseEnv 
+} from './services/database';
 
-export interface Env {
+export interface Env extends DatabaseEnv {
   ANALYSIS_QUEUE: Queue<AnalysisQueueMessage>;
   ANALYSIS_RESULTS: KVNamespace;
   OCR_RESULTS?: KVNamespace; // Access to OCR results stored by OCR worker
@@ -37,6 +45,14 @@ export default {
           priority: 2,
           timeout: 15000,
         },
+        concurso: {
+          enabled: true,
+          priority: 1.5, // High priority for concurso detection
+          timeout: 20000,
+          useAIExtraction: !!env.OPENAI_API_KEY,
+          apiKey: env.OPENAI_API_KEY,
+          model: 'gpt-4o-mini',
+        },
         ai: {
           enabled: !!env.OPENAI_API_KEY,
           priority: 3,
@@ -48,28 +64,114 @@ export default {
 
     const orchestrator = new AnalysisOrchestrator(config);
 
+    // Initialize database services
+    const db = getDatabase(env);
+    const telemetry = new TelemetryService(db);
+    const analysisRepo = new AnalysisRepository(db);
+    const concursoRepo = new ConcursoRepository(db);
+    const errorTracker = new ErrorTracker(db);
+
     // Process messages and collect webhook messages
     const allWebhookMessages: any[] = [];
     
     for (const message of batch.messages) {
+      const startTime = Date.now();
+      const crawlJobId = message.body.metadata?.crawlJobId || 'unknown';
+      
       try {
-        const webhookMessages = await processAnalysisMessage(message, orchestrator, env);
+        const webhookMessages = await processAnalysisMessage(
+          message, 
+          orchestrator, 
+          env,
+          telemetry,
+          analysisRepo,
+          concursoRepo,
+          errorTracker
+        );
         if (webhookMessages && webhookMessages.length > 0) {
           allWebhookMessages.push(...webhookMessages);
         }
+
+        const executionTimeMs = Date.now() - startTime;
+        
+        // Track analysis completion
+        await telemetry.trackCityStep(
+          crawlJobId,
+          message.body.territoryId,
+          'analysis',
+          'analysis',
+          'analysis_end',
+          'completed',
+          {
+            executionTimeMs,
+          }
+        );
+        
         message.ack();
       } catch (error: any) {
+        const executionTimeMs = Date.now() - startTime;
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+        
         logger.error('Failed to process analysis message', error, {
           jobId: message.body.jobId,
+          crawlJobId,
         });
+
+        // Track analysis failure
+        try {
+          await telemetry.trackCityStep(
+            crawlJobId,
+            message.body.territoryId,
+            'analysis',
+            'analysis',
+            'analysis_end',
+            'failed',
+            {
+              executionTimeMs,
+              errorMessage,
+            }
+          );
+        } catch (telemetryError) {
+          logger.error('Failed to track analysis failure', telemetryError as Error, { 
+            crawlJobId 
+          });
+        }
+
+        // Track the critical error that stopped analysis
+        await errorTracker.trackCriticalError(
+          'analysis-worker',
+          'analysis_processing',
+          error as Error,
+          {
+            jobId: message.body.jobId,
+            ocrJobId: message.body.ocrJobId,
+            territoryId: message.body.territoryId,
+            crawlJobId,
+            executionTimeMs
+          }
+        ).catch(() => {});
         
         // Retry logic
         if (message.attempts < 3) {
           message.retry();
         } else {
-          logger.error('Max retries reached, moving to DLQ', {
+          logger.error('Max retries reached, moving to DLQ', new Error('Max retries reached'), {
             jobId: message.body.jobId,
+            crawlJobId,
           });
+
+          // Track max retries as critical error
+          await errorTracker.trackCriticalError(
+            'analysis-worker',
+            'max_retries_reached',
+            new Error(`Max retries reached for analysis job ${message.body.jobId}`),
+            {
+              jobId: message.body.jobId,
+              crawlJobId,
+              attempts: message.attempts
+            }
+          ).catch(() => {});
+          
           message.ack(); // Acknowledge to remove from queue
         }
       }
@@ -97,22 +199,60 @@ export default {
 };
 
 /**
- * Process a single analysis message and return webhook messages
+ * Process a single analysis message with database integration
  */
 async function processAnalysisMessage(
   message: Message<AnalysisQueueMessage>,
   orchestrator: AnalysisOrchestrator,
-  env: Env
+  env: Env,
+  telemetry: TelemetryService,
+  analysisRepo: AnalysisRepository,
+  concursoRepo: ConcursoRepository,
+  errorTracker?: ErrorTracker
 ): Promise<any[]> {
   const { jobId, ocrJobId, territoryId } = message.body;
+  const crawlJobId = message.body.metadata?.crawlJobId || 'unknown';
 
   logger.info(`Processing analysis for job ${jobId}`, {
     jobId,
     ocrJobId,
     territoryId,
+    crawlJobId,
   });
 
-  // Fetch OCR result from KV storage
+  // Track analysis start
+  await telemetry.trackCityStep(
+    crawlJobId,
+    territoryId,
+    'analysis', // use generic spider ID for analysis
+    'analysis',
+    'analysis_start',
+    'started'
+  );
+
+  // Check if already analyzed in database
+  const existingAnalysis = await analysisRepo.analysisExists(jobId);
+  if (existingAnalysis) {
+    logger.info(`Analysis already exists for job ${jobId}`, {
+      jobId,
+      ocrJobId,
+      crawlJobId,
+    });
+    
+    // Track completion for existing analysis
+    await telemetry.trackCityStep(
+      crawlJobId,
+      territoryId,
+      'analysis',
+      'analysis',
+      'analysis_end',
+      'skipped'
+    );
+    
+    return [];
+  }
+
+  // Fetch OCR result from KV storage (fast cache)
   const ocrResultData = await env.OCR_RESULTS?.get(`ocr:${ocrJobId}`);
   if (!ocrResultData) {
     throw new Error(`OCR result not found in KV storage for job: ${ocrJobId}`);
@@ -123,24 +263,38 @@ async function processAnalysisMessage(
     jobId,
     ocrJobId,
     textLength: ocrResult.extractedText?.length || 0,
+    crawlJobId,
   });
-
-  // Check if already analyzed
-  const existingKey = `analysis:${ocrJobId}`;
-  const existing = await env.ANALYSIS_RESULTS.get(existingKey);
-  
-  if (existing) {
-    logger.info(`Analysis already exists for job ${ocrJobId}`, {
-      jobId,
-      ocrJobId,
-    });
-    return [];
-  }
 
   // Perform analysis - pass territoryId from message since ocrResult doesn't have it
   const analysis = await orchestrator.analyze(ocrResult, territoryId);
 
-  // Store results
+  // Store results in database (permanent storage)
+  await analysisRepo.storeAnalysis(analysis);
+  logger.info(`Analysis stored in database`, {
+    jobId: analysis.jobId,
+    totalFindings: analysis.summary.totalFindings,
+    crawlJobId,
+  });
+
+  // Store concurso findings in specialized table
+  const concursoFindings = analysis.analyses
+    .flatMap(a => a.findings)
+    .filter(f => f.type === 'concurso');
+    
+  for (const finding of concursoFindings) {
+    try {
+      await concursoRepo.storeConcursoFinding(finding as any, analysis.jobId);
+    } catch (concursoError) {
+      logger.error('Failed to store concurso finding', {
+        jobId: analysis.jobId,
+        error: concursoError,
+        crawlJobId,
+      });
+    }
+  }
+
+  // Also store in KV for backwards compatibility (cache)
   await storeAnalysisResults(analysis, env);
 
   // Send to webhooks if configured

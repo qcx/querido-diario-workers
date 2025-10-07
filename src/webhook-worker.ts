@@ -8,12 +8,18 @@ import {
   WebhookSubscription,
 } from './types';
 import { logger } from './utils';
+import { 
+  getDatabase, 
+  TelemetryService, 
+  WebhookRepository,
+  DatabaseEnv 
+} from './services/database';
 
-export interface Env {
+export interface Env extends DatabaseEnv {
   // Queue bindings
   WEBHOOK_QUEUE: Queue<WebhookQueueMessage>;
   
-  // KV for storing subscriptions and delivery logs
+  // KV for storing subscriptions and delivery logs (logs now in database)
   WEBHOOK_SUBSCRIPTIONS: KVNamespace;
   WEBHOOK_DELIVERY_LOGS: KVNamespace;
 }
@@ -28,15 +34,65 @@ export default {
   ): Promise<void> {
     logger.info(`Webhook Worker: Processing batch of ${batch.messages.length} messages`);
 
+    // Initialize database services
+    const db = getDatabase(env);
+    const telemetry = new TelemetryService(db);
+    const webhookRepo = new WebhookRepository(db);
+    const errorTracker = new ErrorTracker(db);
+
     for (const message of batch.messages) {
+      const startTime = Date.now();
+      const crawlJobId = message.body.metadata?.crawlJobId || 'unknown';
+
       try {
-        await processWebhookMessage(message, env);
+        await processWebhookMessage(message, env, telemetry, webhookRepo, crawlJobId);
+        
+        const executionTimeMs = Date.now() - startTime;
+        
+        // Track webhook completion
+        await telemetry.trackCityStep(
+          crawlJobId,
+          message.body.notification.gazette?.territoryId || 'unknown',
+          'webhook',
+          'webhook',
+          'webhook_sent',
+          'completed',
+          {
+            executionTimeMs,
+          }
+        );
+        
         message.ack();
       } catch (error: any) {
+        const executionTimeMs = Date.now() - startTime;
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+        
         logger.error('Failed to process webhook message', {
-          error: error.message,
+          error: errorMessage,
           messageId: message.body.messageId,
+          crawlJobId,
         });
+
+        // Track webhook failure
+        try {
+          await telemetry.trackCityStep(
+            crawlJobId,
+            message.body.notification.gazette?.territoryId || 'unknown',
+            'webhook',
+            'webhook',
+            'webhook_sent',
+            'failed',
+            {
+              executionTimeMs,
+              errorMessage,
+            }
+          );
+        } catch (telemetryError) {
+          logger.error('Failed to track webhook failure', { 
+            telemetryError,
+            crawlJobId 
+          });
+        }
 
         // Retry logic
         const attempts = message.body.attempts || 0;
@@ -46,6 +102,7 @@ export default {
           logger.error('Max retries reached for webhook', {
             messageId: message.body.messageId,
             subscriptionId: message.body.subscriptionId,
+            crawlJobId,
           });
           message.ack(); // Move to DLQ
         }

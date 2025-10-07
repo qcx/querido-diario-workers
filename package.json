@@ -21,6 +21,8 @@
     "test:platform": "npx tsx scripts/test-platform.ts",
     "find:city": "npx tsx scripts/find-city.ts",
     "setup:webhook": "npx tsx scripts/setup-concursos-webhook.ts",
+    "test:database": "npx tsx scripts/setup-database.ts",
+    "setup:secrets": "npx tsx scripts/setup-secrets.ts",
     "run:today-yesterday": "npx tsx scripts/run-today-yesterday.ts",
     "test:capitals": "npx tsx scripts/test-capitals.ts",
     "test:local": "npx tsx scripts/test-local-pipeline.ts",
@@ -56,6 +58,7 @@
     "node-html-parser": "^7.0.1",
     "playwright": "^1.55.1",
     "playwright-extra": "^4.3.6",
+    "postgres": "^3.4.7",
     "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "devDependencies": {
