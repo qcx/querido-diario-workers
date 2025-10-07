@@ -1,0 +1,210 @@
+{
+  "total": 52,
+  "municipalities": [
+    {
+      "id": "ro_1100015",
+      "name": "Alta Floresta D'Oeste",
+      "stateCode": "RO",
+      "territoryId": "1100015",
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia",
+        "cityName": "Alta Floresta D'Oeste",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100023",
+      "name": "Ariquemes",
+      "stateCode": "RO", 
+      "territoryId": "1100023",
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia",
+        "cityName": "Ariquemes",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100049",
+      "name": "Cabixi",
+      "stateCode": "RO",
+      "territoryId": "1100049",
+      "spiderType": "rondonia", 
+      "config": {
+        "type": "rondonia",
+        "cityName": "Cabixi",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100056",
+      "name": "Cacoal",
+      "stateCode": "RO",
+      "territoryId": "1100056",
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia", 
+        "cityName": "Cacoal",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100924",
+      "name": "Cerejeiras",
+      "stateCode": "RO",
+      "territoryId": "1100924",
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia",
+        "cityName": "Cerejeiras", 
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100106",
+      "name": "Colorado do Oeste",
+      "stateCode": "RO",
+      "territoryId": "1100106",
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia",
+        "cityName": "Colorado do Oeste",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100924",
+      "name": "Corumbiara",
+      "stateCode": "RO", 
+      "territoryId": "1100924",
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia",
+        "cityName": "Corumbiara",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100155",
+      "name": "Guajará-Mirim",
+      "stateCode": "RO",
+      "territoryId": "1100155",
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia",
+        "cityName": "Guajará-Mirim",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100189",
+      "name": "Jaru",
+      "stateCode": "RO",
+      "territoryId": "1100189", 
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia",
+        "cityName": "Jaru",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100205",
+      "name": "Ji-Paraná",
+      "stateCode": "RO",
+      "territoryId": "1100205",
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia",
+        "cityName": "Ji-Paraná",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100254",
+      "name": "Ouro Preto do Oeste",
+      "stateCode": "RO",
+      "territoryId": "1100254",
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia",
+        "cityName": "Ouro Preto do Oeste", 
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100262",
+      "name": "Pimenta Bueno",
+      "stateCode": "RO",
+      "territoryId": "1100262",
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia",
+        "cityName": "Pimenta Bueno",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100288",
+      "name": "Porto Velho",
+      "stateCode": "RO",
+      "territoryId": "1100288",
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia",
+        "cityName": "Porto Velho",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100296",
+      "name": "Presidente Médici",
+      "stateCode": "RO",
+      "territoryId": "1100296",
+      "spiderType": "rondonia", 
+      "config": {
+        "type": "rondonia",
+        "cityName": "Presidente Médici",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100320",
+      "name": "Rio Crespo",
+      "stateCode": "RO",
+      "territoryId": "1100320", 
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia",
+        "cityName": "Rio Crespo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100338", 
+      "name": "Rolim de Moura",
+      "stateCode": "RO",
+      "territoryId": "1100338",
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia",
+        "cityName": "Rolim de Moura",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "ro_1100379",
+      "name": "Vilhena",
+      "stateCode": "RO",
+      "territoryId": "1100379",
+      "spiderType": "rondonia",
+      "config": {
+        "type": "rondonia",
+        "cityName": "Vilhena",
+        "power": "executive_legislative"
+      }
+    }
+  ]
+}
+

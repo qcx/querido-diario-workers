@@ -1,5 +1,5 @@
 import { SpiderConfig, SpiderType, DateRange } from '../types';
-import { BaseSpider, DoemSpider, InstarSpider, DospSpider, DiofSpider, ADiariosV1Spider, SigpubSpider, BarcoDigitalSpider, SiganetSpider } from './base';
+import { BaseSpider, DoemSpider, InstarSpider, DospSpider, DiofSpider, ADiariosV1Spider, SigpubSpider, BarcoDigitalSpider, SiganetSpider, RondoniaSpider, AcreSpider, EspiritoSantoSpider } from './base';
 import { DiarioOficialBRSpider } from './base/diario-oficial-br-spider';
 import { ModernizacaoSpider } from './base/modernizacao-spider';
 import { ADiariosV2Spider } from './base/adiarios-v2-spider';
@@ -33,6 +33,9 @@ import atendeV2CitiesConfig from './configs/atende-v2-cities.json';
 import domScCitiesConfig from './configs/dom-sc-cities.json';
 import sigpubCitiesConfig from './configs/sigpub-cities.json';
 import doeSpCitiesConfig from './configs/doe-sp-cities.json';
+import rondoniaCitiesConfig from './configs/rondonia-cities.json';
+import acreCitiesConfig from './configs/acre-cities.json';
+import espiritoSantoCitiesConfig from './configs/espirito-santo-cities.json';
 
 /**
  * Spider registry - maps spider IDs to configurations
@@ -154,6 +157,24 @@ class SpiderRegistry {
     for (const config of doeSpCitiesConfig as SpiderConfig[]) {
       this.configs.set(config.id, config);
     }
+    
+    // Load Rondônia state gazette
+    const rondoniaData = rondoniaCitiesConfig as any;
+    for (const config of rondoniaData.municipalities as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load Acre state gazette
+    const acreData = acreCitiesConfig as any;
+    for (const config of acreData.municipalities as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
+    
+    // Load Espírito Santo state gazette (DOM - AMUNES)
+    const espiritoSantoData = espiritoSantoCitiesConfig as any;
+    for (const config of espiritoSantoData.municipalities as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
   }
 
   /**
@@ -247,6 +268,15 @@ class SpiderRegistry {
       
       case 'amm-mt':
         return new AmmMtSpider(config, dateRange);
+      
+      case 'rondonia':
+        return new RondoniaSpider(config, dateRange);
+      
+      case 'acre':
+        return new AcreSpider(config, dateRange);
+      
+      case 'espirito_santo':
+        return new EspiritoSantoSpider(config, dateRange);
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);

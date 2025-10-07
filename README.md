@@ -7,7 +7,7 @@ Serverless crawler for Brazilian official gazettes (diários oficiais) using **C
 - ✅ **Serverless**: Runs on Cloudflare Workers (no servers to manage)
 - ✅ **Scalable**: Uses Cloudflare Queues for distributed crawling
 - ✅ **TypeScript**: Fully typed codebase
-- ✅ **3,046 Cities**: 3,277 total configs with fallback system (**54.7% national coverage**)
+- ✅ **3,146 Cities**: 3,377 total configs with fallback system (**56.5% national coverage**)
 - ✅ **Lightweight**: Extracts gazette metadata and PDF URLs (no file downloads)
 - ✅ **Fast**: Average 400-500ms per city crawl
 - ✅ **OCR Integration**: Automatic PDF text extraction with Mistral OCR API
@@ -15,9 +15,9 @@ Serverless crawler for Brazilian official gazettes (diários oficiais) using **C
 
 ## 📊 National Coverage
 
-**3,046 of 5,570 Brazilian municipalities (54.7%)**
+**3,146 of 5,570 Brazilian municipalities (56.5%)**
 
-**🔄 Fallback System**: 3,277 total configurations providing 231 fallbacks for improved reliability.
+**🔄 Fallback System**: 3,377 total configurations providing 231 fallbacks for improved reliability.
 
 ### Coverage by State
 
@@ -45,15 +45,15 @@ Serverless crawler for Brazilian official gazettes (diários oficiais) using **C
 | **AP** | Amapá | 16 | 1 | 1 | **6.3%** | +0 | `█░░░░░░░░░░░░░░░░░░░` |
 | **AL** | Alagoas | 102 | 1 | 1 | **1.0%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
 | **PA** | Pará | 144 | 1 | 1 | **0.7%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
-| **AC** | Acre | 22 | 0 | 0 | **0.0%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
+| **AC** | Acre | 22 | 22 | 22 | **100.0%** | +0 | `████████████████████` |
 | **DF** | Distrito Federal | 1 | 0 | 0 | **0.0%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
-| **ES** | Espírito Santo | 78 | 0 | 0 | **0.0%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
+| **ES** | Espírito Santo | 78 | 78 | 78 | **100.0%** | +0 | `████████████████████` |
 | **RO** | Rondônia | 52 | 0 | 0 | **0.0%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
 | **RR** | Roraima | 15 | 0 | 0 | **0.0%** | +0 | `░░░░░░░░░░░░░░░░░░░░` |
 
 *Sistema de fallback implementado: múltiplas configurações por território garantem maior confiabilidade.*
 
-*Last updated: 2025-10-06*
+*Last updated: 2025-10-06 (New: Acre and Espírito Santo - 100% coverage)*
 
 ## Architecture
 
@@ -101,8 +101,8 @@ querido-diario-workers/
 │   │   ├── analysis-orchestrator.ts  # AI analysis
 │   │   └── webhook-sender.ts     # Webhook notifications
 │   ├── spiders/                  # Spider system
-│   │   ├── base/                 # 23 spider implementations
-│   │   ├── configs/              # 20 platform configs (2,792 cities)
+│   │   ├── base/                 # 25 spider implementations
+│   │   ├── configs/              # 22 platform configs (3,146 cities)
 │   │   └── registry.ts           # Spider factory
 │   ├── analyzers/                # AI analysis modules
 │   ├── testing/                  # Automated testing system
@@ -198,16 +198,6 @@ npm run deploy
 
 ## Supported Platforms
 
-### Current
-
-- **DOEM** (Diário Oficial Eletrônico dos Municípios): **56 cities** ✅
-  - 52 cities in Bahia (BA)
-  - 1 city in Pernambuco (PE)
-  - 2 cities in Paraná (PR)
-  - 1 city in Sergipe (SE)
-
-## Supported Platforms
-
 | Platform | Cities | Status |
 |----------|--------|--------|
 | **SIGPub** | 1,573 | ✅ |
@@ -227,11 +217,22 @@ npm run deploy
 | **Dioenet** | 4 | ✅ |
 | **AdministracaoPublica** | 3 | ✅ |
 | **PTIO** | 3 | ✅ |
-| **Total** | **1,937** | **28.2%** |
+| **Acre** | 22 | ✅ |
+| **Espírito Santo** | 78 | ✅ |
+| **Total** | **2,037** | **36.6%** |
 
-### Planned
+### Platform Architecture Models
 
-- Other platforms: ~158 cities remaining
+- **🔌 API-First** (Espírito Santo): JSON API with structured metadata
+- **🔍 Keyword Search** (Acre): Centralized HTML with search functionality  
+- **📄 Individual Sites** (Most platforms): Per-municipality websites
+- **🔄 Fallback System**: Multiple configs per territory for reliability
+
+### Remaining Work
+
+- Other platforms: ~58 cities remaining
+- Rondônia state gazette integration
+- Advanced fallback mechanisms
 
 ## OCR System
 
@@ -326,6 +327,8 @@ Each crawl returns gazette metadata:
 - [x] Dioenet spider (4 cities) ✅
 - [x] AdministracaoPublica spider (3 cities) ✅
 - [x] PTIO spider (3 cities) ✅
+- [x] Acre spider (22 cities) ✅ **NEW**
+- [x] Espírito Santo spider (78 cities) ✅ **NEW**
 - [ ] ADiarios V2 spider (5 cities) - requires browser automation
 - [ ] Remaining platforms (~158 cities)
 - [ ] Storage integration (D1/KV/R2)

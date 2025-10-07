@@ -22,6 +22,9 @@ export type SpiderType =
   | 'dom_sc'
   | 'diario-ba'
   | 'amm-mt'
+  | 'rondonia'
+  | 'acre'
+  | 'espirito_santo'
   | 'custom';
 
 /**
@@ -70,6 +73,9 @@ export type SpiderPlatformConfig =
   | DomScConfig
   | DiarioBaConfig
   | AmmMtConfig
+  | RondoniaConfig
+  | AcreConfig
+  | EspiritoSantoConfig
   | CustomConfig;
 
 /**
@@ -238,4 +244,34 @@ export interface AmmMtConfig {
   url: string;
   /** City name for the municipality */
   cityName: string;
+}
+
+export interface RondoniaConfig {
+  type: 'rondonia';
+  /** City name to search for in the gazette content */
+  cityName: string;
+  /** Power of the gazette (executive_legislative for municipal content) */
+  power: 'executive' | 'legislative' | 'executive_legislative';
+}
+
+/**
+ * Configuration for Acre state official gazette spider
+ * All municipalities publish in a single centralized state gazette
+ */
+export interface AcreConfig {
+  type: 'acre';
+  /** City name to search for in the gazette content */
+  cityName: string;
+  /** Power of the gazette (executive_legislative for municipal content) */
+  power: 'executive' | 'legislative' | 'executive_legislative';
+}
+
+/**
+ * Configuration for Espírito Santo state official gazette spider (DOM - AMUNES)
+ * All municipalities publish through AMUNES centralized system with API access
+ */
+export interface EspiritoSantoConfig {
+  type: 'espirito_santo';
+  /** Power of the gazette (executive_legislative for municipal content) */
+  power: 'executive' | 'legislative' | 'executive_legislative';
 }

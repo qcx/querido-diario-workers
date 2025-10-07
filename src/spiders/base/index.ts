@@ -19,3 +19,6 @@ export * from './ptio-spider';
 export * from './municipio-online-spider';
 export * from './atende-v2-spider';
 export * from './dom-sc-spider';
+export * from './rondonia-spider';
+export * from './acre-spider';
+export * from './espirito-santo-spider';

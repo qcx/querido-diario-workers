@@ -1,0 +1,281 @@
+{
+  "total": 78,
+  "description": "DOM - AMUNES (Diário Oficial dos Municípios - Associação dos Municípios do Espírito Santo)",
+  "municipalities": [
+    {
+      "id": "es_3205002",
+      "name": "Vitória",
+      "stateCode": "ES", 
+      "territoryId": "3205002",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3205010",
+      "name": "Serra",
+      "stateCode": "ES",
+      "territoryId": "3205010", 
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3201308",
+      "name": "Cariacica",
+      "stateCode": "ES",
+      "territoryId": "3201308",
+      "spiderType": "espirito_santo", 
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3205200",
+      "name": "Vila Velha",
+      "stateCode": "ES",
+      "territoryId": "3205200",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo", 
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3201209",
+      "name": "Cachoeiro de Itapemirim", 
+      "stateCode": "ES",
+      "territoryId": "3201209",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3201605",
+      "name": "Colatina",
+      "stateCode": "ES", 
+      "territoryId": "3201605",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3203205",
+      "name": "Linhares",
+      "stateCode": "ES",
+      "territoryId": "3203205", 
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3203809",
+      "name": "Nova Venécia",
+      "stateCode": "ES",
+      "territoryId": "3203809",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3204203",
+      "name": "Guarapari",
+      "stateCode": "ES",
+      "territoryId": "3204203",
+      "spiderType": "espirito_santo", 
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3204906",
+      "name": "São Mateus",
+      "stateCode": "ES",
+      "territoryId": "3204906",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3200169",
+      "name": "Afonso Cláudio",
+      "stateCode": "ES",
+      "territoryId": "3200169",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3200201",
+      "name": "Águia Branca", 
+      "stateCode": "ES",
+      "territoryId": "3200201",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3200300",
+      "name": "Água Doce do Norte",
+      "stateCode": "ES",
+      "territoryId": "3200300", 
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3200359",
+      "name": "Alegre",
+      "stateCode": "ES",
+      "territoryId": "3200359",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3200409",
+      "name": "Alfredo Chaves",
+      "stateCode": "ES", 
+      "territoryId": "3200409",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3200508",
+      "name": "Alto Rio Novo",
+      "stateCode": "ES",
+      "territoryId": "3200508",
+      "spiderType": "espirito_santo", 
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3200607",
+      "name": "Anchieta",
+      "stateCode": "ES",
+      "territoryId": "3200607",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3200706",
+      "name": "Apiacá",
+      "stateCode": "ES",
+      "territoryId": "3200706",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo", 
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3200805",
+      "name": "Aracruz",
+      "stateCode": "ES",
+      "territoryId": "3200805",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3200904",
+      "name": "Atilio Vivacqua",
+      "stateCode": "ES", 
+      "territoryId": "3200904",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3201001", 
+      "name": "Baixo Guandu",
+      "stateCode": "ES",
+      "territoryId": "3201001",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3201100",
+      "name": "Barra de São Francisco",
+      "stateCode": "ES",
+      "territoryId": "3201100", 
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3201159",
+      "name": "Boa Esperança",
+      "stateCode": "ES",
+      "territoryId": "3201159",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3201209",
+      "name": "Bom Jesus do Norte", 
+      "stateCode": "ES",
+      "territoryId": "3201209",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo",
+        "power": "executive_legislative"
+      }
+    },
+    {
+      "id": "es_3201308",
+      "name": "Brejetuba",
+      "stateCode": "ES",
+      "territoryId": "3201308",
+      "spiderType": "espirito_santo",
+      "config": {
+        "type": "espirito_santo", 
+        "power": "executive_legislative"
+      }
+    }
+  ]
+}
