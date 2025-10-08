@@ -5,6 +5,14 @@
 
 import { OcrQueueMessage, OcrResult, MistralOcrConfig } from '../types';
 import { logger } from '../utils';
+import type { 
+  MistralOcrResponse, 
+  MistralPage, 
+  MistralPageResult,
+  MistralErrorResponse
+} from '../types/external-apis';
+import { isMistralOcrResponse } from '../types/external-apis';
+import { MistralOcrError, toAppError } from '../types/errors';
 
 export class MistralOcrService {
   private config: MistralOcrConfig;
@@ -60,12 +68,14 @@ export class MistralOcrService {
         completedAt: new Date().toISOString(),
         metadata: message.metadata,
       };
-    } catch (error: any) {
+    } catch (error: unknown) {
       const processingTimeMs = Date.now() - startTime;
+      const appError = error instanceof MistralOcrError ? error : toAppError(error);
       
-      logger.error(`OCR processing failed for job ${message.jobId}`, error, {
+      logger.error(`OCR processing failed for job ${message.jobId}`, {
         jobId: message.jobId,
         processingTimeMs,
+        error: appError.toJSON()
       });
 
       return {
@@ -77,9 +87,9 @@ export class MistralOcrService {
         editionNumber: message.editionNumber,
         spiderId: message.spiderId,
         error: {
-          message: error.message,
-          code: error.code,
-          details: error.stack,
+          message: appError.message,
+          code: appError.code,
+          details: appError.stack,
         },
         processingTimeMs,
         completedAt: new Date().toISOString(),
@@ -157,7 +167,7 @@ export class MistralOcrService {
         // Get R2 public URL
         finalPdfUrl = `https://gazette-pdfs.qconcursos.workers.dev/${key}`;
         logger.info(`Using R2 URL for OCR: ${finalPdfUrl}`);
-      } catch (error: any) {
+      } catch (error: unknown) {
         logger.error(`Failed to upload to R2, using original URL`, error);
         // Fallback to original URL
       }
@@ -184,23 +194,51 @@ export class MistralOcrService {
 
     if (!response.ok) {
       const errorText = await response.text();
-      throw new Error(`Mistral OCR API error: ${response.status} - ${errorText}`);
+      throw new MistralOcrError(
+        `Mistral OCR API error: ${response.status} - ${errorText}`,
+        'https://api.mistral.ai/v1/ocr',
+        response.status,
+        errorText,
+        { jobId, pdfUrl }
+      );
     }
 
-    const result: any = await response.json();
+    const result: unknown = await response.json();
     
-    if (!result.pages || !Array.isArray(result.pages) || result.pages.length === 0) {
-      throw new Error('No pages in Mistral OCR response');
+    if (!isMistralOcrResponse(result)) {
+      throw new MistralOcrError(
+        'Invalid response format from Mistral API',
+        'https://api.mistral.ai/v1/ocr',
+        undefined,
+        JSON.stringify(result).substring(0, 500),
+        { jobId, pdfUrl }
+      );
+    }
+    
+    if (!result.pages || result.pages.length === 0) {
+      throw new MistralOcrError(
+        'No pages in Mistral OCR response',
+        'https://api.mistral.ai/v1/ocr',
+        undefined,
+        undefined,
+        { jobId, pdfUrl, responsePages: result.pages?.length || 0 }
+      );
     }
 
     // Extract markdown from all pages and concatenate
     const extractedText = result.pages
-      .map((page: any) => page.markdown || '')
+      .map((page: MistralPage) => page.markdown || '')
       .filter((text: string) => text.length > 0)
       .join('\n\n---\n\n');
 
     if (!extractedText) {
-      throw new Error('No text extracted from PDF');
+      throw new MistralOcrError(
+        'No text extracted from PDF',
+        'https://api.mistral.ai/v1/ocr',
+        undefined,
+        undefined,
+        { jobId, pdfUrl, pagesProcessed: result.pages.length }
+      );
     }
 
     logger.info(`Extracted text from ${result.pages.length} pages`, {

@@ -15,7 +15,7 @@ import {
   AnalysisQueueMessage,
   WebhookQueueMessage,
 } from './types';
-import type { DatabaseEnv } from './services/database';
+import type { D1DatabaseEnv } from './services/database';
 import { spiderRegistry } from './spiders/registry';
 import { logger } from './utils/logger';
 import { toISODate } from './utils/date-utils';
@@ -30,7 +30,7 @@ import { processWebhookBatch, WebhookProcessorEnv } from './goodfellow/webhook-p
 /**
  * Combined environment bindings for Goodfellow
  */
-export interface GoodfellowEnv extends DatabaseEnv {
+export interface GoodfellowEnv extends D1DatabaseEnv {
   // Queue bindings - both producer and consumer
   CRAWL_QUEUE: Queue<QueueMessage>;
   OCR_QUEUE: Queue<OcrQueueMessage>;

@@ -1,54 +1,28 @@
 /**
  * Database Services Index
- * Central exports for all database-related services
+ * D1/Drizzle-based database services
  */
 
-export { DatabaseClient, getDatabase, initTestDatabase } from './client';
-export type { DatabaseConfig, DatabaseEnv } from './client';
+// D1 Database client and schema
+export { DrizzleDatabaseClient, getDatabase, schema } from './drizzle-client';
+export type { D1DatabaseEnv } from './drizzle-client';
 
-export { TelemetryService } from './telemetry';
-export type { 
-  TelemetryStep, 
-  StepStatus, 
-  JobType, 
-  JobStatus, 
-  CrawlJobData, 
-  TelemetryStepData 
-} from './telemetry';
+// D1-based repositories (renamed for simplicity)
+export { DrizzleGazetteRepository as GazetteRepository } from './drizzle-gazette-repo';
+export { DrizzleAnalysisRepository as AnalysisRepository } from './drizzle-analysis-repo';
+export { DrizzleOcrRepository as OcrRepository } from './drizzle-ocr-repo';
+export { DrizzleErrorTracker as ErrorTracker } from './drizzle-error-tracker';
+export { DrizzleWebhookRepository as WebhookRepository } from './drizzle-webhook-repo';
+export { DrizzleConcursoRepository as ConcursoRepository } from './drizzle-concurso-repo';
+export { DrizzleTelemetryService as TelemetryService } from './drizzle-telemetry';
 
-export { GazetteRepository } from './gazette-repo';
-export type { GazetteRecord } from './gazette-repo';
+// Type exports
+export type { ConcursoRecord, ConcursoSearchFilters } from './drizzle-concurso-repo';
+export type { ErrorLog, ErrorLogRecord, ErrorStatistics } from './drizzle-error-tracker';
+export type { OcrResultRecord, OcrMetadataRecord } from './drizzle-ocr-repo';
+export type { WebhookDeliveryRecord } from './drizzle-webhook-repo';
+export type { TelemetryStep, StepStatus, JobType, JobStatus, CrawlJobData, TelemetryStepData } from './drizzle-telemetry';
 
-export { AnalysisRepository } from './analysis-repo';
-export type { AnalysisRecord } from './analysis-repo';
-
-export { WebhookRepository } from './webhook-repo';
-export type { WebhookDeliveryRecord } from './webhook-repo';
-
-export { ErrorTracker } from './error-tracker';
-export type { 
-  ErrorLog, 
-  ErrorLogRecord, 
-  ErrorSeverity, 
-  ErrorStatistics 
-} from './error-tracker';
-
-export { ConcursoRepository } from './concurso-repo';
-export type { 
-  ConcursoRecord, 
-  ConcursoSearchFilters 
-} from './concurso-repo';
-
-export { OcrRepository } from './ocr-repo';
-export type { 
-  OcrResultRecord, 
-  OcrPageRecord, 
-  OcrPageData 
-} from './ocr-repo';
-
-export { DashboardQueries } from './dashboard-queries';
-export type {
-  PipelineHealthData,
-  ErrorSummary,
-  SystemStatus
-} from './dashboard-queries';
+// Legacy type exports for compatibility
+export type { GazetteRecord } from './drizzle-gazette-repo';
+export type { AnalysisRecord } from './drizzle-analysis-repo';

@@ -8,7 +8,7 @@ import {
   WebhookDeliveryResult,
   WebhookSubscription,
 } from '../types';
-import type { DatabaseEnv } from '../services/database';
+import type { D1DatabaseEnv } from '../services/database';
 import { logger } from '../utils';
 import {
   getDatabase,
@@ -17,7 +17,7 @@ import {
   WebhookRepository,
 } from '../services/database';
 
-export interface WebhookProcessorEnv extends DatabaseEnv {
+export interface WebhookProcessorEnv extends D1DatabaseEnv {
   WEBHOOK_SUBSCRIPTIONS: KVNamespace;
   WEBHOOK_DELIVERY_LOGS: KVNamespace;
 }

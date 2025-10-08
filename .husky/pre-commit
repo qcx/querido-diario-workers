@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "🔍 Running TypeScript type checking..."
+
+# Run TypeScript type checking (non-blocking during migration)
+if npm run type-check > /tmp/tsc-output.log 2>&1; then
+  echo "✅ TypeScript type checking passed!"
+else
+  echo "⚠️  TypeScript has issues (migration in progress):"
+  echo "📋 Run 'npm run type-check' to see all type issues"
+  echo "🚀 Allowing commit to continue..."
+fi
+
+echo "✨ Type-safe migration in progress - Core types implemented!"

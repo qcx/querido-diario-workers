@@ -5,6 +5,7 @@
 import { BaseAnalyzer } from './base-analyzer';
 import { OcrResult, Finding, AIAnalysisPrompt, AnalyzerConfig } from '../types';
 import { logger } from '../utils';
+import { AIAnalysisError, toAppError } from '../types/errors';
 
 export class AIAnalyzer extends BaseAnalyzer {
   private apiKey: string;
@@ -55,7 +56,11 @@ export class AIAnalyzer extends BaseAnalyzer {
         const result = await this.runAIAnalysis(text, prompt, ocrResult.metadata);
         findings.push(...result);
       } catch (error: any) {
-        logger.error(`AI analysis failed for prompt ${prompt.name}`, error);
+        const aiError = error instanceof AIAnalysisError ? error : toAppError(error);
+        logger.error(`AI analysis failed for prompt ${prompt.name}`, {
+          promptName: prompt.name,
+          error: aiError.toJSON()
+        });
       }
     }
 
@@ -65,7 +70,7 @@ export class AIAnalyzer extends BaseAnalyzer {
   /**
    * Run AI analysis with a specific prompt
    */
-  private async runAIAnalysis(text: string, prompt: AIAnalysisPrompt, metadata?: any): Promise<Finding[]> {
+  private async runAIAnalysis(text: string, prompt: AIAnalysisPrompt, _metadata?: Record<string, unknown>): Promise<Finding[]> {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -92,11 +97,38 @@ export class AIAnalyzer extends BaseAnalyzer {
 
     if (!response.ok) {
       const errorText = await response.text();
-      throw new Error(`AI API error: ${response.status} - ${errorText}`);
+      throw new AIAnalysisError(
+        `AI API error: ${response.status} - ${errorText}`,
+        'openai', // or detect from config
+        'https://api.openai.com/v1/chat/completions',
+        response.status,
+        errorText
+      );
     }
 
-    const result: any = await response.json();
-    const content = result.choices[0].message.content;
+    const result: unknown = await response.json();
+    
+    // Basic validation of AI response structure
+    if (!result || typeof result !== 'object') {
+      throw new AIAnalysisError(
+        'Invalid AI response format',
+        'openai',
+        'https://api.openai.com/v1/chat/completions',
+        undefined,
+        JSON.stringify(result).substring(0, 500)
+      );
+    }
+    
+    const typedResult = result as { choices?: { message?: { content?: string } }[] };
+    if (!typedResult.choices || !typedResult.choices[0]?.message?.content) {
+      throw new AIAnalysisError(
+        'AI response missing expected structure',
+        'openai',
+        'https://api.openai.com/v1/chat/completions'
+      );
+    }
+    
+    const content = typedResult.choices[0].message.content;
     const analysis = JSON.parse(content);
 
     return this.parseAIResponse(analysis, prompt.name);
@@ -105,12 +137,19 @@ export class AIAnalyzer extends BaseAnalyzer {
   /**
    * Parse AI response into findings
    */
-  private parseAIResponse(analysis: any, promptName: string): Finding[] {
+  private parseAIResponse(analysis: unknown, promptName: string): Finding[] {
     const findings: Finding[] = [];
 
+    // Type guard for analysis object
+    if (!analysis || typeof analysis !== 'object') {
+      return findings;
+    }
+
+    const typedAnalysis = analysis as Record<string, unknown>;
+
     // Handle different response formats
-    if (analysis.findings && Array.isArray(analysis.findings)) {
-      for (const item of analysis.findings) {
+    if (typedAnalysis.findings && Array.isArray(typedAnalysis.findings)) {
+      for (const item of typedAnalysis.findings) {
         findings.push(
           this.createFinding(
             `ai:${promptName}`,

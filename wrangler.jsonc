@@ -96,6 +96,15 @@
     }
   ],
 
+  // D1 Database for structured data
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "querido-diario-prod",
+      "database_id": "4c0566d5-6aaa-4805-b530-203d50aaa170"
+    }
+  ],
+
   // Environment variables
   "vars": {
     "ENVIRONMENT": "production"
@@ -104,7 +113,6 @@
   // Secrets (set via wrangler secret put)
   // - MISTRAL_API_KEY: Mistral API key for OCR processing
   // - OPENAI_API_KEY: OpenAI API key for AI analysis
-  // - DATABASE_URL: PostgreSQL connection string
 
   // Environments
   "env": {

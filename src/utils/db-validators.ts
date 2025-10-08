@@ -18,7 +18,7 @@ export function isValidUUID(value: string): boolean {
 /**
  * Validates that a required field is present and not empty
  */
-export function validateRequired(value: any, fieldName: string): void {
+export function validateRequired(value: unknown, fieldName: string): void {
   if (value === null || value === undefined || value === '') {
     throw new Error(`Field '${fieldName}' is required but was ${value}`);
   }
@@ -66,7 +66,7 @@ export function validateISODate(value: string, fieldName: string): void {
 /**
  * Validates JSON structure
  */
-export function validateJSON(value: any, fieldName: string): void {
+export function validateJSON(value: unknown, fieldName: string): void {
   if (value === null || value === undefined) return;
   
   try {
@@ -123,35 +123,52 @@ export function validateSpiderId(value: string, fieldName: string = 'spiderId'):
 /**
  * Comprehensive validation for OCR result data
  */
-export function validateOcrResult(ocrResult: any): void {
-  validateRequired(ocrResult.jobId, 'jobId');
-  validateRequired(ocrResult.territoryId, 'territoryId');
-  validateRequired(ocrResult.extractedText, 'extractedText');
+export function validateOcrResult(ocrResult: unknown): void {
+  if (!ocrResult || typeof ocrResult !== 'object') {
+    throw new Error('OCR result must be an object');
+  }
   
-  validateTerritoryId(ocrResult.territoryId);
-  validateMaxLength(ocrResult.jobId, 255, 'jobId');
+  const result = ocrResult as Record<string, unknown>;
+  validateRequired(result.jobId, 'jobId');
+  validateRequired(result.territoryId, 'territoryId');
+  validateRequired(result.extractedText, 'extractedText');
+  
+  if (typeof result.territoryId === 'string') {
+    validateTerritoryId(result.territoryId);
+  }
+  if (typeof result.jobId === 'string') {
+    validateMaxLength(result.jobId, 255, 'jobId');
+  }
 }
 
 /**
  * Comprehensive validation for gazette data
  */
-export function validateGazette(gazette: any): void {
-  validateRequired(gazette.territoryId, 'territoryId');
-  validateRequired(gazette.date, 'date');
-  validateRequired(gazette.fileUrl, 'fileUrl');
+export function validateGazette(gazette: unknown): void {
+  if (!gazette || typeof gazette !== 'object') {
+    throw new Error('Gazette must be an object');
+  }
   
-  validateTerritoryId(gazette.territoryId);
-  validateISODate(gazette.date, 'date');
+  const g = gazette as Record<string, unknown>;
+  validateRequired(g.territoryId, 'territoryId');
+  validateRequired(g.date, 'date');
+  validateRequired(g.fileUrl, 'fileUrl');
   
-  if (gazette.editionNumber) {
-    validateMaxLength(gazette.editionNumber, 50, 'editionNumber');
+  if (typeof g.territoryId === 'string') {
+    validateTerritoryId(g.territoryId);
+  }
+  if (typeof g.date === 'string') {
+    validateISODate(g.date, 'date');
+  }
+  if (g.editionNumber && typeof g.editionNumber === 'string') {
+    validateMaxLength(g.editionNumber, 50, 'editionNumber');
   }
 }
 
 /**
  * Comprehensive validation for analysis result data
  */
-export function validateAnalysisResult(analysis: any): void {
+export function validateAnalysisResult(analysis: unknown): void {
   validateRequired(analysis.jobId, 'jobId');
   validateRequired(analysis.territoryId, 'territoryId');
   validateRequired(analysis.publicationDate, 'publicationDate');
@@ -174,7 +191,7 @@ export function validateAnalysisResult(analysis: any): void {
 /**
  * Validates error log data
  */
-export function validateErrorLog(errorLog: any): void {
+export function validateErrorLog(errorLog: unknown): void {
   validateRequired(errorLog.workerName, 'workerName');
   validateRequired(errorLog.operationType, 'operationType');
   validateRequired(errorLog.severity, 'severity');

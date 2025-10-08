@@ -4,7 +4,7 @@
  */
 
 import { QueueMessage, CrawlResult, SpiderConfig } from '../types';
-import type { DatabaseEnv } from '../services/database';
+import type { D1DatabaseEnv } from '../services/database';
 import { spiderRegistry } from '../spiders/registry';
 import { logger } from '../utils/logger';
 import { OcrQueueSender } from '../services/ocr-queue-sender';
@@ -15,7 +15,7 @@ import {
   ErrorTracker,
 } from '../services/database';
 
-export interface CrawlProcessorEnv extends DatabaseEnv {
+export interface CrawlProcessorEnv extends D1DatabaseEnv {
   OCR_QUEUE: Queue<any>;
   BROWSER: Fetcher;
 }
@@ -29,7 +29,7 @@ export async function processCrawlBatch(
 ): Promise<void> {
   logger.info('Processing crawl queue batch', { batchSize: batch.messages.length });
 
-  // Initialize database services
+  // Initialize D1 database services
   const db = getDatabase(env);
   const telemetry = new TelemetryService(db);
   const gazetteRepo = new GazetteRepository(db);

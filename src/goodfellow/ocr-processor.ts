@@ -4,7 +4,7 @@
  */
 
 import { OcrQueueMessage, OcrResult, AnalysisQueueMessage } from '../types';
-import type { DatabaseEnv } from '../services/database';
+import type { D1DatabaseEnv } from '../services/database';
 import { MistralOcrService } from '../services/mistral-ocr';
 import { logger } from '../utils';
 import {
@@ -15,7 +15,7 @@ import {
   ErrorTracker,
 } from '../services/database';
 
-export interface OcrProcessorEnv extends DatabaseEnv {
+export interface OcrProcessorEnv extends D1DatabaseEnv {
   ANALYSIS_QUEUE?: Queue<AnalysisQueueMessage>;
   MISTRAL_API_KEY: string;
   OCR_RESULTS?: KVNamespace;
