@@ -13,7 +13,9 @@ import {
   TelemetryService,
   GazetteRepository,
   ErrorTracker,
+  schema,
 } from '../services/database';
+import { sql, eq, and } from 'drizzle-orm';
 
 export interface CrawlProcessorEnv extends D1DatabaseEnv {
   OCR_QUEUE: Queue<any>;
@@ -30,10 +32,11 @@ export async function processCrawlBatch(
   logger.info('Processing crawl queue batch', { batchSize: batch.messages.length });
 
   // Initialize D1 database services
-  const db = getDatabase(env);
-  const telemetry = new TelemetryService(db);
-  const gazetteRepo = new GazetteRepository(db);
-  const errorTracker = new ErrorTracker(db);
+  const databaseClient = getDatabase(env);
+  const db = databaseClient.getDb();
+  const telemetry = new TelemetryService(databaseClient);
+  const gazetteRepo = new GazetteRepository(databaseClient);
+  const errorTracker = new ErrorTracker(databaseClient);
 
   for (const message of batch.messages) {
     const startTime = Date.now();
@@ -58,7 +61,6 @@ export async function processCrawlBatch(
         crawlJobId,
         queueMessage.territoryId,
         queueMessage.spiderId,
-        queueMessage.spiderType,
         'crawl_start',
         'started'
       );
@@ -185,13 +187,10 @@ export async function processCrawlBatch(
         crawlJobId,
         queueMessage.territoryId,
         queueMessage.spiderId,
-        queueMessage.spiderType,
         'crawl_end',
         'completed',
-        {
-          executionTimeMs,
-          gazettesFound: gazettes.length,
-        }
+        gazettes.length,
+        executionTimeMs
       );
 
       // Acknowledge message
@@ -212,13 +211,11 @@ export async function processCrawlBatch(
         crawlJobId,
         queueMessage.territoryId,
         queueMessage.spiderId,
-        queueMessage.spiderType,
         'crawl_end',
         'failed',
-        {
-          executionTimeMs,
-          errorMessage,
-        }
+        undefined,
+        executionTimeMs,
+        errorMessage
       );
 
       await errorTracker.trackCriticalError(
@@ -251,25 +248,28 @@ export async function processCrawlBatch(
 
     for (const crawlJobId of crawlJobIds) {
       // Check job completion status
-      const jobStats = await db.queryTemplate`
-        SELECT 
-          COUNT(DISTINCT territory_id) as total,
-          COUNT(DISTINCT CASE WHEN status = 'completed' THEN territory_id END) as completed,
-          COUNT(DISTINCT CASE WHEN status = 'failed' THEN territory_id END) as failed
-        FROM crawl_telemetry
-        WHERE crawl_job_id = ${crawlJobId}
-          AND step = 'crawl_end'
-      `;
+      const jobStatsResult = await db.select({
+        total: sql<number>`COUNT(DISTINCT territory_id)`,
+        completed: sql<number>`COUNT(DISTINCT CASE WHEN status = 'completed' THEN territory_id END)`,
+        failed: sql<number>`COUNT(DISTINCT CASE WHEN status = 'failed' THEN territory_id END)`
+      })
+      .from(schema.crawlTelemetry)
+      .where(and(
+        eq(schema.crawlTelemetry.crawlJobId, crawlJobId),
+        eq(schema.crawlTelemetry.step, 'crawl_end')
+      ));
+      const jobStats = jobStatsResult;
 
       if (jobStats.length > 0 && jobStats[0].total > 0) {
         const { total, completed, failed } = jobStats[0];
         
         // Also check expected cities from crawl_jobs table
-        const jobInfo = await db.queryTemplate`
-          SELECT total_cities, status 
-          FROM crawl_jobs 
-          WHERE id = ${crawlJobId}
-        `;
+        const jobInfo = await db.select({
+          total_cities: schema.crawlJobs.totalCities,
+          status: schema.crawlJobs.status
+        })
+        .from(schema.crawlJobs)
+        .where(eq(schema.crawlJobs.id, crawlJobId));
 
         if (jobInfo.length > 0 && jobInfo[0].status === 'running') {
           const expectedCities = jobInfo[0].total_cities;
@@ -278,15 +278,14 @@ export async function processCrawlBatch(
           if (total >= expectedCities) {
             const finalStatus = failed === total ? 'failed' : 'completed';
             
-            await db.queryTemplate`
-              UPDATE crawl_jobs 
-              SET 
-                status = ${finalStatus}::job_status,
-                completed_at = NOW(),
-                completed_cities = ${completed},
-                failed_cities = ${failed}
-              WHERE id = ${crawlJobId}
-            `;
+            await db.update(schema.crawlJobs)
+              .set({
+                status: finalStatus,
+                completedAt: databaseClient.getCurrentTimestamp(),
+                completedCities: completed,
+                failedCities: failed
+              })
+              .where(eq(schema.crawlJobs.id, crawlJobId));
             
             logger.info('Crawl job marked as complete', {
               crawlJobId,
@@ -297,13 +296,12 @@ export async function processCrawlBatch(
             });
           } else {
             // Update city counts even if not complete
-            await db.queryTemplate`
-              UPDATE crawl_jobs 
-              SET 
-                completed_cities = ${completed},
-                failed_cities = ${failed}
-              WHERE id = ${crawlJobId}
-            `;
+            await db.update(schema.crawlJobs)
+              .set({
+                completedCities: completed,
+                failedCities: failed
+              })
+              .where(eq(schema.crawlJobs.id, crawlJobId));
           }
         }
       }

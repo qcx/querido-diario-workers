@@ -2,6 +2,8 @@
  * Simple structured logger for Cloudflare Workers
  */
 
+import { serializeError } from './error-serializer';
+
 export type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
 export interface LogContext {
@@ -49,13 +51,10 @@ class Logger {
   /**
    * Logs an error message
    */
-  error(message: string, error?: Error, context?: LogContext): void {
+  error(message: string, error?: Error | unknown, context?: LogContext): void {
     this.log('error', message, {
       ...context,
-      error: error ? {
-        message: error.message,
-        stack: error.stack,
-      } : undefined,
+      error: error ? serializeError(error) : undefined,
     });
   }
 

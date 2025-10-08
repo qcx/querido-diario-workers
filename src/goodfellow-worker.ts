@@ -191,7 +191,7 @@ app.post('/crawl', async (c) => {
     const db = getDatabase(c.env);
     const telemetry = new TelemetryService(db);
 
-    const crawlJobId = await telemetry.trackCrawlJobStart({
+    const crawlJobId = await telemetry.createCrawlJob({
       jobType: 'manual',
       totalCities: configs.length,
       startDate: dateRange.start,
@@ -202,6 +202,8 @@ app.post('/crawl', async (c) => {
         userAgent: c.req.header('user-agent'),
       },
     });
+
+    await telemetry.trackCrawlJobStart(crawlJobId, 'manual');
 
     logger.info('Created crawl job', { crawlJobId, totalCities: configs.length });
 
@@ -277,7 +279,7 @@ app.post('/crawl/today-yesterday', async (c) => {
     const db = getDatabase(c.env);
     const telemetry = new TelemetryService(db);
 
-    const crawlJobId = await telemetry.trackCrawlJobStart({
+    const crawlJobId = await telemetry.createCrawlJob({
       jobType: 'scheduled',
       totalCities: configs.length,
       startDate,
@@ -289,6 +291,8 @@ app.post('/crawl/today-yesterday', async (c) => {
         userAgent: c.req.header('user-agent'),
       },
     });
+
+    await telemetry.trackCrawlJobStart(crawlJobId, 'scheduled');
 
     const queue = c.env.CRAWL_QUEUE;
     const dateRange = { start: startDate, end: endDate };
@@ -379,7 +383,7 @@ app.post('/crawl/cities', async (c) => {
     const db = getDatabase(c.env);
     const telemetry = new TelemetryService(db);
 
-    const crawlJobId = await telemetry.trackCrawlJobStart({
+    const crawlJobId = await telemetry.createCrawlJob({
       jobType: 'cities',
       totalCities: configs.length,
       startDate: dateRange.start,
@@ -391,6 +395,8 @@ app.post('/crawl/cities', async (c) => {
         userAgent: c.req.header('user-agent'),
       },
     });
+
+    await telemetry.trackCrawlJobStart(crawlJobId, 'cities');
 
     const queue = c.env.CRAWL_QUEUE;
     const { enqueuedCount, failedCount } = await sendMessagesToQueue(

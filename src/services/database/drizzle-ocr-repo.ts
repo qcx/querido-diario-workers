@@ -47,14 +47,21 @@ export class DrizzleOcrRepository {
     try {
       const db = this.dbClient.getDb();
 
-      // Find the gazette by job ID pattern or exact match
+      // Find the gazette by territory ID and publication date
+      // This is more robust than jobId matching since jobId formats may differ
       const gazetteResults = await db.select({ id: schema.gazetteRegistry.id })
         .from(schema.gazetteRegistry)
-        .where(eq(schema.gazetteRegistry.jobId, ocrResult.jobId))
+        .where(and(
+          eq(schema.gazetteRegistry.territoryId, ocrResult.territoryId),
+          eq(schema.gazetteRegistry.publicationDate, ocrResult.publicationDate)
+        ))
+        .orderBy(desc(schema.gazetteRegistry.createdAt))
         .limit(1);
 
       if (gazetteResults.length === 0) {
-        throw new Error(`Gazette not found for job ID: ${ocrResult.jobId}`);
+        throw new Error(
+          `Gazette not found for territory ${ocrResult.territoryId} on date ${ocrResult.publicationDate}. OCR jobId: ${ocrResult.jobId}`
+        );
       }
 
       const gazetteId = gazetteResults[0].id;

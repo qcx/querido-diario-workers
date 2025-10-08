@@ -5,7 +5,7 @@
  * Usage: npx tsx scripts/remote-crawl.ts [command] [options]
  */
 
-const WORKER_URL = 'https://querido-diario-worker.qconcursos.workers.dev';
+const WORKER_URL = 'https://goodfellow-prod.qconcursos.workers.dev';
 
 interface CrawlResponse {
   success: boolean;
@@ -166,7 +166,7 @@ async function healthCheck(): Promise<void> {
     console.log(`🛠️  Handlers: ${response.handlers?.join(', ') || 'HTTP'}`);
     console.log('');
     console.log('🌐 Workers deployados:');
-    console.log('   • Principal: ✅ https://querido-diario-worker.qconcursos.workers.dev');
+    console.log('   • Principal: ✅ https://goodfellow-prod.qconcursos.workers.dev');
     console.log('   • OCR: ✅ https://querido-diario-ocr-worker.qconcursos.workers.dev (queue only)');
     console.log('   • Análise: ✅ https://querido-diario-analysis-worker.qconcursos.workers.dev');
     console.log('   • Webhook: ✅ https://querido-diario-webhook-worker.qconcursos.workers.dev');

@@ -3,7 +3,7 @@
  * Replaces telemetry.ts with Drizzle ORM implementation
  */
 
-import { eq, desc, and, gte, count } from 'drizzle-orm';
+import { eq, desc, gte, sql } from 'drizzle-orm';
 import { DrizzleDatabaseClient, schema } from './drizzle-client';
 import { logger } from '../../utils/logger';
 import type { CrawlJobMetadata, CrawlTelemetryMetadata } from '../../types/database';
@@ -75,9 +75,8 @@ export class DrizzleTelemetryService {
 
       return result[0].id;
     } catch (error) {
-      logger.error('Failed to create crawl job', {
-        jobData,
-        error
+      logger.error('Failed to create crawl job', error as Error, {
+        jobData
       });
       throw error;
     }
@@ -97,7 +96,7 @@ export class DrizzleTelemetryService {
     try {
       const db = this.dbClient.getDb();
 
-      const updateData: Partial<typeof schema.crawlJobs.$inferInsert> = {
+      const updateData: any = {
         status,
         ...(status === 'running' ? { startedAt: this.dbClient.getCurrentTimestamp() } : {}),
         ...(status === 'completed' || status === 'failed' ? { completedAt: this.dbClient.getCurrentTimestamp() } : {}),
@@ -115,10 +114,9 @@ export class DrizzleTelemetryService {
         updates
       });
     } catch (error) {
-      logger.error('Failed to update crawl job status', {
+      logger.error('Failed to update crawl job status', error as Error, {
         jobId,
-        status,
-        error
+        status
       });
       throw error;
     }
@@ -166,9 +164,8 @@ export class DrizzleTelemetryService {
 
       return result[0].id;
     } catch (error) {
-      logger.error('Failed to record telemetry step', {
-        stepData,
-        error
+      logger.error('Failed to record telemetry step', error as Error, {
+        stepData
       });
       throw error;
     }
@@ -210,9 +207,8 @@ export class DrizzleTelemetryService {
         metadata: this.dbClient.parseJson<CrawlJobMetadata>(job.metadata, {})
       };
     } catch (error) {
-      logger.error('Failed to get crawl job', {
-        jobId,
-        error
+      logger.error('Failed to get crawl job', error as Error, {
+        jobId
       });
       throw error;
     }
@@ -250,9 +246,8 @@ export class DrizzleTelemetryService {
         metadata: this.dbClient.parseJson<CrawlTelemetryMetadata>(record.metadata, {})
       }));
     } catch (error) {
-      logger.error('Failed to get job telemetry', {
-        jobId,
-        error
+      logger.error('Failed to get job telemetry', error as Error, {
+        jobId
       });
       throw error;
     }
@@ -289,7 +284,7 @@ export class DrizzleTelemetryService {
         metadata: this.dbClient.parseJson<CrawlJobMetadata>(job.metadata, {})
       }));
     } catch (error) {
-      logger.error('Failed to get recent jobs', { error });
+      logger.error('Failed to get recent jobs', error instanceof Error ? error : undefined);
       throw error;
     }
   }
@@ -350,9 +345,8 @@ export class DrizzleTelemetryService {
         averageExecutionTime
       };
     } catch (error) {
-      logger.error('Failed to get health summary', {
-        hours,
-        error
+      logger.error('Failed to get health summary', error as Error, {
+        hours
       });
       throw error;
     }
@@ -390,7 +384,7 @@ export class DrizzleTelemetryService {
   /**
    * Track crawl job start (compatibility method)
    */
-  async trackCrawlJobStart(jobId: string, jobType: JobType): Promise<void> {
+  async trackCrawlJobStart(jobId: string, _jobType: JobType): Promise<void> {
     await this.updateCrawlJobStatus(jobId, 'running');
   }
 
@@ -423,21 +417,20 @@ export class DrizzleTelemetryService {
       if (stepStatus === 'completed') {
         await db.update(schema.crawlJobs)
           .set({
-            completedCities: schema.crawlJobs.completedCities + 1
-          })
+            completedCities: sql`${schema.crawlJobs.completedCities} + 1`
+          } as any)
           .where(eq(schema.crawlJobs.id, jobId));
       } else if (stepStatus === 'failed') {
         await db.update(schema.crawlJobs)
           .set({
-            failedCities: schema.crawlJobs.failedCities + 1
-          })
+            failedCities: sql`${schema.crawlJobs.failedCities} + 1`
+          } as any)
           .where(eq(schema.crawlJobs.id, jobId));
       }
     } catch (error) {
-      logger.error('Failed to update job counters', {
+      logger.error('Failed to update job counters', error as Error, {
         jobId,
-        stepStatus,
-        error
+        stepStatus
       });
       // Don't throw - this is a best-effort update
     }

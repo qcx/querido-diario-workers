@@ -4,12 +4,24 @@
 
 import { ConcursoDocumentType } from '../../types/analysis';
 
+export type PatternPriority = 'primary' | 'secondary' | 'supporting';
+
 export interface ConcursoPattern {
   documentType: ConcursoDocumentType;
   patterns: RegExp[];
   weight: number; // Confidence weight
   keywords: string[];
   excludePatterns?: RegExp[]; // Patterns that should NOT match
+  // New proximity requirements
+  proximity?: {
+    required: boolean; // If true, keywords must be within maxDistance
+    maxDistance: number; // Maximum word distance between keywords
+    boostNearby: boolean; // Apply proximity bonus
+  };
+  // Pattern priority (higher = check first)
+  priority?: 'primary' | 'secondary' | 'supporting';
+  // Minimum keywords that must be found together
+  minKeywordsTogether?: number;
 }
 
 /**
@@ -20,6 +32,7 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
   {
     documentType: 'edital_abertura',
     weight: 0.95,
+    priority: 'primary',
     keywords: [
       'edital de abertura',
       'torna público',
@@ -40,6 +53,12 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       /convoca[çc][ãa]o/i,
       /resultado/i,
     ],
+    proximity: {
+      required: true,
+      maxDistance: 200, // Larger window for opening notices
+      boostNearby: true,
+    },
+    minKeywordsTogether: 2,
   },
 
   // Edital de Retificação
@@ -66,6 +85,7 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
   {
     documentType: 'convocacao',
     weight: 0.92,
+    priority: 'primary',
     keywords: [
       'convocação',
       'convoca',
@@ -80,12 +100,19 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       /chamada.*concurso/i,
       /lista\s+de\s+convoca[çc][ãa]o/i,
     ],
+    proximity: {
+      required: true,
+      maxDistance: 100, // Keywords must be within 100 words
+      boostNearby: true,
+    },
+    minKeywordsTogether: 2, // At least 2 keywords must be found together
   },
 
   // Homologação
   {
     documentType: 'homologacao',
     weight: 0.93,
+    priority: 'primary',
     keywords: [
       'homologação',
       'homologa',
@@ -98,12 +125,19 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       /resultado\s+final.*homolog/i,
       /classifica[çc][ãa]o\s+final.*concurso/i,
     ],
+    proximity: {
+      required: true,
+      maxDistance: 100,
+      boostNearby: true,
+    },
+    minKeywordsTogether: 2,
   },
 
   // Prorrogação
   {
     documentType: 'prorrogacao',
     weight: 0.88,
+    priority: 'secondary',
     keywords: [
       'prorrogação',
       'prorroga',
@@ -116,12 +150,19 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       /extens[ãa]o.*prazo/i,
       /adiamento.*(?:prova|inscri[çc][õo]es)/i,
     ],
+    proximity: {
+      required: true,
+      maxDistance: 100,
+      boostNearby: true,
+    },
+    minKeywordsTogether: 2,
   },
 
   // Cancelamento/Suspensão
   {
     documentType: 'cancelamento',
     weight: 0.91,
+    priority: 'primary',
     keywords: [
       'cancelamento',
       'cancela',
@@ -136,12 +177,19 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       /suspende.*concurso/i,
       /anula[çc][ãa]o.*(?:concurso|edital)/i,
     ],
+    proximity: {
+      required: true,
+      maxDistance: 80,
+      boostNearby: true,
+    },
+    minKeywordsTogether: 2,
   },
 
   // Resultado Parcial
   {
     documentType: 'resultado_parcial',
     weight: 0.85,
+    priority: 'secondary',
     keywords: [
       'resultado',
       'classificação',
@@ -158,12 +206,19 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       /homologa[çc][ãa]o/i,
       /final/i,
     ],
+    proximity: {
+      required: true,
+      maxDistance: 150,
+      boostNearby: true,
+    },
+    minKeywordsTogether: 2,
   },
 
   // Gabarito
   {
     documentType: 'gabarito',
     weight: 0.87,
+    priority: 'secondary',
     keywords: [
       'gabarito',
       'respostas',
@@ -175,6 +230,59 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       /resposta\s+oficial/i,
       /divulga[çc][ãa]o.*gabarito/i,
     ],
+    proximity: {
+      required: false, // Gabarito can be standalone
+      maxDistance: 200,
+      boostNearby: true,
+    },
+    minKeywordsTogether: 1, // Just gabarito is enough
+  },
+];
+
+/**
+ * Title patterns that provide high confidence when found
+ * These patterns are checked against document titles/headers
+ */
+export const TITLE_PATTERNS: Array<{
+  documentType: ConcursoDocumentType;
+  patterns: RegExp[];
+  baseConfidence: number;
+}> = [
+  {
+    documentType: 'convocacao',
+    patterns: [
+      /^CONVOCA[ÇC][ÃA]O/i,
+      /^EDITAL\s+DE\s+CONVOCA[ÇC][ÃA]O/i,
+      /^[\d]+[ªº]?\s*CONVOCA[ÇC][ÃA]O/i, // "17ª CONVOCAÇÃO"
+    ],
+    baseConfidence: 0.85,
+  },
+  {
+    documentType: 'edital_abertura',
+    patterns: [
+      /^EDITAL\s+DE\s+ABERTURA/i,
+      /^EDITAL\s+DE\s+CONCURSO\s+P[ÚU]BLICO/i,
+      /^ABERTURA\s+DE\s+CONCURSO/i,
+    ],
+    baseConfidence: 0.9,
+  },
+  {
+    documentType: 'homologacao',
+    patterns: [
+      /^HOMOLOGA[ÇC][ÃA]O/i,
+      /^EDITAL\s+DE\s+HOMOLOGA[ÇC][ÃA]O/i,
+      /^RESULTADO\s+FINAL\s+HOMOLOGADO/i,
+    ],
+    baseConfidence: 0.9,
+  },
+  {
+    documentType: 'edital_retificacao',
+    patterns: [
+      /^RETIFICA[ÇC][ÃA]O/i,
+      /^EDITAL\s+DE\s+RETIFICA[ÇC][ÃA]O/i,
+      /^ERRATA/i,
+    ],
+    baseConfidence: 0.85,
   },
 ];
 

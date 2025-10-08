@@ -8,9 +8,11 @@ import { OcrResult, Finding, AnalyzerConfig, ConcursoData, ConcursoDocumentType 
 import { 
   CONCURSO_PATTERNS, 
   EXTRACTION_PATTERNS, 
+  TITLE_PATTERNS,
   hasConcursoKeywords,
   calculateTypeConfidence
 } from './patterns/concurso-patterns';
+import { ProximityAnalyzer } from './utils/proximity-analyzer';
 import { logger } from '../utils';
 
 export interface ConcursoAnalyzerConfig extends AnalyzerConfig {
@@ -103,15 +105,46 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
   }
 
   /**
-   * Detect the type of concurso document
+   * Detect the type of concurso document with proximity awareness
    */
   private detectDocumentType(text: string): { type: ConcursoDocumentType; confidence: number } | null {
-    const lowerText = text.toLowerCase();
     const results: Array<{ type: ConcursoDocumentType; confidence: number }> = [];
+    
+    // Extract document structure for context bonuses
+    const structure = ProximityAnalyzer.extractDocumentStructure(text);
 
-    for (const pattern of CONCURSO_PATTERNS) {
+    // First, check title patterns for quick high-confidence matches
+    for (const titlePattern of TITLE_PATTERNS) {
+      for (const title of structure.titles) {
+        for (const pattern of titlePattern.patterns) {
+          if (pattern.test(title.text)) {
+            logger.info('Title pattern match found', {
+              documentType: titlePattern.documentType,
+              titleText: title.text,
+              confidence: titlePattern.baseConfidence * title.confidence
+            });
+            return {
+              type: titlePattern.documentType,
+              confidence: Math.min(titlePattern.baseConfidence * title.confidence, 0.95)
+            };
+          }
+        }
+      }
+    }
+
+    // Sort patterns by priority
+    const sortedPatterns = [...CONCURSO_PATTERNS].sort((a, b) => {
+      const priorityOrder = { primary: 0, secondary: 1, supporting: 2 };
+      const aPriority = priorityOrder[a.priority || 'secondary'];
+      const bPriority = priorityOrder[b.priority || 'secondary'];
+      return aPriority - bPriority;
+    });
+
+    for (const pattern of sortedPatterns) {
       let patternMatches = 0;
       let keywordMatches = 0;
+      let proximityBonus = 1.0;
+      let contextBonus = 1.0;
 
       // Check regex patterns
       for (const regex of pattern.patterns) {
@@ -129,25 +162,78 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
         }
       }
 
-      // Check keywords
-      for (const keyword of pattern.keywords) {
-        if (lowerText.includes(keyword.toLowerCase())) {
-          keywordMatches++;
+      // Find keyword positions for proximity analysis
+      const keywordPositions = ProximityAnalyzer.findKeywordPositions(
+        text,
+        pattern.keywords,
+        false
+      );
+
+      // Count unique keywords found
+      const foundKeywords = new Set(keywordPositions.map(p => p.keyword.toLowerCase()));
+      keywordMatches = foundKeywords.size;
+
+      // Apply proximity analysis if required
+      if (pattern.proximity && keywordPositions.length > 1) {
+        const bestGroup = ProximityAnalyzer.findBestKeywordGroup(
+          keywordPositions,
+          pattern.keywords,
+          pattern.proximity.maxDistance
+        );
+
+        if (bestGroup) {
+          // Check if minimum keywords are together
+          const uniqueInGroup = new Set(bestGroup.keywords.map(p => p.keyword.toLowerCase())).size;
+          if (uniqueInGroup >= (pattern.minKeywordsTogether || 2)) {
+            proximityBonus = bestGroup.averageProximity * 1.3; // Boost for good proximity
+          } else if (pattern.proximity.required) {
+            // Required proximity not met
+            proximityBonus = 0.5; // Penalty
+          }
+        } else if (pattern.proximity.required) {
+          // No valid group found and proximity is required
+          continue; // Skip this pattern
         }
       }
 
-      // Calculate confidence
+      // Check for keywords in titles/headers for context bonus
+      for (const title of structure.titles) {
+        if (pattern.keywords.some(kw => title.text.toLowerCase().includes(kw.toLowerCase()))) {
+          contextBonus = 1.2; // Title match bonus
+          break;
+        }
+      }
+
+      // Calculate confidence with all factors
       if (patternMatches > 0 || keywordMatches > 0) {
-        const confidence = calculateTypeConfidence(
+        const baseConfidence = calculateTypeConfidence(
           patternMatches,
           pattern.patterns.length,
           keywordMatches,
           pattern.weight
         );
 
+        const adjustedConfidence = Math.min(baseConfidence * proximityBonus * contextBonus, 1.0);
+
+        // High-priority patterns with strong matches can short-circuit
+        if (pattern.priority === 'primary' && adjustedConfidence >= 0.85) {
+          logger.info('High confidence match found', {
+            documentType: pattern.documentType,
+            confidence: adjustedConfidence,
+            patternMatches,
+            keywordMatches,
+            proximityBonus,
+            contextBonus
+          });
+          return {
+            type: pattern.documentType,
+            confidence: adjustedConfidence,
+          };
+        }
+
         results.push({
           type: pattern.documentType,
-          confidence,
+          confidence: adjustedConfidence,
         });
       }
     }
@@ -156,6 +242,11 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
     results.sort((a, b) => b.confidence - a.confidence);
 
     if (results.length > 0 && results[0].confidence >= 0.5) {
+      logger.info('Document type detected', {
+        type: results[0].type,
+        confidence: results[0].confidence,
+        totalCandidates: results.length
+      });
       return results[0];
     }
 

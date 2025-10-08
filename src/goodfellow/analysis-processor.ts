@@ -13,7 +13,9 @@ import {
   AnalysisRepository,
   ConcursoRepository,
   ErrorTracker,
+  schema,
 } from '../services/database';
+import { sql, eq, and } from 'drizzle-orm';
 
 export interface AnalysisProcessorEnv extends D1DatabaseEnv {
   ANALYSIS_RESULTS: KVNamespace;
@@ -65,15 +67,16 @@ export async function processAnalysisBatch(
   const orchestrator = new AnalysisOrchestrator(config);
   
   // Initialize database services
-  const db = getDatabase(env);
-  const telemetry = new TelemetryService(db);
-  const analysisRepo = new AnalysisRepository(db);
-  const concursoRepo = new ConcursoRepository(db);
-  const errorTracker = new ErrorTracker(db);
+  const databaseClient = getDatabase(env);
+  const db = databaseClient.getDb();
+  const telemetry = new TelemetryService(databaseClient);
+  const analysisRepo = new AnalysisRepository(databaseClient);
+  const concursoRepo = new ConcursoRepository(databaseClient);
+  const errorTracker = new ErrorTracker(databaseClient);
   
   // Import and initialize deduplicator
   const { FindingDeduplicator } = await import('../services/finding-deduplicator');
-  const deduplicator = new FindingDeduplicator(db);
+  const deduplicator = new FindingDeduplicator(databaseClient);
 
   // Collect webhook messages
   const allWebhookMessages: any[] = [];
@@ -103,13 +106,11 @@ export async function processAnalysisBatch(
       await telemetry.trackCityStep(
         crawlJobId,
         message.body.territoryId,
-        'analysis',
-        'analysis',
+        message.body.spiderId || 'analysis',
         'analysis_end',
         'completed',
-        {
-          executionTimeMs,
-        }
+        undefined,
+        executionTimeMs
       );
 
       message.ack();
@@ -126,14 +127,12 @@ export async function processAnalysisBatch(
       await telemetry.trackCityStep(
         crawlJobId,
         message.body.territoryId,
-        'analysis',
-        'analysis',
+        message.body.spiderId || 'analysis',
         'analysis_end',
         'failed',
-        {
-          executionTimeMs,
-          errorMessage,
-        }
+        undefined,
+        executionTimeMs,
+        errorMessage
       );
 
       await errorTracker.trackCriticalError(
@@ -221,18 +220,20 @@ async function processAnalysisMessage(
     crawlJobId,
     territoryId,
     'analysis',
-    'analysis',
     'analysis_start',
     'started'
   );
 
   // Check if already analyzed by OCR job ID to prevent duplicates
-  const db = getDatabase(env);
-  const existingAnalysisByOcr = await db.queryTemplate`
-    SELECT id, job_id FROM analysis_results 
-    WHERE ocr_job_id = ${ocrJobId}
-    LIMIT 1
-  `;
+  const databaseClient = getDatabase(env);
+  const db = databaseClient.getDb();
+  const existingAnalysisByOcr = await db.select({
+    id: schema.analysisResults.id,
+    job_id: schema.analysisResults.jobId
+  })
+  .from(schema.analysisResults)
+  .where(eq(schema.analysisResults.ocrJobId, ocrJobId))
+  .limit(1);
   
   if (existingAnalysisByOcr.length > 0) {
     logger.info(`Analysis already exists for OCR job ${ocrJobId}, skipping duplicate`, {
@@ -247,13 +248,8 @@ async function processAnalysisMessage(
       crawlJobId,
       territoryId,
       'analysis',
-      'analysis',
       'analysis_end',
-      'skipped',
-      {
-        reason: 'duplicate_analysis',
-        existingAnalysisId: existingAnalysisByOcr[0].id
-      }
+      'skipped'
     );
 
     return [];

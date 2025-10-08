@@ -6,6 +6,8 @@
 import { Finding, GazetteAnalysis } from '../types/analysis';
 import { createHash } from 'crypto';
 import { logger } from '../utils';
+import { schema } from './database';
+import { sql, eq, gte } from 'drizzle-orm';
 
 export interface DeduplicationResult {
   uniqueFindings: Finding[];
@@ -221,17 +223,17 @@ export class FindingDeduplicator {
       const cutoffTime = new Date();
       cutoffTime.setHours(cutoffTime.getHours() - hoursBack);
 
-      const recentFindings = await this.databaseClient.queryTemplate`
-        SELECT 
-          ar.job_id,
-          ar.findings,
-          ar.analyzed_at
-        FROM analysis_results ar
-        WHERE ar.territory_id = ${territoryId}
-          AND ar.analyzed_at >= ${cutoffTime.toISOString()}
-        ORDER BY ar.analyzed_at DESC
-        LIMIT 1000
-      `;
+      const db = this.databaseClient.getDb();
+      const recentFindings = await db.select({
+        job_id: schema.analysisResults.jobId,
+        findings: schema.analysisResults.findings,
+        analyzed_at: schema.analysisResults.analyzedAt
+      })
+      .from(schema.analysisResults)
+      .where(sql`${schema.analysisResults.territoryId} = ${territoryId} 
+        AND ${schema.analysisResults.analyzedAt} >= ${cutoffTime.toISOString()}`)
+      .orderBy(sql`${schema.analysisResults.analyzedAt} DESC`)
+      .limit(1000);
 
       // Load into cache
       for (const row of recentFindings) {

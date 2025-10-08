@@ -73,9 +73,7 @@ export class DrizzleDatabaseClient {
     try {
       return JSON.stringify(obj);
     } catch (error) {
-      logger.error('Failed to stringify JSON', {
-        error: error instanceof Error ? error.message : 'Unknown error'
-      });
+      logger.error('Failed to stringify JSON', error as Error);
       return '{}';
     }
   }
@@ -88,9 +86,7 @@ export class DrizzleDatabaseClient {
       const results = await this.db.batch(operations);
       return results;
     } catch (error) {
-      logger.error('Batch operation failed', {
-        error: error instanceof Error ? error.message : 'Unknown error'
-      });
+      logger.error('Batch operation failed', error as Error);
       throw error;
     }
   }

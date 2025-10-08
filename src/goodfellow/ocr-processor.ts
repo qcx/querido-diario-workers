@@ -13,7 +13,9 @@ import {
   OcrRepository,
   GazetteRepository,
   ErrorTracker,
+  schema,
 } from '../services/database';
+import { sql, eq, and, like, desc } from 'drizzle-orm';
 
 export interface OcrProcessorEnv extends D1DatabaseEnv {
   ANALYSIS_QUEUE?: Queue<AnalysisQueueMessage>;
@@ -46,11 +48,12 @@ export async function processOcrBatch(
     const crawlJobId = ocrMessage.metadata?.crawlJobId || 'unknown';
 
     // Initialize database services per message
-    const db = getDatabase(env);
-    const telemetry = new TelemetryService(db);
-    const ocrRepo = new OcrRepository(db);
-    const gazetteRepo = new GazetteRepository(db);
-    const errorTracker = new ErrorTracker(db);
+    const databaseClient = getDatabase(env);
+    const db = databaseClient.getDb();
+    const telemetry = new TelemetryService(databaseClient);
+    const ocrRepo = new OcrRepository(databaseClient);
+    const gazetteRepo = new GazetteRepository(databaseClient);
+    const errorTracker = new ErrorTracker(databaseClient);
 
     try {
       logger.info(`Processing OCR job ${ocrMessage.jobId}`, {
@@ -65,7 +68,6 @@ export async function processOcrBatch(
         crawlJobId,
         ocrMessage.territoryId,
         ocrMessage.spiderId,
-        'ocr',
         'ocr_start',
         'started'
       );
@@ -131,12 +133,21 @@ export async function processOcrBatch(
               try {
                 // Construct the gazette job ID format: crawlJobId-territoryId-date-editionNumber
                 const gazetteJobId = `${crawlJobId}-${ocrMessage.territoryId}-${ocrMessage.publicationDate}${ocrMessage.editionNumber ? `-${ocrMessage.editionNumber}` : ''}`;
-                await gazetteRepo.updatePdfR2Key(gazetteJobId, result.pdfR2Key);
-                logger.info(`Updated gazette with R2 key`, {
-                  ocrJobId: ocrMessage.jobId,
-                  gazetteJobId,
-                  pdfR2Key: result.pdfR2Key,
-                });
+                const gazette = await gazetteRepo.getGazetteByJobId(gazetteJobId);
+                if (gazette) {
+                  await gazetteRepo.updateR2Key(gazette.id, result.pdfR2Key);
+                  logger.info(`Updated gazette with R2 key`, {
+                    ocrJobId: ocrMessage.jobId,
+                    gazetteJobId,
+                    gazetteId: gazette.id,
+                    pdfR2Key: result.pdfR2Key,
+                  });
+                } else {
+                  logger.warn(`Gazette not found for job ID`, {
+                    gazetteJobId,
+                    ocrJobId: ocrMessage.jobId,
+                  });
+                }
               } catch (r2Error) {
                 logger.error(
                   `Failed to update gazette R2 key`,
@@ -179,47 +190,44 @@ export async function processOcrBatch(
 
       // Store OCR metadata (separate from OCR results)
       try {
-        const gazetteResult = await db.queryTemplate`
-          SELECT id FROM gazette_registry 
-          WHERE job_id LIKE ${`%${ocrMessage.territoryId}%${ocrMessage.publicationDate}%`}
-          ORDER BY created_at DESC
-          LIMIT 1
-        `;
+        const gazetteResult = await db.select({ id: schema.gazetteRegistry.id })
+          .from(schema.gazetteRegistry)
+          .where(and(
+            eq(schema.gazetteRegistry.territoryId, ocrMessage.territoryId),
+            eq(schema.gazetteRegistry.publicationDate, ocrMessage.publicationDate)
+          ))
+          .orderBy(desc(schema.gazetteRegistry.createdAt))
+          .limit(1);
         
         if (gazetteResult.length > 0) {
           const gazetteId = gazetteResult[0].id;
           const ocrStatus = result.status === 'success' ? 'success' : 'failure';
           
           // Check if metadata already exists
-          const existing = await db.queryTemplate`
-            SELECT id FROM ocr_metadata WHERE job_id = ${ocrMessage.jobId}
-          `;
+          const existing = await db.select({ id: schema.ocrMetadata.id })
+            .from(schema.ocrMetadata)
+            .where(eq(schema.ocrMetadata.jobId, ocrMessage.jobId));
           
           if (existing.length === 0) {
-            await db.queryTemplate`
-              INSERT INTO ocr_metadata (
-                job_id, gazette_id, status, pages_processed, 
-                processing_time_ms, text_length, completed_at, 
-                error_code, error_message, metadata
-              ) VALUES (
-                ${ocrMessage.jobId}, 
-                ${gazetteId}, 
-                ${ocrStatus}::ocr_status, 
-                ${result.pagesProcessed || 0},
-                ${executionTimeMs}, 
-                ${result.extractedText?.length || 0}, 
-                NOW(),
-                ${result.error?.code || null},
-                ${result.error?.message || null},
-                ${JSON.stringify({
-                  processingMethod: result.processingMethod || 'mistral',
-                  confidenceScore: result.confidenceScore,
-                  languageDetected: result.languageDetected || 'pt',
-                  docSizeBytes: result.docSizeBytes,
-                  crawlJobId: crawlJobId
-                })}
-              )
-            `;
+            await db.insert(schema.ocrMetadata).values({
+              id: databaseClient.generateId(),
+              jobId: ocrMessage.jobId,
+              gazetteId,
+              status: ocrStatus,
+              pagesProcessed: result.pagesProcessed || 0,
+              processingTimeMs: executionTimeMs,
+              textLength: result.extractedText?.length || 0,
+              completedAt: databaseClient.getCurrentTimestamp(),
+              errorCode: result.error?.code || null,
+              errorMessage: result.error?.message || null,
+              metadata: JSON.stringify({
+                processingMethod: result.processingMethod || 'mistral',
+                confidenceScore: result.confidenceScore,
+                languageDetected: result.languageDetected || 'pt',
+                docSizeBytes: result.docSizeBytes,
+                crawlJobId: crawlJobId
+              })
+            });
             
             logger.info('OCR metadata stored successfully', {
               jobId: ocrMessage.jobId,
@@ -240,17 +248,11 @@ export async function processOcrBatch(
         crawlJobId,
         ocrMessage.territoryId,
         ocrMessage.spiderId,
-        'ocr',
         'ocr_end',
         result.status === 'success' ? 'completed' : 'failed',
-        {
-          executionTimeMs,
-          errorMessage: result.error?.message,
-          metadata: {
-            textLength: result.extractedText?.length || 0,
-            pagesProcessed: result.pagesProcessed,
-          },
-        }
+        undefined,
+        executionTimeMs,
+        result.error?.message
       );
 
       // Handle failure results (OCR service returns failure, doesn't throw)
@@ -263,26 +265,22 @@ export async function processOcrBatch(
         });
 
         // Log OCR failure to error_logs table
-        await db.queryTemplate`
-          INSERT INTO error_logs (
-            worker_name, operation_type, severity, error_message,
-            stack_trace, context, job_id, territory_id
-          ) VALUES (
-            ${'goodfellow-ocr'},
-            ${'ocr_processing'},
-            ${'error'},
-            ${result.error?.message || 'OCR processing failed'},
-            ${result.error?.details || null},
-            ${JSON.stringify({
-              jobId: ocrMessage.jobId,
-              pdfUrl: ocrMessage.pdfUrl,
-              executionTimeMs,
-              status: result.status,
-            })},
-            ${crawlJobId},
-            ${ocrMessage.territoryId}
-          )
-        `;
+        await db.insert(schema.errorLogs).values({
+          id: databaseClient.generateId(),
+          workerName: 'goodfellow-ocr',
+          operationType: 'ocr_processing',
+          severity: 'error',
+          errorMessage: result.error?.message || 'OCR processing failed',
+          stackTrace: result.error?.details || null,
+          context: JSON.stringify({
+            jobId: ocrMessage.jobId,
+            pdfUrl: ocrMessage.pdfUrl,
+            executionTimeMs,
+            status: result.status,
+          }),
+          jobId: crawlJobId,
+          territoryId: ocrMessage.territoryId
+        });
 
         logger.info('🔥 OCR FAILURE LOGGED TO DATABASE!', {
           jobId: ocrMessage.jobId,
@@ -320,13 +318,11 @@ export async function processOcrBatch(
         crawlJobId,
         ocrMessage.territoryId,
         ocrMessage.spiderId,
-        'ocr',
         'ocr_end',
         'failed',
-        {
-          executionTimeMs,
-          errorMessage,
-        }
+        undefined,
+        executionTimeMs,
+        errorMessage
       );
 
       // Track the OCR error directly in database
@@ -336,25 +332,21 @@ export async function processOcrBatch(
         crawlJobId,
       });
       
-      await db.queryTemplate`
-        INSERT INTO error_logs (
-          worker_name, operation_type, severity, error_message,
-          stack_trace, context, job_id, territory_id
-        ) VALUES (
-          ${'goodfellow-ocr'},
-          ${'ocr_processing'},
-          ${'critical'},
-          ${errorMessage},
-          ${(error as Error).stack || null},
-          ${JSON.stringify({
-            jobId: ocrMessage.jobId,
-            pdfUrl: ocrMessage.pdfUrl,
-            executionTimeMs,
-          })},
-          ${crawlJobId},
-          ${ocrMessage.territoryId}
-        )
-      `;
+      await db.insert(schema.errorLogs).values({
+        id: databaseClient.generateId(),
+        workerName: 'goodfellow-ocr',
+        operationType: 'ocr_processing',
+        severity: 'critical',
+        errorMessage,
+        stackTrace: (error as Error).stack || null,
+        context: JSON.stringify({
+          jobId: ocrMessage.jobId,
+          pdfUrl: ocrMessage.pdfUrl,
+          executionTimeMs,
+        }),
+        jobId: crawlJobId,
+        territoryId: ocrMessage.territoryId
+      });
       
       logger.info('🔥 OCR ERROR INSERTED INTO DATABASE!', {
         jobId: ocrMessage.jobId,

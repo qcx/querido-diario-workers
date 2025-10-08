@@ -53,12 +53,10 @@ export async function processWebhookBatch(
           crawlJobId,
           territoryId,
           'webhook',
-          'webhook',
           'webhook_sent',
           'completed',
-          {
-            executionTimeMs,
-          }
+          undefined,
+          executionTimeMs
         );
       }
 
@@ -78,13 +76,11 @@ export async function processWebhookBatch(
           crawlJobId,
           territoryId,
           'webhook',
-          'webhook',
           'webhook_sent',
           'failed',
-          {
-            executionTimeMs,
-            errorMessage,
-          }
+          undefined,
+          executionTimeMs,
+          errorMessage
         );
       }
 
