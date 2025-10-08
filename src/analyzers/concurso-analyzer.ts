@@ -87,11 +87,25 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
       ...finalData,
     };
 
+    // Map document type to webhook category
+    const categoryMap: Record<ConcursoDocumentType, string> = {
+      convocacao: 'concurso_publico_convocacao',
+      edital_abertura: 'concurso_publico_abertura',
+      homologacao: 'concurso_publico_homologacao',
+      retificacao: 'concurso_publico_retificacao',
+      prorrogacao: 'concurso_publico_prorrogacao',
+      cancelamento_suspensao: 'concurso_publico_cancelamento',
+      resultado_parcial: 'concurso_publico_resultado',
+      gabarito: 'concurso_publico_resultado',
+      recurso_impugnacao: 'concurso_publico',
+      nao_classificado: 'concurso_publico',
+    };
+
     findings.push(
       this.createFinding(
         'concurso',
         {
-          category: 'concurso_publico',
+          category: categoryMap[documentTypeResult.type] || 'concurso_publico',
           concursoData,
           extractionMethod,
           documentType: documentTypeResult.type,
