@@ -6,9 +6,23 @@
  * 1. Checks and sets up D1 tables if needed
  * 2. Starts R2 dev server and detects the port Wrangler assigns
  * 3. Health checks R2 server to ensure it's fully ready
- * 4. Creates localtunnel for R2 server (optional, falls back to localhost if unavailable)
+ * 4. Creates tunnel for R2 server (Cloudflare or LocalTunnel)
  * 5. Updates .dev.vars with tunnel URL (or localhost with detected port)
  * 6. Starts the main Goodfellow dev server
+ * 
+ * ═══════════════════════════════════════════════════════════════════
+ * TUNNEL OPTIONS
+ * ═══════════════════════════════════════════════════════════════════
+ * 
+ * • --cloudflare: Uses Cloudflare Tunnel (default, production-grade)
+ *   - Requires 'cloudflared' to be installed
+ *   - More reliable and faster than localtunnel
+ *   - Better for production-like testing
+ * 
+ * • --localtunnel: Uses localtunnel.me (alternative)
+ *   - No installation required (npm dependency)
+ *   - Good for quick testing
+ *   - May be less stable
  * 
  * ═══════════════════════════════════════════════════════════════════
  * DYNAMIC PORT DETECTION
@@ -26,9 +40,7 @@
  * 
  * • Wrangler commands: Uses 'wrangler.cmd' on Windows, 'wrangler' on Unix
  * • Process spawning: Uses shell mode for better cross-platform command execution
- * • Localtunnel: Creates a public tunnel using localtunnel.me
- *   - If tunnel creation fails, falls back to localhost URL
- *   - No additional installation required (included as npm dependency)
+ * • Tunneling: Supports both Cloudflare and LocalTunnel
  * • File paths: Uses Node.js path utilities for proper path handling
  * 
  * The script will work even if the tunnel fails to create, falling back
@@ -40,18 +52,81 @@ import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import localtunnel from 'localtunnel';
 
+// Parse command line arguments
+const args = process.argv.slice(2);
+const USE_CLOUDFLARE = args.includes('--cloudflare') || !args.includes('--localtunnel');
+const USE_LOCALTUNNEL = args.includes('--localtunnel');
+const TUNNEL_TYPE = USE_CLOUDFLARE ? 'cloudflare' : 'localtunnel';
+
 const ROOT_DIR = process.cwd();
 const DEV_VARS_PATH = join(ROOT_DIR, '.dev.vars');
 const IS_WINDOWS = process.platform === 'win32';
 
 interface ProcessManager {
   r2Server?: ChildProcess;
-  tunnel?: any; // localtunnel instance
+  tunnel?: any; // localtunnel or cloudflared instance
   goodfellow?: ChildProcess;
 }
 
 const processes: ProcessManager = {};
 let R2_PORT: number | null = null; // Will be set dynamically from Wrangler output
+
+/**
+ * Check if cloudflared is installed
+ */
+function checkCloudflared(): boolean {
+  try {
+    execSync('cloudflared --version', { 
+      stdio: 'pipe',
+      encoding: 'utf-8'
+    });
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
+
+/**
+ * Show cloudflared installation instructions
+ */
+function showCloudflaredInstructions(): void {
+  console.log('');
+  console.log('❌ Cloudflare Tunnel requires "cloudflared" to be installed');
+  console.log('');
+  console.log('📦 Installation instructions:');
+  console.log('');
+  
+  if (IS_WINDOWS) {
+    console.log('Windows (using winget):');
+    console.log('  winget install --id Cloudflare.cloudflared');
+    console.log('');
+    console.log('Windows (using Chocolatey):');
+    console.log('  choco install cloudflared');
+  } else if (process.platform === 'darwin') {
+    console.log('macOS (using Homebrew):');
+    console.log('  brew install cloudflare/cloudflare/cloudflared');
+  } else {
+    console.log('Linux (Debian/Ubuntu):');
+    console.log('  wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb');
+    console.log('  sudo dpkg -i cloudflared-linux-amd64.deb');
+    console.log('');
+    console.log('Linux (using package manager):');
+    console.log('  # Add cloudflare gpg key');
+    console.log('  sudo mkdir -p --mode=0755 /usr/share/keyrings');
+    console.log('  curl -fsSL https://pkg.cloudflare.com/cloudflare-main.gpg | sudo tee /usr/share/keyrings/cloudflare-main.gpg >/dev/null');
+    console.log('  # Add this repo to your apt repositories');
+    console.log('  echo "deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/cloudflared $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflared.list');
+    console.log('  # Install cloudflared');
+    console.log('  sudo apt-get update && sudo apt-get install cloudflared');
+  }
+  
+  console.log('');
+  console.log('📚 More info: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/');
+  console.log('');
+  console.log('💡 Alternative: Run with --localtunnel flag to use localtunnel instead');
+  console.log('   npm run goodfellow:dev:localtunnel');
+  console.log('');
+}
 
 // Cleanup function to kill all spawned processes
 function cleanup() {
@@ -61,7 +136,12 @@ function cleanup() {
     processes.goodfellow.kill();
   }
   if (processes.tunnel) {
-    processes.tunnel.close();
+    // Handle both localtunnel (has .close()) and cloudflared (ChildProcess, has .kill())
+    if (typeof processes.tunnel.close === 'function') {
+      processes.tunnel.close();
+    } else if (typeof processes.tunnel.kill === 'function') {
+      processes.tunnel.kill();
+    }
   }
   if (processes.r2Server) {
     processes.r2Server.kill();
@@ -259,9 +339,88 @@ async function startR2Server(): Promise<number> {
 }
 
 /**
- * Create localtunnel (returns localhost URL if tunnel creation fails)
+ * Create Cloudflare Tunnel
  */
-async function createTunnel(port: number): Promise<string | null> {
+async function createCloudflareTunnel(port: number): Promise<string | null> {
+  console.log(`🌐 Creating Cloudflare Tunnel for R2 server on port ${port}...`);
+  
+  return new Promise((resolve) => {
+    const cloudflaredProcess = spawn(
+      'cloudflared',
+      ['tunnel', '--url', `http://localhost:${port}`],
+      {
+        stdio: ['ignore', 'pipe', 'pipe'],
+        detached: false,
+        shell: true
+      }
+    );
+    
+    processes.tunnel = cloudflaredProcess;
+    
+    let tunnelUrl: string | null = null;
+    let resolved = false;
+    
+    // Parse stdout for tunnel URL
+    cloudflaredProcess.stdout?.on('data', (data) => {
+      const text = data.toString();
+      process.stdout.write(`Cloudflare: ${text}`);
+      
+      // Look for the tunnel URL in output
+      // Format: https://random-name.trycloudflare.com
+      const urlMatch = text.match(/https:\/\/[a-z0-9-]+\.trycloudflare\.com/);
+      
+      if (!resolved && urlMatch) {
+        tunnelUrl = urlMatch[0];
+        console.log(`✅ Cloudflare Tunnel created: ${tunnelUrl}`);
+        resolved = true;
+        resolve(tunnelUrl);
+      }
+    });
+    
+    cloudflaredProcess.stderr?.on('data', (data) => {
+      const text = data.toString();
+      // Cloudflare outputs to stderr, check there too
+      const urlMatch = text.match(/https:\/\/[a-z0-9-]+\.trycloudflare\.com/);
+      
+      if (!resolved && urlMatch) {
+        tunnelUrl = urlMatch[0];
+        console.log(`✅ Cloudflare Tunnel created: ${tunnelUrl}`);
+        resolved = true;
+        resolve(tunnelUrl);
+      }
+    });
+    
+    cloudflaredProcess.on('error', (error) => {
+      console.error('⚠️  Failed to start Cloudflare Tunnel:', error);
+      if (!resolved) {
+        resolved = true;
+        resolve(null);
+      }
+    });
+    
+    cloudflaredProcess.on('exit', (code) => {
+      console.log(`Cloudflare Tunnel exited with code ${code}`);
+      if (!resolved) {
+        resolved = true;
+        resolve(null);
+      }
+    });
+    
+    // Timeout after 30 seconds
+    setTimeout(() => {
+      if (!resolved) {
+        console.log('⚠️  Cloudflare Tunnel startup timeout');
+        resolved = true;
+        resolve(null);
+      }
+    }, 30000);
+  });
+}
+
+/**
+ * Create localtunnel
+ */
+async function createLocalTunnel(port: number): Promise<string | null> {
   console.log(`🌐 Creating localtunnel for R2 server on port ${port}...`);
   
   try {
@@ -317,6 +476,23 @@ async function createTunnel(port: number): Promise<string | null> {
     console.log('   • Try running the script again in a few moments');
     console.log('   • You can still use localhost for local development');
     return null;
+  }
+}
+
+/**
+ * Create tunnel (Cloudflare or LocalTunnel based on flag)
+ */
+async function createTunnel(port: number): Promise<string | null> {
+  if (USE_CLOUDFLARE) {
+    // Check if cloudflared is installed
+    if (!checkCloudflared()) {
+      showCloudflaredInstructions();
+      console.log('⏭️  Continuing without tunnel (using localhost)...');
+      return null;
+    }
+    return await createCloudflareTunnel(port);
+  } else {
+    return await createLocalTunnel(port);
   }
 }
 
@@ -429,7 +605,8 @@ function updateDevVars(tunnelUrl: string | null, port: number): void {
   }
   
   if (tunnelUrl) {
-    console.log(`✅ R2_PUBLIC_URL set to: ${r2Url} (public tunnel)`);
+    const tunnelName = TUNNEL_TYPE === 'cloudflare' ? 'Cloudflare Tunnel' : 'LocalTunnel';
+    console.log(`✅ R2_PUBLIC_URL set to: ${r2Url} (${tunnelName})`);
   } else {
     console.log(`✅ R2_PUBLIC_URL set to: ${r2Url} (localhost only)`);
     console.log('');
@@ -437,7 +614,13 @@ function updateDevVars(tunnelUrl: string | null, port: number): void {
     console.log('   • R2 server will only be accessible locally');
     console.log('   • PDF files will fallback to their original URLs');
     console.log('   • You will NOT see the R2 proxying feature working as it would in production');
-    console.log('   • The localtunnel service might be temporarily unavailable');
+    if (TUNNEL_TYPE === 'cloudflare') {
+      console.log('   • Cloudflared might not be installed or failed to start');
+      console.log('   • Try: npm run goodfellow:dev:localtunnel (as alternative)');
+    } else {
+      console.log('   • The localtunnel service might be temporarily unavailable');
+      console.log('   • Try: npm run goodfellow:dev (uses Cloudflare Tunnel instead)');
+    }
   }
 }
 
@@ -477,7 +660,8 @@ function startGoodfellowServer(): void {
  * Main execution
  */
 async function main() {
-  console.log('🎬 Starting development environment setup...\n');
+  console.log('🎬 Starting development environment setup...');
+  console.log(`🌐 Tunnel type: ${TUNNEL_TYPE === 'cloudflare' ? 'Cloudflare Tunnel' : 'LocalTunnel'}\n`);
   
   try {
     // Step 1: Check and setup D1 tables
@@ -502,7 +686,7 @@ async function main() {
     // Step 3: Verify R2 server is accessible locally before tunneling
     console.log('🔍 Verifying R2 server is accessible locally...');
     try {
-      const localTest = await fetch(`http://localhost:${detectedPort}/health`, {
+      const localTest = await fetch(`http://localhost:${detectedPort}/`, {
         signal: AbortSignal.timeout(3000)
       }).catch(() => null);
       
@@ -517,7 +701,7 @@ async function main() {
     
     console.log('');
     
-    // Step 4: Create localtunnel (now that R2 is definitely ready)
+    // Step 4: Create tunnel (now that R2 is definitely ready)
     const tunnelUrl = await createTunnel(detectedPort);
     
     console.log('');

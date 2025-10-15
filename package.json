@@ -9,7 +9,8 @@
   },
   "scripts": {
     "dev": "wrangler dev --config wrangler.jsonc",
-    "goodfellow:dev": "npx tsx scripts/dev-setup.ts",
+    "goodfellow:dev": "npx tsx scripts/dev-setup.ts --cloudflare",
+    "goodfellow:dev:localtunnel": "npx tsx scripts/dev-setup.ts --localtunnel",
     "deploy": "wrangler deploy --config wrangler.jsonc",
     "build": "tsc",
     "type-check": "tsc --noEmit",
