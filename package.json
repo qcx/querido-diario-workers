@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "wrangler dev --config wrangler.jsonc",
+    "goodfellow:dev": "npx tsx scripts/dev-setup.ts",
     "deploy": "wrangler deploy --config wrangler.jsonc",
     "build": "tsc",
     "type-check": "tsc --noEmit",

@@ -118,9 +118,99 @@
   "env": {
     "development": {
       "name": "goodfellow-dev",
+      "browser": {
+        "binding": "BROWSER"
+      },
+      "queues": {
+        "producers": [
+          {
+            "queue": "goodfellow-crawl-queue",
+            "binding": "CRAWL_QUEUE"
+          },
+          {
+            "queue": "goodfellow-ocr-queue", 
+            "binding": "OCR_QUEUE"
+          },
+          {
+            "queue": "goodfellow-analysis-queue",
+            "binding": "ANALYSIS_QUEUE"
+          },
+          {
+            "queue": "goodfellow-webhook-queue",
+            "binding": "WEBHOOK_QUEUE"
+          }
+        ],
+        "consumers": [
+          {
+            "queue": "goodfellow-crawl-queue",
+            "max_batch_size": 1,
+            "max_batch_timeout": 60,
+            "max_retries": 3,
+            "dead_letter_queue": "goodfellow-crawl-dlq"
+          },
+          {
+            "queue": "goodfellow-ocr-queue",
+            "max_batch_size": 1,
+            "max_batch_timeout": 60,
+            "max_retries": 3,
+            "dead_letter_queue": "goodfellow-ocr-dlq"
+          },
+          {
+            "queue": "goodfellow-analysis-queue",
+            "max_batch_size": 1,
+            "max_batch_timeout": 30,
+            "max_retries": 3,
+            "dead_letter_queue": "goodfellow-analysis-dlq"
+          },
+          {
+            "queue": "goodfellow-webhook-queue",
+            "max_batch_size": 1,
+            "max_batch_timeout": 30,
+            "max_retries": 3,
+            "dead_letter_queue": "goodfellow-webhook-dlq"
+          }
+        ]
+      },
+
+      "kv_namespaces": [
+        {
+          "binding": "OCR_RESULTS",
+          "id": "c4ef3be0866640e58ee549af2295711b"
+        },
+        {
+          "binding": "ANALYSIS_RESULTS",
+          "id": "107e82df3dc944d7961dc0067ae0b09e"
+        },
+        {
+          "binding": "WEBHOOK_SUBSCRIPTIONS",
+          "id": "e92d5d945523420ba0fa684fbb2f7347"
+        },
+        {
+          "binding": "WEBHOOK_DELIVERY_LOGS",
+          "id": "2a247b53d02044eab077db8772f9ff69"
+        }
+      ],
+      "r2_buckets": [
+        {
+          "bucket_name": "gazette-pdfs",
+          "binding": "GAZETTE_PDFS"
+        }
+      ],
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "querido-diario-prod",
+          "database_id": "4c0566d5-6aaa-4805-b530-203d50aaa170"
+        }
+      ],
       "vars": {
-        "ENVIRONMENT": "development"
+        "ENVIRONMENT": "development",
+        "MISTRAL_API_KEY": "",
+        "OPENAI_API_KEY": "",
+        "DATABASE_URL": "",
+        "R2_PUBLIC_URL": ""
       }
     }
   }
+
 }

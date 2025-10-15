@@ -52,6 +52,7 @@ export interface GoodfellowEnv extends D1DatabaseEnv {
   // Secrets
   MISTRAL_API_KEY: string;
   OPENAI_API_KEY: string;
+  R2_PUBLIC_URL?: string;
 }
 
 // Create Hono app for HTTP handling
@@ -549,6 +550,8 @@ async function handleQueue(
     queueName,
     batchSize: batch.messages.length,
   });
+
+  console.log('env', env)
 
   switch (queueName) {
     case 'goodfellow-crawl-queue':
