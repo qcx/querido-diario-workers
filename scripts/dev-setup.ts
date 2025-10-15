@@ -4,10 +4,19 @@
  * 
  * This script orchestrates the complete development environment setup:
  * 1. Checks and sets up D1 tables if needed
- * 2. Starts R2 dev server
- * 3. Creates Cloudflare tunnel for R2 server (optional, skips if cloudflared not available)
- * 4. Updates .dev.vars with tunnel URL (or localhost if no tunnel)
- * 5. Starts the main Goodfellow dev server
+ * 2. Starts R2 dev server and detects the port Wrangler assigns
+ * 3. Health checks R2 server to ensure it's fully ready
+ * 4. Creates localtunnel for R2 server (optional, falls back to localhost if unavailable)
+ * 5. Updates .dev.vars with tunnel URL (or localhost with detected port)
+ * 6. Starts the main Goodfellow dev server
+ * 
+ * ═══════════════════════════════════════════════════════════════════
+ * DYNAMIC PORT DETECTION
+ * ═══════════════════════════════════════════════════════════════════
+ * 
+ * The script automatically detects the port that Wrangler assigns to the R2
+ * dev server by parsing its output. This ensures the tunnel always points to
+ * the correct port, regardless of what Wrangler chooses.
  * 
  * ═══════════════════════════════════════════════════════════════════
  * CROSS-PLATFORM COMPATIBILITY
@@ -17,31 +26,32 @@
  * 
  * • Wrangler commands: Uses 'wrangler.cmd' on Windows, 'wrangler' on Unix
  * • Process spawning: Uses shell mode for better cross-platform command execution
- * • Cloudflared tunnel: OPTIONAL - gracefully skips if not installed
- *   - If cloudflared is not available, uses localhost URL instead
- *   - Provides platform-specific installation instructions
+ * • Localtunnel: Creates a public tunnel using localtunnel.me
+ *   - If tunnel creation fails, falls back to localhost URL
+ *   - No additional installation required (included as npm dependency)
  * • File paths: Uses Node.js path utilities for proper path handling
  * 
- * The script will work even if cloudflared is not installed, falling back
+ * The script will work even if the tunnel fails to create, falling back
  * to localhost URLs for local development.
  */
 
 import { spawn, execSync, ChildProcess } from 'child_process';
 import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { join } from 'path';
+import localtunnel from 'localtunnel';
 
 const ROOT_DIR = process.cwd();
 const DEV_VARS_PATH = join(ROOT_DIR, '.dev.vars');
-const R2_PORT = 34381;
 const IS_WINDOWS = process.platform === 'win32';
 
 interface ProcessManager {
   r2Server?: ChildProcess;
-  tunnel?: ChildProcess;
+  tunnel?: any; // localtunnel instance
   goodfellow?: ChildProcess;
 }
 
 const processes: ProcessManager = {};
+let R2_PORT: number | null = null; // Will be set dynamically from Wrangler output
 
 // Cleanup function to kill all spawned processes
 function cleanup() {
@@ -51,7 +61,7 @@ function cleanup() {
     processes.goodfellow.kill();
   }
   if (processes.tunnel) {
-    processes.tunnel.kill();
+    processes.tunnel.close();
   }
   if (processes.r2Server) {
     processes.r2Server.kill();
@@ -146,9 +156,36 @@ function setupD1Tables(): void {
 }
 
 /**
+ * Check if R2 server is actually responding to requests
+ */
+async function healthCheckR2Server(port: number, maxAttempts = 10): Promise<boolean> {
+  console.log('🏥 Health checking R2 server...');
+  
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      const response = await fetch(`http://localhost:${port}/health`).catch(() => null);
+      
+      // Even if health endpoint doesn't exist, a connection means server is up
+      if (response) {
+        console.log(`✅ R2 server is responding (attempt ${attempt}/${maxAttempts})`);
+        return true;
+      }
+    } catch (error) {
+      // Connection refused means server not ready yet
+    }
+    
+    console.log(`   Waiting for R2 server... (attempt ${attempt}/${maxAttempts})`);
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
+  
+  console.log('⚠️  R2 server health check timed out, but continuing...');
+  return false;
+}
+
+/**
  * Start R2 dev server (cross-platform)
  */
-async function startR2Server(): Promise<void> {
+async function startR2Server(): Promise<number> {
   return new Promise((resolve, reject) => {
     console.log(`🚀 Starting R2 dev server...`);
     
@@ -168,192 +205,239 @@ async function startR2Server(): Promise<void> {
     processes.r2Server = r2Process;
     
     let output = '';
+    let resolved = false;
     
     r2Process.stdout?.on('data', (data) => {
       const text = data.toString();
       output += text;
+      process.stdout.write(`R2: ${text}`);
       
-      // Check if server is ready
-      if (text.includes('Ready on') || text.includes(`http://localhost:${R2_PORT}`)) {
-        console.log('✅ R2 dev server is ready');
-        resolve();
+      // Extract port from Wrangler output
+      // Look for patterns like "Ready on http://localhost:8787" or "http://localhost:8787"
+      const portMatch = text.match(/http:\/\/localhost:(\d+)/);
+      
+      if (!resolved && portMatch) {
+        const detectedPort = parseInt(portMatch[1], 10);
+        R2_PORT = detectedPort;
+        console.log(`✅ R2 dev server ready on port ${detectedPort}`);
+        resolved = true;
+        resolve(detectedPort);
       }
     });
     
     r2Process.stderr?.on('data', (data) => {
-      console.error(`R2 Server: ${data}`);
+      const text = data.toString();
+      process.stderr.write(`R2: ${text}`);
+      
+      // Sometimes Wrangler outputs to stderr, check there too
+      const portMatch = text.match(/http:\/\/localhost:(\d+)/);
+      
+      if (!resolved && portMatch) {
+        const detectedPort = parseInt(portMatch[1], 10);
+        R2_PORT = detectedPort;
+        console.log(`✅ R2 dev server ready on port ${detectedPort}`);
+        resolved = true;
+        resolve(detectedPort);
+      }
     });
     
     r2Process.on('error', (error) => {
       console.error('❌ Failed to start R2 server:', error);
-      reject(error);
+      if (!resolved) {
+        reject(error);
+      }
     });
     
     // Timeout after 30 seconds
     setTimeout(() => {
-      if (!output.includes('Ready on')) {
-        console.log('⚠️  R2 server startup timeout - continuing anyway...');
-        resolve();
+      if (!resolved) {
+        console.log('⚠️  R2 server startup timeout - could not detect port');
+        reject(new Error('Could not detect R2 server port'));
       }
     }, 30000);
   });
 }
 
 /**
- * Check if cloudflared is installed (cross-platform)
+ * Create localtunnel (returns localhost URL if tunnel creation fails)
  */
-function isCloudflaredInstalled(): boolean {
+async function createTunnel(port: number): Promise<string | null> {
+  console.log(`🌐 Creating localtunnel for R2 server on port ${port}...`);
+  
   try {
-    // Try to run cloudflared --version to check if it's available
-    execSync('cloudflared --version', { 
-      stdio: 'ignore'
-    } as any);
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-/**
- * Print cloudflared installation instructions
- */
-function printCloudflaredInstructions(): void {
-  console.log('\n⚠️  cloudflared is not installed');
-  console.log('📝 To enable public tunnel for R2 server, install cloudflared:');
-  console.log('');
-  
-  if (IS_WINDOWS) {
-    console.log('Windows:');
-    console.log('  Download from: https://github.com/cloudflare/cloudflared/releases/latest');
-    console.log('  Or use: winget install cloudflare.cloudflared');
-  } else if (process.platform === 'darwin') {
-    console.log('macOS:');
-    console.log('  brew install cloudflared');
-  } else {
-    console.log('Linux:');
-    console.log('  wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64');
-    console.log('  chmod +x cloudflared-linux-amd64');
-    console.log('  sudo mv cloudflared-linux-amd64 /usr/local/bin/cloudflared');
-  }
-  
-  console.log('');
-  console.log('More info: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/');
-  console.log('\n⏭️  Continuing without tunnel (using localhost)...\n');
-}
-
-/**
- * Create Cloudflare tunnel (optional, returns localhost URL if cloudflared not available)
- */
-async function createTunnel(): Promise<string | null> {
-  return new Promise((resolve) => {
-    console.log('🌐 Checking for Cloudflare tunnel capability...');
+    const tunnel = await localtunnel({ 
+      port: port,
+      local_host: 'localhost',
+      // Request a subdomain for more stable URLs (optional)
+      // subdomain: 'querido-diario-r2' 
+    });
     
-    if (!isCloudflaredInstalled()) {
-      printCloudflaredInstructions();
-      // Return null to indicate no tunnel available
-      resolve(null);
-      return;
+    processes.tunnel = tunnel;
+    
+    console.log(`✅ Tunnel created: ${tunnel.url}`);
+    console.log('');
+    console.log('🔍 Testing tunnel connection...');
+    
+    // Wait a moment for tunnel to fully establish
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    // Test if tunnel can reach our R2 server
+    try {
+      const testResponse = await fetch(`${tunnel.url}/health`, {
+        signal: AbortSignal.timeout(5000)
+      }).catch(() => null);
+      
+      if (testResponse) {
+        console.log('✅ Tunnel is successfully connected to R2 server');
+      } else {
+        console.log('⚠️  Tunnel created but connection test failed');
+        console.log('   This might be a temporary issue with localtunnel.me service');
+      }
+    } catch (testError) {
+      console.log('⚠️  Could not verify tunnel connection');
     }
     
-    console.log('🚀 Creating Cloudflare tunnel...');
-    
-    const tunnelProcess = spawn(
-      'cloudflared',
-      ['tunnel', '--url', `http://localhost:${R2_PORT}`],
-      {
-        stdio: ['ignore', 'pipe', 'pipe'],
-        detached: false,
-        shell: IS_WINDOWS // Use shell on Windows for better compatibility
-      }
-    );
-    
-    processes.tunnel = tunnelProcess;
-    
-    let tunnelUrl = '';
-    
-    tunnelProcess.stdout?.on('data', (data) => {
-      const text = data.toString();
-      console.log(`Tunnel: ${text.trim()}`);
-      
-      // Extract tunnel URL
-      const urlMatch = text.match(/https:\/\/[a-zA-Z0-9-]+\.trycloudflare\.com/);
-      if (urlMatch && !tunnelUrl) {
-        tunnelUrl = urlMatch[0];
-        console.log(`✅ Tunnel created: ${tunnelUrl}`);
-        resolve(tunnelUrl);
-      }
+    // Handle tunnel close events
+    tunnel.on('close', () => {
+      console.log('⚠️  Tunnel closed unexpectedly - you may need to restart');
     });
     
-    tunnelProcess.stderr?.on('data', (data) => {
-      const text = data.toString();
-      // Cloudflared often outputs to stderr even for normal logs
-      console.log(`Tunnel: ${text.trim()}`);
-      
-      const urlMatch = text.match(/https:\/\/[a-zA-Z0-9-]+\.trycloudflare\.com/);
-      if (urlMatch && !tunnelUrl) {
-        tunnelUrl = urlMatch[0];
-        console.log(`✅ Tunnel created: ${tunnelUrl}`);
-        resolve(tunnelUrl);
-      }
+    tunnel.on('error', (err) => {
+      console.error('⚠️  Tunnel error:', err);
     });
     
-    tunnelProcess.on('error', (error) => {
-      console.error('⚠️  Failed to create tunnel:', error);
-      console.log('⏭️  Continuing without tunnel (using localhost)...');
-      resolve(null);
-    });
-    
-    // Timeout after 30 seconds
-    setTimeout(() => {
-      if (!tunnelUrl) {
-        console.log('⚠️  Tunnel creation timeout');
-        console.log('⏭️  Continuing without tunnel (using localhost)...');
-        resolve(null);
-      }
-    }, 30000);
-  });
+    return tunnel.url;
+  } catch (error) {
+    console.error('⚠️  Failed to create tunnel:', error);
+    console.log('⏭️  Continuing without tunnel (using localhost)...');
+    console.log('');
+    console.log('💡 Troubleshooting tips:');
+    console.log('   • The localtunnel.me service might be temporarily down');
+    console.log(`   • Check if port ${port} is accessible locally`);
+    console.log('   • Try running the script again in a few moments');
+    console.log('   • You can still use localhost for local development');
+    return null;
+  }
 }
 
 /**
  * Update .dev.vars file with tunnel URL or localhost
  */
-function updateDevVars(tunnelUrl: string | null): void {
+function updateDevVars(tunnelUrl: string | null, port: number): void {
   console.log('📝 Updating .dev.vars...');
   
   // Use tunnel URL if available, otherwise use localhost
-  const r2Url = tunnelUrl || `http://localhost:${R2_PORT}`;
+  const r2Url = tunnelUrl || `http://localhost:${port}`;
   
+  const DEV_VARS_EXAMPLE_PATH = join(ROOT_DIR, '.dev.vars.example');
   let content = '';
+  let isNewFile = false;
   
-  // Read existing .dev.vars if it exists
+  // Check if .dev.vars exists
   if (existsSync(DEV_VARS_PATH)) {
+    // Read existing .dev.vars and preserve all variables
     content = readFileSync(DEV_VARS_PATH, 'utf-8');
-  }
-  
-  // Update or add R2_PUBLIC_URL
-  const lines = content.split('\n');
-  let updated = false;
-  
-  for (let i = 0; i < lines.length; i++) {
-    if (lines[i].startsWith('R2_PUBLIC_URL=')) {
-      lines[i] = `R2_PUBLIC_URL=${r2Url}`;
-      updated = true;
-      break;
+  } else {
+    // File doesn't exist - use .dev.vars.example as template
+    isNewFile = true;
+    if (existsSync(DEV_VARS_EXAMPLE_PATH)) {
+      content = readFileSync(DEV_VARS_EXAMPLE_PATH, 'utf-8');
+    } else {
+      // Fallback template if .dev.vars.example doesn't exist
+      content = 'MISTRAL_API_KEY=""\nOPENAI_API_KEY=""\nR2_PUBLIC_URL=""\n';
     }
   }
   
-  if (!updated) {
-    lines.push(`R2_PUBLIC_URL=${r2Url}`);
+  // Parse variables and update only R2_PUBLIC_URL
+  const lines = content.split('\n');
+  const variables = new Map<string, string>();
+  const emptyVars: string[] = [];
+  
+  for (const line of lines) {
+    const trimmedLine = line.trim();
+    
+    // Skip empty lines and comments
+    if (!trimmedLine || trimmedLine.startsWith('#')) {
+      continue;
+    }
+    
+    // Parse variable
+    const match = trimmedLine.match(/^([^=]+)=(.*)$/);
+    if (match) {
+      const key = match[1].trim();
+      const value = match[2].trim().replace(/^["']|["']$/g, ''); // Remove quotes
+      
+      if (key === 'R2_PUBLIC_URL') {
+        // Update R2_PUBLIC_URL with new value
+        variables.set(key, r2Url);
+      } else {
+        // Preserve other variables as-is
+        variables.set(key, value);
+        
+        // Track empty variables (warn user about missing configuration)
+        if (!value) {
+          emptyVars.push(key);
+        }
+      }
+    }
+  }
+  
+  // Build output content
+  const outputLines: string[] = [];
+  
+  // Ensure all required variables are present (in order from .dev.vars.example)
+  const requiredVars = ['MISTRAL_API_KEY', 'OPENAI_API_KEY', 'R2_PUBLIC_URL'];
+  
+  for (const key of requiredVars) {
+    if (variables.has(key)) {
+      outputLines.push(`${key}="${variables.get(key)}"`);
+    } else if (key === 'R2_PUBLIC_URL') {
+      outputLines.push(`${key}="${r2Url}"`);
+    } else {
+      // Variable is missing - add it as empty and track it
+      outputLines.push(`${key}=""`);
+      if (!emptyVars.includes(key)) {
+        emptyVars.push(key);
+      }
+    }
+  }
+  
+  // Add any additional variables that weren't in the required list
+  for (const [key, value] of variables.entries()) {
+    if (!requiredVars.includes(key)) {
+      outputLines.push(`${key}="${value}"`);
+    }
   }
   
   // Write back to file
-  writeFileSync(DEV_VARS_PATH, lines.join('\n').trim() + '\n');
+  writeFileSync(DEV_VARS_PATH, outputLines.join('\n') + '\n');
+  
+  // Show appropriate messages
+  if (isNewFile) {
+    console.log('✅ Created .dev.vars file');
+  } else {
+    console.log('✅ Updated .dev.vars file');
+  }
+  
+  // Warn about empty variables (both new and existing files)
+  if (emptyVars.length > 0) {
+    console.log(`⚠️  Warning: The following variables are empty and need to be configured:`);
+    emptyVars.forEach(key => {
+      console.log(`   - ${key}`);
+    });
+    console.log('   Please edit .dev.vars to add your API keys and configuration.');
+  }
   
   if (tunnelUrl) {
     console.log(`✅ R2_PUBLIC_URL set to: ${r2Url} (public tunnel)`);
   } else {
     console.log(`✅ R2_PUBLIC_URL set to: ${r2Url} (localhost only)`);
-    console.log('⚠️  Note: R2 server will only be accessible locally');
+    console.log('');
+    console.log('⚠️  IMPORTANT: Without public tunnel:');
+    console.log('   • R2 server will only be accessible locally');
+    console.log('   • PDF files will fallback to their original URLs');
+    console.log('   • You will NOT see the R2 proxying feature working as it would in production');
+    console.log('   • The localtunnel service might be temporarily unavailable');
   }
 }
 
@@ -403,25 +487,50 @@ async function main() {
     
     console.log('');
     
-    // Step 2: Start R2 dev server
-    await startR2Server();
+    // Step 2: Start R2 dev server and get the port it's running on
+    const detectedPort = await startR2Server();
     
     console.log('');
     
-    // Step 3: Create Cloudflare tunnel
-    const tunnelUrl = await createTunnel();
+    // Step 2.5: Wait for R2 server to be fully ready and accepting connections
+    console.log('⏳ Waiting for R2 server to be fully operational...');
+    await new Promise(resolve => setTimeout(resolve, 3000)); // Give it 3 seconds to fully initialize
+    await healthCheckR2Server(detectedPort);
     
     console.log('');
     
-    // Step 4: Update .dev.vars
-    updateDevVars(tunnelUrl);
+    // Step 3: Verify R2 server is accessible locally before tunneling
+    console.log('🔍 Verifying R2 server is accessible locally...');
+    try {
+      const localTest = await fetch(`http://localhost:${detectedPort}/health`, {
+        signal: AbortSignal.timeout(3000)
+      }).catch(() => null);
+      
+      if (localTest) {
+        console.log('✅ R2 server is accessible on localhost');
+      } else {
+        console.log('⚠️  R2 server might not be fully ready yet');
+      }
+    } catch (error) {
+      console.log('⚠️  Could not verify R2 server accessibility');
+    }
+    
+    console.log('');
+    
+    // Step 4: Create localtunnel (now that R2 is definitely ready)
+    const tunnelUrl = await createTunnel(detectedPort);
+    
+    console.log('');
+    
+    // Step 5: Update .dev.vars
+    updateDevVars(tunnelUrl, detectedPort);
     
     console.log('');
     
     // Give services a moment to stabilize
     await new Promise(resolve => setTimeout(resolve, 2000));
     
-    // Step 5: Start Goodfellow dev server
+    // Step 6: Start Goodfellow dev server
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     console.log('✨ Setup complete! Starting Goodfellow...');
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');

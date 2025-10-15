@@ -204,11 +204,7 @@
         }
       ],
       "vars": {
-        "ENVIRONMENT": "development",
-        "MISTRAL_API_KEY": "",
-        "OPENAI_API_KEY": "",
-        "DATABASE_URL": "",
-        "R2_PUBLIC_URL": ""
+        "ENVIRONMENT": "development"
       }
     }
   }

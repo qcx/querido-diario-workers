@@ -551,8 +551,6 @@ async function handleQueue(
     batchSize: batch.messages.length,
   });
 
-  console.log('env', env)
-
   switch (queueName) {
     case 'goodfellow-crawl-queue':
       await processCrawlBatch(batch as MessageBatch<QueueMessage>, env as CrawlProcessorEnv);
