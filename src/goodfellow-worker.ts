@@ -257,7 +257,7 @@ app.post('/crawl', async (c) => {
         ? request.scopeFilter 
         : [request.scopeFilter];
       
-      configs = configs.filter(c => allowedScopes.includes(c.gazetteScope));
+      configs = configs.filter(c => allowedScopes.includes(c?.gazetteScope));
       
       logger.info(`Filtered configs by scope`, {
         originalCount,
@@ -371,7 +371,7 @@ app.post('/crawl/today-yesterday', async (c) => {
         ? scopeFilter 
         : [scopeFilter];
       
-      configs = configs.filter(c => allowedScopes.includes(c.gazetteScope));
+      configs = configs.filter(c => allowedScopes.includes(c?.gazetteScope));
       
       logger.info(`Filtered configs by scope`, {
         originalCount,
@@ -500,7 +500,7 @@ app.post('/crawl/cities', async (c) => {
         ? scopeFilter 
         : [scopeFilter];
       
-      configs = configs.filter(c => allowedScopes.includes(c.gazetteScope));
+      configs = configs.filter(c => allowedScopes.includes(c?.gazetteScope));
       
       logger.info(`Filtered configs by scope`, {
         originalCount,
