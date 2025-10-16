@@ -14,6 +14,9 @@ export interface QueueMessage {
   /** Spider type */
   spiderType: SpiderType;
   
+  /** Gazette scope - city-specific, state-level, or association-level */
+  gazetteScope?: GazetteScope;
+  
   /** Platform-specific configuration */
   config: SpiderPlatformConfig;
   

@@ -14,7 +14,6 @@ import {
   OcrQueueMessage,
   AnalysisQueueMessage,
   WebhookQueueMessage,
-  GazetteScope,
 } from './types';
 import type { D1DatabaseEnv } from './services/database';
 import { spiderRegistry } from './spiders/registry';
@@ -150,6 +149,7 @@ async function sendMessagesToQueue(
     spiderId: config.id,
     territoryId: config.territoryId,
     spiderType: config.spiderType,
+    gazetteScope: config.gazetteScope,
     config: config.config,
     dateRange,
     metadata: {
