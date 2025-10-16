@@ -159,6 +159,24 @@ bun run goodfellow:dev:localhost
 
 See [DEVELOPMENT_SETUP.md](./DEVELOPMENT_SETUP.md) for detailed setup instructions and options.
 
+#### Optional: API Key Authentication
+
+To enable API key authentication for all endpoints (except the root `/` health check), set the `API_KEY` environment variable:
+
+```bash
+# In .dev.vars for local development
+API_KEY="your-secret-key-here"
+```
+
+When enabled, all requests must include the `X-API-Key` header:
+
+```bash
+curl -X POST https://goodfellow-prod.qconcursos.workers.dev/crawl/cities \
+  -H "X-API-Key: your-secret-key-here" \
+  -H "Content-Type: application/json" \
+  -d '{"cities": ["am_1300144"]}'
+```
+
 ### Deployment
 
 #### Deploy to Staging
@@ -168,6 +186,9 @@ See [DEVELOPMENT_SETUP.md](./DEVELOPMENT_SETUP.md) for detailed setup instructio
 wrangler secret put MISTRAL_API_KEY --config wrangler-goodfellow.jsonc --env staging
 wrangler secret put OPENAI_API_KEY --config wrangler-goodfellow.jsonc --env staging
 wrangler secret put DATABASE_URL --config wrangler-goodfellow.jsonc --env staging
+
+# Optional: Enable API key authentication
+wrangler secret put API_KEY --config wrangler-goodfellow.jsonc --env staging
 
 # Deploy
 bun run goodfellow:deploy:staging
@@ -180,6 +201,9 @@ bun run goodfellow:deploy:staging
 wrangler secret put MISTRAL_API_KEY --config wrangler-goodfellow.jsonc --env production
 wrangler secret put OPENAI_API_KEY --config wrangler-goodfellow.jsonc --env production
 wrangler secret put DATABASE_URL --config wrangler-goodfellow.jsonc --env production
+
+# Optional: Enable API key authentication
+wrangler secret put API_KEY --config wrangler-goodfellow.jsonc --env production
 
 # Deploy
 bun run goodfellow:deploy:production

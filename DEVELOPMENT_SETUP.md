@@ -55,10 +55,11 @@ npm run goodfellow:dev:localhost
 The `goodfellow:dev` script orchestrates the complete development setup automatically:
 
 1. **✅ D1 Database Check**: Verifies if D1 tables exist, creates them if not
-2. **🚀 R2 Server**: Starts the R2 development server on port 34381
+2. **🚀 R2 Server**: Starts the R2 development server on a dynamically assigned port
 3. **🌐 Cloudflare Tunnel** (Optional): Creates a public tunnel for the R2 server if `cloudflared` is available
 4. **📝 Environment Variables**: Updates `.dev.vars` with the tunnel URL (or localhost if no tunnel)
-5. **✨ Goodfellow Server**: Starts the main development server
+5. **🔐 API Key Check**: Detects if `API_KEY` is set and informs you about authentication status
+6. **✨ Goodfellow Server**: Starts the main development server
 
 ## Prerequisites
 
@@ -176,12 +177,43 @@ R2_PUBLIC_URL=http://localhost:34381
 
 This URL is used by the application to access R2 resources during development.
 
+## API Key Authentication (Optional)
+
+The dev setup script automatically detects and preserves the `API_KEY` environment variable:
+
+### When API_KEY is NOT set:
+```
+🔐 API Key Authentication: DISABLED
+   To enable API key authentication on all endpoints (except "/"):
+   1. Edit .dev.vars and set API_KEY="your-secret-key"
+   2. Generate a secure key: openssl rand -base64 32
+   3. Restart the dev server
+   See SECURITY.md for more information.
+```
+
+### When API_KEY IS set:
+```
+🔐 API Key Authentication: ENABLED
+   All endpoints (except "/") will require X-API-Key header
+   API Key: abc1***xyz9
+   See SECURITY.md for usage details.
+```
+
+To enable authentication in development:
+1. Generate a secure key: `openssl rand -base64 32`
+2. Add to `.dev.vars`: `API_KEY="your-generated-key"`
+3. Restart the dev server with `bun goodfellow:dev`
+4. Make requests with: `curl -H "X-API-Key: your-key" http://localhost:8787/spiders`
+
+For more details, see [`SECURITY.md`](./SECURITY.md) and [`API_KEY_QUICK_REFERENCE.md`](./API_KEY_QUICK_REFERENCE.md).
+
 ## Development Workflow
 
 1. Run `bun goodfellow:dev` once to start all services
 2. All processes run together - stopping one (Ctrl+C) stops all
 3. Services auto-reload on code changes (where supported)
 4. Logs from all services appear in the same terminal
+5. API authentication status is displayed during startup
 
 ## Notes
 

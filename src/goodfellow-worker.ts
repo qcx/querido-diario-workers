@@ -53,10 +53,69 @@ export interface GoodfellowEnv extends D1DatabaseEnv {
   MISTRAL_API_KEY: string;
   OPENAI_API_KEY: string;
   R2_PUBLIC_URL?: string;
+  API_KEY?: string; // Optional API key for endpoint protection
 }
 
 // Create Hono app for HTTP handling
 const app = new Hono<{ Bindings: GoodfellowEnv }>();
+
+/**
+ * API Key Authentication Middleware
+ * Only applies if API_KEY environment variable is set
+ * Exempts the root "/" endpoint from authentication
+ */
+app.use('*', async (c, next) => {
+  // Skip authentication for root health check
+  if (c.req.path === '/') {
+    return next();
+  }
+
+  // If API_KEY is configured, validate it
+  const configuredApiKey = c.env.API_KEY;
+  if (configuredApiKey) {
+    const providedApiKey = c.req.header('X-API-Key');
+
+    if (!providedApiKey) {
+      logger.warn('API request without X-API-Key header', {
+        path: c.req.path,
+        method: c.req.method,
+        ip: c.req.header('cf-connecting-ip'),
+      });
+
+      return c.json(
+        {
+          error: 'Authentication required',
+          message: 'Missing X-API-Key header',
+        },
+        401
+      );
+    }
+
+    if (providedApiKey !== configuredApiKey) {
+      logger.warn('API request with invalid X-API-Key', {
+        path: c.req.path,
+        method: c.req.method,
+        ip: c.req.header('cf-connecting-ip'),
+      });
+
+      return c.json(
+        {
+          error: 'Authentication failed',
+          message: 'Invalid X-API-Key',
+        },
+        403
+      );
+    }
+
+    // Valid API key - log successful authentication
+    logger.info('Authenticated API request', {
+      path: c.req.path,
+      method: c.req.method,
+    });
+  }
+
+  await next();
+});
 
 /**
  * Health check endpoint
@@ -68,6 +127,7 @@ app.get('/', (c) => {
     description: 'Unified gazette processing pipeline',
     spidersRegistered: spiderRegistry.getCount(),
     handlers: ['http', 'crawl-queue', 'ocr-queue', 'analysis-queue', 'webhook-queue'],
+    authEnabled: !!c.env.API_KEY,
   });
 });
 

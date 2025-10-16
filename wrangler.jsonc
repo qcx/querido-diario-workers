@@ -113,6 +113,7 @@
   // Secrets (set via wrangler secret put)
   // - MISTRAL_API_KEY: Mistral API key for OCR processing
   // - OPENAI_API_KEY: OpenAI API key for AI analysis
+  // - API_KEY: Optional API key for endpoint authentication (protects all endpoints except "/")
 
   // Environments
   "env": {
