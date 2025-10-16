@@ -1,4 +1,5 @@
 import { SpiderType, SpiderPlatformConfig, DateRange } from './spider-config';
+import type { GazetteScope } from './gazette';
 
 /**
  * Message sent to the crawl queue
@@ -39,6 +40,9 @@ export interface DispatchRequest {
   /** Optional date range (defaults to last 30 days) */
   startDate?: string;
   endDate?: string;
+  
+  /** Optional filter by gazette scope */
+  scopeFilter?: GazetteScope | GazetteScope[];
 }
 
 /**

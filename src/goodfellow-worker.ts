@@ -14,6 +14,7 @@ import {
   OcrQueueMessage,
   AnalysisQueueMessage,
   WebhookQueueMessage,
+  GazetteScope,
 } from './types';
 import type { D1DatabaseEnv } from './services/database';
 import { spiderRegistry } from './spiders/registry';
@@ -139,13 +140,27 @@ async function sendMessagesToQueue(
   configs: SpiderConfig[],
   dateRange: DateRange,
   crawlJobId: string,
-  logger: any
+  logger: any,
+  scopeFilter?: GazetteScope | GazetteScope[]
 ): Promise<{ enqueuedCount: number; failedCount: number }> {
   let enqueuedCount = 0;
   let failedCount = 0;
   const BATCH_SIZE = 100;
 
-  const messages: QueueMessage[] = configs.map((config) => ({
+  // Apply scope filtering
+  let filteredConfigs = configs;
+  if (scopeFilter) {
+    const allowedScopes = Array.isArray(scopeFilter) ? scopeFilter : [scopeFilter];
+    filteredConfigs = configs.filter(c => allowedScopes.includes(c.gazetteScope));
+    
+    logger.info(`Filtered ${configs.length} configs to ${filteredConfigs.length} by scope`, {
+      originalCount: configs.length,
+      filteredCount: filteredConfigs.length,
+      scopeFilter: allowedScopes
+    });
+  }
+
+  const messages: QueueMessage[] = filteredConfigs.map((config) => ({
     spiderId: config.id,
     territoryId: config.territoryId,
     spiderType: config.spiderType,
@@ -274,7 +289,8 @@ app.post('/crawl', async (c) => {
       configs,
       dateRange,
       crawlJobId,
-      logger
+      logger,
+      request.scopeFilter
     );
 
     await telemetry.updateCrawlJob(crawlJobId, {
@@ -321,9 +337,9 @@ app.post('/crawl', async (c) => {
  */
 app.post('/crawl/today-yesterday', async (c) => {
   try {
-    const { platform } = await c.req.json().catch(() => ({}));
+    const { platform, scopeFilter } = await c.req.json().catch(() => ({}));
 
-    logger.info('Starting today-yesterday crawl', { platform });
+    logger.info('Starting today-yesterday crawl', { platform, scopeFilter });
 
     const today = new Date();
     const yesterday = new Date(today);
@@ -362,7 +378,8 @@ app.post('/crawl/today-yesterday', async (c) => {
       configs,
       dateRange,
       crawlJobId,
-      logger
+      logger,
+      scopeFilter
     );
 
     await telemetry.updateCrawlJob(crawlJobId, {
@@ -411,7 +428,7 @@ app.post('/crawl/today-yesterday', async (c) => {
  */
 app.post('/crawl/cities', async (c) => {
   try {
-    const { cities, startDate, endDate } = await c.req.json();
+    const { cities, startDate, endDate, scopeFilter } = await c.req.json();
 
     if (!cities || !Array.isArray(cities) || cities.length === 0) {
       return c.json(
@@ -423,7 +440,7 @@ app.post('/crawl/cities', async (c) => {
       );
     }
 
-    logger.info('Starting cities crawl', { cities, startDate, endDate });
+    logger.info('Starting cities crawl', { cities, startDate, endDate, scopeFilter });
 
     const dateRange = getDateRange(startDate, endDate);
 
@@ -465,7 +482,8 @@ app.post('/crawl/cities', async (c) => {
       configs,
       dateRange,
       crawlJobId,
-      logger
+      logger,
+      scopeFilter
     );
 
     await telemetry.updateCrawlJob(crawlJobId, {

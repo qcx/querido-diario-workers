@@ -9,7 +9,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "aquidaba"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_areia_branca",
@@ -21,7 +22,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "areiabranca"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_barra_dos_coqueiros",
@@ -33,7 +35,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "barradoscoqueiros"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_campo_do_brito",
@@ -45,7 +48,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "campodobrito"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_canhoba",
@@ -57,7 +61,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "canhoba"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_caninde_de_sao_francisco",
@@ -69,7 +74,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "canindedesaofrancisco"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_capela",
@@ -81,7 +87,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "capela"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_divina_pastora",
@@ -93,7 +100,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "divinapastora"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_frei_paulo",
@@ -105,7 +113,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "freipaulo"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_ilha_das_flores",
@@ -117,7 +126,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "ilhadasflores"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_itabaiana",
@@ -129,7 +139,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "itabaiana"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_itabaianinha",
@@ -141,7 +152,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "itabaianinha"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_japaratuba",
@@ -153,7 +165,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "japaratuba"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_moita_bonita",
@@ -165,7 +178,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "moitabonita"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_muribeca",
@@ -177,7 +191,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "muribeca"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_nossa_senhora_das_dores",
@@ -189,7 +204,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "nossasenhoradasdores"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_nossa_senhora_de_lourdes",
@@ -201,7 +217,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "nossasenhoradelourdes"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_pedra_mole",
@@ -213,7 +230,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "pedramole"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_pirambu",
@@ -225,7 +243,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "pirambu"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_poco_verde",
@@ -237,7 +256,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "pocoverde"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_riachao_do_dantas",
@@ -249,7 +269,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "riachaododantas"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_rosario_do_catete",
@@ -261,7 +282,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "rosariodocatete"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_sao_domingos",
@@ -273,7 +295,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "saodomingos"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_simao_dias",
@@ -285,7 +308,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "simaodias"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_siriri",
@@ -297,7 +321,8 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "siriri"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_telha",
@@ -309,6 +334,7 @@
       "type": "municipio_online",
       "urlUf": "se",
       "urlCity": "telha"
-    }
+    },
+    "gazetteScope": "city"
   }
 ]

@@ -8,7 +8,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.betim.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_campo_belo",
@@ -19,7 +20,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.campobelo.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_candeias",
@@ -30,7 +32,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.candeias.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_carmo_da_cachoeira",
@@ -41,7 +44,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.carmodacachoeira.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_carmo_do_rio_claro",
@@ -52,7 +56,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.carmodorioclaro.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_contagem",
@@ -63,7 +68,8 @@
     "config": {
       "type": "instar",
       "url": "https://portal.contagem.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_crucilandia",
@@ -74,7 +80,8 @@
     "config": {
       "type": "instar",
       "url": "http://www.prefeituradecrucilandia.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_itauna",
@@ -85,7 +92,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.itauna.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_januaria",
@@ -96,7 +104,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.januaria.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_juatuba",
@@ -107,7 +116,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.juatuba.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_nova_serrana",
@@ -118,7 +128,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.novaserrana.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_onca_de_pitangui",
@@ -129,7 +140,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.oncadopitangui.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_piranguinho",
@@ -140,7 +152,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.piranguinho.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_salinas",
@@ -151,7 +164,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.salinas.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_taiobeiras",
@@ -162,7 +176,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.taiobeiras.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_varzea_da_palma",
@@ -173,7 +188,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.varzeadapalma.mg.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ms_bela_vista",
@@ -184,7 +200,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.belavista.ms.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ms_costa_rica",
@@ -195,7 +212,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.costarica.ms.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ms_inocencia",
@@ -206,7 +224,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.inocencia.ms.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ms_maracaju",
@@ -217,7 +236,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.maracaju.ms.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mt_cotriguacu",
@@ -228,7 +248,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.cotriguacu.mt.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_antonio_olinto",
@@ -239,7 +260,8 @@
     "config": {
       "type": "instar",
       "url": "https://antonioolinto.pr.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_jaboti",
@@ -250,7 +272,8 @@
     "config": {
       "type": "instar",
       "url": "http://www.jaboti.pr.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_primeiro_de_maio",
@@ -261,7 +284,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.primeirodemaio.pr.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_santo_antonio_do_paraiso",
@@ -272,7 +296,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.pmsantoantoniodoparaiso.pr.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_sao_joao_do_triunfo",
@@ -283,7 +308,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.sjtriunfo.pr.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_sao_mateus_do_sul",
@@ -294,7 +320,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.saomateusdosul.pr.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rj_belford_roxo",
@@ -305,7 +332,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.belfordr.instartecnologia.com.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rj_cabo_frio",
@@ -316,7 +344,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.cabofrio.instartecnologia.com.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_cachoeira_do_sul",
@@ -327,7 +356,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.cachoeiradosul.rs.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_cerrito",
@@ -338,7 +368,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.cerrito.rs.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_sao_francisco_de_paula",
@@ -349,7 +380,8 @@
     "config": {
       "type": "instar",
       "url": "http://www.saofranciscodepaula.rs.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_vera_cruz",
@@ -360,7 +392,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.veracruz.rs.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_aguas_de_sao_pedro",
@@ -371,7 +404,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.aguasdesaopedro.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_alto_alegre",
@@ -382,7 +416,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.altoalegre.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_alvares_florence",
@@ -393,7 +428,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.alvaresflorence.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_andradina",
@@ -404,7 +440,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.andradina.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_aparecida",
@@ -415,7 +452,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.aparecida.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_aracariguama",
@@ -426,7 +464,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.aracariguama.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_arapei",
@@ -437,7 +476,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.arapei.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_avanhandava",
@@ -448,7 +488,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.avanhandava.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_barao_de_antonina",
@@ -459,7 +500,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.baraodeantonina.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_barbosa",
@@ -470,7 +512,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.barbosa.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_brejo_alegre",
@@ -481,7 +524,8 @@
     "config": {
       "type": "instar",
       "url": "http://www.brejoalegre.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_charqueada",
@@ -492,7 +536,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.charqueada.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_coronel_macedo",
@@ -503,7 +548,8 @@
     "config": {
       "type": "instar",
       "url": "http://www.coronelmacedo.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_dracena",
@@ -514,7 +560,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.dracena.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_eldorado",
@@ -525,7 +572,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.eldorado.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_floreal",
@@ -536,7 +584,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.floreal.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_general_salgado",
@@ -547,7 +596,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.generalsalgado.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_glicerio",
@@ -558,7 +608,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.glicerio.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_ibitinga",
@@ -569,7 +620,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.ibitinga.instarbr.com.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_iepe",
@@ -580,7 +632,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.iepe.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_igaracu_do_tiete",
@@ -591,7 +644,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.igaracudotiete.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_iracemapolis",
@@ -602,7 +656,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.iracemapolis.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_irapuru",
@@ -613,7 +668,8 @@
     "config": {
       "type": "instar",
       "url": "http://www.irapuru.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_itapirapua_paulista",
@@ -624,7 +680,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.itapirapuapaulista.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_itapolis",
@@ -635,7 +692,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.itapolis.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_itaporanga",
@@ -646,7 +704,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.itaporanga.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_itapui",
@@ -657,7 +716,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.itapui.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_itariri",
@@ -668,7 +728,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.itariri.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_itobi",
@@ -679,7 +740,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.itobi.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_jaboticabal",
@@ -690,7 +752,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.jaboticabal.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_joanopolis",
@@ -701,7 +764,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.joanopolis.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_joao_ramalho",
@@ -712,7 +776,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.joaoramalho.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_junqueiropolis",
@@ -723,7 +788,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.junqueiropolis.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_lagoinha",
@@ -734,7 +800,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.lagoinha.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_lavinia",
@@ -745,7 +812,8 @@
     "config": {
       "type": "instar",
       "url": "http://www.lavinia.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_luiziania",
@@ -756,7 +824,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.luiziania.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_macaubal",
@@ -767,7 +836,8 @@
     "config": {
       "type": "instar",
       "url": "https://macaubal.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_marilia",
@@ -778,7 +848,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.marilia.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_mira_estrela",
@@ -789,7 +860,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.miraestrela.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_mirante_do_paranapanema",
@@ -800,7 +872,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.mirantedoparanapanema.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_monte_alto_2017",
@@ -811,7 +884,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.montealto.instaridc.com.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_monte_mor",
@@ -822,7 +896,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.montemor.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_nhandeara",
@@ -833,7 +908,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.nhandeara.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_nova_castilho",
@@ -844,7 +920,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.novacastilho.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_nova_luzitania",
@@ -855,7 +932,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.novaluzitania.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_ourinhos",
@@ -866,7 +944,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.ourinhos.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_palmital",
@@ -877,7 +956,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.palmital.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_parisi",
@@ -888,7 +968,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.parisi.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_patrocinio_paulista",
@@ -899,7 +980,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.patrociniopaulista.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_paulinia",
@@ -910,7 +992,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.paulinia.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_penapolis",
@@ -921,7 +1004,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.penapolis.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_piedade",
@@ -932,7 +1016,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.piedade.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_pindorama",
@@ -943,7 +1028,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.pindorama.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_planalto",
@@ -954,7 +1040,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.planalto.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_poloni",
@@ -965,7 +1052,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.poloni.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_pontes_gestal",
@@ -976,7 +1064,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.pontesgestal.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_porangaba",
@@ -987,7 +1076,8 @@
     "config": {
       "type": "instar",
       "url": "http://www.porangaba.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_potirendaba",
@@ -998,7 +1088,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.potirendaba.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_pratania",
@@ -1009,7 +1100,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.pratania.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_presidente_epitacio",
@@ -1020,7 +1112,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.presidenteepitacio.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_santa_ernestina",
@@ -1031,7 +1124,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.santaernestina.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_santa_maria_da_serra",
@@ -1042,7 +1136,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.santamariadaserra.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_santo_andre",
@@ -1053,7 +1148,8 @@
     "config": {
       "type": "instar",
       "url": "https://web.santoandre.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_sao_manuel",
@@ -1064,7 +1160,8 @@
     "config": {
       "type": "instar",
       "url": "http://www.saomanuel.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_sao_pedro",
@@ -1075,7 +1172,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.saopedro.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_sao_roque",
@@ -1086,7 +1184,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.saoroque.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_sarutaia",
@@ -1097,7 +1196,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.sarutaia.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_sebastianopolis_do_sul",
@@ -1108,7 +1208,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.sebastianopolisdosul.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_tapirai",
@@ -1119,7 +1220,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.tapirai.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_taquaral",
@@ -1130,7 +1232,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.taquaral.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_terra_roxa",
@@ -1141,7 +1244,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.terraroxa.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_turiuba",
@@ -1152,7 +1256,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.turiuba.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_uniao_paulista",
@@ -1163,7 +1268,8 @@
     "config": {
       "type": "instar",
       "url": "https://uniaopaulista.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_valinhos",
@@ -1174,7 +1280,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.valinhos.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_valparaiso",
@@ -1185,7 +1292,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.valparaiso.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_vera_cruz",
@@ -1196,7 +1304,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.veracruz.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_vinhedo",
@@ -1207,7 +1316,8 @@
     "config": {
       "type": "instar",
       "url": "https://www.vinhedo.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_votorantim",
@@ -1218,6 +1328,7 @@
     "config": {
       "type": "instar",
       "url": "https://www.votorantim.sp.gov.br/portal/diario-oficial"
-    }
+    },
+    "gazetteScope": "city"
   }
 ]

@@ -8,7 +8,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.tartarugalzinho.ap.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ce_aurora",
@@ -19,7 +20,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.aurora.ce.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ce_caninde",
@@ -30,7 +32,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.caninde.ce.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ce_caririacu",
@@ -41,7 +44,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.caririacu.ce.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ce_caucaia",
@@ -52,7 +56,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.caucaia.ce.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ce_cedro",
@@ -63,7 +68,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.cedro.ce.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ce_crateus",
@@ -74,7 +80,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.crateus.ce.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ce_general_sampaio",
@@ -85,7 +92,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.general.ce.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ce_hidrolandia",
@@ -96,7 +104,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.hidrolandia.ce.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ce_itaitinga",
@@ -107,7 +116,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.itaitinga.ce.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ce_jaguaribe",
@@ -118,7 +128,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.jaguaribe.ce.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ce_juazeiro_do_norte",
@@ -129,7 +140,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.juazeiro.ce.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_anajatuba",
@@ -140,7 +152,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.anajatuba.ma.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_bom_jardim",
@@ -151,7 +164,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.bom.ma.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_bom_lugar",
@@ -162,7 +176,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.bom.ma.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_buriticupu",
@@ -173,7 +188,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.buriticupu.ma.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_itapecuru_mirim",
@@ -184,7 +200,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.itapecuru.ma.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_maracacume",
@@ -195,7 +212,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.maracacume.ma.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pa_garrafao_do_norte",
@@ -206,7 +224,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.garrafao.pa.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pb_jacarau",
@@ -217,7 +236,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.jacarau.pb.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pb_jerico",
@@ -228,7 +248,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.jerico.pb.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pb_marizopolis",
@@ -239,7 +260,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.marizopolis.pb.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pb_piloezinhos",
@@ -250,7 +272,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.piloezinhos.pb.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pb_riachao",
@@ -261,7 +284,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.riachao.pb.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pb_sao_jose_dos_ramos",
@@ -272,7 +296,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.sao.pb.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pb_serraria",
@@ -283,7 +308,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.serraria.pb.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pb_sertaozinho",
@@ -294,7 +320,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.sertaozinho.pb.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pb_tacima",
@@ -305,7 +332,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.tacima.pb.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pe_moreilandia",
@@ -316,7 +344,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.moreilandia.pe.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rn_pau_dos_ferros_2022",
@@ -327,7 +356,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.pau.rn.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rn_santa_cruz",
@@ -338,7 +368,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.santa.rn.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rn_sao_francisco_do_oeste",
@@ -349,7 +380,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.sao.rn.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rn_taboleiro_grande",
@@ -360,7 +392,8 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.taboleiro.rn.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "to_axixa_do_tocantins",
@@ -371,6 +404,7 @@
     "config": {
       "type": "adiarios_v1",
       "baseUrl": "https://www.axixa.to.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   }
 ]

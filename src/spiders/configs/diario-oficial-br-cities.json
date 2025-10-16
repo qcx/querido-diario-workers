@@ -8,7 +8,8 @@
     "config": {
       "type": "diario_oficial_br",
       "baseUrl": "https://diariooficial.aguiarnopolis.to.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "to_campos_lindos",
@@ -19,7 +20,8 @@
     "config": {
       "type": "diario_oficial_br",
       "baseUrl": "https://camposlindos.diariooficialbr.com.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "to_caseara",
@@ -30,7 +32,8 @@
     "config": {
       "type": "diario_oficial_br",
       "baseUrl": "https://caseara.diariooficialbr.com.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "to_goiatins",
@@ -41,7 +44,8 @@
     "config": {
       "type": "diario_oficial_br",
       "baseUrl": "https://goiatins.diariooficialbr.com.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "to_miracema_do_tocantins",
@@ -52,7 +56,8 @@
     "config": {
       "type": "diario_oficial_br",
       "baseUrl": "https://miracema.diariooficialbr.com.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "to_muricilandia",
@@ -63,7 +68,8 @@
     "config": {
       "type": "diario_oficial_br",
       "baseUrl": "https://muricilandia.diariooficialbr.com.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "to_peixe",
@@ -74,7 +80,8 @@
     "config": {
       "type": "diario_oficial_br",
       "baseUrl": "https://peixe.diariooficialbr.com.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "to_santa_fe_do_araguaia",
@@ -85,7 +92,8 @@
     "config": {
       "type": "diario_oficial_br",
       "baseUrl": "https://santafedoaraguaia.diariooficialbr.com.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "to_talisma",
@@ -96,7 +104,8 @@
     "config": {
       "type": "diario_oficial_br",
       "baseUrl": "https://talisma.diariooficialbr.com.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "to_tocantinia",
@@ -107,6 +116,7 @@
     "config": {
       "type": "diario_oficial_br",
       "baseUrl": "https://tocantinia.diariooficialbr.com.br"
-    }
+    },
+    "gazetteScope": "city"
   }
 ]

@@ -1,4 +1,9 @@
 /**
+ * Gazette scope - defines whether a gazette is city-specific or state-level
+ */
+export type GazetteScope = 'city' | 'state';
+
+/**
  * Represents a gazette (official diary) publication
  */
 export interface Gazette {

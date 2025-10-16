@@ -11,7 +11,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ADAMANTINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_adolfo",
@@ -25,7 +26,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ADOLFO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_agua_",
@@ -39,7 +41,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AGUAÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_agudos",
@@ -53,7 +56,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AGUDOS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_alambari",
@@ -67,7 +71,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ALAMBARI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_alfredo_marcondes",
@@ -81,7 +86,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ALFREDO MARCONDES"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_altair",
@@ -95,7 +101,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ALTAIR"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_altin_polis",
@@ -109,7 +116,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ALTINÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_alum_nio",
@@ -123,7 +131,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ALUMÍNIO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp__lvaro_de_carvalho",
@@ -137,7 +146,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ÁLVARO DE CARVALHO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_alvinl_ndia",
@@ -151,7 +161,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ALVINLÂNDIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_americana",
@@ -165,7 +176,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AMERICANA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_am_rico_de_campos",
@@ -179,7 +191,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AMÉRICO DE CAMPOS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_anal_ndia",
@@ -193,7 +206,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ANALÂNDIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_andradina",
@@ -207,7 +221,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ANDRADINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_angatuba",
@@ -221,7 +236,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ANGATUBA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_aparecida",
@@ -235,7 +251,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "APARECIDA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_aparecida_d_oeste",
@@ -249,7 +266,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "APARECIDA D'OESTE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_apia_",
@@ -263,7 +281,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "APIAÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ara_ariguama",
@@ -277,7 +296,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARAÇARIGUAMA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ara_oiaba_da_serra",
@@ -291,7 +311,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARAÇOIABA DA SERRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_aramina",
@@ -305,7 +326,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARAMINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_arandu",
@@ -319,7 +341,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARANDU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_arape_",
@@ -333,7 +356,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARAPEÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_araraquara",
@@ -347,7 +371,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARARAQUARA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_arco_ris",
@@ -361,7 +386,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARCO-ÍRIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_arealva",
@@ -375,7 +401,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AREALVA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_areias",
@@ -389,7 +416,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AREIAS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_arei_polis",
@@ -403,7 +431,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AREIÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_aruj_",
@@ -417,7 +446,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARUJÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_assis",
@@ -431,7 +461,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ASSIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_assist_ncia_m_dica",
@@ -445,7 +476,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ASSISTÊNCIA MÉDICA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_atibaia",
@@ -459,7 +491,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ATIBAIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_auriflama",
@@ -473,7 +506,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AURIFLAMA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_avanhandava",
@@ -487,7 +521,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AVANHANDAVA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_avar_",
@@ -501,7 +536,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AVARÉ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_balbinos",
@@ -515,7 +551,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BALBINOS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_b_lsamo",
@@ -529,7 +566,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BÁLSAMO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bananal",
@@ -543,7 +581,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BANANAL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bar_o_de_antonina",
@@ -557,7 +596,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BARÃO DE ANTONINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_barbosa",
@@ -571,7 +611,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BARBOSA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_barra_bonita",
@@ -585,7 +626,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BARRA BONITA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_barra_do_chap_u",
@@ -599,7 +641,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BARRA DO CHAPÉU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_barrinha",
@@ -613,7 +656,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BARRINHA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_barueri",
@@ -627,7 +671,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BARUERI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bastos",
@@ -641,7 +686,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BASTOS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_batatais",
@@ -655,7 +701,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BATATAIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bauru",
@@ -669,7 +716,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BAURU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bebedouro",
@@ -683,7 +731,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BEBEDOURO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bernardino_de_campos",
@@ -697,7 +746,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BERNARDINO DE CAMPOS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bertioga",
@@ -711,7 +761,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BERTIOGA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bilac",
@@ -725,7 +776,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BILAC"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_birigui",
@@ -739,7 +791,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BIRIGUI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_biritiba_mirim",
@@ -753,7 +806,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BIRITIBA-MIRIM"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bocaina",
@@ -767,7 +821,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BOCAINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_boituva",
@@ -781,7 +836,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BOITUVA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bom_jesus_dos_perd_es",
@@ -795,7 +851,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BOM JESUS DOS PERDÕES"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bom_sucesso_de_itarar_",
@@ -809,7 +866,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BOM SUCESSO DE ITARARÉ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bombeiros_do_m_dio_tiet_",
@@ -823,7 +881,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BOMBEIROS DO MÉDIO TIETÊ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bor_",
@@ -837,7 +896,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BORÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_borborema",
@@ -851,7 +911,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BORBOREMA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_borebi",
@@ -865,7 +926,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BOREBI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bragan_a_paulista",
@@ -879,7 +941,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BRAGANÇA PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_bra_na",
@@ -893,7 +956,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BRAÚNA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_brodowski",
@@ -907,7 +971,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BRODOWSKI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_brotas",
@@ -921,7 +986,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BROTAS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_buri",
@@ -935,7 +1001,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BURI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_buritama",
@@ -949,7 +1016,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BURITAMA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_buritizal",
@@ -963,7 +1031,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BURITIZAL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cabr_lia_paulista",
@@ -977,7 +1046,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CABRÁLIA PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cabre_va",
@@ -991,7 +1061,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CABREÚVA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cachoeira_paulista",
@@ -1005,7 +1076,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CACHOEIRA PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_caconde",
@@ -1019,7 +1091,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CACONDE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_caiabu",
@@ -1033,7 +1106,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAIABU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_caieiras",
@@ -1047,7 +1121,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAIEIRAS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_caiu_",
@@ -1061,7 +1136,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAIUÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cajamar",
@@ -1075,7 +1151,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAJAMAR"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cajati",
@@ -1089,7 +1166,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAJATI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cajobi",
@@ -1103,7 +1181,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAJOBI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cajuru",
@@ -1117,7 +1196,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAJURU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_campina_do_monte_alegre",
@@ -1131,7 +1211,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAMPINA DO MONTE ALEGRE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_campo_limpo_paulista",
@@ -1145,7 +1226,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAMPO LIMPO PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_campos_do_jord_o",
@@ -1159,7 +1241,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAMPOS DO JORDÃO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_campos_novos_paulista",
@@ -1173,7 +1256,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAMPOS NOVOS PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_canas",
@@ -1187,7 +1271,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CANAS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_c_ndido_mota",
@@ -1201,7 +1286,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CÂNDIDO MOTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_canitar",
@@ -1215,7 +1301,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CANITAR"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cap_o_bonito",
@@ -1229,7 +1316,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAPÃO BONITO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_capela_do_alto",
@@ -1243,7 +1331,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAPELA DO ALTO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_capivari",
@@ -1257,7 +1346,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAPIVARI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_caraguatatuba",
@@ -1271,7 +1361,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CARAGUATATUBA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_carapicu_ba",
@@ -1285,7 +1376,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CARAPICUÍBA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_casa_branca",
@@ -1299,7 +1391,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CASA BRANCA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_c_ssia_dos_coqueiros",
@@ -1313,7 +1406,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CÁSSIA DOS COQUEIROS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_castilho",
@@ -1327,7 +1421,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CASTILHO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_catigu_",
@@ -1341,7 +1436,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CATIGUÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cedral",
@@ -1355,7 +1451,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CEDRAL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cerqueira_c_sar",
@@ -1369,7 +1466,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CERQUEIRA CÉSAR"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cerquilho",
@@ -1383,7 +1481,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CERQUILHO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ces_rio_lange",
@@ -1397,7 +1496,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CESÁRIO LANGE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_charqueada",
@@ -1411,7 +1511,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CHARQUEADA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_chavantes",
@@ -1425,7 +1526,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CHAVANTES"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_clementina",
@@ -1439,7 +1541,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CLEMENTINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_colina",
@@ -1453,7 +1556,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "COLINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_col_mbia",
@@ -1467,7 +1571,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "COLÔMBIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_conchal",
@@ -1481,7 +1586,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CONCHAL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_conchas",
@@ -1495,7 +1601,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CONCHAS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_corumbata_",
@@ -1509,7 +1616,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CORUMBATAÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cosm_polis",
@@ -1523,7 +1631,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "COSMÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cosmorama",
@@ -1537,7 +1646,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "COSMORAMA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cotia",
@@ -1551,7 +1661,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "COTIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cravinhos",
@@ -1565,7 +1676,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CRAVINHOS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cristais_paulista",
@@ -1579,7 +1691,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CRISTAIS PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cruz_lia",
@@ -1593,7 +1706,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CRUZÁLIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cruzeiro",
@@ -1607,7 +1721,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CRUZEIRO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_cubat_o",
@@ -1621,7 +1736,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CUBATÃO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_descalvado",
@@ -1635,7 +1751,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DESCALVADO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_desenvolvimento_dos_munic_pios_do_alto_tiet_",
@@ -1649,7 +1766,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DESENVOLVIMENTO DOS MUNICÍPIOS DO ALTO TIETÊ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_diadema",
@@ -1663,7 +1781,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DIADEMA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_dirce_reis",
@@ -1677,7 +1796,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DIRCE REIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_divinol_ndia",
@@ -1691,7 +1811,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DIVINOLÂNDIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_dobrada",
@@ -1705,7 +1826,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DOBRADA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_dolcin_polis",
@@ -1719,7 +1841,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DOLCINÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_duartina",
@@ -1733,7 +1856,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DUARTINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_dumont",
@@ -1747,7 +1871,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DUMONT"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_embu",
@@ -1761,7 +1886,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "EMBU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_embu_gua_u",
@@ -1775,7 +1901,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "EMBU-GUAÇU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_engenheiro_coelho",
@@ -1789,7 +1916,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ENGENHEIRO COELHO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_esp_rito_santo_do_turvo",
@@ -1803,7 +1931,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ESPÍRITO SANTO DO TURVO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_estiva_gerbi",
@@ -1817,7 +1946,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ESTIVA GERBI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_estrela_d_oeste",
@@ -1831,7 +1961,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ESTRELA D'OESTE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_fartura",
@@ -1845,7 +1976,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FARTURA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_fernando_prestes",
@@ -1859,7 +1991,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FERNANDO PRESTES"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_fernand_polis",
@@ -1873,7 +2006,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FERNANDÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_fern_o",
@@ -1887,7 +2021,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FERNÃO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ferraz_de_vasconcelos",
@@ -1901,7 +2036,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FERRAZ DE VASCONCELOS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_fieb_funda_o_instituto_de_educa_o_de_barueri",
@@ -1915,7 +2051,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FIEB - FUNDAÇÃO INSTITUTO DE EDUCAÇÃO DE BARUERI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_floreal",
@@ -1929,7 +2066,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FLOREAL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_flor_nea",
@@ -1943,7 +2081,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FLORÍNEA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_franca",
@@ -1957,7 +2096,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FRANCA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_francisco_morato",
@@ -1971,7 +2111,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FRANCISCO MORATO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_franco_da_rocha",
@@ -1985,7 +2126,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FRANCO DA ROCHA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_funda_o_indaiatubana_de_educa_o_e_cultura",
@@ -1999,7 +2141,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FUNDAÇÃO INDAIATUBANA DE EDUCAÇÃO E CULTURA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_gabriel_monteiro",
@@ -2013,7 +2156,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GABRIEL MONTEIRO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_g_lia",
@@ -2027,7 +2171,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GÁLIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_gar_a",
@@ -2041,7 +2186,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GARÇA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_general_salgado",
@@ -2055,7 +2201,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GENERAL SALGADO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guai_ara",
@@ -2069,7 +2216,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUAIÇARA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guaimb_",
@@ -2083,7 +2231,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUAIMBÉ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_gua_ra",
@@ -2097,7 +2246,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUAÍRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guapia_u",
@@ -2111,7 +2261,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUAPIAÇU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guapiara",
@@ -2125,7 +2276,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUAPIARA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guar_",
@@ -2139,7 +2291,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guara_a_",
@@ -2153,7 +2306,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARAÇAÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guaraci",
@@ -2167,7 +2321,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARACI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guarani_d_oeste",
@@ -2181,7 +2336,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARANI D'OESTE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guarant_",
@@ -2195,7 +2351,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARANTÃ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guararapes",
@@ -2209,7 +2366,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARARAPES"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guararema",
@@ -2223,7 +2381,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARAREMA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guaratinguet_",
@@ -2237,7 +2396,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARATINGUETÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guare_",
@@ -2251,7 +2411,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUAREÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guariba",
@@ -2265,7 +2426,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARIBA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guaruj_",
@@ -2279,7 +2441,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARUJÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guarulhos",
@@ -2293,7 +2456,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARULHOS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guatapar_",
@@ -2307,7 +2471,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUATAPARÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_guzol_ndia",
@@ -2321,7 +2486,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUZOLÂNDIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_hercul_ndia",
@@ -2335,7 +2501,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "HERCULÂNDIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_holambra",
@@ -2349,7 +2516,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "HOLAMBRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_hortol_ndia",
@@ -2363,7 +2531,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "HORTOLÂNDIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_iacri",
@@ -2377,7 +2546,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IACRI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_iaras",
@@ -2391,7 +2561,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IARAS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ibir_",
@@ -2405,7 +2576,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IBIRÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ibirarema",
@@ -2419,7 +2591,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IBIRAREMA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ibitinga",
@@ -2433,7 +2606,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IBITINGA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ibi_na",
@@ -2447,7 +2621,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IBIÚNA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ic_m",
@@ -2461,7 +2636,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ICÉM"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_iep_",
@@ -2475,7 +2651,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IEPÊ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_igara_u_do_tiet_",
@@ -2489,7 +2666,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IGARAÇU DO TIETÊ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_igarapava",
@@ -2503,7 +2681,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IGARAPAVA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_iguape",
@@ -2517,7 +2696,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IGUAPE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ilha_comprida",
@@ -2531,7 +2711,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ILHA COMPRIDA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ilhabela",
@@ -2545,7 +2726,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ILHABELA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_indaiatuba",
@@ -2559,7 +2741,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "INDAIATUBA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_instituto_de_previd_ncia_e_assist_ncia_social_de_pirapora_do_bom_jesus",
@@ -2573,7 +2756,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "INSTITUTO DE PREVIDÊNCIA E ASSISTÊNCIA SOCIAL DE PIRAPORA DO BOM JESUS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_instituto_de_previd_ncia_municipal_de_caieiras_iprem",
@@ -2587,7 +2771,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "INSTITUTO DE PREVIDÊNCIA MUNICIPAL DE CAIEIRAS - IPREM"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_in_bia_paulista",
@@ -2601,7 +2786,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "INÚBIA PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ipaussu",
@@ -2615,7 +2801,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IPAUÇU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_iper_",
@@ -2629,7 +2816,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IPERÓ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ipe_na",
@@ -2643,7 +2831,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IPEÚNA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_iporanga",
@@ -2657,7 +2846,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IPORANGA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_iracem_polis",
@@ -2671,7 +2861,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IRACEMÁPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_irapuru",
@@ -2685,7 +2876,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IRAPURU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itaber_",
@@ -2699,7 +2891,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITABERÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ita_",
@@ -2713,7 +2906,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itajobi",
@@ -2727,7 +2921,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAJOBI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itaju",
@@ -2741,7 +2936,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAJU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itanha_m",
@@ -2755,7 +2951,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITANHAÉM"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itaoca",
@@ -2769,7 +2966,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAOCA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itapecerica_da_serra",
@@ -2783,7 +2981,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPECERICA DA SERRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itapetininga",
@@ -2797,7 +2996,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPETININGA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itapeva",
@@ -2811,7 +3011,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPEVA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itapevi",
@@ -2825,7 +3026,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPEVI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itapira",
@@ -2839,7 +3041,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPIRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itapirapu_paulista",
@@ -2853,7 +3056,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPIRAPUÃ PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_it_polis",
@@ -2867,7 +3071,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITÁPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itaporanga",
@@ -2881,7 +3086,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPORANGA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itapu_",
@@ -2895,7 +3101,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPUÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itapura",
@@ -2909,7 +3116,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPURA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itaquaquecetuba",
@@ -2923,7 +3131,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAQUAQUECETUBA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itarar_",
@@ -2937,7 +3146,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITARARÉ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itariri",
@@ -2951,7 +3161,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITARIRI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itatiba",
@@ -2965,7 +3176,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITATIBA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itirapina",
@@ -2979,7 +3191,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITIRAPINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itirapu_",
@@ -2993,7 +3206,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITIRAPUÃ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itobi",
@@ -3007,7 +3221,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITOBI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_itu",
@@ -3021,7 +3236,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ituverava",
@@ -3035,7 +3251,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITUVERAVA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_jaboticabal",
@@ -3049,7 +3266,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JABOTICABAL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_jacare_",
@@ -3063,7 +3281,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JACAREÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_jaci",
@@ -3077,7 +3296,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JACI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_jales",
@@ -3091,7 +3311,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JALES"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_jambeiro",
@@ -3105,7 +3326,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JAMBEIRO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_jandira",
@@ -3119,7 +3341,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JANDIRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_jardin_polis",
@@ -3133,7 +3356,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JARDINÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_jarinu",
@@ -3147,7 +3371,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JARINU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_jau",
@@ -3161,7 +3386,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JAHU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_jeriquara",
@@ -3175,7 +3401,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JERIQUARA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_joan_polis",
@@ -3189,7 +3416,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JOANÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_j_lio_mesquita",
@@ -3203,7 +3431,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JÚLIO MESQUITA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_jundia_",
@@ -3217,7 +3446,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JUNDIAÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_juqui_",
@@ -3231,7 +3461,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JUQUIÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_juquitiba",
@@ -3245,7 +3476,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JUQUITIBA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_lagoinha",
@@ -3259,7 +3491,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LAGOINHA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_laranjal_paulista",
@@ -3273,7 +3506,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LARANJAL PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_lavrinhas",
@@ -3287,7 +3521,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LAVRINHAS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_len_is_paulista",
@@ -3301,7 +3536,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LENÇÓIS PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_lindoia",
@@ -3315,7 +3551,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LINDOIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_lins",
@@ -3329,7 +3566,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LINS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_lorena",
@@ -3343,7 +3581,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LORENA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_louveira",
@@ -3357,7 +3596,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LOUVEIRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_luc_lia",
@@ -3371,7 +3611,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LUCÉLIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_lucian_polis",
@@ -3385,7 +3626,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LUCIANÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_luiz_ant_nio",
@@ -3399,7 +3641,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LUIZ ANTÔNIO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_luizi_nia",
@@ -3413,7 +3656,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LUIZIÂNIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_lup_rcio",
@@ -3427,7 +3671,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LUPÉRCIO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_lut_cia",
@@ -3441,7 +3686,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LUTÉCIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_macatuba",
@@ -3455,7 +3701,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MACATUBA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mairinque",
@@ -3469,7 +3716,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MAIRINQUE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mairipor_",
@@ -3483,7 +3731,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MAIRIPORÃ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_manduri",
@@ -3497,7 +3746,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MANDURI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_maraca_",
@@ -3511,7 +3761,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MARACAÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_marin_polis",
@@ -3525,7 +3776,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MARINÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_martin_polis",
@@ -3539,7 +3791,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MARTINÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mat_o",
@@ -3553,7 +3806,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MATÃO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mau_",
@@ -3567,7 +3821,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MAUÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mendon_a",
@@ -3581,7 +3836,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MENDONÇA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_meridiano",
@@ -3595,7 +3851,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MERIDIANO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_miguel_polis",
@@ -3609,7 +3866,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MIGUELÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mineiros_do_tiet_",
@@ -3623,7 +3881,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MINEIROS DO TIETÊ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mirand_polis",
@@ -3637,7 +3896,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MIRANDÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mirante_do_paranapanema",
@@ -3651,7 +3911,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MIRANTE DO PARANAPANEMA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mirassol_ndia",
@@ -3665,7 +3926,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MIRASSOLÂNDIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mococa",
@@ -3679,7 +3941,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MOCOCA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mogi_das_cruzes",
@@ -3693,7 +3956,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MOGI DAS CRUZES"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mogi_gua_u",
@@ -3707,7 +3971,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MOGI GUAÇU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mogi_mirim",
@@ -3721,7 +3986,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MOGI MIRIM"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mombuca",
@@ -3735,7 +4001,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MOMBUCA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_mon_es",
@@ -3749,7 +4016,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MONÇÕES"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_monte_alegre_do_sul",
@@ -3763,7 +4031,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MONTE ALEGRE DO SUL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_monte_alto",
@@ -3777,7 +4046,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MONTE ALTO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_monte_apraz_vel",
@@ -3791,7 +4061,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MONTE APRAZÍVEL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_monte_azul_paulista",
@@ -3805,7 +4076,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MONTE AZUL PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_monte_mor",
@@ -3819,7 +4091,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MONTE MOR"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_monteiro_lobato",
@@ -3833,7 +4106,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MONTEIRO LOBATO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_morro_agudo",
@@ -3847,7 +4121,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MORRO AGUDO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_murutinga_do_sul",
@@ -3861,7 +4136,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MURUTINGA DO SUL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_natividade_da_serra",
@@ -3875,7 +4151,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NATIVIDADE DA SERRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_neves_paulista",
@@ -3889,7 +4166,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NEVES PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_nhandeara",
@@ -3903,7 +4181,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NHANDEARA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_nipo_",
@@ -3917,7 +4196,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NIPOÃ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_nova_alian_a",
@@ -3931,7 +4211,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NOVA ALIANÇA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_nova_campina",
@@ -3945,7 +4226,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NOVA CAMPINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_nova_cana_paulista",
@@ -3959,7 +4241,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NOVA CANAÃ PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_nova_independ_ncia",
@@ -3973,7 +4256,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NOVA INDEPENDÊNCIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_nova_odessa",
@@ -3987,7 +4271,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NOVA ODESSA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_novais",
@@ -4001,7 +4286,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NOVAIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_novo_horizonte",
@@ -4015,7 +4301,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NOVO HORIZONTE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ocau_u",
@@ -4029,7 +4316,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "OCAUÇU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp__leo",
@@ -4043,7 +4331,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ÓLEO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ol_mpia",
@@ -4057,7 +4346,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "OLÍMPIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_onda_verde",
@@ -4071,7 +4361,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ONDA VERDE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_oriente",
@@ -4085,7 +4376,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ORIENTE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_osasco",
@@ -4099,7 +4391,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "OSASCO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_oscar_bressane",
@@ -4113,7 +4406,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "OSCAR BRESSANE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_osvaldo_cruz",
@@ -4127,7 +4421,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "OSVALDO CRUZ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ourinhos",
@@ -4141,7 +4436,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "OURINHOS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ouroeste",
@@ -4155,7 +4451,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "OUROESTE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_palmares_paulista",
@@ -4169,7 +4466,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PALMARES PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_palmeira_d_oeste",
@@ -4183,7 +4481,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PALMEIRA D'OESTE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_palmital",
@@ -4197,7 +4496,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PALMITAL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_panorama",
@@ -4211,7 +4511,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PANORAMA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_paragua_u_paulista",
@@ -4225,7 +4526,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PARAGUAÇU PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_paraibuna",
@@ -4239,7 +4541,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PARAIBUNA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_para_so",
@@ -4253,7 +4556,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PARAÍSO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_parapu_",
@@ -4267,7 +4571,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PARAPUÃ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pardinho",
@@ -4281,7 +4586,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PARDINHO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pariquera_a_u",
@@ -4295,7 +4601,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PARIQUERA-AÇU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_parisi",
@@ -4309,7 +4616,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PARISI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_patroc_nio_paulista",
@@ -4323,7 +4631,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PATROCÍNIO PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_paulic_ia",
@@ -4337,7 +4646,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PAULICÉIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_paul_nia",
@@ -4351,7 +4661,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PAULÍNIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_paulist_nia",
@@ -4365,7 +4676,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PAULISTÂNIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pedra_bela",
@@ -4379,7 +4691,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PEDRA BELA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pedran_polis",
@@ -4393,7 +4706,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PEDRANÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pedregulho",
@@ -4407,7 +4721,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PEDREGULHO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pedrinhas_paulista",
@@ -4421,7 +4736,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PEDRINHAS PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pen_polis",
@@ -4435,7 +4751,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PENÁPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pereira_barreto",
@@ -4449,7 +4766,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PEREIRA BARRETO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pereiras",
@@ -4463,7 +4781,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PEREIRAS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_peru_be",
@@ -4477,7 +4796,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PERUÍBE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_piacatu",
@@ -4491,7 +4811,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIACATU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_piedade",
@@ -4505,7 +4826,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIEDADE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pilar_do_sul",
@@ -4519,7 +4841,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PILAR DO SUL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pindamonhangaba",
@@ -4533,7 +4856,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PINDAMONHANGABA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pinhalzinho",
@@ -4547,7 +4871,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PINHALZINHO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_piquerobi",
@@ -4561,7 +4886,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIQUEROBI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_piquete",
@@ -4575,7 +4901,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIQUETE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_piracicaba",
@@ -4589,7 +4916,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIRACICABA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_piraju",
@@ -4603,7 +4931,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIRAJU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_piraju_",
@@ -4617,7 +4946,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIRAJUÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pirangi",
@@ -4631,7 +4961,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIRANGI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pirapora_do_bom_jesus",
@@ -4645,7 +4976,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIRAPORA DO BOM JESUS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pirassununga",
@@ -4659,7 +4991,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIRASSUNUNGA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_piratininga",
@@ -4673,7 +5006,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIRATININGA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pitangueiras",
@@ -4687,7 +5021,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PITANGUEIRAS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_planalto",
@@ -4701,7 +5036,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PLANALTO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_platina",
@@ -4715,7 +5051,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PLATINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_po_",
@@ -4729,7 +5066,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "POÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_poloni",
@@ -4743,7 +5081,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "POLONI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pompeia",
@@ -4757,7 +5096,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "POMPEIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ponga_",
@@ -4771,7 +5111,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PONGAÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pontalinda",
@@ -4785,7 +5126,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PONTALINDA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_pontes_gestal",
@@ -4799,7 +5141,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PONTES GESTAL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_populina",
@@ -4813,7 +5156,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "POPULINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_porangaba",
@@ -4827,7 +5171,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PORANGABA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_porto_feliz",
@@ -4841,7 +5186,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PORTO FELIZ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_porto_ferreira",
@@ -4855,7 +5201,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PORTO FERREIRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_potim",
@@ -4869,7 +5216,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "POTIM"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_praia_grande",
@@ -4883,7 +5231,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PRAIA GRANDE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_prat_nia",
@@ -4897,7 +5246,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PRATÂNIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_presidente_alves",
@@ -4911,7 +5261,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PRESIDENTE ALVES"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_presidente_bernardes",
@@ -4925,7 +5276,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PRESIDENTE BERNARDES"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_presidente_epit_cio",
@@ -4939,7 +5291,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PRESIDENTE EPITÁCIO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_presidente_prudente",
@@ -4953,7 +5306,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PRESIDENTE PRUDENTE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_quadra",
@@ -4967,7 +5321,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "QUADRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_quat_",
@@ -4981,7 +5336,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "QUATÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_queiroz",
@@ -4995,7 +5351,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "QUEIROZ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_queluz",
@@ -5009,7 +5366,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "QUELUZ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_quintana",
@@ -5023,7 +5381,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "QUINTANA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_rafard",
@@ -5037,7 +5396,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RAFARD"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_rancharia",
@@ -5051,7 +5411,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RANCHARIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_regente_feij_",
@@ -5065,7 +5426,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "REGENTE FEIJÓ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_regin_polis",
@@ -5079,7 +5441,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "REGINÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_registro",
@@ -5093,7 +5456,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "REGISTRO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_restinga",
@@ -5107,7 +5471,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RESTINGA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ribeira",
@@ -5121,7 +5486,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIBEIRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ribeir_o_branco",
@@ -5135,7 +5501,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIBEIRÃO BRANCO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ribeir_o_corrente",
@@ -5149,7 +5516,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIBEIRÃO CORRENTE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ribeir_o_do_sul",
@@ -5163,7 +5531,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIBEIRÃO DO SUL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ribeir_o_grande",
@@ -5177,7 +5546,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIBEIRÃO GRANDE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ribeir_o_pires",
@@ -5191,7 +5561,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIBEIRÃO PIRES"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ribeir_o_preto",
@@ -5205,7 +5576,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIBEIRÃO PRETO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_rifaina",
@@ -5219,7 +5591,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIFAINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_rinc_o",
@@ -5233,7 +5606,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RINCÃO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_rin_polis",
@@ -5247,7 +5621,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RINÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_rio_claro",
@@ -5261,7 +5636,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIO CLARO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_rio_das_pedras",
@@ -5275,7 +5651,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIO DAS PEDRAS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_rio_grande_da_serra",
@@ -5289,7 +5666,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIO GRANDE DA SERRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_riol_ndia",
@@ -5303,7 +5681,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIOLÂNDIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_roseira",
@@ -5317,7 +5696,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ROSEIRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_rubi_cea",
@@ -5331,7 +5711,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RUBIÁCEA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_rubineia",
@@ -5345,7 +5726,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RUBINEIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_sabino",
@@ -5359,7 +5741,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SABINO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_sales_oliveira",
@@ -5373,7 +5756,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SALES OLIVEIRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_sales_polis",
@@ -5387,7 +5771,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SALESÓPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_salmour_o",
@@ -5401,7 +5786,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SALMOURÃO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_salto",
@@ -5415,7 +5801,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SALTO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_salto_de_pirapora",
@@ -5429,7 +5816,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SALTO DE PIRAPORA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_salto_grande",
@@ -5443,7 +5831,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SALTO GRANDE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_ad_lia",
@@ -5457,7 +5846,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA ADÉLIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_b_rbara_d_oeste",
@@ -5471,7 +5861,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA BÁRBARA D'OESTE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_clara_d_oeste",
@@ -5485,7 +5876,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA CLARA D'OESTE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_cruz_da_esperan_a",
@@ -5499,7 +5891,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA CRUZ DA ESPERANÇA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_cruz_das_palmeiras",
@@ -5513,7 +5906,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA CRUZ DAS PALMEIRAS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_cruz_do_rio_pardo",
@@ -5527,7 +5921,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA CRUZ DO RIO PARDO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_ernestina",
@@ -5541,7 +5936,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA ERNESTINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_f_do_sul",
@@ -5555,7 +5951,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA FÉ DO SUL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_gertrudes",
@@ -5569,7 +5966,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA GERTRUDES"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_isabel",
@@ -5583,7 +5981,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA ISABEL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_l_cia",
@@ -5597,7 +5996,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA LÚCIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_maria_da_serra",
@@ -5611,7 +6011,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA MARIA DA SERRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_rita_d_oeste",
@@ -5625,7 +6026,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA RITA D'OESTE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_rita_do_passa_quatro",
@@ -5639,7 +6041,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA RITA DO PASSA QUATRO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santa_salete",
@@ -5653,7 +6056,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA SALETE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santana_da_ponte_pensa",
@@ -5667,7 +6071,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTANA DA PONTE PENSA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santana_de_parna_ba",
@@ -5681,7 +6086,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTANA DE PARNAÍBA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santo_ant_nio_de_posse",
@@ -5695,7 +6101,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTO ANTÔNIO DE POSSE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santo_ant_nio_do_aracangu_",
@@ -5709,7 +6116,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTO ANTÔNIO DO ARACANGUÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santo_ant_nio_do_jardim",
@@ -5723,7 +6131,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTO ANTÔNIO DO JARDIM"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_santo_ant_nio_do_pinhal",
@@ -5737,7 +6146,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTO ANTÔNIO DO PINHAL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_bento_do_sapuca_",
@@ -5751,7 +6161,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO BENTO DO SAPUCAÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_bernardo_do_campo",
@@ -5765,7 +6176,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO BERNARDO DO CAMPO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_caetano_do_sul",
@@ -5779,7 +6191,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO CAETANO DO SUL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_carlos",
@@ -5793,7 +6206,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO CARLOS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_francisco",
@@ -5807,7 +6221,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO FRANCISCO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_jo_o_da_boa_vista",
@@ -5821,7 +6236,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO JOÃO DA BOA VISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_jo_o_das_duas_pontes",
@@ -5835,7 +6251,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO JOÃO DAS DUAS PONTES"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_jo_o_de_iracema",
@@ -5849,7 +6266,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO JOÃO DE IRACEMA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_joaquim_da_barra",
@@ -5863,7 +6281,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO JOAQUIM DA BARRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_jos_da_bela_vista",
@@ -5877,7 +6296,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO JOSÉ DA BELA VISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_jos_do_barreiro",
@@ -5891,7 +6311,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO JOSÉ DO BARREIRO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_jos_do_rio_preto",
@@ -5905,7 +6326,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO JOSÉ DO RIO PRETO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_louren_o_da_serra",
@@ -5919,7 +6341,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO LOURENÇO DA SERRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_luiz_do_paraitinga",
@@ -5933,7 +6356,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO LUIZ DO PARAITINGA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_manuel",
@@ -5947,7 +6371,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO MANUEL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_miguel_arcanjo",
@@ -5961,7 +6386,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO MIGUEL ARCANJO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_pedro",
@@ -5975,7 +6401,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO PEDRO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_pedro_do_turvo",
@@ -5989,7 +6416,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO PEDRO DO TURVO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_roque",
@@ -6003,7 +6431,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO ROQUE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_sebasti_o",
@@ -6017,7 +6446,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO SEBASTIÃO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_sebasti_o_da_grama",
@@ -6031,7 +6461,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO SEBASTIÃO DA GRAMA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_sim_o",
@@ -6045,7 +6476,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO SIMÃO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_s_o_vicente",
@@ -6059,7 +6491,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO VICENTE"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_secretaria_de_assist_ncia_social",
@@ -6073,7 +6506,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SECRETARIA DE ASSISTÊNCIA SOCIAL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_serra_azul",
@@ -6087,7 +6521,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SERRA AZUL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_serrana",
@@ -6101,7 +6536,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SERRANA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_sert_ozinho",
@@ -6115,7 +6551,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SERTÃOZINHO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_sever_nia",
@@ -6129,7 +6566,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SEVERÍNIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_silveiras",
@@ -6143,7 +6581,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SILVEIRAS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_socorro",
@@ -6157,7 +6596,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SOCORRO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_sorocaba",
@@ -6171,7 +6611,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SOROCABA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_sud_menucci",
@@ -6185,7 +6626,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SUD MENUCCI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_sumar_",
@@ -6199,7 +6641,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SUMARÉ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_suzan_polis",
@@ -6213,7 +6656,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SUZANÁPOLIS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_suzano",
@@ -6227,7 +6671,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SUZANO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_tabatinga",
@@ -6241,7 +6686,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TABATINGA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_tabo_o_da_serra",
@@ -6255,7 +6701,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TABOÃO DA SERRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_tagua_",
@@ -6269,7 +6716,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TAGUAÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_tanabi",
@@ -6283,7 +6731,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TANABI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_tapiratiba",
@@ -6297,7 +6746,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TAPIRATIBA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_taquaral",
@@ -6311,7 +6761,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TAQUARAL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_taquaritinga",
@@ -6325,7 +6776,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TAQUARITINGA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_taquarituba",
@@ -6339,7 +6791,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TAQUARITUBA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_tatu_",
@@ -6353,7 +6806,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TATUÍ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_taubat_",
@@ -6367,7 +6821,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TAUBATÉ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_tejup_",
@@ -6381,7 +6836,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TEJUPÁ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_teodoro_sampaio",
@@ -6395,7 +6851,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TEODORO SAMPAIO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_terra_roxa",
@@ -6409,7 +6866,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TERRA ROXA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_timburi",
@@ -6423,7 +6881,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TIMBURI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_torre_de_pedra",
@@ -6437,7 +6896,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TORRE DE PEDRA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_trememb_",
@@ -6451,7 +6911,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TREMEMBÉ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_tr_s_fronteiras",
@@ -6465,7 +6926,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TRÊS FRONTEIRAS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_tuiuti",
@@ -6479,7 +6941,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TUIUTI"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_tup_",
@@ -6493,7 +6956,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TUPÃ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_tupi_paulista",
@@ -6507,7 +6971,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TUPI PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_turmalina",
@@ -6521,7 +6986,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TURMALINA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ubarana",
@@ -6535,7 +7001,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "UBARANA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ubatuba",
@@ -6549,7 +7016,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "UBATUBA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ubirajara",
@@ -6563,7 +7031,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "UBIRAJARA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_uchoa",
@@ -6577,7 +7046,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "UCHOA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_ur_nia",
@@ -6591,7 +7061,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "URÂNIA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_uru",
@@ -6605,7 +7076,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "URU"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_urup_s",
@@ -6619,7 +7091,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "URUPÊS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_valinhos",
@@ -6633,7 +7106,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VALINHOS"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_vargem",
@@ -6647,7 +7121,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VARGEM"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_vargem_grande_paulista",
@@ -6661,7 +7136,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VARGEM GRANDE PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_v_rzea_paulista",
@@ -6675,7 +7151,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VÁRZEA PAULISTA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_vera_cruz",
@@ -6689,7 +7166,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VERA CRUZ"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_vinhedo",
@@ -6703,7 +7181,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VINHEDO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_vista_alegre_do_alto",
@@ -6717,7 +7196,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VISTA ALEGRE DO ALTO"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_vit_ria_brasil",
@@ -6731,7 +7211,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VITÓRIA BRASIL"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_votorantim",
@@ -6745,7 +7226,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VOTORANTIM"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_votuporanga",
@@ -6759,7 +7241,8 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VOTUPORANGA"
-    }
+    },
+    "gazetteScope": "state"
   },
   {
     "id": "sp_zacarias",
@@ -6773,6 +7256,7 @@
       "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ZACARIAS"
-    }
+    },
+    "gazetteScope": "state"
   }
 ]
