@@ -147,8 +147,17 @@ bun install
 Run Goodfellow locally:
 
 ```bash
+# With Cloudflare Tunnel (default)
 bun run goodfellow:dev
+
+# With LocalTunnel (alternative)
+bun run goodfellow:dev:localtunnel
+
+# Localhost only (no tunnel, fastest startup)
+bun run goodfellow:dev:localhost
 ```
+
+See [DEVELOPMENT_SETUP.md](./DEVELOPMENT_SETUP.md) for detailed setup instructions and options.
 
 ### Deployment
 

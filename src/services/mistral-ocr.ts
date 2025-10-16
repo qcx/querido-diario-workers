@@ -171,7 +171,7 @@ export class MistralOcrService {
         
         // In development with localhost R2, fallback to original URL for Mistral
         // since Mistral API cannot access localhost
-        if (isLocalR2 && !this.r2PublicUrl) {
+        if (isLocalR2) {
           logger.info(`Development mode detected (localhost R2 or no R2_PUBLIC_URL), using original PDF URL for Mistral: ${pdfUrl}`);
           finalPdfUrl = pdfUrl;
         } else {

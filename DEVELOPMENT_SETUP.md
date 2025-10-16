@@ -18,6 +18,38 @@ or using bun:
 bun goodfellow:dev
 ```
 
+## Development Script Options
+
+Choose the development mode that best fits your needs:
+
+### 🌐 With Cloudflare Tunnel (Default)
+```bash
+npm run goodfellow:dev
+# or: bun goodfellow:dev
+```
+- Creates a public tunnel using Cloudflare (requires `cloudflared` installed)
+- Best for production-like testing and external access
+- R2_PUBLIC_URL will be set to a public tunnel URL
+
+### 🔗 With LocalTunnel
+```bash
+npm run goodfellow:dev:localtunnel
+# or: bun goodfellow:dev:localtunnel
+```
+- Creates a public tunnel using localtunnel.me service
+- No additional installation required
+- Good alternative if cloudflared is not available
+
+### 🏠 Localhost Only
+```bash
+npm run goodfellow:dev:localhost
+# or: bun goodfellow:dev:localhost
+```
+- **NEW**: Forces localhost-only development (no tunnel creation)
+- Fastest startup time (skips tunnel creation)
+- R2_PUBLIC_URL will be set to `http://localhost:PORT`
+- Perfect for pure local development
+
 ## What It Does
 
 The `goodfellow:dev` script orchestrates the complete development setup automatically:

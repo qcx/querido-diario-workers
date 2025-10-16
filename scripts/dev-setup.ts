@@ -24,6 +24,11 @@
  *   - Good for quick testing
  *   - May be less stable
  * 
+ * • --localhost: Forces localhost-only development (no tunnel)
+ *   - R2_PUBLIC_URL will be set to http://localhost:PORT
+ *   - Useful for pure local development without external access
+ *   - Faster startup (no tunnel creation time)
+ * 
  * ═══════════════════════════════════════════════════════════════════
  * DYNAMIC PORT DETECTION
  * ═══════════════════════════════════════════════════════════════════
@@ -54,7 +59,8 @@ import localtunnel from 'localtunnel';
 
 // Parse command line arguments
 const args = process.argv.slice(2);
-const USE_CLOUDFLARE = args.includes('--cloudflare') || !args.includes('--localtunnel');
+const FORCE_LOCALHOST = args.includes('--localhost');
+const USE_CLOUDFLARE = args.includes('--cloudflare') || (!args.includes('--localtunnel') && !FORCE_LOCALHOST);
 const USE_LOCALTUNNEL = args.includes('--localtunnel');
 const TUNNEL_TYPE = USE_CLOUDFLARE ? 'cloudflare' : 'localtunnel';
 
@@ -70,6 +76,7 @@ interface ProcessManager {
 
 const processes: ProcessManager = {};
 let R2_PORT: number | null = null; // Will be set dynamically from Wrangler output
+let isCleaningUp = false; // Guard to prevent multiple cleanup executions
 
 /**
  * Check if cloudflared is installed
@@ -123,37 +130,64 @@ function showCloudflaredInstructions(): void {
   console.log('');
   console.log('📚 More info: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/');
   console.log('');
-  console.log('💡 Alternative: Run with --localtunnel flag to use localtunnel instead');
-  console.log('   npm run goodfellow:dev:localtunnel');
+  console.log('💡 Alternatives:');
+  console.log('   • npm run goodfellow:dev:localtunnel (uses localtunnel instead)');
+  console.log('   • npm run goodfellow:dev:localhost (localhost-only, no tunnel)');
   console.log('');
 }
 
-// Cleanup function to kill all spawned processes
-function cleanup() {
+// Cleanup function to kill all spawned processes (idempotent)
+function cleanup(shouldExit: boolean = true) {
+  // Guard against multiple cleanup executions
+  if (isCleaningUp) {
+    return;
+  }
+  isCleaningUp = true;
+  
   console.log('\n🧹 Cleaning up processes...');
   
   if (processes.goodfellow) {
-    processes.goodfellow.kill();
-  }
-  if (processes.tunnel) {
-    // Handle both localtunnel (has .close()) and cloudflared (ChildProcess, has .kill())
-    if (typeof processes.tunnel.close === 'function') {
-      processes.tunnel.close();
-    } else if (typeof processes.tunnel.kill === 'function') {
-      processes.tunnel.kill();
+    try {
+      processes.goodfellow.kill();
+      processes.goodfellow = undefined;
+    } catch (error) {
+      // Process might already be dead
     }
   }
-  if (processes.r2Server) {
-    processes.r2Server.kill();
+  
+  if (processes.tunnel) {
+    try {
+      // Handle both localtunnel (has .close()) and cloudflared (ChildProcess, has .kill())
+      if (typeof processes.tunnel.close === 'function') {
+        processes.tunnel.close();
+      } else if (typeof processes.tunnel.kill === 'function') {
+        processes.tunnel.kill();
+      }
+      processes.tunnel = undefined;
+    } catch (error) {
+      // Process might already be dead
+    }
   }
   
-  process.exit(0);
+  if (processes.r2Server) {
+    try {
+      processes.r2Server.kill();
+      processes.r2Server = undefined;
+    } catch (error) {
+      // Process might already be dead
+    }
+  }
+  
+  // Only exit if explicitly requested (not when called from exit handler)
+  if (shouldExit) {
+    process.exit(0);
+  }
 }
 
 // Register cleanup handlers
-process.on('SIGINT', cleanup);
-process.on('SIGTERM', cleanup);
-process.on('exit', cleanup);
+process.on('SIGINT', () => cleanup(true));   // User pressed Ctrl+C - cleanup and exit
+process.on('SIGTERM', () => cleanup(true));  // Process termination - cleanup and exit
+process.on('exit', () => cleanup(false));    // Process is already exiting - cleanup only (no exit call)
 
 /**
  * Execute a command and return output (cross-platform)
@@ -392,6 +426,7 @@ async function createCloudflareTunnel(port: number): Promise<string | null> {
     
     cloudflaredProcess.on('error', (error) => {
       console.error('⚠️  Failed to start Cloudflare Tunnel:', error);
+      console.log('⏭️  Falling back to localhost for R2_PUBLIC_URL...');
       if (!resolved) {
         resolved = true;
         resolve(null);
@@ -401,6 +436,7 @@ async function createCloudflareTunnel(port: number): Promise<string | null> {
     cloudflaredProcess.on('exit', (code) => {
       console.log(`Cloudflare Tunnel exited with code ${code}`);
       if (!resolved) {
+        console.log('⏭️  Falling back to localhost for R2_PUBLIC_URL...');
         resolved = true;
         resolve(null);
       }
@@ -410,6 +446,7 @@ async function createCloudflareTunnel(port: number): Promise<string | null> {
     setTimeout(() => {
       if (!resolved) {
         console.log('⚠️  Cloudflare Tunnel startup timeout');
+        console.log('⏭️  Falling back to localhost for R2_PUBLIC_URL...');
         resolved = true;
         resolve(null);
       }
@@ -483,6 +520,13 @@ async function createLocalTunnel(port: number): Promise<string | null> {
  * Create tunnel (Cloudflare or LocalTunnel based on flag)
  */
 async function createTunnel(port: number): Promise<string | null> {
+  // Skip tunnel creation if --localhost flag is used
+  if (FORCE_LOCALHOST) {
+    console.log('🏠 --localhost flag detected, skipping tunnel creation');
+    console.log('   R2_PUBLIC_URL will be set to localhost for local-only development');
+    return null;
+  }
+
   if (USE_CLOUDFLARE) {
     // Check if cloudflared is installed
     if (!checkCloudflared()) {
@@ -617,9 +661,11 @@ function updateDevVars(tunnelUrl: string | null, port: number): void {
     if (TUNNEL_TYPE === 'cloudflare') {
       console.log('   • Cloudflared might not be installed or failed to start');
       console.log('   • Try: npm run goodfellow:dev:localtunnel (as alternative)');
+      console.log('   • Try: npm run goodfellow:dev:localhost (localhost-only)');
     } else {
       console.log('   • The localtunnel service might be temporarily unavailable');
       console.log('   • Try: npm run goodfellow:dev (uses Cloudflare Tunnel instead)');
+      console.log('   • Try: npm run goodfellow:dev:localhost (localhost-only)');
     }
   }
 }
@@ -647,12 +693,12 @@ function startGoodfellowServer(): void {
   
   goodfellowProcess.on('error', (error) => {
     console.error('❌ Failed to start Goodfellow server:', error);
-    cleanup();
+    cleanup(true);
   });
   
   goodfellowProcess.on('exit', (code) => {
     console.log(`Goodfellow server exited with code ${code}`);
-    cleanup();
+    cleanup(true);
   });
 }
 
@@ -661,7 +707,15 @@ function startGoodfellowServer(): void {
  */
 async function main() {
   console.log('🎬 Starting development environment setup...');
-  console.log(`🌐 Tunnel type: ${TUNNEL_TYPE === 'cloudflare' ? 'Cloudflare Tunnel' : 'LocalTunnel'}\n`);
+  
+  let tunnelDescription: string;
+  if (FORCE_LOCALHOST) {
+    tunnelDescription = 'Localhost only (--localhost flag)';
+  } else {
+    tunnelDescription = TUNNEL_TYPE === 'cloudflare' ? 'Cloudflare Tunnel' : 'LocalTunnel';
+  }
+  
+  console.log(`🌐 Tunnel type: ${tunnelDescription}\n`);
   
   try {
     // Step 1: Check and setup D1 tables
@@ -704,6 +758,13 @@ async function main() {
     // Step 4: Create tunnel (now that R2 is definitely ready)
     const tunnelUrl = await createTunnel(detectedPort);
     
+    // Show tunnel result
+    if (tunnelUrl) {
+      console.log(`✅ Tunnel created successfully: ${tunnelUrl}`);
+    } else if (!FORCE_LOCALHOST) {
+      console.log('ℹ️  No tunnel created - using localhost for R2_PUBLIC_URL');
+    }
+    
     console.log('');
     
     // Step 5: Update .dev.vars
@@ -723,7 +784,7 @@ async function main() {
     
   } catch (error) {
     console.error('\n❌ Setup failed:', error);
-    cleanup();
+    cleanup(false); // Don't exit here since we're calling process.exit(1) below
     process.exit(1);
   }
 }
