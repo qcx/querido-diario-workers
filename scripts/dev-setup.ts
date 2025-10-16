@@ -606,7 +606,7 @@ function updateDevVars(tunnelUrl: string | null, port: number): void {
   const outputLines: string[] = [];
   
   // Ensure all required variables are present (in order from .dev.vars.example)
-  const requiredVars = ['MISTRAL_API_KEY', 'OPENAI_API_KEY', 'R2_PUBLIC_URL'];
+  const requiredVars = ['MISTRAL_API_KEY', 'OPENAI_API_KEY', 'R2_PUBLIC_URL', 'API_KEY'];
   
   for (const key of requiredVars) {
     if (variables.has(key)) {
@@ -641,11 +641,41 @@ function updateDevVars(tunnelUrl: string | null, port: number): void {
   
   // Warn about empty variables (both new and existing files)
   if (emptyVars.length > 0) {
-    console.log(`⚠️  Warning: The following variables are empty and need to be configured:`);
-    emptyVars.forEach(key => {
-      console.log(`   - ${key}`);
-    });
-    console.log('   Please edit .dev.vars to add your API keys and configuration.');
+    // Separate API_KEY from other required vars
+    const apiKeyEmpty = emptyVars.includes('API_KEY');
+    const otherEmptyVars = emptyVars.filter(key => key !== 'API_KEY');
+    
+    if (otherEmptyVars.length > 0) {
+      console.log(`⚠️  Warning: The following variables are empty and need to be configured:`);
+      otherEmptyVars.forEach(key => {
+        console.log(`   - ${key}`);
+      });
+      console.log('   Please edit .dev.vars to add your API keys and configuration.');
+    }
+    
+    if (apiKeyEmpty) {
+      console.log('');
+      console.log('🔐 API Key Authentication: DISABLED');
+      console.log('   To enable API key authentication on all endpoints (except "/"):');
+      console.log('   1. Edit .dev.vars and set API_KEY="your-secret-key"');
+      console.log('   2. Generate a secure key: openssl rand -base64 32');
+      console.log('   3. Restart the dev server');
+      console.log('   See SECURITY.md for more information.');
+    }
+  } else {
+    // Check if API_KEY is configured (not empty)
+    const apiKeyValue = variables.get('API_KEY');
+    if (apiKeyValue) {
+      console.log('');
+      console.log('🔐 API Key Authentication: ENABLED');
+      console.log('   All endpoints (except "/") will require X-API-Key header');
+      console.log(`   API Key: ${apiKeyValue.substring(0, 4)}***${apiKeyValue.substring(apiKeyValue.length - 4)}`);
+      console.log('   See SECURITY.md for usage details.');
+    } else {
+      console.log('');
+      console.log('🔐 API Key Authentication: DISABLED');
+      console.log('   To enable, set API_KEY in .dev.vars (see SECURITY.md)');
+    }
   }
   
   if (tunnelUrl) {
