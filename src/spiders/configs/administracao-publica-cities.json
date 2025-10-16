@@ -8,7 +8,8 @@
     "config": {
       "type": "administracao_publica",
       "token": "4f1cf16edf5d73feaad4fec2a03c7c9e1cf536aa"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_peritoro",
@@ -19,7 +20,8 @@
     "config": {
       "type": "administracao_publica",
       "token": "9de645b503b922df799865ffcb07a6ec7b9cb53e"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_turilandia",
@@ -30,6 +32,7 @@
     "config": {
       "type": "administracao_publica",
       "token": "9664abfc624b73571a05e874f98fd6d114834924"
-    }
+    },
+    "gazetteScope": "city"
   }
 ]

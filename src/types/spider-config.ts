@@ -1,3 +1,5 @@
+import type { GazetteScope } from './gazette';
+
 /**
  * Spider type identifier
  */
@@ -42,6 +44,9 @@ export interface SpiderConfig {
   
   /** Type of spider/platform */
   spiderType: SpiderType;
+  
+  /** Gazette scope - city-specific or state-level */
+  gazetteScope: GazetteScope;
   
   /** Earliest date available for this municipality (ISO format) */
   startDate?: string;

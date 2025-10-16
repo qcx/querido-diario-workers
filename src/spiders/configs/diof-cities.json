@@ -9,7 +9,8 @@
       "type": "diof",
       "website": "https://diario.igaci.al.gov.br",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_abare",
@@ -21,7 +22,8 @@
       "type": "diof",
       "website": "https://sai.io.org.br/ba/abare/site/diariooficial",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_adustina",
@@ -33,7 +35,8 @@
       "type": "diof",
       "website": "https://diario.adustina.ba.gov.br",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_almadina",
@@ -45,7 +48,8 @@
       "type": "diof",
       "website": "https://diario.almadina.ba.gov.br",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_anage",
@@ -57,7 +61,8 @@
       "type": "diof",
       "website": "https://diario.anage.ba.gov.br",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_andorinha",
@@ -69,7 +74,8 @@
       "type": "diof",
       "website": "https://sai.io.org.br/ba/andorinha/site/diariooficial",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_antas",
@@ -81,7 +87,8 @@
       "type": "diof",
       "website": "https://diario.antas.ba.gov.br/",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_apuarema",
@@ -93,7 +100,8 @@
       "type": "diof",
       "website": "https://diario.apuarema.ba.gov.br",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_aracas",
@@ -105,7 +113,8 @@
       "type": "diof",
       "website": "https://diario.aracas.ba.gov.br",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_aramari",
@@ -117,7 +126,8 @@
       "type": "diof",
       "website": "https://diario.aramari.ba.gov.br",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_arataca",
@@ -129,7 +139,8 @@
       "type": "diof",
       "website": "https://diario.arataca.ba.gov.br",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_itatim",
@@ -141,7 +152,8 @@
       "type": "diof",
       "website": "https://diario.itatim.ba.gov.br",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_jaborandi",
@@ -153,7 +165,8 @@
       "type": "diof",
       "website": "https://sai.io.org.br/ba/jaborandi/site/diariooficial",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_jeremoabo",
@@ -165,7 +178,8 @@
       "type": "diof",
       "website": "https://diario.jeremoabo.ba.gov.br",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_lauro_de_freitas",
@@ -177,7 +191,8 @@
       "type": "diof",
       "website": "https://sai.io.org.br/ba/laurodefreitas/site/diariooficial",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_luis_eduardo_magalhaes",
@@ -189,7 +204,8 @@
       "type": "diof",
       "website": "https://sai.io.org.br/ba/luiseduardomagalhaes/site/diariooficial",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_maragogipe",
@@ -201,7 +217,8 @@
       "type": "diof",
       "website": "https://sai.io.org.br/ba/maragojipe/site/diariooficial",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_riachao_das_neves",
@@ -213,7 +230,8 @@
       "type": "diof",
       "website": "https://sai.io.org.br/ba/riachaodasneves/site/diariooficial",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ba_santa_luzia_2024",
@@ -225,7 +243,8 @@
       "type": "diof",
       "website": "https://diario.santaluzia.ba.gov.br",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "se_estancia",
@@ -237,6 +256,7 @@
       "type": "diof",
       "website": "https://diario.estancia.se.gov.br",
       "power": "executive"
-    }
+    },
+    "gazetteScope": "city"
   }
 ]

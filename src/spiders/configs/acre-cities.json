@@ -11,7 +11,8 @@
         "type": "acre",
         "cityName": "Acrelândia",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200054",
@@ -23,7 +24,8 @@
         "type": "acre",
         "cityName": "Assis Brasil",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200104",
@@ -35,7 +37,8 @@
         "type": "acre",
         "cityName": "Brasiléia",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200138",
@@ -47,7 +50,8 @@
         "type": "acre",
         "cityName": "Bujari",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200179",
@@ -59,7 +63,8 @@
         "type": "acre",
         "cityName": "Capixaba",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200203",
@@ -71,7 +76,8 @@
         "type": "acre",
         "cityName": "Cruzeiro do Sul",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200252",
@@ -83,7 +89,8 @@
         "type": "acre",
         "cityName": "Epitaciolândia",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200302",
@@ -95,7 +102,8 @@
         "type": "acre",
         "cityName": "Feijó",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200328",
@@ -107,7 +115,8 @@
         "type": "acre",
         "cityName": "Jordão",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200336",
@@ -119,7 +128,8 @@
         "type": "acre",
         "cityName": "Mâncio Lima",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200344",
@@ -131,7 +141,8 @@
         "type": "acre",
         "cityName": "Manoel Urbano",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200351",
@@ -143,7 +154,8 @@
         "type": "acre",
         "cityName": "Marechal Thaumaturgo",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200385",
@@ -155,7 +167,8 @@
         "type": "acre",
         "cityName": "Plácido de Castro",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200393",
@@ -167,7 +180,8 @@
         "type": "acre",
         "cityName": "Porto Acre",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200401",
@@ -179,7 +193,8 @@
         "type": "acre",
         "cityName": "Porto Walter",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200427",
@@ -191,7 +206,8 @@
         "type": "acre",
         "cityName": "Rio Branco",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200435",
@@ -203,7 +219,8 @@
         "type": "acre",
         "cityName": "Rodrigues Alves",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200450",
@@ -215,7 +232,8 @@
         "type": "acre",
         "cityName": "Santa Rosa do Purus",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200500",
@@ -227,7 +245,8 @@
         "type": "acre",
         "cityName": "Sena Madureira",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200609",
@@ -239,7 +258,8 @@
         "type": "acre",
         "cityName": "Senador Guiomard",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200708",
@@ -251,7 +271,8 @@
         "type": "acre",
         "cityName": "Tarauacá",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     },
     {
       "id": "ac_1200807",
@@ -263,7 +284,8 @@
         "type": "acre",
         "cityName": "Xapuri",
         "power": "executive_legislative"
-      }
+      },
+      "gazetteScope": "state"
     }
   ]
 }

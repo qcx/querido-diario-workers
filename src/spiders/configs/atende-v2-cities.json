@@ -8,7 +8,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "apucarana"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_arapongas",
@@ -19,7 +20,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "arapongas"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_campo_largo",
@@ -30,7 +32,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "campolargo"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_campo_mourao",
@@ -41,7 +44,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "campomourao"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_castro",
@@ -52,7 +56,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "castro"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_corbelia",
@@ -63,7 +68,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "corbelia"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_guaraniacu",
@@ -74,7 +80,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "guaraniacu"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_juranda",
@@ -85,7 +92,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "juranda"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_mambore",
@@ -96,7 +104,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "mambore"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_ouro_verde_do_oeste",
@@ -107,7 +116,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "ouroverdedooeste"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_pinhais",
@@ -118,7 +128,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "pinhais"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_bento_goncalves",
@@ -129,7 +140,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "bentogoncalves"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_camaqua",
@@ -140,7 +152,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "camaqua"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_candelaria",
@@ -151,7 +164,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "candelaria"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_dois_irmaos",
@@ -162,7 +176,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "doisirmaos"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_estrela",
@@ -173,7 +188,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "estrela"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_gravatai",
@@ -184,7 +200,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "gravatai"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_horizontina",
@@ -195,7 +212,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "horizontina"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_panambi",
@@ -206,7 +224,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "panambi"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_santa_rosa",
@@ -217,7 +236,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "santarosa"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_sao_joao_do_polesine",
@@ -228,7 +248,8 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "saojoaodopolesine"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_sobradinho",
@@ -239,6 +260,7 @@
     "config": {
       "type": "atende_v2",
       "citySubdomain": "sobradinho"
-    }
+    },
+    "gazetteScope": "city"
   }
 ]

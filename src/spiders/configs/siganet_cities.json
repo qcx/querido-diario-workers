@@ -8,7 +8,8 @@
     "config": {
       "type": "siganet",
       "baseUrl": "https://transparencia.afonsocunha.ma.gov.br/acessoInformacao/diario/diario"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_axixa",
@@ -19,7 +20,8 @@
     "config": {
       "type": "siganet",
       "baseUrl": "https://transparencia.axixa.ma.gov.br/acessoInformacao/diario/diario"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_bacuri",
@@ -30,7 +32,8 @@
     "config": {
       "type": "siganet",
       "baseUrl": "https://bacuri.ma.gov.br/diario/diario"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_boa_vista_do_gurupi",
@@ -41,7 +44,8 @@
     "config": {
       "type": "siganet",
       "baseUrl": "https://transparencia.boavistadogurupi.ma.gov.br/acessoInformacao/diario/diario"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_coroata",
@@ -52,7 +56,8 @@
     "config": {
       "type": "siganet",
       "baseUrl": "https://coroata.ma.gov.br/diario/diario"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_duque_bacelar",
@@ -63,7 +68,8 @@
     "config": {
       "type": "siganet",
       "baseUrl": "https://transparencia.duquebacelar.ma.gov.br/acessoInformacao/diario/diario"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_nina_rodrigues",
@@ -74,7 +80,8 @@
     "config": {
       "type": "siganet",
       "baseUrl": "https://transparencia.ninarodrigues.ma.gov.br/acessoInformacao/diario/diario"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_sao_vicente_ferrer",
@@ -85,7 +92,8 @@
     "config": {
       "type": "siganet",
       "baseUrl": "https://saovicenteferrer.ma.gov.br/diario/diario"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_viana",
@@ -96,7 +104,8 @@
     "config": {
       "type": "siganet",
       "baseUrl": "https://transparencia.viana.ma.gov.br/acessoInformacao/diario/diario"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_ze_doca",
@@ -107,6 +116,7 @@
     "config": {
       "type": "siganet",
       "baseUrl": "https://transparencia.zedoca.ma.gov.br/acessoInformacao/diario/diario"
-    }
+    },
+    "gazetteScope": "city"
   }
 ]

@@ -8,7 +8,8 @@
     "config": {
       "type": "dioenet",
       "baseUrl": "https://plenussistemas.dioenet.com.br/list/nova-friburgo"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rj_sumidouro",
@@ -19,7 +20,8 @@
     "config": {
       "type": "dioenet",
       "baseUrl": "https://plenussistemas.dioenet.com.br/list/sumidouro"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_taubate",
@@ -30,7 +32,8 @@
     "config": {
       "type": "dioenet",
       "baseUrl": "https://plenussistemas.dioenet.com.br/list/taubate"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_marilandia_do_sul",
@@ -41,6 +44,7 @@
     "config": {
       "type": "dioenet",
       "baseUrl": "https://plenussistemas.dioenet.com.br/list/marilandia-do-sul"
-    }
+    },
+    "gazetteScope": "city"
   }
 ]

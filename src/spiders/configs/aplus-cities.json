@@ -8,7 +8,8 @@
     "config": {
       "type": "aplus",
       "baseUrl": "https://www.bacabal.ma.gov.br/diario/"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_caxias_2021",
@@ -19,7 +20,8 @@
     "config": {
       "type": "aplus",
       "baseUrl": "https://dom.caxias.ma.gov.br/diario/"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_codo",
@@ -30,7 +32,8 @@
     "config": {
       "type": "aplus",
       "baseUrl": "https://www.codo.ma.gov.br/diario/"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ma_santo_antonio_dos_lopes",
@@ -41,6 +44,7 @@
     "config": {
       "type": "aplus",
       "baseUrl": "https://www.stoantoniodoslopes.ma.gov.br/diario/"
-    }
+    },
+    "gazetteScope": "city"
   }
 ]

@@ -8,7 +8,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/horizonte"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_itajuba",
@@ -19,7 +20,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/itajuba"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "mg_uberaba_2021",
@@ -30,7 +32,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/uberaba"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ms_deodapolis",
@@ -41,7 +44,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/deodapolis"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ms_gloria_de_dourados",
@@ -52,7 +56,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/gloria_de_dourados"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ms_paranhos",
@@ -63,7 +68,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/paranhos"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "ms_rio_brilhante",
@@ -74,7 +80,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/rio_brilhante"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pe_cabrobo",
@@ -85,7 +92,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/cabrobo"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_cafelandia",
@@ -96,7 +104,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/cafelandia"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_cafezal_do_sul",
@@ -107,7 +116,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/cafezal_do_sul"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "pr_carambei",
@@ -118,7 +128,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/carambei"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rj_sao_jose_do_vale_do_rio_preto",
@@ -129,7 +140,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/sao_jose_do_vale_do_rio_preto"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_marau",
@@ -140,7 +152,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/marau"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_quatro_irmaos",
@@ -151,7 +164,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/quatro_irmaos"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_santa_clara_do_sul",
@@ -162,7 +176,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/santa_clara_do_sul"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rs_tres_arroios",
@@ -173,7 +188,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/tres_arroios"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_adolfo",
@@ -184,7 +200,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/adolfo"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_aguai",
@@ -195,7 +212,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/aguai"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_aguas_da_prata",
@@ -206,7 +224,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/aguas_da_prata"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_aracatuba",
@@ -217,7 +236,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/aracatuba"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_avare",
@@ -228,7 +248,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/avare"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_birigui",
@@ -239,7 +260,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/birigui"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_botucatu",
@@ -250,7 +272,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/botucatu"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_braganca_paulista",
@@ -261,7 +284,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/braganca_paulista"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_campo_limpo_paulista",
@@ -272,7 +296,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/campo_limpo_paulista"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_catanduva",
@@ -283,7 +308,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/catanduva"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_cunha",
@@ -294,7 +320,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/cunha"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_dirce_reis",
@@ -305,7 +332,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/dirce_reis"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_guaracai",
@@ -316,7 +344,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/guaracai"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_itapeva",
@@ -327,7 +356,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/itapeva"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_itapevi",
@@ -338,7 +368,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/itapevi"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_itu",
@@ -349,7 +380,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/itu"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_jandira",
@@ -360,7 +392,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/jandira"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_jau_2023",
@@ -371,7 +404,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/jau"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_mogi_guacu",
@@ -382,7 +416,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/mogi_guacu"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_monteiro_lobato",
@@ -393,7 +428,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/monteiro_lobato"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_rio_claro",
@@ -404,7 +440,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/rio_claro"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_salto",
@@ -415,7 +452,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/salto"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_sao_bernardo_do_campo",
@@ -426,7 +464,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/sao_bernardo_do_campo"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_sertaozinho",
@@ -437,7 +476,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/sertaozinho"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_tremembe",
@@ -448,7 +488,8 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/tremembe"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "sp_votuporanga",
@@ -459,6 +500,7 @@
     "config": {
       "type": "dosp",
       "url": "https://www.imprensaoficialmunicipal.com.br/votuporanga"
-    }
+    },
+    "gazetteScope": "city"
   }
 ]

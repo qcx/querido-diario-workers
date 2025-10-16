@@ -8,7 +8,8 @@
     "config": {
       "type": "adiarios_v2",
       "baseUrl": "https://buzios.aexecutivo.com.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rj_casimiro_de_abreu",
@@ -19,7 +20,8 @@
     "config": {
       "type": "adiarios_v2",
       "baseUrl": "https://www.transparencia.casimirodeabreu.rj.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rj_cordeiro",
@@ -30,7 +32,8 @@
     "config": {
       "type": "adiarios_v2",
       "baseUrl": "https://www.transparencia.cordeiro.rj.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rj_iguaba_grande",
@@ -41,7 +44,8 @@
     "config": {
       "type": "adiarios_v2",
       "baseUrl": "https://portal.iguaba.rj.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   },
   {
     "id": "rj_quissama",
@@ -52,6 +56,7 @@
     "config": {
       "type": "adiarios_v2",
       "baseUrl": "https://portal.quissama.rj.gov.br"
-    }
+    },
+    "gazetteScope": "city"
   }
 ]
