@@ -17,6 +17,22 @@
   // Observability
   "observability": {
     "enabled": true
+  },
+
+
+  "env": {
+    "development": {
+      "name": "r2-dev",
+      "r2_buckets": [
+        {
+          "bucket_name": "gazette-pdfs",
+          "binding": "GAZETTE_PDFS"
+        }
+      ],
+      "vars": {
+        "ENVIRONMENT": "development"
+      }
+    }
   }
 }
 

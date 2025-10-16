@@ -9,6 +9,9 @@
   },
   "scripts": {
     "dev": "wrangler dev --config wrangler.jsonc",
+    "goodfellow:dev": "npx tsx scripts/dev-setup.ts --cloudflare",
+    "goodfellow:dev:localtunnel": "npx tsx scripts/dev-setup.ts --localtunnel",
+    "goodfellow:dev:localhost": "npx tsx scripts/dev-setup.ts --localhost",
     "deploy": "wrangler deploy --config wrangler.jsonc",
     "build": "tsc",
     "type-check": "tsc --noEmit",
@@ -73,6 +76,7 @@
     "date-fns": "^4.1.0",
     "drizzle-orm": "^0.36.4",
     "hono": "^4.9.9",
+    "localtunnel": "^2.0.2",
     "node-html-parser": "^7.0.1",
     "playwright": "^1.55.1",
     "playwright-extra": "^4.3.6",
@@ -80,6 +84,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20251003.0",
+    "@types/localtunnel": "^2.0.4",
     "@types/node": "^24.6.2",
     "drizzle-kit": "^0.30.0",
     "husky": "^9.1.7",

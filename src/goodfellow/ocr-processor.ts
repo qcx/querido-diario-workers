@@ -22,6 +22,7 @@ export interface OcrProcessorEnv extends D1DatabaseEnv {
   MISTRAL_API_KEY: string;
   OCR_RESULTS?: KVNamespace;
   GAZETTE_PDFS?: R2Bucket;
+  R2_PUBLIC_URL?: string;
 }
 
 /**
@@ -37,6 +38,7 @@ export async function processOcrBatch(
   const ocrService = new MistralOcrService({
     apiKey: env.MISTRAL_API_KEY,
     r2Bucket: env.GAZETTE_PDFS,
+    r2PublicUrl: env.R2_PUBLIC_URL,
   });
 
   const results: OcrResult[] = [];
@@ -257,7 +259,7 @@ export async function processOcrBatch(
 
       // Handle failure results (OCR service returns failure, doesn't throw)
       if (result.status === 'failure') {
-        logger.error('🔥 OCR FAILED - Logging to error_logs', {
+        logger.error('🔥 OCR FAILED - Logging to error_logs', null, {
           jobId: ocrMessage.jobId,
           status: result.status,
           errorMessage: result.error?.message,

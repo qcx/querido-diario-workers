@@ -17,8 +17,9 @@ import { MistralOcrError, toAppError } from '../types/errors';
 export class MistralOcrService {
   private config: MistralOcrConfig;
   private r2Bucket?: R2Bucket;
+  private r2PublicUrl?: string;
 
-  constructor(config: MistralOcrConfig & { r2Bucket?: R2Bucket }) {
+  constructor(config: MistralOcrConfig & { r2Bucket?: R2Bucket; r2PublicUrl?: string }) {
     this.config = {
       endpoint: 'https://api.mistral.ai/v1/ocr',
       model: 'mistral-ocr-latest',
@@ -27,6 +28,7 @@ export class MistralOcrService {
       ...config,
     };
     this.r2Bucket = config.r2Bucket;
+    this.r2PublicUrl = config.r2PublicUrl;
   }
 
   /**
@@ -141,6 +143,9 @@ export class MistralOcrService {
     let finalPdfUrl = pdfUrl;
     let pdfR2Key: string | undefined;
 
+    // Check if R2 public URL is localhost (development mode)
+    const isLocalR2 = this.r2PublicUrl?.includes('localhost') || this.r2PublicUrl?.includes('127.0.0.1');
+
     // If R2 is configured, download and upload to R2
     if (this.r2Bucket) {
       try {
@@ -164,9 +169,17 @@ export class MistralOcrService {
           },
         });
         
-        // Get R2 public URL
-        finalPdfUrl = `https://gazette-pdfs.qconcursos.workers.dev/${key}`;
-        logger.info(`Using R2 URL for OCR: ${finalPdfUrl}`);
+        // In development with localhost R2, fallback to original URL for Mistral
+        // since Mistral API cannot access localhost
+        if (isLocalR2) {
+          logger.info(`Development mode detected (localhost R2 or no R2_PUBLIC_URL), using original PDF URL for Mistral: ${pdfUrl}`);
+          finalPdfUrl = pdfUrl;
+        } else {
+          // Production: use R2 public URL
+          const baseUrl = this.r2PublicUrl || 'https://gazette-pdfs.qconcursos.workers.dev';
+          finalPdfUrl = `${baseUrl}/${key}`;
+          logger.info(`Using R2 URL for OCR: ${finalPdfUrl}`);
+        }
       } catch (error: unknown) {
         logger.error(`Failed to upload to R2, using original URL`, error);
         // Fallback to original URL
