@@ -39,15 +39,19 @@ export class DrizzleWebhookRepository {
     statusCode?: number,
     errorMessage?: string
   ): Promise<string> {
-    const fakeDelivery = {
-      notificationId,
+    const deliveryResult: WebhookDeliveryResult = {
+      messageId: notificationId,
       subscriptionId,
-      success,
+      status: success ? 'sent' : 'failed',
       statusCode,
-      errorMessage
+      error: errorMessage,
+      responseBody: undefined,
+      deliveredAt: this.dbClient.getCurrentTimestamp(),
+      deliveryTimeMs: 0,
+      attempt: 1,
     };
 
-    return await this.logDelivery(fakeDelivery);
+    return await this.logDelivery(deliveryResult);
   }
 
   /**
@@ -59,19 +63,19 @@ export class DrizzleWebhookRepository {
 
       const deliveryData = {
         id: this.dbClient.generateId(),
-        notificationId: delivery.notificationId,
+        notificationId: delivery.messageId,
         subscriptionId: delivery.subscriptionId,
-        analysisJobId: delivery.analysisJobId || null,
-        eventType: delivery.eventType,
-        status: delivery.success ? 'sent' : 'failed',
+        analysisJobId: null,
+        eventType: 'webhook.delivery',
+        status: delivery.status,
         statusCode: delivery.statusCode || null,
         attempts: delivery.attempt || 1,
         responseBody: delivery.responseBody || null,
-        errorMessage: delivery.errorMessage || null,
+        errorMessage: delivery.error || null,
         createdAt: this.dbClient.getCurrentTimestamp(),
-        deliveredAt: delivery.success ? this.dbClient.getCurrentTimestamp() : null,
+        deliveredAt: delivery.deliveredAt,
         nextRetryAt: null,
-        metadata: this.dbClient.stringifyJson(delivery.metadata || {})
+        metadata: '{}'
       };
 
       const result = await db.insert(schema.webhookDeliveries)
@@ -92,15 +96,15 @@ export class DrizzleWebhookRepository {
 
       logger.info('Webhook delivery logged', {
         deliveryId: result[0].id,
-        notificationId: delivery.notificationId,
-        success: delivery.success,
+        messageId: delivery.messageId,
+        status: delivery.status,
         statusCode: delivery.statusCode
       });
 
       return result[0].id;
     } catch (error) {
       logger.error('Failed to log webhook delivery', {
-        notificationId: delivery.notificationId,
+        messageId: delivery.messageId,
         error
       });
       throw error;
@@ -354,18 +358,16 @@ export class DrizzleWebhookRepository {
     try {
       const db = this.dbClient.getDb();
 
-      let query = db.select()
+      const whereConditions = subscriptionId
+        ? and(
+            eq(schema.webhookDeliveries.status, 'failed'),
+            eq(schema.webhookDeliveries.subscriptionId, subscriptionId)
+          )
+        : eq(schema.webhookDeliveries.status, 'failed');
+
+      const deliveries = await db.select()
         .from(schema.webhookDeliveries)
-        .where(eq(schema.webhookDeliveries.status, 'failed'));
-
-      if (subscriptionId) {
-        query = query.where(and(
-          eq(schema.webhookDeliveries.status, 'failed'),
-          eq(schema.webhookDeliveries.subscriptionId, subscriptionId)
-        ));
-      }
-
-      const deliveries = await query
+        .where(whereConditions)
         .orderBy(desc(schema.webhookDeliveries.createdAt))
         .limit(limit);
 
@@ -395,16 +397,16 @@ export class DrizzleWebhookRepository {
       // Keep failed deliveries longer for analysis
       const result = await db.delete(schema.webhookDeliveries)
         .where(and(
-          gte(schema.webhookDeliveries.createdAt, '<', cutoffDateStr),
+          lte(schema.webhookDeliveries.createdAt, cutoffDateStr),
           inArray(schema.webhookDeliveries.status, ['sent', 'retry'])
         ));
 
       logger.info('Old webhook deliveries cleaned up', {
-        deletedCount: result.changes || 0,
+        deletedCount: result.meta.changes || 0,
         cutoffDate: cutoffDateStr
       });
 
-      return result.changes || 0;
+      return result.meta.changes || 0;
     } catch (error) {
       logger.error('Failed to cleanup old webhook deliveries', {
         daysOld,
