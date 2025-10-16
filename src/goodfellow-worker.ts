@@ -140,27 +140,13 @@ async function sendMessagesToQueue(
   configs: SpiderConfig[],
   dateRange: DateRange,
   crawlJobId: string,
-  logger: any,
-  scopeFilter?: GazetteScope | GazetteScope[]
+  logger: any
 ): Promise<{ enqueuedCount: number; failedCount: number }> {
   let enqueuedCount = 0;
   let failedCount = 0;
   const BATCH_SIZE = 100;
 
-  // Apply scope filtering
-  let filteredConfigs = configs;
-  if (scopeFilter) {
-    const allowedScopes = Array.isArray(scopeFilter) ? scopeFilter : [scopeFilter];
-    filteredConfigs = configs.filter(c => allowedScopes.includes(c.gazetteScope));
-    
-    logger.info(`Filtered ${configs.length} configs to ${filteredConfigs.length} by scope`, {
-      originalCount: configs.length,
-      filteredCount: filteredConfigs.length,
-      scopeFilter: allowedScopes
-    });
-  }
-
-  const messages: QueueMessage[] = filteredConfigs.map((config) => ({
+  const messages: QueueMessage[] = configs.map((config) => ({
     spiderId: config.id,
     territoryId: config.territoryId,
     spiderType: config.spiderType,
@@ -245,7 +231,7 @@ app.post('/crawl', async (c) => {
 
     const dateRange = getDateRange(request.startDate, request.endDate);
 
-    const configs =
+    let configs =
       request.cities === 'all'
         ? spiderRegistry.getAllConfigs()
         : request.cities
@@ -264,6 +250,34 @@ app.post('/crawl', async (c) => {
       );
     }
 
+    // Apply scope filtering at endpoint level
+    const originalCount = configs.length;
+    if (request.scopeFilter) {
+      const allowedScopes = Array.isArray(request.scopeFilter) 
+        ? request.scopeFilter 
+        : [request.scopeFilter];
+      
+      configs = configs.filter(c => allowedScopes.includes(c.gazetteScope));
+      
+      logger.info(`Filtered configs by scope`, {
+        originalCount,
+        filteredCount: configs.length,
+        scopeFilter: allowedScopes
+      });
+
+      if (configs.length === 0) {
+        return c.json<DispatchResponse>(
+          {
+            success: false,
+            tasksEnqueued: 0,
+            cities: [],
+            error: `No cities match the specified scope filter: ${allowedScopes.join(', ')}. Found ${originalCount} cities before filtering.`,
+          },
+          400
+        );
+      }
+    }
+
     const db = getDatabase(c.env);
     const telemetry = new TelemetryService(db);
 
@@ -275,6 +289,8 @@ app.post('/crawl', async (c) => {
       metadata: {
         requestType: 'manual',
         requestedCities: request.cities,
+        scopeFilter: request.scopeFilter,
+        originalCityCount: originalCount,
         userAgent: c.req.header('user-agent'),
       },
     });
@@ -289,16 +305,11 @@ app.post('/crawl', async (c) => {
       configs,
       dateRange,
       crawlJobId,
-      logger,
-      request.scopeFilter
+      logger
     );
 
     await telemetry.updateCrawlJob(crawlJobId, {
       status: failedCount === 0 ? 'running' : 'failed',
-      metadata: {
-        enqueuedCount,
-        failedCount,
-      },
     });
 
     const success = failedCount === 0;
@@ -349,9 +360,36 @@ app.post('/crawl/today-yesterday', async (c) => {
     const endDate = toISODate(today);
 
     const allConfigs = spiderRegistry.getAllConfigs();
-    const configs = platform
+    let configs = platform
       ? allConfigs.filter((config) => config.spiderType === platform)
       : allConfigs;
+
+    // Apply scope filtering at endpoint level
+    const originalCount = configs.length;
+    if (scopeFilter) {
+      const allowedScopes = Array.isArray(scopeFilter) 
+        ? scopeFilter 
+        : [scopeFilter];
+      
+      configs = configs.filter(c => allowedScopes.includes(c.gazetteScope));
+      
+      logger.info(`Filtered configs by scope`, {
+        originalCount,
+        filteredCount: configs.length,
+        scopeFilter: allowedScopes
+      });
+
+      if (configs.length === 0) {
+        return c.json(
+          {
+            success: false,
+            tasksEnqueued: 0,
+            error: `No cities match the specified scope filter: ${allowedScopes.join(', ')}. Found ${originalCount} cities before filtering.`,
+          },
+          400
+        );
+      }
+    }
 
     const db = getDatabase(c.env);
     const telemetry = new TelemetryService(db);
@@ -365,6 +403,8 @@ app.post('/crawl/today-yesterday', async (c) => {
       metadata: {
         requestType: 'today-yesterday',
         platform: platform || 'all',
+        scopeFilter: scopeFilter,
+        originalCityCount: originalCount,
         userAgent: c.req.header('user-agent'),
       },
     });
@@ -378,16 +418,11 @@ app.post('/crawl/today-yesterday', async (c) => {
       configs,
       dateRange,
       crawlJobId,
-      logger,
-      scopeFilter
+      logger
     );
 
     await telemetry.updateCrawlJob(crawlJobId, {
       status: failedCount === 0 ? 'running' : 'failed',
-      metadata: {
-        enqueuedCount,
-        failedCount,
-      },
     });
 
     const success = failedCount === 0;
@@ -444,7 +479,7 @@ app.post('/crawl/cities', async (c) => {
 
     const dateRange = getDateRange(startDate, endDate);
 
-    const configs = cities
+    let configs = cities
       .map((id) => spiderRegistry.getConfig(id))
       .filter((config): config is NonNullable<typeof config> => config !== undefined);
 
@@ -456,6 +491,33 @@ app.post('/crawl/cities', async (c) => {
         },
         400
       );
+    }
+
+    // Apply scope filtering at endpoint level
+    const originalCount = configs.length;
+    if (scopeFilter) {
+      const allowedScopes = Array.isArray(scopeFilter) 
+        ? scopeFilter 
+        : [scopeFilter];
+      
+      configs = configs.filter(c => allowedScopes.includes(c.gazetteScope));
+      
+      logger.info(`Filtered configs by scope`, {
+        originalCount,
+        filteredCount: configs.length,
+        scopeFilter: allowedScopes
+      });
+
+      if (configs.length === 0) {
+        return c.json(
+          {
+            success: false,
+            tasksEnqueued: 0,
+            error: `No cities match the specified scope filter: ${allowedScopes.join(', ')}. Found ${originalCount} cities before filtering.`,
+          },
+          400
+        );
+      }
     }
 
     const db = getDatabase(c.env);
@@ -470,6 +532,8 @@ app.post('/crawl/cities', async (c) => {
         requestType: 'cities',
         requestedCities: cities,
         validCities: configs.map((c) => c.id),
+        scopeFilter: scopeFilter,
+        originalCityCount: originalCount,
         userAgent: c.req.header('user-agent'),
       },
     });
@@ -482,16 +546,11 @@ app.post('/crawl/cities', async (c) => {
       configs,
       dateRange,
       crawlJobId,
-      logger,
-      scopeFilter
+      logger
     );
 
     await telemetry.updateCrawlJob(crawlJobId, {
       status: failedCount === 0 ? 'running' : 'failed',
-      metadata: {
-        enqueuedCount,
-        failedCount,
-      },
     });
 
     const success = failedCount === 0;
