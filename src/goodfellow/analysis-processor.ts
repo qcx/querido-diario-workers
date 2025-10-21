@@ -291,7 +291,7 @@ async function processAnalysisMessage(
   });
 
   // Perform analysis
-  let analysis = await orchestrator.analyze(ocrResult, territoryId);
+  let analysis = await orchestrator.analyze(ocrResult, territoryId, message.body.pdfUrl);
 
   // Apply deduplication to findings
   try {

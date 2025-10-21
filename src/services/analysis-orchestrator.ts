@@ -96,7 +96,7 @@ export class AnalysisOrchestrator {
   /**
    * Analyze OCR result with all enabled analyzers
    */
-  async analyze(ocrResult: OcrResult, territoryId?: string): Promise<GazetteAnalysis> {
+  async analyze(ocrResult: OcrResult, territoryId?: string, pdfUrl?: string): Promise<GazetteAnalysis> {
     const startTime = Date.now();
     const jobId = `analysis-${ocrResult.jobId}-${Date.now()}`;
 
@@ -157,6 +157,7 @@ export class AnalysisOrchestrator {
       analyzedAt: new Date().toISOString(),
       extractedText: ocrResult.extractedText || '',
       textLength: ocrResult.extractedText?.length || 0,
+      pdfUrl,
       analyses,
       summary,
       metadata: {

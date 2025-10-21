@@ -49,6 +49,9 @@ export interface GazetteAnalysis {
   extractedText: string;
   textLength: number;
   
+  // PDF URL (R2 link or original source)
+  pdfUrl?: string;
+  
   // Analysis results
   analyses: AnalysisResult[];
   
