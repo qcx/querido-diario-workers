@@ -163,7 +163,9 @@ async function processWebhookMessage(
     subscriptionId,      // subscriptionId
     result.success,      // success boolean
     result.statusCode,   // statusCode (optional)
-    result.error         // errorMessage (optional)
+    result.error,        // errorMessage (optional)
+    result.responseBody, // responseBody (optional)
+    deliveryTimeMs       // deliveryTimeMs (optional)
   );
 
   // Handle retry

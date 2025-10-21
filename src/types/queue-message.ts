@@ -57,4 +57,10 @@ export interface DispatchResponse {
   cities: string[];
   crawlJobId?: string;
   error?: string;
+  activeJobs?: Array<{
+    id: string;
+    status: string;
+    jobType: string;
+    createdAt: string;
+  }>;
 }

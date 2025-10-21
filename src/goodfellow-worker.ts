@@ -209,11 +209,29 @@ async function sendMessagesToQueue(
 }
 
 /**
+ * Check for active crawl jobs to prevent queue backlog
+ */
+async function hasActiveCrawlJobs(telemetry: TelemetryService): Promise<{
+  hasActive: boolean;
+  activeJobs?: Array<{ id: string; status: string; createdAt: string; jobType: string }>;
+}> {
+  const recentJobs = await telemetry.getRecentJobs(10);
+  const activeJobs = recentJobs.filter(job => 
+    job.status === 'running' || job.status === 'pending'
+  );
+  
+  return {
+    hasActive: activeJobs.length > 0,
+    activeJobs: activeJobs.length > 0 ? activeJobs : undefined
+  };
+}
+
+/**
  * Dispatch crawl jobs to the queue
  */
 app.post('/crawl', async (c) => {
   try {
-    const request = await c.req.json<DispatchRequest>();
+    const request = await c.req.json<DispatchRequest & { force?: boolean }>();
 
     logger.info('Received crawl request', { request });
 
@@ -280,6 +298,33 @@ app.post('/crawl', async (c) => {
 
     const db = getDatabase(c.env);
     const telemetry = new TelemetryService(db);
+
+    // Check for active crawl jobs unless forced
+    if (!request.force) {
+      const activeCheck = await hasActiveCrawlJobs(telemetry);
+      if (activeCheck.hasActive) {
+        logger.warn('Crawl request blocked due to active jobs', {
+          activeJobs: activeCheck.activeJobs,
+          requestType: 'manual'
+        });
+
+        return c.json<DispatchResponse>(
+          {
+            success: false,
+            tasksEnqueued: 0,
+            cities: [],
+            error: `Cannot start crawl: ${activeCheck.activeJobs?.length} active job(s) found`,
+            activeJobs: activeCheck.activeJobs?.map(job => ({
+              id: job.id,
+              status: job.status,
+              jobType: job.jobType,
+              createdAt: job.createdAt
+            }))
+          },
+          409 // Conflict status code
+        );
+      }
+    }
 
     const crawlJobId = await telemetry.createCrawlJob({
       jobType: 'manual',
@@ -348,9 +393,9 @@ app.post('/crawl', async (c) => {
  */
 app.post('/crawl/today-yesterday', async (c) => {
   try {
-    const { platform, scopeFilter } = await c.req.json().catch(() => ({}));
+    const { platform, scopeFilter, force } = await c.req.json().catch(() => ({}));
 
-    logger.info('Starting today-yesterday crawl', { platform, scopeFilter });
+    logger.info('Starting today-yesterday crawl', { platform, scopeFilter, force });
 
     const today = new Date();
     const yesterday = new Date(today);
@@ -393,6 +438,32 @@ app.post('/crawl/today-yesterday', async (c) => {
 
     const db = getDatabase(c.env);
     const telemetry = new TelemetryService(db);
+
+    // Check for active crawl jobs unless forced
+    if (!force) {
+      const activeCheck = await hasActiveCrawlJobs(telemetry);
+      if (activeCheck.hasActive) {
+        logger.warn('Today-yesterday crawl blocked due to active jobs', {
+          activeJobs: activeCheck.activeJobs,
+          requestType: 'today-yesterday'
+        });
+
+        return c.json(
+          {
+            success: false,
+            tasksEnqueued: 0,
+            error: `Cannot start crawl: ${activeCheck.activeJobs?.length} active job(s) found`,
+            activeJobs: activeCheck.activeJobs?.map(job => ({
+              id: job.id,
+              status: job.status,
+              jobType: job.jobType,
+              createdAt: job.createdAt
+            }))
+          },
+          409
+        );
+      }
+    }
 
     const crawlJobId = await telemetry.createCrawlJob({
       jobType: 'scheduled',
@@ -463,7 +534,7 @@ app.post('/crawl/today-yesterday', async (c) => {
  */
 app.post('/crawl/cities', async (c) => {
   try {
-    const { cities, startDate, endDate, scopeFilter } = await c.req.json();
+    const { cities, startDate, endDate, scopeFilter, force } = await c.req.json();
 
     if (!cities || !Array.isArray(cities) || cities.length === 0) {
       return c.json(
@@ -475,7 +546,7 @@ app.post('/crawl/cities', async (c) => {
       );
     }
 
-    logger.info('Starting cities crawl', { cities, startDate, endDate, scopeFilter });
+    logger.info('Starting cities crawl', { cities, startDate, endDate, scopeFilter, force });
 
     const dateRange = getDateRange(startDate, endDate);
 
@@ -522,6 +593,32 @@ app.post('/crawl/cities', async (c) => {
 
     const db = getDatabase(c.env);
     const telemetry = new TelemetryService(db);
+
+    // Check for active crawl jobs unless forced
+    if (!force) {
+      const activeCheck = await hasActiveCrawlJobs(telemetry);
+      if (activeCheck.hasActive) {
+        logger.warn('Cities crawl blocked due to active jobs', {
+          activeJobs: activeCheck.activeJobs,
+          requestType: 'cities'
+        });
+
+        return c.json(
+          {
+            success: false,
+            tasksEnqueued: 0,
+            error: `Cannot start crawl: ${activeCheck.activeJobs?.length} active job(s) found`,
+            activeJobs: activeCheck.activeJobs?.map(job => ({
+              id: job.id,
+              status: job.status,
+              jobType: job.jobType,
+              createdAt: job.createdAt
+            }))
+          },
+          409
+        );
+      }
+    }
 
     const crawlJobId = await telemetry.createCrawlJob({
       jobType: 'cities',

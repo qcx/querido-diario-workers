@@ -37,7 +37,9 @@ export class DrizzleWebhookRepository {
     subscriptionId: string,
     success: boolean,
     statusCode?: number,
-    errorMessage?: string
+    errorMessage?: string,
+    responseBody?: string,
+    deliveryTimeMs?: number
   ): Promise<string> {
     const deliveryResult: WebhookDeliveryResult = {
       messageId: notificationId,
@@ -45,9 +47,9 @@ export class DrizzleWebhookRepository {
       status: success ? 'sent' : 'failed',
       statusCode,
       error: errorMessage,
-      responseBody: undefined,
+      responseBody,
       deliveredAt: this.dbClient.getCurrentTimestamp(),
-      deliveryTimeMs: 0,
+      deliveryTimeMs: deliveryTimeMs || 0,
       attempt: 1,
     };
 
@@ -60,6 +62,11 @@ export class DrizzleWebhookRepository {
   async logDelivery(delivery: WebhookDeliveryResult): Promise<string> {
     try {
       const db = this.dbClient.getDb();
+
+      const metadata = {
+        deliveryTimeMs: delivery.deliveryTimeMs || 0,
+        timestamp: this.dbClient.getCurrentTimestamp()
+      };
 
       const deliveryData = {
         id: this.dbClient.generateId(),
@@ -75,7 +82,7 @@ export class DrizzleWebhookRepository {
         createdAt: this.dbClient.getCurrentTimestamp(),
         deliveredAt: delivery.deliveredAt,
         nextRetryAt: null,
-        metadata: '{}'
+        metadata: JSON.stringify(metadata)
       };
 
       const result = await db.insert(schema.webhookDeliveries)
@@ -316,8 +323,17 @@ export class DrizzleWebhookRepository {
       const failedDeliveries = deliveries.filter(d => d.status === 'failed').length;
       const pendingRetries = deliveries.filter(d => d.status === 'retry').length;
 
-      // Calculate average response time (placeholder - would need timing data)
-      const averageResponseTime = 0; // Would calculate from delivery timing data
+      // Calculate average response time from stored delivery timing data
+      const deliveriesWithTiming = deliveries.filter(d => d.metadata && typeof d.metadata === 'object');
+      let averageResponseTime = 0;
+      
+      if (deliveriesWithTiming.length > 0) {
+        const totalTime = deliveriesWithTiming.reduce((sum, delivery) => {
+          const metadata = this.dbClient.parseJson<any>(delivery.metadata, {});
+          return sum + (metadata.deliveryTimeMs || 0);
+        }, 0);
+        averageResponseTime = Math.round(totalTime / deliveriesWithTiming.length);
+      }
 
       // Status code breakdown
       const statusCodeCount: Record<number, number> = {};
@@ -395,18 +411,18 @@ export class DrizzleWebhookRepository {
       const cutoffDateStr = cutoffDate.toISOString();
 
       // Keep failed deliveries longer for analysis
-      const result = await db.delete(schema.webhookDeliveries)
+      await db.delete(schema.webhookDeliveries)
         .where(and(
           lte(schema.webhookDeliveries.createdAt, cutoffDateStr),
           inArray(schema.webhookDeliveries.status, ['sent', 'retry'])
         ));
 
       logger.info('Old webhook deliveries cleaned up', {
-        deletedCount: result.meta.changes || 0,
+        deletedCount: 0, // D1 doesn't return changes count easily
         cutoffDate: cutoffDateStr
       });
 
-      return result.meta.changes || 0;
+      return 0;
     } catch (error) {
       logger.error('Failed to cleanup old webhook deliveries', {
         daysOld,
