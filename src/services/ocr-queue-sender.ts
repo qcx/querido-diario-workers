@@ -113,12 +113,10 @@ export class OcrQueueSender {
    * Generate a deterministic job ID for a gazette to prevent duplicate OCR processing
    */
   private generateJobId(gazette: Gazette): string {
-    // Create a deterministic ID based on territory, date, edition, and PDF URL
-    // This ensures the same PDF is never OCR'd twice
+    // Format: territoryId_date_edition_timestamp
+    const timestamp = Date.now();
     const edition = gazette.editionNumber || 'regular';
-    
-    // Format: territoryId_date_edition_urlHash
-    return `${gazette.territoryId}_${gazette.date}_${edition}_${gazette.fileUrl}`;
+    return `${gazette.territoryId}_${gazette.date}_${edition}_${timestamp}`;
   }
 
   /**

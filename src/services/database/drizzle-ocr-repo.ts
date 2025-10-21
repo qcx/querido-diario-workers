@@ -3,7 +3,7 @@
  * Replaces ocr-repo.ts with Drizzle ORM implementation
  */
 
-import { eq, desc, and } from 'drizzle-orm';
+import { eq, desc, and, gte, like } from 'drizzle-orm';
 import { DrizzleDatabaseClient, schema } from './drizzle-client';
 import { logger } from '../../utils/logger';
 import type { OcrResult } from '../../types';
@@ -20,6 +20,8 @@ export interface OcrResultRecord {
   processingMethod: string | null;
   createdAt: string;
   metadata: OcrMetadata;
+  pdfUrl?: string; // Added for URL-based deduplication
+  pdfR2Key?: string | null; // Added for R2 storage key reuse
 }
 
 export interface OcrMetadataRecord {
@@ -75,7 +77,7 @@ export class DrizzleOcrRepository {
         textLength: (ocrResult.extractedText || '').length,
         confidenceScore: ocrResult.confidence || null,
         languageDetected: ocrResult.language || 'pt',
-        processingMethod: ocrResult.method || 'mistral',
+        processingMethod: 'mistral', // Currently only using Mistral OCR
         createdAt: this.dbClient.getCurrentTimestamp(),
         metadata: this.dbClient.stringifyJson(ocrResult.metadata || {})
       };
@@ -127,15 +129,13 @@ export class DrizzleOcrRepository {
       logger.info('OCR result stored successfully', {
         ocrId: result[0].id,
         jobId: ocrResult.jobId,
-        gazetteJobId: ocrResult.gazetteJobId,
-        textLength: ocrResult.extractedText.length
+        textLength: (ocrResult.extractedText || '').length
       });
 
       return result[0].id;
     } catch (error) {
       logger.error('Failed to store OCR result', {
         jobId: ocrResult.jobId,
-        gazetteJobId: ocrResult.gazetteJobId,
         error
       });
       throw error;
@@ -189,6 +189,82 @@ export class DrizzleOcrRepository {
       logger.error('Failed to get OCR result by job ID', {
         jobId,
         error
+      });
+      throw error;
+    }
+  }
+
+  /**
+   * Find OCR result by PDF URL within a time window
+   * Used for deduplication to avoid processing the same PDF multiple times
+   */
+  async findOcrByPdfUrl(
+    pdfUrl: string,
+    daysWindow: number = 30
+  ): Promise<OcrResultRecord | null> {
+    try {
+      const db = this.dbClient.getDb();
+
+      // Calculate cutoff date
+      const cutoffDate = new Date();
+      cutoffDate.setDate(cutoffDate.getDate() - daysWindow);
+      const cutoffDateStr = cutoffDate.toISOString();
+
+      // Join ocr_results with gazette_registry to get PDF URL
+      const results = await db.select({
+        id: schema.ocrResults.id,
+        jobId: schema.ocrResults.jobId,
+        gazetteId: schema.ocrResults.gazetteId,
+        extractedText: schema.ocrResults.extractedText,
+        textLength: schema.ocrResults.textLength,
+        confidenceScore: schema.ocrResults.confidenceScore,
+        languageDetected: schema.ocrResults.languageDetected,
+        processingMethod: schema.ocrResults.processingMethod,
+        createdAt: schema.ocrResults.createdAt,
+        metadata: schema.ocrResults.metadata,
+        pdfUrl: schema.gazetteRegistry.pdfUrl,
+        pdfR2Key: schema.gazetteRegistry.pdfR2Key,
+      })
+        .from(schema.ocrResults)
+        .innerJoin(
+          schema.gazetteRegistry,
+          eq(schema.ocrResults.gazetteId, schema.gazetteRegistry.id)
+        )
+        .where(
+          and(
+            eq(schema.gazetteRegistry.pdfUrl, pdfUrl),
+            // SQLite string comparison works for ISO dates
+            gte(schema.ocrResults.createdAt, cutoffDateStr)
+          )
+        )
+        .orderBy(desc(schema.ocrResults.createdAt))
+        .limit(1);
+
+      if (results.length === 0) {
+        logger.debug('No OCR result found for PDF URL within time window', {
+          pdfUrl: pdfUrl.substring(0, 100),
+          daysWindow,
+        });
+        return null;
+      }
+
+      const record = results[0];
+      logger.info('Found existing OCR result for PDF URL', {
+        jobId: record.jobId,
+        pdfUrl: pdfUrl.substring(0, 100),
+        createdAt: record.createdAt,
+        daysWindow,
+      });
+
+      return {
+        ...record,
+        metadata: this.dbClient.parseJson<OcrMetadata>(record.metadata, {}),
+      };
+    } catch (error) {
+      logger.error('Failed to find OCR result by PDF URL', {
+        pdfUrl: pdfUrl.substring(0, 100),
+        daysWindow,
+        error,
       });
       throw error;
     }
@@ -305,9 +381,9 @@ export class DrizzleOcrRepository {
 
       const metadata = await db.select()
         .from(schema.ocrMetadata)
-        .where(and(
-          eq(schema.ocrMetadata.createdAt, '>=', cutoffDateStr)
-        ));
+        .where(
+          gte(schema.ocrMetadata.createdAt, cutoffDateStr)
+        );
 
       if (metadata.length === 0) {
         return {
@@ -358,7 +434,7 @@ export class DrizzleOcrRepository {
       // Simple LIKE search (SQLite supports this)
       const results = await db.select()
         .from(schema.ocrResults)
-        .where(eq(schema.ocrResults.extractedText, 'LIKE', `%${searchTerm}%`))
+        .where(like(schema.ocrResults.extractedText, `%${searchTerm}%`))
         .orderBy(desc(schema.ocrResults.createdAt))
         .limit(limit)
         .offset(offset);
@@ -366,7 +442,7 @@ export class DrizzleOcrRepository {
       // Get total count for the same search
       const totalResults = await db.select({ count: schema.ocrResults.id })
         .from(schema.ocrResults)
-        .where(eq(schema.ocrResults.extractedText, 'LIKE', `%${searchTerm}%`));
+        .where(like(schema.ocrResults.extractedText, `%${searchTerm}%`));
 
       const records = results.map(record => ({
         ...record,

@@ -43,6 +43,7 @@ export async function processOcrBatch(
 
   const results: OcrResult[] = [];
   const successfulResults: { ocrMessage: OcrQueueMessage; result: OcrResult }[] = [];
+  let deduplicatedCount = 0;
 
   for (const message of batch.messages) {
     const startTime = Date.now();
@@ -75,13 +76,14 @@ export async function processOcrBatch(
       );
 
       let result: OcrResult;
+      let deduplicatedFrom: string | undefined;
 
-      // Check if already processed in database first
+      // Step 1: Check if already processed in database by jobId
       const existingOcr = await ocrRepo.ocrResultExists(ocrMessage.jobId);
       if (existingOcr) {
         const ocrRecord = await ocrRepo.getOcrResultByJobId(ocrMessage.jobId);
         if (ocrRecord) {
-          logger.info(`OCR job ${ocrMessage.jobId} already processed (database hit)`, {
+          logger.info(`OCR job ${ocrMessage.jobId} already processed (database hit by jobId)`, {
             jobId: ocrMessage.jobId,
           });
 
@@ -102,23 +104,61 @@ export async function processOcrBatch(
           result = await ocrService.processPdf(ocrMessage);
         }
       } else {
-        // Check KV cache as fallback
-        let cached = null;
-        if (env.OCR_RESULTS) {
-          const cachedData = await env.OCR_RESULTS.get(`ocr:${ocrMessage.jobId}`);
-          if (cachedData) {
-            cached = JSON.parse(cachedData);
-            logger.info(`OCR job ${ocrMessage.jobId} found in KV cache`, {
-              jobId: ocrMessage.jobId,
-            });
-          }
-        }
+        // Step 2: Check by PDF URL for deduplication (30-day window)
+        const existingByUrl = await ocrRepo.findOcrByPdfUrl(ocrMessage.pdfUrl, 30);
+        
+        if (existingByUrl) {
+          // Found existing OCR for this PDF URL - clone it for this territory
+          logger.info(`OCR deduplication hit for PDF URL`, {
+            jobId: ocrMessage.jobId,
+            originalJobId: existingByUrl.jobId,
+            pdfUrl: ocrMessage.pdfUrl.substring(0, 100),
+            territoryId: ocrMessage.territoryId,
+          });
 
-        if (cached) {
-          result = cached;
+          deduplicatedFrom = existingByUrl.jobId;
+          deduplicatedCount++;
+          
+          result = {
+            jobId: ocrMessage.jobId,
+            status: 'success',
+            extractedText: existingByUrl.extractedText,
+            pdfUrl: ocrMessage.pdfUrl,
+            pdfR2Key: existingByUrl.pdfR2Key, // Reuse R2 key
+            territoryId: ocrMessage.territoryId,
+            publicationDate: ocrMessage.publicationDate,
+            editionNumber: ocrMessage.editionNumber,
+            spiderId: ocrMessage.spiderId,
+            pagesProcessed: existingByUrl.textLength ? Math.ceil(existingByUrl.textLength / 2000) : undefined,
+            processingTimeMs: 0, // Instant since we're reusing
+            confidence: existingByUrl.confidenceScore || undefined,
+            language: existingByUrl.languageDetected || undefined,
+            completedAt: new Date().toISOString(),
+            metadata: {
+              ...ocrMessage.metadata,
+              deduplicatedFrom: existingByUrl.jobId,
+              originalCreatedAt: existingByUrl.createdAt,
+            },
+          };
         } else {
-          // Process the PDF
-          result = await ocrService.processPdf(ocrMessage);
+          // Step 3: Check KV cache as fallback
+          let cached = null;
+          if (env.OCR_RESULTS) {
+            const cachedData = await env.OCR_RESULTS.get(`ocr:${ocrMessage.jobId}`);
+            if (cachedData) {
+              cached = JSON.parse(cachedData);
+              logger.info(`OCR job ${ocrMessage.jobId} found in KV cache`, {
+                jobId: ocrMessage.jobId,
+              });
+            }
+          }
+
+          if (cached) {
+            result = cached;
+          } else {
+            // Step 4: Process the PDF (no cache hit)
+            result = await ocrService.processPdf(ocrMessage);
+          }
         }
 
         // Store in database
@@ -138,11 +178,12 @@ export async function processOcrBatch(
                 const gazette = await gazetteRepo.getGazetteByJobId(gazetteJobId);
                 if (gazette) {
                   await gazetteRepo.updateR2Key(gazette.id, result.pdfR2Key);
-                  logger.info(`Updated gazette with R2 key`, {
+                  logger.info(`Updated gazette with R2 key${deduplicatedFrom ? ' (reused from deduplication)' : ''}`, {
                     ocrJobId: ocrMessage.jobId,
                     gazetteJobId,
                     gazetteId: gazette.id,
                     pdfR2Key: result.pdfR2Key,
+                    deduplicatedFrom: deduplicatedFrom,
                   });
                 } else {
                   logger.warn(`Gazette not found for job ID`, {
@@ -158,6 +199,7 @@ export async function processOcrBatch(
                     ocrJobId: ocrMessage.jobId,
                     crawlJobId,
                     pdfR2Key: result.pdfR2Key,
+                    deduplicatedFrom: deduplicatedFrom,
                   }
                 );
               }
@@ -227,7 +269,9 @@ export async function processOcrBatch(
                 confidenceScore: result.confidenceScore,
                 languageDetected: result.languageDetected || 'pt',
                 docSizeBytes: result.docSizeBytes,
-                crawlJobId: crawlJobId
+                crawlJobId: crawlJobId,
+                deduplicatedFrom: deduplicatedFrom, // Track if this was deduplicated
+                isDeduplicated: !!deduplicatedFrom,
               })
             });
             
@@ -304,6 +348,8 @@ export async function processOcrBatch(
         textLength: result.extractedText?.length || 0,
         executionTimeMs,
         crawlJobId,
+        deduplicatedFrom: deduplicatedFrom,
+        isDeduplicated: !!deduplicatedFrom,
       });
     } catch (error: any) {
       const executionTimeMs = Date.now() - startTime;
@@ -418,5 +464,9 @@ export async function processOcrBatch(
     successful: results.filter((r) => r.status === 'success').length,
     failed: results.filter((r) => r.status === 'failure').length,
     sentToAnalysis: successfulResults.length,
+    deduplicated: deduplicatedCount,
+    deduplicationRate: batch.messages.length > 0 
+      ? `${((deduplicatedCount / batch.messages.length) * 100).toFixed(1)}%` 
+      : '0%',
   });
 }
