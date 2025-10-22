@@ -39,26 +39,33 @@ CREATE TABLE crawl_telemetry (
 );
 
 -- 3. GAZETTE_REGISTRY - Gazette metadata (permanent record)
-CREATE TABLE gazette_registry (
+CREATE TABLE gazette_crawls(
     id TEXT PRIMARY KEY,
     job_id TEXT UNIQUE NOT NULL,
     territory_id TEXT NOT NULL,
+    spider_id TEXT NOT NULL,
+    gazette_id TEXT NOT NULL,
+    scraped_at TEXT NOT NULL,  -- ISO 8601 timestamp
+    created_at TEXT NOT NULL DEFAULT (datetime('now')),
+);
+
+-- 3. GAZETTE_REGISTRY - Gazette metadata (permanent record)
+CREATE TABLE gazette_registry (
+    id TEXT PRIMARY KEY,
     publication_date TEXT NOT NULL,  -- ISO 8601 date format
     edition_number TEXT,
-    spider_id TEXT NOT NULL,
-    pdf_url TEXT NOT NULL,
+    pdf_url TEXT NOT NULL UNIQUE,
     pdf_r2_key TEXT,
     is_extra_edition INTEGER NOT NULL DEFAULT 0,  -- SQLite boolean (0/1)
     power TEXT,
-    scraped_at TEXT NOT NULL,  -- ISO 8601 timestamp
     created_at TEXT NOT NULL DEFAULT (datetime('now')),
+    status TEXT NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'uploaded', 'ocr_processing', 'ocr_retrying', 'ocr_failure', 'ocr_success')),
     metadata TEXT DEFAULT '{}'
 );
 
--- 4. OCR_RESULTS - OCR results with extracted text
+-- 4. OCR_RESULTS - OCR results with extracted text // necessário para caso 1 gazette precise ter mais de 1 entrada no banco de dados, por exemplo se o tamanho do texto for muito grande e precise ser salvo em partes.
 CREATE TABLE ocr_results (
     id TEXT PRIMARY KEY,
-    job_id TEXT UNIQUE NOT NULL,
     gazette_id TEXT NOT NULL,
     extracted_text TEXT NOT NULL,
     text_length INTEGER NOT NULL DEFAULT 0,
@@ -70,8 +77,8 @@ CREATE TABLE ocr_results (
     FOREIGN KEY (gazette_id) REFERENCES gazette_registry(id) ON DELETE CASCADE
 );
 
--- 5. OCR_METADATA - OCR job tracking (not the text)
-CREATE TABLE ocr_metadata (
+-- 5. OCR_JOBS - OCR job tracking (not the text)
+CREATE TABLE ocr_jobs (
     id TEXT PRIMARY KEY,
     job_id TEXT UNIQUE NOT NULL,
     gazette_id TEXT NOT NULL,
