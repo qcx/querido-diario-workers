@@ -210,15 +210,45 @@ async function sendMessagesToQueue(
 
 /**
  * Check for active crawl jobs to prevent queue backlog
+ * Only considers jobs from the last 24 hours to avoid old stuck jobs blocking new crawls
  */
 async function hasActiveCrawlJobs(telemetry: TelemetryService): Promise<{
   hasActive: boolean;
   activeJobs?: Array<{ id: string; status: string; createdAt: string; jobType: string }>;
 }> {
   const recentJobs = await telemetry.getRecentJobs(10);
-  const activeJobs = recentJobs.filter(job => 
+  
+  // Only consider jobs from the last 24 hours
+  const twentyFourHoursAgo = new Date();
+  twentyFourHoursAgo.setHours(twentyFourHoursAgo.getHours() - 24);
+  
+  const allActiveJobs = recentJobs.filter(job => 
     job.status === 'running' || job.status === 'pending'
   );
+  
+  const activeJobs = allActiveJobs.filter(job => {
+    // Check if job was created within the last 24 hours
+    const jobCreatedAt = new Date(job.createdAt);
+    return jobCreatedAt >= twentyFourHoursAgo;
+  });
+  
+  // Log old stuck jobs that are being ignored
+  const stuckJobs = allActiveJobs.filter(job => {
+    const jobCreatedAt = new Date(job.createdAt);
+    return jobCreatedAt < twentyFourHoursAgo;
+  });
+  
+  if (stuckJobs.length > 0) {
+    logger.warn('Found stuck jobs older than 24h (will be ignored)', {
+      stuckJobCount: stuckJobs.length,
+      stuckJobs: stuckJobs.map(job => ({
+        id: job.id,
+        status: job.status,
+        createdAt: job.createdAt,
+        ageInHours: Math.floor((Date.now() - new Date(job.createdAt).getTime()) / (1000 * 60 * 60))
+      }))
+    });
+  }
   
   return {
     hasActive: activeJobs.length > 0,
