@@ -14,6 +14,8 @@ export const STEP_STATUSES = ['started', 'completed', 'failed', 'skipped'] as co
 export const OCR_STATUSES = ['pending', 'processing', 'success', 'failure', 'partial'] as const;
 export const WEBHOOK_STATUSES = ['pending', 'sent', 'failed', 'retry'] as const;
 export const ERROR_SEVERITIES = ['warning', 'error', 'critical'] as const;
+export const GAZETTE_REGISTRY_STATUSES = ['pending', 'uploaded', 'ocr_processing', 'ocr_retrying', 'ocr_failure', 'ocr_success'] as const;
+export const GAZETTE_CRAWL_STATUSES = ['created', 'processing', 'success', 'failed', 'analysis_pending'] as const;
 
 // 1. CRAWL_JOBS - Track crawling sessions
 export const crawlJobs = sqliteTable('crawl_jobs', {
@@ -62,6 +64,7 @@ export const gazetteCrawls = sqliteTable('gazette_crawls', {
   territoryId: text('territory_id').notNull(),
   spiderId: text('spider_id').notNull(),
   gazetteId: text('gazette_id').notNull().references(() => gazetteRegistry.id, { onDelete: 'cascade' }),
+  analysisResultId: text('analysis_result_id').references(() => analysisResults.id),
   status: text('status').notNull().default('created'),
   scrapedAt: text('scraped_at').notNull(), // ISO 8601 timestamp
   createdAt: text('created_at').notNull().default(sql`(datetime('now'))`)
@@ -70,6 +73,7 @@ export const gazetteCrawls = sqliteTable('gazette_crawls', {
   spiderIdx: index('idx_gazette_crawls_spider').on(table.spiderId, table.scrapedAt),
   jobIdIdx: index('idx_gazette_crawls_job_id').on(table.jobId),
   gazetteIdIdx: index('idx_gazette_crawls_gazette_id').on(table.gazetteId),
+  analysisResultIdx: index('idx_gazette_crawls_analysis_result').on(table.analysisResultId),
 }));
 
 // 4. GAZETTE_REGISTRY - Gazette metadata (permanent record)

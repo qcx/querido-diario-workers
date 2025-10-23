@@ -48,6 +48,7 @@ export interface GazetteAnalysis {
   // OCR data
   extractedText: string;
   textLength: number;
+  pdfUrl?: string;
   
   // Analysis results
   analyses: AnalysisResult[];
@@ -124,6 +125,8 @@ export type EntityType =
 export interface AnalysisQueueMessage {
   jobId: string;
   ocrJobId: string; // Reference to OCR result in KV storage
+  gazetteCrawlId: string; // Which crawl triggered this
+  gazetteId: string; // Which gazette to analyze
   territoryId: string;
   gazetteDate: string;
   pdfUrl?: string;
@@ -131,6 +134,8 @@ export interface AnalysisQueueMessage {
   queuedAt: string;
   metadata?: {
     crawlJobId?: string;
+    spiderId?: string;
+    configSignature?: AnalysisConfigSignature;
     [key: string]: any;
   };
 }
@@ -159,6 +164,16 @@ export interface AnalysisConfig {
       model?: string;
     };
   };
+}
+
+/**
+ * Analysis configuration signature for deduplication
+ */
+export interface AnalysisConfigSignature {
+  version: string;              // Config version (e.g., "1.0.0")
+  enabledAnalyzers: string[];   // Which analyzers are enabled (sorted)
+  customKeywords?: string[];    // Territory-specific keywords (sorted)
+  configHash: string;           // Hash for quick comparison
 }
 
 /**

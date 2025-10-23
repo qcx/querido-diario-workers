@@ -74,3 +74,66 @@ export interface CrawlStats {
   /** Execution time in milliseconds */
   executionTimeMs?: number;
 }
+
+/**
+ * Gazette registry status - tracks OCR processing lifecycle
+ */
+export type GazetteRegistryStatus = 
+  | 'pending'           // Just created, not yet uploaded
+  | 'uploaded'          // PDF uploaded to R2
+  | 'ocr_processing'    // Currently being processed by OCR
+  | 'ocr_retrying'      // OCR failed, retrying
+  | 'ocr_failure'       // OCR permanently failed
+  | 'ocr_success';      // OCR completed successfully
+
+/**
+ * Gazette crawl status - tracks individual crawl attempts
+ */
+export type GazetteCrawlStatus = 
+  | 'created'      // New gazette found, ready for OCR
+  | 'processing'   // OCR is in progress (waiting)
+  | 'success'      // OCR completed successfully, analysis complete
+  | 'analysis_pending'  // Sent to analysis queue, awaiting processing
+  | 'failed';      // OCR failed or gazette has ocr_failure status
+
+/**
+ * Input for creating a gazette_crawl record
+ */
+export interface CreateGazetteCrawlInput {
+  gazetteId: string;
+  jobId: string;
+  territoryId: string;
+  spiderId: string;
+  status: GazetteCrawlStatus;
+  scrapedAt: string;
+}
+
+/**
+ * Gazette crawl record from database
+ */
+export interface GazetteCrawlRecord {
+  id: string;
+  jobId: string;
+  territoryId: string;
+  spiderId: string;
+  gazetteId: string;
+  status: GazetteCrawlStatus;
+  scrapedAt: string;
+  createdAt: string;
+}
+
+/**
+ * Extended gazette registry record with status
+ */
+export interface GazetteRegistryRecord {
+  id: string;
+  publicationDate: string;
+  editionNumber: string | null;
+  pdfUrl: string;
+  pdfR2Key: string | null;
+  isExtraEdition: boolean;
+  power: string | null;
+  createdAt: string;
+  status: GazetteRegistryStatus;
+  metadata: any;
+}

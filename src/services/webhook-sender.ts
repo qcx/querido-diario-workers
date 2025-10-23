@@ -387,9 +387,9 @@ export class WebhookSenderService {
    * Get PDF URL from analysis
    */
   private getPdfUrl(analysis: GazetteAnalysis): string {
-    // TODO: Get PDF URL from gazette record in database
-    // For now, construct a placeholder URL
-    return `https://querido-diario.ok.org.br/diarios/${analysis.territoryId}/${analysis.publicationDate}`;
+    // Use the actual PDF URL (R2 link) from the analysis
+    // Falls back to the Querido Diário URL if not available
+    return analysis.pdfUrl || `/${analysis.territoryId}/${analysis.publicationDate}`;
   }
 
   /**

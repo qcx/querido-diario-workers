@@ -2,3 +2,5 @@ MISTRAL_API_KEY=""
 OPENAI_API_KEY=""
 R2_PUBLIC_URL="" # Will be automatically updated running goodfellow:dev
 API_KEY="" # Optional: Set to enable API key authentication on all endpoints except "/"
+LOCAL_DB_PATH=".wrangler/state/v3/d1/miniflare-D1DatabaseObject/19269416e69c8d78ce25975d3cdc0529b616b7a04fa74a88a7acee62bf21f969.sqlite" # Run find .wrangler -name "*.sqlite" to find yours
+ENVIRONMENT="development"

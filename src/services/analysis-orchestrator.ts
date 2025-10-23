@@ -7,6 +7,7 @@ import {
   GazetteAnalysis,
   AnalysisResult,
   AnalysisConfig,
+  AnalysisConfigSignature,
   Finding,
 } from '../types';
 import {
@@ -94,6 +95,42 @@ export class AnalysisOrchestrator {
   }
 
   /**
+   * Generate config signature for deduplication
+   * Public method so it can be used by analysis processor
+   */
+  public generateConfigSignature(config: AnalysisConfig, territoryId: string): AnalysisConfigSignature {
+    const enabledAnalyzers = Object.entries(config.analyzers)
+      .filter(([_, cfg]) => cfg.enabled)
+      .map(([name, _]) => name)
+      .sort();
+
+    const signature: AnalysisConfigSignature = {
+      version: '1.0.0',
+      enabledAnalyzers,
+      customKeywords: [], // TODO: Load territory-specific keywords
+      configHash: ''
+    };
+
+    // Generate hash from stable representation
+    const hashInput = JSON.stringify({
+      version: signature.version,
+      analyzers: enabledAnalyzers,
+      keywords: signature.customKeywords,
+      territoryId
+    });
+
+    // Simple hash for Cloudflare Workers (no crypto.createHash)
+    const encoder = new TextEncoder();
+    const data = encoder.encode(hashInput);
+    signature.configHash = Array.from(data)
+      .map(b => b.toString(16).padStart(2, '0'))
+      .join('')
+      .substring(0, 32);
+
+    return signature;
+  }
+
+  /**
    * Analyze OCR result with all enabled analyzers
    */
   async analyze(ocrResult: OcrResult, territoryId?: string): Promise<GazetteAnalysis> {
@@ -160,7 +197,10 @@ export class AnalysisOrchestrator {
       analyses,
       summary,
       metadata: {
-        spiderId: ocrResult.spiderId || territoryId?.split('_')[0] + '_' + territoryId?.split('_')[1] || 'unknown',
+        spiderId: ocrResult.spiderId || 
+          (territoryId && territoryId.includes('_') 
+            ? `${territoryId.split('_')[0]}_${territoryId.split('_')[1]}` 
+            : 'unknown'),
         editionNumber: ocrResult.editionNumber,
         power: ocrResult.metadata?.power,
         isExtraEdition: ocrResult.metadata?.isExtraEdition,

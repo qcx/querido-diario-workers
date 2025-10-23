@@ -45,10 +45,12 @@ CREATE TABLE gazette_crawls(
     territory_id TEXT NOT NULL,
     spider_id TEXT NOT NULL,
     gazette_id TEXT NOT NULL,
-    status TEXT NOT NULL DEFAULT 'created' CHECK (status IN ('created', 'processing', 'success', 'failed')),
+    analysis_result_id TEXT,
+    status TEXT NOT NULL DEFAULT 'created' CHECK (status IN ('created', 'processing', 'success', 'failed', 'analysis_pending')),
     scraped_at TEXT NOT NULL,  -- ISO 8601 timestamp
     created_at TEXT NOT NULL DEFAULT (datetime('now')),
-    FOREIGN KEY (gazette_id) REFERENCES gazette_registry(id) ON DELETE CASCADE
+    FOREIGN KEY (gazette_id) REFERENCES gazette_registry(id) ON DELETE CASCADE,
+    FOREIGN KEY (analysis_result_id) REFERENCES analysis_results(id) ON DELETE SET NULL
 );
 
 -- 4. GAZETTE_REGISTRY - Gazette metadata (permanent record)
@@ -182,6 +184,7 @@ CREATE INDEX idx_gazette_crawls_territory_date ON gazette_crawls(territory_id, s
 CREATE INDEX idx_gazette_crawls_spider ON gazette_crawls(spider_id, scraped_at);
 CREATE INDEX idx_gazette_crawls_job_id ON gazette_crawls(job_id);
 CREATE INDEX idx_gazette_crawls_gazette_id ON gazette_crawls(gazette_id);
+CREATE INDEX idx_gazette_crawls_analysis_result ON gazette_crawls(analysis_result_id);
 
 -- Gazette registry lookups
 CREATE INDEX idx_gazette_registry_publication_date ON gazette_registry(publication_date);

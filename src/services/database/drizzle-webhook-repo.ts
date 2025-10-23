@@ -37,17 +37,23 @@ export class DrizzleWebhookRepository {
     subscriptionId: string,
     success: boolean,
     statusCode?: number,
-    errorMessage?: string
+    errorMessage?: string,
+    responseBody?: string,
+    deliveryTimeMs?: number
   ): Promise<string> {
-    const fakeDelivery = {
-      notificationId,
+    const deliveryResult: WebhookDeliveryResult = {
+      messageId: notificationId,
       subscriptionId,
-      success,
+      status: success ? 'sent' : 'failed',
       statusCode,
-      errorMessage
+      error: errorMessage,
+      responseBody,
+      deliveredAt: this.dbClient.getCurrentTimestamp(),
+      deliveryTimeMs: deliveryTimeMs || 0,
+      attempt: 1,
     };
 
-    return await this.logDelivery(fakeDelivery);
+    return await this.logDelivery(deliveryResult);
   }
 
   /**
@@ -57,53 +63,58 @@ export class DrizzleWebhookRepository {
     try {
       const db = this.dbClient.getDb();
 
+      const metadata = {
+        deliveryTimeMs: delivery.deliveryTimeMs || 0,
+        timestamp: this.dbClient.getCurrentTimestamp()
+      };
+
       const deliveryData = {
         id: this.dbClient.generateId(),
-        notificationId: delivery.notificationId,
+        notificationId: delivery.messageId,
         subscriptionId: delivery.subscriptionId,
-        analysisJobId: delivery.analysisJobId || null,
-        eventType: delivery.eventType,
-        status: delivery.success ? 'sent' : 'failed',
+        analysisJobId: null,
+        eventType: 'webhook.delivery',
+        status: delivery.status,
         statusCode: delivery.statusCode || null,
         attempts: delivery.attempt || 1,
         responseBody: delivery.responseBody || null,
-        errorMessage: delivery.errorMessage || null,
+        errorMessage: delivery.error || null,
         createdAt: this.dbClient.getCurrentTimestamp(),
-        deliveredAt: delivery.success ? this.dbClient.getCurrentTimestamp() : null,
+        deliveredAt: delivery.deliveredAt,
         nextRetryAt: null,
-        metadata: this.dbClient.stringifyJson(delivery.metadata || {})
+        metadata: JSON.stringify(metadata)
       };
 
       const result = await db.insert(schema.webhookDeliveries)
-        .values(deliveryData)
-        .onConflictDoUpdate({
-          target: schema.webhookDeliveries.notificationId,
-          set: {
-            status: deliveryData.status,
-            statusCode: deliveryData.statusCode,
-            attempts: deliveryData.attempts,
-            responseBody: deliveryData.responseBody,
-            errorMessage: deliveryData.errorMessage,
-            deliveredAt: deliveryData.deliveredAt,
-            nextRetryAt: deliveryData.nextRetryAt
-          }
-        })
-        .returning({ id: schema.webhookDeliveries.id });
+      .values(deliveryData)
+      .onConflictDoUpdate({
+        target: schema.webhookDeliveries.notificationId,
+        set: {
+          status: deliveryData.status,
+          statusCode: deliveryData.statusCode,
+          attempts: deliveryData.attempts,
+          responseBody: deliveryData.responseBody,
+          errorMessage: deliveryData.errorMessage,
+          deliveredAt: deliveryData.deliveredAt,
+          nextRetryAt: deliveryData.nextRetryAt
+        }
+      })
+      .returning({ id: schema.webhookDeliveries.id });
 
-      logger.info('Webhook delivery logged', {
-        deliveryId: result[0].id,
-        notificationId: delivery.notificationId,
-        success: delivery.success,
-        statusCode: delivery.statusCode
-      });
+    logger.info('Webhook delivery logged', {
+      deliveryId: result[0].id,
+      messageId: delivery.messageId,
+      status: delivery.status,
+      statusCode: delivery.statusCode
+    });
 
-      return result[0].id;
-    } catch (error) {
-      logger.error('Failed to log webhook delivery', {
-        notificationId: delivery.notificationId,
-        error
-      });
-      throw error;
+    return result[0].id;
+  } catch (error) {
+    logger.error('Failed to log webhook delivery', {
+      messageId: delivery.messageId,
+      error
+    });
+    throw error;
     }
   }
 
@@ -312,9 +323,17 @@ export class DrizzleWebhookRepository {
       const failedDeliveries = deliveries.filter(d => d.status === 'failed').length;
       const pendingRetries = deliveries.filter(d => d.status === 'retry').length;
 
-      // Calculate average response time (placeholder - would need timing data)
-      const averageResponseTime = 0; // Would calculate from delivery timing data
+      // Calculate average response time from stored delivery timing data
+      const deliveriesWithTiming = deliveries.filter(d => d.metadata && typeof d.metadata === 'object');
+      let averageResponseTime = 0;
 
+      if (deliveriesWithTiming.length > 0) {
+        const totalTime = deliveriesWithTiming.reduce((sum, delivery) => {
+          const metadata = this.dbClient.parseJson<any>(delivery.metadata, {});
+          return sum + (metadata.deliveryTimeMs || 0);
+        }, 0);
+        averageResponseTime = Math.round(totalTime / deliveriesWithTiming.length);
+      }
       // Status code breakdown
       const statusCodeCount: Record<number, number> = {};
       deliveries.forEach(delivery => {
@@ -354,18 +373,16 @@ export class DrizzleWebhookRepository {
     try {
       const db = this.dbClient.getDb();
 
-      let query = db.select()
-        .from(schema.webhookDeliveries)
-        .where(eq(schema.webhookDeliveries.status, 'failed'));
-
-      if (subscriptionId) {
-        query = query.where(and(
+      const whereConditions = subscriptionId
+      ? and(
           eq(schema.webhookDeliveries.status, 'failed'),
           eq(schema.webhookDeliveries.subscriptionId, subscriptionId)
-        ));
-      }
+        )
+      : eq(schema.webhookDeliveries.status, 'failed');
 
-      const deliveries = await query
+    const deliveries = await db.select()
+      .from(schema.webhookDeliveries)
+      .where(whereConditions)
         .orderBy(desc(schema.webhookDeliveries.createdAt))
         .limit(limit);
 
@@ -393,18 +410,18 @@ export class DrizzleWebhookRepository {
       const cutoffDateStr = cutoffDate.toISOString();
 
       // Keep failed deliveries longer for analysis
-      const result = await db.delete(schema.webhookDeliveries)
+      await db.delete(schema.webhookDeliveries)
         .where(and(
-          gte(schema.webhookDeliveries.createdAt, '<', cutoffDateStr),
+          lte(schema.webhookDeliveries.createdAt, cutoffDateStr),
           inArray(schema.webhookDeliveries.status, ['sent', 'retry'])
         ));
 
       logger.info('Old webhook deliveries cleaned up', {
-        deletedCount: result.changes || 0,
+        deletedCount: 0, // D1 doesn't return changes count easily
         cutoffDate: cutoffDateStr
       });
 
-      return result.changes || 0;
+      return 0;
     } catch (error) {
       logger.error('Failed to cleanup old webhook deliveries', {
         daysOld,

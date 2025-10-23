@@ -13,9 +13,8 @@ import {
   AnalysisRepository,
   ConcursoRepository,
   ErrorTracker,
-  schema,
+  GazetteRepository,
 } from '../services/database';
-import { sql, eq, and } from 'drizzle-orm';
 
 export interface AnalysisProcessorEnv extends D1DatabaseEnv {
   ANALYSIS_RESULTS: KVNamespace;
@@ -93,7 +92,9 @@ export async function processAnalysisBatch(
         telemetry,
         analysisRepo,
         concursoRepo,
-        deduplicator
+        deduplicator,
+        config,
+        databaseClient
       );
       
       if (webhookMessages && webhookMessages.length > 0) {
@@ -152,10 +153,21 @@ export async function processAnalysisBatch(
       if (message.attempts < 3) {
         message.retry();
       } else {
-        logger.error('Max retries reached, moving to DLQ', new Error('Max retries reached'), {
+        logger.error('Max retries reached for analysis', new Error('Max retries'), {
           jobId: message.body.jobId,
           crawlJobId,
         });
+
+        // Update gazette_crawl status to failed
+        try {
+          const { gazetteCrawlId } = message.body;
+          if (gazetteCrawlId) {
+            const gazetteRepo = new GazetteRepository(databaseClient);
+            await gazetteRepo.updateGazetteCrawlStatus(gazetteCrawlId, 'failed');
+          }
+        } catch (statusError) {
+          logger.error('Failed to update gazette crawl status', statusError as Error);
+        }
 
         await errorTracker.trackCriticalError(
           'goodfellow-analysis',
@@ -203,7 +215,9 @@ async function processAnalysisMessage(
   telemetry: TelemetryService,
   analysisRepo: AnalysisRepository,
   concursoRepo: ConcursoRepository,
-  deduplicator: any
+  deduplicator: any,
+  config: AnalysisConfig,
+  databaseClient: ReturnType<typeof getDatabase>
 ): Promise<any[]> {
   const { jobId, ocrJobId, territoryId } = message.body;
   const crawlJobId = message.body.metadata?.crawlJobId || 'unknown';
@@ -224,25 +238,37 @@ async function processAnalysisMessage(
     'started'
   );
 
-  // Check if already analyzed by OCR job ID to prevent duplicates
-  const databaseClient = getDatabase(env);
-  const db = databaseClient.getDb();
-  const existingAnalysisByOcr = await db.select({
-    id: schema.analysisResults.id,
-    job_id: schema.analysisResults.jobId
-  })
-  .from(schema.analysisResults)
-  .where(eq(schema.analysisResults.ocrJobId, ocrJobId))
-  .limit(1);
-  
-  if (existingAnalysisByOcr.length > 0) {
-    logger.info(`Analysis already exists for OCR job ${ocrJobId}, skipping duplicate`, {
+  // Extract context from message
+  const { gazetteCrawlId, gazetteId } = message.body;
+
+  // Generate config signature for this analysis
+  const configSignature = orchestrator.generateConfigSignature(config, territoryId);
+
+  // Check if analysis already exists with same territory + gazette + config
+  const existingAnalysisId = await analysisRepo.findExistingAnalysis(
+    territoryId,
+    gazetteId,
+    configSignature.configHash
+  );
+
+  if (existingAnalysisId) {
+    logger.info('Analysis already exists, reusing existing result', {
       jobId,
       ocrJobId,
-      existingAnalysisId: existingAnalysisByOcr[0].id,
-      existingJobId: existingAnalysisByOcr[0].job_id,
+      gazetteCrawlId,
+      gazetteId,
+      existingAnalysisId,
+      configHash: configSignature.configHash,
+      territoryId,
       crawlJobId,
     });
+
+    // Link existing analysis to this gazette_crawl
+    const gazetteRepo = new GazetteRepository(databaseClient);
+    await gazetteRepo.linkAnalysisToGazetteCrawl(gazetteCrawlId, existingAnalysisId);
+
+    // Update status to success (analysis reused)
+    await gazetteRepo.updateGazetteCrawlStatus(gazetteCrawlId, 'success');
 
     await telemetry.trackCityStep(
       crawlJobId,
@@ -255,26 +281,9 @@ async function processAnalysisMessage(
     return [];
   }
 
-  // Also check by job ID for backwards compatibility
-  const existingAnalysis = await analysisRepo.analysisExists(jobId);
-  if (existingAnalysis) {
-    logger.info(`Analysis already exists for job ${jobId}`, {
-      jobId,
-      ocrJobId,
-      crawlJobId,
-    });
-
-    await telemetry.trackCityStep(
-      crawlJobId,
-      territoryId,
-      'analysis',
-      'analysis',
-      'analysis_end',
-      'skipped'
-    );
-
-    return [];
-  }
+  // Update gazette_crawl status to analysis_pending
+  const gazetteRepo = new GazetteRepository(databaseClient);
+  await gazetteRepo.updateGazetteCrawlStatus(gazetteCrawlId, 'analysis_pending');
 
   // Fetch OCR result from KV storage
   const ocrResultData = await env.OCR_RESULTS?.get(`ocr:${ocrJobId}`);
@@ -336,9 +345,20 @@ async function processAnalysisMessage(
   }
 
   // Store results in database
-  await analysisRepo.storeAnalysis(analysis);
-  logger.info(`Analysis stored in database`, {
+  const analysisId = await analysisRepo.storeAnalysis(analysis, gazetteId, configSignature);
+  
+  // Link analysis to gazette_crawl
+  await gazetteRepo.linkAnalysisToGazetteCrawl(gazetteCrawlId, analysisId);
+  
+  // Update status to success (analysis complete)
+  await gazetteRepo.updateGazetteCrawlStatus(gazetteCrawlId, 'success');
+  
+  logger.info('Analysis stored and linked to gazette crawl', {
     jobId: analysis.jobId,
+    analysisId,
+    gazetteCrawlId,
+    gazetteId,
+    configHash: configSignature.configHash,
     totalFindings: analysis.summary.totalFindings,
     crawlJobId,
   });

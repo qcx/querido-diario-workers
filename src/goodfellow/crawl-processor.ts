@@ -106,81 +106,165 @@ export async function processCrawlBatch(
         executionTimeMs: result.stats.executionTimeMs,
       });
 
-      // Save gazettes to database registry if any were found
+      // Process each gazette: check for existing entries and route accordingly
       if (gazettes.length > 0) {
-        try {
-          const gazetteJobIds = await gazetteRepo.registerGazettes(
-            gazettes,
-            crawlJobId
-          );
+        const ocrSender = new OcrQueueSender(env.OCR_QUEUE);
+        let newGazettes = 0;
+        let skippedFailed = 0;
+        let reusedSuccess = 0;
+        let retriedProcessing = 0;
 
-          logger.info('Gazettes registered in database', {
-            spiderId: queueMessage.spiderId,
-            count: gazettes.length,
-            gazetteJobIds: gazetteJobIds.length,
-          });
-        } catch (error) {
-          logger.error(
-            'Failed to register gazettes in database',
-            error as Error,
-            {
-              spiderId: queueMessage.spiderId,
-              count: gazettes.length,
-            }
-          );
+        for (const gazette of gazettes) {
+          try {
+            // 1. Check if gazette exists by PDF URL
+            const existingGazette = await gazetteRepo.getGazetteByPdfUrl(gazette.fileUrl);
+            
+            const gazetteJobId = `${crawlJobId}-${gazette.territoryId}-${gazette.date}${gazette.editionNumber ? `-${gazette.editionNumber}` : ''}-${Date.now()}`;
 
-          await errorTracker
-            .trackDatabaseError(
-              'goodfellow-crawl',
-              'register_gazettes',
-              error as Error,
-              'INSERT INTO gazette_registry',
-              crawlJobId
-            )
-            .catch(() => {});
-        }
-      }
+            if (existingGazette) {
+              logger.info('Found existing gazette', {
+                gazetteId: existingGazette.id,
+                status: existingGazette.status,
+                pdfUrl: gazette.fileUrl
+              });
 
-      // Send gazettes to OCR queue if any were found
-      if (gazettes.length > 0 && env.OCR_QUEUE) {
-        try {
-          const ocrSender = new OcrQueueSender(env.OCR_QUEUE);
-          await ocrSender.sendGazettes(
-            gazettes,
-            queueMessage.spiderId,
-            crawlJobId
-          );
+              // Handle based on status
+              if (existingGazette.status === 'ocr_failure') {
+                // OCR permanently failed - create failed crawl and skip
+                await gazetteRepo.createGazetteCrawl({
+                  gazetteId: existingGazette.id,
+                  jobId: gazetteJobId,
+                  territoryId: queueMessage.territoryId,
+                  spiderId: queueMessage.spiderId,
+                  status: 'failed',
+                  scrapedAt: gazette.scrapedAt
+                });
+                
+                skippedFailed++;
+                logger.info('Skipped gazette with permanent OCR failure', {
+                  gazetteId: existingGazette.id,
+                  pdfUrl: gazette.fileUrl
+                });
+                continue;
+              }
 
-          logger.info('Gazettes sent to OCR queue', {
-            spiderId: queueMessage.spiderId,
-            count: gazettes.length,
-          });
-        } catch (error) {
-          logger.error(
-            'Failed to send gazettes to OCR queue',
-            error as Error,
-            {
-              spiderId: queueMessage.spiderId,
-              count: gazettes.length,
-            }
-          );
+              if (existingGazette.status === 'ocr_success') {
+                // OCR already successful - create success crawl and send to analysis
+                const gazetteCrawlId = await gazetteRepo.createGazetteCrawl({
+                  gazetteId: existingGazette.id,
+                  jobId: gazetteJobId,
+                  territoryId: queueMessage.territoryId,
+                  spiderId: queueMessage.spiderId,
+                  status: 'success',
+                  scrapedAt: gazette.scrapedAt
+                });
 
-          await errorTracker
-            .trackError({
-              workerName: 'goodfellow-crawl',
-              operationType: 'queue_send_ocr',
-              severity: 'error',
-              errorMessage: (error as Error).message,
-              stackTrace: (error as Error).stack,
-              jobId: crawlJobId,
-              territoryId: queueMessage.territoryId,
-              context: {
+                // Send directly to analysis queue (skip OCR)
+                if (env.OCR_QUEUE) {
+                  await ocrSender.sendGazette(
+                    gazette,
+                    queueMessage.spiderId,
+                    crawlJobId,
+                    gazetteCrawlId
+                  );
+                }
+
+                reusedSuccess++;
+                logger.info('Reusing existing OCR result', {
+                  gazetteId: existingGazette.id,
+                  pdfUrl: gazette.fileUrl
+                });
+                continue;
+              }
+
+              // Status is pending/uploaded/ocr_processing/ocr_retrying
+              // Create processing crawl and send to OCR queue (will retry)
+              const gazetteCrawlId = await gazetteRepo.createGazetteCrawl({
+                gazetteId: existingGazette.id,
+                jobId: gazetteJobId,
+                territoryId: queueMessage.territoryId,
                 spiderId: queueMessage.spiderId,
-                gazetteCount: gazettes.length,
-              },
-            })
-            .catch(() => {});
+                status: 'processing',
+                scrapedAt: gazette.scrapedAt
+              });
+
+              if (env.OCR_QUEUE) {
+                await ocrSender.sendGazette(
+                  gazette,
+                  queueMessage.spiderId,
+                  crawlJobId,
+                  gazetteCrawlId
+                );
+              }
+
+              retriedProcessing++;
+              logger.info('Re-queued gazette still in processing', {
+                gazetteId: existingGazette.id,
+                status: existingGazette.status,
+                pdfUrl: gazette.fileUrl
+              });
+              continue;
+            }
+
+            // New gazette - create registry and crawl
+            const gazetteId = await gazetteRepo.registerGazette(gazette, crawlJobId);
+            
+            const gazetteCrawlId = await gazetteRepo.createGazetteCrawl({
+              gazetteId,
+              jobId: gazetteJobId,
+              territoryId: queueMessage.territoryId,
+              spiderId: queueMessage.spiderId,
+              status: 'created',
+              scrapedAt: gazette.scrapedAt
+            });
+
+            if (env.OCR_QUEUE) {
+              await ocrSender.sendGazette(
+                gazette,
+                queueMessage.spiderId,
+                crawlJobId,
+                gazetteCrawlId
+              );
+            }
+
+            newGazettes++;
+            logger.info('Registered new gazette', {
+              gazetteId,
+              pdfUrl: gazette.fileUrl
+            });
+
+          } catch (gazetteError) {
+            logger.error('Failed to process individual gazette', gazetteError as Error, {
+              pdfUrl: gazette.fileUrl,
+              territoryId: gazette.territoryId
+            });
+
+            await errorTracker
+              .trackError({
+                workerName: 'goodfellow-crawl',
+                operationType: 'process_gazette',
+                severity: 'error',
+                errorMessage: (gazetteError as Error).message,
+                stackTrace: (gazetteError as Error).stack,
+                jobId: crawlJobId,
+                territoryId: queueMessage.territoryId,
+                context: {
+                  spiderId: queueMessage.spiderId,
+                  pdfUrl: gazette.fileUrl,
+                },
+              })
+              .catch(() => {});
+          }
         }
+
+        logger.info('Gazette processing summary', {
+          spiderId: queueMessage.spiderId,
+          total: gazettes.length,
+          newGazettes,
+          reusedSuccess,
+          retriedProcessing,
+          skippedFailed
+        });
       }
 
       // Track successful crawl completion

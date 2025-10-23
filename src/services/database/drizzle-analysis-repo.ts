@@ -6,7 +6,7 @@
 import { eq, desc, and, gte, lte } from 'drizzle-orm';
 import { DrizzleDatabaseClient, schema } from './drizzle-client';
 import { logger } from '../../utils/logger';
-import type { GazetteAnalysis } from '../../types';
+import type { GazetteAnalysis, AnalysisConfigSignature } from '../../types';
 import type { 
   StructuredFinding, 
   AnalysisSummary, 
@@ -16,7 +16,6 @@ import type {
 export interface AnalysisRecord {
   id: string;
   jobId: string;
-  ocrJobId: string;
   gazetteId: string;
   territoryId: string;
   publicationDate: string;
@@ -28,7 +27,7 @@ export interface AnalysisRecord {
   summary: AnalysisSummary;
   processingTimeMs: number | null;
   analyzedAt: string;
-  metadata: AnalysisMetadata;
+  metadata: AnalysisMetadata; // ocrJobId is stored in metadata
 }
 
 export class DrizzleAnalysisRepository {
@@ -37,25 +36,9 @@ export class DrizzleAnalysisRepository {
   /**
    * Store analysis results in the database
    */
-  async storeAnalysis(analysis: GazetteAnalysis): Promise<string> {
+  async storeAnalysis(analysis: GazetteAnalysis, gazetteId: string, configSignature?: AnalysisConfigSignature): Promise<string> {
     try {
       const db = this.dbClient.getDb();
-
-      // Find the gazette using territory_id and publication_date
-      const gazetteResults = await db.select({ id: schema.gazetteRegistry.id })
-        .from(schema.gazetteRegistry)
-        .where(and(
-          eq(schema.gazetteRegistry.territoryId, analysis.territoryId),
-          eq(schema.gazetteRegistry.publicationDate, analysis.publicationDate)
-        ))
-        .orderBy(desc(schema.gazetteRegistry.createdAt))
-        .limit(1);
-
-      if (gazetteResults.length === 0) {
-        throw new Error(`Gazette not found for territory ${analysis.territoryId} on ${analysis.publicationDate}`);
-      }
-
-      const gazetteId = gazetteResults[0].id;
 
       // Calculate processing time from analyses
       const processingTimeMs = analysis.analyses.reduce(
@@ -66,7 +49,6 @@ export class DrizzleAnalysisRepository {
       const analysisData = {
         id: this.dbClient.generateId(),
         jobId: analysis.jobId,
-        ocrJobId: analysis.ocrJobId,
         gazetteId,
         territoryId: analysis.territoryId,
         publicationDate: analysis.publicationDate,
@@ -78,7 +60,11 @@ export class DrizzleAnalysisRepository {
         summary: this.dbClient.stringifyJson(analysis.summary),
         processingTimeMs,
         analyzedAt: analysis.analyzedAt,
-        metadata: this.dbClient.stringifyJson(analysis.metadata)
+        metadata: this.dbClient.stringifyJson({
+          ...analysis.metadata,
+          ocrJobId: analysis.ocrJobId, // Store ocrJobId in metadata
+          configSignature  // Store config for deduplication
+        })
       };
 
       const result = await db.insert(schema.analysisResults)
@@ -102,7 +88,7 @@ export class DrizzleAnalysisRepository {
       logger.info('Analysis stored successfully', {
         analysisId: result[0].id,
         jobId: analysis.jobId,
-        ocrJobId: analysis.ocrJobId,
+        gazetteId,
         totalFindings: analysis.summary.totalFindings
       });
 
@@ -110,7 +96,7 @@ export class DrizzleAnalysisRepository {
     } catch (error) {
       logger.error('Failed to store analysis', {
         jobId: analysis.jobId,
-        ocrJobId: analysis.ocrJobId,
+        gazetteId,
         error
       });
       throw error;
@@ -158,21 +144,21 @@ export class DrizzleAnalysisRepository {
   }
 
   /**
-   * Check if analysis exists (compatibility method)
+   * Check if analysis exists by job ID
    */
-  async analysisExists(ocrJobId: string): Promise<boolean> {
+  async analysisExists(jobId: string): Promise<boolean> {
     try {
       const db = this.dbClient.getDb();
 
       const results = await db.select({ id: schema.analysisResults.id })
         .from(schema.analysisResults)
-        .where(eq(schema.analysisResults.ocrJobId, ocrJobId))
+        .where(eq(schema.analysisResults.jobId, jobId))
         .limit(1);
 
       return results.length > 0;
     } catch (error) {
       logger.error('Failed to check if analysis exists', {
-        ocrJobId,
+        jobId,
         error
       });
       return false;
@@ -180,43 +166,75 @@ export class DrizzleAnalysisRepository {
   }
 
   /**
-   * Get analysis by OCR job ID
+   * Find existing analysis by territory + gazette + config
+   * This is the core deduplication logic
    */
-  async getAnalysisByOcrJobId(ocrJobId: string): Promise<AnalysisRecord | null> {
+  async findExistingAnalysis(
+    territoryId: string,
+    gazetteId: string,
+    configHash: string
+  ): Promise<string | null> {
     try {
       const db = this.dbClient.getDb();
 
-      const results = await db.select()
-        .from(schema.analysisResults)
-        .where(eq(schema.analysisResults.ocrJobId, ocrJobId))
-        .limit(1);
+      // Query for matching analysis
+      const results = await db.select({ 
+        id: schema.analysisResults.id,
+        metadata: schema.analysisResults.metadata
+      })
+      .from(schema.analysisResults)
+      .where(and(
+        eq(schema.analysisResults.territoryId, territoryId),
+        eq(schema.analysisResults.gazetteId, gazetteId)
+      ))
+      .limit(10); // Check multiple in case of config variations
 
-      if (results.length === 0) {
-        return null;
+      // Check metadata for matching config hash
+      for (const result of results) {
+        const metadata = this.dbClient.parseJson<any>(result.metadata, {});
+        const storedConfigHash = metadata.configSignature?.configHash;
+        
+        if (storedConfigHash === configHash) {
+          logger.info('Found existing analysis with matching config', {
+            analysisId: result.id,
+            territoryId,
+            gazetteId,
+            configHash
+          });
+          return result.id;
+        }
       }
 
-      const record = results[0];
-      return {
-        ...record,
-        categories: this.dbClient.parseJson<string[]>(record.categories, []),
-        keywords: this.dbClient.parseJson<string[]>(record.keywords, []),
-        findings: this.dbClient.parseJson<StructuredFinding[]>(record.findings, []),
-        summary: this.dbClient.parseJson<AnalysisSummary>(record.summary, {
-          totalFindings: 0,
-          highConfidenceFindings: 0,
-          findingsByType: {},
-          categories: [],
-          keywords: []
-        }),
-        metadata: this.dbClient.parseJson<AnalysisMetadata>(record.metadata, {})
-      };
+      return null; // No matching analysis found
     } catch (error) {
-      logger.error('Failed to get analysis by OCR job ID', {
-        ocrJobId,
+      logger.error('Failed to find existing analysis', {
+        territoryId,
+        gazetteId,
+        configHash,
         error
       });
-      throw error;
+      return null;
     }
+  }
+
+  /**
+   * Parse analysis record with JSON fields
+   */
+  private parseAnalysisRecord(record: any): AnalysisRecord {
+    return {
+      ...record,
+      categories: this.dbClient.parseJson<string[]>(record.categories, []),
+      keywords: this.dbClient.parseJson<string[]>(record.keywords, []),
+      findings: this.dbClient.parseJson<StructuredFinding[]>(record.findings, []),
+      summary: this.dbClient.parseJson<AnalysisSummary>(record.summary, {
+        totalFindings: 0,
+        highConfidenceFindings: 0,
+        findingsByType: {},
+        categories: [],
+        keywords: []
+      }),
+      metadata: this.dbClient.parseJson<AnalysisMetadata>(record.metadata, {})
+    };
   }
 
   /**

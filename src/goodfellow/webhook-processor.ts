@@ -158,21 +158,16 @@ async function processWebhookMessage(
   const result = await sendWebhook(subscription, notification, attempt);
   const deliveryTimeMs = Date.now() - startTime;
 
-  // Store delivery result
-  // Map status to match database enum: 'sent' instead of 'success', 'failed' instead of 'failure'
-  const deliveryResult: WebhookDeliveryResult = {
-    messageId,
-    subscriptionId,
-    status: result.success ? 'sent' : result.shouldRetry ? 'retry' : 'failed',
-    statusCode: result.statusCode,
-    responseBody: result.responseBody,
-    error: result.error,
-    deliveredAt: new Date().toISOString(),
-    deliveryTimeMs,
-    attempt,
-  };
-
-  await webhookRepo.logWebhookDelivery(notification, deliveryResult);
+  // Log webhook delivery to database
+  await webhookRepo.logWebhookDelivery(
+    messageId,           // notificationId
+    subscriptionId,      // subscriptionId
+    result.success,      // success boolean
+    result.statusCode,   // statusCode (optional)
+    result.error,        // errorMessage (optional)
+    result.responseBody, // responseBody (optional)
+    deliveryTimeMs       // deliveryTimeMs (optional)
+  );
 
   // Handle retry
   if (!result.success && result.shouldRetry) {
