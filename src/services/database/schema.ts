@@ -55,32 +55,46 @@ export const crawlTelemetry = sqliteTable('crawl_telemetry', {
   stepStatusIdx: index('idx_crawl_telemetry_step_status').on(table.step, table.status),
 }));
 
-// 3. GAZETTE_REGISTRY - Gazette metadata (permanent record)
-export const gazetteRegistry = sqliteTable('gazette_registry', {
+// 3. GAZETTE_CRAWLS - Track crawl-specific metadata and relationships
+export const gazetteCrawls = sqliteTable('gazette_crawls', {
   id: text('id').primaryKey(),
   jobId: text('job_id').unique().notNull(),
   territoryId: text('territory_id').notNull(),
+  spiderId: text('spider_id').notNull(),
+  gazetteId: text('gazette_id').notNull().references(() => gazetteRegistry.id, { onDelete: 'cascade' }),
+  status: text('status').notNull().default('created'),
+  scrapedAt: text('scraped_at').notNull(), // ISO 8601 timestamp
+  createdAt: text('created_at').notNull().default(sql`(datetime('now'))`)
+}, (table) => ({
+  territoryDateIdx: index('idx_gazette_crawls_territory_date').on(table.territoryId, table.scrapedAt),
+  spiderIdx: index('idx_gazette_crawls_spider').on(table.spiderId, table.scrapedAt),
+  jobIdIdx: index('idx_gazette_crawls_job_id').on(table.jobId),
+  gazetteIdIdx: index('idx_gazette_crawls_gazette_id').on(table.gazetteId),
+}));
+
+// 4. GAZETTE_REGISTRY - Gazette metadata (permanent record)
+export const gazetteRegistry = sqliteTable('gazette_registry', {
+  id: text('id').primaryKey(),
   publicationDate: text('publication_date').notNull(), // ISO 8601 date
   editionNumber: text('edition_number'),
-  spiderId: text('spider_id').notNull(),
-  pdfUrl: text('pdf_url').notNull(),
+  pdfUrl: text('pdf_url').notNull().unique(),
   pdfR2Key: text('pdf_r2_key'),
   isExtraEdition: integer('is_extra_edition', { mode: 'boolean' }).notNull().default(false),
   power: text('power'),
-  scrapedAt: text('scraped_at').notNull(), // ISO 8601 timestamp
   createdAt: text('created_at').notNull().default(sql`(datetime('now'))`),
+  status: text('status').notNull().default('pending'),
   metadata: text('metadata').notNull().default('{}')
 }, (table) => ({
-  territoryDateIdx: index('idx_gazette_territory_date').on(table.territoryId, table.publicationDate),
-  spiderDateIdx: index('idx_gazette_spider_date').on(table.spiderId, table.publicationDate),
-  jobIdIdx: index('idx_gazette_job_id').on(table.jobId),
+  publicationDateIdx: index('idx_gazette_registry_publication_date').on(table.publicationDate),
+  pdfUrlIdx: index('idx_gazette_registry_pdf_url').on(table.pdfUrl),
+  statusIdx: index('idx_gazette_registry_status').on(table.status, table.createdAt),
 }));
 
-// 4. OCR_RESULTS - OCR results with extracted text
+// 5. OCR_RESULTS - OCR results with extracted text
 export const ocrResults = sqliteTable('ocr_results', {
   id: text('id').primaryKey(),
-  jobId: text('job_id').unique().notNull(),
-  gazetteId: text('gazette_id').notNull().references(() => gazetteRegistry.id, { onDelete: 'cascade' }),
+  documentType: text('document_type').notNull().default('gazette_registry'),
+  documentId: text('document_id').notNull(),
   extractedText: text('extracted_text').notNull(),
   textLength: integer('text_length').notNull().default(0),
   confidenceScore: real('confidence_score'),
@@ -89,15 +103,15 @@ export const ocrResults = sqliteTable('ocr_results', {
   createdAt: text('created_at').notNull().default(sql`(datetime('now'))`),
   metadata: text('metadata').notNull().default('{}')
 }, (table) => ({
-  jobIdIdx: index('idx_ocr_results_job_id').on(table.jobId),
-  gazetteIdIdx: index('idx_ocr_results_gazette_id').on(table.gazetteId),
+  documentIdx: index('idx_ocr_results_document').on(table.documentType, table.documentId),
+  createdAtIdx: index('idx_ocr_results_created_at').on(table.createdAt),
 }));
 
-// 5. OCR_METADATA - OCR job tracking (not the text)
-export const ocrMetadata = sqliteTable('ocr_metadata', {
+// 6. OCR_JOBS - OCR job tracking (not the text)
+export const ocrJobs = sqliteTable('ocr_jobs', {
   id: text('id').primaryKey(),
-  jobId: text('job_id').unique().notNull(),
-  gazetteId: text('gazette_id').notNull().references(() => gazetteRegistry.id, { onDelete: 'cascade' }),
+  documentType: text('document_type').notNull().default('gazette_registry'),
+  documentId: text('document_id').notNull(),
   status: text('status').notNull().default('pending'),
   pagesProcessed: integer('pages_processed'),
   processingTimeMs: integer('processing_time_ms'),
@@ -108,16 +122,15 @@ export const ocrMetadata = sqliteTable('ocr_metadata', {
   completedAt: text('completed_at'),
   metadata: text('metadata').notNull().default('{}')
 }, (table) => ({
-  statusIdx: index('idx_ocr_status').on(table.status, table.createdAt),
-  gazetteIdx: index('idx_ocr_gazette').on(table.gazetteId),
-  jobIdIdx: index('idx_ocr_job_id').on(table.jobId),
+  statusIdx: index('idx_ocr_jobs_status').on(table.status, table.createdAt),
+  documentIdx: index('idx_ocr_jobs_document').on(table.documentType, table.documentId),
+  createdAtIdx: index('idx_ocr_jobs_created_at').on(table.createdAt),
 }));
 
-// 6. ANALYSIS_RESULTS - Full analysis results
+// 7. ANALYSIS_RESULTS - Full analysis results
 export const analysisResults = sqliteTable('analysis_results', {
   id: text('id').primaryKey(),
   jobId: text('job_id').unique().notNull(),
-  ocrJobId: text('ocr_job_id').notNull(),
   gazetteId: text('gazette_id').notNull().references(() => gazetteRegistry.id, { onDelete: 'cascade' }),
   territoryId: text('territory_id').notNull(),
   publicationDate: text('publication_date').notNull(), // ISO 8601 date
@@ -134,10 +147,10 @@ export const analysisResults = sqliteTable('analysis_results', {
   territoryDateIdx: index('idx_analysis_territory_date').on(table.territoryId, table.publicationDate),
   highConfidenceIdx: index('idx_analysis_high_confidence').on(table.highConfidenceFindings),
   jobIdIdx: index('idx_analysis_job_id').on(table.jobId),
-  ocrJobIdIdx: index('idx_analysis_ocr_job_id').on(table.ocrJobId),
+  gazetteIdIdx: index('idx_analysis_gazette_id').on(table.gazetteId),
 }));
 
-// 7. WEBHOOK_DELIVERIES - Webhook delivery logs
+// 8. WEBHOOK_DELIVERIES - Webhook delivery logs
 export const webhookDeliveries = sqliteTable('webhook_deliveries', {
   id: text('id').primaryKey(),
   notificationId: text('notification_id').unique().notNull(),
@@ -160,7 +173,7 @@ export const webhookDeliveries = sqliteTable('webhook_deliveries', {
   failedWebhooksIdx: index('idx_failed_webhooks').on(table.nextRetryAt).where(sql`status = 'retry'`),
 }));
 
-// 8. CONCURSO_FINDINGS - Dedicated concurso data
+// 9. CONCURSO_FINDINGS - Dedicated concurso data
 export const concursoFindings = sqliteTable('concurso_findings', {
   id: text('id').primaryKey(),
   analysisJobId: text('analysis_job_id').notNull(),
@@ -183,7 +196,7 @@ export const concursoFindings = sqliteTable('concurso_findings', {
   analysisJobIdx: index('idx_concurso_analysis_job').on(table.analysisJobId),
 }));
 
-// 9. ERROR_LOGS - Comprehensive error tracking for dashboard
+// 10. ERROR_LOGS - Comprehensive error tracking for dashboard
 export const errorLogs = sqliteTable('error_logs', {
   id: text('id').primaryKey(),
   workerName: text('worker_name').notNull(),
@@ -211,14 +224,17 @@ export type InsertCrawlJob = typeof crawlJobs.$inferInsert;
 export type CrawlTelemetry = typeof crawlTelemetry.$inferSelect;
 export type InsertCrawlTelemetry = typeof crawlTelemetry.$inferInsert;
 
+export type GazetteCrawl = typeof gazetteCrawls.$inferSelect;
+export type InsertGazetteCrawl = typeof gazetteCrawls.$inferInsert;
+
 export type GazetteRegistry = typeof gazetteRegistry.$inferSelect;
 export type InsertGazetteRegistry = typeof gazetteRegistry.$inferInsert;
 
 export type OcrResult = typeof ocrResults.$inferSelect;
 export type InsertOcrResult = typeof ocrResults.$inferInsert;
 
-export type OcrMetadata = typeof ocrMetadata.$inferSelect;
-export type InsertOcrMetadata = typeof ocrMetadata.$inferInsert;
+export type OcrJob = typeof ocrJobs.$inferSelect;
+export type InsertOcrJob = typeof ocrJobs.$inferInsert;
 
 export type AnalysisResult = typeof analysisResults.$inferSelect;
 export type InsertAnalysisResult = typeof analysisResults.$inferInsert;

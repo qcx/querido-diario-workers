@@ -100,8 +100,8 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "querido-diario-prod",
-      "database_id": "4c0566d5-6aaa-4805-b530-203d50aaa170"
+      "database_name": "goodfellow-prod",
+      "database_id": "8567187b-11ab-4ee0-9f31-647740060a84"
     }
   ],
 
@@ -200,8 +200,8 @@
       "d1_databases": [
         {
           "binding": "DB",
-          "database_name": "querido-diario-prod",
-          "database_id": "4c0566d5-6aaa-4805-b530-203d50aaa170"
+          "database_name": "goodfellow-prod",
+          "database_id": "8567187b-11ab-4ee0-9f31-647740060a84"
         }
       ],
       "vars": {

@@ -188,7 +188,7 @@ async function main() {
   const dryRun = args.includes('--dry-run');
 
   const config: TestConfig = {
-    databaseName: environment === 'production' ? 'querido-diario-prod' : 'querido-diario-dev',
+    databaseName: environment === 'production' ? 'goodfellow-prod' : 'querido-diario-dev',
     environment,
     dryRun
   };

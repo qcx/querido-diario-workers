@@ -45,6 +45,7 @@ CREATE TABLE gazette_crawls(
     territory_id TEXT NOT NULL,
     spider_id TEXT NOT NULL,
     gazette_id TEXT NOT NULL,
+    status TEXT NOT NULL DEFAULT 'created' CHECK (status IN ('created', 'processing', 'success', 'failed')),
     scraped_at TEXT NOT NULL,  -- ISO 8601 timestamp
     created_at TEXT NOT NULL DEFAULT (datetime('now')),
     FOREIGN KEY (gazette_id) REFERENCES gazette_registry(id) ON DELETE CASCADE
