@@ -27,8 +27,9 @@ import { processOcrBatch, OcrProcessorEnv } from './goodfellow/ocr-processor';
 import { processAnalysisBatch, AnalysisProcessorEnv } from './goodfellow/analysis-processor';
 import { processWebhookBatch, WebhookProcessorEnv } from './goodfellow/webhook-processor';
 
-// Import React Router SSR
+// Import React Router SSR and loaders
 import { renderReactRouterPage } from './utils/react-router-ssr';
+import { reportsLoader, dashboardLoader, adminLoader } from './loaders/dashboard-loaders';
 
 /**
  * Combined environment bindings for Goodfellow
@@ -71,18 +72,50 @@ const app = new Hono<{ Bindings: GoodfellowEnv }>();
 const ROOT_PATH = '/';
 
 /**
- * React Router SSR routes
+ * React Router SSR routes with data loaders
  * Handle multiple UI routes with React Router on the server
  */
 const UI_ROUTES = ['/dashboard', '/reports', '/admin'];
 
 const SKIP_AUTH_ROUTES = [ROOT_PATH, ...UI_ROUTES];
 
-UI_ROUTES.forEach(route => {
-  app.get(route, (c) => {
-    const html = renderReactRouterPage(c.req.path, 'Goodfellow');
+// Reports page with SSR loader
+app.get('/reports', async (c) => {
+  try {
+    const data = await reportsLoader({ env: c.env });
+    const html = renderReactRouterPage('/reports', 'Reports - Goodfellow', data);
     return c.html(html);
-  });
+  } catch (error) {
+    logger.error('Failed to load reports page', { error });
+    const html = renderReactRouterPage('/reports', 'Reports - Goodfellow', {});
+    return c.html(html);
+  }
+});
+
+// Dashboard page with SSR loader
+app.get('/dashboard', async (c) => {
+  try {
+    const data = await dashboardLoader({ env: c.env });
+    const html = renderReactRouterPage('/dashboard', 'Dashboard - Goodfellow', data);
+    return c.html(html);
+  } catch (error) {
+    logger.error('Failed to load dashboard page', { error });
+    const html = renderReactRouterPage('/dashboard', 'Dashboard - Goodfellow', {});
+    return c.html(html);
+  }
+});
+
+// Admin page with SSR loader
+app.get('/admin', async (c) => {
+  try {
+    const data = await adminLoader({ env: c.env });
+    const html = renderReactRouterPage('/admin', 'Admin - Goodfellow', data);
+    return c.html(html);
+  } catch (error) {
+    logger.error('Failed to load admin page', { error });
+    const html = renderReactRouterPage('/admin', 'Admin - Goodfellow', {});
+    return c.html(html);
+  }
 });
 
 app.use('*', async (c, next) => {
