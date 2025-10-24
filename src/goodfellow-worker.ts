@@ -27,6 +27,9 @@ import { processOcrBatch, OcrProcessorEnv } from './goodfellow/ocr-processor';
 import { processAnalysisBatch, AnalysisProcessorEnv } from './goodfellow/analysis-processor';
 import { processWebhookBatch, WebhookProcessorEnv } from './goodfellow/webhook-processor';
 
+// Import React Router SSR
+import { renderReactRouterPage } from './utils/react-router-ssr';
+
 /**
  * Combined environment bindings for Goodfellow
  */
@@ -64,9 +67,27 @@ const app = new Hono<{ Bindings: GoodfellowEnv }>();
  * Only applies if API_KEY environment variable is set
  * Exempts the root "/" endpoint from authentication
  */
+
+const ROOT_PATH = '/';
+
+/**
+ * React Router SSR routes
+ * Handle multiple UI routes with React Router on the server
+ */
+const UI_ROUTES = ['/dashboard', '/reports', '/admin'];
+
+const SKIP_AUTH_ROUTES = [ROOT_PATH, ...UI_ROUTES];
+
+UI_ROUTES.forEach(route => {
+  app.get(route, (c) => {
+    const html = renderReactRouterPage(c.req.path, 'Goodfellow');
+    return c.html(html);
+  });
+});
+
 app.use('*', async (c, next) => {
   // Skip authentication for root health check
-  if (c.req.path === '/') {
+  if (SKIP_AUTH_ROUTES.includes(c.req.path)) {
     return next();
   }
 
