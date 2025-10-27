@@ -166,11 +166,13 @@ export async function processAnalysisBatch(
       await telemetry.trackCityStep(
         crawlJobId,
         message.body.territoryId,
-        message.body.metadata?.spiderId || 'analysis',
+        message.body.metadata?.spiderId || 'unknown',
         'analysis_end',
         'completed',
         undefined,
-        executionTimeMs
+        executionTimeMs,
+        undefined,
+        message.body.metadata?.spiderType
       );
 
       message.ack();
@@ -187,12 +189,13 @@ export async function processAnalysisBatch(
       await telemetry.trackCityStep(
         crawlJobId,
         message.body.territoryId,
-        message.body.metadata?.spiderId || 'analysis',
+        message.body.metadata?.spiderId || 'unknown',
         'analysis_end',
         'failed',
         undefined,
         executionTimeMs,
-        errorMessage
+        errorMessage,
+        message.body.metadata?.spiderType
       );
 
       await errorTracker.trackCriticalError(
@@ -292,9 +295,13 @@ async function processAnalysisMessage(
   await telemetry.trackCityStep(
     crawlJobId,
     territoryId,
-    'analysis',
+    message.body.metadata?.spiderId || 'unknown',
     'analysis_start',
-    'started'
+    'started',
+    undefined,
+    undefined,
+    undefined,
+    message.body.metadata?.spiderType
   );
 
   // Extract context from message
@@ -358,9 +365,13 @@ async function processAnalysisMessage(
     await telemetry.trackCityStep(
       crawlJobId,
       territoryId,
-      'analysis',
+      message.body.metadata?.spiderId || 'unknown',
       'analysis_end',
-      'skipped'
+      'skipped',
+      undefined,
+      undefined,
+      undefined,
+      message.body.metadata?.spiderType
     );
 
     return [];
@@ -431,9 +442,13 @@ async function processAnalysisMessage(
     await telemetry.trackCityStep(
       crawlJobId,
       territoryId,
-      'analysis',
+      message.body.metadata?.spiderId || 'unknown',
       'analysis_end',
-      'skipped'
+      'skipped',
+      undefined,
+      undefined,
+      undefined,
+      message.body.metadata?.spiderType
     );
 
     return [];

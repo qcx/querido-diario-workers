@@ -135,6 +135,7 @@ export interface AnalysisQueueMessage {
   metadata?: {
     crawlJobId?: string;
     spiderId?: string;
+    spiderType?: string;
     configSignature?: AnalysisConfigSignature;
     [key: string]: any;
   };

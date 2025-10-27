@@ -171,7 +171,11 @@ export async function processOcrBatch(
         ocrMessage.territoryId,
         ocrMessage.spiderId,
         'ocr_start',
-        'started'
+        'started',
+        undefined,
+        undefined,
+        undefined,
+        ocrMessage.metadata?.spiderType
       );
 
       let result: OcrResult;
@@ -732,7 +736,8 @@ export async function processOcrBatch(
         result.status === 'success' ? 'completed' : 'failed',
         undefined,
         executionTimeMs,
-        result.error?.message
+        result.error?.message,
+        ocrMessage.metadata?.spiderType
       );
 
       // Handle failure results (OCR service returns failure, doesn't throw)
@@ -849,7 +854,8 @@ export async function processOcrBatch(
         'failed',
         undefined,
         executionTimeMs,
-        errorMessage
+        errorMessage,
+        ocrMessage.metadata?.spiderType
       );
 
       // Track the OCR error directly in database
@@ -945,6 +951,7 @@ export async function processOcrBatch(
           metadata: {
             crawlJobId,
             spiderId: ocrMessage.spiderId,
+            spiderType: ocrMessage.metadata?.spiderType,
           },
         });
       }

@@ -62,7 +62,11 @@ export async function processCrawlBatch(
         queueMessage.territoryId,
         queueMessage.spiderId,
         'crawl_start',
-        'started'
+        'started',
+        undefined,
+        undefined,
+        undefined,
+        queueMessage.spiderType
       );
 
       // Get spider configuration
@@ -151,7 +155,8 @@ export async function processCrawlBatch(
                 gazette,
                 queueMessage.spiderId,
                 crawlJobId,
-                gazetteCrawlId
+                gazetteCrawlId,
+                queueMessage.spiderType
               );
             }
 
@@ -194,7 +199,9 @@ export async function processCrawlBatch(
         'crawl_end',
         'completed',
         gazettes.length,
-        executionTimeMs
+        executionTimeMs,
+        undefined,
+        queueMessage.spiderType
       );
 
       // Acknowledge message
@@ -219,7 +226,8 @@ export async function processCrawlBatch(
         'failed',
         undefined,
         executionTimeMs,
-        errorMessage
+        errorMessage,
+        queueMessage.spiderType
       );
 
       await errorTracker.trackCriticalError(
