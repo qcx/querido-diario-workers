@@ -56,7 +56,9 @@ export async function processWebhookBatch(
           'webhook_sent',
           'completed',
           undefined,
-          executionTimeMs
+          executionTimeMs,
+          undefined,
+          'unknown'
         );
       }
 
@@ -80,7 +82,8 @@ export async function processWebhookBatch(
           'failed',
           undefined,
           executionTimeMs,
-          errorMessage
+          errorMessage,
+          'unknown'
         );
       }
 
