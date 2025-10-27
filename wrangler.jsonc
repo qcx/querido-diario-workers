@@ -101,7 +101,7 @@
     {
       "binding": "DB",
       "database_name": "goodfellow-prod",
-      "database_id": "8567187b-11ab-4ee0-9f31-647740060a84"
+      "database_id": "8f7cfe0f-5743-457b-8ea9-dca04b66cca8"
     }
   ],
 
@@ -201,7 +201,7 @@
         {
           "binding": "DB",
           "database_name": "goodfellow-prod",
-          "database_id": "8567187b-11ab-4ee0-9f31-647740060a84"
+          "database_id": "8f7cfe0f-5743-457b-8ea9-dca04b66cca8"
         }
       ],
       "vars": {
