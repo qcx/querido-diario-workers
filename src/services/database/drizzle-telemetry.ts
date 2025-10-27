@@ -363,13 +363,14 @@ export class DrizzleTelemetryService {
     status: StepStatus,
     gazettesFound?: number,
     executionTimeMs?: number,
-    errorMessage?: string
+    errorMessage?: string,
+    spiderType?: string
   ): Promise<void> {
     const stepData: TelemetryStepData = {
       crawlJobId,
       territoryId,
       spiderId,
-      spiderType: spiderId, // Use spiderId as spiderType for compatibility
+      spiderType: spiderType || spiderId, // Use provided spiderType or fall back to spiderId for compatibility
       step,
       status,
       gazettesFound,

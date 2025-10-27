@@ -14,9 +14,17 @@ export interface D1DatabaseEnv {
 
 export class DrizzleDatabaseClient {
   private db: DrizzleD1Database<typeof schema>;
+  private dialect: 'sqlite' | 'postgres' = 'sqlite'; // D1 uses SQLite
 
   constructor(d1Database: D1Database) {
     this.db = drizzle(d1Database, { schema });
+  }
+
+  /**
+   * Get the database dialect (sqlite for D1, postgres for future compatibility)
+   */
+  getDialect(): 'sqlite' | 'postgres' {
+    return this.dialect;
   }
 
   /**

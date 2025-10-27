@@ -224,7 +224,7 @@ function checkD1Tables(): boolean {
     // Use single quotes for better cross-platform compatibility
     const wranglerCmd = IS_WINDOWS ? 'wrangler.cmd' : 'wrangler';
     const output = execSync(
-      `${wranglerCmd} d1 execute querido-diario-prod --local --command="SELECT name FROM sqlite_master WHERE type='table'"`,
+      `${wranglerCmd} d1 execute goodfellow-prod --local --command="SELECT name FROM sqlite_master WHERE type='table'"`,
       {
         encoding: 'utf-8',
         stdio: ['pipe', 'pipe', 'pipe']
@@ -256,7 +256,7 @@ function setupD1Tables(): void {
   try {
     const wranglerCmd = IS_WINDOWS ? 'wrangler.cmd' : 'wrangler';
     execSync(
-      `${wranglerCmd} d1 execute querido-diario-prod --local --file=database/schema-d1.sql`,
+      `${wranglerCmd} d1 execute goodfellow-prod --local --file=database/schema-lite.sql`,
       {
         stdio: 'inherit'
       } as any

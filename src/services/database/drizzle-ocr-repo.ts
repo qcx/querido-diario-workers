@@ -3,7 +3,7 @@
  * Replaces ocr-repo.ts with Drizzle ORM implementation
  */
 
-import { eq, desc, and } from 'drizzle-orm';
+import { eq, desc, and, sql, like } from 'drizzle-orm';
 import { DrizzleDatabaseClient, schema } from './drizzle-client';
 import { logger } from '../../utils/logger';
 import type { OcrResult } from '../../types';
@@ -11,8 +11,8 @@ import type { OcrMetadata } from '../../types/database';
 
 export interface OcrResultRecord {
   id: string;
-  jobId: string;
-  gazetteId: string;
+  documentType: string;
+  documentId: string;
   extractedText: string;
   textLength: number;
   confidenceScore: number | null;
@@ -24,8 +24,8 @@ export interface OcrResultRecord {
 
 export interface OcrMetadataRecord {
   id: string;
-  jobId: string;
-  gazetteId: string;
+  documentType: string;
+  documentId: string;
   status: string;
   pagesProcessed: number | null;
   processingTimeMs: number | null;
@@ -42,65 +42,81 @@ export class DrizzleOcrRepository {
 
   /**
    * Store OCR result
+   * @param ocrResult - The OCR result to store
+   * @param gazetteCrawlId - Optional specific crawl ID that triggered this OCR (recommended to avoid bulk updates)
    */
-  async storeOcrResult(ocrResult: OcrResult): Promise<string> {
+  async storeOcrResult(ocrResult: OcrResult, gazetteCrawlId?: string): Promise<string> {
     try {
       const db = this.dbClient.getDb();
 
-      // Find the gazette by territory ID and publication date
-      // This is more robust than jobId matching since jobId formats may differ
+      // Find the gazette by PDF URL (unique identifier)
+      // PDF URL is unique in the schema, so this is the most reliable lookup
       const gazetteResults = await db.select({ id: schema.gazetteRegistry.id })
         .from(schema.gazetteRegistry)
-        .where(and(
-          eq(schema.gazetteRegistry.territoryId, ocrResult.territoryId),
-          eq(schema.gazetteRegistry.publicationDate, ocrResult.publicationDate)
-        ))
-        .orderBy(desc(schema.gazetteRegistry.createdAt))
+        .where(eq(schema.gazetteRegistry.pdfUrl, ocrResult.pdfUrl))
         .limit(1);
 
       if (gazetteResults.length === 0) {
         throw new Error(
-          `Gazette not found for territory ${ocrResult.territoryId} on date ${ocrResult.publicationDate}. OCR jobId: ${ocrResult.jobId}`
+          `Gazette not found for PDF URL ${ocrResult.pdfUrl}. OCR jobId: ${ocrResult.jobId}`
         );
       }
 
       const gazetteId = gazetteResults[0].id;
 
-      // Store OCR result
+      // Store OCR result with correct schema fields
       const ocrData = {
         id: this.dbClient.generateId(),
-        jobId: ocrResult.jobId,
-        gazetteId,
+        documentType: 'gazette_registry' as const,
+        documentId: gazetteId, // This links to gazette_registry.id
         extractedText: ocrResult.extractedText || '',
         textLength: (ocrResult.extractedText || '').length,
         confidenceScore: ocrResult.confidence || null,
         languageDetected: ocrResult.language || 'pt',
-        processingMethod: ocrResult.method || 'mistral',
+        processingMethod: 'mistral',
         createdAt: this.dbClient.getCurrentTimestamp(),
-        metadata: this.dbClient.stringifyJson(ocrResult.metadata || {})
+        metadata: this.dbClient.stringifyJson({ 
+          jobId: ocrResult.jobId,
+          ...(ocrResult.metadata || {})
+        })
       };
 
-      const result = await db.insert(schema.ocrResults)
-        .values(ocrData)
-        .onConflictDoUpdate({
-          target: schema.ocrResults.jobId,
-          set: {
+      // Check if OCR result already exists for this gazette
+      const existingOcrResult = await db.select({ id: schema.ocrResults.id })
+        .from(schema.ocrResults)
+        .where(and(
+          eq(schema.ocrResults.documentType, 'gazette_registry'),
+          eq(schema.ocrResults.documentId, gazetteId)
+        ))
+        .limit(1);
+
+      let ocrResultId: string;
+      if (existingOcrResult.length === 0) {
+        const result = await db.insert(schema.ocrResults)
+          .values(ocrData)
+          .returning({ id: schema.ocrResults.id });
+        ocrResultId = result[0].id;
+      } else {
+        // Update existing record
+        await db.update(schema.ocrResults)
+          .set({
             extractedText: ocrData.extractedText,
             textLength: ocrData.textLength,
             confidenceScore: ocrData.confidenceScore,
             languageDetected: ocrData.languageDetected,
             processingMethod: ocrData.processingMethod,
             metadata: ocrData.metadata
-          }
-        })
-        .returning({ id: schema.ocrResults.id });
+          })
+          .where(eq(schema.ocrResults.id, existingOcrResult[0].id));
+        ocrResultId = existingOcrResult[0].id;
+      }
 
-      // Store OCR metadata
-      const metadataData = {
+      // Store OCR job tracking
+      const jobData = {
         id: this.dbClient.generateId(),
-        jobId: ocrResult.jobId,
-        gazetteId,
-        status: 'success',
+        documentType: 'gazette_registry' as const,
+        documentId: gazetteId,
+        status: 'success' as const,
         pagesProcessed: ocrResult.pagesProcessed || null,
         processingTimeMs: ocrResult.processingTimeMs || null,
         textLength: (ocrResult.extractedText || '').length,
@@ -108,34 +124,73 @@ export class DrizzleOcrRepository {
         errorMessage: null,
         createdAt: this.dbClient.getCurrentTimestamp(),
         completedAt: this.dbClient.getCurrentTimestamp(),
-        metadata: this.dbClient.stringifyJson({})
+        metadata: this.dbClient.stringifyJson({ jobId: ocrResult.jobId })
       };
 
-      await db.insert(schema.ocrMetadata)
-        .values(metadataData)
-        .onConflictDoUpdate({
-          target: schema.ocrMetadata.jobId,
-          set: {
-            status: metadataData.status,
-            pagesProcessed: metadataData.pagesProcessed,
-            processingTimeMs: metadataData.processingTimeMs,
-            textLength: metadataData.textLength,
-            completedAt: metadataData.completedAt
-          }
-        });
+      // Check if OCR job already exists for this gazette
+      const existingJob = await db.select({ id: schema.ocrJobs.id })
+        .from(schema.ocrJobs)
+        .where(and(
+          eq(schema.ocrJobs.documentType, 'gazette_registry'),
+          eq(schema.ocrJobs.documentId, gazetteId)
+        ))
+        .limit(1);
 
-      logger.info('OCR result stored successfully', {
-        ocrId: result[0].id,
+      if (existingJob.length === 0) {
+        await db.insert(schema.ocrJobs).values(jobData);
+      } else {
+        await db.update(schema.ocrJobs)
+          .set({
+            status: jobData.status,
+            pagesProcessed: jobData.pagesProcessed,
+            processingTimeMs: jobData.processingTimeMs,
+            textLength: jobData.textLength,
+            completedAt: jobData.completedAt,
+            metadata: jobData.metadata
+          })
+          .where(eq(schema.ocrJobs.id, existingJob[0].id));
+      }
+
+      // Atomically update gazette_registry status to ocr_success
+      await db.update(schema.gazetteRegistry)
+        .set({ status: 'ocr_success' })
+        .where(eq(schema.gazetteRegistry.id, gazetteId));
+
+      // Update gazette_crawl status to analysis_pending (OCR complete, ready for analysis)
+      // If gazetteCrawlId is provided, update only that specific crawl (recommended)
+      // Otherwise, update all crawls for this gazette (legacy behavior, may affect unrelated crawls)
+      if (gazetteCrawlId) {
+        await db.update(schema.gazetteCrawls)
+          .set({ status: 'analysis_pending' })
+          .where(eq(schema.gazetteCrawls.id, gazetteCrawlId));
+        
+        logger.info('Updated specific gazette crawl status to analysis_pending', {
+          gazetteCrawlId,
+          gazetteId
+        });
+      } else {
+        logger.warn('No gazetteCrawlId provided, bulk-updating all crawls for gazette (may affect unrelated crawls)', {
+          gazetteId,
+          jobId: ocrResult.jobId
+        });
+        
+        await db.update(schema.gazetteCrawls)
+          .set({ status: 'analysis_pending' })
+          .where(eq(schema.gazetteCrawls.gazetteId, gazetteId));
+      }
+
+      logger.info('OCR result stored successfully with status updates', {
+        ocrId: ocrResultId,
         jobId: ocrResult.jobId,
-        gazetteJobId: ocrResult.gazetteJobId,
-        textLength: ocrResult.extractedText.length
+        gazetteId,
+        textLength: (ocrResult.extractedText || '').length
       });
 
-      return result[0].id;
+      return ocrResultId;
     } catch (error) {
       logger.error('Failed to store OCR result', {
         jobId: ocrResult.jobId,
-        gazetteJobId: ocrResult.gazetteJobId,
+        pdfUrl: ocrResult.pdfUrl,
         error
       });
       throw error;
@@ -143,21 +198,24 @@ export class DrizzleOcrRepository {
   }
 
   /**
-   * Check if OCR result exists (compatibility method)
+   * Check if OCR result exists by gazette ID
    */
-  async ocrResultExists(jobId: string): Promise<boolean> {
+  async ocrResultExists(gazetteId: string): Promise<boolean> {
     try {
       const db = this.dbClient.getDb();
 
       const results = await db.select({ id: schema.ocrResults.id })
         .from(schema.ocrResults)
-        .where(eq(schema.ocrResults.jobId, jobId))
+        .where(and(
+          eq(schema.ocrResults.documentType, 'gazette_registry'),
+          eq(schema.ocrResults.documentId, gazetteId)
+        ))
         .limit(1);
 
       return results.length > 0;
     } catch (error) {
       logger.error('Failed to check if OCR result exists', {
-        jobId,
+        gazetteId,
         error
       });
       return false;
@@ -165,15 +223,18 @@ export class DrizzleOcrRepository {
   }
 
   /**
-   * Get OCR result by job ID
+   * Get OCR result by gazette ID
    */
-  async getOcrResultByJobId(jobId: string): Promise<OcrResultRecord | null> {
+  async getOcrResultByGazetteId(gazetteId: string): Promise<OcrResultRecord | null> {
     try {
       const db = this.dbClient.getDb();
 
       const results = await db.select()
         .from(schema.ocrResults)
-        .where(eq(schema.ocrResults.jobId, jobId))
+        .where(and(
+          eq(schema.ocrResults.documentType, 'gazette_registry'),
+          eq(schema.ocrResults.documentId, gazetteId)
+        ))
         .limit(1);
 
       if (results.length === 0) {
@@ -185,6 +246,37 @@ export class DrizzleOcrRepository {
         ...record,
         metadata: this.dbClient.parseJson<OcrMetadata>(record.metadata, {})
       };
+    } catch (error) {
+      logger.error('Failed to get OCR result by gazette ID', {
+        gazetteId,
+        error
+      });
+      throw error;
+    }
+  }
+
+  /**
+   * Get OCR result by job ID (legacy compatibility - searches in metadata)
+   */
+  async getOcrResultByJobId(jobId: string): Promise<OcrResultRecord | null> {
+    try {
+      const db = this.dbClient.getDb();
+
+      // Unfortunately we need to scan all results since jobId is in metadata JSON
+      const results = await db.select()
+        .from(schema.ocrResults);
+
+      for (const record of results) {
+        const metadata = this.dbClient.parseJson<any>(record.metadata, {});
+        if (metadata.jobId === jobId) {
+          return {
+            ...record,
+            metadata
+          };
+        }
+      }
+
+      return null;
     } catch (error) {
       logger.error('Failed to get OCR result by job ID', {
         jobId,
@@ -195,15 +287,18 @@ export class DrizzleOcrRepository {
   }
 
   /**
-   * Get OCR metadata by job ID
+   * Get OCR job by gazette ID
    */
-  async getOcrMetadataByJobId(jobId: string): Promise<OcrMetadataRecord | null> {
+  async getOcrJobByGazetteId(gazetteId: string): Promise<OcrMetadataRecord | null> {
     try {
       const db = this.dbClient.getDb();
 
       const results = await db.select()
-        .from(schema.ocrMetadata)
-        .where(eq(schema.ocrMetadata.jobId, jobId))
+        .from(schema.ocrJobs)
+        .where(and(
+          eq(schema.ocrJobs.documentType, 'gazette_registry'),
+          eq(schema.ocrJobs.documentId, gazetteId)
+        ))
         .limit(1);
 
       if (results.length === 0) {
@@ -216,8 +311,8 @@ export class DrizzleOcrRepository {
         metadata: this.dbClient.parseJson<OcrMetadata>(record.metadata, {})
       };
     } catch (error) {
-      logger.error('Failed to get OCR metadata by job ID', {
-        jobId,
+      logger.error('Failed to get OCR job by gazette ID', {
+        gazetteId,
         error
       });
       throw error;
@@ -225,17 +320,17 @@ export class DrizzleOcrRepository {
   }
 
   /**
-   * Update OCR status (for tracking progress)
+   * Update OCR status (for tracking progress) by gazette ID
    */
   async updateOcrStatus(
-    jobId: string,
+    gazetteId: string,
     status: 'pending' | 'processing' | 'success' | 'failure' | 'partial',
     errorMessage?: string
   ): Promise<void> {
     try {
       const db = this.dbClient.getDb();
 
-      const updateData: Partial<typeof schema.ocrMetadata.$inferInsert> = {
+      const updateData: Partial<typeof schema.ocrJobs.$inferInsert> = {
         status,
         ...(status === 'success' || status === 'failure' || status === 'partial' 
           ? { completedAt: this.dbClient.getCurrentTimestamp() } 
@@ -243,18 +338,21 @@ export class DrizzleOcrRepository {
         ...(errorMessage ? { errorMessage } : {})
       };
 
-      await db.update(schema.ocrMetadata)
+      await db.update(schema.ocrJobs)
         .set(updateData)
-        .where(eq(schema.ocrMetadata.jobId, jobId));
+        .where(and(
+          eq(schema.ocrJobs.documentType, 'gazette_registry'),
+          eq(schema.ocrJobs.documentId, gazetteId)
+        ));
 
       logger.info('OCR status updated', {
-        jobId,
+        gazetteId,
         status,
         errorMessage
       });
     } catch (error) {
       logger.error('Failed to update OCR status', {
-        jobId,
+        gazetteId,
         status,
         error
       });
@@ -271,7 +369,10 @@ export class DrizzleOcrRepository {
 
       const results = await db.select()
         .from(schema.ocrResults)
-        .where(eq(schema.ocrResults.gazetteId, gazetteId))
+        .where(and(
+          eq(schema.ocrResults.documentType, 'gazette_registry'),
+          eq(schema.ocrResults.documentId, gazetteId)
+        ))
         .orderBy(desc(schema.ocrResults.createdAt));
 
       return results.map(record => ({
@@ -303,13 +404,11 @@ export class DrizzleOcrRepository {
       cutoffDate.setDate(cutoffDate.getDate() - days);
       const cutoffDateStr = cutoffDate.toISOString();
 
-      const metadata = await db.select()
-        .from(schema.ocrMetadata)
-        .where(and(
-          eq(schema.ocrMetadata.createdAt, '>=', cutoffDateStr)
-        ));
+      const jobs = await db.select()
+        .from(schema.ocrJobs)
+        .where(sql`${schema.ocrJobs.createdAt} >= ${cutoffDateStr}`);
 
-      if (metadata.length === 0) {
+      if (jobs.length === 0) {
         return {
           totalJobs: 0,
           successfulJobs: 0,
@@ -319,18 +418,18 @@ export class DrizzleOcrRepository {
         };
       }
 
-      const successfulJobs = metadata.filter(m => m.status === 'success').length;
-      const failedJobs = metadata.filter(m => m.status === 'failure').length;
+      const successfulJobs = jobs.filter(j => j.status === 'success').length;
+      const failedJobs = jobs.filter(j => j.status === 'failure').length;
       
-      const totalTextLength = metadata.reduce((sum, m) => sum + (m.textLength || 0), 0);
-      const totalProcessingTime = metadata.reduce((sum, m) => sum + (m.processingTimeMs || 0), 0);
+      const totalTextLength = jobs.reduce((sum, j) => sum + (j.textLength || 0), 0);
+      const totalProcessingTime = jobs.reduce((sum, j) => sum + (j.processingTimeMs || 0), 0);
 
       return {
-        totalJobs: metadata.length,
+        totalJobs: jobs.length,
         successfulJobs,
         failedJobs,
-        averageTextLength: Math.round(totalTextLength / metadata.length),
-        averageProcessingTime: Math.round(totalProcessingTime / metadata.length)
+        averageTextLength: Math.round(totalTextLength / jobs.length),
+        averageProcessingTime: Math.round(totalProcessingTime / jobs.length)
       };
     } catch (error) {
       logger.error('Failed to get OCR stats', {
@@ -358,7 +457,7 @@ export class DrizzleOcrRepository {
       // Simple LIKE search (SQLite supports this)
       const results = await db.select()
         .from(schema.ocrResults)
-        .where(eq(schema.ocrResults.extractedText, 'LIKE', `%${searchTerm}%`))
+        .where(like(schema.ocrResults.extractedText, `%${searchTerm}%`))
         .orderBy(desc(schema.ocrResults.createdAt))
         .limit(limit)
         .offset(offset);
@@ -366,7 +465,7 @@ export class DrizzleOcrRepository {
       // Get total count for the same search
       const totalResults = await db.select({ count: schema.ocrResults.id })
         .from(schema.ocrResults)
-        .where(eq(schema.ocrResults.extractedText, 'LIKE', `%${searchTerm}%`));
+        .where(like(schema.ocrResults.extractedText, `%${searchTerm}%`));
 
       const records = results.map(record => ({
         ...record,
@@ -383,6 +482,51 @@ export class DrizzleOcrRepository {
         error
       });
       throw error;
+    }
+  }
+
+  /**
+   * Find OCR job ID by document ID and job ID (stored in metadata)
+   * Dialect-aware method that works with both SQLite and Postgres
+   */
+  async findOcrJobIdByDocumentAndJobId(
+    documentType: 'gazette_registry',
+    documentId: string,
+    jobId: string
+  ): Promise<{ id: string }[]> {
+    try {
+      const db = this.dbClient.getDb();
+      const dialect = this.dbClient.getDialect();
+
+      if (dialect === 'sqlite') {
+        // SQLite uses json_extract
+        return await db.select({ id: schema.ocrJobs.id })
+          .from(schema.ocrJobs)
+          .where(and(
+            eq(schema.ocrJobs.documentType, documentType),
+            eq(schema.ocrJobs.documentId, documentId),
+            sql`json_extract(${schema.ocrJobs.metadata}, '$.jobId') = ${jobId}`
+          ))
+          .limit(1);
+      } else {
+        // Postgres uses ->> operator
+        return await db.select({ id: schema.ocrJobs.id })
+          .from(schema.ocrJobs)
+          .where(and(
+            eq(schema.ocrJobs.documentType, documentType),
+            eq(schema.ocrJobs.documentId, documentId),
+            sql`${schema.ocrJobs.metadata} ->> 'jobId' = ${jobId}`
+          ))
+          .limit(1);
+      }
+    } catch (error) {
+      logger.error('Failed to find OCR job by document and job ID', {
+        documentType,
+        documentId,
+        jobId,
+        error
+      });
+      return [];
     }
   }
 }

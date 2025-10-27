@@ -33,6 +33,8 @@ export interface OcrQueueMessage {
     isExtraEdition?: boolean;
     sourceText?: string;
     crawlJobId?: string;
+    gazetteCrawlId?: string;
+    spiderType?: string;
     detectedDocumentType?: string;
     detectedCategories?: string[];
     keyEntities?: Record<string, any>;

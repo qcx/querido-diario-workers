@@ -62,7 +62,11 @@ export async function processCrawlBatch(
         queueMessage.territoryId,
         queueMessage.spiderId,
         'crawl_start',
-        'started'
+        'started',
+        undefined,
+        undefined,
+        undefined,
+        queueMessage.spiderType
       );
 
       // Get spider configuration
@@ -106,81 +110,85 @@ export async function processCrawlBatch(
         executionTimeMs: result.stats.executionTimeMs,
       });
 
-      // Save gazettes to database registry if any were found
+      // Process each gazette: check for existing entries and route accordingly
       if (gazettes.length > 0) {
-        try {
-          const gazetteJobIds = await gazetteRepo.registerGazettes(
-            gazettes,
-            crawlJobId
-          );
+        const ocrSender = new OcrQueueSender(env.OCR_QUEUE);
 
-          logger.info('Gazettes registered in database', {
-            spiderId: queueMessage.spiderId,
-            count: gazettes.length,
-            gazetteJobIds: gazetteJobIds.length,
-          });
-        } catch (error) {
-          logger.error(
-            'Failed to register gazettes in database',
-            error as Error,
-            {
-              spiderId: queueMessage.spiderId,
-              count: gazettes.length,
+        for (const gazette of gazettes) {
+          try {
+            // Check if gazette exists by PDF URL
+            const existingGazette = await gazetteRepo.getGazetteByPdfUrl(gazette.fileUrl);
+            
+            const gazetteJobId = `${crawlJobId}-${gazette.territoryId}-${gazette.date}${gazette.editionNumber ? `-${gazette.editionNumber}` : ''}-${Date.now()}`;
+
+            let gazetteId: string;
+            
+            if (existingGazette) {
+              gazetteId = existingGazette.id;
+              logger.info('Found existing gazette', {
+                gazetteId: existingGazette.id,
+                status: existingGazette.status,
+                pdfUrl: gazette.fileUrl
+              });
+            } else {
+              // New gazette - create registry
+              gazetteId = await gazetteRepo.registerGazette(gazette, crawlJobId);
+              logger.info('Registered new gazette', {
+                gazetteId,
+                pdfUrl: gazette.fileUrl
+              });
             }
-          );
-
-          await errorTracker
-            .trackDatabaseError(
-              'goodfellow-crawl',
-              'register_gazettes',
-              error as Error,
-              'INSERT INTO gazette_registry',
-              crawlJobId
-            )
-            .catch(() => {});
-        }
-      }
-
-      // Send gazettes to OCR queue if any were found
-      if (gazettes.length > 0 && env.OCR_QUEUE) {
-        try {
-          const ocrSender = new OcrQueueSender(env.OCR_QUEUE);
-          await ocrSender.sendGazettes(
-            gazettes,
-            queueMessage.spiderId,
-            crawlJobId
-          );
-
-          logger.info('Gazettes sent to OCR queue', {
-            spiderId: queueMessage.spiderId,
-            count: gazettes.length,
-          });
-        } catch (error) {
-          logger.error(
-            'Failed to send gazettes to OCR queue',
-            error as Error,
-            {
-              spiderId: queueMessage.spiderId,
-              count: gazettes.length,
-            }
-          );
-
-          await errorTracker
-            .trackError({
-              workerName: 'goodfellow-crawl',
-              operationType: 'queue_send_ocr',
-              severity: 'error',
-              errorMessage: (error as Error).message,
-              stackTrace: (error as Error).stack,
-              jobId: crawlJobId,
+            
+            // Always create gazette crawl with 'created' status
+            const gazetteCrawlId = await gazetteRepo.createGazetteCrawl({
+              gazetteId,
+              jobId: gazetteJobId,
               territoryId: queueMessage.territoryId,
-              context: {
-                spiderId: queueMessage.spiderId,
-                gazetteCount: gazettes.length,
-              },
-            })
-            .catch(() => {});
+              spiderId: queueMessage.spiderId,
+              status: 'created',
+              scrapedAt: gazette.scrapedAt
+            });
+
+            // Always send to OCR queue - OCR processor will handle deduplication
+            if (env.OCR_QUEUE) {
+              await ocrSender.sendGazette(
+                gazette,
+                queueMessage.spiderId,
+                crawlJobId,
+                gazetteCrawlId,
+                queueMessage.spiderType
+              );
+            }
+
+          } catch (gazetteError) {
+            logger.error('Failed to process individual gazette', gazetteError as Error, {
+              pdfUrl: gazette.fileUrl,
+              territoryId: gazette.territoryId
+            });
+
+            await errorTracker
+              .trackError({
+                workerName: 'goodfellow-crawl',
+                operationType: 'process_gazette',
+                severity: 'error',
+                errorMessage: (gazetteError as Error).message,
+                stackTrace: (gazetteError as Error).stack,
+                jobId: crawlJobId,
+                territoryId: queueMessage.territoryId,
+                context: {
+                  spiderId: queueMessage.spiderId,
+                  pdfUrl: gazette.fileUrl,
+                },
+              })
+              .catch(() => {});
+          }
         }
+
+        logger.info('Gazette processing summary', {
+          spiderId: queueMessage.spiderId,
+          total: gazettes.length,
+          sentToOcrQueue: gazettes.length
+        });
       }
 
       // Track successful crawl completion
@@ -191,7 +199,9 @@ export async function processCrawlBatch(
         'crawl_end',
         'completed',
         gazettes.length,
-        executionTimeMs
+        executionTimeMs,
+        undefined,
+        queueMessage.spiderType
       );
 
       // Acknowledge message
@@ -216,7 +226,8 @@ export async function processCrawlBatch(
         'failed',
         undefined,
         executionTimeMs,
-        errorMessage
+        errorMessage,
+        queueMessage.spiderType
       );
 
       await errorTracker.trackCriticalError(

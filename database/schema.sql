@@ -12,6 +12,8 @@ CREATE TYPE telemetry_step AS ENUM ('crawl_start', 'crawl_end', 'ocr_start', 'oc
 CREATE TYPE step_status AS ENUM ('started', 'completed', 'failed', 'skipped');
 CREATE TYPE ocr_status AS ENUM ('pending', 'processing', 'success', 'failure', 'partial');
 CREATE TYPE webhook_status AS ENUM ('pending', 'sent', 'failed', 'retry');
+CREATE TYPE gazette_registry_status AS ENUM ('pending', 'uploaded', 'ocr_processing', 'ocr_retrying', 'ocr_failure', 'ocr_success');
+CREATE TYPE gazette_crawl_status AS ENUM ('created', 'processing', 'success', 'failed', 'analysis_pending');
 
 -- 1. CRAWL_JOBS - Track crawling sessions
 CREATE TABLE crawl_jobs (
@@ -50,25 +52,35 @@ CREATE TABLE crawl_telemetry (
 -- 3. GAZETTE_REGISTRY - Gazette metadata (permanent record)
 CREATE TABLE gazette_registry (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    job_id TEXT UNIQUE NOT NULL,
-    territory_id TEXT NOT NULL,
     publication_date DATE NOT NULL,
     edition_number TEXT,
-    spider_id TEXT NOT NULL,
-    pdf_url TEXT NOT NULL,
+    pdf_url TEXT NOT NULL UNIQUE,
     pdf_r2_key TEXT,
     is_extra_edition BOOLEAN NOT NULL DEFAULT false,
     power TEXT,
-    scraped_at TIMESTAMP WITH TIME ZONE NOT NULL,
     created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
+    status gazette_registry_status NOT NULL DEFAULT 'pending',
     metadata JSONB DEFAULT '{}'::jsonb
 );
 
--- 4. OCR_RESULTS - OCR results with extracted text
-CREATE TABLE ocr_results (
+-- 4. GAZETTE_CRAWLS - Track crawl-specific metadata and relationships
+CREATE TABLE gazette_crawls (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     job_id TEXT UNIQUE NOT NULL,
-    gazette_id UUID REFERENCES gazette_registry(id) ON DELETE CASCADE,
+    territory_id TEXT NOT NULL,
+    spider_id TEXT NOT NULL,
+    gazette_id UUID NOT NULL REFERENCES gazette_registry(id) ON DELETE CASCADE,
+    status gazette_crawl_status NOT NULL DEFAULT 'created',
+    scraped_at TIMESTAMP WITH TIME ZONE NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
+);
+
+-- 5. OCR_RESULTS - OCR results with extracted text
+-- Necessary for cases where 1 gazette needs more than 1 entry (e.g., text too large, saved in parts)
+CREATE TABLE ocr_results (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    document_type TEXT NOT NULL DEFAULT 'gazette_registry' CHECK (document_type IN ('gazette_registry')),
+    document_id UUID NOT NULL,
     extracted_text TEXT NOT NULL,
     text_length INTEGER NOT NULL DEFAULT 0,
     confidence_score FLOAT,
@@ -78,11 +90,11 @@ CREATE TABLE ocr_results (
     metadata JSONB DEFAULT '{}'::jsonb
 );
 
--- 5. OCR_METADATA - OCR job tracking (not the text)
-CREATE TABLE ocr_metadata (
+-- 6. OCR_JOBS - OCR job tracking (not the text)
+CREATE TABLE ocr_jobs (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    job_id TEXT UNIQUE NOT NULL,
-    gazette_id UUID REFERENCES gazette_registry(id) ON DELETE CASCADE,
+    document_type TEXT NOT NULL DEFAULT 'gazette_registry' CHECK (document_type IN ('gazette_registry')),
+    document_id UUID NOT NULL,
     status ocr_status NOT NULL DEFAULT 'pending',
     pages_processed INTEGER,
     processing_time_ms INTEGER,
@@ -94,11 +106,10 @@ CREATE TABLE ocr_metadata (
     metadata JSONB DEFAULT '{}'::jsonb
 );
 
--- 6. ANALYSIS_RESULTS - Full analysis results
+-- 7. ANALYSIS_RESULTS - Full analysis results
 CREATE TABLE analysis_results (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     job_id TEXT UNIQUE NOT NULL,
-    ocr_job_id TEXT NOT NULL,
     gazette_id UUID REFERENCES gazette_registry(id) ON DELETE CASCADE,
     territory_id TEXT NOT NULL,
     publication_date DATE NOT NULL,
@@ -113,7 +124,7 @@ CREATE TABLE analysis_results (
     metadata JSONB DEFAULT '{}'::jsonb
 );
 
--- 7. WEBHOOK_DELIVERIES - Webhook delivery logs
+-- 8. WEBHOOK_DELIVERIES - Webhook delivery logs
 CREATE TABLE webhook_deliveries (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     notification_id TEXT UNIQUE NOT NULL,
@@ -131,7 +142,7 @@ CREATE TABLE webhook_deliveries (
     metadata JSONB DEFAULT '{}'::jsonb
 );
 
--- 8. CONCURSO_FINDINGS - Dedicated concurso data
+-- 9. CONCURSO_FINDINGS - Dedicated concurso data
 CREATE TABLE concurso_findings (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     analysis_job_id TEXT NOT NULL,
@@ -150,7 +161,7 @@ CREATE TABLE concurso_findings (
     created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
 );
 
--- 9. ERROR_LOGS - Comprehensive error tracking for dashboard
+-- 10. ERROR_LOGS - Comprehensive error tracking for dashboard
 CREATE TABLE error_logs (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     worker_name TEXT NOT NULL,
@@ -174,27 +185,33 @@ CREATE INDEX idx_crawl_telemetry_job_territory ON crawl_telemetry(crawl_job_id, 
 CREATE INDEX idx_crawl_telemetry_timestamp ON crawl_telemetry(timestamp);
 CREATE INDEX idx_crawl_telemetry_step_status ON crawl_telemetry(step, status);
 
--- Gazette lookups
-CREATE INDEX idx_gazette_territory_date ON gazette_registry(territory_id, publication_date);
-CREATE INDEX idx_gazette_spider_date ON gazette_registry(spider_id, publication_date);
-CREATE INDEX idx_gazette_job_id ON gazette_registry(job_id);
+-- Gazette crawls lookups
+CREATE INDEX idx_gazette_crawls_territory_date ON gazette_crawls(territory_id, scraped_at);
+CREATE INDEX idx_gazette_crawls_spider ON gazette_crawls(spider_id, scraped_at);
+CREATE INDEX idx_gazette_crawls_job_id ON gazette_crawls(job_id);
+CREATE INDEX idx_gazette_crawls_gazette_id ON gazette_crawls(gazette_id);
+
+-- Gazette registry lookups
+CREATE INDEX idx_gazette_registry_publication_date ON gazette_registry(publication_date);
+CREATE INDEX idx_gazette_registry_pdf_url ON gazette_registry(pdf_url);
+CREATE INDEX idx_gazette_registry_status ON gazette_registry(status, created_at);
 
 -- OCR results tracking
-CREATE INDEX idx_ocr_results_job_id ON ocr_results(job_id);
-CREATE INDEX idx_ocr_results_gazette_id ON ocr_results(gazette_id);
+CREATE INDEX idx_ocr_results_document ON ocr_results(document_type, document_id);
+CREATE INDEX idx_ocr_results_created_at ON ocr_results(created_at);
 CREATE INDEX idx_ocr_results_text_search ON ocr_results USING GIN(to_tsvector('portuguese', extracted_text));
 
--- OCR status tracking
-CREATE INDEX idx_ocr_status ON ocr_metadata(status, created_at);
-CREATE INDEX idx_ocr_gazette ON ocr_metadata(gazette_id);
-CREATE INDEX idx_ocr_job_id ON ocr_metadata(job_id);
+-- OCR jobs tracking
+CREATE INDEX idx_ocr_jobs_status ON ocr_jobs(status, created_at);
+CREATE INDEX idx_ocr_jobs_document ON ocr_jobs(document_type, document_id);
+CREATE INDEX idx_ocr_jobs_created_at ON ocr_jobs(created_at);
 
 -- Analysis queries
 CREATE INDEX idx_analysis_territory_date ON analysis_results(territory_id, publication_date);
 CREATE INDEX idx_analysis_categories ON analysis_results USING GIN(categories);
 CREATE INDEX idx_analysis_high_confidence ON analysis_results(high_confidence_findings) WHERE high_confidence_findings > 0;
 CREATE INDEX idx_analysis_job_id ON analysis_results(job_id);
-CREATE INDEX idx_analysis_ocr_job_id ON analysis_results(ocr_job_id);
+CREATE INDEX idx_analysis_gazette_id ON analysis_results(gazette_id);
 
 -- Webhook tracking
 CREATE INDEX idx_webhook_status_retry ON webhook_deliveries(status, next_retry_at) WHERE status IN ('pending', 'retry');
@@ -224,8 +241,10 @@ CREATE INDEX idx_failed_webhooks ON webhook_deliveries(next_retry_at) WHERE stat
 -- Comments for documentation
 COMMENT ON TABLE crawl_jobs IS 'Tracks overall crawling sessions and their progress';
 COMMENT ON TABLE crawl_telemetry IS 'Detailed telemetry for each step of the crawling process per city';
+COMMENT ON TABLE gazette_crawls IS 'Track crawl-specific metadata and relationships between jobs and gazettes';
 COMMENT ON TABLE gazette_registry IS 'Permanent registry of all discovered gazettes';
-COMMENT ON TABLE ocr_metadata IS 'Metadata about OCR processing jobs (actual text stored in KV)';
+COMMENT ON TABLE ocr_results IS 'OCR extracted text - supports multiple entries per gazette for large documents';
+COMMENT ON TABLE ocr_jobs IS 'Metadata about OCR processing jobs';
 COMMENT ON TABLE analysis_results IS 'Full analysis results with findings and summaries';
 COMMENT ON TABLE webhook_deliveries IS 'Log of all webhook delivery attempts and their results';
 COMMENT ON TABLE concurso_findings IS 'Extracted concurso público data for specialized queries';
@@ -243,12 +262,12 @@ SELECT
     cj.failed_cities,
     COUNT(DISTINCT el.id) as error_count,
     MAX(el.created_at) as last_error_at,
-    COUNT(DISTINCT gr.id) as gazettes_found,
-    COUNT(DISTINCT ocr.id) as ocr_completed,
+    COUNT(DISTINCT gc.gazette_id) as gazettes_found,
+    COUNT(DISTINCT oj.id) as ocr_completed,
     COUNT(DISTINCT ar.id) as analyses_completed
 FROM crawl_jobs cj
 LEFT JOIN error_logs el ON el.job_id = cj.id::text
-LEFT JOIN gazette_registry gr ON gr.job_id LIKE CONCAT(cj.id::text, '%')
-LEFT JOIN ocr_results ocr ON ocr.job_id LIKE CONCAT(cj.id::text, '%')
+LEFT JOIN gazette_crawls gc ON gc.job_id LIKE CONCAT(cj.id::text, '%')
+LEFT JOIN ocr_jobs oj ON oj.document_id::text IN (SELECT id::text FROM gazette_registry WHERE id IN (SELECT gazette_id FROM gazette_crawls WHERE job_id LIKE CONCAT(cj.id::text, '%')))
 LEFT JOIN analysis_results ar ON ar.job_id LIKE CONCAT(cj.id::text, '%')
 GROUP BY cj.id, cj.status, cj.total_cities, cj.completed_cities, cj.failed_cities;
