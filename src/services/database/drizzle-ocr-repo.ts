@@ -154,9 +154,10 @@ export class DrizzleOcrRepository {
         .set({ status: 'ocr_success' })
         .where(eq(schema.gazetteRegistry.id, gazetteId));
 
-      // Atomically update all associated gazette_crawls to success status
+      // Atomically update all associated gazette_crawls to analysis_pending status
+      // (OCR complete, ready for analysis)
       await db.update(schema.gazetteCrawls)
-        .set({ status: 'success' })
+        .set({ status: 'analysis_pending' })
         .where(eq(schema.gazetteCrawls.gazetteId, gazetteId));
 
       logger.info('OCR result stored successfully with status updates', {

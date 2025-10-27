@@ -57,26 +57,8 @@ export const crawlTelemetry = sqliteTable('crawl_telemetry', {
   stepStatusIdx: index('idx_crawl_telemetry_step_status').on(table.step, table.status),
 }));
 
-// 3. GAZETTE_CRAWLS - Track crawl-specific metadata and relationships
-export const gazetteCrawls = sqliteTable('gazette_crawls', {
-  id: text('id').primaryKey(),
-  jobId: text('job_id').unique().notNull(),
-  territoryId: text('territory_id').notNull(),
-  spiderId: text('spider_id').notNull(),
-  gazetteId: text('gazette_id').notNull().references(() => gazetteRegistry.id, { onDelete: 'cascade' }),
-  analysisResultId: text('analysis_result_id').references(() => analysisResults.id),
-  status: text('status').notNull().default('created'),
-  scrapedAt: text('scraped_at').notNull(), // ISO 8601 timestamp
-  createdAt: text('created_at').notNull().default(sql`(datetime('now'))`)
-}, (table) => ({
-  territoryDateIdx: index('idx_gazette_crawls_territory_date').on(table.territoryId, table.scrapedAt),
-  spiderIdx: index('idx_gazette_crawls_spider').on(table.spiderId, table.scrapedAt),
-  jobIdIdx: index('idx_gazette_crawls_job_id').on(table.jobId),
-  gazetteIdIdx: index('idx_gazette_crawls_gazette_id').on(table.gazetteId),
-  analysisResultIdx: index('idx_gazette_crawls_analysis_result').on(table.analysisResultId),
-}));
-
-// 4. GAZETTE_REGISTRY - Gazette metadata (permanent record)
+// 3. GAZETTE_REGISTRY - Gazette metadata (permanent record)
+// Defined before gazette_crawls to avoid TDZ issues with forward references
 export const gazetteRegistry = sqliteTable('gazette_registry', {
   id: text('id').primaryKey(),
   publicationDate: text('publication_date').notNull(), // ISO 8601 date
@@ -94,7 +76,7 @@ export const gazetteRegistry = sqliteTable('gazette_registry', {
   statusIdx: index('idx_gazette_registry_status').on(table.status, table.createdAt),
 }));
 
-// 5. OCR_RESULTS - OCR results with extracted text
+// 4. OCR_RESULTS - OCR results with extracted text
 export const ocrResults = sqliteTable('ocr_results', {
   id: text('id').primaryKey(),
   documentType: text('document_type').notNull().default('gazette_registry'),
@@ -111,7 +93,7 @@ export const ocrResults = sqliteTable('ocr_results', {
   createdAtIdx: index('idx_ocr_results_created_at').on(table.createdAt),
 }));
 
-// 6. OCR_JOBS - OCR job tracking (not the text)
+// 5. OCR_JOBS - OCR job tracking (not the text)
 export const ocrJobs = sqliteTable('ocr_jobs', {
   id: text('id').primaryKey(),
   documentType: text('document_type').notNull().default('gazette_registry'),
@@ -131,7 +113,8 @@ export const ocrJobs = sqliteTable('ocr_jobs', {
   createdAtIdx: index('idx_ocr_jobs_created_at').on(table.createdAt),
 }));
 
-// 7. ANALYSIS_RESULTS - Full analysis results
+// 6. ANALYSIS_RESULTS - Full analysis results
+// Defined before gazette_crawls to avoid TDZ issues with forward references
 export const analysisResults = sqliteTable('analysis_results', {
   id: text('id').primaryKey(),
   jobId: text('job_id').unique().notNull(),
@@ -152,6 +135,26 @@ export const analysisResults = sqliteTable('analysis_results', {
   highConfidenceIdx: index('idx_analysis_high_confidence').on(table.highConfidenceFindings),
   jobIdIdx: index('idx_analysis_job_id').on(table.jobId),
   gazetteIdIdx: index('idx_analysis_gazette_id').on(table.gazetteId),
+}));
+
+// 7. GAZETTE_CRAWLS - Track crawl-specific metadata and relationships
+// Defined after gazetteRegistry and analysisResults to avoid TDZ issues
+export const gazetteCrawls = sqliteTable('gazette_crawls', {
+  id: text('id').primaryKey(),
+  jobId: text('job_id').unique().notNull(),
+  territoryId: text('territory_id').notNull(),
+  spiderId: text('spider_id').notNull(),
+  gazetteId: text('gazette_id').notNull().references(() => gazetteRegistry.id, { onDelete: 'cascade' }),
+  analysisResultId: text('analysis_result_id').references(() => analysisResults.id, { onDelete: 'set null' }),
+  status: text('status').notNull().default('created'),
+  scrapedAt: text('scraped_at').notNull(), // ISO 8601 timestamp
+  createdAt: text('created_at').notNull().default(sql`(datetime('now'))`)
+}, (table) => ({
+  territoryDateIdx: index('idx_gazette_crawls_territory_date').on(table.territoryId, table.scrapedAt),
+  spiderIdx: index('idx_gazette_crawls_spider').on(table.spiderId, table.scrapedAt),
+  jobIdIdx: index('idx_gazette_crawls_job_id').on(table.jobId),
+  gazetteIdIdx: index('idx_gazette_crawls_gazette_id').on(table.gazetteId),
+  analysisResultIdx: index('idx_gazette_crawls_analysis_result').on(table.analysisResultId),
 }));
 
 // 8. WEBHOOK_DELIVERIES - Webhook delivery logs

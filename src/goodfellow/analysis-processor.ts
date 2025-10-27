@@ -240,6 +240,18 @@ async function processAnalysisMessage(
 
   // Extract context from message
   const { gazetteCrawlId, gazetteId } = message.body;
+  
+  // Validate required fields
+  if (!gazetteId) {
+    throw new Error(`gazetteId missing in analysis message for job ${jobId}`);
+  }
+  if (!gazetteCrawlId) {
+    logger.warn('gazetteCrawlId missing; will skip crawl status updates', { 
+      jobId, 
+      gazetteId, 
+      crawlJobId 
+    });
+  }
 
   // Generate config signature for this analysis
   const configSignature = orchestrator.generateConfigSignature(config, territoryId);
@@ -263,12 +275,20 @@ async function processAnalysisMessage(
       crawlJobId,
     });
 
-    // Link existing analysis to this gazette_crawl
+    // Link existing analysis to this gazette_crawl (if crawl ID present)
     const gazetteRepo = new GazetteRepository(databaseClient);
-    await gazetteRepo.linkAnalysisToGazetteCrawl(gazetteCrawlId, existingAnalysisId);
-
-    // Update status to success (analysis reused)
-    await gazetteRepo.updateGazetteCrawlStatus(gazetteCrawlId, 'success');
+    if (gazetteCrawlId) {
+      await gazetteRepo.linkAnalysisToGazetteCrawl(gazetteCrawlId, existingAnalysisId);
+      
+      // Update status to success (analysis reused)
+      await gazetteRepo.updateGazetteCrawlStatus(gazetteCrawlId, 'success');
+    } else {
+      logger.warn('Skipping crawl link/status update: missing gazetteCrawlId', { 
+        jobId, 
+        gazetteId, 
+        existingAnalysisId 
+      });
+    }
 
     await telemetry.trackCityStep(
       crawlJobId,
@@ -281,11 +301,9 @@ async function processAnalysisMessage(
     return [];
   }
 
-  // Update gazette_crawl status to analysis_pending
-  const gazetteRepo = new GazetteRepository(databaseClient);
-  await gazetteRepo.updateGazetteCrawlStatus(gazetteCrawlId, 'analysis_pending');
-
+  // Status should already be analysis_pending from OCR processor
   // Fetch OCR result from KV storage
+  const gazetteRepo = new GazetteRepository(databaseClient);
   const ocrResultData = await env.OCR_RESULTS?.get(`ocr:${ocrJobId}`);
   if (!ocrResultData) {
     throw new Error(`OCR result not found in KV storage for job: ${ocrJobId}`);
@@ -347,11 +365,19 @@ async function processAnalysisMessage(
   // Store results in database
   const analysisId = await analysisRepo.storeAnalysis(analysis, gazetteId, configSignature);
   
-  // Link analysis to gazette_crawl
-  await gazetteRepo.linkAnalysisToGazetteCrawl(gazetteCrawlId, analysisId);
-  
-  // Update status to success (analysis complete)
-  await gazetteRepo.updateGazetteCrawlStatus(gazetteCrawlId, 'success');
+  // Link analysis to gazette_crawl and update status (if crawl ID present)
+  if (gazetteCrawlId) {
+    await gazetteRepo.linkAnalysisToGazetteCrawl(gazetteCrawlId, analysisId);
+    
+    // Update status to success (analysis complete)
+    await gazetteRepo.updateGazetteCrawlStatus(gazetteCrawlId, 'success');
+  } else {
+    logger.warn('Analysis stored but no gazetteCrawlId to link/status', { 
+      jobId: analysis.jobId, 
+      analysisId, 
+      gazetteId 
+    });
+  }
   
   logger.info('Analysis stored and linked to gazette crawl', {
     jobId: analysis.jobId,

@@ -3,7 +3,7 @@
  * Replaces gazette-repo.ts with Drizzle ORM implementation
  */
 
-import { eq, and, desc } from 'drizzle-orm';
+import { eq, and, desc, sql } from 'drizzle-orm';
 import { DrizzleDatabaseClient, schema } from './drizzle-client';
 import { logger } from '../../utils/logger';
 import type { Gazette } from '../../types';
@@ -55,17 +55,43 @@ export class DrizzleGazetteRepository {
         metadata: this.dbClient.stringifyJson({ sourceText: gazette.sourceText })
       };
 
-      // Use INSERT OR IGNORE for unique constraint on pdfUrl
+      // Use INSERT with conflict handling
+      // Use EXCLUDED to ensure RETURNING always returns a row
       const result = await db.insert(schema.gazetteRegistry)
         .values(gazetteData)
         .onConflictDoUpdate({
           target: schema.gazetteRegistry.pdfUrl,
           set: {
-            // Just update metadata on conflict to track latest crawl
-            metadata: gazetteData.metadata
+            // Update metadata and reference EXCLUDED to ensure row is returned
+            metadata: gazetteData.metadata,
+            pdfUrl: sql`EXCLUDED.pdf_url`
           }
         })
         .returning({ id: schema.gazetteRegistry.id });
+
+      // Fallback: if result is empty (shouldn't happen with EXCLUDED, but defensive)
+      if (result.length === 0) {
+        logger.warn('RETURNING was empty, falling back to SELECT', {
+          pdfUrl: gazette.fileUrl
+        });
+        
+        const existing = await db.select({ id: schema.gazetteRegistry.id })
+          .from(schema.gazetteRegistry)
+          .where(eq(schema.gazetteRegistry.pdfUrl, gazette.fileUrl))
+          .limit(1);
+        
+        if (existing.length === 0) {
+          throw new Error(`Failed to register or find gazette by PDF URL: ${gazette.fileUrl}`);
+        }
+        
+        logger.info('Gazette found via fallback SELECT', {
+          gazetteId: existing[0].id,
+          territoryId: gazette.territoryId,
+          publicationDate: gazette.date
+        });
+        
+        return existing[0].id;
+      }
 
       logger.info('Gazette registered successfully', {
         gazetteId: result[0].id,
@@ -439,7 +465,7 @@ export class DrizzleGazetteRepository {
       const db = this.dbClient.getDb();
 
       await db.update(schema.gazetteCrawls)
-        .set({ analysisResultId })
+        .set({ analysisResultId, status: 'success' })
         .where(eq(schema.gazetteCrawls.id, gazetteCrawlId));
 
       logger.info('Linked analysis to gazette crawl', {

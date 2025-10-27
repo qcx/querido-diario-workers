@@ -88,13 +88,16 @@ export type GazetteRegistryStatus =
 
 /**
  * Gazette crawl status - tracks individual crawl attempts
+ * 
+ * Flow: created/processing → analysis_pending → success
+ *       └─ failed (if OCR fails)
  */
 export type GazetteCrawlStatus = 
-  | 'created'      // New gazette found, ready for OCR
-  | 'processing'   // OCR is in progress (waiting)
-  | 'success'      // OCR completed successfully, analysis complete
-  | 'analysis_pending'  // Sent to analysis queue, awaiting processing
-  | 'failed';      // OCR failed or gazette has ocr_failure status
+  | 'created'            // New gazette found, ready for OCR
+  | 'processing'         // OCR is in progress (waiting)
+  | 'analysis_pending'   // OCR complete, sent to analysis queue, awaiting processing
+  | 'success'            // Analysis complete (final state)
+  | 'failed';            // OCR failed or gazette has ocr_failure status (final state)
 
 /**
  * Input for creating a gazette_crawl record

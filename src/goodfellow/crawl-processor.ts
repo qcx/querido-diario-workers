@@ -149,17 +149,17 @@ export async function processCrawlBatch(
               }
 
               if (existingGazette.status === 'ocr_success') {
-                // OCR already successful - create success crawl and send to analysis
+                // OCR already successful - create processing crawl, OCR processor will forward to analysis
                 const gazetteCrawlId = await gazetteRepo.createGazetteCrawl({
                   gazetteId: existingGazette.id,
                   jobId: gazetteJobId,
                   territoryId: queueMessage.territoryId,
                   spiderId: queueMessage.spiderId,
-                  status: 'success',
+                  status: 'processing',
                   scrapedAt: gazette.scrapedAt
                 });
 
-                // Send directly to analysis queue (skip OCR)
+                // Enqueue in OCR queue; OCR processor will detect ocr_success and forward to Analysis
                 if (env.OCR_QUEUE) {
                   await ocrSender.sendGazette(
                     gazette,

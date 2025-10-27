@@ -324,16 +324,25 @@ export class DrizzleWebhookRepository {
       const pendingRetries = deliveries.filter(d => d.status === 'retry').length;
 
       // Calculate average response time from stored delivery timing data
-      const deliveriesWithTiming = deliveries.filter(d => d.metadata && typeof d.metadata === 'object');
-      let averageResponseTime = 0;
+      // Parse metadata first to access deliveryTimeMs
+      let totalTime = 0;
+      let validTimingCount = 0;
 
-      if (deliveriesWithTiming.length > 0) {
-        const totalTime = deliveriesWithTiming.reduce((sum, delivery) => {
+      for (const delivery of deliveries) {
+        try {
           const metadata = this.dbClient.parseJson<any>(delivery.metadata, {});
-          return sum + (metadata.deliveryTimeMs || 0);
-        }, 0);
-        averageResponseTime = Math.round(totalTime / deliveriesWithTiming.length);
+          if (metadata.deliveryTimeMs && typeof metadata.deliveryTimeMs === 'number') {
+            totalTime += metadata.deliveryTimeMs;
+            validTimingCount++;
+          }
+        } catch {
+          // Skip deliveries with invalid metadata
+        }
       }
+
+      const averageResponseTime = validTimingCount > 0 
+        ? Math.round(totalTime / validTimingCount) 
+        : 0;
       // Status code breakdown
       const statusCodeCount: Record<number, number> = {};
       deliveries.forEach(delivery => {

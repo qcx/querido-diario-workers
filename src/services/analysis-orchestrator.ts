@@ -100,8 +100,8 @@ export class AnalysisOrchestrator {
    */
   public generateConfigSignature(config: AnalysisConfig, territoryId: string): AnalysisConfigSignature {
     const enabledAnalyzers = Object.entries(config.analyzers)
-      .filter(([_, cfg]) => cfg.enabled)
-      .map(([name, _]) => name)
+      .filter(([, cfg]) => Boolean((cfg as { enabled?: boolean } | undefined)?.enabled))
+      .map(([name]) => name)
       .sort();
 
     const signature: AnalysisConfigSignature = {

@@ -12,6 +12,8 @@ CREATE TYPE telemetry_step AS ENUM ('crawl_start', 'crawl_end', 'ocr_start', 'oc
 CREATE TYPE step_status AS ENUM ('started', 'completed', 'failed', 'skipped');
 CREATE TYPE ocr_status AS ENUM ('pending', 'processing', 'success', 'failure', 'partial');
 CREATE TYPE webhook_status AS ENUM ('pending', 'sent', 'failed', 'retry');
+CREATE TYPE gazette_registry_status AS ENUM ('pending', 'uploaded', 'ocr_processing', 'ocr_retrying', 'ocr_failure', 'ocr_success');
+CREATE TYPE gazette_crawl_status AS ENUM ('created', 'processing', 'success', 'failed', 'analysis_pending');
 
 -- 1. CRAWL_JOBS - Track crawling sessions
 CREATE TABLE crawl_jobs (
@@ -57,7 +59,7 @@ CREATE TABLE gazette_registry (
     is_extra_edition BOOLEAN NOT NULL DEFAULT false,
     power TEXT,
     created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
-    status job_status NOT NULL DEFAULT 'pending',
+    status gazette_registry_status NOT NULL DEFAULT 'pending',
     metadata JSONB DEFAULT '{}'::jsonb
 );
 
@@ -68,7 +70,7 @@ CREATE TABLE gazette_crawls (
     territory_id TEXT NOT NULL,
     spider_id TEXT NOT NULL,
     gazette_id UUID NOT NULL REFERENCES gazette_registry(id) ON DELETE CASCADE,
-    status job_status NOT NULL DEFAULT 'pending',
+    status gazette_crawl_status NOT NULL DEFAULT 'created',
     scraped_at TIMESTAMP WITH TIME ZONE NOT NULL,
     created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
 );

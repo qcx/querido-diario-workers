@@ -135,7 +135,7 @@ gazette_crawls:
    │  → Send to OCR queue
    
    ├─ FOUND: ocr_success
-   │  → Create crawl (success)
+   │  → Create crawl (processing)
    │  → Send to OCR queue (will reuse)
    │  → Cost: $0 (result reused)
    
@@ -158,8 +158,8 @@ gazette_crawls:
 
    ┌─ ocr_success
    │  → Get existing ocr_result
+   │  → Update crawl: analysis_pending
    │  → Send to analysis queue
-   │  → Update crawl: success
    │  → Cost: $0
    
    ├─ ocr_processing/ocr_retrying
@@ -173,7 +173,7 @@ gazette_crawls:
       → Store result
       ├─ SUCCESS
       │  → Update gazette: ocr_success
-      │  → Update all crawls: success
+      │  → Update all crawls: analysis_pending
       │  → Send to analysis
       │  → Cost: $0.15
       └─ FAILURE

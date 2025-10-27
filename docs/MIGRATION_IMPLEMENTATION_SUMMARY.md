@@ -43,7 +43,7 @@
   - `pending|uploaded`: Start OCR processing
 - ✅ Added gazette status updates:
   - Before: Update to `ocr_processing`
-  - After success: Update to `ocr_success` + update all gazette_crawls to 'success'
+  - After success: Update to `ocr_success` + update all gazette_crawls to 'analysis_pending'
   - After failure: Update to `ocr_failure` + update all gazette_crawls to 'failed'
 - ✅ Added status updates in exception handler
 - ✅ Backwards compatibility for gazettes without registry entry
@@ -59,7 +59,7 @@ Check gazette_registry by PDF URL
     │
     ├─ Found (ocr_failure) → Create gazette_crawl (failed) → END (Skip OCR)
     │
-    ├─ Found (ocr_success) → Create gazette_crawl (success) → OCR Queue (will skip to Analysis)
+    ├─ Found (ocr_success) → Create gazette_crawl (processing) → OCR Queue (will skip to Analysis)
     │
     └─ Found (pending/uploaded/ocr_processing/ocr_retrying) → Create gazette_crawl (processing) → OCR Queue (retry)
 
@@ -67,15 +67,21 @@ OCR Queue
     ↓
 Check gazette_registry status
     ↓
-    ├─ ocr_success → Reuse result → Analysis Queue
+    ├─ ocr_success → Reuse result → Update crawls to 'analysis_pending' → Analysis Queue
     │
     ├─ ocr_processing/ocr_retrying → Retry message (wait)
     │
     └─ pending/uploaded/ocr_failure → Process OCR
         ↓
-        ├─ Success → Update gazette to 'ocr_success' + crawls to 'success' → Analysis Queue
+        ├─ Success → Update gazette to 'ocr_success' + crawls to 'analysis_pending' → Analysis Queue
         │
         └─ Failure → Update gazette to 'ocr_failure' + crawls to 'failed' → Error Log
+
+Analysis Queue
+    ↓
+    ├─ Analysis Complete → Update crawl to 'success'
+    │
+    └─ Analysis Reused → Update crawl to 'success' (existing analysis linked)
 ```
 
 ## Testing Checklist
@@ -93,7 +99,7 @@ Check gazette_registry status
   
 - [ ] **OCR Success Flow**: 
   - Crawl gazette → OCR succeeds → Recrawl same gazette
-  - Expected: Second crawl creates gazette_crawl with 'success', skips OCR
+  - Expected: Second crawl creates gazette_crawl with 'processing', OCR reuses result, updates to 'analysis_pending', sends to analysis
   
 - [ ] **OCR Failure Flow**:
   - Crawl gazette → OCR fails → Recrawl same gazette
@@ -106,6 +112,7 @@ Check gazette_registry status
 - [ ] **Status Transitions**:
   - Verify gazette_registry status updates: pending → ocr_processing → ocr_success
   - Verify gazette_registry status updates: pending → ocr_processing → ocr_failure
+  - Verify gazette_crawls status updates: processing → analysis_pending → success
   - Verify gazette_crawls status updates when gazette status changes
 
 ### Performance Tests

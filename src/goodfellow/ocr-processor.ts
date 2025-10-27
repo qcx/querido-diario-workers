@@ -109,6 +109,7 @@ export async function processOcrBatch(
 
       let result: OcrResult;
       let isReusedResult = false; // Track if result was reused vs freshly processed
+      let ocrJobId: string | null = null; // Track OCR job ID for this processing
 
       // 1. Find the gazette by PDF URL (unique identifier)
       const gazetteResult = await db.select()
@@ -180,8 +181,9 @@ export async function processOcrBatch(
           
           // Create new OCR job record for this retry attempt
           try {
+            ocrJobId = databaseClient.generateId();
             await db.insert(schema.ocrJobs).values({
-              id: databaseClient.generateId(),
+              id: ocrJobId,
               documentType: 'gazette_registry',
               documentId: gazette.id,
               status: 'processing',
@@ -202,14 +204,34 @@ export async function processOcrBatch(
             
             logger.info('Created OCR job for retry attempt', {
               gazetteId: gazette.id,
-              jobId: ocrMessage.jobId
+              jobId: ocrMessage.jobId,
+              ocrJobId
             });
           } catch (insertError) {
-            logger.warn('Failed to create OCR job for retry (may already exist)', {
-              gazetteId: gazette.id,
-              jobId: ocrMessage.jobId,
-              error: insertError instanceof Error ? insertError.message : String(insertError)
-            });
+            // Race: recover by locating job created with this jobId
+            const existing = await db.select({ id: schema.ocrJobs.id })
+              .from(schema.ocrJobs)
+              .where(and(
+                eq(schema.ocrJobs.documentType, 'gazette_registry'),
+                eq(schema.ocrJobs.documentId, gazette.id),
+                sql`json_extract(metadata, '$.jobId') = ${ocrMessage.jobId}`
+              ))
+              .limit(1);
+            
+            if (existing.length > 0) {
+              ocrJobId = existing[0].id;
+              logger.info('OCR job already exists for retry (race condition)', {
+                gazetteId: gazette.id,
+                jobId: ocrMessage.jobId,
+                ocrJobId
+              });
+            } else {
+              logger.warn('Failed to create OCR job for retry and could not find existing', {
+                gazetteId: gazette.id,
+                jobId: ocrMessage.jobId,
+                error: insertError instanceof Error ? insertError.message : String(insertError)
+              });
+            }
           }
           
           await gazetteRepo.updateGazetteStatus(gazette.id, 'ocr_retrying');
@@ -225,8 +247,9 @@ export async function processOcrBatch(
           // STEP 1: Create OCR job record FIRST (before claiming gazette)
           let ocrJobCreated = false;
           try {
+            ocrJobId = databaseClient.generateId();
             await db.insert(schema.ocrJobs).values({
-              id: databaseClient.generateId(),
+              id: ocrJobId,
               documentType: 'gazette_registry',
               documentId: gazette.id,
               status: 'processing',
@@ -247,24 +270,28 @@ export async function processOcrBatch(
             ocrJobCreated = true;
             logger.info('Created OCR job record before claiming gazette', {
               gazetteId: gazette.id,
-              jobId: ocrMessage.jobId
+              jobId: ocrMessage.jobId,
+              ocrJobId
             });
           } catch (insertError) {
-            // Check if job already exists (race condition with another worker)
+            // Race: recover by locating job created with this jobId
             const existing = await db.select({ id: schema.ocrJobs.id })
               .from(schema.ocrJobs)
               .where(and(
                 eq(schema.ocrJobs.documentType, 'gazette_registry'),
-                eq(schema.ocrJobs.documentId, gazette.id)
+                eq(schema.ocrJobs.documentId, gazette.id),
+                sql`json_extract(metadata, '$.jobId') = ${ocrMessage.jobId}`
               ))
               .limit(1);
             
             if (existing.length > 0) {
               // Job already exists, another worker may have started - continue to claim attempt
               ocrJobCreated = true;
+              ocrJobId = existing[0].id;
               logger.info('OCR job already exists (race condition), proceeding with claim', {
                 gazetteId: gazette.id,
-                jobId: ocrMessage.jobId
+                jobId: ocrMessage.jobId,
+                ocrJobId
               });
             } else {
               // Real error, not a duplicate
@@ -290,7 +317,8 @@ export async function processOcrBatch(
             logger.info('Successfully claimed gazette for processing', {
               gazetteId: gazette.id,
               jobId: ocrMessage.jobId,
-              ocrJobCreated
+              ocrJobCreated,
+              ocrJobId
             });
             result = await ocrService.processPdf(ocrMessage);
           } else {
@@ -482,6 +510,23 @@ export async function processOcrBatch(
             message: `Failed to store OCR result: ${storageResult.error?.message}`,
             details: storageResult.error?.stack,
           };
+          
+          // Update gazette and crawls to failed status immediately to maintain consistency
+          if (gazette) {
+            try {
+              await gazetteRepo.updateGazetteStatus(gazette.id, 'ocr_failure');
+              await gazetteRepo.updateCrawlsStatusByGazetteId(gazette.id, 'failed');
+              logger.info('Updated gazette and crawls to failed status after storage failure', {
+                gazetteId: gazette.id,
+                jobId: ocrMessage.jobId
+              });
+            } catch (updateError) {
+              logger.error('Failed to update gazette status after storage failure', updateError as Error, {
+                gazetteId: gazette.id,
+                jobId: ocrMessage.jobId
+              });
+            }
+          }
         }
       } else if (result.status === 'success' && !result.extractedText) {
         // Extraction succeeded but no text - mark as failure
@@ -494,6 +539,23 @@ export async function processOcrBatch(
           code: 'NO_TEXT_EXTRACTED',
           message: 'OCR completed but extracted text is empty',
         };
+        
+        // Update gazette and crawls to failed status immediately to maintain consistency
+        if (gazette) {
+          try {
+            await gazetteRepo.updateGazetteStatus(gazette.id, 'ocr_failure');
+            await gazetteRepo.updateCrawlsStatusByGazetteId(gazette.id, 'failed');
+            logger.info('Updated gazette and crawls to failed status (no text extracted)', {
+              gazetteId: gazette.id,
+              jobId: ocrMessage.jobId
+            });
+          } catch (updateError) {
+            logger.error('Failed to update gazette status after no-text error', updateError as Error, {
+              gazetteId: gazette.id,
+              jobId: ocrMessage.jobId
+            });
+          }
+        }
       }
 
       // Store in KV cache
@@ -513,16 +575,30 @@ export async function processOcrBatch(
 
       // Update OCR job metadata with final results
       try {
-        const gazetteResult = await db.select({ id: schema.gazetteRegistry.id })
-          .from(schema.gazetteRegistry)
-          .where(eq(schema.gazetteRegistry.pdfUrl, ocrMessage.pdfUrl))
-          .limit(1);
+        const ocrStatus = result.status === 'success' ? 'success' : 'failure';
         
-        if (gazetteResult.length > 0) {
-          const gazetteId = gazetteResult[0].id;
-          const ocrStatus = result.status === 'success' ? 'success' : 'failure';
+        // If we don't have ocrJobId (backwards compatibility path), try to find it
+        if (!ocrJobId && gazette) {
+          const jobLookup = await db.select({ id: schema.ocrJobs.id })
+            .from(schema.ocrJobs)
+            .where(and(
+              eq(schema.ocrJobs.documentType, 'gazette_registry'),
+              eq(schema.ocrJobs.documentId, gazette.id),
+              sql`json_extract(metadata, '$.jobId') = ${ocrMessage.jobId}`
+            ))
+            .limit(1);
           
-          // Update the existing OCR job (created before processing started)
+          if (jobLookup.length > 0) {
+            ocrJobId = jobLookup[0].id;
+            logger.info('Recovered ocrJobId for update', {
+              jobId: ocrMessage.jobId,
+              ocrJobId
+            });
+          }
+        }
+        
+        if (ocrJobId) {
+          // Update the specific OCR job by ID to avoid updating multiple jobs
           const updateResult = await db.update(schema.ocrJobs)
             .set({
               status: ocrStatus,
@@ -538,29 +614,32 @@ export async function processOcrBatch(
                 crawlJobId: crawlJobId
               })
             })
-            .where(and(
-              eq(schema.ocrJobs.documentType, 'gazette_registry'),
-              eq(schema.ocrJobs.documentId, gazetteId)
-            ))
+            .where(eq(schema.ocrJobs.id, ocrJobId))
             .returning({ id: schema.ocrJobs.id });
           
           if (updateResult.length > 0) {
             logger.info('OCR job metadata updated successfully', {
               jobId: ocrMessage.jobId,
-              gazetteId,
+              ocrJobId,
               status: ocrStatus,
               executionTimeMs
             });
           } else {
-            logger.warn('No OCR job found to update (expected one to exist)', {
+            logger.warn('OCR job not found for update', {
               jobId: ocrMessage.jobId,
-              gazetteId
+              ocrJobId
             });
           }
+        } else {
+          logger.warn('No ocrJobId available to update job metadata', {
+            jobId: ocrMessage.jobId,
+            hasGazette: !!gazette
+          });
         }
       } catch (metadataError) {
         logger.error('Failed to update OCR job metadata', metadataError as Error, {
           jobId: ocrMessage.jobId,
+          ocrJobId,
           crawlJobId
         });
       }
@@ -768,8 +847,8 @@ export async function processOcrBatch(
         const gazette = gazetteLookup[0].gazette;
         const gazetteCrawl = gazetteLookup[0].crawl;
         
-        // Update status to success (OCR completed successfully)
-        await gazetteRepo.updateGazetteCrawlStatus(gazetteCrawl.id, 'success');
+        // Update status to analysis_pending (OCR completed, ready for analysis)
+        await gazetteRepo.updateGazetteCrawlStatus(gazetteCrawl.id, 'analysis_pending');
         
         analysisMessages.push({
           jobId: `analysis-${ocrMessage.jobId}`,
