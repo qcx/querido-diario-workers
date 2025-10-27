@@ -109,106 +109,33 @@ export async function processCrawlBatch(
       // Process each gazette: check for existing entries and route accordingly
       if (gazettes.length > 0) {
         const ocrSender = new OcrQueueSender(env.OCR_QUEUE);
-        let newGazettes = 0;
-        let skippedFailed = 0;
-        let reusedSuccess = 0;
-        let retriedProcessing = 0;
 
         for (const gazette of gazettes) {
           try {
-            // 1. Check if gazette exists by PDF URL
+            // Check if gazette exists by PDF URL
             const existingGazette = await gazetteRepo.getGazetteByPdfUrl(gazette.fileUrl);
             
             const gazetteJobId = `${crawlJobId}-${gazette.territoryId}-${gazette.date}${gazette.editionNumber ? `-${gazette.editionNumber}` : ''}-${Date.now()}`;
 
+            let gazetteId: string;
+            
             if (existingGazette) {
+              gazetteId = existingGazette.id;
               logger.info('Found existing gazette', {
                 gazetteId: existingGazette.id,
                 status: existingGazette.status,
                 pdfUrl: gazette.fileUrl
               });
-
-              // Handle based on status
-              if (existingGazette.status === 'ocr_failure') {
-                // OCR permanently failed - create failed crawl and skip
-                await gazetteRepo.createGazetteCrawl({
-                  gazetteId: existingGazette.id,
-                  jobId: gazetteJobId,
-                  territoryId: queueMessage.territoryId,
-                  spiderId: queueMessage.spiderId,
-                  status: 'failed',
-                  scrapedAt: gazette.scrapedAt
-                });
-                
-                skippedFailed++;
-                logger.info('Skipped gazette with permanent OCR failure', {
-                  gazetteId: existingGazette.id,
-                  pdfUrl: gazette.fileUrl
-                });
-                continue;
-              }
-
-              if (existingGazette.status === 'ocr_success') {
-                // OCR already successful - create processing crawl, OCR processor will forward to analysis
-                const gazetteCrawlId = await gazetteRepo.createGazetteCrawl({
-                  gazetteId: existingGazette.id,
-                  jobId: gazetteJobId,
-                  territoryId: queueMessage.territoryId,
-                  spiderId: queueMessage.spiderId,
-                  status: 'processing',
-                  scrapedAt: gazette.scrapedAt
-                });
-
-                // Enqueue in OCR queue; OCR processor will detect ocr_success and forward to Analysis
-                if (env.OCR_QUEUE) {
-                  await ocrSender.sendGazette(
-                    gazette,
-                    queueMessage.spiderId,
-                    crawlJobId,
-                    gazetteCrawlId
-                  );
-                }
-
-                reusedSuccess++;
-                logger.info('Reusing existing OCR result', {
-                  gazetteId: existingGazette.id,
-                  pdfUrl: gazette.fileUrl
-                });
-                continue;
-              }
-
-              // Status is pending/uploaded/ocr_processing/ocr_retrying
-              // Create processing crawl and send to OCR queue (will retry)
-              const gazetteCrawlId = await gazetteRepo.createGazetteCrawl({
-                gazetteId: existingGazette.id,
-                jobId: gazetteJobId,
-                territoryId: queueMessage.territoryId,
-                spiderId: queueMessage.spiderId,
-                status: 'processing',
-                scrapedAt: gazette.scrapedAt
-              });
-
-              if (env.OCR_QUEUE) {
-                await ocrSender.sendGazette(
-                  gazette,
-                  queueMessage.spiderId,
-                  crawlJobId,
-                  gazetteCrawlId
-                );
-              }
-
-              retriedProcessing++;
-              logger.info('Re-queued gazette still in processing', {
-                gazetteId: existingGazette.id,
-                status: existingGazette.status,
+            } else {
+              // New gazette - create registry
+              gazetteId = await gazetteRepo.registerGazette(gazette, crawlJobId);
+              logger.info('Registered new gazette', {
+                gazetteId,
                 pdfUrl: gazette.fileUrl
               });
-              continue;
             }
-
-            // New gazette - create registry and crawl
-            const gazetteId = await gazetteRepo.registerGazette(gazette, crawlJobId);
             
+            // Always create gazette crawl with 'created' status
             const gazetteCrawlId = await gazetteRepo.createGazetteCrawl({
               gazetteId,
               jobId: gazetteJobId,
@@ -218,6 +145,7 @@ export async function processCrawlBatch(
               scrapedAt: gazette.scrapedAt
             });
 
+            // Always send to OCR queue - OCR processor will handle deduplication
             if (env.OCR_QUEUE) {
               await ocrSender.sendGazette(
                 gazette,
@@ -226,12 +154,6 @@ export async function processCrawlBatch(
                 gazetteCrawlId
               );
             }
-
-            newGazettes++;
-            logger.info('Registered new gazette', {
-              gazetteId,
-              pdfUrl: gazette.fileUrl
-            });
 
           } catch (gazetteError) {
             logger.error('Failed to process individual gazette', gazetteError as Error, {
@@ -260,10 +182,7 @@ export async function processCrawlBatch(
         logger.info('Gazette processing summary', {
           spiderId: queueMessage.spiderId,
           total: gazettes.length,
-          newGazettes,
-          reusedSuccess,
-          retriedProcessing,
-          skippedFailed
+          sentToOcrQueue: gazettes.length
         });
       }
 

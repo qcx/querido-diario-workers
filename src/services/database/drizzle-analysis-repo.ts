@@ -104,6 +104,46 @@ export class DrizzleAnalysisRepository {
   }
 
   /**
+   * Get analysis by analysis ID (primary key)
+   */
+  async getAnalysisById(id: string): Promise<AnalysisRecord | null> {
+    try {
+      const db = this.dbClient.getDb();
+
+      const results = await db.select()
+        .from(schema.analysisResults)
+        .where(eq(schema.analysisResults.id, id))
+        .limit(1);
+
+      if (results.length === 0) {
+        return null;
+      }
+
+      const record = results[0];
+      return {
+        ...record,
+        categories: this.dbClient.parseJson<string[]>(record.categories, []),
+        keywords: this.dbClient.parseJson<string[]>(record.keywords, []),
+        findings: this.dbClient.parseJson<StructuredFinding[]>(record.findings, []),
+        summary: this.dbClient.parseJson<AnalysisSummary>(record.summary, {
+          totalFindings: 0,
+          highConfidenceFindings: 0,
+          findingsByType: {},
+          categories: [],
+          keywords: []
+        }),
+        metadata: this.dbClient.parseJson<AnalysisMetadata>(record.metadata, {})
+      };
+    } catch (error) {
+      logger.error('Failed to get analysis by ID', {
+        id,
+        error
+      });
+      throw error;
+    }
+  }
+
+  /**
    * Get analysis by job ID
    */
   async getAnalysisByJobId(jobId: string): Promise<AnalysisRecord | null> {
@@ -215,26 +255,6 @@ export class DrizzleAnalysisRepository {
       });
       return null;
     }
-  }
-
-  /**
-   * Parse analysis record with JSON fields
-   */
-  private parseAnalysisRecord(record: any): AnalysisRecord {
-    return {
-      ...record,
-      categories: this.dbClient.parseJson<string[]>(record.categories, []),
-      keywords: this.dbClient.parseJson<string[]>(record.keywords, []),
-      findings: this.dbClient.parseJson<StructuredFinding[]>(record.findings, []),
-      summary: this.dbClient.parseJson<AnalysisSummary>(record.summary, {
-        totalFindings: 0,
-        highConfidenceFindings: 0,
-        findingsByType: {},
-        categories: [],
-        keywords: []
-      }),
-      metadata: this.dbClient.parseJson<AnalysisMetadata>(record.metadata, {})
-    };
   }
 
   /**

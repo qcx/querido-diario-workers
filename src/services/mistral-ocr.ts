@@ -32,6 +32,21 @@ export class MistralOcrService {
   }
 
   /**
+   * Generate a deterministic R2 key from PDF URL
+   * Same PDF URL always generates the same R2 key
+   * Uses full base64 encoding for guaranteed uniqueness
+   */
+  private generateR2Key(pdfUrl: string): string {
+    // Base64 encode the full URL and make it URL-safe
+    const base64 = btoa(pdfUrl)
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=/g, '');
+    
+    return `pdfs/${base64}.pdf`;
+  }
+
+  /**
    * Process a PDF using Mistral OCR
    */
   async processPdf(message: OcrQueueMessage): Promise<OcrResult> {
@@ -149,35 +164,48 @@ export class MistralOcrService {
     // If R2 is configured, download and upload to R2
     if (this.r2Bucket) {
       try {
-        logger.info(`Downloading PDF from ${pdfUrl} for R2 upload`);
+        // Generate deterministic key
+        const r2Key = this.generateR2Key(pdfUrl);
+        pdfR2Key = r2Key;
         
-        // Download PDF
-        const pdfResponse = await fetch(pdfUrl);
-        if (!pdfResponse.ok) {
-          throw new Error(`Failed to download PDF: ${pdfResponse.status}`);
+        // Check if PDF already exists in R2
+        const existingFile = await this.r2Bucket.head(r2Key);
+        
+        if (existingFile) {
+          logger.info(`PDF already exists in R2, skipping upload`, {
+            jobId,
+            r2Key,
+            pdfUrl
+          });
+        } else {
+          logger.info(`Downloading PDF from ${pdfUrl} for R2 upload`);
+          
+          // Download PDF
+          const pdfResponse = await fetch(pdfUrl);
+          if (!pdfResponse.ok) {
+            throw new Error(`Failed to download PDF: ${pdfResponse.status}`);
+          }
+          
+          const pdfData = await pdfResponse.arrayBuffer();
+          
+          // Upload to R2
+          logger.info(`Uploading PDF to R2: ${r2Key}`);
+          await this.r2Bucket.put(r2Key, pdfData, {
+            httpMetadata: {
+              contentType: 'application/pdf',
+            },
+          });
         }
-        
-        const pdfData = await pdfResponse.arrayBuffer();
-        const key = `pdfs/${jobId}_${Date.now()}.pdf`;
-        pdfR2Key = key; // Store the R2 key
-        
-        // Upload to R2
-        logger.info(`Uploading PDF to R2: ${key}`);
-        await this.r2Bucket.put(key, pdfData, {
-          httpMetadata: {
-            contentType: 'application/pdf',
-          },
-        });
         
         // In development with localhost R2, fallback to original URL for Mistral
         // since Mistral API cannot access localhost
         if (isLocalR2) {
-          logger.info(`Development mode detected (localhost R2 or no R2_PUBLIC_URL), using original PDF URL for Mistral: ${pdfUrl}`);
+          logger.info(`Development mode detected, using original PDF URL for Mistral: ${pdfUrl}`);
           finalPdfUrl = pdfUrl;
         } else {
           // Production: use R2 public URL
           const baseUrl = this.r2PublicUrl || 'https://gazette-pdfs.qconcursos.workers.dev';
-          finalPdfUrl = `${baseUrl}/${key}`;
+          finalPdfUrl = `${baseUrl}/${r2Key}`;
           logger.info(`Using R2 URL for OCR: ${finalPdfUrl}`);
         }
       } catch (error: unknown) {

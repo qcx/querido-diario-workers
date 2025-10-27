@@ -290,15 +290,12 @@ export async function processOcrBatch(
               ocrJobId
             });
           } catch (insertError) {
-            // Race: recover by locating job created with this jobId
-            const existing = await db.select({ id: schema.ocrJobs.id })
-              .from(schema.ocrJobs)
-              .where(and(
-                eq(schema.ocrJobs.documentType, 'gazette_registry'),
-                eq(schema.ocrJobs.documentId, gazette.id),
-                sql`json_extract(metadata, '$.jobId') = ${ocrMessage.jobId}`
-              ))
-              .limit(1);
+            // Race: recover by locating job created with this jobId using dialect-aware helper
+            const existing = await ocrRepo.findOcrJobIdByDocumentAndJobId(
+              'gazette_registry',
+              gazette.id,
+              ocrMessage.jobId
+            );
             
             if (existing.length > 0) {
               ocrJobId = existing[0].id;
@@ -356,15 +353,12 @@ export async function processOcrBatch(
               ocrJobId
             });
           } catch (insertError) {
-            // Race: recover by locating job created with this jobId
-            const existing = await db.select({ id: schema.ocrJobs.id })
-              .from(schema.ocrJobs)
-              .where(and(
-                eq(schema.ocrJobs.documentType, 'gazette_registry'),
-                eq(schema.ocrJobs.documentId, gazette.id),
-                sql`json_extract(metadata, '$.jobId') = ${ocrMessage.jobId}`
-              ))
-              .limit(1);
+            // Race: recover by locating job created with this jobId using dialect-aware helper
+            const existing = await ocrRepo.findOcrJobIdByDocumentAndJobId(
+              'gazette_registry',
+              gazette.id,
+              ocrMessage.jobId
+            );
             
             if (existing.length > 0) {
               // Job already exists, another worker may have started - continue to claim attempt
@@ -665,16 +659,13 @@ export async function processOcrBatch(
       try {
         const ocrStatus = result.status === 'success' ? 'success' : 'failure';
         
-        // If we don't have ocrJobId (backwards compatibility path), try to find it
+        // If we don't have ocrJobId (backwards compatibility path), try to find it using dialect-aware helper
         if (!ocrJobId && gazette) {
-          const jobLookup = await db.select({ id: schema.ocrJobs.id })
-            .from(schema.ocrJobs)
-            .where(and(
-              eq(schema.ocrJobs.documentType, 'gazette_registry'),
-              eq(schema.ocrJobs.documentId, gazette.id),
-              sql`json_extract(metadata, '$.jobId') = ${ocrMessage.jobId}`
-            ))
-            .limit(1);
+          const jobLookup = await ocrRepo.findOcrJobIdByDocumentAndJobId(
+            'gazette_registry',
+            gazette.id,
+            ocrMessage.jobId
+          );
           
           if (jobLookup.length > 0) {
             ocrJobId = jobLookup[0].id;
@@ -795,12 +786,16 @@ export async function processOcrBatch(
         // No need for duplicate updates here
         
         // Collect all successful OCR results for batch sending to analysis
+        // This includes both newly processed and reused results
         successfulResults.push({ ocrMessage, result });
         logger.info('OCR result queued for analysis', {
           jobId: ocrMessage.jobId,
           gazetteId: gazette?.id,
           isReused: isReusedResult
         });
+        
+        // Always queue for analysis, even if result was reused
+        // This ensures consistent flow: Crawl -> OCR -> Analysis
       }
 
       // Acknowledge message

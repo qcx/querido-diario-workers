@@ -386,7 +386,7 @@ async function processAnalysisMessage(
     });
 
     // 3. Fetch full analysis from database and populate cache
-    const dbAnalysis = await analysisRepo.getAnalysisByJobId(existingAnalysisId);
+    const dbAnalysis = await analysisRepo.getAnalysisById(existingAnalysisId);
     
     if (dbAnalysis) {
       // Reconstruct GazetteAnalysis and store in cache

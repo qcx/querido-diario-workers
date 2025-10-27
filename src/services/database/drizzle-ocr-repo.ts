@@ -484,4 +484,49 @@ export class DrizzleOcrRepository {
       throw error;
     }
   }
+
+  /**
+   * Find OCR job ID by document ID and job ID (stored in metadata)
+   * Dialect-aware method that works with both SQLite and Postgres
+   */
+  async findOcrJobIdByDocumentAndJobId(
+    documentType: 'gazette_registry',
+    documentId: string,
+    jobId: string
+  ): Promise<{ id: string }[]> {
+    try {
+      const db = this.dbClient.getDb();
+      const dialect = this.dbClient.getDialect();
+
+      if (dialect === 'sqlite') {
+        // SQLite uses json_extract
+        return await db.select({ id: schema.ocrJobs.id })
+          .from(schema.ocrJobs)
+          .where(and(
+            eq(schema.ocrJobs.documentType, documentType),
+            eq(schema.ocrJobs.documentId, documentId),
+            sql`json_extract(${schema.ocrJobs.metadata}, '$.jobId') = ${jobId}`
+          ))
+          .limit(1);
+      } else {
+        // Postgres uses ->> operator
+        return await db.select({ id: schema.ocrJobs.id })
+          .from(schema.ocrJobs)
+          .where(and(
+            eq(schema.ocrJobs.documentType, documentType),
+            eq(schema.ocrJobs.documentId, documentId),
+            sql`${schema.ocrJobs.metadata} ->> 'jobId' = ${jobId}`
+          ))
+          .limit(1);
+      }
+    } catch (error) {
+      logger.error('Failed to find OCR job by document and job ID', {
+        documentType,
+        documentId,
+        jobId,
+        error
+      });
+      return [];
+    }
+  }
 }
