@@ -447,8 +447,18 @@ export async function processOcrBatch(
       let storageSucceeded = false;
 
       if (result.status === 'success' && result.extractedText) {
+        // Extract gazetteCrawlId from message metadata (if available)
+        const gazetteCrawlId = ocrMessage.metadata?.gazetteCrawlId;
+        
+        if (!gazetteCrawlId) {
+          logger.warn('OCR message missing gazetteCrawlId, will bulk-update all crawls for gazette', {
+            jobId: ocrMessage.jobId,
+            pdfUrl: ocrMessage.pdfUrl
+          });
+        }
+        
         const storageResult = await retryWithBackoff(
-          () => ocrRepo.storeOcrResult(result),
+          () => ocrRepo.storeOcrResult(result, gazetteCrawlId),
           OCR_STORAGE_MAX_RETRIES,
           OCR_STORAGE_RETRY_DELAY_MS,
           'OCR result storage'
@@ -462,10 +472,8 @@ export async function processOcrBatch(
           });
           
           // Update gazette with R2 key if available
-          if (result.pdfR2Key && ocrMessage.metadata?.gazetteCrawlId) {
+          if (result.pdfR2Key && gazetteCrawlId) {
             try {
-              const gazetteCrawlId = ocrMessage.metadata.gazetteCrawlId;
-              
               // Get gazette ID from the crawl
               const crawlResult = await db.select({ gazetteId: schema.gazetteCrawls.gazetteId })
                 .from(schema.gazetteCrawls)

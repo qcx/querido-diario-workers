@@ -42,8 +42,10 @@ export class DrizzleOcrRepository {
 
   /**
    * Store OCR result
+   * @param ocrResult - The OCR result to store
+   * @param gazetteCrawlId - Optional specific crawl ID that triggered this OCR (recommended to avoid bulk updates)
    */
-  async storeOcrResult(ocrResult: OcrResult): Promise<string> {
+  async storeOcrResult(ocrResult: OcrResult, gazetteCrawlId?: string): Promise<string> {
     try {
       const db = this.dbClient.getDb();
 
@@ -154,11 +156,28 @@ export class DrizzleOcrRepository {
         .set({ status: 'ocr_success' })
         .where(eq(schema.gazetteRegistry.id, gazetteId));
 
-      // Atomically update all associated gazette_crawls to analysis_pending status
-      // (OCR complete, ready for analysis)
-      await db.update(schema.gazetteCrawls)
-        .set({ status: 'analysis_pending' })
-        .where(eq(schema.gazetteCrawls.gazetteId, gazetteId));
+      // Update gazette_crawl status to analysis_pending (OCR complete, ready for analysis)
+      // If gazetteCrawlId is provided, update only that specific crawl (recommended)
+      // Otherwise, update all crawls for this gazette (legacy behavior, may affect unrelated crawls)
+      if (gazetteCrawlId) {
+        await db.update(schema.gazetteCrawls)
+          .set({ status: 'analysis_pending' })
+          .where(eq(schema.gazetteCrawls.id, gazetteCrawlId));
+        
+        logger.info('Updated specific gazette crawl status to analysis_pending', {
+          gazetteCrawlId,
+          gazetteId
+        });
+      } else {
+        logger.warn('No gazetteCrawlId provided, bulk-updating all crawls for gazette (may affect unrelated crawls)', {
+          gazetteId,
+          jobId: ocrResult.jobId
+        });
+        
+        await db.update(schema.gazetteCrawls)
+          .set({ status: 'analysis_pending' })
+          .where(eq(schema.gazetteCrawls.gazetteId, gazetteId));
+      }
 
       logger.info('OCR result stored successfully with status updates', {
         ocrId: ocrResultId,
