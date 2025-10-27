@@ -16,6 +16,66 @@ import {
   GazetteRepository,
 } from '../services/database';
 
+/**
+ * Generate a consistent KV cache key from PDF URL
+ * Uses base64 encoding to create a URL-safe key
+ */
+function generateOcrCacheKey(pdfUrl: string): string {
+  // Base64 encode the URL and make it URL-safe for KV
+  const base64 = btoa(pdfUrl)
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=/g, '');
+  return `ocr:${base64}`;
+}
+
+/**
+ * Generate analysis cache key based on deduplication logic
+ * Uses territoryId + gazetteId + configHash (same as database deduplication)
+ */
+function generateAnalysisCacheKey(
+  territoryId: string,
+  gazetteId: string,
+  configHash: string
+): string {
+  return `analysis:dedup:${territoryId}:${gazetteId}:${configHash}`;
+}
+
+/**
+ * Reconstruct GazetteAnalysis from database record for caching
+ */
+function reconstructAnalysisFromRecord(
+  record: any,
+  ocrJobId: string
+): GazetteAnalysis {
+  return {
+    jobId: record.jobId,
+    ocrJobId: ocrJobId || record.jobId,
+    territoryId: record.territoryId,
+    publicationDate: record.publicationDate,
+    analyzedAt: record.analyzedAt,
+    
+    // OCR data - reconstruct from metadata if available
+    extractedText: '',
+    textLength: record.metadata?.quality?.textLength || 0,
+    pdfUrl: record.metadata?.sourceInfo?.pdfUrl,
+    
+    // Analysis results - simplified reconstruction
+    analyses: [],
+    
+    // Aggregated findings
+    summary: record.summary,
+    
+    // Metadata
+    metadata: {
+      spiderId: record.metadata?.sourceInfo?.spiderId || 'unknown',
+      editionNumber: record.metadata?.sourceInfo?.editionNumber,
+      power: record.metadata?.sourceInfo?.power,
+      isExtraEdition: record.metadata?.sourceInfo?.isExtraEdition,
+    }
+  };
+}
+
 export interface AnalysisProcessorEnv extends D1DatabaseEnv {
   ANALYSIS_RESULTS: KVNamespace;
   OCR_RESULTS?: KVNamespace;
@@ -67,7 +127,6 @@ export async function processAnalysisBatch(
   
   // Initialize database services
   const databaseClient = getDatabase(env);
-  const db = databaseClient.getDb();
   const telemetry = new TelemetryService(databaseClient);
   const analysisRepo = new AnalysisRepository(databaseClient);
   const concursoRepo = new ConcursoRepository(databaseClient);
@@ -107,7 +166,7 @@ export async function processAnalysisBatch(
       await telemetry.trackCityStep(
         crawlJobId,
         message.body.territoryId,
-        message.body.spiderId || 'analysis',
+        message.body.metadata?.spiderId || 'analysis',
         'analysis_end',
         'completed',
         undefined,
@@ -128,7 +187,7 @@ export async function processAnalysisBatch(
       await telemetry.trackCityStep(
         crawlJobId,
         message.body.territoryId,
-        message.body.spiderId || 'analysis',
+        message.body.metadata?.spiderId || 'analysis',
         'analysis_end',
         'failed',
         undefined,
@@ -256,7 +315,58 @@ async function processAnalysisMessage(
   // Generate config signature for this analysis
   const configSignature = orchestrator.generateConfigSignature(config, territoryId);
 
-  // Check if analysis already exists with same territory + gazette + config
+  // 1. Try KV cache first (fast path - no database query)
+  const cacheKey = generateAnalysisCacheKey(territoryId, gazetteId, configSignature.configHash);
+  const cachedAnalysis = await env.ANALYSIS_RESULTS.get(cacheKey);
+
+  if (cachedAnalysis) {
+    const analysis = JSON.parse(cachedAnalysis) as GazetteAnalysis;
+    logger.info('Cache hit: Reusing cached analysis', {
+      jobId,
+      ocrJobId,
+      gazetteCrawlId,
+      gazetteId,
+      cacheKey,
+      configHash: configSignature.configHash,
+      territoryId,
+      crawlJobId,
+      totalFindings: analysis.summary.totalFindings,
+    });
+
+    // Link to gazette_crawl and update status (if crawl ID present)
+    const gazetteRepo = new GazetteRepository(databaseClient);
+    if (gazetteCrawlId) {
+      // Need to get analysisId from database for linking
+      const existingAnalysisId = await analysisRepo.findExistingAnalysis(
+        territoryId,
+        gazetteId,
+        configSignature.configHash
+      );
+      
+      if (existingAnalysisId) {
+        await gazetteRepo.linkAnalysisToGazetteCrawl(gazetteCrawlId, existingAnalysisId);
+        await gazetteRepo.updateGazetteCrawlStatus(gazetteCrawlId, 'success');
+      }
+    } else {
+      logger.warn('Skipping crawl link/status update: missing gazetteCrawlId', { 
+        jobId, 
+        gazetteId, 
+        cacheKey 
+      });
+    }
+
+    await telemetry.trackCityStep(
+      crawlJobId,
+      territoryId,
+      'analysis',
+      'analysis_end',
+      'skipped'
+    );
+
+    return [];
+  }
+
+  // 2. Cache miss - check database
   const existingAnalysisId = await analysisRepo.findExistingAnalysis(
     territoryId,
     gazetteId,
@@ -264,7 +374,7 @@ async function processAnalysisMessage(
   );
 
   if (existingAnalysisId) {
-    logger.info('Analysis already exists, reusing existing result', {
+    logger.info('Database hit: Found existing analysis, populating cache', {
       jobId,
       ocrJobId,
       gazetteCrawlId,
@@ -274,6 +384,34 @@ async function processAnalysisMessage(
       territoryId,
       crawlJobId,
     });
+
+    // 3. Fetch full analysis from database and populate cache
+    const dbAnalysis = await analysisRepo.getAnalysisByJobId(existingAnalysisId);
+    
+    if (dbAnalysis) {
+      // Reconstruct GazetteAnalysis and store in cache
+      const reconstructedAnalysis = reconstructAnalysisFromRecord(dbAnalysis, ocrJobId);
+      
+      await env.ANALYSIS_RESULTS.put(
+        cacheKey,
+        JSON.stringify(reconstructedAnalysis),
+        {
+          expirationTtl: 24 * 60 * 60, // 24 hours
+          metadata: {
+            territoryId: reconstructedAnalysis.territoryId,
+            publicationDate: reconstructedAnalysis.publicationDate,
+            totalFindings: reconstructedAnalysis.summary.totalFindings,
+            cachedAt: new Date().toISOString(),
+          },
+        }
+      );
+      
+      logger.info('Populated KV cache from database', {
+        cacheKey,
+        analysisId: existingAnalysisId,
+        expiresIn: '24h',
+      });
+    }
 
     // Link existing analysis to this gazette_crawl (if crawl ID present)
     const gazetteRepo = new GazetteRepository(databaseClient);
@@ -301,21 +439,81 @@ async function processAnalysisMessage(
     return [];
   }
 
-  // Status should already be analysis_pending from OCR processor
-  // Fetch OCR result from KV storage
+  // 4. No cache, no database - proceed with new analysis
+
+  // Try to fetch OCR result: KV cache first, DB fallback, with cache repopulation
   const gazetteRepo = new GazetteRepository(databaseClient);
-  const ocrResultData = await env.OCR_RESULTS?.get(`ocr:${ocrJobId}`);
-  if (!ocrResultData) {
-    throw new Error(`OCR result not found in KV storage for job: ${ocrJobId}`);
+  let ocrResult = null;
+
+  // STEP 1: Try KV cache (hot path)
+  if (env.OCR_RESULTS && message.body.pdfUrl) {
+    const cacheKey = generateOcrCacheKey(message.body.pdfUrl);
+    const ocrResultData = await env.OCR_RESULTS.get(cacheKey);
+    if (ocrResultData) {
+      ocrResult = JSON.parse(ocrResultData);
+      logger.info(`Retrieved OCR result from KV cache`, {
+        jobId,
+        ocrJobId,
+        cacheKey,
+        pdfUrl: message.body.pdfUrl,
+        textLength: ocrResult.extractedText?.length || 0,
+        crawlJobId,
+      });
+    }
   }
 
-  const ocrResult = JSON.parse(ocrResultData);
-  logger.info(`Retrieved OCR result from KV storage`, {
-    jobId,
-    ocrJobId,
-    textLength: ocrResult.extractedText?.length || 0,
-    crawlJobId,
-  });
+  // STEP 2: Fallback to database if cache miss
+  if (!ocrResult && gazetteId) {
+    logger.info('KV cache miss, falling back to database', {
+      jobId,
+      ocrJobId,
+      gazetteId,
+      crawlJobId,
+    });
+
+    const { OcrRepository } = await import('../services/database');
+    const ocrRepo = new OcrRepository(databaseClient);
+    const existingOcr = await ocrRepo.getOcrResultByGazetteId(gazetteId);
+    
+    if (existingOcr) {
+      ocrResult = {
+        jobId: ocrJobId,
+        status: 'success',
+        extractedText: existingOcr.extractedText,
+        pdfUrl: message.body.pdfUrl || '',
+        territoryId: message.body.territoryId,
+        publicationDate: message.body.gazetteDate,
+        editionNumber: undefined,
+        spiderId: message.body.metadata?.spiderId,
+        processingTimeMs: (existingOcr.metadata?.processingTimeMs as number) || undefined,
+        completedAt: existingOcr.createdAt,
+        metadata: message.body.metadata,
+      };
+      
+      // STEP 3: Repopulate cache (cache-aside pattern)
+      if (env.OCR_RESULTS && message.body.pdfUrl) {
+        const cacheKey = generateOcrCacheKey(message.body.pdfUrl);
+        await env.OCR_RESULTS.put(
+          cacheKey,
+          JSON.stringify(ocrResult),
+          { expirationTtl: 86400 }
+        );
+        logger.info('Repopulated KV cache from database', {
+          jobId,
+          cacheKey,
+          gazetteId,
+          crawlJobId,
+        });
+      }
+    }
+  }
+
+  // If still not found, throw descriptive error
+  if (!ocrResult) {
+    throw new Error(
+      `OCR result not found in cache or database. PDF: ${message.body.pdfUrl}, gazetteId: ${gazetteId}`
+    );
+  }
 
   // Perform analysis
   let analysis = await orchestrator.analyze(ocrResult, territoryId);
@@ -334,13 +532,12 @@ async function processAnalysisMessage(
       });
 
       // Update analysis with deduplicated findings
-      const uniqueFindingTypes = new Set(dedupeResult.uniqueFindings.map(f => f.type));
       analysis = {
         ...analysis,
         analyses: analysis.analyses.map(a => ({
           ...a,
-          findings: a.findings.filter(f => 
-            dedupeResult.uniqueFindings.some(uf => 
+          findings: a.findings.filter((f: any) => 
+            dedupeResult.uniqueFindings.some((uf: any) => 
               uf.type === f.type && 
               uf.confidence === f.confidence &&
               JSON.stringify(uf.data) === JSON.stringify(f.data)
@@ -413,8 +610,8 @@ async function processAnalysisMessage(
       }
   }
 
-  // Store in KV for backwards compatibility
-  await storeAnalysisResults(analysis, env);
+  // Store in KV cache with deduplication key
+  await storeAnalysisResults(analysis, env, gazetteId, configSignature.configHash);
 
   // Send to webhooks if configured
   if (env.WEBHOOK_QUEUE && env.WEBHOOK_SUBSCRIPTIONS) {
@@ -447,34 +644,33 @@ async function processAnalysisMessage(
 }
 
 /**
- * Store analysis results in KV
+ * Store analysis results in KV cache with deduplication key
  */
 async function storeAnalysisResults(
   analysis: GazetteAnalysis,
-  env: AnalysisProcessorEnv
+  env: AnalysisProcessorEnv,
+  gazetteId: string,
+  configHash: string
 ): Promise<void> {
-  const key = `analysis:${analysis.ocrJobId}`;
+  const cacheKey = generateAnalysisCacheKey(
+    analysis.territoryId,
+    gazetteId,
+    configHash
+  );
 
-  await env.ANALYSIS_RESULTS.put(key, JSON.stringify(analysis), {
+  await env.ANALYSIS_RESULTS.put(cacheKey, JSON.stringify(analysis), {
+    expirationTtl: 24 * 60 * 60, // 24 hours
     metadata: {
       territoryId: analysis.territoryId,
       publicationDate: analysis.publicationDate,
       totalFindings: analysis.summary.totalFindings,
-      categories: analysis.summary.categories,
+      cachedAt: new Date().toISOString(),
     },
   });
 
-  // Store index by territory and date
-  const indexKey = `index:${analysis.territoryId}:${analysis.publicationDate}`;
-  await env.ANALYSIS_RESULTS.put(indexKey, analysis.jobId, {
-    metadata: {
-      totalFindings: analysis.summary.totalFindings,
-    },
-  });
-
-  logger.info(`Stored analysis results`, {
-    key,
-    indexKey,
+  logger.info('Stored analysis in KV cache', {
+    cacheKey,
     jobId: analysis.jobId,
+    expiresIn: '24h',
   });
 }

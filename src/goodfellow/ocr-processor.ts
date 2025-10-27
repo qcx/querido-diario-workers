@@ -16,6 +16,19 @@ import {
 } from '../services/database';
 import { eq, and, sql } from 'drizzle-orm';
 
+/**
+ * Generate a consistent KV key from PDF URL
+ * Uses base64 encoding to create a URL-safe key
+ */
+function generateOcrCacheKey(pdfUrl: string): string {
+  // Base64 encode the URL and make it URL-safe for KV
+  const base64 = btoa(pdfUrl)
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=/g, '');
+  return `ocr:${base64}`;
+}
+
 // Retry configuration for OCR result storage
 const OCR_STORAGE_MAX_RETRIES = 3;
 const OCR_STORAGE_RETRY_DELAY_MS = 1000; // exponential backoff base
@@ -49,6 +62,60 @@ async function retryWithBackoff<T>(
     }
   }
   return { success: false, error: new Error('Max retries exceeded') };
+}
+
+/**
+ * Get OCR result from KV cache first, then fall back to database
+ * This is the optimized "hot path" for reusing existing OCR results
+ */
+async function getOcrResultFromCacheOrDb(
+  pdfUrl: string,
+  gazetteId: string,
+  jobId: string,
+  ocrRepo: OcrRepository,
+  env: OcrProcessorEnv,
+  ocrMessage: OcrQueueMessage
+): Promise<OcrResult | null> {
+  // Try KV cache first (hot path)
+  if (env.OCR_RESULTS) {
+    const cacheKey = generateOcrCacheKey(pdfUrl);
+    const cachedData = await env.OCR_RESULTS.get(cacheKey);
+    if (cachedData) {
+      const cached = JSON.parse(cachedData);
+      logger.info('OCR result retrieved from KV cache (hot path)', {
+        jobId,
+        cacheKey,
+        pdfUrl
+      });
+      return cached;
+    }
+  }
+
+  // Fallback to database
+  const existingOcr = await ocrRepo.getOcrResultByGazetteId(gazetteId);
+  if (existingOcr) {
+    logger.info('OCR result retrieved from database (cache miss)', {
+      jobId,
+      gazetteId
+    });
+    
+    // Reconstruct result
+    return {
+      jobId,
+      status: 'success',
+      extractedText: existingOcr.extractedText,
+      pdfUrl: ocrMessage.pdfUrl,
+      territoryId: ocrMessage.territoryId,
+      publicationDate: ocrMessage.publicationDate,
+      editionNumber: ocrMessage.editionNumber,
+      spiderId: ocrMessage.spiderId,
+      processingTimeMs: (existingOcr.metadata?.processingTimeMs as number) || undefined,
+      completedAt: existingOcr.createdAt,
+      metadata: ocrMessage.metadata,
+    };
+  }
+
+  return null;
 }
 
 export interface OcrProcessorEnv extends D1DatabaseEnv {
@@ -132,34 +199,49 @@ export async function processOcrBatch(
       // 2. Check gazette status and determine action
       if (gazette) {
         if (gazette.status === 'ocr_success') {
-          // Already processed successfully - reuse existing result
-          const existingOcr = await ocrRepo.getOcrResultByGazetteId(gazette.id);
-          if (existingOcr) {
+          // Already processed successfully - reuse existing result (KV cache first, DB fallback)
+          const existingResult = await getOcrResultFromCacheOrDb(
+            ocrMessage.pdfUrl,
+            gazette.id,
+            ocrMessage.jobId,
+            ocrRepo,
+            env,
+            ocrMessage
+          );
+          
+          if (existingResult) {
             logger.info(`OCR already successful for gazette, reusing result`, {
               gazetteId: gazette.id,
               jobId: ocrMessage.jobId,
             });
 
             isReusedResult = true; // Mark as reused
-            result = {
-              jobId: ocrMessage.jobId,
-              status: 'success',
-              extractedText: existingOcr.extractedText,
-              pdfUrl: ocrMessage.pdfUrl,
-              territoryId: ocrMessage.territoryId,
-              publicationDate: ocrMessage.publicationDate,
-              editionNumber: ocrMessage.editionNumber,
-              spiderId: ocrMessage.spiderId,
-              processingTimeMs: (existingOcr.metadata?.processingTimeMs as number) || undefined,
-              completedAt: existingOcr.createdAt,
-              metadata: ocrMessage.metadata,
-            };
+            result = existingResult;
           } else {
-            // Status says success but no OCR result - process it
+            // Status says success but no OCR result - data inconsistency!
             logger.warn('Gazette status is ocr_success but no OCR result found, reprocessing', {
               gazetteId: gazette.id,
               jobId: ocrMessage.jobId
             });
+
+            // Log as critical data inconsistency
+            await db.insert(schema.errorLogs).values({
+              id: databaseClient.generateId(),
+              workerName: 'goodfellow-ocr',
+              operationType: 'data_inconsistency',
+              severity: 'warning',
+              errorMessage: 'Gazette marked ocr_success but no OCR result in database or cache',
+              stackTrace: null,
+              context: JSON.stringify({
+                gazetteId: gazette.id,
+                jobId: ocrMessage.jobId,
+                pdfUrl: ocrMessage.pdfUrl,
+                gazetteStatus: gazette.status
+              }),
+              jobId: crawlJobId,
+              territoryId: ocrMessage.territoryId
+            });
+
             await gazetteRepo.updateGazetteStatus(gazette.id, 'ocr_processing');
             result = await ocrService.processPdf(ocrMessage);
           }
@@ -338,28 +420,24 @@ export async function processOcrBatch(
               const currentStatus = updatedGazette[0].status;
               
               if (currentStatus === 'ocr_success') {
-                // Already completed by another process - reuse result
-                const existingOcr = await ocrRepo.getOcrResultByGazetteId(gazette.id);
-                if (existingOcr) {
+                // Already completed by another process - reuse result (KV cache first, DB fallback)
+                const existingResult = await getOcrResultFromCacheOrDb(
+                  ocrMessage.pdfUrl,
+                  gazette.id,
+                  ocrMessage.jobId,
+                  ocrRepo,
+                  env,
+                  ocrMessage
+                );
+                
+                if (existingResult) {
                   logger.info('Gazette completed by another process, reusing result', {
                     gazetteId: gazette.id,
                     jobId: ocrMessage.jobId
                   });
                   
                   isReusedResult = true; // Mark as reused
-                  result = {
-                    jobId: ocrMessage.jobId,
-                    status: 'success',
-                    extractedText: existingOcr.extractedText,
-                    pdfUrl: ocrMessage.pdfUrl,
-                    territoryId: ocrMessage.territoryId,
-                    publicationDate: ocrMessage.publicationDate,
-                    editionNumber: ocrMessage.editionNumber,
-                    spiderId: ocrMessage.spiderId,
-                    processingTimeMs: (existingOcr.metadata?.processingTimeMs as number) || undefined,
-                    completedAt: existingOcr.createdAt,
-                    metadata: ocrMessage.metadata,
-                  };
+                  result = existingResult;
                 } else {
                   logger.error('Gazette marked success but no OCR found after claim failure', {
                     gazetteId: gazette.id,
@@ -399,45 +477,48 @@ export async function processOcrBatch(
         }
       } else {
         // No gazette found - process anyway (backwards compatibility)
-        // Try to find OCR result by jobId (will scan metadata)
-        const ocrRecord = await ocrRepo.getOcrResultByJobId(ocrMessage.jobId);
-        if (ocrRecord) {
-          logger.info(`OCR job ${ocrMessage.jobId} already processed (database hit)`, {
-            jobId: ocrMessage.jobId,
-          });
-
-          isReusedResult = true; // Mark as reused
-          result = {
-            jobId: ocrMessage.jobId,
-            status: 'success',
-            extractedText: ocrRecord.extractedText,
-            pdfUrl: ocrMessage.pdfUrl,
-            territoryId: ocrMessage.territoryId,
-            publicationDate: ocrMessage.publicationDate,
-            editionNumber: ocrMessage.editionNumber,
-            spiderId: ocrMessage.spiderId,
-            processingTimeMs: (ocrRecord.metadata?.processingTimeMs as number) || undefined,
-            completedAt: ocrRecord.createdAt,
-            metadata: ocrMessage.metadata,
-          };
-        } else {
-          // Check KV cache as fallback
-          let cached = null;
-          if (env.OCR_RESULTS) {
-            const cachedData = await env.OCR_RESULTS.get(`ocr:${ocrMessage.jobId}`);
-            if (cachedData) {
-              cached = JSON.parse(cachedData);
-              logger.info(`OCR job ${ocrMessage.jobId} found in KV cache`, {
-                jobId: ocrMessage.jobId,
-              });
-            }
+        // Try KV cache first (fast path)
+        let cached = null;
+        if (env.OCR_RESULTS) {
+          const cacheKey = generateOcrCacheKey(ocrMessage.pdfUrl);
+          const cachedData = await env.OCR_RESULTS.get(cacheKey);
+          if (cachedData) {
+            cached = JSON.parse(cachedData);
+            logger.info(`OCR result found in KV cache (no gazette path)`, {
+              jobId: ocrMessage.jobId,
+              cacheKey,
+              pdfUrl: ocrMessage.pdfUrl,
+            });
           }
+        }
 
-          if (cached) {
-            isReusedResult = true; // Mark as reused from cache
-            result = cached;
+        if (cached) {
+          isReusedResult = true; // Mark as reused from cache
+          result = cached;
+        } else {
+          // Fallback: try to find OCR result by jobId in DB (will scan metadata)
+          const ocrRecord = await ocrRepo.getOcrResultByJobId(ocrMessage.jobId);
+          if (ocrRecord) {
+            logger.info(`OCR job ${ocrMessage.jobId} already processed (database hit, no gazette)`, {
+              jobId: ocrMessage.jobId,
+            });
+
+            isReusedResult = true; // Mark as reused
+            result = {
+              jobId: ocrMessage.jobId,
+              status: 'success',
+              extractedText: ocrRecord.extractedText,
+              pdfUrl: ocrMessage.pdfUrl,
+              territoryId: ocrMessage.territoryId,
+              publicationDate: ocrMessage.publicationDate,
+              editionNumber: ocrMessage.editionNumber,
+              spiderId: ocrMessage.spiderId,
+              processingTimeMs: (ocrRecord.metadata?.processingTimeMs as number) || undefined,
+              completedAt: ocrRecord.createdAt,
+              metadata: ocrMessage.metadata,
+            };
           } else {
-            // Process the PDF
+            // Not in cache or DB - process the PDF
             result = await ocrService.processPdf(ocrMessage);
           }
         }
@@ -472,22 +553,14 @@ export async function processOcrBatch(
           });
           
           // Update gazette with R2 key if available
-          if (result.pdfR2Key && gazetteCrawlId) {
+          if (result.pdfR2Key && gazette) {
             try {
-              // Get gazette ID from the crawl
-              const crawlResult = await db.select({ gazetteId: schema.gazetteCrawls.gazetteId })
-                .from(schema.gazetteCrawls)
-                .where(eq(schema.gazetteCrawls.id, gazetteCrawlId))
-                .limit(1);
-              
-              if (crawlResult.length > 0) {
-                await gazetteRepo.updateR2Key(crawlResult[0].gazetteId, result.pdfR2Key);
-                logger.info(`Updated gazette with R2 key`, {
-                  ocrJobId: ocrMessage.jobId,
-                  gazetteCrawlId,
-                  pdfR2Key: result.pdfR2Key,
-                });
-              }
+              await gazetteRepo.updateR2Key(gazette.id, result.pdfR2Key);
+              logger.info(`Updated gazette with R2 key`, {
+                ocrJobId: ocrMessage.jobId,
+                gazetteId: gazette.id,
+                pdfR2Key: result.pdfR2Key,
+              });
             } catch (r2Error) {
               logger.error(
                 `Failed to update gazette R2 key`,
@@ -566,16 +639,23 @@ export async function processOcrBatch(
         }
       }
 
-      // Store in KV cache
-        if (env.OCR_RESULTS) {
-          await env.OCR_RESULTS.put(
-            `ocr:${ocrMessage.jobId}`,
-            JSON.stringify(result),
-            {
-              expirationTtl: 86400 * 7, // 7 days
-            }
-          );
-        }
+      // Store in KV cache (always cache results, even if reused)
+      if (env.OCR_RESULTS) {
+        const cacheKey = generateOcrCacheKey(ocrMessage.pdfUrl);
+        await env.OCR_RESULTS.put(
+          cacheKey,
+          JSON.stringify(result),
+          {
+            expirationTtl: 86400, // 24 hours
+          }
+        );
+        logger.info('Stored OCR result in KV cache', {
+          cacheKey,
+          jobId: ocrMessage.jobId,
+          pdfUrl: ocrMessage.pdfUrl,
+          isReused: isReusedResult
+        });
+      }
 
       results.push(result);
 
