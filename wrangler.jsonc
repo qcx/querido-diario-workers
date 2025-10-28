@@ -91,7 +91,7 @@
   // R2 Bucket for storing PDFs
   "r2_buckets": [
     {
-      "bucket_name": "gazette-pdfs",
+      "bucket_name": "goodfellow-gazette-pdfs",
       "binding": "GAZETTE_PDFS"
     }
   ],
@@ -193,7 +193,7 @@
       ],
       "r2_buckets": [
         {
-          "bucket_name": "gazette-pdfs",
+          "bucket_name": "goodfellow-gazette-pdfs",
           "binding": "GAZETTE_PDFS"
         }
       ],

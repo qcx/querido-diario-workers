@@ -268,6 +268,81 @@ export async function processAnalysisBatch(
 }
 
 /**
+ * Helper function to process webhooks for an analysis
+ */
+async function processWebhooksForAnalysis(
+  analysis: GazetteAnalysis,
+  env: AnalysisProcessorEnv,
+  crawlJobId: string,
+  territoryId: string,
+  telemetry: TelemetryService,
+  jobId: string
+): Promise<any[]> {
+  // Send to webhooks if configured
+  if (env.WEBHOOK_QUEUE && env.WEBHOOK_SUBSCRIPTIONS) {
+    try {
+      const { WebhookSenderService } = await import('../services/webhook-sender');
+      const webhookSender = new WebhookSenderService(
+        env.WEBHOOK_QUEUE,
+        env.WEBHOOK_SUBSCRIPTIONS
+      );
+
+      const webhookMessages = await webhookSender.processAnalysisForWebhooks(
+        analysis, 
+        crawlJobId, 
+        territoryId,
+        telemetry
+      );
+
+      if (webhookMessages.length > 0) {
+        logger.info(`Prepared ${webhookMessages.length} webhook message(s)`, {
+          jobId,
+          messageCount: webhookMessages.length,
+        });
+        
+        // Track webhook preparation success
+        await telemetry.trackCityStep(
+          crawlJobId,
+          territoryId,
+          'webhook',
+          'webhook_sent',
+          'started',
+          webhookMessages.length,
+          undefined,
+          undefined,
+          'unknown'
+        );
+      }
+
+      return webhookMessages;
+    } catch (error: any) {
+      logger.error('Failed to prepare webhooks', error, {
+        jobId,
+      });
+      
+      // Track webhook preparation failure
+      if (crawlJobId !== 'unknown') {
+        await telemetry.trackCityStep(
+          crawlJobId,
+          territoryId,
+          'webhook',
+          'webhook_sent',
+          'failed',
+          undefined,
+          undefined,
+          `Webhook preparation error: ${error.message}`,
+          'unknown'
+        );
+      }
+      
+      return [];
+    }
+  }
+
+  return [];
+}
+
+/**
  * Process a single analysis message
  */
 async function processAnalysisMessage(
@@ -362,19 +437,29 @@ async function processAnalysisMessage(
       });
     }
 
+    // Process webhooks for cached analysis
+    const webhookMessages = await processWebhooksForAnalysis(
+      analysis,
+      env,
+      crawlJobId,
+      territoryId,
+      telemetry,
+      jobId
+    );
+
     await telemetry.trackCityStep(
       crawlJobId,
       territoryId,
       message.body.metadata?.spiderId || 'unknown',
       'analysis_end',
-      'skipped',
+      'completed',
       undefined,
       undefined,
       undefined,
       message.body.metadata?.spiderType
     );
 
-    return [];
+    return webhookMessages;
   }
 
   // 2. Cache miss - check database
@@ -399,9 +484,11 @@ async function processAnalysisMessage(
     // 3. Fetch full analysis from database and populate cache
     const dbAnalysis = await analysisRepo.getAnalysisById(existingAnalysisId);
     
+    let reconstructedAnalysis: GazetteAnalysis | null = null;
+    
     if (dbAnalysis) {
       // Reconstruct GazetteAnalysis and store in cache
-      const reconstructedAnalysis = reconstructAnalysisFromRecord(dbAnalysis, ocrJobId);
+      reconstructedAnalysis = reconstructAnalysisFromRecord(dbAnalysis, ocrJobId);
       
       await env.ANALYSIS_RESULTS.put(
         cacheKey,
@@ -439,19 +526,32 @@ async function processAnalysisMessage(
       });
     }
 
+    // Process webhooks for database-cached analysis
+    let webhookMessages: any[] = [];
+    if (reconstructedAnalysis) {
+      webhookMessages = await processWebhooksForAnalysis(
+        reconstructedAnalysis,
+        env,
+        crawlJobId,
+        territoryId,
+        telemetry,
+        jobId
+      );
+    }
+
     await telemetry.trackCityStep(
       crawlJobId,
       territoryId,
       message.body.metadata?.spiderId || 'unknown',
       'analysis_end',
-      'skipped',
+      'completed',
       undefined,
       undefined,
       undefined,
       message.body.metadata?.spiderType
     );
 
-    return [];
+    return webhookMessages;
   }
 
   // 4. No cache, no database - proceed with new analysis
@@ -628,34 +728,15 @@ async function processAnalysisMessage(
   // Store in KV cache with deduplication key
   await storeAnalysisResults(analysis, env, gazetteId, configSignature.configHash);
 
-  // Send to webhooks if configured
-  if (env.WEBHOOK_QUEUE && env.WEBHOOK_SUBSCRIPTIONS) {
-    try {
-      const { WebhookSenderService } = await import('../services/webhook-sender');
-      const webhookSender = new WebhookSenderService(
-        env.WEBHOOK_QUEUE,
-        env.WEBHOOK_SUBSCRIPTIONS
-      );
-
-      const webhookMessages = await webhookSender.processAnalysisForWebhooks(analysis, crawlJobId, territoryId);
-
-      if (webhookMessages.length > 0) {
-        logger.info(`Prepared ${webhookMessages.length} webhook message(s)`, {
-          jobId,
-          messageCount: webhookMessages.length,
-        });
-      }
-
-      return webhookMessages;
-    } catch (error: any) {
-      logger.error('Failed to prepare webhooks', error, {
-        jobId,
-      });
-      return [];
-    }
-  }
-
-  return [];
+  // Process webhooks for new analysis
+  return await processWebhooksForAnalysis(
+    analysis,
+    env,
+    crawlJobId,
+    territoryId,
+    telemetry,
+    jobId
+  );
 }
 
 /**

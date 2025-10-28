@@ -14,6 +14,7 @@ import {
 } from '../types';
 import { WebhookFilterService } from './webhook-filter';
 import { TerritoryService } from './territory-service';
+import { TelemetryService } from './database';
 import { logger } from '../utils';
 
 export class WebhookSenderService {
@@ -31,7 +32,8 @@ export class WebhookSenderService {
   async processAnalysisForWebhooks(
     analysis: GazetteAnalysis, 
     crawlJobId?: string,
-    territoryId?: string
+    territoryId?: string,
+    telemetry?: TelemetryService
   ): Promise<WebhookQueueMessage[]> {
     const webhookMessages: WebhookQueueMessage[] = [];
     logger.info('Processing analysis for webhooks', {
@@ -44,6 +46,22 @@ export class WebhookSenderService {
 
     if (subscriptions.length === 0) {
       logger.info('No active webhook subscriptions');
+      
+      // Track telemetry if there are findings but no subscriptions
+      if (telemetry && crawlJobId && crawlJobId !== 'unknown' && analysis.summary.totalFindings > 0) {
+        await telemetry.trackCityStep(
+          crawlJobId,
+          territoryId || analysis.territoryId,
+          'webhook',
+          'webhook_sent',
+          'skipped',
+          undefined,
+          undefined,
+          'No active subscriptions',
+          'unknown'
+        );
+      }
+      
       return [];
     }
 
@@ -109,6 +127,22 @@ export class WebhookSenderService {
           subscriptionId: subscription.id,
         });
       }
+    }
+
+    // Track if we have findings but no webhook matches
+    if (telemetry && crawlJobId && crawlJobId !== 'unknown' && 
+        analysis.summary.totalFindings > 0 && webhookMessages.length === 0) {
+      await telemetry.trackCityStep(
+        crawlJobId,
+        territoryId || analysis.territoryId,
+        'webhook',
+        'webhook_sent',
+        'skipped',
+        undefined,
+        undefined,
+        `No subscription matches (checked ${subscriptions.length} subscriptions)`,
+        'unknown'
+      );
     }
 
     logger.info(`Collected ${webhookMessages.length} webhook messages`, {

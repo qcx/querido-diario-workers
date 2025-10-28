@@ -144,6 +144,25 @@ async function processWebhookMessage(
     logger.error('Subscription not found', new Error('Subscription not found'), {
       subscriptionId,
     });
+    
+    // Track telemetry for missing subscription
+    const crawlJobId = message.body.metadata?.crawlJobId;
+    const territoryId = message.body.metadata?.territoryId || 'unknown';
+    
+    if (crawlJobId && crawlJobId !== 'unknown') {
+      await _telemetry.trackCityStep(
+        crawlJobId,
+        territoryId,
+        'webhook',
+        'webhook_sent',
+        'failed',
+        undefined,
+        undefined,
+        `Subscription not found: ${subscriptionId}`,
+        'unknown'
+      );
+    }
+    
     return;
   }
 
@@ -153,6 +172,25 @@ async function processWebhookMessage(
     logger.info('Subscription is inactive, skipping', {
       subscriptionId,
     });
+    
+    // Track telemetry for inactive subscription
+    const crawlJobId = message.body.metadata?.crawlJobId;
+    const territoryId = message.body.metadata?.territoryId || 'unknown';
+    
+    if (crawlJobId && crawlJobId !== 'unknown') {
+      await _telemetry.trackCityStep(
+        crawlJobId,
+        territoryId,
+        'webhook',
+        'webhook_sent',
+        'skipped',
+        undefined,
+        undefined,
+        `Subscription inactive: ${subscriptionId}`,
+        'unknown'
+      );
+    }
+    
     return;
   }
 

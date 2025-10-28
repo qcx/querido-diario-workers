@@ -13,13 +13,19 @@ import type {
 } from '../types/external-apis';
 import { isMistralOcrResponse } from '../types/external-apis';
 import { MistralOcrError, toAppError } from '../types/errors';
+import { DrizzleDatabaseClient, schema } from './database';
 
 export class MistralOcrService {
   private config: MistralOcrConfig;
   private r2Bucket?: R2Bucket;
   private r2PublicUrl?: string;
+  private dbClient?: DrizzleDatabaseClient;
 
-  constructor(config: MistralOcrConfig & { r2Bucket?: R2Bucket; r2PublicUrl?: string }) {
+  constructor(config: MistralOcrConfig & { 
+    r2Bucket?: R2Bucket; 
+    r2PublicUrl?: string;
+    databaseClient?: DrizzleDatabaseClient;
+  }) {
     this.config = {
       endpoint: 'https://api.mistral.ai/v1/ocr',
       model: 'mistral-ocr-latest',
@@ -29,6 +35,7 @@ export class MistralOcrService {
     };
     this.r2Bucket = config.r2Bucket;
     this.r2PublicUrl = config.r2PublicUrl;
+    this.dbClient = config.databaseClient;
   }
 
   /**
@@ -44,6 +51,86 @@ export class MistralOcrService {
       .replace(/=/g, '');
     
     return `pdfs/${base64}.pdf`;
+  }
+
+  /**
+   * Upload PDF to R2 bucket
+   * Returns the R2 key if successful, undefined if failed
+   * Errors are caught and returned for proper logging
+   */
+  async uploadToR2(pdfUrl: string, jobId: string): Promise<{
+    r2Key: string | undefined;
+    uploaded: boolean;
+    error?: Error;
+  }> {
+    if (!this.r2Bucket) {
+      logger.error(`R2 bucket not found`, {
+        jobId,
+        pdfUrl,
+      });
+      return { r2Key: undefined, uploaded: false };
+    }
+
+    try {
+      // Generate deterministic key
+      const r2Key = this.generateR2Key(pdfUrl);
+      
+      // Check if PDF already exists in R2
+      const existingFile = await this.r2Bucket.head(r2Key);
+      
+      if (existingFile) {
+        logger.info(`PDF already exists in R2, skipping upload`, {
+          jobId,
+          r2Key,
+          pdfUrl
+        });
+        return { r2Key, uploaded: false };
+      }
+
+      logger.info(`Downloading PDF from ${pdfUrl} for R2 upload`);
+      
+      // Download PDF
+      const pdfResponse = await fetch(pdfUrl, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0',
+          'Accept': 'application/pdf,*/*',
+        },
+      });
+      if (!pdfResponse.ok) {
+        throw new Error(`Failed to download PDF: ${pdfResponse.status}`);
+      }
+      
+      const pdfData = await pdfResponse.arrayBuffer();
+      
+      // Upload to R2
+      logger.info(`Uploading PDF to R2: ${r2Key}`);
+      await this.r2Bucket.put(r2Key, pdfData, {
+        httpMetadata: {
+          contentType: 'application/pdf',
+        },
+      });
+      
+      logger.info(`Successfully uploaded PDF to R2`, {
+        jobId,
+        r2Key,
+        sizeBytes: pdfData.byteLength,
+        pdfUrl
+      });
+
+      return { r2Key, uploaded: true };
+    } catch (error: unknown) {
+      const errorObj = error instanceof Error ? error : new Error(String(error));
+      const errorMessage = errorObj.message;
+      
+      logger.error(`Failed to upload to R2`, error, {
+        jobId,
+        pdfUrl,
+        errorMessage,
+        originalError: JSON.stringify(error),
+      });
+
+      return { r2Key: undefined, uploaded: false, error: errorObj };
+    }
   }
 
   /**
@@ -122,6 +209,10 @@ export class MistralOcrService {
     logger.debug(`Downloading PDF from ${url}`);
     
     const response = await fetch(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0',
+        'Accept': 'application/pdf,*/*',
+      },
       signal: AbortSignal.timeout(this.config.timeout!),
     });
 
@@ -161,57 +252,63 @@ export class MistralOcrService {
     // Check if R2 public URL is localhost (development mode)
     const isLocalR2 = this.r2PublicUrl?.includes('localhost') || this.r2PublicUrl?.includes('127.0.0.1');
 
-    // If R2 is configured, download and upload to R2
-    if (this.r2Bucket) {
-      try {
-        // Generate deterministic key
-        const r2Key = this.generateR2Key(pdfUrl);
-        pdfR2Key = r2Key;
-        
-        // Check if PDF already exists in R2
-        const existingFile = await this.r2Bucket.head(r2Key);
-        
-        if (existingFile) {
-          logger.info(`PDF already exists in R2, skipping upload`, {
-            jobId,
-            r2Key,
-            pdfUrl
-          });
-        } else {
-          logger.info(`Downloading PDF from ${pdfUrl} for R2 upload`);
-          
-          // Download PDF
-          const pdfResponse = await fetch(pdfUrl);
-          if (!pdfResponse.ok) {
-            throw new Error(`Failed to download PDF: ${pdfResponse.status}`);
-          }
-          
-          const pdfData = await pdfResponse.arrayBuffer();
-          
-          // Upload to R2
-          logger.info(`Uploading PDF to R2: ${r2Key}`);
-          await this.r2Bucket.put(r2Key, pdfData, {
-            httpMetadata: {
-              contentType: 'application/pdf',
-            },
-          });
-        }
-        
-        // In development with localhost R2, fallback to original URL for Mistral
-        // since Mistral API cannot access localhost
-        if (isLocalR2) {
-          logger.info(`Development mode detected, using original PDF URL for Mistral: ${pdfUrl}`);
-          finalPdfUrl = pdfUrl;
-        } else {
-          // Production: use R2 public URL
-          const baseUrl = this.r2PublicUrl || 'https://gazette-pdfs.qconcursos.workers.dev';
-          finalPdfUrl = `${baseUrl}/${r2Key}`;
-          logger.info(`Using R2 URL for OCR: ${finalPdfUrl}`);
-        }
-      } catch (error: unknown) {
-        logger.error(`Failed to upload to R2, using original URL`, error);
-        // Fallback to original URL
+    // Use the new uploadToR2 method
+    const uploadResult = await this.uploadToR2(pdfUrl, jobId);
+    
+    if (uploadResult.r2Key) {
+      pdfR2Key = uploadResult.r2Key;
+      
+      // In development with localhost R2, fallback to original URL for Mistral
+      // since Mistral API cannot access localhost
+      if (isLocalR2) {
+        logger.info(`Development mode detected, using original PDF URL for Mistral: ${pdfUrl}`);
+        finalPdfUrl = pdfUrl;
+      } else {
+        // Production: use R2 public URL
+        const baseUrl = this.r2PublicUrl || 'https://gazette-pdfs.qconcursos.workers.dev';
+        finalPdfUrl = `${baseUrl}/${uploadResult.r2Key}`;
+        logger.info(`Using R2 URL for OCR: ${finalPdfUrl}`);
       }
+    } else if (uploadResult.error) {
+      // Track R2 upload failure in database
+      if (this.dbClient) {
+        try {
+          const db = this.dbClient.getDb();
+          await db.insert(schema.errorLogs).values({
+            id: this.dbClient.generateId(),
+            workerName: 'goodfellow-ocr',
+            operationType: 'r2_upload',
+            severity: 'warning',
+            errorMessage: uploadResult.error.message,
+            stackTrace: uploadResult.error.stack || null,
+            context: JSON.stringify({
+              jobId,
+              pdfUrl,
+              r2Key: pdfR2Key,
+              stage: 'r2_upload_failed',
+              fallbackUsed: true
+            }),
+            jobId: null,
+            territoryId: null
+          });
+          
+          logger.info('R2 upload failure logged to database', {
+            jobId,
+            r2Key: pdfR2Key
+          });
+        } catch (dbError) {
+          // Don't fail OCR if error logging fails
+          logger.error('Failed to log R2 upload error to database', dbError);
+        }
+      }
+      
+      // Fallback to original URL
+      logger.warn(`Failed to upload to R2, using original URL`, {
+        jobId,
+        pdfUrl,
+        error: uploadResult.error.message
+      });
+      pdfR2Key = undefined;
     }
 
     const payload = {

@@ -135,13 +135,6 @@ export async function processOcrBatch(
 ): Promise<void> {
   logger.info(`OCR Processor: Processing batch of ${batch.messages.length} messages`);
 
-  // Initialize OCR service (shared across batch)
-  const ocrService = new MistralOcrService({
-    apiKey: env.MISTRAL_API_KEY,
-    r2Bucket: env.GAZETTE_PDFS,
-    r2PublicUrl: env.R2_PUBLIC_URL,
-  });
-
   const results: OcrResult[] = [];
   const successfulResults: { ocrMessage: OcrQueueMessage; result: OcrResult }[] = [];
 
@@ -156,6 +149,14 @@ export async function processOcrBatch(
     const telemetry = new TelemetryService(databaseClient);
     const ocrRepo = new OcrRepository(databaseClient);
     const gazetteRepo = new GazetteRepository(databaseClient);
+
+    // Initialize OCR service with database client for telemetry (per message)
+    const ocrService = new MistralOcrService({
+      apiKey: env.MISTRAL_API_KEY,
+      r2Bucket: env.GAZETTE_PDFS,
+      r2PublicUrl: env.R2_PUBLIC_URL,
+      databaseClient: databaseClient,
+    });
 
     try {
       logger.info(`Processing OCR job ${ocrMessage.jobId}`, {
@@ -213,15 +214,57 @@ export async function processOcrBatch(
             ocrMessage
           );
           
-          if (existingResult) {
-            logger.info(`OCR already successful for gazette, reusing result`, {
-              gazetteId: gazette.id,
-              jobId: ocrMessage.jobId,
-            });
+            if (existingResult) {
+              logger.info(`OCR already successful for gazette, reusing result`, {
+                gazetteId: gazette.id,
+                jobId: ocrMessage.jobId,
+              });
 
-            isReusedResult = true; // Mark as reused
-            result = existingResult;
-          } else {
+              isReusedResult = true; // Mark as reused
+              result = existingResult;
+              
+              // Check if gazette is missing R2 key and retry upload
+              if (!gazette.pdfR2Key && env.GAZETTE_PDFS) {
+                logger.info('Cached OCR result found but missing R2 key, attempting upload', {
+                  gazetteId: gazette.id,
+                  jobId: ocrMessage.jobId,
+                  pdfUrl: ocrMessage.pdfUrl
+                });
+                
+                const uploadResult = await ocrService.uploadToR2(ocrMessage.pdfUrl, ocrMessage.jobId);
+                
+                if (uploadResult.uploaded && uploadResult.r2Key) {
+                  result.pdfR2Key = uploadResult.r2Key;
+                  logger.info('R2 upload succeeded during recrawl', {
+                    gazetteId: gazette.id,
+                    r2Key: uploadResult.r2Key
+                  });
+                } else if (uploadResult.error) {
+                  // Log R2 upload failure to error_logs
+                  await db.insert(schema.errorLogs).values({
+                    id: databaseClient.generateId(),
+                    workerName: 'goodfellow-ocr',
+                    operationType: 'r2_upload_retry',
+                    severity: 'warning',
+                    errorMessage: uploadResult.error.message,
+                    stackTrace: uploadResult.error.stack || null,
+                    context: JSON.stringify({
+                      gazetteId: gazette.id,
+                      jobId: ocrMessage.jobId,
+                      pdfUrl: ocrMessage.pdfUrl,
+                      stage: 'recrawl_r2_upload_retry'
+                    }),
+                    jobId: crawlJobId,
+                    territoryId: ocrMessage.territoryId
+                  });
+                  
+                  logger.warn('R2 upload retry failed, logged to error_logs', {
+                    gazetteId: gazette.id,
+                    error: uploadResult.error.message
+                  });
+                }
+              }
+            } else {
             // Status says success but no OCR result - data inconsistency!
             logger.warn('Gazette status is ocr_success but no OCR result found, reprocessing', {
               gazetteId: gazette.id,
@@ -436,6 +479,48 @@ export async function processOcrBatch(
                   
                   isReusedResult = true; // Mark as reused
                   result = existingResult;
+                  
+                  // Check if gazette is missing R2 key and retry upload
+                  if (!gazette.pdfR2Key && env.GAZETTE_PDFS) {
+                    logger.info('Cached OCR result found but missing R2 key, attempting upload', {
+                      gazetteId: gazette.id,
+                      jobId: ocrMessage.jobId,
+                      pdfUrl: ocrMessage.pdfUrl
+                    });
+                    
+                    const uploadResult = await ocrService.uploadToR2(ocrMessage.pdfUrl, ocrMessage.jobId);
+                    
+                    if (uploadResult.uploaded && uploadResult.r2Key) {
+                      result.pdfR2Key = uploadResult.r2Key;
+                      logger.info('R2 upload succeeded during recrawl (after claim failure)', {
+                        gazetteId: gazette.id,
+                        r2Key: uploadResult.r2Key
+                      });
+                    } else if (uploadResult.error) {
+                      // Log R2 upload failure to error_logs
+                      await db.insert(schema.errorLogs).values({
+                        id: databaseClient.generateId(),
+                        workerName: 'goodfellow-ocr',
+                        operationType: 'r2_upload_retry',
+                        severity: 'warning',
+                        errorMessage: uploadResult.error.message,
+                        stackTrace: uploadResult.error.stack || null,
+                        context: JSON.stringify({
+                          gazetteId: gazette.id,
+                          jobId: ocrMessage.jobId,
+                          pdfUrl: ocrMessage.pdfUrl,
+                          stage: 'recrawl_r2_upload_retry_after_claim_failure'
+                        }),
+                        jobId: crawlJobId,
+                        territoryId: ocrMessage.territoryId
+                      });
+                      
+                      logger.warn('R2 upload retry failed, logged to error_logs', {
+                        gazetteId: gazette.id,
+                        error: uploadResult.error.message
+                      });
+                    }
+                  }
                 } else {
                   logger.error('Gazette marked success but no OCR found after claim failure', {
                     gazetteId: gazette.id,
