@@ -133,12 +133,13 @@ export class AnalysisOrchestrator {
   /**
    * Analyze OCR result with all enabled analyzers
    */
-  async analyze(ocrResult: OcrResult, territoryId?: string): Promise<GazetteAnalysis> {
+  async analyze(ocrResult: OcrResult, territoryId?: string, jobId?: string): Promise<GazetteAnalysis> {
     const startTime = Date.now();
-    const jobId = `analysis-${ocrResult.jobId}-${Date.now()}`;
+    // Use provided jobId or generate a fallback (for backward compatibility)
+    const analysisJobId = jobId || `analysis-${ocrResult.jobId}-${Date.now()}`;
 
     logger.info(`Starting analysis orchestration for job ${ocrResult.jobId}`, {
-      jobId,
+      jobId: analysisJobId,
       ocrJobId: ocrResult.jobId,
       analyzersCount: this.analyzers.length,
     });
@@ -187,7 +188,7 @@ export class AnalysisOrchestrator {
     const summary = this.createSummary(analyses);
 
     const gazetteAnalysis: GazetteAnalysis = {
-      jobId,
+      jobId: analysisJobId,
       ocrJobId: ocrResult.jobId,
       territoryId: territoryId || ocrResult.territoryId || 'unknown',
       publicationDate: ocrResult.publicationDate,
@@ -210,7 +211,7 @@ export class AnalysisOrchestrator {
     const totalTime = Date.now() - startTime;
 
     logger.info(`Analysis orchestration completed for job ${ocrResult.jobId}`, {
-      jobId,
+      jobId: analysisJobId,
       ocrJobId: ocrResult.jobId,
       totalFindings: summary.totalFindings,
       totalTimeMs: totalTime,

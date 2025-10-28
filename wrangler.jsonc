@@ -107,7 +107,8 @@
 
   // Environment variables
   "vars": {
-    "ENVIRONMENT": "production"
+    "ENVIRONMENT": "production",
+    "R2_PUBLIC_URL": "https://gazette-pdfs.qconcursos.workers.dev"
   },
 
   // Secrets (set via wrangler secret put)

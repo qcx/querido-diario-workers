@@ -42,6 +42,28 @@ function generateAnalysisCacheKey(
 }
 
 /**
+ * Generate deterministic jobId from deduplication key
+ * Same inputs always produce the same jobId, enabling database-level deduplication
+ */
+function generateDeterministicJobId(
+  territoryId: string,
+  gazetteId: string,
+  configHash: string
+): string {
+  const input = `${territoryId}:${gazetteId}:${configHash}`;
+  const encoder = new TextEncoder();
+  const data = encoder.encode(input);
+  
+  // Simple hash (matches configHash generation style)
+  const hash = Array.from(data)
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('')
+    .substring(0, 16); // 16 chars sufficient for uniqueness
+  
+  return `analysis-${hash}`;
+}
+
+/**
  * Reconstruct GazetteAnalysis from database record for caching
  */
 function reconstructAnalysisFromRecord(
@@ -82,6 +104,7 @@ export interface AnalysisProcessorEnv extends D1DatabaseEnv {
   WEBHOOK_QUEUE?: Queue;
   WEBHOOK_SUBSCRIPTIONS?: KVNamespace;
   OPENAI_API_KEY: string;
+  R2_PUBLIC_URL?: string;
 }
 
 /**
@@ -251,9 +274,16 @@ export async function processAnalysisBatch(
   if (allWebhookMessages.length > 0 && env.WEBHOOK_QUEUE && env.WEBHOOK_SUBSCRIPTIONS) {
     try {
       const { WebhookSenderService } = await import('../services/webhook-sender');
+      const { WebhookRepository, GazetteRepository } = await import('../services/database');
+      const webhookRepo = new WebhookRepository(databaseClient);
+      const gazetteRepo = new GazetteRepository(databaseClient);
+      
       const webhookSender = new WebhookSenderService(
         env.WEBHOOK_QUEUE,
-        env.WEBHOOK_SUBSCRIPTIONS
+        env.WEBHOOK_SUBSCRIPTIONS,
+        webhookRepo,
+        env.R2_PUBLIC_URL,
+        gazetteRepo
       );
 
       await webhookSender.sendWebhookBatch(allWebhookMessages);
@@ -276,22 +306,32 @@ async function processWebhooksForAnalysis(
   crawlJobId: string,
   territoryId: string,
   telemetry: TelemetryService,
-  jobId: string
+  jobId: string,
+  databaseClient: ReturnType<typeof getDatabase>,
+  gazetteId?: string
 ): Promise<any[]> {
   // Send to webhooks if configured
   if (env.WEBHOOK_QUEUE && env.WEBHOOK_SUBSCRIPTIONS) {
     try {
       const { WebhookSenderService } = await import('../services/webhook-sender');
+      const { WebhookRepository, GazetteRepository } = await import('../services/database');
+      const webhookRepo = new WebhookRepository(databaseClient);
+      const gazetteRepo = new GazetteRepository(databaseClient);
+      
       const webhookSender = new WebhookSenderService(
         env.WEBHOOK_QUEUE,
-        env.WEBHOOK_SUBSCRIPTIONS
+        env.WEBHOOK_SUBSCRIPTIONS,
+        webhookRepo,
+        env.R2_PUBLIC_URL,
+        gazetteRepo
       );
 
       const webhookMessages = await webhookSender.processAnalysisForWebhooks(
         analysis, 
         crawlJobId, 
         territoryId,
-        telemetry
+        telemetry,
+        gazetteId
       );
 
       if (webhookMessages.length > 0) {
@@ -397,6 +437,14 @@ async function processAnalysisMessage(
   // Generate config signature for this analysis
   const configSignature = orchestrator.generateConfigSignature(config, territoryId);
 
+  // Generate deterministic jobId for database-level deduplication
+  // Same inputs (territoryId + gazetteId + configHash) always produce the same jobId
+  const deterministicJobId = generateDeterministicJobId(
+    territoryId, 
+    gazetteId, 
+    configSignature.configHash
+  );
+
   // 1. Try KV cache first (fast path - no database query)
   const cacheKey = generateAnalysisCacheKey(territoryId, gazetteId, configSignature.configHash);
   const cachedAnalysis = await env.ANALYSIS_RESULTS.get(cacheKey);
@@ -444,7 +492,9 @@ async function processAnalysisMessage(
       crawlJobId,
       territoryId,
       telemetry,
-      jobId
+      jobId,
+      databaseClient,
+      gazetteId
     );
 
     await telemetry.trackCityStep(
@@ -463,6 +513,8 @@ async function processAnalysisMessage(
   }
 
   // 2. Cache miss - check database
+  // NOTE: This is now a performance optimization to avoid re-running analysis.
+  // Primary deduplication is enforced by deterministic jobId + database unique constraint.
   const existingAnalysisId = await analysisRepo.findExistingAnalysis(
     territoryId,
     gazetteId,
@@ -535,7 +587,9 @@ async function processAnalysisMessage(
         crawlJobId,
         territoryId,
         telemetry,
-        jobId
+        jobId,
+        databaseClient,
+        gazetteId
       );
     }
 
@@ -630,8 +684,9 @@ async function processAnalysisMessage(
     );
   }
 
-  // Perform analysis
-  let analysis = await orchestrator.analyze(ocrResult, territoryId);
+  // Perform analysis with deterministic jobId
+  // This enables database-level deduplication via the unique constraint on job_id
+  let analysis = await orchestrator.analyze(ocrResult, territoryId, deterministicJobId);
 
   // Apply deduplication to findings
   try {
@@ -735,7 +790,9 @@ async function processAnalysisMessage(
     crawlJobId,
     territoryId,
     telemetry,
-    jobId
+    jobId,
+    databaseClient,
+    gazetteId
   );
 }
 

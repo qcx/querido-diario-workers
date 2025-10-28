@@ -35,6 +35,14 @@ export interface WebhookSubscription {
     backoffMs: number;
   };
   
+  /** 
+   * Maximum number of successful webhook deliveries per analysis result
+   * - number (1, 2, 3, etc.): Send up to N times per analysis
+   * - "always": No limit, send every time (default behavior)
+   * - undefined: Defaults to "always" for backward compatibility
+   */
+  maxDeliveries?: number | "always";
+  
   /** Active status */
   active: boolean;
   

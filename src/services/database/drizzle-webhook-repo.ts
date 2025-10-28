@@ -3,7 +3,7 @@
  * Replaces webhook-repo.ts with Drizzle ORM implementation
  */
 
-import { eq, desc, and, gte, lte, inArray } from 'drizzle-orm';
+import { eq, desc, and, gte, lte, inArray, sql } from 'drizzle-orm';
 import { DrizzleDatabaseClient, schema } from './drizzle-client';
 import { logger } from '../../utils/logger';
 import type { WebhookDeliveryResult } from '../../types';
@@ -39,7 +39,8 @@ export class DrizzleWebhookRepository {
     statusCode?: number,
     errorMessage?: string,
     responseBody?: string,
-    deliveryTimeMs?: number
+    deliveryTimeMs?: number,
+    analysisJobId?: string | null
   ): Promise<string> {
     const deliveryResult: WebhookDeliveryResult = {
       messageId: notificationId,
@@ -53,13 +54,16 @@ export class DrizzleWebhookRepository {
       attempt: 1,
     };
 
-    return await this.logDelivery(deliveryResult);
+    return await this.logDelivery(deliveryResult, analysisJobId);
   }
 
   /**
    * Log webhook delivery attempt
    */
-  async logDelivery(delivery: WebhookDeliveryResult): Promise<string> {
+  async logDelivery(
+    delivery: WebhookDeliveryResult, 
+    analysisJobId?: string | null
+  ): Promise<string> {
     try {
       const db = this.dbClient.getDb();
 
@@ -72,7 +76,7 @@ export class DrizzleWebhookRepository {
         id: this.dbClient.generateId(),
         notificationId: delivery.messageId,
         subscriptionId: delivery.subscriptionId,
-        analysisJobId: null,
+        analysisJobId: analysisJobId || null,
         eventType: 'webhook.delivery',
         status: delivery.status,
         statusCode: delivery.statusCode || null,
@@ -207,6 +211,36 @@ export class DrizzleWebhookRepository {
       }));
     } catch (error) {
       logger.error('Failed to get pending retries', { error });
+      throw error;
+    }
+  }
+
+  /**
+   * Get count of successful webhook deliveries for a subscription + analysis combination
+   * Used to enforce maxDeliveries limit
+   */
+  async getSuccessfulDeliveryCount(
+    subscriptionId: string,
+    analysisJobId: string
+  ): Promise<number> {
+    try {
+      const db = this.dbClient.getDb();
+
+      const results = await db.select()
+        .from(schema.webhookDeliveries)
+        .where(and(
+          eq(schema.webhookDeliveries.subscriptionId, subscriptionId),
+          eq(schema.webhookDeliveries.analysisJobId, analysisJobId),
+          eq(schema.webhookDeliveries.status, 'sent')
+        ));
+
+      return results.length;
+    } catch (error) {
+      logger.error('Failed to get successful delivery count', {
+        subscriptionId,
+        analysisJobId,
+        error
+      });
       throw error;
     }
   }

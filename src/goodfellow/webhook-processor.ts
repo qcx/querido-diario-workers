@@ -199,7 +199,10 @@ async function processWebhookMessage(
   const result = await sendWebhook(subscription, notification, attempt);
   const deliveryTimeMs = Date.now() - startTime;
 
-  // Log webhook delivery to database
+  // Extract analysisJobId from notification
+  const analysisJobId = notification.analysis?.jobId || null;
+
+  // Log webhook delivery to database with analysisJobId
   await webhookRepo.logWebhookDelivery(
     messageId,           // notificationId
     subscriptionId,      // subscriptionId
@@ -207,7 +210,8 @@ async function processWebhookMessage(
     result.statusCode,   // statusCode (optional)
     result.error,        // errorMessage (optional)
     result.responseBody, // responseBody (optional)
-    deliveryTimeMs       // deliveryTimeMs (optional)
+    deliveryTimeMs,      // deliveryTimeMs (optional)
+    analysisJobId        // analysisJobId (optional)
   );
 
   // Handle retry

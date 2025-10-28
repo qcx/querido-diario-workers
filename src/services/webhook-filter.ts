@@ -83,17 +83,6 @@ export class WebhookFilterService {
       });
     }
 
-    // Minimum findings filter
-    if (filters.minFindings !== undefined) {
-      if (analysis.summary.totalFindings < filters.minFindings) {
-        logger.debug('Analysis does not meet minimum findings', {
-          totalFindings: analysis.summary.totalFindings,
-          minFindings: filters.minFindings,
-        });
-        return false;
-      }
-    }
-
     // Territory filter
     if (filters.territoryIds && filters.territoryIds.length > 0) {
       if (!filters.territoryIds.includes(analysis.territoryId)) {

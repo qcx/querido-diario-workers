@@ -20,10 +20,22 @@ import { logger } from '../utils';
 export class WebhookSenderService {
   private webhookQueue: Queue<WebhookQueueMessage>;
   private subscriptionsKV: KVNamespace;
+  private webhookRepo?: any; // WebhookRepository for checking delivery counts
+  private r2PublicUrl?: string;
+  private gazetteRepo?: any; // GazetteRepository for fetching R2 keys
 
-  constructor(webhookQueue: Queue<WebhookQueueMessage>, subscriptionsKV: KVNamespace) {
+  constructor(
+    webhookQueue: Queue<WebhookQueueMessage>, 
+    subscriptionsKV: KVNamespace,
+    webhookRepo?: any,
+    r2PublicUrl?: string,
+    gazetteRepo?: any
+  ) {
     this.webhookQueue = webhookQueue;
     this.subscriptionsKV = subscriptionsKV;
+    this.webhookRepo = webhookRepo;
+    this.r2PublicUrl = r2PublicUrl;
+    this.gazetteRepo = gazetteRepo;
   }
 
   /**
@@ -33,7 +45,8 @@ export class WebhookSenderService {
     analysis: GazetteAnalysis, 
     crawlJobId?: string,
     territoryId?: string,
-    telemetry?: TelemetryService
+    telemetry?: TelemetryService,
+    gazetteId?: string
   ): Promise<WebhookQueueMessage[]> {
     const webhookMessages: WebhookQueueMessage[] = [];
     logger.info('Processing analysis for webhooks', {
@@ -70,6 +83,44 @@ export class WebhookSenderService {
     // Check each subscription
     for (const subscription of subscriptions) {
       try {
+        // Check maxDeliveries limit first (before filter matching)
+        if (subscription.maxDeliveries !== undefined && 
+            subscription.maxDeliveries !== "always" && 
+            this.webhookRepo) {
+          
+          const deliveryCount = await this.webhookRepo.getSuccessfulDeliveryCount(
+            subscription.id,
+            analysis.jobId
+          );
+          
+          if (deliveryCount >= subscription.maxDeliveries) {
+            logger.info('Webhook skipped: maxDeliveries limit reached', {
+              subscriptionId: subscription.id,
+              clientId: subscription.clientId,
+              analysisJobId: analysis.jobId,
+              maxDeliveries: subscription.maxDeliveries,
+              currentCount: deliveryCount,
+            });
+            
+            // Track telemetry for skipped webhook
+            if (telemetry && crawlJobId && crawlJobId !== 'unknown') {
+              await telemetry.trackCityStep(
+                crawlJobId,
+                territoryId || analysis.territoryId,
+                'webhook',
+                'webhook_sent',
+                'skipped',
+                undefined,
+                undefined,
+                `Max deliveries reached (${deliveryCount}/${subscription.maxDeliveries})`,
+                'unknown'
+              );
+            }
+            
+            continue;
+          }
+        }
+
         // Check if analysis matches filters
         const matches = WebhookFilterService.matches(analysis, subscription.filters);
 
@@ -87,6 +138,19 @@ export class WebhookSenderService {
           subscription.filters
         );
 
+        // Check minimum findings threshold on filtered findings
+        if (subscription.filters.minFindings !== undefined) {
+          if (findings.length < subscription.filters.minFindings) {
+            logger.debug('Filtered findings do not meet minimum threshold', {
+              subscriptionId: subscription.id,
+              clientId: subscription.clientId,
+              filteredFindings: findings.length,
+              minFindings: subscription.filters.minFindings,
+            });
+            continue;
+          }
+        }
+
         if (findings.length === 0) {
           logger.debug('No matching findings for subscription', {
             subscriptionId: subscription.id,
@@ -95,10 +159,11 @@ export class WebhookSenderService {
         }
 
         // Create notification
-        const notification = this.createNotification(
+        const notification = await this.createNotification(
           subscription,
           analysis,
-          findings
+          findings,
+          gazetteId
         );
 
         // Create webhook message
@@ -184,11 +249,12 @@ export class WebhookSenderService {
   /**
    * Create enriched webhook notification
    */
-  private createNotification(
+  private async createNotification(
     subscription: WebhookSubscription,
     analysis: GazetteAnalysis,
-    findings: WebhookFinding[]
-  ): WebhookNotification {
+    findings: WebhookFinding[],
+    gazetteId?: string
+  ): Promise<WebhookNotification> {
     // Determine event type
     let event: 'gazette.analyzed' | 'concurso.detected' | 'licitacao.detected' = 'gazette.analyzed';
     
@@ -220,7 +286,7 @@ export class WebhookSenderService {
         formattedName: territoryInfo.formattedName,
         publicationDate: analysis.publicationDate,
         editionNumber: analysis.metadata?.editionNumber,
-        pdfUrl: this.getPdfUrl(analysis),
+        pdfUrl: await this.getPdfUrl(analysis, gazetteId),
         spiderId: analysis.metadata?.spiderId || analysis.territoryId || 'unknown',
         spiderType: territoryInfo.spiderType,
       },
@@ -419,10 +485,32 @@ export class WebhookSenderService {
 
   /**
    * Get PDF URL from analysis
+   * Prioritizes R2 URL if available, falls back to original URL
    */
-  private getPdfUrl(analysis: GazetteAnalysis): string {
-    // Use the actual PDF URL (R2 link) from the analysis
-    // Falls back to the Querido Diário URL if not available
+  private async getPdfUrl(analysis: GazetteAnalysis, gazetteId?: string): Promise<string> {
+    // Try to get R2 URL from gazette registry
+    if (this.gazetteRepo && gazetteId && this.r2PublicUrl) {
+      try {
+        const gazette = await this.gazetteRepo.getGazetteById(gazetteId);
+        
+        if (gazette?.pdfR2Key) {
+          const r2Url = `${this.r2PublicUrl}/${gazette.pdfR2Key}`;
+          logger.info('Using R2 URL for webhook', {
+            gazetteId,
+            r2Key: gazette.pdfR2Key,
+            r2Url,
+          });
+          return r2Url;
+        }
+      } catch (error: any) {
+        logger.warn('Failed to fetch R2 key, falling back to original URL', {
+          gazetteId,
+          error: error.message,
+        });
+      }
+    }
+    
+    // Fallback to the original PDF URL from analysis or construct from territory/date
     return analysis.pdfUrl || `/${analysis.territoryId}/${analysis.publicationDate}`;
   }
 
@@ -433,7 +521,8 @@ export class WebhookSenderService {
     subscriptionsKV: KVNamespace,
     webhookUrl: string,
     authToken?: string,
-    territories?: string[]
+    territories?: string[],
+    maxDeliveries?: number | "always"
   ): Promise<WebhookSubscription> {
     const subscription: WebhookSubscription = {
       id: `qconcursos-${Date.now()}`,
@@ -450,6 +539,7 @@ export class WebhookSenderService {
         maxAttempts: 3,
         backoffMs: 5000,
       },
+      maxDeliveries: maxDeliveries,
       active: true,
       createdAt: new Date().toISOString(),
     };

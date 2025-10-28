@@ -178,6 +178,7 @@ export const webhookDeliveries = sqliteTable('webhook_deliveries', {
   subscriptionIdx: index('idx_webhook_subscription').on(table.subscriptionId, table.createdAt),
   notificationIdIdx: index('idx_webhook_notification_id').on(table.notificationId),
   failedWebhooksIdx: index('idx_failed_webhooks').on(table.nextRetryAt).where(sql`status = 'retry'`),
+  subscriptionAnalysisIdx: index('idx_webhook_subscription_analysis').on(table.subscriptionId, table.analysisJobId, table.status),
 }));
 
 // 9. CONCURSO_FINDINGS - Dedicated concurso data
