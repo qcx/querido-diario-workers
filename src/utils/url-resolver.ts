@@ -131,10 +131,11 @@ export async function resolveFinalUrl(
   }
 
   const errorMessage = `Failed to resolve URL after ${retries + 1} attempts: ${lastError?.message}`;
-  logger.error('URL resolution failed', {
-    url,
-    error: errorMessage
-  });
+  logger.error(
+    'URL resolution failed',
+    lastError ?? new Error(errorMessage),
+    { url }
+  );
   throw new Error(errorMessage);
 }
 
@@ -146,11 +147,28 @@ async function resolveUrlWithRedirects(
   maxRedirects: number,
   timeout: number
 ): Promise<string> {
+  const isPrivateHost = (host: string) => {
+    // IPv4
+    if (/^(127\.|10\.|192\.168\.|169\.254\.|172\.(1[6-9]|2\d|3[0-1])\.)/.test(host)) return true;
+    // IPv6 localhost/link-local/ULA
+    if (host === '::1' || host.startsWith('fe80:') || host.toLowerCase().startsWith('fc') || host.toLowerCase().startsWith('fd')) return true;
+    // Common local hostnames
+    if (host === 'localhost' || host.endsWith('.local')) return true;
+    return false;
+  };
+  const assertSafe = (u: string) => {
+    let parsed: URL;
+    try { parsed = new URL(u); } catch { throw new Error(`Blocked invalid URL: ${u}`); }
+    if (!/^https?:$/.test(parsed.protocol)) throw new Error(`Blocked non-http(s) URL: ${u}`);
+    if (isPrivateHost(parsed.hostname)) throw new Error(`Blocked private/localhost URL: ${u}`);
+  };
+  
   let currentUrl = url;
   let redirectCount = 0;
   const redirectChain: string[] = [url];
 
   while (redirectCount < maxRedirects) {
+    assertSafe(currentUrl);
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), timeout);
 
@@ -200,6 +218,7 @@ async function resolveUrlWithRedirects(
 
         // Handle relative URLs
         const nextUrl = new URL(location, currentUrl).toString();
+        assertSafe(nextUrl);
         
         redirectChain.push(nextUrl);
         currentUrl = nextUrl;
