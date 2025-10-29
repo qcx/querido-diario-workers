@@ -229,6 +229,7 @@ export class WebhookFilterService {
         data: finding.data,
         context: finding.context,
         position: finding.data.position,
+        page: finding.location?.page,
       });
     }
 

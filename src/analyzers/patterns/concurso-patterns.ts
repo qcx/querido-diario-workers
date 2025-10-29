@@ -35,14 +35,17 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
     priority: 'primary',
     keywords: [
       'edital de abertura',
-      'torna público',
+      'edital de concurso',
+     // 'torna público',
       'abertura de inscrições',
+      'inscrições abertas',
+      'inscrições iniciadas',
       'realização de concurso público',
       'concurso público para provimento',
     ],
     patterns: [
       /edital\s+(?:de\s+)?abertura/i,
-      /torna\s+p[uú]blico.*concurso/i,
+ //     /torna\s+p[uú]blico.*concurso/i,
       /abertura\s+(?:de\s+)?inscri[çc][õo]es/i,
       /realiza[çc][ãa]o\s+de\s+concurso/i,
       /concurso\s+p[uú]blico\s+para\s+provimento/i,
@@ -55,7 +58,7 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
     ],
     proximity: {
       required: true,
-      maxDistance: 200, // Larger window for opening notices
+      maxDistance: 150, // Larger window for opening notices
       boostNearby: true,
     },
     minKeywordsTogether: 2,
@@ -66,11 +69,12 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
     documentType: 'edital_retificacao',
     weight: 0.9,
     keywords: [
-      'retificação',
+      'retificação do edital',
       'retifica',
-      'alteração',
-      'correção',
-      'errata',
+      'alteração do edital',
+  //    'correção',
+  //    'errata',
+  //    'onde se lê',
     ],
     patterns: [
       /retifica[çc][ãa]o\s+(?:do\s+)?edital/i,
@@ -87,11 +91,17 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
     weight: 0.92,
     priority: 'primary',
     keywords: [
-      'convocação',
-      'convoca',
+  //    'convocação',
+  //    'convoca',
       'candidatos aprovados',
+      'candidatos convocados',
+      'candidatos selecionados',
+      'candidatos reprovados',
+      'cadastro reserva',
       'chamada',
-      'apresentação',
+  //    'apresentação',
+  //    'posse',
+  //    'nomeação',
     ],
     patterns: [
       /convoca[çc][ãa]o.*(?:candidatos?|aprovados?)/i,
@@ -114,10 +124,12 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
     weight: 0.93,
     priority: 'primary',
     keywords: [
-      'homologação',
-      'homologa',
-      'resultado final',
+  //    'homologação',
+  //    'homologa',
+  //    'resultado final',
       'classificação final',
+      'aprovação do resultado',
+      'homologação do resultado',
     ],
     patterns: [
       /homologa[çc][ãa]o.*(?:resultado|concurso)/i,
@@ -127,7 +139,7 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
     ],
     proximity: {
       required: true,
-      maxDistance: 100,
+      maxDistance: 200,
       boostNearby: true,
     },
     minKeywordsTogether: 2,
@@ -141,8 +153,9 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
     keywords: [
       'prorrogação',
       'prorroga',
-      'extensão',
+      'extensão de prazo',
       'adiamento',
+      'nova data',
     ],
     patterns: [
       /prorroga[çc][ãa]o.*(?:inscri[çc][õo]es|prazo)/i,
@@ -152,7 +165,7 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
     ],
     proximity: {
       required: true,
-      maxDistance: 100,
+      maxDistance: 200,
       boostNearby: true,
     },
     minKeywordsTogether: 2,
@@ -169,6 +182,7 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       'suspensão',
       'suspende',
       'anulação',
+      'revogação',
     ],
     patterns: [
       /cancelamento.*(?:concurso|edital)/i,
@@ -179,7 +193,7 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
     ],
     proximity: {
       required: true,
-      maxDistance: 80,
+      maxDistance: 50,
       boostNearby: true,
     },
     minKeywordsTogether: 2,
@@ -195,6 +209,8 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       'classificação',
       'aprovados',
       'nota',
+      'pontuação',
+      'lista de classificados',
     ],
     patterns: [
       /resultado.*(?:prova|etapa|fase)/i,
@@ -208,7 +224,7 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
     ],
     proximity: {
       required: true,
-      maxDistance: 150,
+      maxDistance: 200,
       boostNearby: true,
     },
     minKeywordsTogether: 2,
@@ -365,11 +381,8 @@ export const EXTRACTION_PATTERNS = {
  */
 export function hasConcursoKeywords(text: string): boolean {
   const keywords = [
-    'concurso público',
     'concurso',
-    'edital',
-    'seleção pública',
-    'processo seletivo',
+  //  'processo seletivo',
   ];
   
   const lowerText = text.toLowerCase();

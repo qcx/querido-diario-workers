@@ -169,6 +169,9 @@ export interface WebhookFinding {
   
   /** Position in text */
   position?: number;
+  
+  /** Page number where finding was located */
+  page?: number;
 }
 
 /**

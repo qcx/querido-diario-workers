@@ -590,7 +590,7 @@ async function processAnalysisMessage(
 
   // 1. Try KV cache first (fast path - no database query)
   const cacheKey = generateAnalysisCacheKey(territoryId, gazetteId, configSignature.configHash);
-  const cachedAnalysis = await env.ANALYSIS_RESULTS.get(cacheKey);
+  const cachedAnalysis = null // await env.ANALYSIS_RESULTS.get(cacheKey); 
 
   if (cachedAnalysis) {
     const analysis = JSON.parse(cachedAnalysis) as GazetteAnalysis;
