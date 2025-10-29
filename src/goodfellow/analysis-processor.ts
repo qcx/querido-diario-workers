@@ -392,6 +392,36 @@ async function processWebhooksForAnalysis(
 }
 
 /**
+ * Check concurso storage result by querying database for existing findings
+ */
+async function checkConcursoStorageResult(
+  analysisJobId: string,
+  concursoRepo: any,
+  crawlJobId: string
+): Promise<{ success: boolean; storedCount: number; errors: Error[] }> {
+  try {
+    const existingFindings = await concursoRepo.getConcursoFindingsByAnalysisJobId(analysisJobId);
+    const storedCount = existingFindings?.length || 0;
+    
+    logger.info('Checked concurso storage result from database', {
+      analysisJobId,
+      crawlJobId,
+      storedCount,
+      success: true,
+    });
+    
+    return { success: true, storedCount, errors: [] };
+  } catch (error) {
+    logger.error('Failed to check concurso storage result', error as Error, {
+      analysisJobId,
+      crawlJobId,
+    });
+    
+    return { success: false, storedCount: 0, errors: [error as Error] };
+  }
+}
+
+/**
  * Store concurso findings with retry logic and error handling
  */
 async function storeConcursoFindings(
@@ -599,8 +629,12 @@ async function processAnalysisMessage(
     }
 
     // Process webhooks for cached analysis
-    // For cached analysis, concurso findings were already stored, so we assume success
-    const cachedConcursoStorageResult = { success: true, storedCount: 0, errors: [] };
+    // Check database for actual concurso storage result instead of assuming success
+    const cachedConcursoStorageResult = await checkConcursoStorageResult(
+      analysis.jobId,
+      concursoRepo,
+      crawlJobId
+    );
     const webhookMessages = await processWebhooksForAnalysis(
       analysis,
       env,
@@ -698,8 +732,12 @@ async function processAnalysisMessage(
     // Process webhooks for database-cached analysis
     let webhookMessages: any[] = [];
     if (reconstructedAnalysis) {
-      // For database-cached analysis, concurso findings were already stored, so we assume success
-      const dbCachedConcursoStorageResult = { success: true, storedCount: 0, errors: [] };
+      // Check database for actual concurso storage result instead of assuming success
+      const dbCachedConcursoStorageResult = await checkConcursoStorageResult(
+        reconstructedAnalysis.jobId,
+        concursoRepo,
+        crawlJobId
+      );
       webhookMessages = await processWebhooksForAnalysis(
         reconstructedAnalysis,
         env,
