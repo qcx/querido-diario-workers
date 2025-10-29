@@ -103,9 +103,14 @@ export async function resolveFinalUrl(
     } catch (error) {
       lastError = error as Error;
       
-      // Don't retry on client errors (4xx)
-      if (error instanceof Error && error.message.includes('HTTP 4')) {
-        throw error;
+      // Don't retry on most client errors, but allow 429 (rate limit) to retry with backoff
+      if (error instanceof Error) {
+        const msg = error.message || '';
+        if (/HTTP\s+429\b/.test(msg)) {
+          // 429 is retriable - continue to retry logic
+        } else if (/HTTP\s+4\d{2}\b/.test(msg)) {
+          throw error;
+        }
       }
 
       // Don't retry on too many redirects
@@ -151,7 +156,7 @@ async function resolveUrlWithRedirects(
 
     try {
       // Use HEAD request to check for redirects (lightweight)
-      const response = await fetch(currentUrl, {
+      let response = await fetch(currentUrl, {
         method: 'HEAD',
         redirect: 'manual', // Handle redirects manually
         headers: {
@@ -161,6 +166,29 @@ async function resolveUrlWithRedirects(
       });
 
       clearTimeout(timeoutId);
+
+      // Fallback: some servers don't implement HEAD correctly
+      if (response.status === 405 || response.status === 501) {
+        logger.debug('HEAD not supported; retrying with GET (no body)', {
+          url: currentUrl,
+          status: response.status,
+        });
+        const fbController = new AbortController();
+        const fbTimeoutId = setTimeout(() => fbController.abort(), timeout);
+        try {
+          response = await fetch(currentUrl, {
+            method: 'GET',
+            redirect: 'manual',
+            headers: {
+              'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0',
+              'Range': 'bytes=0-0',
+            },
+            signal: fbController.signal,
+          });
+        } finally {
+          clearTimeout(fbTimeoutId);
+        }
+      }
 
       // Check for redirect status codes
       if (response.status >= 300 && response.status < 400) {
@@ -203,30 +231,38 @@ async function resolveUrlWithRedirects(
             contentType
           });
           
+          // Fetch the HTML content (need GET instead of HEAD) with its own timeout
+          const htmlController = new AbortController();
+          const htmlTimeoutId = setTimeout(() => htmlController.abort(), timeout);
+          let htmlResponse: Response | undefined;
           try {
-            // Fetch the HTML content (need GET instead of HEAD)
-            const htmlResponse = await fetch(currentUrl, {
+            htmlResponse = await fetch(currentUrl, {
               method: 'GET',
               redirect: 'manual',
               headers: {
                 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0',
               },
-              signal: controller.signal,
+              signal: htmlController.signal,
             });
+          } finally {
+            clearTimeout(htmlTimeoutId);
+          }
             
+          try {
             // Read only the first 50KB to avoid memory issues
             // Meta tags are typically in the <head> section at the beginning
-            const reader = htmlResponse.body?.getReader();
+            const reader = htmlResponse?.body?.getReader();
             let htmlChunk = '';
             let bytesRead = 0;
             const maxBytes = 50 * 1024; // 50KB
+            const decoder = new TextDecoder();
             
             if (reader) {
               while (bytesRead < maxBytes) {
                 const { done, value } = await reader.read();
                 if (done) break;
                 
-                htmlChunk += new TextDecoder().decode(value);
+                htmlChunk += decoder.decode(value);
                 bytesRead += value.length;
                 
                 // Stop early if we've found the closing </head> tag
