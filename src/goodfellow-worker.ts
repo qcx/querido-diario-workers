@@ -27,6 +27,9 @@ import { processOcrBatch, OcrProcessorEnv } from './goodfellow/ocr-processor';
 import { processAnalysisBatch, AnalysisProcessorEnv } from './goodfellow/analysis-processor';
 import { processWebhookBatch, WebhookProcessorEnv } from './goodfellow/webhook-processor';
 
+// Import dashboard routes
+import dashboardRoutes from './routes/dashboard-routes';
+
 /**
  * Combined environment bindings for Goodfellow
  */
@@ -62,11 +65,16 @@ const app = new Hono<{ Bindings: GoodfellowEnv }>();
 /**
  * API Key Authentication Middleware
  * Only applies if API_KEY environment variable is set
- * Exempts the root "/" endpoint from authentication
+ * Exempts the root "/" endpoint and dashboard routes from authentication
  */
 app.use('*', async (c, next) => {
   // Skip authentication for root health check
   if (c.req.path === '/') {
+    return next();
+  }
+
+  // Skip API key check for dashboard routes (they have their own auth)
+  if (c.req.path.startsWith('/dashboard')) {
     return next();
   }
 
@@ -128,8 +136,15 @@ app.get('/', (c) => {
     spidersRegistered: spiderRegistry.getCount(),
     handlers: ['http', 'crawl-queue', 'ocr-queue', 'analysis-queue', 'webhook-queue'],
     authEnabled: !!c.env.API_KEY,
+    dashboard: '/dashboard',
   });
 });
+
+/**
+ * Mount dashboard routes
+ * Dashboard inherits the API key middleware from the main app
+ */
+app.route('/dashboard', dashboardRoutes);
 
 /**
  * Enhanced queue message sender
