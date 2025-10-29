@@ -42,6 +42,28 @@ function generateAnalysisCacheKey(
 }
 
 /**
+ * Generate deterministic jobId from deduplication key
+ * Same inputs always produce the same jobId, enabling database-level deduplication
+ */
+function generateDeterministicJobId(
+  territoryId: string,
+  gazetteId: string,
+  configHash: string
+): string {
+  const input = `${territoryId}:${gazetteId}:${configHash}`;
+  const encoder = new TextEncoder();
+  const data = encoder.encode(input);
+  
+  // Simple hash (matches configHash generation style)
+  const hash = Array.from(data)
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('')
+    .substring(0, 16); // 16 chars sufficient for uniqueness
+  
+  return `analysis-${hash}`;
+}
+
+/**
  * Reconstruct GazetteAnalysis from database record for caching
  */
 function reconstructAnalysisFromRecord(
@@ -82,6 +104,7 @@ export interface AnalysisProcessorEnv extends D1DatabaseEnv {
   WEBHOOK_QUEUE?: Queue;
   WEBHOOK_SUBSCRIPTIONS?: KVNamespace;
   OPENAI_API_KEY: string;
+  R2_PUBLIC_URL?: string;
 }
 
 /**
@@ -251,9 +274,16 @@ export async function processAnalysisBatch(
   if (allWebhookMessages.length > 0 && env.WEBHOOK_QUEUE && env.WEBHOOK_SUBSCRIPTIONS) {
     try {
       const { WebhookSenderService } = await import('../services/webhook-sender');
+      const { WebhookRepository, GazetteRepository } = await import('../services/database');
+      const webhookRepo = new WebhookRepository(databaseClient);
+      const gazetteRepo = new GazetteRepository(databaseClient);
+      
       const webhookSender = new WebhookSenderService(
         env.WEBHOOK_QUEUE,
-        env.WEBHOOK_SUBSCRIPTIONS
+        env.WEBHOOK_SUBSCRIPTIONS,
+        webhookRepo,
+        env.R2_PUBLIC_URL,
+        gazetteRepo
       );
 
       await webhookSender.sendWebhookBatch(allWebhookMessages);
@@ -265,6 +295,91 @@ export async function processAnalysisBatch(
       logger.error('Failed to send webhook batch', error);
     }
   }
+}
+
+/**
+ * Helper function to process webhooks for an analysis
+ */
+async function processWebhooksForAnalysis(
+  analysis: GazetteAnalysis,
+  env: AnalysisProcessorEnv,
+  crawlJobId: string,
+  territoryId: string,
+  telemetry: TelemetryService,
+  jobId: string,
+  databaseClient: ReturnType<typeof getDatabase>,
+  gazetteId?: string
+): Promise<any[]> {
+  // Send to webhooks if configured
+  if (env.WEBHOOK_QUEUE && env.WEBHOOK_SUBSCRIPTIONS) {
+    try {
+      const { WebhookSenderService } = await import('../services/webhook-sender');
+      const { WebhookRepository, GazetteRepository } = await import('../services/database');
+      const webhookRepo = new WebhookRepository(databaseClient);
+      const gazetteRepo = new GazetteRepository(databaseClient);
+      
+      const webhookSender = new WebhookSenderService(
+        env.WEBHOOK_QUEUE,
+        env.WEBHOOK_SUBSCRIPTIONS,
+        webhookRepo,
+        env.R2_PUBLIC_URL,
+        gazetteRepo
+      );
+
+      const webhookMessages = await webhookSender.processAnalysisForWebhooks(
+        analysis, 
+        crawlJobId, 
+        territoryId,
+        telemetry,
+        gazetteId
+      );
+
+      if (webhookMessages.length > 0) {
+        logger.info(`Prepared ${webhookMessages.length} webhook message(s)`, {
+          jobId,
+          messageCount: webhookMessages.length,
+        });
+        
+        // Track webhook preparation success
+        await telemetry.trackCityStep(
+          crawlJobId,
+          territoryId,
+          'webhook',
+          'webhook_sent',
+          'started',
+          webhookMessages.length,
+          undefined,
+          undefined,
+          'unknown'
+        );
+      }
+
+      return webhookMessages;
+    } catch (error: any) {
+      logger.error('Failed to prepare webhooks', error, {
+        jobId,
+      });
+      
+      // Track webhook preparation failure
+      if (crawlJobId !== 'unknown') {
+        await telemetry.trackCityStep(
+          crawlJobId,
+          territoryId,
+          'webhook',
+          'webhook_sent',
+          'failed',
+          undefined,
+          undefined,
+          `Webhook preparation error: ${error.message}`,
+          'unknown'
+        );
+      }
+      
+      return [];
+    }
+  }
+
+  return [];
 }
 
 /**
@@ -322,6 +437,14 @@ async function processAnalysisMessage(
   // Generate config signature for this analysis
   const configSignature = orchestrator.generateConfigSignature(config, territoryId);
 
+  // Generate deterministic jobId for database-level deduplication
+  // Same inputs (territoryId + gazetteId + configHash) always produce the same jobId
+  const deterministicJobId = generateDeterministicJobId(
+    territoryId, 
+    gazetteId, 
+    configSignature.configHash
+  );
+
   // 1. Try KV cache first (fast path - no database query)
   const cacheKey = generateAnalysisCacheKey(territoryId, gazetteId, configSignature.configHash);
   const cachedAnalysis = await env.ANALYSIS_RESULTS.get(cacheKey);
@@ -362,22 +485,36 @@ async function processAnalysisMessage(
       });
     }
 
+    // Process webhooks for cached analysis
+    const webhookMessages = await processWebhooksForAnalysis(
+      analysis,
+      env,
+      crawlJobId,
+      territoryId,
+      telemetry,
+      jobId,
+      databaseClient,
+      gazetteId
+    );
+
     await telemetry.trackCityStep(
       crawlJobId,
       territoryId,
       message.body.metadata?.spiderId || 'unknown',
       'analysis_end',
-      'skipped',
+      'completed',
       undefined,
       undefined,
       undefined,
       message.body.metadata?.spiderType
     );
 
-    return [];
+    return webhookMessages;
   }
 
   // 2. Cache miss - check database
+  // NOTE: This is now a performance optimization to avoid re-running analysis.
+  // Primary deduplication is enforced by deterministic jobId + database unique constraint.
   const existingAnalysisId = await analysisRepo.findExistingAnalysis(
     territoryId,
     gazetteId,
@@ -399,9 +536,11 @@ async function processAnalysisMessage(
     // 3. Fetch full analysis from database and populate cache
     const dbAnalysis = await analysisRepo.getAnalysisById(existingAnalysisId);
     
+    let reconstructedAnalysis: GazetteAnalysis | null = null;
+    
     if (dbAnalysis) {
       // Reconstruct GazetteAnalysis and store in cache
-      const reconstructedAnalysis = reconstructAnalysisFromRecord(dbAnalysis, ocrJobId);
+      reconstructedAnalysis = reconstructAnalysisFromRecord(dbAnalysis, ocrJobId);
       
       await env.ANALYSIS_RESULTS.put(
         cacheKey,
@@ -439,19 +578,34 @@ async function processAnalysisMessage(
       });
     }
 
+    // Process webhooks for database-cached analysis
+    let webhookMessages: any[] = [];
+    if (reconstructedAnalysis) {
+      webhookMessages = await processWebhooksForAnalysis(
+        reconstructedAnalysis,
+        env,
+        crawlJobId,
+        territoryId,
+        telemetry,
+        jobId,
+        databaseClient,
+        gazetteId
+      );
+    }
+
     await telemetry.trackCityStep(
       crawlJobId,
       territoryId,
       message.body.metadata?.spiderId || 'unknown',
       'analysis_end',
-      'skipped',
+      'completed',
       undefined,
       undefined,
       undefined,
       message.body.metadata?.spiderType
     );
 
-    return [];
+    return webhookMessages;
   }
 
   // 4. No cache, no database - proceed with new analysis
@@ -530,8 +684,9 @@ async function processAnalysisMessage(
     );
   }
 
-  // Perform analysis
-  let analysis = await orchestrator.analyze(ocrResult, territoryId);
+  // Perform analysis with deterministic jobId
+  // This enables database-level deduplication via the unique constraint on job_id
+  let analysis = await orchestrator.analyze(ocrResult, territoryId, deterministicJobId);
 
   // Apply deduplication to findings
   try {
@@ -628,34 +783,17 @@ async function processAnalysisMessage(
   // Store in KV cache with deduplication key
   await storeAnalysisResults(analysis, env, gazetteId, configSignature.configHash);
 
-  // Send to webhooks if configured
-  if (env.WEBHOOK_QUEUE && env.WEBHOOK_SUBSCRIPTIONS) {
-    try {
-      const { WebhookSenderService } = await import('../services/webhook-sender');
-      const webhookSender = new WebhookSenderService(
-        env.WEBHOOK_QUEUE,
-        env.WEBHOOK_SUBSCRIPTIONS
-      );
-
-      const webhookMessages = await webhookSender.processAnalysisForWebhooks(analysis, crawlJobId, territoryId);
-
-      if (webhookMessages.length > 0) {
-        logger.info(`Prepared ${webhookMessages.length} webhook message(s)`, {
-          jobId,
-          messageCount: webhookMessages.length,
-        });
-      }
-
-      return webhookMessages;
-    } catch (error: any) {
-      logger.error('Failed to prepare webhooks', error, {
-        jobId,
-      });
-      return [];
-    }
-  }
-
-  return [];
+  // Process webhooks for new analysis
+  return await processWebhooksForAnalysis(
+    analysis,
+    env,
+    crawlJobId,
+    territoryId,
+    telemetry,
+    jobId,
+    databaseClient,
+    gazetteId
+  );
 }
 
 /**

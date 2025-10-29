@@ -67,6 +67,9 @@ export class DrizzleAnalysisRepository {
         })
       };
 
+      // Database-level deduplication: jobId is now deterministic, generated from
+      // (territoryId, gazetteId, configHash), so the unique constraint on job_id
+      // ensures that the same gazette + territory + config always reuses the same record
       const result = await db.insert(schema.analysisResults)
         .values(analysisData)
         .onConflictDoUpdate({

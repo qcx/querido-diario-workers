@@ -144,6 +144,25 @@ async function processWebhookMessage(
     logger.error('Subscription not found', new Error('Subscription not found'), {
       subscriptionId,
     });
+    
+    // Track telemetry for missing subscription
+    const crawlJobId = message.body.metadata?.crawlJobId;
+    const territoryId = message.body.metadata?.territoryId || 'unknown';
+    
+    if (crawlJobId && crawlJobId !== 'unknown') {
+      await _telemetry.trackCityStep(
+        crawlJobId,
+        territoryId,
+        'webhook',
+        'webhook_sent',
+        'failed',
+        undefined,
+        undefined,
+        `Subscription not found: ${subscriptionId}`,
+        'unknown'
+      );
+    }
+    
     return;
   }
 
@@ -153,6 +172,25 @@ async function processWebhookMessage(
     logger.info('Subscription is inactive, skipping', {
       subscriptionId,
     });
+    
+    // Track telemetry for inactive subscription
+    const crawlJobId = message.body.metadata?.crawlJobId;
+    const territoryId = message.body.metadata?.territoryId || 'unknown';
+    
+    if (crawlJobId && crawlJobId !== 'unknown') {
+      await _telemetry.trackCityStep(
+        crawlJobId,
+        territoryId,
+        'webhook',
+        'webhook_sent',
+        'skipped',
+        undefined,
+        undefined,
+        `Subscription inactive: ${subscriptionId}`,
+        'unknown'
+      );
+    }
+    
     return;
   }
 
@@ -161,7 +199,10 @@ async function processWebhookMessage(
   const result = await sendWebhook(subscription, notification, attempt);
   const deliveryTimeMs = Date.now() - startTime;
 
-  // Log webhook delivery to database
+  // Extract analysisJobId from notification
+  const analysisJobId = notification.analysis?.jobId || null;
+
+  // Log webhook delivery to database with analysisJobId
   await webhookRepo.logWebhookDelivery(
     messageId,           // notificationId
     subscriptionId,      // subscriptionId
@@ -169,7 +210,8 @@ async function processWebhookMessage(
     result.statusCode,   // statusCode (optional)
     result.error,        // errorMessage (optional)
     result.responseBody, // responseBody (optional)
-    deliveryTimeMs       // deliveryTimeMs (optional)
+    deliveryTimeMs,      // deliveryTimeMs (optional)
+    analysisJobId        // analysisJobId (optional)
   );
 
   // Handle retry

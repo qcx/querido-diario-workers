@@ -9,7 +9,7 @@
   // R2 Bucket
   "r2_buckets": [
     {
-      "bucket_name": "gazette-pdfs",
+      "bucket_name": "goodfellow-gazette-pdfs",
       "binding": "GAZETTE_PDFS"
     }
   ],
@@ -25,7 +25,7 @@
       "name": "r2-dev",
       "r2_buckets": [
         {
-          "bucket_name": "gazette-pdfs",
+          "bucket_name": "goodfellow-gazette-pdfs",
           "binding": "GAZETTE_PDFS"
         }
       ],

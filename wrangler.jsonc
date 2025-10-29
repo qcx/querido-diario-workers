@@ -91,7 +91,7 @@
   // R2 Bucket for storing PDFs
   "r2_buckets": [
     {
-      "bucket_name": "gazette-pdfs",
+      "bucket_name": "goodfellow-gazette-pdfs",
       "binding": "GAZETTE_PDFS"
     }
   ],
@@ -107,7 +107,8 @@
 
   // Environment variables
   "vars": {
-    "ENVIRONMENT": "production"
+    "ENVIRONMENT": "production",
+    "R2_PUBLIC_URL": "https://gazette-pdfs.qconcursos.workers.dev"
   },
 
   // Secrets (set via wrangler secret put)
@@ -193,7 +194,7 @@
       ],
       "r2_buckets": [
         {
-          "bucket_name": "gazette-pdfs",
+          "bucket_name": "goodfellow-gazette-pdfs",
           "binding": "GAZETTE_PDFS"
         }
       ],
