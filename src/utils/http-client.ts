@@ -61,9 +61,14 @@ export async function fetchWithRetry(
     } catch (error) {
       lastError = error as Error;
       
-      // Don't retry on 4xx errors (client errors)
-      if (error instanceof Error && error.message.match(/HTTP 4\d\d/)) {
-        throw error;
+      // Don't retry on most client errors, but allow 429 (rate limit) to retry with backoff
+      if (error instanceof Error) {
+        const msg = error.message || '';
+        if (/HTTP\s+429\b/.test(msg)) {
+          // 429 is retriable - continue to retry logic
+        } else if (/HTTP\s+4\d{2}\b/.test(msg)) {
+          throw error;
+        }
       }
 
       // Wait before retrying (except on last attempt)

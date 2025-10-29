@@ -186,7 +186,7 @@ if (import.meta.main) {
       }
     })
     .catch((error) => {
-      logger.error('Test script failed', { error });
+      logger.error('Test script failed', error as Error);
       process.exit(1);
     });
 }

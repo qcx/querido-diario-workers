@@ -8,7 +8,7 @@
  */
 
 import { DrizzleDatabaseClient } from '../src/services/database/drizzle-client';
-import { eq, sql } from 'drizzle-orm';
+import { and, eq, sql } from 'drizzle-orm';
 import { schema } from '../src/services/database';
 import { resolveFinalUrlsBatch } from '../src/utils/url-resolver';
 import { logger } from '../src/utils/logger';
@@ -114,10 +114,15 @@ async function findDuplicateGazettes() {
       
       const clusterGazettes = await Promise.all(
         cluster.gazettes.map(async (gazette) => {
-          // Count OCR results
+          // Count OCR results (only gazette_registry documents)
           const ocrResults = await db.select({ count: sql<number>`count(*)` })
             .from(schema.ocrResults)
-            .where(eq(schema.ocrResults.documentId, gazette.gazetteId));
+            .where(
+              and(
+                eq(schema.ocrResults.documentId, gazette.gazetteId),
+                eq(schema.ocrResults.documentType, 'gazette_registry')
+              )
+            );
           
           // Count analysis results
           const analysisResults = await db.select({ count: sql<number>`count(*)` })
@@ -152,13 +157,11 @@ async function findDuplicateGazettes() {
     for (const cluster of duplicateClusters) {
       totalDuplicates += cluster.gazettes.length - 1; // -1 because one is the original
       
-      // Check if resolved URLs are the same
-      const resolvedUrls = cluster.gazettes
-        .map(g => g.resolvedUrl)
-        .filter(url => url !== undefined);
-      const uniqueResolved = new Set(resolvedUrls);
-      
-      if (uniqueResolved.size === 1 && uniqueResolved.size < cluster.gazettes.length) {
+      // Check if resolved URLs are the same (all must resolve and be identical)
+      const resolved = cluster.gazettes.map(g => g.resolvedUrl).filter(Boolean) as string[];
+      const allResolved = resolved.length === cluster.gazettes.length;
+      const uniqueResolved = new Set(resolved);
+      if (allResolved && uniqueResolved.size === 1) {
         sameResolvedUrl++;
       }
       
@@ -191,11 +194,12 @@ async function findDuplicateGazettes() {
       clusters: duplicateClusters,
     };
     
+    // Using Bun.write (Bun runtime API)
     await Bun.write('duplicate-gazettes-report.json', JSON.stringify(report, null, 2));
     logger.info('\nDetailed report saved to: duplicate-gazettes-report.json');
     
   } catch (error) {
-    logger.error('Error finding duplicates', { error });
+    logger.error('Error finding duplicates', error as Error);
     throw error;
   }
 }
@@ -208,7 +212,7 @@ if (import.meta.main) {
       process.exit(0);
     })
     .catch((error) => {
-      logger.error('Duplicate detection failed', { error });
+      logger.error('Duplicate detection failed', error as Error);
       process.exit(1);
     });
 }
