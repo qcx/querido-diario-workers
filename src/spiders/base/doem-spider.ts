@@ -60,9 +60,10 @@ export class DoemSpider extends BaseSpider {
 
     logger.debug(`Found ${gazetteBoxes.length} gazette boxes for ${monthYear}`);
 
-    gazetteBoxes.each((_, element) => {
+    for (let i = 0; i < gazetteBoxes.length; i++) {
       try {
-        const gazette = this.parseGazetteBox($, $(element));
+        const element = gazetteBoxes[i];
+        const gazette = await this.parseGazetteBox($, $(element));
         if (gazette) {
           gazettes.push(gazette);
         }
@@ -71,12 +72,12 @@ export class DoemSpider extends BaseSpider {
           error: (error as Error).message,
         });
       }
-    });
+    }
 
     return gazettes;
   }
 
-  private parseGazetteBox(_$: CheerioAPI, $box: Cheerio): Gazette | null {
+  private async parseGazetteBox(_$: CheerioAPI, $box: Cheerio): Promise<Gazette | null> {
     try {
       // Extract date
       const dateText = $box.find('span.data-diario').text().trim();
@@ -104,7 +105,7 @@ export class DoemSpider extends BaseSpider {
       const editionMatch = editionText.match(/Edição\s+([.\d]+)/);
       const editionNumber = editionMatch ? editionMatch[1] : undefined;
 
-      return this.createGazette(date, fileUrl, {
+      return await this.createGazette(date, fileUrl, {
         editionNumber,
         isExtraEdition: false,
         power: 'executive_legislative',

@@ -273,7 +273,7 @@ export class DiofSpider extends BaseSpider {
         fileUrl = fallbackUrl;
       }
       
-      return this.createGazette(gazetteDate, fileUrl, {
+      return await this.createGazette(gazetteDate, fileUrl, {
         editionNumber: item.cod_documento,
         isExtraEdition: false,
         power: this.diofConfig.power,

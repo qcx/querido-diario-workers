@@ -71,7 +71,7 @@ export class ADiariosV1Spider extends BaseSpider {
         const gazetteElements = root.querySelectorAll('#diario_lista');
         
         for (const gazetteElement of gazetteElements) {
-          const gazette = this.parseGazetteElement(gazetteElement);
+          const gazette = await this.parseGazetteElement(gazetteElement);
           if (gazette) {
             gazettes.push(gazette);
           }
@@ -90,7 +90,7 @@ export class ADiariosV1Spider extends BaseSpider {
   /**
    * Parse a single gazette element from the listing
    */
-  private parseGazetteElement(gazetteElement: any): Gazette | null {
+  private async parseGazetteElement(gazetteElement: any): Promise<Gazette | null> {
     try {
       // Extract date
       const dateText = gazetteElement.querySelector('.calendarioIcon')?.text?.trim();
@@ -147,7 +147,7 @@ export class ADiariosV1Spider extends BaseSpider {
       const gazetteId = idMatch[1];
       const fileUrl = `${this.adiariosConfig.baseUrl}/arquivos_download.php?id=${gazetteId}&pg=diariooficial`;
       
-      return this.createGazette(gazetteDate, fileUrl, {
+      return await this.createGazette(gazetteDate, fileUrl, {
         editionNumber,
         isExtraEdition,
         power,

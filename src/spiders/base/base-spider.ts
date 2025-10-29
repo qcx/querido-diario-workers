@@ -3,6 +3,7 @@ import { fromISODate, isDateInRange, toISODate, getCurrentTimestamp } from '../.
 import { fetchHTML } from '../../utils/http-client';
 import { loadHTML, CheerioAPI } from '../../utils/html-parser';
 import { logger } from '../../utils/logger';
+import { resolveFinalUrl } from '../../utils/url-resolver';
 
 /**
  * Abstract base class for all spiders
@@ -66,8 +67,10 @@ export abstract class BaseSpider {
 
   /**
    * Creates a Gazette object with common fields
+   * Resolves the PDF URL to its final destination before creating the object
+   * @returns Promise<Gazette | null> - null if URL resolution fails
    */
-  protected createGazette(
+  protected async createGazette(
     date: Date,
     fileUrl: string,
     options: {
@@ -76,17 +79,36 @@ export abstract class BaseSpider {
       power?: 'executive' | 'legislative' | 'executive_legislative';
       sourceText?: string;
     } = {}
-  ): Gazette {
-    return {
-      date: toISODate(date),
-      fileUrl,
-      territoryId: this.config.territoryId,
-      scrapedAt: getCurrentTimestamp(),
-      editionNumber: options.editionNumber,
-      isExtraEdition: options.isExtraEdition ?? false,
-      power: options.power ?? 'executive_legislative',
-      sourceText: options.sourceText,
-    };
+  ): Promise<Gazette | null> {
+    try {
+      // Resolve the URL to its final destination
+      const resolvedUrl = await resolveFinalUrl(fileUrl, {
+        maxRedirects: 10,
+        timeout: 15000,
+        retries: 2
+      });
+
+      return {
+        date: toISODate(date),
+        fileUrl: resolvedUrl,
+        territoryId: this.config.territoryId,
+        scrapedAt: getCurrentTimestamp(),
+        editionNumber: options.editionNumber,
+        isExtraEdition: options.isExtraEdition ?? false,
+        power: options.power ?? 'executive_legislative',
+        sourceText: options.sourceText,
+      };
+    } catch (error) {
+      logger.error('Failed to resolve gazette URL', {
+        spiderId: this.config.id,
+        territoryId: this.config.territoryId,
+        originalUrl: fileUrl,
+        date: toISODate(date),
+        editionNumber: options.editionNumber,
+        error: (error as Error).message
+      });
+      return null;
+    }
   }
 
   /**

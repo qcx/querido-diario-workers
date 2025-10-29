@@ -193,15 +193,15 @@ export class ADiariosV2Spider extends BaseSpider {
           const pdfUrl = await this.getPdfUrl(page, gazetteUrl);
           
           if (pdfUrl) {
-            gazettes.push({
-              date,
+            const gazette = await this.createGazette(new Date(date), pdfUrl, {
               editionNumber,
-              fileUrl: pdfUrl,
-              territoryId: this.config.territoryId,
               isExtraEdition,
               power: 'executive',
-              scrapedAt: new Date().toISOString(),
             });
+            
+            if (gazette) {
+              gazettes.push(gazette);
+            }
             
             logger.info(`Extracted gazette: ${date} - ${editionNumber}`);
           } else {

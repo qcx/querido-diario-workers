@@ -128,7 +128,7 @@ export class EspiritoSantoSpider extends BaseSpider {
         return null;
       }
       
-      return this.createGazette(date, downloadUrl, {
+      return await this.createGazette(date, downloadUrl, {
         editionNumber: item.numero?.toString(),
         power: this.espiritoSantoConfig.power || 'executive_legislative',
         sourceText: `${item.tipo_edicao_nome} - ${item.paginas} páginas`

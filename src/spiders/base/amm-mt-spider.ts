@@ -42,18 +42,25 @@ export class AmmMtSpider extends BaseSpider {
 
       // O AMM-MT tem uma interface de busca de publicações
       // Extrair links de PDFs das edições
+      const pdfLinks: Array<{ href: string; linkText: string; parentText: string }> = [];
       $('a[href*=".pdf"], a[href*="edicao"], a[href*="publicacao"]').each((_, element) => {
         const href = $(element).attr('href');
-        if (!href) return;
+        if (href) {
+          pdfLinks.push({
+            href,
+            linkText: $(element).text().trim(),
+            parentText: $(element).parent().text().trim()
+          });
+        }
+      });
 
+      for (const { href, linkText, parentText } of pdfLinks) {
         // Construir URL completa
         const pdfUrl = href.startsWith('http') 
           ? href 
           : `${this.ammMtConfig.url.replace(/\/$/, '')}/${href.replace(/^\//, '')}`;
 
         // Tentar extrair data do link ou texto
-        const linkText = $(element).text().trim();
-        const parentText = $(element).parent().text().trim();
         const combinedText = `${linkText} ${parentText}`;
 
         // Buscar padrões de data: DD/MM/YYYY
@@ -79,40 +86,52 @@ export class AmmMtSpider extends BaseSpider {
               power = 'executive';
             }
 
-            gazettes.push(this.createGazette(gazetteDate, pdfUrl, {
+            const gazette = await this.createGazette(gazetteDate, pdfUrl, {
               editionNumber,
               isExtraEdition: isExtra,
               power,
               sourceText: 'Jornal Oficial AMM-MT'
-            }));
+            });
+            
+            if (gazette) {
+              gazettes.push(gazette);
+            }
           }
         }
-      });
+      }
 
       // Tentar abordagem alternativa: buscar por edições diárias
       if (gazettes.length === 0) {
         logger.debug('Trying alternative approach for AMM-MT...');
         
         // O site pode ter links para edições do dia
+        const altLinks: Array<{ href: string; text: string }> = [];
         $('a').each((_, element) => {
           const href = $(element).attr('href');
           const text = $(element).text().trim().toLowerCase();
-          
           if (href && (text.includes('baixar') || text.includes('edição') || text.includes('edicao'))) {
-            const pdfUrl = href.startsWith('http') 
-              ? href 
-              : `${this.ammMtConfig.url.replace(/\/$/, '')}/${href.replace(/^\//, '')}`;
-            
-            // Usar data atual como fallback
-            const today = new Date();
-            if (this.isInDateRange(today)) {
-              gazettes.push(this.createGazette(today, pdfUrl, {
-                power: 'executive_legislative',
-                sourceText: 'Jornal Oficial AMM-MT'
-              }));
-            }
+            altLinks.push({ href, text });
           }
         });
+
+        for (const { href } of altLinks) {
+          const pdfUrl = href.startsWith('http') 
+            ? href 
+            : `${this.ammMtConfig.url.replace(/\/$/, '')}/${href.replace(/^\//, '')}`;
+          
+          // Usar data atual como fallback
+          const today = new Date();
+          if (this.isInDateRange(today)) {
+            const gazette = await this.createGazette(today, pdfUrl, {
+              power: 'executive_legislative',
+              sourceText: 'Jornal Oficial AMM-MT'
+            });
+            
+            if (gazette) {
+              gazettes.push(gazette);
+            }
+          }
+        }
       }
 
       logger.info(`Found ${gazettes.length} gazettes for ${this.spiderConfig.name}`);
