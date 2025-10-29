@@ -142,12 +142,14 @@ export class RondoniaSpider extends BaseSpider {
           // Determine if it's a supplementary edition
           const isSupplementary = pdfUrl.includes('SUPLEMENTAR') || pdfUrl.includes('Suplemento');
           
-          const gazette = this.createGazette(date, fullUrl, {
+          const gazette = await this.createGazette(date, fullUrl, {
             isExtraEdition: isSupplementary,
             power: this.rondoniaConfig.power,
           });
           
-          gazettes.push(gazette);
+          if (gazette) {
+            gazettes.push(gazette);
+          }
           
           logger.info(`Found gazette for ${this.rondoniaConfig.cityName}: ${fullUrl} (${isSupplementary ? 'Supplementary' : 'Regular'})`);
         }
@@ -218,21 +220,25 @@ export class RondoniaSpider extends BaseSpider {
     // Try regular edition
     const regularUrl = `${this.BASE_URL}/data/uploads/${year}/${month}/DOE-${dateStr}.pdf`;
     if (await this.testPdfUrl(regularUrl)) {
-      const gazette = this.createGazette(date, regularUrl, {
+      const gazette = await this.createGazette(date, regularUrl, {
         isExtraEdition: false,
         power: this.rondoniaConfig.power,
       });
-      gazettes.push(gazette);
+      if (gazette) {
+        gazettes.push(gazette);
+      }
     }
     
     // Try supplementary edition
     const supplementaryUrl = `${this.BASE_URL}/data/uploads/${year}/${month}/DOE-SUPLEMENTAR-${dateStr}.pdf`;
     if (await this.testPdfUrl(supplementaryUrl)) {
-      const gazette = this.createGazette(date, supplementaryUrl, {
+      const gazette = await this.createGazette(date, supplementaryUrl, {
         isExtraEdition: true,
         power: this.rondoniaConfig.power,
       });
-      gazettes.push(gazette);
+      if (gazette) {
+        gazettes.push(gazette);
+      }
     }
     
     return gazettes;

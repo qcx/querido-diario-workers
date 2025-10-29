@@ -66,7 +66,8 @@ export class AtendeV2Spider extends BaseSpider {
         
         let foundInRange = false;
         
-        items.each((_, element) => {
+        for (let i = 0; i < items.length; i++) {
+          const element = items[i];
           const $item = $(element);
           
           // Extract date
@@ -75,17 +76,17 @@ export class AtendeV2Spider extends BaseSpider {
           
           if (!date) {
             logger.debug(`Could not parse date: ${dateText}`);
-            return;
+            continue;
           }
           
           // Check date range
           if (date > this.endDate) {
-            return; // Skip future dates
+            continue; // Skip future dates
           }
           
           if (date < this.startDate) {
             shouldContinue = false; // Stop crawling
-            return;
+            continue;
           }
           
           foundInRange = true;
@@ -103,21 +104,25 @@ export class AtendeV2Spider extends BaseSpider {
           const buttons = $item.find('button[data-link]');
           if (buttons.length === 0) {
             logger.debug(`No download button found for edition ${editionNumber}`);
-            return;
+            continue;
           }
           
           const downloadUrl = $(buttons[buttons.length - 1]).attr('data-link');
           if (!downloadUrl) {
             logger.debug(`No download URL found for edition ${editionNumber}`);
-            return;
+            continue;
           }
           
-          gazettes.push(this.createGazette(date, downloadUrl, {
+          const gazette = await this.createGazette(date, downloadUrl, {
             editionNumber,
             isExtraEdition,
             power: 'executive_legislative',
-          }));
-        });
+          });
+          
+          if (gazette) {
+            gazettes.push(gazette);
+          }
+        }
         
         // If no items in range found, stop
         if (!foundInRange) {

@@ -4,8 +4,7 @@
  */
 
 import { Finding, GazetteAnalysis } from '../types/analysis';
-import { createHash } from 'crypto';
-import { logger } from '../utils';
+import { logger, shortHash } from '../utils';
 import { schema } from './database';
 import { sql, eq, gte } from 'drizzle-orm';
 
@@ -43,7 +42,7 @@ export class FindingDeduplicator {
     // Process each finding
     for (const analysisResult of analysis.analyses) {
       for (const finding of analysisResult.findings) {
-        const hash = this.generateFindingHash(finding, analysis.territoryId);
+        const hash = await this.generateFindingHash(finding, analysis.territoryId);
         const similarity = await this.checkSimilarity(finding, analysis.territoryId);
 
         if (similarity.score >= this.SIMILARITY_THRESHOLD) {
@@ -71,7 +70,7 @@ export class FindingDeduplicator {
   /**
    * Generate a hash for a finding based on its content
    */
-  private generateFindingHash(finding: Finding, territoryId: string): string {
+  private async generateFindingHash(finding: Finding, territoryId: string): Promise<string> {
     // Create normalized content for hashing
     const normalized = {
       type: finding.type,
@@ -87,9 +86,9 @@ export class FindingDeduplicator {
       territoryId
     };
 
-    // Generate hash
+    // Generate hash using Web Crypto API (available in Cloudflare Workers)
     const content = JSON.stringify(normalized);
-    return createHash('sha256').update(content).digest('hex').substring(0, 16);
+    return await shortHash(content, 16);
   }
 
   /**

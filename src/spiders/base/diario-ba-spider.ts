@@ -43,9 +43,11 @@ export class DiarioBaSpider extends BaseSpider {
 
       // Extrair links de PDFs dos resultados
       // O site pode usar diferentes padrões de links
-      $('a[href*=".pdf"], a[href*="visualizar"], a[href*="download"]').each((_, element) => {
+      const pdfLinks = $('a[href*=".pdf"], a[href*="visualizar"], a[href*="download"]');
+      for (let i = 0; i < pdfLinks.length; i++) {
+        const element = pdfLinks[i];
         const href = $(element).attr('href');
-        if (!href) return;
+        if (!href) continue;
 
         // Construir URL completa
         const pdfUrl = href.startsWith('http') 
@@ -87,15 +89,19 @@ export class DiarioBaSpider extends BaseSpider {
               power = 'legislative';
             }
 
-            gazettes.push(this.createGazette(gazetteDate, pdfUrl, {
+            const gazette = await this.createGazette(gazetteDate, pdfUrl, {
               editionNumber,
               isExtraEdition: isExtra,
               power,
               sourceText: 'Diário Oficial BA'
-            }));
+            });
+            
+            if (gazette) {
+              gazettes.push(gazette);
+            }
           }
         }
-      });
+      }
 
       // Se não encontrou nenhuma gazette, tentar abordagem alternativa
       if (gazettes.length === 0) {

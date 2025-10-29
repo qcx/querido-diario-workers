@@ -82,7 +82,7 @@ export class DospSpider extends BaseSpider {
         logger.info(`DOE SP API response for ${dateStr}: ${JSON.stringify(jsonData).substring(0, 200)}...`);
         
         // Extract publications from the hierarchical structure
-        this.extractPublicationsFromDoeSpResponse(jsonData, currentDate, gazettes);
+        await this.extractPublicationsFromDoeSpResponse(jsonData, currentDate, gazettes);
         
       } catch (error) {
         logger.error(`Error fetching DOE SP API data for ${dateStr}:`, error as Error);
@@ -134,7 +134,7 @@ export class DospSpider extends BaseSpider {
     
     // Step 3: Process each gazette
     for (const item of gazetteData) {
-      const gazette = this.parseTraditionalGazetteItem(item);
+      const gazette = await this.parseTraditionalGazetteItem(item);
       if (gazette) {
         gazettes.push(gazette);
       }
@@ -144,25 +144,25 @@ export class DospSpider extends BaseSpider {
   /**
    * Extract publications from DOE SP API response
    */
-  private extractPublicationsFromDoeSpResponse(jsonData: any, date: Date, gazettes: Gazette[]): void {
+  private async extractPublicationsFromDoeSpResponse(jsonData: any, date: Date, gazettes: Gazette[]): Promise<void> {
     if (!jsonData.items || !Array.isArray(jsonData.items)) {
       logger.warn(`No items found in DOE SP API response for ${date.toISOString().split('T')[0]}`);
       return;
     }
 
     // Recursively traverse the hierarchical structure to find publications
-    this.traverseDoeSpItems(jsonData.items, date, gazettes);
+    await this.traverseDoeSpItems(jsonData.items, date, gazettes);
   }
 
   /**
    * Recursively traverse DOE SP items to find publications
    */
-  private traverseDoeSpItems(items: any[], date: Date, gazettes: Gazette[]): void {
+  private async traverseDoeSpItems(items: any[], date: Date, gazettes: Gazette[]): Promise<void> {
     for (const item of items) {
       // Check if this item has publications
       if (item.publications && Array.isArray(item.publications)) {
         for (const publication of item.publications) {
-          const gazette = this.parseDoeSpPublication(publication, date, item);
+          const gazette = await this.parseDoeSpPublication(publication, date, item);
           if (gazette) {
             gazettes.push(gazette);
           }
@@ -171,7 +171,7 @@ export class DospSpider extends BaseSpider {
 
       // Recursively check children
       if (item.children && Array.isArray(item.children)) {
-        this.traverseDoeSpItems(item.children, date, gazettes);
+        await this.traverseDoeSpItems(item.children, date, gazettes);
       }
     }
   }
@@ -179,7 +179,7 @@ export class DospSpider extends BaseSpider {
   /**
    * Parse a single publication from DOE SP API
    */
-  private parseDoeSpPublication(publication: any, date: Date, parentItem: any): Gazette | null {
+  private async parseDoeSpPublication(publication: any, date: Date, parentItem: any): Promise<Gazette | null> {
     try {
       // Check if date is in range
       if (!this.isInDateRange(date)) {
@@ -206,7 +206,7 @@ export class DospSpider extends BaseSpider {
       const baseUrl = 'https://www.doe.sp.gov.br/';
       const publicationUrl = `${baseUrl}${publication.slug}`;
 
-      return this.createGazette(date, publicationUrl, {
+      return await this.createGazette(date, publicationUrl, {
         power: 'executive',
         sourceText: `Municipality: ${municipalityName} | Title: ${publication.title} | ID: ${publication.id}`,
       });
@@ -229,7 +229,7 @@ export class DospSpider extends BaseSpider {
    *   ...
    * }
    */
-  private parseTraditionalGazetteItem(item: any): Gazette | null {
+  private async parseTraditionalGazetteItem(item: any): Promise<Gazette | null> {
     try {
       // Parse date
       const dateStr = item.data; // Format: YYYY-MM-DD
@@ -251,7 +251,7 @@ export class DospSpider extends BaseSpider {
       // Check if it's an extra edition
       const isExtraEdition = item.flag_extra > 0;
       
-      return this.createGazette(gazetteDate, pdfUrl, {
+      return await this.createGazette(gazetteDate, pdfUrl, {
         editionNumber,
         isExtraEdition,
         power: 'executive',

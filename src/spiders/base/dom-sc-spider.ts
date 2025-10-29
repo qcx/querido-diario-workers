@@ -35,17 +35,21 @@ export class DomScSpider extends BaseSpider {
 
       // Extrair links de PDFs
       // O DOM/SC usa links diretos para PDFs de edições
+      const pdfLinks: Array<{ href: string; linkText: string }> = [];
       $('a[href*=".pdf"]').each((_, element) => {
         const href = $(element).attr('href');
-        if (!href) return;
+        if (href) {
+          pdfLinks.push({ href, linkText: $(element).text().trim() });
+        }
+      });
 
+      for (const { href, linkText } of pdfLinks) {
         // Construir URL completa se necessário
         const pdfUrl = href.startsWith('http') 
           ? href 
           : `${this.domScConfig.url}${href}`;
 
         // Tentar extrair data do link ou texto
-        const linkText = $(element).text().trim();
         const dateMatch = linkText.match(/(\d{2})\/(\d{2})\/(\d{4})/);
         
         if (dateMatch) {
@@ -60,15 +64,19 @@ export class DomScSpider extends BaseSpider {
             // Verificar se é edição extraordinária
             const isExtra = /extraordin[aá]ri[ao]/i.test(linkText);
 
-            gazettes.push(this.createGazette(gazetteDate, pdfUrl, {
+            const gazette = await this.createGazette(gazetteDate, pdfUrl, {
               editionNumber,
               isExtraEdition: isExtra,
               power: 'executive',
               sourceText: 'DOM/SC - Diário Oficial dos Municípios de Santa Catarina'
-            }));
+            });
+            
+            if (gazette) {
+              gazettes.push(gazette);
+            }
           }
         }
-      });
+      }
 
       logger.info(`Found ${gazettes.length} gazettes for ${this.spiderConfig.name}`);
     } catch (error) {

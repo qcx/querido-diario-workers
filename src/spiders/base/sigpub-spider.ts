@@ -137,11 +137,15 @@ export class SigpubSpider extends BaseSpider {
         logger.debug(`Date range check: ${dateStr} is in range ${this.dateRange.start} to ${this.dateRange.end}? ${this.isInDateRange(gazetteDate)}`);
         
         if (this.isInDateRange(gazetteDate)) {
-          gazettes.push(this.createGazette(gazetteDate, url, {
+          const gazette = await this.createGazette(gazetteDate, url, {
             editionNumber: 'N/A',
             isExtraEdition: false,
             power: 'executive',
-          }));
+          });
+          
+          if (gazette) {
+            gazettes.push(gazette);
+          }
         }
       }
       

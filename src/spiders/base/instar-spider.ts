@@ -88,7 +88,7 @@ export class InstarSpider extends BaseSpider {
         const gazetteElements = root.querySelectorAll('.dof_publicacao_diario');
         
         for (const gazetteElement of gazetteElements) {
-          const gazette = this.parseGazetteElement(gazetteElement);
+          const gazette = await this.parseGazetteElement(gazetteElement);
           if (gazette) {
             gazettes.push(gazette);
           }
@@ -114,7 +114,7 @@ export class InstarSpider extends BaseSpider {
    *   <span>Postagem: <span>02/10/2025 às 22h31</span></span>
    * </div>
    */
-  private parseGazetteElement(gazetteElement: any): Gazette | null {
+  private async parseGazetteElement(gazetteElement: any): Promise<Gazette | null> {
     try {
       // Extract edition number from title
       const titleElement = gazetteElement.querySelector('.dof_titulo_publicacao span');
@@ -167,7 +167,7 @@ export class InstarSpider extends BaseSpider {
       // Check if it's an extra edition
       const isExtraEdition = titleText.toLowerCase().includes('extra');
       
-      return this.createGazette(gazetteDate, pdfUrl, {
+      return await this.createGazette(gazetteDate, pdfUrl, {
         editionNumber,
         isExtraEdition,
         power: 'executive_legislative',

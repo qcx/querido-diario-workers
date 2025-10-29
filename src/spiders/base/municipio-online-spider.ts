@@ -89,7 +89,8 @@ export class MunicipioOnlineSpider extends BaseSpider {
         
         logger.debug(`Found ${editions.length} editions in this window`);
         
-        editions.each((_, element) => {
+        for (let i = 0; i < editions.length; i++) {
+          const element = editions[i];
           const $edition = $(element);
           const metadata = $edition.find('div.panel-title').text();
           
@@ -99,7 +100,7 @@ export class MunicipioOnlineSpider extends BaseSpider {
           
           // Extract date (DD/MM/YYYY)
           const dateMatch = metadata.match(/(\d{2})\/(\d{2})\/(\d{4})/);
-          if (!dateMatch) return;
+          if (!dateMatch) continue;
           
           const day = dateMatch[1];
           const month = dateMatch[2];
@@ -107,24 +108,28 @@ export class MunicipioOnlineSpider extends BaseSpider {
           const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
           
           // Check if date is in range
-          if (!this.isInDateRange(date)) return;
+          if (!this.isInDateRange(date)) continue;
           
           // Extract PDF URL
           const onclickAttr = $edition.find('a[onclick]').attr('onclick');
-          if (!onclickAttr) return;
+          if (!onclickAttr) continue;
           
           const urlMatch = onclickAttr.match(/l=(.+)'/);
-          if (!urlMatch) return;
+          if (!urlMatch) continue;
           
           const urlPath = urlMatch[1];
           const gazetteUrl = `https://www.municipioonline.com.br/${this.urlUf}/prefeitura/${this.urlCity}/cidadao/diariooficial/diario?n=diario.pdf&l=${urlPath}`;
           
-          gazettes.push(this.createGazette(date, gazetteUrl, {
+          const gazette = await this.createGazette(date, gazetteUrl, {
             editionNumber,
             isExtraEdition: false,
             power: 'executive',
-          }));
-        });
+          });
+          
+          if (gazette) {
+            gazettes.push(gazette);
+          }
+        }
         
         // Add delay between requests
         await new Promise(resolve => setTimeout(resolve, 1000));

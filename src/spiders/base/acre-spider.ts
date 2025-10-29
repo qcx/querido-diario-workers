@@ -99,9 +99,11 @@ export class AcreSpider extends BaseSpider {
       
       // Parse search results
       // The search results typically show in a table format
-      $('table tr').each((index, element) => {
-        if (index === 0) return; // Skip header row
+      const rows = $('table tr');
+      for (let index = 0; index < rows.length; index++) {
+        if (index === 0) continue; // Skip header row
         
+        const element = rows[index];
         const row = $(element);
         const cells = row.find('td');
         
@@ -122,17 +124,19 @@ export class AcreSpider extends BaseSpider {
                 ? downloadLink 
                 : `${this.BASE_URL}/${downloadLink.replace(/^\//, '')}`;
               
-              const gazette = this.createGazette(date, fullUrl, {
+              const gazette = await this.createGazette(date, fullUrl, {
                 editionNumber,
                 power: this.acreConfig.power || 'executive_legislative',
                 sourceText: description
               });
               
-              gazettes.push(gazette);
+              if (gazette) {
+                gazettes.push(gazette);
+              }
             }
           }
         }
-      });
+      }
       
       logger.debug(`Found ${gazettes.length} gazettes for ${this.acreConfig.cityName} in ${year}`);
       
@@ -183,7 +187,7 @@ export class AcreSpider extends BaseSpider {
         // Try to extract date from the description or use current date
         const today = new Date();
         
-        return this.createGazette(today, fullUrl, {
+        return await this.createGazette(today, fullUrl, {
           editionNumber,
           power: this.acreConfig.power || 'executive_legislative',
           sourceText: description

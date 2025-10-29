@@ -17,7 +17,7 @@ import {
   EntityExtractor,
   ConcursoAnalyzer,
 } from '../analyzers';
-import { logger } from '../utils';
+import { logger, sha256Hash } from '../utils';
 
 interface AnalysisContext {
   documentTypes: Array<{ type: string; confidence: number }>;
@@ -98,7 +98,7 @@ export class AnalysisOrchestrator {
    * Generate config signature for deduplication
    * Public method so it can be used by analysis processor
    */
-  public generateConfigSignature(config: AnalysisConfig, territoryId: string): AnalysisConfigSignature {
+  public async generateConfigSignature(config: AnalysisConfig, territoryId: string): Promise<AnalysisConfigSignature> {
     const enabledAnalyzers = Object.entries(config.analyzers)
       .filter(([, cfg]) => Boolean((cfg as { enabled?: boolean } | undefined)?.enabled))
       .map(([name]) => name)
@@ -119,13 +119,9 @@ export class AnalysisOrchestrator {
       territoryId
     });
 
-    // Simple hash for Cloudflare Workers (no crypto.createHash)
-    const encoder = new TextEncoder();
-    const data = encoder.encode(hashInput);
-    signature.configHash = Array.from(data)
-      .map(b => b.toString(16).padStart(2, '0'))
-      .join('')
-      .substring(0, 32);
+    // Use SHA-256 hash via Web Crypto API (available in Cloudflare Workers)
+    const fullHash = await sha256Hash(hashInput);
+    signature.configHash = fullHash.substring(0, 32); // Truncate to 32 chars for compatibility
 
     return signature;
   }

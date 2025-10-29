@@ -6,7 +6,7 @@
 import { AnalysisQueueMessage, GazetteAnalysis, AnalysisConfig } from '../types';
 import type { D1DatabaseEnv } from '../services/database';
 import { AnalysisOrchestrator } from '../services/analysis-orchestrator';
-import { logger } from '../utils';
+import { logger, shortHash } from '../utils';
 import {
   getDatabase,
   TelemetryService,
@@ -45,20 +45,16 @@ function generateAnalysisCacheKey(
  * Generate deterministic jobId from deduplication key
  * Same inputs always produce the same jobId, enabling database-level deduplication
  */
-function generateDeterministicJobId(
+async function generateDeterministicJobId(
   territoryId: string,
   gazetteId: string,
   configHash: string
-): string {
+): Promise<string> {
   const input = `${territoryId}:${gazetteId}:${configHash}`;
-  const encoder = new TextEncoder();
-  const data = encoder.encode(input);
   
-  // Simple hash (matches configHash generation style)
-  const hash = Array.from(data)
-    .map(b => b.toString(16).padStart(2, '0'))
-    .join('')
-    .substring(0, 16); // 16 chars sufficient for uniqueness
+  // Use SHA-256 hash via Web Crypto API (available in Cloudflare Workers)
+  // Truncate to 16 chars for compact IDs (still provides strong uniqueness)
+  const hash = await shortHash(input, 16);
   
   return `analysis-${hash}`;
 }
@@ -435,11 +431,11 @@ async function processAnalysisMessage(
   }
 
   // Generate config signature for this analysis
-  const configSignature = orchestrator.generateConfigSignature(config, territoryId);
+  const configSignature = await orchestrator.generateConfigSignature(config, territoryId);
 
   // Generate deterministic jobId for database-level deduplication
   // Same inputs (territoryId + gazetteId + configHash) always produce the same jobId
-  const deterministicJobId = generateDeterministicJobId(
+  const deterministicJobId = await generateDeterministicJobId(
     territoryId, 
     gazetteId, 
     configSignature.configHash
