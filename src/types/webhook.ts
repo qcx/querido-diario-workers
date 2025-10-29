@@ -72,6 +72,9 @@ export interface WebhookFilters {
   /** Filter by spider IDs */
   spiderIds?: string[];
   
+  /** Only send webhook when concurso findings are present */
+  requireConcursoFinding?: boolean;
+  
   /** Custom filter function name */
   customFilter?: string;
 }

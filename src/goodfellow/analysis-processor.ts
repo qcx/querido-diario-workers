@@ -279,7 +279,8 @@ export async function processAnalysisBatch(
         env.WEBHOOK_SUBSCRIPTIONS,
         webhookRepo,
         env.R2_PUBLIC_URL,
-        gazetteRepo
+        gazetteRepo,
+        concursoRepo
       );
 
       await webhookSender.sendWebhookBatch(allWebhookMessages);
@@ -304,8 +305,19 @@ async function processWebhooksForAnalysis(
   telemetry: TelemetryService,
   jobId: string,
   databaseClient: ReturnType<typeof getDatabase>,
+  concursoRepo: any,
+  concursoStorageResult: { success: boolean; storedCount: number; errors: Error[] },
   gazetteId?: string
 ): Promise<any[]> {
+  // Log concurso storage result for monitoring
+  logger.info('Processing webhooks with concurso storage result', {
+    jobId: analysis.jobId,
+    crawlJobId,
+    concursoStorageSuccess: concursoStorageResult.success,
+    concursoStoredCount: concursoStorageResult.storedCount,
+    concursoErrorCount: concursoStorageResult.errors.length,
+  });
+
   // Send to webhooks if configured
   if (env.WEBHOOK_QUEUE && env.WEBHOOK_SUBSCRIPTIONS) {
     try {
@@ -319,7 +331,8 @@ async function processWebhooksForAnalysis(
         env.WEBHOOK_SUBSCRIPTIONS,
         webhookRepo,
         env.R2_PUBLIC_URL,
-        gazetteRepo
+        gazetteRepo,
+        concursoRepo
       );
 
       const webhookMessages = await webhookSender.processAnalysisForWebhooks(
@@ -376,6 +389,110 @@ async function processWebhooksForAnalysis(
   }
 
   return [];
+}
+
+/**
+ * Store concurso findings with retry logic and error handling
+ */
+async function storeConcursoFindings(
+  analysis: GazetteAnalysis,
+  concursoRepo: any,
+  crawlJobId: string,
+  maxRetries: number = 3
+): Promise<{ success: boolean; storedCount: number; errors: Error[] }> {
+  const concursoFindings = analysis.analyses
+    .flatMap((a) => a.findings)
+    .filter((f) => f.type === 'concurso');
+
+  if (concursoFindings.length === 0) {
+    logger.debug('No concurso findings to store', {
+      jobId: analysis.jobId,
+      crawlJobId,
+    });
+    return { success: true, storedCount: 0, errors: [] };
+  }
+
+  let storedCount = 0;
+  const errors: Error[] = [];
+
+  logger.info(`Storing ${concursoFindings.length} concurso findings`, {
+    jobId: analysis.jobId,
+    crawlJobId,
+    findingsCount: concursoFindings.length,
+  });
+
+  for (const finding of concursoFindings) {
+    let attempts = 0;
+    let stored = false;
+
+    while (attempts < maxRetries && !stored) {
+      attempts++;
+      
+      try {
+        // Add territory ID to finding data before storing
+        const findingWithTerritory = {
+          ...finding,
+          data: {
+            ...finding.data,
+            territoryId: analysis.territoryId
+          }
+        };
+
+        await concursoRepo.storeConcursoFinding(findingWithTerritory as any, analysis.jobId);
+        stored = true;
+        storedCount++;
+        
+        logger.debug('Concurso finding stored successfully', {
+          jobId: analysis.jobId,
+          crawlJobId,
+          attempt: attempts,
+          storedCount,
+        });
+      } catch (error) {
+        const errorMessage = `Failed to store concurso finding (attempt ${attempts}/${maxRetries})`;
+        
+        if (attempts === maxRetries) {
+          // Final attempt failed
+          logger.error(errorMessage, error as Error, {
+            jobId: analysis.jobId,
+            crawlJobId,
+            finalAttempt: true,
+            findingType: finding.type,
+            confidence: finding.confidence,
+          });
+          errors.push(error as Error);
+        } else {
+          // Retry will happen
+          logger.warn(errorMessage, {
+            jobId: analysis.jobId,
+            crawlJobId,
+            error: (error as Error).message,
+            willRetry: true,
+            nextAttempt: attempts + 1,
+          });
+          
+          // Wait before retry (exponential backoff)
+          const delay = Math.min(1000 * Math.pow(2, attempts - 1), 5000);
+          await new Promise(resolve => setTimeout(resolve, delay));
+        }
+      }
+    }
+  }
+
+  const success = errors.length === 0;
+  const successRate = storedCount / concursoFindings.length;
+
+  logger.info('Concurso findings storage completed', {
+    jobId: analysis.jobId,
+    crawlJobId,
+    success,
+    storedCount,
+    totalFindings: concursoFindings.length,
+    successRate: Math.round(successRate * 100) + '%',
+    errorCount: errors.length,
+  });
+
+  return { success, storedCount, errors };
 }
 
 /**
@@ -482,6 +599,8 @@ async function processAnalysisMessage(
     }
 
     // Process webhooks for cached analysis
+    // For cached analysis, concurso findings were already stored, so we assume success
+    const cachedConcursoStorageResult = { success: true, storedCount: 0, errors: [] };
     const webhookMessages = await processWebhooksForAnalysis(
       analysis,
       env,
@@ -490,6 +609,8 @@ async function processAnalysisMessage(
       telemetry,
       jobId,
       databaseClient,
+      concursoRepo,
+      cachedConcursoStorageResult,
       gazetteId
     );
 
@@ -577,6 +698,8 @@ async function processAnalysisMessage(
     // Process webhooks for database-cached analysis
     let webhookMessages: any[] = [];
     if (reconstructedAnalysis) {
+      // For database-cached analysis, concurso findings were already stored, so we assume success
+      const dbCachedConcursoStorageResult = { success: true, storedCount: 0, errors: [] };
       webhookMessages = await processWebhooksForAnalysis(
         reconstructedAnalysis,
         env,
@@ -585,6 +708,8 @@ async function processAnalysisMessage(
         telemetry,
         jobId,
         databaseClient,
+        concursoRepo,
+        dbCachedConcursoStorageResult,
         gazetteId
       );
     }
@@ -752,34 +877,17 @@ async function processAnalysisMessage(
     crawlJobId,
   });
 
-  // Store concurso findings
-  const concursoFindings = analysis.analyses
-    .flatMap((a) => a.findings)
-    .filter((f) => f.type === 'concurso');
-
-  for (const finding of concursoFindings) {
-    try {
-      // Add territory ID to finding data before storing
-      const findingWithTerritory = {
-        ...finding,
-        data: {
-          ...finding.data,
-          territoryId: analysis.territoryId
-        }
-      };
-      await concursoRepo.storeConcursoFinding(findingWithTerritory as any, analysis.jobId);
-      } catch (concursoError) {
-        logger.error('Failed to store concurso finding', concursoError as Error, {
-          jobId: analysis.jobId,
-          crawlJobId,
-        });
-      }
-  }
+  // Store concurso findings BEFORE webhook processing (critical for requireConcursoFinding filter)
+  const concursoStorageResult = await storeConcursoFindings(
+    analysis,
+    concursoRepo,
+    crawlJobId
+  );
 
   // Store in KV cache with deduplication key
   await storeAnalysisResults(analysis, env, gazetteId, configSignature.configHash);
 
-  // Process webhooks for new analysis
+  // Process webhooks for new analysis (after concurso storage)
   return await processWebhooksForAnalysis(
     analysis,
     env,
@@ -788,6 +896,8 @@ async function processAnalysisMessage(
     telemetry,
     jobId,
     databaseClient,
+    concursoRepo,
+    concursoStorageResult,
     gazetteId
   );
 }

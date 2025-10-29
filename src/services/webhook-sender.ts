@@ -23,19 +23,22 @@ export class WebhookSenderService {
   private webhookRepo?: any; // WebhookRepository for checking delivery counts
   private r2PublicUrl?: string;
   private gazetteRepo?: any; // GazetteRepository for fetching R2 keys
+  private concursoRepo?: any; // ConcursoRepository for checking concurso findings
 
   constructor(
     webhookQueue: Queue<WebhookQueueMessage>, 
     subscriptionsKV: KVNamespace,
     webhookRepo?: any,
     r2PublicUrl?: string,
-    gazetteRepo?: any
+    gazetteRepo?: any,
+    concursoRepo?: any
   ) {
     this.webhookQueue = webhookQueue;
     this.subscriptionsKV = subscriptionsKV;
     this.webhookRepo = webhookRepo;
     this.r2PublicUrl = r2PublicUrl;
     this.gazetteRepo = gazetteRepo;
+    this.concursoRepo = concursoRepo;
   }
 
   /**
@@ -122,7 +125,7 @@ export class WebhookSenderService {
         }
 
         // Check if analysis matches filters
-        const matches = WebhookFilterService.matches(analysis, subscription.filters);
+        const matches = await WebhookFilterService.matches(analysis, subscription.filters, this.concursoRepo);
 
         if (!matches) {
           logger.debug('Analysis does not match subscription filters', {

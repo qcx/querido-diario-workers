@@ -11,7 +11,11 @@ export class WebhookFilterService {
   /**
    * Check if analysis matches webhook filters
    */
-  static matches(analysis: GazetteAnalysis, filters: WebhookFilters): boolean {
+  static async matches(
+    analysis: GazetteAnalysis, 
+    filters: WebhookFilters, 
+    concursoRepo?: any
+  ): Promise<boolean> {
     // Category filter
     if (filters.categories && filters.categories.length > 0) {
       const hasMatchingCategory = analysis.summary.categories.some(cat =>
@@ -103,6 +107,78 @@ export class WebhookFilterService {
           filterSpiders: filters.spiderIds,
         });
         return false;
+      }
+    }
+
+    // Concurso finding requirement filter - check database records with retry logic
+    if (filters.requireConcursoFinding && concursoRepo) {
+      const maxRetries = 3; // Default retry count
+      const timeoutMs = 5000; // Default timeout (5 seconds)
+      const strictMode = false; // Default to graceful degradation
+
+      for (let attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+          // Add timeout to database query
+          const queryPromise = concursoRepo.getConcursoFindingsByAnalysisJobId(analysis.jobId);
+          const timeoutPromise = new Promise((_, reject) => 
+            setTimeout(() => reject(new Error('Database query timeout')), timeoutMs)
+          );
+          
+          const concursoFindings = await Promise.race([queryPromise, timeoutPromise]);
+          
+          if (!concursoFindings || concursoFindings.length === 0) {
+            logger.debug('Analysis does not have concurso_findings records in database', {
+              analysisJobId: analysis.jobId,
+              attempt,
+            });
+            return false;
+          }
+          
+          logger.debug('Analysis has concurso_findings records in database', {
+            analysisJobId: analysis.jobId,
+            concursoFindingsCount: concursoFindings.length,
+            attempt,
+          });
+          
+          // Success - records found
+          break;
+        } catch (error) {
+          
+          if (attempt === maxRetries) {
+            logger.error('Failed to check concurso findings in database after all retries', error as Error, {
+              analysisJobId: analysis.jobId,
+              attempts: maxRetries,
+              timeoutMs,
+            });
+            
+            // Handle database check failure based on strict mode
+            if (strictMode) {
+              logger.error('Blocking webhook due to database check failure (strict mode)', {
+                analysisJobId: analysis.jobId,
+                reason: 'strict_mode_enabled',
+              });
+              return false;
+            } else {
+              // Graceful degradation - allow webhook to proceed
+              logger.warn('Allowing webhook to proceed due to database check failure (graceful degradation)', {
+                analysisJobId: analysis.jobId,
+                reason: 'graceful_degradation',
+                strictMode: false,
+              });
+            }
+          } else {
+            logger.warn('Retrying concurso findings database check', {
+              analysisJobId: analysis.jobId,
+              attempt,
+              maxRetries,
+              error: (error as Error).message,
+            });
+            
+            // Wait before retry (exponential backoff)
+            const delay = Math.min(1000 * Math.pow(2, attempt - 1), 3000);
+            await new Promise(resolve => setTimeout(resolve, delay));
+          }
+        }
       }
     }
 
@@ -198,6 +274,7 @@ export class WebhookFilterService {
       minConfidence,
       minFindings: 1,
       territoryIds: territories,
+      requireConcursoFinding: true,
     };
   }
 
