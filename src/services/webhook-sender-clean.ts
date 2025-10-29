@@ -8,6 +8,7 @@ import {
   WebhookSubscription,
   WebhookNotification,
   WebhookQueueMessage,
+  WebhookFinding,
 } from '../types';
 import { WebhookFilterService } from './webhook-filter';
 import { TerritoryService } from './territory-service';
@@ -139,53 +140,32 @@ export class WebhookSenderService {
         );
 
         // Create webhook notification
-        const territoryInfo = TerritoryService.getTerritoryInfo(analysis.territoryId);
         const notification: WebhookNotification = {
-          notificationId: `${analysis.jobId}-${subscription.id}`,
-          subscriptionId: subscription.id,
-          clientId: subscription.clientId,
-          event: 'gazette.analyzed',
+          id: `${analysis.jobId}-${subscription.id}`,
           timestamp: new Date().toISOString(),
-          gazette: {
-            territoryId: analysis.territoryId,
-            territoryName: territoryInfo?.name || 'Unknown',
-            cityName: territoryInfo?.name || 'Unknown',
-            stateCode: territoryInfo?.stateCode || 'XX',
-            stateName: territoryInfo?.stateCode || 'Unknown',
-            region: territoryInfo?.region || 'Unknown',
-            formattedName: territoryInfo ? TerritoryService.getFormattedCityName(analysis.territoryId) : 'Unknown',
-            publicationDate: analysis.publicationDate,
-            editionNumber: analysis.metadata?.editionNumber,
-            pdfUrl: await this.getPdfUrl(analysis, gazetteId),
-            spiderId: analysis.metadata?.spiderId || 'unknown',
-            spiderType: territoryInfo?.spiderType || 'unknown',
-          },
-          analysis: {
-            jobId: analysis.jobId,
-            totalFindings: analysis.summary.totalFindings,
-            highConfidenceFindings: analysis.summary.highConfidenceFindings || 0,
-            categories: analysis.summary.categories,
-            processingTimeMs: 0, // Not available in current analysis structure
-            analyzedAt: analysis.analyzedAt,
-            textLength: analysis.textLength || 0,
-          },
-          findings,
-          concurso: await this.extractConcursoData(analysis),
-          metadata: {
-            power: analysis.metadata?.power,
-            isExtraEdition: analysis.metadata?.isExtraEdition,
-            webhookVersion: '2.0',
-            source: 'querido-diario-workers',
-            crawledAt: new Date().toISOString(),
+          type: 'analysis_complete',
+          data: {
+            analysis: {
+              jobId: analysis.jobId,
+              territoryId: analysis.territoryId,
+              publicationDate: analysis.publicationDate,
+              analyzedAt: analysis.analyzedAt,
+              summary: analysis.summary,
+              metadata: analysis.metadata,
+              pdfUrl: await this.getPdfUrl(analysis, gazetteId),
+            },
+            findings,
+            concurso: await this.extractConcursoData(findings, analysis),
+            territory: await TerritoryService.getTerritoryInfo(analysis.territoryId),
           },
         };
 
         // Create queue message
         const queueMessage: WebhookQueueMessage = {
-          messageId: `${analysis.jobId}-${subscription.id}-${Date.now()}`,
           subscriptionId: subscription.id,
           notification,
-          queuedAt: new Date().toISOString(),
+          retryCount: 0,
+          maxRetries: 3,
         };
 
         webhookMessages.push(queueMessage);
@@ -253,7 +233,7 @@ export class WebhookSenderService {
   /**
    * Extract concurso-specific data from database records instead of analysis findings
    */
-  private async extractConcursoData(analysis: GazetteAnalysis): Promise<any> {
+  private async extractConcursoData(findings: WebhookFinding[], analysis: GazetteAnalysis): Promise<any> {
     // Fetch concurso data from database records instead of analysis findings
     if (!this.concursoRepo) {
       logger.debug('No concurso repository available for data extraction', {
@@ -288,9 +268,6 @@ export class WebhookSenderService {
       const parsedTaxas = this.parseJsonSafely(record.taxas, []);
       const parsedBanca = this.parseJsonSafely(record.banca, {});
 
-      // Extract keywords from analysis summary for backward compatibility
-      const keywords = analysis.summary?.keywords || [];
-
       return {
         // Document classification
         documentType: record.documentType,
@@ -312,9 +289,6 @@ export class WebhookSenderService {
         
         // Organization/Banca
         banca: parsedBanca,
-        
-        // Keywords for backward compatibility
-        keywords: keywords,
         
         // Database metadata
         confidence: record.confidence,

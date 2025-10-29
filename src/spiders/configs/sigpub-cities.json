@@ -18249,7 +18249,7 @@
       "entityId": "600",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5100201",
@@ -18262,7 +18262,7 @@
       "entityId": "601",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5100250",
@@ -18275,7 +18275,7 @@
       "entityId": "602",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5100300",
@@ -18288,7 +18288,7 @@
       "entityId": "603",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5100359",
@@ -18301,7 +18301,7 @@
       "entityId": "604",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5100409",
@@ -18314,7 +18314,7 @@
       "entityId": "605",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5100508",
@@ -18327,7 +18327,7 @@
       "entityId": "606",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5100607",
@@ -18340,7 +18340,7 @@
       "entityId": "607",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5100805",
@@ -18353,7 +18353,7 @@
       "entityId": "608",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5101001",
@@ -18366,7 +18366,7 @@
       "entityId": "609",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5101209",
@@ -18379,7 +18379,7 @@
       "entityId": "610",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5101258",
@@ -18392,7 +18392,7 @@
       "entityId": "611",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5101308",
@@ -18405,7 +18405,7 @@
       "entityId": "612",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5101407",
@@ -18418,7 +18418,7 @@
       "entityId": "613",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5101605",
@@ -18431,7 +18431,7 @@
       "entityId": "614",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5101704",
@@ -18444,7 +18444,7 @@
       "entityId": "615",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5101803",
@@ -18457,7 +18457,7 @@
       "entityId": "616",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5101852",
@@ -18470,7 +18470,7 @@
       "entityId": "617",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5101902",
@@ -18483,7 +18483,7 @@
       "entityId": "618",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5102504",
@@ -18496,7 +18496,7 @@
       "entityId": "619",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5102603",
@@ -18509,7 +18509,7 @@
       "entityId": "620",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5102637",
@@ -18522,7 +18522,7 @@
       "entityId": "621",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5102686",
@@ -18535,7 +18535,7 @@
       "entityId": "623",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5102678",
@@ -18548,7 +18548,7 @@
       "entityId": "622",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5102694",
@@ -18561,7 +18561,7 @@
       "entityId": "624",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5102702",
@@ -18574,7 +18574,7 @@
       "entityId": "625",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5102793",
@@ -18587,7 +18587,7 @@
       "entityId": "626",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5102850",
@@ -18600,7 +18600,7 @@
       "entityId": "627",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103007",
@@ -18613,7 +18613,7 @@
       "entityId": "628",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103056",
@@ -18626,7 +18626,7 @@
       "entityId": "629",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103106",
@@ -18639,7 +18639,7 @@
       "entityId": "630",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103205",
@@ -18652,7 +18652,7 @@
       "entityId": "631",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103254",
@@ -18665,7 +18665,7 @@
       "entityId": "632",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103304",
@@ -18678,7 +18678,7 @@
       "entityId": "633",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103353",
@@ -18691,7 +18691,7 @@
       "entityId": "634",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103379",
@@ -18704,7 +18704,7 @@
       "entityId": "636",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103403",
@@ -18717,7 +18717,7 @@
       "entityId": "637",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103437",
@@ -18730,7 +18730,7 @@
       "entityId": "638",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103452",
@@ -18743,7 +18743,7 @@
       "entityId": "639",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103502",
@@ -18756,7 +18756,7 @@
       "entityId": "640",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103601",
@@ -18769,7 +18769,7 @@
       "entityId": "641",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103700",
@@ -18782,7 +18782,7 @@
       "entityId": "642",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103809",
@@ -18795,7 +18795,7 @@
       "entityId": "643",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103858",
@@ -18808,7 +18808,7 @@
       "entityId": "644",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103908",
@@ -18821,7 +18821,7 @@
       "entityId": "645",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5103957",
@@ -18834,7 +18834,7 @@
       "entityId": "646",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5104104",
@@ -18847,7 +18847,7 @@
       "entityId": "647",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5104203",
@@ -18860,7 +18860,7 @@
       "entityId": "648",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5104500",
@@ -18873,7 +18873,7 @@
       "entityId": "649",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5104526",
@@ -18886,7 +18886,7 @@
       "entityId": "650",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5104542",
@@ -18899,7 +18899,7 @@
       "entityId": "651",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5104559",
@@ -18912,7 +18912,7 @@
       "entityId": "652",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5104609",
@@ -18925,7 +18925,7 @@
       "entityId": "653",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5104807",
@@ -18938,7 +18938,7 @@
       "entityId": "654",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5104906",
@@ -18951,7 +18951,7 @@
       "entityId": "655",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5105002",
@@ -18964,7 +18964,7 @@
       "entityId": "656",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5105101",
@@ -18977,7 +18977,7 @@
       "entityId": "657",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5105150",
@@ -18990,7 +18990,7 @@
       "entityId": "658",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5105176",
@@ -19003,7 +19003,7 @@
       "entityId": "659",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5105200",
@@ -19016,7 +19016,7 @@
       "entityId": "660",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5105234",
@@ -19029,7 +19029,7 @@
       "entityId": "661",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5105259",
@@ -19042,7 +19042,7 @@
       "entityId": "662",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5105309",
@@ -19055,7 +19055,7 @@
       "entityId": "663",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5105580",
@@ -19068,7 +19068,7 @@
       "entityId": "664",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5105606",
@@ -19081,7 +19081,7 @@
       "entityId": "665",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5105622",
@@ -19094,7 +19094,7 @@
       "entityId": "666",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5105903",
@@ -19107,7 +19107,7 @@
       "entityId": "667",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106000",
@@ -19120,7 +19120,7 @@
       "entityId": "668",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106109",
@@ -19133,7 +19133,7 @@
       "entityId": "669",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106158",
@@ -19146,7 +19146,7 @@
       "entityId": "670",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106208",
@@ -19159,7 +19159,7 @@
       "entityId": "671",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106216",
@@ -19172,7 +19172,7 @@
       "entityId": "672",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5108808",
@@ -19185,7 +19185,7 @@
       "entityId": "673",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106182",
@@ -19198,7 +19198,7 @@
       "entityId": "674",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5108857",
@@ -19211,7 +19211,7 @@
       "entityId": "675",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5108907",
@@ -19224,7 +19224,7 @@
       "entityId": "676",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5108956",
@@ -19237,7 +19237,7 @@
       "entityId": "677",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106224",
@@ -19250,7 +19250,7 @@
       "entityId": "678",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106174",
@@ -19263,7 +19263,7 @@
       "entityId": "679",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106232",
@@ -19276,7 +19276,7 @@
       "entityId": "680",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106190",
@@ -19289,7 +19289,7 @@
       "entityId": "681",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106240",
@@ -19302,7 +19302,7 @@
       "entityId": "682",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106257",
@@ -19315,7 +19315,7 @@
       "entityId": "683",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106273",
@@ -19328,7 +19328,7 @@
       "entityId": "684",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106265",
@@ -19341,7 +19341,7 @@
       "entityId": "685",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106315",
@@ -19354,7 +19354,7 @@
       "entityId": "686",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106281",
@@ -19367,7 +19367,7 @@
       "entityId": "687",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106299",
@@ -19380,7 +19380,7 @@
       "entityId": "688",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106307",
@@ -19393,7 +19393,7 @@
       "entityId": "689",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106372",
@@ -19406,7 +19406,7 @@
       "entityId": "690",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106422",
@@ -19419,7 +19419,7 @@
       "entityId": "691",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106455",
@@ -19432,7 +19432,7 @@
       "entityId": "692",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106505",
@@ -19445,7 +19445,7 @@
       "entityId": "693",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106653",
@@ -19458,7 +19458,7 @@
       "entityId": "694",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106703",
@@ -19471,7 +19471,7 @@
       "entityId": "695",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106752",
@@ -19484,7 +19484,7 @@
       "entityId": "696",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106778",
@@ -19497,7 +19497,7 @@
       "entityId": "697",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106802",
@@ -19510,7 +19510,7 @@
       "entityId": "698",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106828",
@@ -19523,7 +19523,7 @@
       "entityId": "699",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5106851",
@@ -19536,7 +19536,7 @@
       "entityId": "700",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107008",
@@ -19549,7 +19549,7 @@
       "entityId": "701",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107040",
@@ -19562,7 +19562,7 @@
       "entityId": "702",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107065",
@@ -19575,7 +19575,7 @@
       "entityId": "703",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107156",
@@ -19588,7 +19588,7 @@
       "entityId": "704",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107180",
@@ -19601,7 +19601,7 @@
       "entityId": "705",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107198",
@@ -19614,7 +19614,7 @@
       "entityId": "706",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107206",
@@ -19627,7 +19627,7 @@
       "entityId": "707",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107578",
@@ -19640,7 +19640,7 @@
       "entityId": "708",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107602",
@@ -19653,7 +19653,7 @@
       "entityId": "709",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107701",
@@ -19666,7 +19666,7 @@
       "entityId": "710",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107750",
@@ -19679,7 +19679,7 @@
       "entityId": "711",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107248",
@@ -19692,7 +19692,7 @@
       "entityId": "712",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107743",
@@ -19705,7 +19705,7 @@
       "entityId": "713",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107768",
@@ -19718,7 +19718,7 @@
       "entityId": "714",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107776",
@@ -19731,7 +19731,7 @@
       "entityId": "715",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107263",
@@ -19744,7 +19744,7 @@
       "entityId": "716",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107792",
@@ -19757,7 +19757,7 @@
       "entityId": "717",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107859",
@@ -19770,7 +19770,7 @@
       "entityId": "719",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107297",
@@ -19783,7 +19783,7 @@
       "entityId": "720",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107305",
@@ -19796,7 +19796,7 @@
       "entityId": "721",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107107",
@@ -19809,7 +19809,7 @@
       "entityId": "723",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107354",
@@ -19822,7 +19822,7 @@
       "entityId": "722",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107404",
@@ -19835,7 +19835,7 @@
       "entityId": "724",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107875",
@@ -19848,7 +19848,7 @@
       "entityId": "725",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107883",
@@ -19861,7 +19861,7 @@
       "entityId": "726",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107909",
@@ -19874,7 +19874,7 @@
       "entityId": "727",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107925",
@@ -19887,7 +19887,7 @@
       "entityId": "728",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107941",
@@ -19900,7 +19900,7 @@
       "entityId": "729",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5107958",
@@ -19913,7 +19913,7 @@
       "entityId": "730",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5108006",
@@ -19926,7 +19926,7 @@
       "entityId": "731",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5108055",
@@ -19939,7 +19939,7 @@
       "entityId": "732",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5108105",
@@ -19952,7 +19952,7 @@
       "entityId": "733",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5108204",
@@ -19965,7 +19965,7 @@
       "entityId": "734",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5108303",
@@ -19978,7 +19978,7 @@
       "entityId": "735",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5108352",
@@ -19991,7 +19991,7 @@
       "entityId": "736",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5108402",
@@ -20004,7 +20004,7 @@
       "entityId": "737",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5108501",
@@ -20017,7 +20017,7 @@
       "entityId": "738",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5105507",
@@ -20030,7 +20030,7 @@
       "entityId": "739",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "mt_5108600",
@@ -20043,7 +20043,7 @@
       "entityId": "740",
       "type": "sigpub"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "state"
   },
   {
     "id": "pi_2200202",

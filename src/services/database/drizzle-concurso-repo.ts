@@ -45,6 +45,33 @@ export class DrizzleConcursoRepository {
   constructor(private dbClient: DrizzleDatabaseClient) {}
 
   /**
+   * Get concurso findings by analysis job ID
+   */
+  async getConcursoFindingsByAnalysisJobId(analysisJobId: string): Promise<ConcursoRecord[]> {
+    try {
+      const db = this.dbClient.getDb();
+
+      const results = await db.select()
+        .from(schema.concursoFindings)
+        .where(eq(schema.concursoFindings.analysisJobId, analysisJobId));
+
+      return results.map(record => ({
+        ...record,
+        cargos: this.dbClient.parseJson<ConcursoCargo[]>(record.cargos, []),
+        datas: this.dbClient.parseJson<ConcursoDatas>(record.datas, {}),
+        taxas: this.dbClient.parseJson<ConcursoTaxa[]>(record.taxas, []),
+        banca: this.dbClient.parseJson<ConcursoBanca>(record.banca, {}),
+      }));
+    } catch (error) {
+      logger.error('Failed to get concurso findings by analysis job ID', {
+        analysisJobId,
+        error
+      });
+      throw error;
+    }
+  }
+
+  /**
    * Store concurso finding from analysis
    */
   async storeConcursoFinding(finding: ConcursoFinding, analysisJobId: string): Promise<string> {
