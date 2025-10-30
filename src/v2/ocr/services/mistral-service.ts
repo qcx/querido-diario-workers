@@ -3,6 +3,8 @@
  * Handles only Mistral API interaction, no R2/DB/caching
  */
 
+export interface MistralServiceEnv extends Env {}
+
 /**
  * Configuration for Mistral OCR API
  */
@@ -163,8 +165,10 @@ export function isMistralOcrResponse(obj: unknown): obj is MistralOcrResponse {
  */
 export class MistralService {
   private config: MistralOcrConfig;
+  private env: MistralServiceEnv;
 
-  constructor(config: MistralOcrConfig) {
+  constructor(config: MistralOcrConfig, env: MistralServiceEnv) {
+    this.env = env;
     this.config = {
       endpoint: 'https://api.mistral.ai/v1/ocr',
       model: 'mistral-ocr-latest',
@@ -180,7 +184,7 @@ export class MistralService {
    * @returns Extracted text and pages processed
    * @throws Error if OCR fails
    */
-  async processPdfUrl(pdfUrl: string): Promise<MistralOcrResult> {
+  async processPdfUrl(pdfUrl: string, resultCacheKey?: string): Promise<MistralOcrResult> {
     const payload = {
       model: this.config.model,
       document: {
@@ -208,7 +212,16 @@ export class MistralService {
       .filter((text: string) => text.length > 0)
       .join('\n\n---\n\n');
 
-    return { 
+    if(resultCacheKey) {
+      await this.env.OCR_RESULTS.put(resultCacheKey, JSON.stringify({
+        extractedText,
+        pagesProcessed: result.pages.length
+      }), {
+        expirationTtl: 86400 // 24 hours
+      });
+    }
+
+    return {
       extractedText, 
       pagesProcessed: result.pages.length 
     };

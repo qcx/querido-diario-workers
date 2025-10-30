@@ -51,7 +51,7 @@ export class GazetteRegistryRepository {
       resolvedUrl = gazette.fileUrl;
     }
 
-    const existingGazette = await db.select().from(schema.gazetteRegistry).where(eq(schema.gazetteRegistry.pdfUrl, resolvedUrl));
+    const existingGazette = await db.select().from(schema.gazetteRegistry).where(eq(schema.gazetteRegistry.pdfUrl, resolvedUrl)).limit(1);
     
     if (existingGazette.length > 0) {
       return existingGazette[0];
@@ -72,19 +72,28 @@ export class GazetteRegistryRepository {
     return newGazette[0];
   }
 
-  async startProcessing(gazetteId: string): Promise<typeof schema.gazetteRegistry.$inferSelect | null> {
+  async startProcessing(gazetteId: string): Promise<typeof schema.gazetteRegistry.$inferSelect> {
     const db = this.dbClient.getDb();
     const result = await db.update(schema.gazetteRegistry).set({ status: 'ocr_processing' }).where(and(
           eq(schema.gazetteRegistry.id, gazetteId),
-          sql`status NOT IN ('ocr_processing', 'ocr_retrying', 'ocr_success')`
-        )).returning();
-    return result[0];
+          sql`status IN ('pending', 'uploaded', 'ocr_failure')`
+        )).limit(1).returning();
+    return result?.[0];
+  }
+
+  async trackUploaded(gazetteId: string): Promise<typeof schema.gazetteRegistry.$inferSelect> {
+    const db = this.dbClient.getDb();
+    const result = await db.update(schema.gazetteRegistry).set({ status: 'uploaded' }).where(and(
+      eq(schema.gazetteRegistry.id, gazetteId),
+      sql`status NOT IN ('ocr_processing', 'ocr_retrying', 'ocr_success', 'ocr_failure')`
+    )).limit(1).returning();
+    return result?.[0];
   }
 
   async findById(id: string): Promise<typeof schema.gazetteRegistry.$inferSelect> {
     const db = this.dbClient.getDb();
-    const gazette = await db.select().from(schema.gazetteRegistry).where(eq(schema.gazetteRegistry.id, id));
-    return gazette[0];
+    const gazette = await db.select().from(schema.gazetteRegistry).where(eq(schema.gazetteRegistry.id, id)).limit(1);
+    return gazette?.[0];
   }
 
   async updateCrawlsStatus(crawlId: string, status: GazetteCrawlStatus): Promise<void> {
@@ -101,13 +110,22 @@ export class GazetteRegistryRepository {
       createdAt: this.dbClient.getCurrentTimestamp()
     }).onConflictDoNothing().returning();
 
-    return crawlRecord[0];
+    return crawlRecord?.[0];
   }
 
-  async updateGazetteStatus(gazetteId: string, status: string): Promise<void> {
+  async updateGazetteStatus(gazetteId: string, status: string): Promise<typeof schema.gazetteRegistry.$inferSelect> {
+    const db = this.dbClient.getDb();
+    const result = await db.update(schema.gazetteRegistry)
+      .set({ status })
+      .where(eq(schema.gazetteRegistry.id, gazetteId)).limit(1).returning();
+
+    return result?.[0];
+  }
+
+  async updateR2Key(gazetteId: string, pdfR2Key: string): Promise<void> {
     const db = this.dbClient.getDb();
     await db.update(schema.gazetteRegistry)
-      .set({ status })
+      .set({ pdfR2Key })
       .where(eq(schema.gazetteRegistry.id, gazetteId));
   }
 }

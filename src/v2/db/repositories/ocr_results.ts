@@ -109,6 +109,86 @@ export class OcrResultsRepository {
     }
   }
 
+  async startProcessing(gazetteId: string, metadata: Record<string, any>): Promise<void> {
+    const db = this.dbClient.getDb();
+    const ocrJobId = this.dbClient.generateId();
+
+    await db.insert(schema.ocrJobs).values({
+      id: ocrJobId,
+      documentType: 'gazette_registry',
+      documentId: gazetteId,
+      status: 'processing',
+      createdAt: this.dbClient.getCurrentTimestamp(),
+      metadata: this.dbClient.stringifyJson({
+        ...metadata
+      })
+    });
+  }
+
+  async updateOcrJobSuccess(
+    gazetteId: string,
+    pagesProcessed: number,
+    processingTimeMs: number,
+    textLength: number
+  ): Promise<void> {
+    const db = this.dbClient.getDb();
+    
+    // Find the most recent processing job for this gazette
+    const jobs = await db.select()
+      .from(schema.ocrJobs)
+      .where(and(
+        eq(schema.ocrJobs.documentType, 'gazette_registry'),
+        eq(schema.ocrJobs.documentId, gazetteId),
+        eq(schema.ocrJobs.status, 'processing')
+      ))
+      .orderBy(schema.ocrJobs.createdAt)
+      .limit(1);
+    
+    if(jobs.length > 0) {
+      await db.update(schema.ocrJobs)
+        .set({
+          status: 'success',
+          pagesProcessed,
+          processingTimeMs,
+          textLength,
+          completedAt: this.dbClient.getCurrentTimestamp()
+        })
+        .where(eq(schema.ocrJobs.id, jobs[0].id));
+    }
+  }
+
+  async updateOcrJobFailure(
+    gazetteId: string,
+    errorCode: string,
+    errorMessage: string,
+    processingTimeMs: number
+  ): Promise<void> {
+    const db = this.dbClient.getDb();
+    
+    // Find the most recent processing job for this gazette
+    const jobs = await db.select()
+      .from(schema.ocrJobs)
+      .where(and(
+        eq(schema.ocrJobs.documentType, 'gazette_registry'),
+        eq(schema.ocrJobs.documentId, gazetteId),
+        eq(schema.ocrJobs.status, 'processing')
+      ))
+      .orderBy(schema.ocrJobs.createdAt)
+      .limit(1);
+    
+    if(jobs.length > 0) {
+      await db.update(schema.ocrJobs)
+        .set({
+          status: 'failure',
+          errorCode,
+          errorMessage,
+          processingTimeMs,
+          completedAt: this.dbClient.getCurrentTimestamp()
+        })
+        .where(eq(schema.ocrJobs.id, jobs[0].id));
+    }
+  }
+
   /**
    * Create or update OCR result for a gazette (convenience method)
    */
