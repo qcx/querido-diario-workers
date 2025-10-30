@@ -1,0 +1,86 @@
+[
+  {
+    "id": "to_aparecida_do_rio_negro",
+    "name": "Aparecida Do Rio Negro - TO",
+    "territoryId": "1701101",
+    "startDate": "2017-07-13",
+    "spiderType": "barco_digital",
+    "config": {
+      "type": "barco_digital",
+      "baseUrl": "https://api-pmaparecida.barcodigital.com.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_araguaina",
+    "name": "Araguaina - TO",
+    "territoryId": "1702109",
+    "startDate": "2011-12-06",
+    "spiderType": "barco_digital",
+    "config": {
+      "type": "barco_digital",
+      "baseUrl": "https://api-araguaina.barcodigital.com.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_centenario",
+    "name": "Centenario - TO",
+    "territoryId": "1704105",
+    "startDate": "2015-09-09",
+    "spiderType": "barco_digital",
+    "config": {
+      "type": "barco_digital",
+      "baseUrl": "https://api-centenario.barcodigital.com.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_divinopolis_do_tocantins",
+    "name": "Divinopolis Do Tocantins - TO",
+    "territoryId": "1707108",
+    "startDate": "2021-04-29",
+    "spiderType": "barco_digital",
+    "config": {
+      "type": "barco_digital",
+      "baseUrl": "https://api-divinopolis.barcodigital.com.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_lagoa_da_confusao",
+    "name": "Lagoa Da Confusao - TO",
+    "territoryId": "1711902",
+    "startDate": "2018-11-01",
+    "spiderType": "barco_digital",
+    "config": {
+      "type": "barco_digital",
+      "baseUrl": "https://api-lagoadac.barcodigital.com.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_ponte_alta_do_tocantins",
+    "name": "Ponte Alta Do Tocantins - TO",
+    "territoryId": "1717909",
+    "startDate": "2021-04-30",
+    "spiderType": "barco_digital",
+    "config": {
+      "type": "barco_digital",
+      "baseUrl": "https://api-ponte.barcodigital.com.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_pugmil",
+    "name": "Pugmil - TO",
+    "territoryId": "1718451",
+    "startDate": "2017-09-29",
+    "spiderType": "barco_digital",
+    "config": {
+      "type": "barco_digital",
+      "baseUrl": "https://api-pugmil.barcodigital.com.br"
+    },
+    "gazetteScope": "city"
+  }
+]

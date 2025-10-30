@@ -1,0 +1,340 @@
+[
+  {
+    "id": "se_aquidaba",
+    "name": "Aquidaba - SE",
+    "territoryId": "2800209",
+    "startDate": "2017-02-16",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "aquidaba"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_areia_branca",
+    "name": "Branca - SE",
+    "territoryId": "2800506",
+    "startDate": "2017-01-02",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "areiabranca"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_barra_dos_coqueiros",
+    "name": "Coqueiros - SE",
+    "territoryId": "2800605",
+    "startDate": "2022-09-30",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "barradoscoqueiros"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_campo_do_brito",
+    "name": "Brito - SE",
+    "territoryId": "2801009",
+    "startDate": "2021-01-05",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "campodobrito"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_canhoba",
+    "name": "Canhoba - SE",
+    "territoryId": "2801108",
+    "startDate": "2020-01-16",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "canhoba"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_caninde_de_sao_francisco",
+    "name": "Francisco - SE",
+    "territoryId": "2801207",
+    "startDate": "2017-01-02",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "canindedesaofrancisco"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_capela",
+    "name": "Capela - SE",
+    "territoryId": "2801306",
+    "startDate": "2021-02-04",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "capela"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_divina_pastora",
+    "name": "Pastora - SE",
+    "territoryId": "2802007",
+    "startDate": "2019-01-10",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "divinapastora"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_frei_paulo",
+    "name": "Paulo - SE",
+    "territoryId": "2802304",
+    "startDate": "2022-01-14",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "freipaulo"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_ilha_das_flores",
+    "name": "Flores - SE",
+    "territoryId": "2802700",
+    "startDate": "2017-01-11",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "ilhadasflores"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_itabaiana",
+    "name": "Itabaiana - SE",
+    "territoryId": "2802908",
+    "startDate": "2023-01-02",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "itabaiana"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_itabaianinha",
+    "name": "Itabaianinha - SE",
+    "territoryId": "2803005",
+    "startDate": "2017-01-02",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "itabaianinha"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_japaratuba",
+    "name": "Japaratuba - SE",
+    "territoryId": "2803302",
+    "startDate": "2017-03-22",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "japaratuba"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_moita_bonita",
+    "name": "Bonita - SE",
+    "territoryId": "2804102",
+    "startDate": "2022-02-17",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "moitabonita"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_muribeca",
+    "name": "Muribeca - SE",
+    "territoryId": "2804300",
+    "startDate": "2019-05-20",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "muribeca"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_nossa_senhora_das_dores",
+    "name": "Dores - SE",
+    "territoryId": "2804607",
+    "startDate": "2017-01-02",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "nossasenhoradasdores"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_nossa_senhora_de_lourdes",
+    "name": "Lourdes - SE",
+    "territoryId": "2804706",
+    "startDate": "2017-01-12",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "nossasenhoradelourdes"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_pedra_mole",
+    "name": "Mole - SE",
+    "territoryId": "2805000",
+    "startDate": "2017-01-26",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "pedramole"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_pirambu",
+    "name": "Pirambu - SE",
+    "territoryId": "2805307",
+    "startDate": "2017-03-09",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "pirambu"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_poco_verde",
+    "name": "Verde - SE",
+    "territoryId": "2805505",
+    "startDate": "2023-01-02",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "pocoverde"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_riachao_do_dantas",
+    "name": "Dantas - SE",
+    "territoryId": "2805802",
+    "startDate": "2018-11-14",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "riachaododantas"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_rosario_do_catete",
+    "name": "Catete - SE",
+    "territoryId": "2806107",
+    "startDate": "2021-01-12",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "rosariodocatete"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_sao_domingos",
+    "name": "Domingos - SE",
+    "territoryId": "2806800",
+    "startDate": "2021-01-12",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "saodomingos"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_simao_dias",
+    "name": "Dias - SE",
+    "territoryId": "2807105",
+    "startDate": "2021-01-04",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "simaodias"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_siriri",
+    "name": "Siriri - SE",
+    "territoryId": "2807204",
+    "startDate": "2017-01-03",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "siriri"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_telha",
+    "name": "Telha - SE",
+    "territoryId": "2807303",
+    "startDate": "2017-01-20",
+    "spiderType": "municipio_online",
+    "config": {
+      "type": "municipio_online",
+      "urlUf": "se",
+      "urlCity": "telha"
+    },
+    "gazetteScope": "city"
+  }
+]

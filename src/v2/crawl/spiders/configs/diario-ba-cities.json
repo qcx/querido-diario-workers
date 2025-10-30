@@ -1,0 +1,4901 @@
+{
+  "total": 408,
+  "municipalities": [
+    {
+      "id": "ba_2900108",
+      "name": "Abaíra",
+      "stateCode": "BA",
+      "territoryId": "2900108",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ABAIRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2900207",
+      "name": "Abaré",
+      "stateCode": "BA",
+      "territoryId": "2900207",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ABARE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2900306",
+      "name": "Acajutiba",
+      "stateCode": "BA",
+      "territoryId": "2900306",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ACAJUTIBA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2900355",
+      "name": "Adustina",
+      "stateCode": "BA",
+      "territoryId": "2900355",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ADUSTINA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2900405",
+      "name": "Água Fria",
+      "stateCode": "BA",
+      "territoryId": "2900405",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "AGUAFRIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2900603",
+      "name": "Aiquara",
+      "stateCode": "BA",
+      "territoryId": "2900603",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "AIQUARA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2900702",
+      "name": "Alagoinhas",
+      "stateCode": "BA",
+      "territoryId": "2900702",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ALAGOINHAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2900801",
+      "name": "Alcobaça",
+      "stateCode": "BA",
+      "territoryId": "2900801",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ALCOBACA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2900900",
+      "name": "Almadina",
+      "stateCode": "BA",
+      "territoryId": "2900900",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ALMADINA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2901007",
+      "name": "Amargosa",
+      "stateCode": "BA",
+      "territoryId": "2901007",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "AMARGOSA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2901106",
+      "name": "Amélia Rodrigues",
+      "stateCode": "BA",
+      "territoryId": "2901106",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "AMELIARODRIGUES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2901155",
+      "name": "América Dourada",
+      "stateCode": "BA",
+      "territoryId": "2901155",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "AMERICADOURADA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2901205",
+      "name": "Anagé",
+      "stateCode": "BA",
+      "territoryId": "2901205",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ANAGE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2901304",
+      "name": "Andaraí",
+      "stateCode": "BA",
+      "territoryId": "2901304",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ANDARAI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2901353",
+      "name": "Andorinha",
+      "stateCode": "BA",
+      "territoryId": "2901353",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ANDORINHA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2901403",
+      "name": "Angical",
+      "stateCode": "BA",
+      "territoryId": "2901403",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ANGICAL"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2901502",
+      "name": "Anguera",
+      "stateCode": "BA",
+      "territoryId": "2901502",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ANGUERA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2901601",
+      "name": "Antas",
+      "stateCode": "BA",
+      "territoryId": "2901601",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ANTAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2901700",
+      "name": "Antônio Cardoso",
+      "stateCode": "BA",
+      "territoryId": "2901700",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ANTONIOCARDOSO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2901809",
+      "name": "Antônio Gonçalves",
+      "stateCode": "BA",
+      "territoryId": "2901809",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ANTONIOGONCALVES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2901908",
+      "name": "Aporá",
+      "stateCode": "BA",
+      "territoryId": "2901908",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "APORA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2901957",
+      "name": "Apuarema",
+      "stateCode": "BA",
+      "territoryId": "2901957",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "APUAREMA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2902054",
+      "name": "Araçás",
+      "stateCode": "BA",
+      "territoryId": "2902054",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ARACAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2902005",
+      "name": "Aracatu",
+      "stateCode": "BA",
+      "territoryId": "2902005",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ARACATU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2902104",
+      "name": "Araci",
+      "stateCode": "BA",
+      "territoryId": "2902104",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ARACI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2902203",
+      "name": "Aramari",
+      "stateCode": "BA",
+      "territoryId": "2902203",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ARAMARI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2902252",
+      "name": "Arataca",
+      "stateCode": "BA",
+      "territoryId": "2902252",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ARATACA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2902302",
+      "name": "Aratuípe",
+      "stateCode": "BA",
+      "territoryId": "2902302",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ARATUIPE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2902401",
+      "name": "Aurelino Leal",
+      "stateCode": "BA",
+      "territoryId": "2902401",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "AURELINO LEAL"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2902500",
+      "name": "Baianópolis",
+      "stateCode": "BA",
+      "territoryId": "2902500",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BAIANOPOLIS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2902609",
+      "name": "Baixa Grande",
+      "stateCode": "BA",
+      "territoryId": "2902609",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BAIXAGRANDE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2902658",
+      "name": "Banzaê",
+      "stateCode": "BA",
+      "territoryId": "2902658",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BANZAE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2902708",
+      "name": "Barra",
+      "stateCode": "BA",
+      "territoryId": "2902708",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BARRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2902807",
+      "name": "Barra da Estiva",
+      "stateCode": "BA",
+      "territoryId": "2902807",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BARRADAESTIVA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2902906",
+      "name": "Barra do Choça",
+      "stateCode": "BA",
+      "territoryId": "2902906",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BARRADOCHOCA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2903003",
+      "name": "Barra do Mendes",
+      "stateCode": "BA",
+      "territoryId": "2903003",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BARRADOMENDES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2903102",
+      "name": "Barra do Rocha",
+      "stateCode": "BA",
+      "territoryId": "2903102",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BARRADOROCHA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2903201",
+      "name": "Barreiras",
+      "stateCode": "BA",
+      "territoryId": "2903201",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BARREIRAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2903276",
+      "name": "Barrocas",
+      "stateCode": "BA",
+      "territoryId": "2903276",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BARROCAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2903409",
+      "name": "Belmonte",
+      "stateCode": "BA",
+      "territoryId": "2903409",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BELMONTE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2903508",
+      "name": "Belo Campo",
+      "stateCode": "BA",
+      "territoryId": "2903508",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BELO CAMPO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2903607",
+      "name": "Biritinga",
+      "stateCode": "BA",
+      "territoryId": "2903607",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BIRITINGA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2903706",
+      "name": "Boa Nova",
+      "stateCode": "BA",
+      "territoryId": "2903706",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BOANOVA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2903805",
+      "name": "Boa Vista do Tupim",
+      "stateCode": "BA",
+      "territoryId": "2903805",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BOAVISTA DO TUPIM"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2903904",
+      "name": "Bom Jesus da Lapa",
+      "stateCode": "BA",
+      "territoryId": "2903904",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BOMJESUSDALAPA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2903953",
+      "name": "Bom Jesus da Serra",
+      "stateCode": "BA",
+      "territoryId": "2903953",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BOMJESUSDASERRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2904001",
+      "name": "Boninal",
+      "stateCode": "BA",
+      "territoryId": "2904001",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BONINAL"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2904050",
+      "name": "Bonito",
+      "stateCode": "BA",
+      "territoryId": "2904050",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BONITO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2904100",
+      "name": "Boquira",
+      "stateCode": "BA",
+      "territoryId": "2904100",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BOQUIRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2904209",
+      "name": "Botuporã",
+      "stateCode": "BA",
+      "territoryId": "2904209",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BOTUPORA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2904308",
+      "name": "Brejões",
+      "stateCode": "BA",
+      "territoryId": "2904308",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BREJOES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2904407",
+      "name": "Brejolândia",
+      "stateCode": "BA",
+      "territoryId": "2904407",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BREJOLANDIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2904506",
+      "name": "Brotas de Macaúbas",
+      "stateCode": "BA",
+      "territoryId": "2904506",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BROTAS DE MACAUBAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2904605",
+      "name": "Brumado",
+      "stateCode": "BA",
+      "territoryId": "2904605",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BRUMADO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2904704",
+      "name": "Buerarema",
+      "stateCode": "BA",
+      "territoryId": "2904704",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BUERAREMA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2904753",
+      "name": "Buritirama",
+      "stateCode": "BA",
+      "territoryId": "2904753",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "BURITIRAMA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2904803",
+      "name": "Caatiba",
+      "stateCode": "BA",
+      "territoryId": "2904803",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CAATIBA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2904852",
+      "name": "Cabaceiras do Paraguaçu",
+      "stateCode": "BA",
+      "territoryId": "2904852",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CABACEIRAS DO PARAGUACU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2904902",
+      "name": "Cachoeira",
+      "stateCode": "BA",
+      "territoryId": "2904902",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CACHOEIRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2905008",
+      "name": "Caculé",
+      "stateCode": "BA",
+      "territoryId": "2905008",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CACULE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2905107",
+      "name": "Caém",
+      "stateCode": "BA",
+      "territoryId": "2905107",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CAEM"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2905156",
+      "name": "Caetanos",
+      "stateCode": "BA",
+      "territoryId": "2905156",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CAETANOS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2905206",
+      "name": "Caetité",
+      "stateCode": "BA",
+      "territoryId": "2905206",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CAETITE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2905305",
+      "name": "Cafarnaum",
+      "stateCode": "BA",
+      "territoryId": "2905305",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CAFARNAUM"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2905404",
+      "name": "Cairu",
+      "stateCode": "BA",
+      "territoryId": "2905404",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CAIRU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2905503",
+      "name": "Caldeirão Grande",
+      "stateCode": "BA",
+      "territoryId": "2905503",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CALDEIRAO GRANDE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2905602",
+      "name": "Camacan",
+      "stateCode": "BA",
+      "territoryId": "2905602",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CAMACAN"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2905701",
+      "name": "Camaçari",
+      "stateCode": "BA",
+      "territoryId": "2905701",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CAMACARI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2905800",
+      "name": "Camamu",
+      "stateCode": "BA",
+      "territoryId": "2905800",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CAMAMU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2905909",
+      "name": "Campo Alegre de Lourdes",
+      "stateCode": "BA",
+      "territoryId": "2905909",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CAMPOALEGREDELO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2906006",
+      "name": "Campo Formoso",
+      "stateCode": "BA",
+      "territoryId": "2906006",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CAMPOFORMOSO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2906105",
+      "name": "Canápolis",
+      "stateCode": "BA",
+      "territoryId": "2906105",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CANAPOLIS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2906204",
+      "name": "Canarana",
+      "stateCode": "BA",
+      "territoryId": "2906204",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CANARANA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2906303",
+      "name": "Canavieiras",
+      "stateCode": "BA",
+      "territoryId": "2906303",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CANAVIEIRAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2906402",
+      "name": "Candeal",
+      "stateCode": "BA",
+      "territoryId": "2906402",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CANDEAL"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2906501",
+      "name": "Candeias",
+      "stateCode": "BA",
+      "territoryId": "2906501",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CANDEIAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2906600",
+      "name": "Candiba",
+      "stateCode": "BA",
+      "territoryId": "2906600",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CANDIBA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2906709",
+      "name": "Cândido Sales",
+      "stateCode": "BA",
+      "territoryId": "2906709",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CANDIDO SALES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2906808",
+      "name": "Cansanção",
+      "stateCode": "BA",
+      "territoryId": "2906808",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CANSANCAO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2906824",
+      "name": "Canudos",
+      "stateCode": "BA",
+      "territoryId": "2906824",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CANUDOS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2906857",
+      "name": "Capela do Alto Alegre",
+      "stateCode": "BA",
+      "territoryId": "2906857",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CAPELA DO ALTO ALEGRE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2906873",
+      "name": "Capim Grosso",
+      "stateCode": "BA",
+      "territoryId": "2906873",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CAPIM GROSSO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2906899",
+      "name": "Caraíbas",
+      "stateCode": "BA",
+      "territoryId": "2906899",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CARAIBAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2906907",
+      "name": "Caravelas",
+      "stateCode": "BA",
+      "territoryId": "2906907",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CARAVELAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2907004",
+      "name": "Cardeal da Silva",
+      "stateCode": "BA",
+      "territoryId": "2907004",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CARDEAL DA SILVA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2907103",
+      "name": "Carinhanha",
+      "stateCode": "BA",
+      "territoryId": "2907103",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CARINHANHA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2907202",
+      "name": "Casa Nova",
+      "stateCode": "BA",
+      "territoryId": "2907202",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CASA NOVA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2907301",
+      "name": "Castro Alves",
+      "stateCode": "BA",
+      "territoryId": "2907301",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CASTRO ALVES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2907400",
+      "name": "Catolândia",
+      "stateCode": "BA",
+      "territoryId": "2907400",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CATOLANDIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2907509",
+      "name": "Catu",
+      "stateCode": "BA",
+      "territoryId": "2907509",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CATU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2907558",
+      "name": "Caturama",
+      "stateCode": "BA",
+      "territoryId": "2907558",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CATURAMA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2907608",
+      "name": "Central",
+      "stateCode": "BA",
+      "territoryId": "2907608",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CENTRAL"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2907707",
+      "name": "Chorrochó",
+      "stateCode": "BA",
+      "territoryId": "2907707",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CHORROCHO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2907806",
+      "name": "Cícero Dantas",
+      "stateCode": "BA",
+      "territoryId": "2907806",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CICERO DANTAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2907905",
+      "name": "Cipó",
+      "stateCode": "BA",
+      "territoryId": "2907905",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CIPO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2908002",
+      "name": "Coaraci",
+      "stateCode": "BA",
+      "territoryId": "2908002",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "COARACI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2908101",
+      "name": "Cocos",
+      "stateCode": "BA",
+      "territoryId": "2908101",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "COCOS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2908309",
+      "name": "Conceição do Almeida",
+      "stateCode": "BA",
+      "territoryId": "2908309",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CONCEICAODOALMEIDA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2908408",
+      "name": "Conceição do Coité",
+      "stateCode": "BA",
+      "territoryId": "2908408",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CONCEICAO DO COITE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2908507",
+      "name": "Conceição do Jacuípe",
+      "stateCode": "BA",
+      "territoryId": "2908507",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CONCEICAODOJACUIPE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2908606",
+      "name": "Conde",
+      "stateCode": "BA",
+      "territoryId": "2908606",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CONDE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2908705",
+      "name": "Condeúba",
+      "stateCode": "BA",
+      "territoryId": "2908705",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CONDEUBA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2908804",
+      "name": "Contendas do Sincorá",
+      "stateCode": "BA",
+      "territoryId": "2908804",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CONTENDAS DO SINCORA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2908903",
+      "name": "Coração de Maria",
+      "stateCode": "BA",
+      "territoryId": "2908903",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CORACAO DE MARIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2909000",
+      "name": "Cordeiros",
+      "stateCode": "BA",
+      "territoryId": "2909000",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CORDEIROS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2909109",
+      "name": "Coribe",
+      "stateCode": "BA",
+      "territoryId": "2909109",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CORIBE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2909208",
+      "name": "Coronel João Sá",
+      "stateCode": "BA",
+      "territoryId": "2909208",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CORONEL JOAO SA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2909307",
+      "name": "Correntina",
+      "stateCode": "BA",
+      "territoryId": "2909307",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CORRENTINA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2909406",
+      "name": "Cotegipe",
+      "stateCode": "BA",
+      "territoryId": "2909406",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "COTEGIPE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2909505",
+      "name": "Cravolândia",
+      "stateCode": "BA",
+      "territoryId": "2909505",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CRAVOLANDIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2909604",
+      "name": "Crisópolis",
+      "stateCode": "BA",
+      "territoryId": "2909604",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CRISOPOLIS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2909703",
+      "name": "Cristópolis",
+      "stateCode": "BA",
+      "territoryId": "2909703",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CRISTOPOLIS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2909802",
+      "name": "Cruz das Almas",
+      "stateCode": "BA",
+      "territoryId": "2909802",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CRUZ DAS ALMAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2909901",
+      "name": "Curaçá",
+      "stateCode": "BA",
+      "territoryId": "2909901",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "CURACA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2910057",
+      "name": "Dias d'Ávila",
+      "stateCode": "BA",
+      "territoryId": "2910057",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "DIASDAVILA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2910107",
+      "name": "Dom Basílio",
+      "stateCode": "BA",
+      "territoryId": "2910107",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "DOMBASILIO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2910206",
+      "name": "Dom Macedo Costa",
+      "stateCode": "BA",
+      "territoryId": "2910206",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "DOMMACEDOCOSTA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2910404",
+      "name": "Encruzilhada",
+      "stateCode": "BA",
+      "territoryId": "2910404",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ENCRUZILHADA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2910503",
+      "name": "Entre Rios",
+      "stateCode": "BA",
+      "territoryId": "2910503",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ENTRE RIOS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2910602",
+      "name": "Esplanada",
+      "stateCode": "BA",
+      "territoryId": "2910602",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ESPLANADA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2910701",
+      "name": "Euclides da Cunha",
+      "stateCode": "BA",
+      "territoryId": "2910701",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "EUCLIDES DA CUNHA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2910727",
+      "name": "Eunápolis",
+      "stateCode": "BA",
+      "territoryId": "2910727",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "EUNAPOLIS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2910750",
+      "name": "Fátima",
+      "stateCode": "BA",
+      "territoryId": "2910750",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "FATIMA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2910800",
+      "name": "Feira de Santana",
+      "stateCode": "BA",
+      "territoryId": "2910800",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "FEIRASANTANA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2910800",
+      "name": "Feira de Santana",
+      "stateCode": "BA",
+      "territoryId": "2910800",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "FEIRADEANTANA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2910859",
+      "name": "Filadélfia",
+      "stateCode": "BA",
+      "territoryId": "2910859",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "FILADELFIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2910909",
+      "name": "Firmino Alves",
+      "stateCode": "BA",
+      "territoryId": "2910909",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "FIRMINO ALVES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2911006",
+      "name": "Floresta Azul",
+      "stateCode": "BA",
+      "territoryId": "2911006",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "FLORESTA AZUL"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2911105",
+      "name": "Formosa do Rio Preto",
+      "stateCode": "BA",
+      "territoryId": "2911105",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "FORMOSADORIOPRETO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2911204",
+      "name": "Gandu",
+      "stateCode": "BA",
+      "territoryId": "2911204",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "GANDU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2911253",
+      "name": "Gavião",
+      "stateCode": "BA",
+      "territoryId": "2911253",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "GAVIAO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2911303",
+      "name": "Gentio do Ouro",
+      "stateCode": "BA",
+      "territoryId": "2911303",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "GENTIO DO OURO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2911402",
+      "name": "Glória",
+      "stateCode": "BA",
+      "territoryId": "2911402",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "GLORIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2911501",
+      "name": "Gongogi",
+      "stateCode": "BA",
+      "territoryId": "2911501",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "GONGOGI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2911600",
+      "name": "Governador Mangabeira",
+      "stateCode": "BA",
+      "territoryId": "2911600",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "GOVERNADOR MANGABEIRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2911659",
+      "name": "Guajeru",
+      "stateCode": "BA",
+      "territoryId": "2911659",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "GUAJERU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2911709",
+      "name": "Guanambi",
+      "stateCode": "BA",
+      "territoryId": "2911709",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "GUANAMBI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2911808",
+      "name": "Guaratinga",
+      "stateCode": "BA",
+      "territoryId": "2911808",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "GUARATINGA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2911857",
+      "name": "Heliópolis",
+      "stateCode": "BA",
+      "territoryId": "2911857",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "HELIOPOLIS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2911907",
+      "name": "Iaçu",
+      "stateCode": "BA",
+      "territoryId": "2911907",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IACU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2912004",
+      "name": "Ibiassucê",
+      "stateCode": "BA",
+      "territoryId": "2912004",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IBIASSUCE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2912103",
+      "name": "Ibicaraí",
+      "stateCode": "BA",
+      "territoryId": "2912103",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IBICARAI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2912202",
+      "name": "Ibicoara",
+      "stateCode": "BA",
+      "territoryId": "2912202",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IBICOARA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2912301",
+      "name": "Ibicuí",
+      "stateCode": "BA",
+      "territoryId": "2912301",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IBICUI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2912400",
+      "name": "Ibipeba",
+      "stateCode": "BA",
+      "territoryId": "2912400",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IBIPEBA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2912509",
+      "name": "Ibipitanga",
+      "stateCode": "BA",
+      "territoryId": "2912509",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IBIPITANGA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2912608",
+      "name": "Ibiquera",
+      "stateCode": "BA",
+      "territoryId": "2912608",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IBIQUERA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2912707",
+      "name": "Ibirapitanga",
+      "stateCode": "BA",
+      "territoryId": "2912707",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IBIRAPITANGA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2912806",
+      "name": "Ibirapuã",
+      "stateCode": "BA",
+      "territoryId": "2912806",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IBIRAPUA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2912905",
+      "name": "Ibirataia",
+      "stateCode": "BA",
+      "territoryId": "2912905",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IBIRATAIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2913002",
+      "name": "Ibitiara",
+      "stateCode": "BA",
+      "territoryId": "2913002",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IBITIARA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2913101",
+      "name": "Ibititá",
+      "stateCode": "BA",
+      "territoryId": "2913101",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IBITITA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2913200",
+      "name": "Ibotirama",
+      "stateCode": "BA",
+      "territoryId": "2913200",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IBOTIRAMA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2913309",
+      "name": "Ichu",
+      "stateCode": "BA",
+      "territoryId": "2913309",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ICHU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2913408",
+      "name": "Igaporã",
+      "stateCode": "BA",
+      "territoryId": "2913408",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IGAPORA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2913457",
+      "name": "Igrapiúna",
+      "stateCode": "BA",
+      "territoryId": "2913457",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IGRAPIUNA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2913507",
+      "name": "Iguaí",
+      "stateCode": "BA",
+      "territoryId": "2913507",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IGUAI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2913606",
+      "name": "Ilhéus",
+      "stateCode": "BA",
+      "territoryId": "2913606",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ILHEUS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2913705",
+      "name": "Inhambupe",
+      "stateCode": "BA",
+      "territoryId": "2913705",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "INHAMBUPE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2913804",
+      "name": "Ipecaetá",
+      "stateCode": "BA",
+      "territoryId": "2913804",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IPECAETA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2913903",
+      "name": "Ipiaú",
+      "stateCode": "BA",
+      "territoryId": "2913903",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IPIAU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2914000",
+      "name": "Ipirá",
+      "stateCode": "BA",
+      "territoryId": "2914000",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IPIRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2914109",
+      "name": "Ipupiara",
+      "stateCode": "BA",
+      "territoryId": "2914109",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IPUPIARA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2914208",
+      "name": "Irajuba",
+      "stateCode": "BA",
+      "territoryId": "2914208",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IRAJUBA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2914307",
+      "name": "Iramaia",
+      "stateCode": "BA",
+      "territoryId": "2914307",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IRAMAIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2914406",
+      "name": "Iraquara",
+      "stateCode": "BA",
+      "territoryId": "2914406",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IRAQUARA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2914505",
+      "name": "Irará",
+      "stateCode": "BA",
+      "territoryId": "2914505",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IRARA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2914604",
+      "name": "Irecê",
+      "stateCode": "BA",
+      "territoryId": "2914604",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IRECE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2914653",
+      "name": "Itabela",
+      "stateCode": "BA",
+      "territoryId": "2914653",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITABELA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2914703",
+      "name": "Itaberaba",
+      "stateCode": "BA",
+      "territoryId": "2914703",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITABERABA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2914802",
+      "name": "Itabuna",
+      "stateCode": "BA",
+      "territoryId": "2914802",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITABUNA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2914901",
+      "name": "Itacaré",
+      "stateCode": "BA",
+      "territoryId": "2914901",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITACARE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2915007",
+      "name": "Itaeté",
+      "stateCode": "BA",
+      "territoryId": "2915007",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAETE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2915106",
+      "name": "Itagi",
+      "stateCode": "BA",
+      "territoryId": "2915106",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAGI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2915205",
+      "name": "Itagibá",
+      "stateCode": "BA",
+      "territoryId": "2915205",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAGIBA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2915304",
+      "name": "Itagimirim",
+      "stateCode": "BA",
+      "territoryId": "2915304",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAGIMIRIM"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2915353",
+      "name": "Itaguaçu da Bahia",
+      "stateCode": "BA",
+      "territoryId": "2915353",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAGUACU DA BAHIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2915403",
+      "name": "Itaju do Colônia",
+      "stateCode": "BA",
+      "territoryId": "2915403",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAJU DO COLONIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2915502",
+      "name": "Itajuípe",
+      "stateCode": "BA",
+      "territoryId": "2915502",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAJUIPE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2915601",
+      "name": "Itamaraju",
+      "stateCode": "BA",
+      "territoryId": "2915601",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAMARAJU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2915700",
+      "name": "Itamari",
+      "stateCode": "BA",
+      "territoryId": "2915700",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAMARI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2915809",
+      "name": "Itambé",
+      "stateCode": "BA",
+      "territoryId": "2915809",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAMBE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2915908",
+      "name": "Itanagra",
+      "stateCode": "BA",
+      "territoryId": "2915908",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITANAGRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2916005",
+      "name": "Itanhém",
+      "stateCode": "BA",
+      "territoryId": "2916005",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITANHEM"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2916104",
+      "name": "Itaparica",
+      "stateCode": "BA",
+      "territoryId": "2916104",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAPARICA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2916203",
+      "name": "Itapé",
+      "stateCode": "BA",
+      "territoryId": "2916203",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAPE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2916302",
+      "name": "Itapebi",
+      "stateCode": "BA",
+      "territoryId": "2916302",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAPEBI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2916401",
+      "name": "Itapetinga",
+      "stateCode": "BA",
+      "territoryId": "2916401",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAPETINGA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2916500",
+      "name": "Itapicuru",
+      "stateCode": "BA",
+      "territoryId": "2916500",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAPICURU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2916609",
+      "name": "Itapitanga",
+      "stateCode": "BA",
+      "territoryId": "2916609",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAPITANGA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2916708",
+      "name": "Itaquara",
+      "stateCode": "BA",
+      "territoryId": "2916708",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITAQUARA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2916807",
+      "name": "Itarantim",
+      "stateCode": "BA",
+      "territoryId": "2916807",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITARANTIM"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2916856",
+      "name": "Itatim",
+      "stateCode": "BA",
+      "territoryId": "2916856",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITATIM"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2916906",
+      "name": "Itiruçu",
+      "stateCode": "BA",
+      "territoryId": "2916906",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITIRUCU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2917003",
+      "name": "Itiúba",
+      "stateCode": "BA",
+      "territoryId": "2917003",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITIUBA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2917102",
+      "name": "Itororó",
+      "stateCode": "BA",
+      "territoryId": "2917102",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITORORO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2917201",
+      "name": "Ituaçu",
+      "stateCode": "BA",
+      "territoryId": "2917201",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITUACU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2917300",
+      "name": "Ituberá",
+      "stateCode": "BA",
+      "territoryId": "2917300",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "ITUBERA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2917334",
+      "name": "Iuiu",
+      "stateCode": "BA",
+      "territoryId": "2917334",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "IUIU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2917359",
+      "name": "Jaborandi",
+      "stateCode": "BA",
+      "territoryId": "2917359",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JABORANDI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2917409",
+      "name": "Jacaraci",
+      "stateCode": "BA",
+      "territoryId": "2917409",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JACARACI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2917508",
+      "name": "Jacobina",
+      "stateCode": "BA",
+      "territoryId": "2917508",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JACOBINA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2917607",
+      "name": "Jaguaquara",
+      "stateCode": "BA",
+      "territoryId": "2917607",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JAGUAQUARA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2917706",
+      "name": "Jaguarari",
+      "stateCode": "BA",
+      "territoryId": "2917706",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JAGUARARI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2917805",
+      "name": "Jaguaripe",
+      "stateCode": "BA",
+      "territoryId": "2917805",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JAGUARIPE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2917904",
+      "name": "Jandaíra",
+      "stateCode": "BA",
+      "territoryId": "2917904",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JANDAIRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2918001",
+      "name": "Jequié",
+      "stateCode": "BA",
+      "territoryId": "2918001",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JEQUIE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2918100",
+      "name": "Jeremoabo",
+      "stateCode": "BA",
+      "territoryId": "2918100",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JEREMOABO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2918209",
+      "name": "Jiquiriçá",
+      "stateCode": "BA",
+      "territoryId": "2918209",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JIQUIRICA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2918308",
+      "name": "Jitaúna",
+      "stateCode": "BA",
+      "territoryId": "2918308",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JITAUNA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2918357",
+      "name": "João Dourado",
+      "stateCode": "BA",
+      "territoryId": "2918357",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JOAO DOURADO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2918407",
+      "name": "Juazeiro",
+      "stateCode": "BA",
+      "territoryId": "2918407",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JUAZEIRO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2918456",
+      "name": "Jucuruçu",
+      "stateCode": "BA",
+      "territoryId": "2918456",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JUCURUCU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2918506",
+      "name": "Jussara",
+      "stateCode": "BA",
+      "territoryId": "2918506",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JUSSARA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2918555",
+      "name": "Jussari",
+      "stateCode": "BA",
+      "territoryId": "2918555",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JUSSARI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2918605",
+      "name": "Jussiape",
+      "stateCode": "BA",
+      "territoryId": "2918605",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "JUSSIAPE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2918704",
+      "name": "Lafaiete Coutinho",
+      "stateCode": "BA",
+      "territoryId": "2918704",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "LAFAIETE COUTINHO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2918753",
+      "name": "Lagoa Real",
+      "stateCode": "BA",
+      "territoryId": "2918753",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "LAGOA REAL"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2918803",
+      "name": "Laje",
+      "stateCode": "BA",
+      "territoryId": "2918803",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "LAJE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2918902",
+      "name": "Lajedão",
+      "stateCode": "BA",
+      "territoryId": "2918902",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "LAJEDAO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919009",
+      "name": "Lajedinho",
+      "stateCode": "BA",
+      "territoryId": "2919009",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "LAJEDINHO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919058",
+      "name": "Lajedo do Tabocal",
+      "stateCode": "BA",
+      "territoryId": "2919058",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "LAJEDO DO TABOCAL"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919108",
+      "name": "Lamarão",
+      "stateCode": "BA",
+      "territoryId": "2919108",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "LAMARAO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919157",
+      "name": "Lapão",
+      "stateCode": "BA",
+      "territoryId": "2919157",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "LAPAO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919207",
+      "name": "Lauro de Freitas",
+      "stateCode": "BA",
+      "territoryId": "2919207",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "LAURO DE FREITAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919306",
+      "name": "Lençóis",
+      "stateCode": "BA",
+      "territoryId": "2919306",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "LENCOIS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919405",
+      "name": "Licínio de Almeida",
+      "stateCode": "BA",
+      "territoryId": "2919405",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "LICINIO DE ALMEIDA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919504",
+      "name": "Livramento de Nossa Senhora",
+      "stateCode": "BA",
+      "territoryId": "2919504",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "LIVRAMENTO DE NOSSA SENHORA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919553",
+      "name": "Luís Eduardo Magalhães",
+      "stateCode": "BA",
+      "territoryId": "2919553",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "LUIS EDUARDO MAGALHAES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919603",
+      "name": "Macajuba",
+      "stateCode": "BA",
+      "territoryId": "2919603",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MACAJUBA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919702",
+      "name": "Macarani",
+      "stateCode": "BA",
+      "territoryId": "2919702",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MACARANI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919801",
+      "name": "Macaúbas",
+      "stateCode": "BA",
+      "territoryId": "2919801",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MACAUBAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919900",
+      "name": "Macururé",
+      "stateCode": "BA",
+      "territoryId": "2919900",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MACURURE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919926",
+      "name": "Madre de Deus",
+      "stateCode": "BA",
+      "territoryId": "2919926",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MADRE DE DEUS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2919959",
+      "name": "Maetinga",
+      "stateCode": "BA",
+      "territoryId": "2919959",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MAETINGA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2920007",
+      "name": "Maiquinique",
+      "stateCode": "BA",
+      "territoryId": "2920007",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MAIQUINIQUE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2920106",
+      "name": "Mairi",
+      "stateCode": "BA",
+      "territoryId": "2920106",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MAIRI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2920205",
+      "name": "Malhada",
+      "stateCode": "BA",
+      "territoryId": "2920205",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MALHADA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2920304",
+      "name": "Malhada de Pedras",
+      "stateCode": "BA",
+      "territoryId": "2920304",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MALHADADEPED"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2920403",
+      "name": "Manoel Vitorino",
+      "stateCode": "BA",
+      "territoryId": "2920403",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MANOEL VITORINO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2920452",
+      "name": "Mansidão",
+      "stateCode": "BA",
+      "territoryId": "2920452",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MANSIDAO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2920502",
+      "name": "Maracás",
+      "stateCode": "BA",
+      "territoryId": "2920502",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MARACAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2920601",
+      "name": "Maragogipe",
+      "stateCode": "BA",
+      "territoryId": "2920601",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MARAGOGIPE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2920700",
+      "name": "Maraú",
+      "stateCode": "BA",
+      "territoryId": "2920700",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MARAU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2920809",
+      "name": "Marcionílio Souza",
+      "stateCode": "BA",
+      "territoryId": "2920809",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MARCIONILIO SOUZA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2920908",
+      "name": "Mascote",
+      "stateCode": "BA",
+      "territoryId": "2920908",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MASCOTE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2921005",
+      "name": "Mata de São João",
+      "stateCode": "BA",
+      "territoryId": "2921005",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MATA DE SAO JOAO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2921054",
+      "name": "Matina",
+      "stateCode": "BA",
+      "territoryId": "2921054",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MATINA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2921104",
+      "name": "Medeiros Neto",
+      "stateCode": "BA",
+      "territoryId": "2921104",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MEDEIROS NETO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2921203",
+      "name": "Miguel Calmon",
+      "stateCode": "BA",
+      "territoryId": "2921203",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MIGUEL CALMON"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2921302",
+      "name": "Milagres",
+      "stateCode": "BA",
+      "territoryId": "2921302",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MILAGRES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2921401",
+      "name": "Mirangaba",
+      "stateCode": "BA",
+      "territoryId": "2921401",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MIRANGABA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2921450",
+      "name": "Mirante",
+      "stateCode": "BA",
+      "territoryId": "2921450",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MIRANTE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2921500",
+      "name": "Monte Santo",
+      "stateCode": "BA",
+      "territoryId": "2921500",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MONTE SANTO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2921609",
+      "name": "Morpará",
+      "stateCode": "BA",
+      "territoryId": "2921609",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MORPARA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2921708",
+      "name": "Morro do Chapéu",
+      "stateCode": "BA",
+      "territoryId": "2921708",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MORRO DO CHAPEU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2921807",
+      "name": "Mortugaba",
+      "stateCode": "BA",
+      "territoryId": "2921807",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MORTUGABA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2921906",
+      "name": "Mucugê",
+      "stateCode": "BA",
+      "territoryId": "2921906",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MUCUGE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922003",
+      "name": "Mucuri",
+      "stateCode": "BA",
+      "territoryId": "2922003",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MUCURI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922052",
+      "name": "Mulungu do Morro",
+      "stateCode": "BA",
+      "territoryId": "2922052",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MULUNGU DO MORRO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922102",
+      "name": "Mundo Novo",
+      "stateCode": "BA",
+      "territoryId": "2922102",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MUNDO NOVO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922201",
+      "name": "Muniz Ferreira",
+      "stateCode": "BA",
+      "territoryId": "2922201",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MUNIZ FERREIRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922250",
+      "name": "Muquém do São Francisco",
+      "stateCode": "BA",
+      "territoryId": "2922250",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MUQUEM DO SAO FRANCISCO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922300",
+      "name": "Muritiba",
+      "stateCode": "BA",
+      "territoryId": "2922300",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MURITIBA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922409",
+      "name": "Mutuípe",
+      "stateCode": "BA",
+      "territoryId": "2922409",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "MUTUIPE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922508",
+      "name": "Nazaré",
+      "stateCode": "BA",
+      "territoryId": "2922508",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "NAZARE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922607",
+      "name": "Nilo Peçanha",
+      "stateCode": "BA",
+      "territoryId": "2922607",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "NILO PECANHA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922656",
+      "name": "Nordestina",
+      "stateCode": "BA",
+      "territoryId": "2922656",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "NORDESTINA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922706",
+      "name": "Nova Canaã",
+      "stateCode": "BA",
+      "territoryId": "2922706",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "NOVA CANAA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922730",
+      "name": "Nova Fátima",
+      "stateCode": "BA",
+      "territoryId": "2922730",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "NOVA FATIMA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922755",
+      "name": "Nova Ibiá",
+      "stateCode": "BA",
+      "territoryId": "2922755",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "NOVA IBIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922805",
+      "name": "Nova Itarana",
+      "stateCode": "BA",
+      "territoryId": "2922805",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "NOVA ITARANA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922854",
+      "name": "Nova Redenção",
+      "stateCode": "BA",
+      "territoryId": "2922854",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "NOVA REDENCAO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2922904",
+      "name": "Nova Soure",
+      "stateCode": "BA",
+      "territoryId": "2922904",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "NOVA SOURE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2923001",
+      "name": "Nova Viçosa",
+      "stateCode": "BA",
+      "territoryId": "2923001",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "NOVA VICOSA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2923035",
+      "name": "Novo Horizonte",
+      "stateCode": "BA",
+      "territoryId": "2923035",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "NOVO HORIZONTE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2923050",
+      "name": "Novo Triunfo",
+      "stateCode": "BA",
+      "territoryId": "2923050",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "NOVO TRIUNFO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2923100",
+      "name": "Olindina",
+      "stateCode": "BA",
+      "territoryId": "2923100",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "OLINDINA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2923209",
+      "name": "Oliveira dos Brejinhos",
+      "stateCode": "BA",
+      "territoryId": "2923209",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "OLIVEIRA DOS BREJINHOS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2923308",
+      "name": "Ouriçangas",
+      "stateCode": "BA",
+      "territoryId": "2923308",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "OURICANGAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2923357",
+      "name": "Ourolândia",
+      "stateCode": "BA",
+      "territoryId": "2923357",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "OUROLÂNDIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2923407",
+      "name": "Palmas de Monte Alto",
+      "stateCode": "BA",
+      "territoryId": "2923407",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PALMAS DE MONTE ALTO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2923506",
+      "name": "Palmeiras",
+      "stateCode": "BA",
+      "territoryId": "2923506",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PALMEIRAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2923605",
+      "name": "Paramirim",
+      "stateCode": "BA",
+      "territoryId": "2923605",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PARAMIRIM"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2923704",
+      "name": "Paratinga",
+      "stateCode": "BA",
+      "territoryId": "2923704",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PARATINGA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2923803",
+      "name": "Paripiranga",
+      "stateCode": "BA",
+      "territoryId": "2923803",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PARIPIRANGA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2923902",
+      "name": "Pau Brasil",
+      "stateCode": "BA",
+      "territoryId": "2923902",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PAU BRASIL"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2924009",
+      "name": "Paulo Afonso",
+      "stateCode": "BA",
+      "territoryId": "2924009",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PAULO AFONSO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2924058",
+      "name": "Pé de Serra",
+      "stateCode": "BA",
+      "territoryId": "2924058",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PE DE SERRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2924108",
+      "name": "Pedrão",
+      "stateCode": "BA",
+      "territoryId": "2924108",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PEDRAO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2924207",
+      "name": "Pedro Alexandre",
+      "stateCode": "BA",
+      "territoryId": "2924207",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PEDRO ALEXANDRE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2924306",
+      "name": "Piatã",
+      "stateCode": "BA",
+      "territoryId": "2924306",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PIATA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2924405",
+      "name": "Pilão Arcado",
+      "stateCode": "BA",
+      "territoryId": "2924405",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PILAO ARCADO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2924504",
+      "name": "Pindaí",
+      "stateCode": "BA",
+      "territoryId": "2924504",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PINDAI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2924603",
+      "name": "Pindobaçu",
+      "stateCode": "BA",
+      "territoryId": "2924603",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PINDOBACU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2924652",
+      "name": "Pintadas",
+      "stateCode": "BA",
+      "territoryId": "2924652",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PINTADAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2924801",
+      "name": "Piritiba",
+      "stateCode": "BA",
+      "territoryId": "2924801",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PIRITIBA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2924900",
+      "name": "Planaltino",
+      "stateCode": "BA",
+      "territoryId": "2924900",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PLANALTINO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2925006",
+      "name": "Planalto",
+      "stateCode": "BA",
+      "territoryId": "2925006",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PLANALTO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2925105",
+      "name": "Poções",
+      "stateCode": "BA",
+      "territoryId": "2925105",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "POCOES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2925204",
+      "name": "Pojuca",
+      "stateCode": "BA",
+      "territoryId": "2925204",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "POJUCA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2925253",
+      "name": "Ponto Novo",
+      "stateCode": "BA",
+      "territoryId": "2925253",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PONTO NOVO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2925303",
+      "name": "Porto Seguro",
+      "stateCode": "BA",
+      "territoryId": "2925303",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PORTO SEGURO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2925402",
+      "name": "Potiraguá",
+      "stateCode": "BA",
+      "territoryId": "2925402",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "POTIRAGUÁ"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2925501",
+      "name": "Prado",
+      "stateCode": "BA",
+      "territoryId": "2925501",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PRADO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2925600",
+      "name": "Presidente Dutra",
+      "stateCode": "BA",
+      "territoryId": "2925600",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PRESIDENTE DUTRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2925709",
+      "name": "Presidente Jânio Quadros",
+      "stateCode": "BA",
+      "territoryId": "2925709",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PRESIDENTE JANIO QUADROS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2925758",
+      "name": "Presidente Tancredo Neves",
+      "stateCode": "BA",
+      "territoryId": "2925758",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "PRESIDENTE TANCREDO NEVES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2925808",
+      "name": "Queimadas",
+      "stateCode": "BA",
+      "territoryId": "2925808",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "QUEIMADAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2925907",
+      "name": "Quijingue",
+      "stateCode": "BA",
+      "territoryId": "2925907",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "QUIJINGUE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2925931",
+      "name": "Quixabeira",
+      "stateCode": "BA",
+      "territoryId": "2925931",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "QUIXABEIRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2925956",
+      "name": "Rafael Jambeiro",
+      "stateCode": "BA",
+      "territoryId": "2925956",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "RAFAEL JAMBEIRO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2926004",
+      "name": "Remanso",
+      "stateCode": "BA",
+      "territoryId": "2926004",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "REMANSO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2926103",
+      "name": "Retirolândia",
+      "stateCode": "BA",
+      "territoryId": "2926103",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "RETIROLANDIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2926202",
+      "name": "Riachão das Neves",
+      "stateCode": "BA",
+      "territoryId": "2926202",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "RIACHAO DAS NEVES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2926301",
+      "name": "Riachão do Jacuípe",
+      "stateCode": "BA",
+      "territoryId": "2926301",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "RIACHAO DO JACUIPE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2926400",
+      "name": "Riacho de Santana",
+      "stateCode": "BA",
+      "territoryId": "2926400",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "RIACHO DE SANTANA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2926509",
+      "name": "Ribeira do Amparo",
+      "stateCode": "BA",
+      "territoryId": "2926509",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "RIBEIRA DO AMPARO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2926608",
+      "name": "Ribeira do Pombal",
+      "stateCode": "BA",
+      "territoryId": "2926608",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "RIBEIRA DO POMBAL"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2926657",
+      "name": "Ribeirão do Largo",
+      "stateCode": "BA",
+      "territoryId": "2926657",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "RIBEIRÃO DO LARGO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2926707",
+      "name": "Rio de Contas",
+      "stateCode": "BA",
+      "territoryId": "2926707",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "RIO DE CONTAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2926806",
+      "name": "Rio do Antônio",
+      "stateCode": "BA",
+      "territoryId": "2926806",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "RIO DO ANTONIO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2926905",
+      "name": "Rio do Pires",
+      "stateCode": "BA",
+      "territoryId": "2926905",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "RIO DO PIRES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2927002",
+      "name": "Rio Real",
+      "stateCode": "BA",
+      "territoryId": "2927002",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "RIO REAL"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2927101",
+      "name": "Rodelas",
+      "stateCode": "BA",
+      "territoryId": "2927101",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "RODELAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2927200",
+      "name": "Ruy Barbosa",
+      "stateCode": "BA",
+      "territoryId": "2927200",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "RUY BARBOSA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2927309",
+      "name": "Salinas da Margarida",
+      "stateCode": "BA",
+      "territoryId": "2927309",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SALINAS DA MARGARIDA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2927408",
+      "name": "Salvador",
+      "stateCode": "BA",
+      "territoryId": "2927408",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SALVADOR"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2927507",
+      "name": "Santa Bárbara",
+      "stateCode": "BA",
+      "territoryId": "2927507",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SANTA BARBARA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2927606",
+      "name": "Santa Brígida",
+      "stateCode": "BA",
+      "territoryId": "2927606",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SANTA BRIGIDA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2927705",
+      "name": "Santa Cruz Cabrália",
+      "stateCode": "BA",
+      "territoryId": "2927705",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SANTA CRUZ CABRALIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2927804",
+      "name": "Santa Cruz da Vitória",
+      "stateCode": "BA",
+      "territoryId": "2927804",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SANTA CRUZ DA VITORIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2927903",
+      "name": "Santa Inês",
+      "stateCode": "BA",
+      "territoryId": "2927903",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SANTA INES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2928059",
+      "name": "Santa Luzia",
+      "stateCode": "BA",
+      "territoryId": "2928059",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SANTA LUZIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2928109",
+      "name": "Santa Maria da Vitória",
+      "stateCode": "BA",
+      "territoryId": "2928109",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SANTA MARIA DA VITORIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2928406",
+      "name": "Santa Rita de Cássia",
+      "stateCode": "BA",
+      "territoryId": "2928406",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SANTA RITA DE CASSIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2928000",
+      "name": "Santaluz",
+      "stateCode": "BA",
+      "territoryId": "2928000",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SANTALUZ"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2928208",
+      "name": "Santana",
+      "stateCode": "BA",
+      "territoryId": "2928208",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SANTANA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2928307",
+      "name": "Santanópolis",
+      "stateCode": "BA",
+      "territoryId": "2928307",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SANTANOPOLIS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2928604",
+      "name": "Santo Amaro",
+      "stateCode": "BA",
+      "territoryId": "2928604",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SANTO AMARO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2928703",
+      "name": "Santo Antônio de Jesus",
+      "stateCode": "BA",
+      "territoryId": "2928703",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SANTO ANTONIO DE JESUS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2928802",
+      "name": "Santo Estêvão",
+      "stateCode": "BA",
+      "territoryId": "2928802",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SANTO ESTEVAO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2928901",
+      "name": "São Desidério",
+      "stateCode": "BA",
+      "territoryId": "2928901",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAO DESIDERIO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2928950",
+      "name": "São Domingos",
+      "stateCode": "BA",
+      "territoryId": "2928950",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAO DOMINGOS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929107",
+      "name": "São Felipe",
+      "stateCode": "BA",
+      "territoryId": "2929107",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAO FELIPE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929008",
+      "name": "São Félix",
+      "stateCode": "BA",
+      "territoryId": "2929008",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAO FELIX"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929057",
+      "name": "São Félix do Coribe",
+      "stateCode": "BA",
+      "territoryId": "2929057",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAO FELIX DO CORIBE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929206",
+      "name": "São Francisco do Conde",
+      "stateCode": "BA",
+      "territoryId": "2929206",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAO FRANCISCO DO CONDE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929255",
+      "name": "São Gabriel",
+      "stateCode": "BA",
+      "territoryId": "2929255",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAO GABRIEL"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929305",
+      "name": "São Gonçalo dos Campos",
+      "stateCode": "BA",
+      "territoryId": "2929305",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAO GONCALO DOS CAMPOS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929354",
+      "name": "São José da Vitória",
+      "stateCode": "BA",
+      "territoryId": "2929354",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAO JOSE DA VITORIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929370",
+      "name": "São José do Jacuípe",
+      "stateCode": "BA",
+      "territoryId": "2929370",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAO JOSE DO JACUIPE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929404",
+      "name": "São Miguel das Matas",
+      "stateCode": "BA",
+      "territoryId": "2929404",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAO MIGUEL DAS MATAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929503",
+      "name": "São Sebastião do Passé",
+      "stateCode": "BA",
+      "territoryId": "2929503",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAO SEBASTIAO DO PASSE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929602",
+      "name": "Sapeaçu",
+      "stateCode": "BA",
+      "territoryId": "2929602",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAPEACU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929701",
+      "name": "Sátiro Dias",
+      "stateCode": "BA",
+      "territoryId": "2929701",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SATIRO DIAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929750",
+      "name": "Saubara",
+      "stateCode": "BA",
+      "territoryId": "2929750",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAUBARA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929800",
+      "name": "Saúde",
+      "stateCode": "BA",
+      "territoryId": "2929800",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SAUDE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2929909",
+      "name": "Seabra",
+      "stateCode": "BA",
+      "territoryId": "2929909",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SEABRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2930006",
+      "name": "Sebastião Laranjeiras",
+      "stateCode": "BA",
+      "territoryId": "2930006",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SEBASTIAO LARANJEIRAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2930105",
+      "name": "Senhor do Bonfim",
+      "stateCode": "BA",
+      "territoryId": "2930105",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SENHOR DO BONFIM"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2930204",
+      "name": "Sento Sé",
+      "stateCode": "BA",
+      "territoryId": "2930204",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SENTO SE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2930154",
+      "name": "Serra do Ramalho",
+      "stateCode": "BA",
+      "territoryId": "2930154",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SERRA DO RAMALHO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2930303",
+      "name": "Serra Dourada",
+      "stateCode": "BA",
+      "territoryId": "2930303",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SERRA DOURADA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2930402",
+      "name": "Serra Preta",
+      "stateCode": "BA",
+      "territoryId": "2930402",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SERRA PRETA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2930501",
+      "name": "Serrinha",
+      "stateCode": "BA",
+      "territoryId": "2930501",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SERRINHA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2930600",
+      "name": "Serrolândia",
+      "stateCode": "BA",
+      "territoryId": "2930600",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SERROLANDIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2930709",
+      "name": "Simões Filho",
+      "stateCode": "BA",
+      "territoryId": "2930709",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SIMOES FILHO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2930758",
+      "name": "Sítio do Mato",
+      "stateCode": "BA",
+      "territoryId": "2930758",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SITIO DO MATO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2930766",
+      "name": "Sítio do Quinto",
+      "stateCode": "BA",
+      "territoryId": "2930766",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SITIO DO QUINTO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2930774",
+      "name": "Sobradinho",
+      "stateCode": "BA",
+      "territoryId": "2930774",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SOBRADINHO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2930808",
+      "name": "Souto Soares",
+      "stateCode": "BA",
+      "territoryId": "2930808",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "SOUTO SOARES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2930907",
+      "name": "Tabocas do Brejo Velho",
+      "stateCode": "BA",
+      "territoryId": "2930907",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "TABOCAS DO BREJO VELHO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2931004",
+      "name": "Tanhaçu",
+      "stateCode": "BA",
+      "territoryId": "2931004",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "TANHACU"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2931053",
+      "name": "Tanque Novo",
+      "stateCode": "BA",
+      "territoryId": "2931053",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "TANQUE NOVO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2931103",
+      "name": "Tanquinho",
+      "stateCode": "BA",
+      "territoryId": "2931103",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "TANQUINHO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2931202",
+      "name": "Taperoá",
+      "stateCode": "BA",
+      "territoryId": "2931202",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "TAPEROA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2931301",
+      "name": "Tapiramutá",
+      "stateCode": "BA",
+      "territoryId": "2931301",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "TAPIRAMUTA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2931350",
+      "name": "Teixeira de Freitas",
+      "stateCode": "BA",
+      "territoryId": "2931350",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "TEIXEIRA DE FREITAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2931400",
+      "name": "Teodoro Sampaio",
+      "stateCode": "BA",
+      "territoryId": "2931400",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "TEODORO SAMPAIO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2931509",
+      "name": "Teofilândia",
+      "stateCode": "BA",
+      "territoryId": "2931509",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "TEOFILANDIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2931608",
+      "name": "Teolândia",
+      "stateCode": "BA",
+      "territoryId": "2931608",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "TEOLANDIA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2931707",
+      "name": "Terra Nova",
+      "stateCode": "BA",
+      "territoryId": "2931707",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "TERRA NOVA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2931806",
+      "name": "Tremedal",
+      "stateCode": "BA",
+      "territoryId": "2931806",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "TREMEDAL"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2931905",
+      "name": "Tucano",
+      "stateCode": "BA",
+      "territoryId": "2931905",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "TUCANO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2932002",
+      "name": "Uauá",
+      "stateCode": "BA",
+      "territoryId": "2932002",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "UAUA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2932101",
+      "name": "Ubaíra",
+      "stateCode": "BA",
+      "territoryId": "2932101",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "UBAIRA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2932200",
+      "name": "Ubaitaba",
+      "stateCode": "BA",
+      "territoryId": "2932200",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "UBAITABA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2932309",
+      "name": "Ubatã",
+      "stateCode": "BA",
+      "territoryId": "2932309",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "UBATA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2932408",
+      "name": "Uibaí",
+      "stateCode": "BA",
+      "territoryId": "2932408",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "UIBAI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2932457",
+      "name": "Umburanas",
+      "stateCode": "BA",
+      "territoryId": "2932457",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "UMBURANAS"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2932507",
+      "name": "Una",
+      "stateCode": "BA",
+      "territoryId": "2932507",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "UNA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2932606",
+      "name": "Urandi",
+      "stateCode": "BA",
+      "territoryId": "2932606",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "URANDI"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2932705",
+      "name": "Uruçuca",
+      "stateCode": "BA",
+      "territoryId": "2932705",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "URUCUCA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2932804",
+      "name": "Utinga",
+      "stateCode": "BA",
+      "territoryId": "2932804",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "UTINGA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2932903",
+      "name": "Valença",
+      "stateCode": "BA",
+      "territoryId": "2932903",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "VALENCA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2933000",
+      "name": "Valente",
+      "stateCode": "BA",
+      "territoryId": "2933000",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "VALENTE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2933059",
+      "name": "Várzea da Roça",
+      "stateCode": "BA",
+      "territoryId": "2933059",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "VARZEA DA ROCA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2933109",
+      "name": "Várzea do Poço",
+      "stateCode": "BA",
+      "territoryId": "2933109",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "VARZEA DO POCO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2933158",
+      "name": "Várzea Nova",
+      "stateCode": "BA",
+      "territoryId": "2933158",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "VARZEA NOVA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2933174",
+      "name": "Varzedo",
+      "stateCode": "BA",
+      "territoryId": "2933174",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "VARZEDO"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2933208",
+      "name": "Vera Cruz",
+      "stateCode": "BA",
+      "territoryId": "2933208",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "VERA CRUZ"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2933257",
+      "name": "Vereda",
+      "stateCode": "BA",
+      "territoryId": "2933257",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "VEREDA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2933307",
+      "name": "Vitória da Conquista",
+      "stateCode": "BA",
+      "territoryId": "2933307",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "VITORIA DA CONQUISTA"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2933406",
+      "name": "Wagner",
+      "stateCode": "BA",
+      "territoryId": "2933406",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "WAGNER"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2933455",
+      "name": "Wanderley",
+      "stateCode": "BA",
+      "territoryId": "2933455",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "WANDERLEY"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2933505",
+      "name": "Wenceslau Guimarães",
+      "stateCode": "BA",
+      "territoryId": "2933505",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "WENCESLAU GUIMARAES"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "ba_2933604",
+      "name": "Xique-Xique",
+      "stateCode": "BA",
+      "territoryId": "2933604",
+      "spiderType": "diario-ba",
+      "config": {
+        "url": "https://www.diariooficialba.com.br/",
+        "cityName": "XIQUE-XIQUE"
+      },
+      "gazetteScope": "city"
+    }
+  ]
+}

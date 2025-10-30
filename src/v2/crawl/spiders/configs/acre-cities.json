@@ -1,0 +1,291 @@
+{
+  "total": 22,
+  "municipalities": [
+    {
+      "id": "ac_1200013",
+      "name": "Acrelândia",
+      "stateCode": "AC",
+      "territoryId": "1200013",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Acrelândia",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200054",
+      "name": "Assis Brasil",
+      "stateCode": "AC",
+      "territoryId": "1200054",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Assis Brasil",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200104",
+      "name": "Brasiléia",
+      "stateCode": "AC",
+      "territoryId": "1200104",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Brasiléia",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200138",
+      "name": "Bujari",
+      "stateCode": "AC",
+      "territoryId": "1200138",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Bujari",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200179",
+      "name": "Capixaba",
+      "stateCode": "AC",
+      "territoryId": "1200179",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Capixaba",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200203",
+      "name": "Cruzeiro do Sul",
+      "stateCode": "AC",
+      "territoryId": "1200203",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Cruzeiro do Sul",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200252",
+      "name": "Epitaciolândia",
+      "stateCode": "AC",
+      "territoryId": "1200252",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Epitaciolândia",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200302",
+      "name": "Feijó",
+      "stateCode": "AC",
+      "territoryId": "1200302",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Feijó",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200328",
+      "name": "Jordão",
+      "stateCode": "AC",
+      "territoryId": "1200328",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Jordão",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200336",
+      "name": "Mâncio Lima",
+      "stateCode": "AC",
+      "territoryId": "1200336",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Mâncio Lima",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200344",
+      "name": "Manoel Urbano",
+      "stateCode": "AC",
+      "territoryId": "1200344",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Manoel Urbano",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200351",
+      "name": "Marechal Thaumaturgo",
+      "stateCode": "AC",
+      "territoryId": "1200351",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Marechal Thaumaturgo",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200385",
+      "name": "Plácido de Castro",
+      "stateCode": "AC",
+      "territoryId": "1200385",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Plácido de Castro",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200393",
+      "name": "Porto Acre",
+      "stateCode": "AC",
+      "territoryId": "1200393",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Porto Acre",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200401",
+      "name": "Porto Walter",
+      "stateCode": "AC",
+      "territoryId": "1200401",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Porto Walter",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200427",
+      "name": "Rio Branco",
+      "stateCode": "AC",
+      "territoryId": "1200427",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Rio Branco",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200435",
+      "name": "Rodrigues Alves",
+      "stateCode": "AC",
+      "territoryId": "1200435",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Rodrigues Alves",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200450",
+      "name": "Santa Rosa do Purus",
+      "stateCode": "AC",
+      "territoryId": "1200450",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Santa Rosa do Purus",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200500",
+      "name": "Sena Madureira",
+      "stateCode": "AC",
+      "territoryId": "1200500",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Sena Madureira",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200609",
+      "name": "Senador Guiomard",
+      "stateCode": "AC",
+      "territoryId": "1200609",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Senador Guiomard",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200708",
+      "name": "Tarauacá",
+      "stateCode": "AC",
+      "territoryId": "1200708",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Tarauacá",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    },
+    {
+      "id": "ac_1200807",
+      "name": "Xapuri",
+      "stateCode": "AC",
+      "territoryId": "1200807",
+      "spiderType": "acre",
+      "config": {
+        "type": "acre",
+        "cityName": "Xapuri",
+        "power": "executive_legislative"
+      },
+      "gazetteScope": "state"
+    }
+  ]
+}
