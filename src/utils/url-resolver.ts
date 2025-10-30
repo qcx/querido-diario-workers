@@ -8,7 +8,7 @@ import { loadHTML } from './html-parser';
 
 export interface UrlResolverOptions {
   maxRedirects?: number;
-  timeout?: number;
+  timeout?: number | null;
   retries?: number;
   retryDelay?: number;
 }
@@ -145,7 +145,7 @@ export async function resolveFinalUrl(
 async function resolveUrlWithRedirects(
   url: string,
   maxRedirects: number,
-  timeout: number
+  timeout: number | null
 ): Promise<string> {
   const isPrivateHost = (host: string) => {
     // IPv4
@@ -170,7 +170,7 @@ async function resolveUrlWithRedirects(
   while (redirectCount < maxRedirects) {
     assertSafe(currentUrl);
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), timeout);
+    const timeoutId = timeout !== null ? setTimeout(() => controller.abort(), timeout) : null;
 
     try {
       // Use HEAD request to check for redirects (lightweight)
@@ -183,7 +183,9 @@ async function resolveUrlWithRedirects(
         signal: controller.signal,
       });
 
-      clearTimeout(timeoutId);
+      if (timeoutId !== null) {
+        clearTimeout(timeoutId);
+      }
 
       // Fallback: some servers don't implement HEAD correctly
       if (response.status === 405 || response.status === 501) {
@@ -192,7 +194,7 @@ async function resolveUrlWithRedirects(
           status: response.status,
         });
         const fbController = new AbortController();
-        const fbTimeoutId = setTimeout(() => fbController.abort(), timeout);
+        const fbTimeoutId = timeout !== null ? setTimeout(() => fbController.abort(), timeout) : null;
         try {
           response = await fetch(currentUrl, {
             method: 'GET',
@@ -204,7 +206,9 @@ async function resolveUrlWithRedirects(
             signal: fbController.signal,
           });
         } finally {
-          clearTimeout(fbTimeoutId);
+          if (fbTimeoutId !== null) {
+            clearTimeout(fbTimeoutId);
+          }
         }
       }
 
@@ -252,7 +256,7 @@ async function resolveUrlWithRedirects(
           
           // Fetch the HTML content (need GET instead of HEAD) with its own timeout
           const htmlController = new AbortController();
-          const htmlTimeoutId = setTimeout(() => htmlController.abort(), timeout);
+          const htmlTimeoutId = timeout !== null ? setTimeout(() => htmlController.abort(), timeout) : null;
           let htmlResponse: Response | undefined;
           try {
             htmlResponse = await fetch(currentUrl, {
@@ -264,7 +268,9 @@ async function resolveUrlWithRedirects(
               signal: htmlController.signal,
             });
           } finally {
-            clearTimeout(htmlTimeoutId);
+            if (htmlTimeoutId !== null) {
+              clearTimeout(htmlTimeoutId);
+            }
           }
             
           try {
@@ -334,11 +340,14 @@ async function resolveUrlWithRedirects(
       
       return currentUrl;
     } catch (error) {
-      clearTimeout(timeoutId);
+      if (timeoutId !== null) {
+        clearTimeout(timeoutId);
+      }
       
       // Handle timeout
       if (error instanceof Error && error.name === 'AbortError') {
-        throw new Error(`Request timeout after ${timeout}ms`);
+        const timeoutMsg = timeout !== null ? `Request timeout after ${timeout}ms` : 'Request was aborted';
+        throw new Error(timeoutMsg);
       }
       
       throw error;

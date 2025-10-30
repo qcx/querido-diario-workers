@@ -1,6 +1,6 @@
 import { BaseSpider } from './base-spider';
 import { SpiderConfig, Gazette, DateRange, DomScConfig } from '../../types';
-import { logger } from '../../utils/logger';
+import { logger } from '../../../../utils/logger'
 
 /**
  * Spider para o DOM/SC - Diário Oficial dos Municípios de Santa Catarina

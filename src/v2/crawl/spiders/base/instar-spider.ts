@@ -1,9 +1,9 @@
 import { BaseSpider } from './base-spider';
 import { SpiderConfig, Gazette, DateRange, InstarConfig } from '../../types';
-import { logger } from '../../utils/logger';
+import { logger } from '../../../../utils/logger'
 // @ts-ignore
 import { parse } from 'node-html-parser';
-import { formatBrazilianDate } from '../../utils/date-utils';
+import { formatBrazilianDate } from '../../../../utils/date-utils';
 
 /**
  * BaseInstarSpider implementation for Cloudflare Workers

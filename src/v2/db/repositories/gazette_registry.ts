@@ -44,7 +44,7 @@ export class GazetteRegistryRepository {
     try {
       resolvedUrl = await resolveFinalUrl(gazette.fileUrl, {
         maxRedirects: 3,
-        timeout: 1000,
+        timeout: null,
         retries: 2
       });
     } catch (error) {
@@ -102,5 +102,12 @@ export class GazetteRegistryRepository {
     }).onConflictDoNothing().returning();
 
     return crawlRecord[0];
+  }
+
+  async updateGazetteStatus(gazetteId: string, status: string): Promise<void> {
+    const db = this.dbClient.getDb();
+    await db.update(schema.gazetteRegistry)
+      .set({ status })
+      .where(eq(schema.gazetteRegistry.id, gazetteId));
   }
 }

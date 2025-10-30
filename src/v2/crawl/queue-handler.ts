@@ -99,7 +99,10 @@ export class CrawlQueueHandler {
 
     if(gazettes.length > 0) {
       for(const gazette of gazettes) {
-        await gazetteCallback(gazette, crawlJobId);
+        await gazetteCallback({
+          ...gazette,
+          spiderId: queueMessage.spiderId,
+        }, crawlJobId);
       }
     }
 

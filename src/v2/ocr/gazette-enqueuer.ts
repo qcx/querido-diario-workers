@@ -1,5 +1,4 @@
 import { DatabaseClient, getDatabase, schema, GazetteRegistryRepository } from '../db';
-import { DrizzleD1Database } from 'drizzle-orm/d1';
 
 interface Gazette {
   date: string;
@@ -17,13 +16,11 @@ export interface GazetteEnqueuerEnv extends Env {}
 
 export class GazetteEnqueuer {
   private databaseClient!: DatabaseClient;
-  private db!: DrizzleD1Database<typeof schema>;
   private gazetteRegistryRepository!: GazetteRegistryRepository;
   
   constructor(private env: GazetteEnqueuerEnv) {
     this.env = env;
     this.databaseClient = getDatabase(this.env);
-    this.db = this.databaseClient.getDb();
     this.gazetteRegistryRepository = new GazetteRegistryRepository(this.databaseClient);
   }
 

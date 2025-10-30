@@ -1,7 +1,7 @@
 import { BaseSpider } from './base-spider';
-import { SpiderConfig, Gazette, DateRange, SigpubConfig } from '../../types';
-import { logger } from '../../utils/logger';
-import { toISODate } from '../../utils/date-utils';
+import { SpiderConfig, Gazette, DateRange, SigpubConfig } from '../../../../types';
+import { logger } from '../../../../utils/logger';
+import { toISODate } from '../../../../utils/date-utils';
 
 /**
  * Improved SigpubSpider using Cloudflare Browser Rendering

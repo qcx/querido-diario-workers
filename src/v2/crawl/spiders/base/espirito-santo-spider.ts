@@ -1,7 +1,7 @@
 import { BaseSpider } from './base-spider';
 import { SpiderConfig, Gazette, DateRange, EspiritoSantoConfig } from '../../types';
-import { logger } from '../../utils/logger';
-import { toISODate } from '../../utils/date-utils';
+import { logger } from '../../../../utils/logger'
+import { toISODate } from '../../../../utils/date-utils';
 
 /**
  * Spider para o Diário Oficial dos Municípios do Espírito Santo (DOM - AMUNES)

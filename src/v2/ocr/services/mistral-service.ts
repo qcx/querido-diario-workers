@@ -177,11 +177,10 @@ export class MistralService {
   /**
    * Process a PDF using Mistral OCR API
    * @param pdfUrl - URL of the PDF to process
-   * @param jobId - Job identifier for logging
    * @returns Extracted text and pages processed
    * @throws Error if OCR fails
    */
-  async processPdf(pdfUrl: string, jobId: string): Promise<MistralOcrResult> {
+  async processPdfUrl(pdfUrl: string): Promise<MistralOcrResult> {
     const payload = {
       model: this.config.model,
       document: {
@@ -201,38 +200,53 @@ export class MistralService {
       signal: AbortSignal.timeout(this.config.timeout!),
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(
-        `Mistral OCR API error: ${response.status} - ${errorText}`
-      );
-    }
-
-    const result: unknown = await response.json();
+    const result: MistralOcrResponse = await response.json();
     
-    if (!isMistralOcrResponse(result)) {
-      throw new Error(
-        `Invalid response format from Mistral API: ${JSON.stringify(result).substring(0, 500)}`
-      );
-    }
-    
-    if (!result.pages || result.pages.length === 0) {
-      throw new Error(
-        `No pages in Mistral OCR response for job ${jobId}`
-      );
-    }
-
     // Extract markdown from all pages and concatenate
     const extractedText = result.pages
       .map((page: MistralPage) => page.markdown || '')
       .filter((text: string) => text.length > 0)
       .join('\n\n---\n\n');
 
-    if (!extractedText) {
-      throw new Error(
-        `No text extracted from PDF for job ${jobId}`
-      );
-    }
+    return { 
+      extractedText, 
+      pagesProcessed: result.pages.length 
+    };
+  }
+
+  /**
+   * Process a PDF using Mistral OCR API with base64 data
+   * @param pdfBase64 - Base64-encoded PDF data
+   * @returns Extracted text and pages processed
+   * @throws Error if OCR fails
+   */
+  async processPdfBase64(pdfBase64: string): Promise<MistralOcrResult> {
+    const payload = {
+      model: this.config.model,
+      document: {
+        type: 'document_base64',
+        document_base64: pdfBase64
+      },
+      include_image_base64: false
+    };
+
+    const response = await fetch(this.config.endpoint!, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${this.config.apiKey}`,
+      },
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(this.config.timeout!),
+    });
+
+    const result: MistralOcrResponse = await response.json();
+    
+    // Extract markdown from all pages and concatenate
+    const extractedText = result.pages
+      .map((page: MistralPage) => page.markdown || '')
+      .filter((text: string) => text.length > 0)
+      .join('\n\n---\n\n');
 
     return { 
       extractedText, 

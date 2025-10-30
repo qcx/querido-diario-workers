@@ -1,9 +1,9 @@
-import { Gazette, SpiderConfig, DateRange } from '../../types';
-import { fromISODate, isDateInRange, toISODate, getCurrentTimestamp } from '../../utils/date-utils';
-import { fetchHTML } from '../../utils/http-client';
-import { loadHTML, CheerioAPI } from '../../utils/html-parser';
-import { logger } from '../../utils/logger';
-import { resolveFinalUrl } from '../../utils/url-resolver';
+import { Gazette, SpiderConfig, DateRange } from '../../../../types';
+import { fromISODate, isDateInRange, toISODate, getCurrentTimestamp } from '../../../../utils/date-utils';
+import { fetchHTML } from '../../../../utils/http-client';
+import { loadHTML, CheerioAPI } from '../../../../utils/html-parser';
+import { logger } from '../../../../utils/logger'
+import { resolveFinalUrl } from '../../../../utils/url-resolver';
 
 /**
  * Abstract base class for all spiders

@@ -1,6 +1,6 @@
 import { BaseSpider } from './base-spider';
 import { SpiderConfig, Gazette, DateRange, RondoniaConfig } from '../../types';
-import { logger } from '../../utils/logger';
+import { logger } from '../../../../utils/logger'
 
 /**
  * RondoniaSpider implementation for Cloudflare Workers

@@ -1,6 +1,6 @@
 import { BaseSpider } from './base-spider';
 import { SpiderConfig, Gazette, DateRange, AdiariosConfig } from '../../types';
-import { logger } from '../../utils/logger';
+import { logger } from '../../../../utils/logger'
 // @ts-ignore
 import { parse } from 'node-html-parser';
 

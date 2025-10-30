@@ -1,7 +1,7 @@
 import { Gazette, SpiderConfig, DateRange, DoemConfig } from '../../types';
 import { BaseSpider } from './base-spider';
-import { generateMonthlySequence, parseBrazilianDate } from '../../utils/date-utils';
-import { logger } from '../../utils/logger';
+import { generateMonthlySequence, parseBrazilianDate } from '../../../../utils/date-utils';
+import { logger } from '../../../../utils/logger'
 import { Cheerio, CheerioAPI } from '../../utils/html-parser';
 
 /**

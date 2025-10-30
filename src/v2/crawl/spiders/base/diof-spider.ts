@@ -1,6 +1,6 @@
 import { BaseSpider } from './base-spider';
 import { SpiderConfig, Gazette, DateRange, DiofConfig } from '../../types';
-import { logger } from '../../utils/logger';
+import { logger } from '../../../../utils/logger'
 
 /**
  * BaseDiofSpider implementation for Cloudflare Workers

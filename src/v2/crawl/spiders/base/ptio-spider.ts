@@ -2,7 +2,7 @@ import { BaseSpider } from './base-spider';
 import { Gazette } from '../../types/gazette';
 import { SpiderConfig, PtioConfig } from '../../types/spider-config';
 import { DateRange } from '../../types';
-import { logger } from '../../utils/logger';
+import { logger } from '../../../../utils/logger'
 
 /**
  * Spider for PTIO platform (portaldatransparencia.com.br)

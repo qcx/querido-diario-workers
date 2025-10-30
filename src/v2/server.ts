@@ -1,7 +1,7 @@
 /// <reference path="../../worker-configuration.d.ts" />
 
 import { handleCrawlRequest, CrawlQueueMessage, CrawlQueueHandler } from './crawl';
-import { GazetteEnqueuer } from './ocr';
+import { GazetteEnqueuer, OcrQueueHandler, OcrQueueMessage } from './ocr';
 
 /**
  * Goodfellow Worker - Unified worker handling all pipeline stages
@@ -47,16 +47,23 @@ async function handleQueue(
 
   switch (queueName) {
     case 'goodfellow-crawl-queue':
+
       const gazetteEnqueuer = new GazetteEnqueuer(env);
       const crawlQueueHandler = new CrawlQueueHandler(env);
 
       await crawlQueueHandler.batchHandler(batch as MessageBatch<CrawlQueueMessage>, (gazette, crawlJobId) => {
         return gazetteEnqueuer.enqueueGazette(gazette, crawlJobId);
       });
+
       break;
 
-      case 'goodfellow-ocr-queue':
-        break;
+    case 'goodfellow-ocr-queue':
+      const ocrQueueHandler = new OcrQueueHandler(env);
+
+      await ocrQueueHandler.batchHandler(batch as MessageBatch<OcrQueueMessage>, async (message) => {
+        console.log('done')
+      });
+      break;
     default:
       throw new Error(`Unknown queue: ${queueName}`);
   }

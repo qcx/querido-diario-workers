@@ -3,7 +3,7 @@ import { BaseSpider } from './base-spider';
 import { Gazette } from '../../types/gazette';
 import { SpiderConfig, AdiariosConfig } from '../../types/spider-config';
 import { DateRange } from '../../types';
-import { logger } from '../../utils/logger';
+import { logger } from '../../../../utils/logger'
 
 /**
  * Spider for ADiarios V2 platform (Layout 2)

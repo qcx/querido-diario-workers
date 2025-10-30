@@ -1,6 +1,6 @@
 import { BaseSpider } from './base-spider';
 import { SpiderConfig, Gazette, DateRange } from '../../types/index';
-import { logger } from '../../utils/logger';
+import { logger } from '../../../../utils/logger'
 
 export class BaseGazetteSpider extends BaseSpider {
   protected spiderConfig: SpiderConfig;

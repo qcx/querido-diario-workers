@@ -1,7 +1,7 @@
 import { BaseSpider } from './base-spider';
 import { SpiderConfig, Gazette, DateRange, AcreConfig } from '../../types';
-import { logger } from '../../utils/logger';
-import { formatDateForUrl, formatDateBR } from '../../utils/date-utils';
+import { logger } from '../../../../utils/logger'
+import { formatDateForUrl, formatDateBR } from '../../../../utils/date-utils';
 
 /**
  * Spider para o Diário Oficial do Estado do Acre (DOE/AC)

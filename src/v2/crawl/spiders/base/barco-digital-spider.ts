@@ -2,8 +2,8 @@ import { BaseSpider } from './base-spider';
 import { Gazette } from '../../types/gazette';
 import { SpiderConfig, BarcoDigitalConfig } from '../../types/spider-config';
 import { DateRange } from '../../types';
-import { getMonthlySequence } from '../../utils/date-utils';
-import { logger } from '../../utils/logger';
+import { getMonthlySequence } from '../../../../utils/date-utils';
+import { logger } from '../../../../utils/logger'
 
 /**
  * Spider for BarcoDigital platform
