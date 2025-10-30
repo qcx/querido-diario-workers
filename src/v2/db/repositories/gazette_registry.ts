@@ -2,7 +2,7 @@
  * Drizzle-based Crawl Jobs Repository
  */
 
-import { eq } from 'drizzle-orm';
+import { and, eq, sql } from 'drizzle-orm';
 import { DatabaseClient } from '../index';
 import { schema } from '../index';
 import { resolveFinalUrl } from '../../../utils/url-resolver';
@@ -70,6 +70,15 @@ export class GazetteRegistryRepository {
     }).onConflictDoNothing().returning();
 
     return newGazette[0];
+  }
+
+  async startProcessing(gazetteId: string): Promise<typeof schema.gazetteRegistry.$inferSelect | null> {
+    const db = this.dbClient.getDb();
+    const result = await db.update(schema.gazetteRegistry).set({ status: 'ocr_processing' }).where(and(
+          eq(schema.gazetteRegistry.id, gazetteId),
+          sql`status NOT IN ('ocr_processing', 'ocr_retrying', 'ocr_success')`
+        )).returning();
+    return result[0];
   }
 
   async findById(id: string): Promise<typeof schema.gazetteRegistry.$inferSelect> {

@@ -56,7 +56,6 @@ async function handleQueue(
       break;
 
       case 'goodfellow-ocr-queue':
-        await processOcrBatch(batch as MessageBatch<OcrQueueMessage>, env as OcrProcessorEnv);
         break;
     default:
       throw new Error(`Unknown queue: ${queueName}`);
