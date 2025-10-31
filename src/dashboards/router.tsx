@@ -22,6 +22,10 @@ import {
   telemetryLoader,
   GazettesPage,
   gazettesLoader,
+  GazetteDetailPage,
+  gazetteDetailLoader,
+  AnalysisResultsPage,
+  analysisResultsLoader,
   OcrPage,
   ocrLoader,
   WebhooksPage,
@@ -58,6 +62,16 @@ export const dashboardRoutes: RouteObject[] = [
     path: '/dashboard/gazettes',
     element: <GazettesPage />,
     loader: gazettesLoader,
+  },
+  {
+    path: '/dashboard/gazettes/:id',
+    element: <GazetteDetailPage />,
+    loader: gazetteDetailLoader,
+  },
+  {
+    path: '/dashboard/analysis-results',
+    element: <AnalysisResultsPage />,
+    loader: analysisResultsLoader,
   },
   {
     path: '/dashboard/ocr',

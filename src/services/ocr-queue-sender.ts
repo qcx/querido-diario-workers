@@ -28,7 +28,14 @@ export class OcrQueueSender {
   /**
    * Send a single gazette to OCR queue
    */
-  async sendGazette(gazette: Gazette, spiderId: string, crawlJobId?: string, gazetteCrawlId?: string, spiderType?: string): Promise<void> {
+  async sendGazette(
+    gazette: Gazette, 
+    spiderId: string, 
+    crawlJobId?: string, 
+    gazetteCrawlId?: string, 
+    spiderType?: string,
+    gazetteScope?: 'city' | 'state' | 'association'
+  ): Promise<void> {
     if (!this.enabled) {
       return;
     }
@@ -48,6 +55,7 @@ export class OcrQueueSender {
         crawlJobId: crawlJobId,
         gazetteCrawlId: gazetteCrawlId,
         spiderType: spiderType,
+        gazetteScope: gazetteScope, // Pass gazette scope for downstream filtering
       },
     };
 
