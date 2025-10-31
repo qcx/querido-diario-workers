@@ -290,7 +290,7 @@ function getAnalysisConfig(env: AnalysisProcessorEnv): AnalysisConfig {
       concursoValidator: {
         enabled: !!env.OPENAI_API_KEY,
         priority: 2,  // Run after keyword analyzer, before general AI
-        timeout: 45000,  // Increased from 15s to 45s for state gazettes
+        timeout: 90000,  // Increased from 45s to 90s for state gazettes
         apiKey: env.OPENAI_API_KEY,
         model: 'gpt-4o-mini',
       },

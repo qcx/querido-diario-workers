@@ -70,6 +70,13 @@ export interface GazetteAnalysis {
     editionNumber?: string;
     power?: string;
     isExtraEdition?: boolean;
+    textLengths?: {
+      originalOcrText: number;
+      consideredForAnalysis: number;
+      reductionPercentage?: number;
+      filtered: boolean;
+    };
+    [key: string]: unknown;
   };
 }
 

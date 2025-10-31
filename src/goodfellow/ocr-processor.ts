@@ -1045,6 +1045,10 @@ export async function processOcrBatch(
             crawlJobId,
             spiderId: ocrMessage.spiderId,
             spiderType: ocrMessage.metadata?.spiderType,
+            gazetteScope: ocrMessage.metadata?.gazetteScope, // Pass through for filtering
+            requestedTerritories: ocrMessage.metadata?.gazetteScope === 'state' 
+              ? [ocrMessage.territoryId] // For state gazettes, filter to this territory
+              : undefined,
           },
         });
       }

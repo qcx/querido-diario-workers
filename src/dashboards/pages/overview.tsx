@@ -6,18 +6,22 @@ import type { LoaderFunctionArgs } from 'react-router-dom';
 import { DashboardLayout } from '../layout';
 import { StatCard, Card, Table, StatusBadge } from '../components';
 import { formatRelativeTime, formatNumber } from '../utils/formatters';
-import { getOverviewStats, type OverviewStats } from '../services/dashboard-data';
+import { getOverviewStats, type OverviewStats, getAnalysisPipelineStats } from '../services/dashboard-data';
 import { getDatabase } from '../../services/database';
 import { useLoaderData } from '../loader-context';
 
 export async function loader({ context }: LoaderFunctionArgs) {
   const db = getDatabase(context.env as any);
   const stats = await getOverviewStats(db);
-  return { stats };
+  const pipelineStats = await getAnalysisPipelineStats(db);
+  return { stats, pipelineStats };
 }
 
 export function OverviewPage() {
-  const { stats } = useLoaderData<{ stats: OverviewStats }>();
+  const { stats, pipelineStats } = useLoaderData<{ 
+    stats: OverviewStats;
+    pipelineStats: any;
+  }>();
 
   const successRate =
     stats.ocrJobsSuccess + stats.ocrJobsFailed > 0
@@ -40,9 +44,9 @@ export function OverviewPage() {
             subtitle="In registry"
           />
           <StatCard
-            title="Active Crawl Jobs"
-            value={stats.activeCrawlJobs}
-            subtitle={`of ${stats.totalCrawlJobs} total`}
+            title="Pipeline Success"
+            value={`${pipelineStats.pipelineSuccessRate}%`}
+            subtitle={`${formatNumber(pipelineStats.gazettesWithAnalysis)} analyzed`}
           />
           <StatCard
             title="Unresolved Errors"
@@ -54,6 +58,99 @@ export function OverviewPage() {
             value={`${successRate}%`}
             subtitle={`${stats.ocrJobsSuccess} successful`}
           />
+        </div>
+
+        {/* Pipeline & Processing Metrics */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <Card title="Text Processing Efficiency">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-600">Avg OCR Text:</span>
+                <span className="font-semibold text-gray-900">
+                  {(pipelineStats.avgOcrTextLength / 1000).toFixed(0)}K chars
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-600">Avg Analyzed:</span>
+                <span className="font-semibold text-gray-900">
+                  {(pipelineStats.avgAnalyzedTextLength / 1000).toFixed(0)}K chars
+                </span>
+              </div>
+              {pipelineStats.avgReductionPercentage > 0 && (
+                <div className="flex items-center justify-between pt-2 border-t border-gray-200">
+                  <span className="text-sm text-gray-600">Avg Reduction:</span>
+                  <span className="font-semibold text-green-600">
+                    -{pipelineStats.avgReductionPercentage}%
+                  </span>
+                </div>
+              )}
+            </div>
+          </Card>
+
+          <Card title="Analysis Quality">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-600">Total Findings:</span>
+                <span className="font-semibold text-blue-600">
+                  {formatNumber(stats.totalConcursos)}
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-600">Avg High Conf.:</span>
+                <span className="font-semibold text-green-600">
+                  {pipelineStats.avgHighConfidenceFindings.toFixed(1)}
+                </span>
+              </div>
+              <div className="text-xs text-gray-500 mt-2 pt-2 border-t border-gray-200">
+                Per gazette analysis
+              </div>
+            </div>
+          </Card>
+
+          <Card title="Processing Performance">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-600">Avg OCR Time:</span>
+                <span className="font-semibold text-gray-900">
+                  {(pipelineStats.avgOcrProcessingTime / 1000).toFixed(1)}s
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-600">Avg Analysis:</span>
+                <span className="font-semibold text-gray-900">
+                  {(pipelineStats.avgAnalysisProcessingTime / 1000).toFixed(1)}s
+                </span>
+              </div>
+              <div className="flex items-center justify-between pt-2 border-t border-gray-200">
+                <span className="text-sm text-gray-600">Total Avg:</span>
+                <span className="font-semibold text-blue-600">
+                  {((pipelineStats.avgOcrProcessingTime + pipelineStats.avgAnalysisProcessingTime) / 1000).toFixed(1)}s
+                </span>
+              </div>
+            </div>
+          </Card>
+
+          <Card title="Gazette Types">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-600">City Gazettes:</span>
+                <span className="font-semibold text-blue-600">
+                  {formatNumber(pipelineStats.cityGazetteCount)}
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-600">State Gazettes:</span>
+                <span className="font-semibold text-purple-600">
+                  {formatNumber(pipelineStats.stateGazetteCount)}
+                </span>
+              </div>
+              <div className="text-xs text-gray-500 mt-2 pt-2 border-t border-gray-200">
+                {pipelineStats.stateGazetteCount > 0 && 
+                  `State gazettes filtered to relevant cities`
+                }
+              </div>
+            </div>
+          </Card>
         </div>
 
         {/* Pipeline Status */}

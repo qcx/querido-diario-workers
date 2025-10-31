@@ -15,6 +15,7 @@ const navItems = [
   { path: '/dashboard/errors', label: 'Errors', icon: '❌' },
   { path: '/dashboard/telemetry', label: 'Telemetry', icon: '📈' },
   { path: '/dashboard/gazettes', label: 'Gazettes', icon: '📰' },
+  { path: '/dashboard/analysis-results', label: 'Analysis Results', icon: '🔬' },
   { path: '/dashboard/ocr', label: 'OCR', icon: '📝' },
   { path: '/dashboard/webhooks', label: 'Webhooks', icon: '🔔' },
   { path: '/dashboard/concursos', label: 'Concursos', icon: '🎓' },

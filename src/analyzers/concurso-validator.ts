@@ -52,6 +52,7 @@ export class ConcursoValidator extends BaseAnalyzer {
               validationReason: isValidConcurso.reason,
               position: section.position,
               aiUsage: isValidConcurso.usage,
+              validated: isValidConcurso.confidence > 0.5,
             },
           });
         }

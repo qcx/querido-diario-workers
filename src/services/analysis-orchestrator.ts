@@ -20,6 +20,7 @@ import {
 } from '../analyzers';
 import { logger, sha256Hash } from '../utils';
 import { TerritoryService } from './territory-service';
+import { TextFilterService } from './text-filter-service';
 
 interface AnalysisContext {
   documentTypes: Array<{ type: string; confidence: number }>;
@@ -238,6 +239,12 @@ export class AnalysisOrchestrator {
         editionNumber: ocrResult.editionNumber,
         power: ocrResult.metadata?.power,
         isExtraEdition: ocrResult.metadata?.isExtraEdition,
+        textLengths: {
+          originalOcrText: ocrResult.metadata?.originalTextLength || ocrResult.extractedText?.length || 0,
+          consideredForAnalysis: ocrResult.extractedText?.length || 0,
+          reductionPercentage: ocrResult.metadata?.reductionPercentage,
+          filtered: !!ocrResult.metadata?.filteredForTerritory,
+        },
       },
     };
 
@@ -248,6 +255,12 @@ export class AnalysisOrchestrator {
       ocrJobId: ocrResult.jobId,
       totalFindings: summary.totalFindings,
       totalTimeMs: totalTime,
+      textLengths: {
+        original: ocrResult.metadata?.originalTextLength || ocrResult.extractedText?.length || 0,
+        considered: ocrResult.extractedText?.length || 0,
+        filtered: !!ocrResult.metadata?.filteredForTerritory,
+        reductionPercentage: ocrResult.metadata?.reductionPercentage,
+      },
     });
 
     return gazetteAnalysis;
@@ -412,14 +425,19 @@ export class AnalysisOrchestrator {
     for (const territoryId of requestedTerritories) {
       try {
         // Get territory information
-        const territoryInfo = TerritoryService.getTerritory(territoryId);
+        const territoryInfo = TerritoryService.getTerritoryInfo(territoryId);
         if (!territoryInfo) {
           logger.warn(`Territory ${territoryId} not found in registry, skipping`);
           continue;
         }
 
         // Filter OCR text to include only sections mentioning this territory
-        const filteredOcrResult = this.filterTextByTerritory(ocrResult, territoryInfo.name, territoryId);
+        const filteredOcrResult = this.filterTextByTerritory(
+          ocrResult, 
+          territoryInfo.name, 
+          territoryId,
+          territoryInfo.aliases || []
+        );
         
         // Only analyze if we found relevant content
         if (filteredOcrResult.extractedText && filteredOcrResult.extractedText.trim().length > 0) {
@@ -442,75 +460,43 @@ export class AnalysisOrchestrator {
 
   /**
    * Filter OCR text to include only sections that mention a specific territory
+   * Uses TextFilterService for intelligent filtering with normalization and pattern matching
    */
-  private filterTextByTerritory(ocrResult: OcrResult, cityName: string, territoryId: string): OcrResult {
+  private filterTextByTerritory(
+    ocrResult: OcrResult, 
+    cityName: string, 
+    territoryId: string,
+    aliases: string[] = []
+  ): OcrResult {
     const text = ocrResult.extractedText || '';
     if (!text) {
       return { ...ocrResult, extractedText: '' };
     }
 
-    // Split text into paragraphs/sections
-    const sections = text.split(/\n\n+/);
-    
-    // Filter sections that mention the city name (case-insensitive)
-    const cityNameLower = cityName.toLowerCase();
-    const cityNameVariations = this.getCityNameVariations(cityName);
-    
-    const relevantSections = sections.filter(section => {
-      const sectionLower = section.toLowerCase();
-      return cityNameVariations.some(variation => sectionLower.includes(variation.toLowerCase()));
-    });
+    // Use TextFilterService for intelligent filtering
+    const filterResult = TextFilterService.filterTextByCity(text, cityName, aliases, true);
 
-    // Join relevant sections
-    const filteredText = relevantSections.join('\n\n');
-
-    logger.debug(`Filtered text for ${cityName}`, {
-      originalLength: text.length,
-      filteredLength: filteredText.length,
-      sectionsFound: relevantSections.length,
+    logger.info(`Filtered text for ${cityName}`, {
+      territoryId,
+      originalLength: filterResult.originalLength,
+      filteredLength: filterResult.filteredLength,
+      sectionsFound: filterResult.sectionsFound,
+      reductionPercentage: `${filterResult.reductionPercentage}%`,
+      aliasesUsed: aliases.length,
     });
 
     return {
       ...ocrResult,
-      extractedText: filteredText,
+      extractedText: filterResult.filteredText,
       territoryId, // Override with specific territory
       metadata: {
         ...ocrResult.metadata,
         filteredForTerritory: cityName,
-        originalTextLength: text.length,
+        originalTextLength: filterResult.originalLength,
+        filteredTextLength: filterResult.filteredLength,
+        sectionsFound: filterResult.sectionsFound,
+        reductionPercentage: filterResult.reductionPercentage,
       },
     };
-  }
-
-  /**
-   * Get variations of city name for matching
-   * Handles common abbreviations and variations
-   */
-  private getCityNameVariations(cityName: string): string[] {
-    const variations = [cityName];
-    
-    // Add common variations
-    if (cityName.includes('São')) {
-      variations.push(cityName.replace('São', 'S.'));
-      variations.push(cityName.replace('São', 'Sao'));
-    }
-    
-    if (cityName.includes('Santa')) {
-      variations.push(cityName.replace('Santa', 'Sta.'));
-      variations.push(cityName.replace('Santa', 'Sta'));
-    }
-    
-    if (cityName.includes('Santo')) {
-      variations.push(cityName.replace('Santo', 'Sto.'));
-      variations.push(cityName.replace('Santo', 'Sto'));
-    }
-
-    // Add "Prefeitura de" and "Município de" variations
-    variations.push(`Prefeitura de ${cityName}`);
-    variations.push(`Prefeitura Municipal de ${cityName}`);
-    variations.push(`Município de ${cityName}`);
-    variations.push(`Câmara Municipal de ${cityName}`);
-
-    return variations;
   }
 }

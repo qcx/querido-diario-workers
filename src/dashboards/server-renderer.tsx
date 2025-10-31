@@ -20,6 +20,10 @@ import {
   telemetryLoader,
   GazettesPage,
   gazettesLoader,
+  GazetteDetailPage,
+  gazetteDetailLoader,
+  AnalysisResultsPage,
+  analysisResultsLoader,
   OcrPage,
   ocrLoader,
   WebhooksPage,
@@ -40,6 +44,7 @@ const routeMap: Record<string, { Component: React.FC<any>; loader: any }> = {
   '/dashboard/errors': { Component: ErrorsPage, loader: errorsLoader },
   '/dashboard/telemetry': { Component: TelemetryPage, loader: telemetryLoader },
   '/dashboard/gazettes': { Component: GazettesPage, loader: gazettesLoader },
+  '/dashboard/analysis-results': { Component: AnalysisResultsPage, loader: analysisResultsLoader },
   '/dashboard/ocr': { Component: OcrPage, loader: ocrLoader },
   '/dashboard/webhooks': { Component: WebhooksPage, loader: webhooksLoader },
   '/dashboard/concursos': { Component: ConcursosPage, loader: concursosLoader },
@@ -64,8 +69,18 @@ export function renderLoginPage(error?: string): string {
  */
 export async function renderDashboardPage(pathname: string, context: any): Promise<string> {
   try {
-    // Find matching route
-    const route = routeMap[pathname];
+    // Check for dynamic routes first
+    let route = routeMap[pathname];
+    let params: Record<string, string> = {};
+
+    // Handle /dashboard/gazettes/:id route
+    if (!route && pathname.startsWith('/dashboard/gazettes/')) {
+      const id = pathname.replace('/dashboard/gazettes/', '');
+      if (id && id !== 'gazettes') {
+        route = { Component: GazetteDetailPage, loader: gazetteDetailLoader };
+        params = { id };
+      }
+    }
     
     if (!route) {
       // Return 404 page
@@ -84,7 +99,7 @@ export async function renderDashboardPage(pathname: string, context: any): Promi
     }
     
     // Load data using the loader
-    const loaderData = await route.loader({ context, request: new Request(`http://dummy${pathname}`) });
+    const loaderData = await route.loader({ context, params, request: new Request(`http://dummy${pathname}`) });
     
     // Render to string with loader data context
     const html = renderToString(
