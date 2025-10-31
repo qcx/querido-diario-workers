@@ -933,17 +933,18 @@ export async function getAnalysisPipelineStats(
     ? Math.round(totalReductionPercentage / filteredCount)
     : 0;
 
-  // State vs city gazettes (from crawl metadata)
-  const crawls = await database
+  // State vs city gazettes (from analysis metadata)
+  // The gazetteScope is stored in analysis_results.metadata, not gazette_crawls
+  const analysisMetadata = await database
     .select({
-      metadata: schema.gazetteCrawls.metadata,
+      metadata: schema.analysisResults.metadata,
     })
-    .from(schema.gazetteCrawls);
+    .from(schema.analysisResults);
 
   let stateGazetteCount = 0;
   let cityGazetteCount = 0;
 
-  crawls.forEach((row) => {
+  analysisMetadata.forEach((row) => {
     try {
       const metadata = typeof row.metadata === 'string' ? JSON.parse(row.metadata) : row.metadata;
       if (metadata?.gazetteScope === 'state') {

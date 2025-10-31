@@ -157,7 +157,7 @@ export class AnalysisOrchestrator {
     }
     
     // Otherwise, single territory analysis
-    return this.analyzeSingleTerritory(ocrResult, territoryId, jobId);
+    return this.analyzeSingleTerritory(ocrResult, territoryId, jobId, gazetteScope);
   }
 
   /**
@@ -166,7 +166,8 @@ export class AnalysisOrchestrator {
   private async analyzeSingleTerritory(
     ocrResult: OcrResult, 
     territoryId?: string, 
-    jobId?: string
+    jobId?: string,
+    gazetteScope?: 'city' | 'state'
   ): Promise<GazetteAnalysis> {
     const startTime = Date.now();
     // Use provided jobId or generate a fallback (for backward compatibility)
@@ -239,6 +240,7 @@ export class AnalysisOrchestrator {
         editionNumber: ocrResult.editionNumber,
         power: ocrResult.metadata?.power,
         isExtraEdition: ocrResult.metadata?.isExtraEdition,
+        gazetteScope: gazetteScope || ocrResult.metadata?.gazetteScope || 'city', // Include gazetteScope for dashboard queries
         textLengths: {
           originalOcrText: ocrResult.metadata?.originalTextLength || ocrResult.extractedText?.length || 0,
           consideredForAnalysis: ocrResult.extractedText?.length || 0,
@@ -444,7 +446,8 @@ export class AnalysisOrchestrator {
           const territoryAnalysis = await this.analyzeSingleTerritory(
             filteredOcrResult,
             territoryId,
-            jobId ? `${jobId}-${territoryId}` : undefined
+            jobId ? `${jobId}-${territoryId}` : undefined,
+            'state' // Mark as state-level gazette
           );
           analyses.push(territoryAnalysis);
         } else {
