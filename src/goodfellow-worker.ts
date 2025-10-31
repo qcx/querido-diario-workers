@@ -20,12 +20,16 @@ import { spiderRegistry } from './spiders/registry';
 import { logger } from './utils/logger';
 import { toISODate } from './utils/date-utils';
 import { getDatabase, TelemetryService } from './services/database';
+import { AICostDashboard } from './services/dashboard';
 
 // Import queue processors
 import { processCrawlBatch, CrawlProcessorEnv } from './goodfellow/crawl-processor';
 import { processOcrBatch, OcrProcessorEnv } from './goodfellow/ocr-processor';
 import { processAnalysisBatch, AnalysisProcessorEnv } from './goodfellow/analysis-processor';
 import { processWebhookBatch, WebhookProcessorEnv } from './goodfellow/webhook-processor';
+
+// Import dashboard routes
+import dashboardRoutes from './routes/dashboard-routes';
 
 /**
  * Combined environment bindings for Goodfellow
@@ -62,11 +66,16 @@ const app = new Hono<{ Bindings: GoodfellowEnv }>();
 /**
  * API Key Authentication Middleware
  * Only applies if API_KEY environment variable is set
- * Exempts the root "/" endpoint from authentication
+ * Exempts the root "/" endpoint and dashboard routes from authentication
  */
 app.use('*', async (c, next) => {
   // Skip authentication for root health check
   if (c.req.path === '/') {
+    return next();
+  }
+
+  // Skip API key check for dashboard routes (they have their own auth)
+  if (c.req.path.startsWith('/dashboard')) {
     return next();
   }
 
@@ -128,8 +137,15 @@ app.get('/', (c) => {
     spidersRegistered: spiderRegistry.getCount(),
     handlers: ['http', 'crawl-queue', 'ocr-queue', 'analysis-queue', 'webhook-queue'],
     authEnabled: !!c.env.API_KEY,
+    dashboard: '/dashboard',
   });
 });
+
+/**
+ * Mount dashboard routes
+ * Dashboard inherits the API key middleware from the main app
+ */
+app.route('/dashboard', dashboardRoutes);
 
 /**
  * Enhanced queue message sender
@@ -716,6 +732,54 @@ async function handleQueue(
       throw new Error(`Unknown queue: ${queueName}`);
   }
 }
+
+/**
+ * AI Cost Dashboard endpoint
+ */
+app.get('/dashboard/ai-costs', async (c) => {
+  try {
+    const db = getDatabase(c.env);
+    const dashboard = new AICostDashboard(db);
+    
+    const format = c.req.query('format') || 'json';
+    
+    if (format === 'text') {
+      // Return formatted text report
+      const metrics = await dashboard.getMetrics();
+      const report = dashboard.formatReport(metrics);
+      
+      return c.text(report);
+    } else if (format === 'trends') {
+      // Return cost trends over time
+      const days = parseInt(c.req.query('days') || '30');
+      const trends = await dashboard.getCostTrends(days);
+      
+      return c.json({
+        success: true,
+        days,
+        trends,
+      });
+    } else {
+      // Return full metrics as JSON
+      const metrics = await dashboard.getMetrics();
+      
+      return c.json({
+        success: true,
+        metrics,
+        generatedAt: new Date().toISOString(),
+      });
+    }
+  } catch (error) {
+    logger.error('Failed to generate AI cost dashboard', error as Error);
+    return c.json(
+      {
+        success: false,
+        error: (error as Error).message,
+      },
+      500
+    );
+  }
+});
 
 /**
  * Export unified worker with both HTTP and Queue handlers

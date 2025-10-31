@@ -70,6 +70,13 @@ export interface GazetteAnalysis {
     editionNumber?: string;
     power?: string;
     isExtraEdition?: boolean;
+    textLengths?: {
+      originalOcrText: number;
+      consideredForAnalysis: number;
+      reductionPercentage?: number;
+      filtered: boolean;
+    };
+    [key: string]: unknown;
   };
 }
 
@@ -136,6 +143,8 @@ export interface AnalysisQueueMessage {
     crawlJobId?: string;
     spiderId?: string;
     spiderType?: string;
+    gazetteScope?: 'city' | 'state'; // Scope of the gazette
+    requestedTerritories?: string[]; // For state gazettes, which cities to analyze
     configSignature?: AnalysisConfigSignature;
     [key: string]: any;
   };
@@ -161,6 +170,10 @@ export interface AnalysisConfig {
     };
     concurso?: AnalyzerConfig & {
       useAIExtraction?: boolean;
+      apiKey?: string;
+      model?: string;
+    };
+    concursoValidator?: AnalyzerConfig & {
       apiKey?: string;
       model?: string;
     };

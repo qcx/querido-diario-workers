@@ -156,7 +156,8 @@ export async function processCrawlBatch(
                 queueMessage.spiderId,
                 crawlJobId,
                 gazetteCrawlId,
-                queueMessage.spiderType
+                queueMessage.spiderType,
+                queueMessage.gazetteScope // Pass gazette scope for state gazette filtering
               );
             }
 

@@ -7,4 +7,5 @@ export * from './keyword-analyzer';
 export * from './ai-analyzer';
 export * from './entity-extractor';
 export * from './concurso-analyzer';
+export * from './concurso-validator';
 export * from './utils/proximity-analyzer';

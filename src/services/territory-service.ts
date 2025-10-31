@@ -9,6 +9,7 @@ interface TerritoryInfo {
   territoryId: string;
   spiderType: string;
   region?: string;
+  aliases?: string[];
 }
 
 export class TerritoryService {
@@ -103,7 +104,8 @@ export class TerritoryService {
         name: config.name || this.extractCityNameFromConfig(config),
         stateCode: stateCode,
         territoryId: config.territoryId,
-        spiderType: config.spiderType
+        spiderType: config.spiderType,
+        aliases: config.aliases // Include aliases from spider config
       };
 
       this.territoryMap.set(config.territoryId, territory);
