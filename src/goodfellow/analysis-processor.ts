@@ -185,7 +185,8 @@ async function processSingleAnalysis(
     message.body.jobId,
     databaseClient,
     concursoRepo,
-    concursoStorageResult
+    concursoStorageResult,
+    gazetteId
   );
 }
 

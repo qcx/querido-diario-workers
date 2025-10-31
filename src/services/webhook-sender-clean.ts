@@ -332,6 +332,13 @@ export class WebhookSenderService {
             r2Url,
           });
           return r2Url;
+        } else if (gazette?.pdfUrl) {
+          return gazette.pdfUrl;
+        } else {
+          logger.warn('Gazette found but no R2 key available', {
+            gazetteId,
+            hasGazette: !!gazette,
+          });
         }
       } catch (error: any) {
         logger.warn('Failed to fetch R2 key, falling back to original URL', {
@@ -339,10 +346,28 @@ export class WebhookSenderService {
           error: error.message,
         });
       }
+    } else {
+      logger.warn('Missing required data for R2 URL lookup', {
+        hasGazetteRepo: !!this.gazetteRepo,
+        hasGazetteId: !!gazetteId,
+        hasR2PublicUrl: !!this.r2PublicUrl,
+        analysisJobId: analysis.jobId,
+      });
     }
     
-    // Fallback to the original PDF URL from analysis or construct from territory/date
-    return analysis.pdfUrl || `/${analysis.territoryId}/${analysis.publicationDate}`;
+    // Fallback to the original PDF URL from analysis
+    if (analysis.pdfUrl) {
+      return analysis.pdfUrl;
+    }
+    
+    // Last resort: construct a placeholder URL and warn
+    logger.warn('No valid PDF URL available, using placeholder format', {
+      analysisJobId: analysis.jobId,
+      territoryId: analysis.territoryId,
+      publicationDate: analysis.publicationDate,
+      gazetteId,
+    });
+    return `/${analysis.territoryId}/${analysis.publicationDate}`;
   }
 
   /**
