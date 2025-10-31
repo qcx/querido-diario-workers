@@ -18,6 +18,7 @@ const navItems = [
   { path: '/dashboard/ocr', label: 'OCR', icon: '📝' },
   { path: '/dashboard/webhooks', label: 'Webhooks', icon: '🔔' },
   { path: '/dashboard/concursos', label: 'Concursos', icon: '🎓' },
+  { path: '/dashboard/ai-costs', label: 'AI Costs', icon: '💰' },
 ];
 
 export function DashboardLayout({ children, currentPath = '' }: LayoutProps) {

@@ -189,7 +189,7 @@ export class MistralOcrService {
       logger.error(`OCR processing failed for job ${message.jobId}`, {
         jobId: message.jobId,
         processingTimeMs,
-        error: appError.toJSON()
+        ...appError.toJSON()
       });
 
       return {

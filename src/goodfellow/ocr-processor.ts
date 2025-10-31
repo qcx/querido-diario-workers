@@ -82,6 +82,10 @@ async function getOcrResultFromCacheOrDb(
     const cachedData = await env.OCR_RESULTS.get(cacheKey);
     if (cachedData) {
       const cached = JSON.parse(cachedData);
+      // Ensure publicationDate is set (fallback to message publicationDate if missing)
+      if (!cached.publicationDate) {
+        cached.publicationDate = ocrMessage.publicationDate;
+      }
       logger.info('OCR result retrieved from KV cache (hot path)', {
         jobId,
         cacheKey,
@@ -577,6 +581,10 @@ export async function processOcrBatch(
 
         if (cached) {
           isReusedResult = true; // Mark as reused from cache
+          // Ensure publicationDate is set (fallback to message publicationDate if missing)
+          if (!cached.publicationDate) {
+            cached.publicationDate = ocrMessage.publicationDate;
+          }
           result = cached;
         } else {
           // Fallback: try to find OCR result by jobId in DB (will scan metadata)

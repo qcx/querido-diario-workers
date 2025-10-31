@@ -26,6 +26,8 @@ import {
   webhooksLoader,
   ConcursosPage,
   concursosLoader,
+  AICostsPage,
+  aiCostsLoader,
 } from './pages';
 import { LoginPage } from './pages/login';
 
@@ -41,6 +43,7 @@ const routeMap: Record<string, { Component: React.FC<any>; loader: any }> = {
   '/dashboard/ocr': { Component: OcrPage, loader: ocrLoader },
   '/dashboard/webhooks': { Component: WebhooksPage, loader: webhooksLoader },
   '/dashboard/concursos': { Component: ConcursosPage, loader: concursosLoader },
+  '/dashboard/ai-costs': { Component: AICostsPage, loader: aiCostsLoader },
 };
 
 /**

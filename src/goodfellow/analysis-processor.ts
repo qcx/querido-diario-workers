@@ -272,17 +272,17 @@ function getAnalysisConfig(env: AnalysisProcessorEnv): AnalysisConfig {
       keyword: {
         enabled: true,
         priority: 1,
-        timeout: 10000,
+        timeout: 20000,  // Increased from 10s to 20s for state gazettes
       },
       entity: {
         enabled: false,
         priority: 2,
-        timeout: 15000,
+        timeout: 30000,  // Increased from 15s to 30s for state gazettes
       },
       concurso: {
         enabled: true,
         priority: 1.5,
-        timeout: 20000,
+        timeout: 40000,  // Increased from 20s to 40s for state gazettes
         useAIExtraction: !!env.OPENAI_API_KEY,
         apiKey: env.OPENAI_API_KEY,
         model: 'gpt-4o-mini',
@@ -290,14 +290,14 @@ function getAnalysisConfig(env: AnalysisProcessorEnv): AnalysisConfig {
       concursoValidator: {
         enabled: !!env.OPENAI_API_KEY,
         priority: 2,  // Run after keyword analyzer, before general AI
-        timeout: 15000,
+        timeout: 45000,  // Increased from 15s to 45s for state gazettes
         apiKey: env.OPENAI_API_KEY,
         model: 'gpt-4o-mini',
       },
       ai: {
         enabled: !!env.OPENAI_API_KEY,
         priority: 3,
-        timeout: 30000,
+        timeout: 60000,  // Increased from 30s to 60s for state gazettes
         apiKey: env.OPENAI_API_KEY,
       },
     },
@@ -953,6 +953,10 @@ async function processAnalysisMessage(
     const ocrResultData = await env.OCR_RESULTS.get(cacheKey);
     if (ocrResultData) {
       ocrResult = JSON.parse(ocrResultData);
+      // Ensure publicationDate is set (fallback to message.body.gazetteDate if missing)
+      if (!ocrResult.publicationDate) {
+        ocrResult.publicationDate = message.body.gazetteDate;
+      }
       logger.info(`Retrieved OCR result from KV cache`, {
         jobId,
         ocrJobId,
