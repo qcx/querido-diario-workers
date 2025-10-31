@@ -133,6 +133,10 @@ export interface SigpubConfig {
   url: string;
   /** Entity ID for the association (e.g., "365" for AMUPE) */
   entityId: string;
+  /** City name to search for in the gazette content (for state-level gazettes) */
+  cityName?: string;
+  /** Regex pattern for matching city in gazette text */
+  cityRegex?: string;
 }
 
 /**
@@ -258,6 +262,8 @@ export interface RondoniaConfig {
   type: 'rondonia';
   /** City name to search for in the gazette content */
   cityName: string;
+  /** Regex pattern for matching city in gazette text */
+  cityRegex?: string;
   /** Power of the gazette (executive_legislative for municipal content) */
   power: 'executive' | 'legislative' | 'executive_legislative';
 }
@@ -270,6 +276,8 @@ export interface AcreConfig {
   type: 'acre';
   /** City name to search for in the gazette content */
   cityName: string;
+  /** Regex pattern for matching city in gazette text */
+  cityRegex?: string;
   /** Power of the gazette (executive_legislative for municipal content) */
   power: 'executive' | 'legislative' | 'executive_legislative';
 }
@@ -280,6 +288,10 @@ export interface AcreConfig {
  */
 export interface EspiritoSantoConfig {
   type: 'espirito_santo';
+  /** City name to search for in the gazette content (if filtering) */
+  cityName?: string;
+  /** Regex pattern for matching city in gazette text */
+  cityRegex?: string;
   /** Power of the gazette (executive_legislative for municipal content) */
   power: 'executive' | 'legislative' | 'executive_legislative';
 }

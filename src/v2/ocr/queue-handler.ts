@@ -8,6 +8,7 @@ import { MistralService } from './services/mistral-service';
 import { StorageService } from './services/storage-service';
 import { CacheService } from './services/cache-service';
 import type { CachedOcrResult } from './services/cache-service';
+import { spiderRegistry } from '../crawl/spiders';
 
 const RETRY_DELAY = 5;
 const DB_OPERATION_MAX_RETRIES = 3;
@@ -49,29 +50,10 @@ export interface OcrQueueMessage {
 
 export interface OcrQueueHandlerEnv extends Env {}
 
-interface OcrCallbackMessage {
-  jobId: string;
-  ocrJobId: string; // Reference to OCR result in KV storage
-  gazetteCrawlId: string; // Which crawl triggered this
-  gazetteId: string; // Which gazette to analyze
-  territoryId: string;
-  gazetteDate: string;
-  pdfUrl?: string;
-  analyzers?: string[]; // Specific analyzers to run, or all if undefined
-  queuedAt: string;
-  metadata?: {
-    crawlJobId?: string;
-    spiderId?: string;
-    spiderType?: string;
-    configSignature?:  {
-      version: string;              // Config version (e.g., "1.0.0")
-      enabledAnalyzers: string[];   // Which analyzers are enabled (sorted)
-      customKeywords?: string[];    // Territory-specific keywords (sorted)
-      configHash: string;           // Hash for quick comparison
-    };
-    [key: string]: any;
-  };
-}
+import type { AnalysisQueueMessage } from '../analysis/types';
+
+// OCR callback is now just an AnalysisQueueMessage
+type OcrCallbackMessage = AnalysisQueueMessage;
 
 /**
  * OCR Queue Handler
@@ -143,7 +125,11 @@ export class OcrQueueHandler {
     }
 
     if(gazette.status === 'ocr_success') {
-      await this.handleGazetteCrawlSuccess(gazette, gazetteCrawl, analysisCallback, jobId, crawlJobId);
+      // Get OCR result from database for callback
+      const ocrResultRecord = await this.ocrResultsRepository.findByGazetteId(gazette.id);
+      if (ocrResultRecord) {
+        await this.handleGazetteCrawlSuccess(gazette, gazetteCrawl, ocrResultRecord, analysisCallback, jobId, crawlJobId);
+      }
       message.ack();
       return;
     }
@@ -176,7 +162,11 @@ export class OcrQueueHandler {
         );
         
         if(existingResult) {
-          await this.handleExistingOcrResult(existingResult, gazetteCrawl, analysisCallback, jobId, crawlJobId);
+          // Get OCR result record
+          const ocrResultRecord = await this.ocrResultsRepository.findByGazetteId(currentGazette.id);
+          if (ocrResultRecord) {
+            await this.handleExistingOcrResult(existingResult, gazetteCrawl, analysisCallback, jobId, crawlJobId, currentGazette, ocrResultRecord);
+          }
           message.ack();
           return;
         }
@@ -209,7 +199,11 @@ export class OcrQueueHandler {
     );
 
     if (existingResult) {
-      await this.handleExistingOcrResult(existingResult, gazetteCrawl, analysisCallback, jobId, crawlJobId);
+      // Get OCR result record
+      const ocrResultRecord = await this.ocrResultsRepository.findByGazetteId(gazette.id);
+      if (ocrResultRecord) {
+        await this.handleExistingOcrResult(existingResult, gazetteCrawl, analysisCallback, jobId, crawlJobId, gazette, ocrResultRecord);
+      }
       message.ack();
       return;
     }
@@ -285,6 +279,7 @@ export class OcrQueueHandler {
   private async handleGazetteCrawlSuccess(
     gazette: typeof schema.gazetteRegistry.$inferSelect,
     gazetteCrawl: typeof schema.gazetteCrawls.$inferSelect,
+    ocrResult: typeof schema.ocrResults.$inferSelect,
     analysisCallback: (message: OcrCallbackMessage) => Promise<void>,
     jobId: string,
     crawlJobId: string
@@ -300,27 +295,8 @@ export class OcrQueueHandler {
       return;
     }
     
-    // Update crawl status to analysis_pending
-    await this.gazetteRegistryRepository.updateCrawlsStatus(
-      gazetteCrawl.id,
-      'analysis_pending'
-    );
-    
-    // Send to analysis queue
-    await analysisCallback({
-      jobId: `analysis-${jobId}`,
-      ocrJobId: jobId,
-      gazetteCrawlId: gazetteCrawl.id,
-      gazetteId: gazette.id,
-      territoryId: gazetteCrawl.territoryId,
-      gazetteDate: gazette.publicationDate,
-      pdfUrl: gazette.pdfUrl,
-      queuedAt: new Date().toISOString(),
-      metadata: {
-        crawlJobId,
-        spiderId: gazetteCrawl.spiderId
-      }
-    });
+    // Reuse the existing handler - same logic applies
+    await this.handleExistingOcrResult(cachedResult, gazetteCrawl, analysisCallback, jobId, crawlJobId, gazette, ocrResult);
   }
 
   private async handleExistingOcrResult(
@@ -328,8 +304,52 @@ export class OcrQueueHandler {
     gazetteCrawl: typeof schema.gazetteCrawls.$inferSelect,
     analysisCallback: (message: OcrCallbackMessage) => Promise<void>,
     jobId: string,
-    crawlJobId: string
+    crawlJobId: string,
+    gazette: typeof schema.gazetteRegistry.$inferSelect,
+    ocrResult: typeof schema.ocrResults.$inferSelect
   ): Promise<void> {
+    // ALWAYS ensure OCR result exists in database, even if it's only in cache
+    const dbResult = await retryWithBackoff(
+      () => this.ocrResultsRepository.createOrUpdate(
+        gazetteCrawl.gazetteId,
+        {
+          extractedText: cachedResult.extractedText,
+          pagesProcessed: cachedResult.pagesProcessed ?? 0,
+          processingTimeMs: cachedResult.processingTimeMs ?? 0,
+          pdfR2Key: cachedResult.pdfR2Key
+        }
+      ),
+      DB_OPERATION_MAX_RETRIES,
+      DB_OPERATION_RETRY_BASE_DELAY_MS,
+      'OCR result storage from cache'
+    );
+
+    if(!dbResult.success) {
+      throw dbResult.error;
+    }
+
+    // Ensure OCR job record exists
+    const existingJob = await this.ocrResultsRepository.findByGazetteId(gazetteCrawl.gazetteId);
+    if (!existingJob) {
+      await this.ocrResultsRepository.startProcessing(gazetteCrawl.gazetteId, {
+        crawlJobId,
+        gazetteCrawlId: gazetteCrawl.id,
+        territoryId: cachedResult.territoryId,
+        gazetteDate: cachedResult.gazetteDate,
+        pdfUrl: cachedResult.pdfUrl,
+        processingMethod: 'mistral',
+        isRetry: false
+      });
+      
+      // Update OCR job to success
+      await this.ocrResultsRepository.updateOcrJobSuccess(
+        gazetteCrawl.gazetteId,
+        cachedResult.pagesProcessed ?? 0,
+        cachedResult.processingTimeMs ?? 0,
+        cachedResult.extractedText.length
+      );
+    }
+    
     // Update gazette status to ocr_success if not already
     await this.gazetteRegistryRepository.updateGazetteStatus(
       gazetteCrawl.gazetteId,
@@ -342,20 +362,21 @@ export class OcrQueueHandler {
       'analysis_pending'
     );
     
+    // Get spider config
+    const spiderConfig = spiderRegistry.getConfig(gazetteCrawl.spiderId);
+    if (!spiderConfig) {
+      throw new Error(`Spider config not found for ${gazetteCrawl.spiderId}`);
+    }
+    
     // Send to analysis queue
     await analysisCallback({
       jobId: `analysis-${jobId}`,
-      ocrJobId: jobId,
-      gazetteCrawlId: gazetteCrawl.id,
-      gazetteId: gazetteCrawl.gazetteId,
-      territoryId: cachedResult.territoryId,
-      gazetteDate: cachedResult.gazetteDate,
-      pdfUrl: cachedResult.pdfUrl,
-      queuedAt: new Date().toISOString(),
-      metadata: {
-        crawlJobId,
-        spiderId: cachedResult.spiderId
-      }
+      gazetteCrawl,
+      gazette,
+      ocrResult,
+      spiderConfig,
+      crawlJobId,
+      queuedAt: new Date().toISOString()
     });
   }
 
@@ -443,20 +464,27 @@ export class OcrQueueHandler {
       'analysis_pending'
     );
     
+    // Get OCR result record we just created
+    const ocrResultRecord = await this.ocrResultsRepository.findByGazetteId(gazette.id);
+    if (!ocrResultRecord) {
+      throw new Error('OCR result not found after creation');
+    }
+    
+    // Get spider config
+    const spiderConfig = spiderRegistry.getConfig(gazetteCrawl.spiderId);
+    if (!spiderConfig) {
+      throw new Error(`Spider config not found for ${gazetteCrawl.spiderId}`);
+    }
+    
     // Send to analysis queue
     await analysisCallback({
       jobId: `analysis-${jobId}`,
-      ocrJobId: jobId,
-      gazetteCrawlId: gazetteCrawl.id,
-      gazetteId: gazette.id,
-      territoryId: gazetteCrawl.territoryId,
-      gazetteDate: gazette.publicationDate,
-      pdfUrl: gazette.pdfUrl,
-      queuedAt: new Date().toISOString(),
-      metadata: {
-        crawlJobId,
-        spiderId: gazetteCrawl.spiderId
-      }
+      gazetteCrawl,
+      gazette,
+      ocrResult: ocrResultRecord,
+      spiderConfig,
+      crawlJobId,
+      queuedAt: new Date().toISOString()
     });
   }
 }

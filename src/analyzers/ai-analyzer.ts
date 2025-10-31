@@ -57,9 +57,8 @@ export class AIAnalyzer extends BaseAnalyzer {
         findings.push(...result);
       } catch (error: any) {
         const aiError = error instanceof AIAnalysisError ? error : toAppError(error);
-        logger.error(`AI analysis failed for prompt ${prompt.name}`, {
-          promptName: prompt.name,
-          error: aiError.toJSON()
+        logger.error(`AI analysis failed for prompt ${prompt.name}`, aiError, {
+          promptName: prompt.name
         });
       }
     }

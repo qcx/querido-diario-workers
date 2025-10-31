@@ -128,4 +128,55 @@ export class GazetteRegistryRepository {
       .set({ pdfR2Key })
       .where(eq(schema.gazetteRegistry.id, gazetteId));
   }
+
+  async linkAnalysisToGazetteCrawl(gazetteCrawlId: string, analysisResultId: string): Promise<void> {
+    const db = this.dbClient.getDb();
+    
+    try {
+      // Verify gazette crawl exists
+      const crawl = await db.select().from(schema.gazetteCrawls)
+        .where(eq(schema.gazetteCrawls.id, gazetteCrawlId))
+        .limit(1);
+      
+      if (!crawl || crawl.length === 0) {
+        throw new Error(`Gazette crawl ${gazetteCrawlId} not found`);
+      }
+
+      // Verify analysis result exists (defensive check for D1 eventual consistency)
+      const analysis = await db.select({ id: schema.analysisResults.id })
+        .from(schema.analysisResults)
+        .where(eq(schema.analysisResults.id, analysisResultId))
+        .limit(1);
+      
+      if (!analysis || analysis.length === 0) {
+        throw new Error(`Analysis result ${analysisResultId} not found - possible D1 consistency delay`);
+      }
+
+      // Perform the update
+      const result = await db.update(schema.gazetteCrawls)
+        .set({ analysisResultId })
+        .where(eq(schema.gazetteCrawls.id, gazetteCrawlId))
+        .returning();
+
+      if (!result || result.length === 0) {
+        throw new Error('Update failed - no rows affected');
+      }
+    } catch (error: any) {
+      // Enhanced error logging for D1 issues
+      console.error('Failed to link analysis to gazette crawl', {
+        gazetteCrawlId,
+        analysisResultId,
+        errorMessage: error?.message,
+        errorCause: error?.cause,
+        errorQuery: error?.query,
+        errorParams: error?.params,
+        errorStack: error?.stack
+      });
+      
+      throw new Error(
+        `Failed to link analysis ${analysisResultId} to gazette crawl ${gazetteCrawlId}: ${error?.message || 'Unknown error'}`,
+        { cause: error }
+      );
+    }
+  }
 }
