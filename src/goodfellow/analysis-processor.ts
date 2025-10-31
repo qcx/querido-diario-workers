@@ -30,6 +30,166 @@ function generateOcrCacheKey(pdfUrl: string): string {
 }
 
 /**
+ * Process a single analysis (extracted for reuse in multi-territory flow)
+ */
+async function processSingleAnalysis(
+  analysis: GazetteAnalysis,
+  message: Message<AnalysisQueueMessage>,
+  env: AnalysisProcessorEnv,
+  telemetry: TelemetryService,
+  analysisRepo: AnalysisRepository,
+  concursoRepo: ConcursoRepository,
+  deduplicator: any,
+  databaseClient: ReturnType<typeof getDatabase>,
+  crawlJobId: string,
+  gazetteCrawlId: string | null
+): Promise<any[]> {
+  const territoryId = analysis.territoryId;
+  const gazetteId = message.body.gazetteId;
+  
+  // Generate config signature for this territory
+  const config = getAnalysisConfig(env);
+  const orchestrator = new AnalysisOrchestrator(config);
+  const configSignature = await orchestrator.generateConfigSignature(config, territoryId);
+  
+  // Generate deterministic jobId for this territory
+  const deterministicJobId = await generateDeterministicJobId(
+    territoryId,
+    gazetteId,
+    configSignature.configHash
+  );
+  
+  // Override jobId for consistency
+  analysis.jobId = deterministicJobId;
+
+  // Apply deduplication to findings
+  try {
+    const dedupeResult = await deduplicator.deduplicateFindings(analysis, 24);
+    
+    if (dedupeResult.duplicates.length > 0) {
+      logger.info(`Deduplication removed ${dedupeResult.duplicates.length} duplicate findings`, {
+        jobId: analysis.jobId,
+        originalCount: analysis.summary.totalFindings,
+        uniqueCount: dedupeResult.uniqueFindings.length,
+        duplicatesRemoved: dedupeResult.duplicates.length,
+        crawlJobId,
+      });
+
+      // Update analysis with deduplicated findings
+      analysis = {
+        ...analysis,
+        analyses: analysis.analyses.map(a => ({
+          ...a,
+          findings: a.findings.filter((f: any) => 
+            dedupeResult.uniqueFindings.some((uf: any) => 
+              uf.type === f.type && 
+              uf.confidence === f.confidence &&
+              JSON.stringify(uf.data) === JSON.stringify(f.data)
+            )
+          )
+        })),
+        summary: {
+          ...analysis.summary,
+          totalFindings: dedupeResult.uniqueFindings.length,
+          deduplicationApplied: true,
+          duplicatesRemoved: dedupeResult.duplicates.length,
+        }
+      };
+    }
+  } catch (error) {
+    logger.error('Deduplication failed, continuing with original findings', error as Error, {
+      jobId: analysis.jobId,
+      crawlJobId,
+    });
+  }
+
+  // Aggregate AI usage data from all analyzers
+  const aiUsageData: any[] = [];
+  let totalAICost = 0;
+  
+  for (const analysisResult of analysis.analyses) {
+    if (analysisResult.metadata?.aiUsage) {
+      aiUsageData.push({
+        analyzer: analysisResult.analyzerId,
+        ...analysisResult.metadata.aiUsage,
+      });
+      totalAICost += analysisResult.metadata.aiUsage.totalCost || 0;
+    }
+  }
+
+  // Update analysis metadata with aggregated AI usage
+  if (aiUsageData.length > 0) {
+    analysis = {
+      ...analysis,
+      metadata: {
+        ...analysis.metadata,
+        aiUsage: {
+          totalCost: totalAICost,
+          analyzers: aiUsageData,
+          timestamp: new Date().toISOString(),
+        },
+      },
+    };
+  }
+
+  // Store results in database
+  const analysisId = await analysisRepo.storeAnalysis(analysis, gazetteId, configSignature);
+  
+  // Link analysis to gazette_crawl and update status (if crawl ID present)
+  const gazetteRepo = new GazetteRepository(databaseClient);
+  if (gazetteCrawlId) {
+    await gazetteRepo.linkAnalysisToGazetteCrawl(gazetteCrawlId, analysisId);
+    await gazetteRepo.updateGazetteCrawlStatus(gazetteCrawlId, 'success');
+  }
+
+  // Store results in KV cache
+  const cacheKey = generateAnalysisCacheKey(territoryId, gazetteId, configSignature.configHash);
+  await env.ANALYSIS_RESULTS.put(
+    cacheKey,
+    JSON.stringify(analysis),
+    {
+      expirationTtl: 24 * 60 * 60, // 24 hours
+      metadata: {
+        territoryId: analysis.territoryId,
+        publicationDate: analysis.publicationDate,
+        totalFindings: analysis.summary.totalFindings,
+        analyzedAt: analysis.analyzedAt,
+      },
+    }
+  );
+
+  logger.info(`Analysis complete for ${territoryId}`, {
+    analysisId,
+    jobId: analysis.jobId,
+    territoryId: analysis.territoryId,
+    totalFindings: analysis.summary.totalFindings,
+    highConfidenceFindings: analysis.summary.highConfidenceFindings,
+    categories: analysis.summary.categories,
+    crawlJobId,
+  });
+
+  // Store concurso findings if any
+  const concursoStorageResult = await storeConcursoFindings(
+    analysis,
+    concursoRepo,
+    crawlJobId
+  );
+
+  // Process webhooks
+  return await processWebhooksForAnalysis(
+    analysis,
+    env,
+    crawlJobId,
+    territoryId,
+    telemetry,
+    message.body.jobId,
+    databaseClient,
+    concursoRepo,
+    concursoStorageResult
+  );
+}
+
+/**
  * Generate analysis cache key based on deduplication logic
  * Uses territoryId + gazetteId + configHash (same as database deduplication)
  */
@@ -104,16 +264,10 @@ export interface AnalysisProcessorEnv extends D1DatabaseEnv {
 }
 
 /**
- * Process a batch of analysis queue messages
+ * Get analysis configuration from environment
  */
-export async function processAnalysisBatch(
-  batch: MessageBatch<AnalysisQueueMessage>,
-  env: AnalysisProcessorEnv
-): Promise<void> {
-  logger.info(`Analysis Processor: Processing batch of ${batch.messages.length} messages`);
-
-  // Create analysis configuration
-  const config: AnalysisConfig = {
+function getAnalysisConfig(env: AnalysisProcessorEnv): AnalysisConfig {
+  return {
     analyzers: {
       keyword: {
         enabled: true,
@@ -133,6 +287,13 @@ export async function processAnalysisBatch(
         apiKey: env.OPENAI_API_KEY,
         model: 'gpt-4o-mini',
       },
+      concursoValidator: {
+        enabled: !!env.OPENAI_API_KEY,
+        priority: 2,  // Run after keyword analyzer, before general AI
+        timeout: 15000,
+        apiKey: env.OPENAI_API_KEY,
+        model: 'gpt-4o-mini',
+      },
       ai: {
         enabled: !!env.OPENAI_API_KEY,
         priority: 3,
@@ -141,6 +302,19 @@ export async function processAnalysisBatch(
       },
     },
   };
+}
+
+/**
+ * Process a batch of analysis queue messages
+ */
+export async function processAnalysisBatch(
+  batch: MessageBatch<AnalysisQueueMessage>,
+  env: AnalysisProcessorEnv
+): Promise<void> {
+  logger.info(`Analysis Processor: Processing batch of ${batch.messages.length} messages`);
+
+  // Create analysis configuration
+  const config = getAnalysisConfig(env);
 
   const orchestrator = new AnalysisOrchestrator(config);
   
@@ -845,98 +1019,59 @@ async function processAnalysisMessage(
 
   // Perform analysis with deterministic jobId
   // This enables database-level deduplication via the unique constraint on job_id
-  let analysis = await orchestrator.analyze(ocrResult, territoryId, deterministicJobId);
-
-  // Apply deduplication to findings
-  try {
-    const dedupeResult = await deduplicator.deduplicateFindings(analysis, 24);
-    
-    if (dedupeResult.duplicates.length > 0) {
-      logger.info(`Deduplication removed ${dedupeResult.duplicates.length} duplicate findings`, {
-        jobId: analysis.jobId,
-        originalCount: analysis.summary.totalFindings,
-        uniqueCount: dedupeResult.uniqueFindings.length,
-        duplicatesRemoved: dedupeResult.duplicates.length,
-        crawlJobId,
-      });
-
-      // Update analysis with deduplicated findings
-      analysis = {
-        ...analysis,
-        analyses: analysis.analyses.map(a => ({
-          ...a,
-          findings: a.findings.filter((f: any) => 
-            dedupeResult.uniqueFindings.some((uf: any) => 
-              uf.type === f.type && 
-              uf.confidence === f.confidence &&
-              JSON.stringify(uf.data) === JSON.stringify(f.data)
-            )
-          )
-        })),
-        summary: {
-          ...analysis.summary,
-          totalFindings: dedupeResult.uniqueFindings.length,
-          deduplicationApplied: true,
-          duplicatesRemoved: dedupeResult.duplicates.length,
-        }
-      };
-    }
-  } catch (error) {
-    logger.error('Deduplication failed, continuing with original findings', error as Error, {
-      jobId: analysis.jobId,
-      crawlJobId,
-    });
-  }
-
-  // Store results in database
-  const analysisId = await analysisRepo.storeAnalysis(analysis, gazetteId, configSignature);
+  const gazetteScope = message.body.metadata?.gazetteScope;
+  const requestedTerritories = message.body.metadata?.requestedTerritories;
   
-  // Link analysis to gazette_crawl and update status (if crawl ID present)
-  if (gazetteCrawlId) {
-    await gazetteRepo.linkAnalysisToGazetteCrawl(gazetteCrawlId, analysisId);
-    
-    // Update status to success (analysis complete)
-    await gazetteRepo.updateGazetteCrawlStatus(gazetteCrawlId, 'success');
-  } else {
-    logger.warn('Analysis stored but no gazetteCrawlId to link/status', { 
-      jobId: analysis.jobId, 
-      analysisId, 
-      gazetteId 
-    });
-  }
-  
-  logger.info('Analysis stored and linked to gazette crawl', {
-    jobId: analysis.jobId,
-    analysisId,
-    gazetteCrawlId,
-    gazetteId,
-    configHash: configSignature.configHash,
-    totalFindings: analysis.summary.totalFindings,
-    crawlJobId,
-  });
-
-  // Store concurso findings BEFORE webhook processing (critical for requireConcursoFinding filter)
-  const concursoStorageResult = await storeConcursoFindings(
-    analysis,
-    concursoRepo,
-    crawlJobId
+  const analysisResult = await orchestrator.analyze(
+    ocrResult, 
+    territoryId, 
+    deterministicJobId,
+    gazetteScope,
+    requestedTerritories
   );
 
-  // Store in KV cache with deduplication key
-  await storeAnalysisResults(analysis, env, gazetteId, configSignature.configHash);
-
-  // Process webhooks for new analysis (after concurso storage)
-  return await processWebhooksForAnalysis(
+  // Handle single or multiple analyses
+  const isMultiTerritory = Array.isArray(analysisResult);
+  const analyses = isMultiTerritory ? analysisResult : [analysisResult];
+  
+  // If multi-territory, we'll process each analysis separately
+  if (isMultiTerritory) {
+    const allWebhookMessages = [];
+    
+    for (const territoryAnalysis of analyses) {
+      const territoryMessages = await processSingleAnalysis(
+        territoryAnalysis,
+        message,
+        env,
+        telemetry,
+        analysisRepo,
+        concursoRepo,
+        deduplicator,
+        databaseClient,
+        crawlJobId,
+        gazetteCrawlId
+      );
+      allWebhookMessages.push(...territoryMessages);
+    }
+    
+    return allWebhookMessages;
+  }
+  
+  // Otherwise, continue with single analysis
+  let analysis = analysisResult as GazetteAnalysis;
+  
+  // Use the shared function for processing
+  return await processSingleAnalysis(
     analysis,
+    message,
     env,
-    crawlJobId,
-    territoryId,
     telemetry,
-    jobId,
-    databaseClient,
+    analysisRepo,
     concursoRepo,
-    concursoStorageResult,
-    gazetteId
+    deduplicator,
+    databaseClient,
+    crawlJobId,
+    gazetteCrawlId
   );
 }
 

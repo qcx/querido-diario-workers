@@ -14,6 +14,7 @@ import type {
 import { isMistralOcrResponse } from '../types/external-apis';
 import { MistralOcrError, toAppError } from '../types/errors';
 import { DrizzleDatabaseClient, schema } from './database';
+import { CostTracker, AIUsage } from './cost-tracker';
 
 export class MistralOcrService {
   private config: MistralOcrConfig;
@@ -147,7 +148,7 @@ export class MistralOcrService {
 
     try {
       // Call Mistral API with PDF URL directly
-      const { extractedText, pagesProcessed, pdfR2Key } = await this.callMistralApi(message.pdfUrl, message.jobId);
+      const { extractedText, pagesProcessed, pdfR2Key, usage } = await this.callMistralApi(message.pdfUrl, message.jobId);
       
       const processingTimeMs = Date.now() - startTime;
       
@@ -170,7 +171,16 @@ export class MistralOcrService {
         pagesProcessed,
         processingTimeMs,
         completedAt: new Date().toISOString(),
-        metadata: message.metadata,
+        metadata: {
+          ...message.metadata,
+          aiUsage: {
+            provider: 'mistral',
+            model: this.config.model || 'mistral-ocr-latest',
+            totalTokens: usage.tokens.total,
+            estimatedCost: usage.estimatedCost,
+            timestamp: usage.timestamp,
+          },
+        },
       };
     } catch (error: unknown) {
       const processingTimeMs = Date.now() - startTime;
@@ -379,13 +389,38 @@ export class MistralOcrService {
       );
     }
 
+    // Track Mistral OCR usage and cost
+    // For Mistral OCR, estimate tokens based on extracted text length
+    // Rough estimate: 1 token per 4 characters
+    const estimatedPromptTokens = Math.ceil((pdfUrl.length + 100) / 4); // URL + request overhead
+    const estimatedCompletionTokens = Math.ceil(extractedText.length / 4);
+    
+    const usage = CostTracker.trackUsage(
+      'mistral',
+      this.config.model || 'mistral-ocr-latest',
+      'ocr',
+      {
+        prompt_tokens: estimatedPromptTokens,
+        completion_tokens: estimatedCompletionTokens,
+        total_tokens: estimatedPromptTokens + estimatedCompletionTokens,
+      },
+      {
+        jobId,
+        pdfUrl,
+        pagesProcessed: result.pages.length,
+        docSizeBytes: result.usage_info?.doc_size_bytes,
+      }
+    );
+
     logger.info(`Extracted text from ${result.pages.length} pages`, {
       jobId,
       pagesProcessed: result.usage_info?.pages_processed,
       docSizeBytes: result.usage_info?.doc_size_bytes,
+      estimatedCost: usage.estimatedCost,
+      estimatedTokens: usage.tokens.total,
     });
 
-    return { extractedText, pagesProcessed: result.pages.length, pdfR2Key };
+    return { extractedText, pagesProcessed: result.pages.length, pdfR2Key, usage };
   }
 
   /**

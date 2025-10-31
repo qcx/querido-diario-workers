@@ -16,8 +16,10 @@ import {
   AIAnalyzer,
   EntityExtractor,
   ConcursoAnalyzer,
+  ConcursoValidator,
 } from '../analyzers';
 import { logger, sha256Hash } from '../utils';
+import { TerritoryService } from './territory-service';
 
 interface AnalysisContext {
   documentTypes: Array<{ type: string; confidence: number }>;
@@ -82,6 +84,17 @@ export class AnalysisOrchestrator {
       );
     }
 
+    // Concurso Validator (for ambiguous keywords)
+    if (this.config.analyzers.concursoValidator?.enabled && this.config.analyzers.concursoValidator.apiKey) {
+      this.analyzers.push(
+        new ConcursoValidator({
+          ...this.config.analyzers.concursoValidator,
+          apiKey: this.config.analyzers.concursoValidator.apiKey,
+          model: this.config.analyzers.concursoValidator.model,
+        })
+      );
+    }
+
     // Sort by priority
     this.analyzers.sort((a, b) => a.getPriority() - b.getPriority());
 
@@ -128,8 +141,32 @@ export class AnalysisOrchestrator {
 
   /**
    * Analyze OCR result with all enabled analyzers
+   * For state-level gazettes, can create multiple analyses for different territories
    */
-  async analyze(ocrResult: OcrResult, territoryId?: string, jobId?: string): Promise<GazetteAnalysis> {
+  async analyze(
+    ocrResult: OcrResult, 
+    territoryId?: string, 
+    jobId?: string,
+    gazetteScope?: 'city' | 'state',
+    requestedTerritories?: string[]
+  ): Promise<GazetteAnalysis | GazetteAnalysis[]> {
+    // If state-level gazette with multiple territories requested, split analysis
+    if (gazetteScope === 'state' && requestedTerritories && requestedTerritories.length > 0) {
+      return this.analyzeMultiTerritoryGazette(ocrResult, requestedTerritories, jobId);
+    }
+    
+    // Otherwise, single territory analysis
+    return this.analyzeSingleTerritory(ocrResult, territoryId, jobId);
+  }
+
+  /**
+   * Analyze OCR result for a single territory
+   */
+  private async analyzeSingleTerritory(
+    ocrResult: OcrResult, 
+    territoryId?: string, 
+    jobId?: string
+  ): Promise<GazetteAnalysis> {
     const startTime = Date.now();
     // Use provided jobId or generate a fallback (for backward compatibility)
     const analysisJobId = jobId || `analysis-${ocrResult.jobId}-${Date.now()}`;
@@ -352,5 +389,128 @@ export class AnalysisOrchestrator {
         code: error.code,
       },
     };
+  }
+
+  /**
+   * Analyze state-level gazette for multiple territories
+   * Splits the text by territory and creates separate analyses
+   */
+  private async analyzeMultiTerritoryGazette(
+    ocrResult: OcrResult,
+    requestedTerritories: string[],
+    jobId?: string
+  ): Promise<GazetteAnalysis[]> {
+    logger.info('Starting multi-territory analysis', {
+      ocrJobId: ocrResult.jobId,
+      requestedTerritories,
+      territoryCount: requestedTerritories.length,
+    });
+
+    const analyses: GazetteAnalysis[] = [];
+
+    // For each requested territory, filter text and analyze
+    for (const territoryId of requestedTerritories) {
+      try {
+        // Get territory information
+        const territoryInfo = TerritoryService.getTerritory(territoryId);
+        if (!territoryInfo) {
+          logger.warn(`Territory ${territoryId} not found in registry, skipping`);
+          continue;
+        }
+
+        // Filter OCR text to include only sections mentioning this territory
+        const filteredOcrResult = this.filterTextByTerritory(ocrResult, territoryInfo.name, territoryId);
+        
+        // Only analyze if we found relevant content
+        if (filteredOcrResult.extractedText && filteredOcrResult.extractedText.trim().length > 0) {
+          const territoryAnalysis = await this.analyzeSingleTerritory(
+            filteredOcrResult,
+            territoryId,
+            jobId ? `${jobId}-${territoryId}` : undefined
+          );
+          analyses.push(territoryAnalysis);
+        } else {
+          logger.info(`No content found for territory ${territoryInfo.name} (${territoryId}) in gazette`);
+        }
+      } catch (error) {
+        logger.error(`Failed to analyze territory ${territoryId}`, error as Error);
+      }
+    }
+
+    return analyses;
+  }
+
+  /**
+   * Filter OCR text to include only sections that mention a specific territory
+   */
+  private filterTextByTerritory(ocrResult: OcrResult, cityName: string, territoryId: string): OcrResult {
+    const text = ocrResult.extractedText || '';
+    if (!text) {
+      return { ...ocrResult, extractedText: '' };
+    }
+
+    // Split text into paragraphs/sections
+    const sections = text.split(/\n\n+/);
+    
+    // Filter sections that mention the city name (case-insensitive)
+    const cityNameLower = cityName.toLowerCase();
+    const cityNameVariations = this.getCityNameVariations(cityName);
+    
+    const relevantSections = sections.filter(section => {
+      const sectionLower = section.toLowerCase();
+      return cityNameVariations.some(variation => sectionLower.includes(variation.toLowerCase()));
+    });
+
+    // Join relevant sections
+    const filteredText = relevantSections.join('\n\n');
+
+    logger.debug(`Filtered text for ${cityName}`, {
+      originalLength: text.length,
+      filteredLength: filteredText.length,
+      sectionsFound: relevantSections.length,
+    });
+
+    return {
+      ...ocrResult,
+      extractedText: filteredText,
+      territoryId, // Override with specific territory
+      metadata: {
+        ...ocrResult.metadata,
+        filteredForTerritory: cityName,
+        originalTextLength: text.length,
+      },
+    };
+  }
+
+  /**
+   * Get variations of city name for matching
+   * Handles common abbreviations and variations
+   */
+  private getCityNameVariations(cityName: string): string[] {
+    const variations = [cityName];
+    
+    // Add common variations
+    if (cityName.includes('São')) {
+      variations.push(cityName.replace('São', 'S.'));
+      variations.push(cityName.replace('São', 'Sao'));
+    }
+    
+    if (cityName.includes('Santa')) {
+      variations.push(cityName.replace('Santa', 'Sta.'));
+      variations.push(cityName.replace('Santa', 'Sta'));
+    }
+    
+    if (cityName.includes('Santo')) {
+      variations.push(cityName.replace('Santo', 'Sto.'));
+      variations.push(cityName.replace('Santo', 'Sto'));
+    }
+
+    // Add "Prefeitura de" and "Município de" variations
+    variations.push(`Prefeitura de ${cityName}`);
+    variations.push(`Prefeitura Municipal de ${cityName}`);
+    variations.push(`Município de ${cityName}`);
+    variations.push(`Câmara Municipal de ${cityName}`);
+
+    return variations;
   }
 }

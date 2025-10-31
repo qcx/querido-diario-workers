@@ -10,10 +10,12 @@ import {
   EXTRACTION_PATTERNS, 
   TITLE_PATTERNS,
   hasConcursoKeywords,
+  hasAmbiguousConcursoKeywords,
   calculateTypeConfidence
 } from './patterns/concurso-patterns';
 import { ProximityAnalyzer } from './utils/proximity-analyzer';
 import { logger } from '../utils';
+import { CostTracker, AIUsage } from '../services/cost-tracker';
 
 export interface ConcursoAnalyzerConfig extends AnalyzerConfig {
   useAIExtraction?: boolean;
@@ -409,6 +411,20 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
 
       const result = await response.json() as any;
       const content = result.choices?.[0]?.message?.content;
+      
+      // Track token usage and cost
+      if (result.usage) {
+        CostTracker.trackUsage(
+          'openai',
+          this.model,
+          'concurso_extraction',
+          result.usage,
+          {
+            documentType,
+            territoryId: patternData.cidades?.[0]?.territoryId,
+          }
+        );
+      }
 
       if (!content) {
         return null;
