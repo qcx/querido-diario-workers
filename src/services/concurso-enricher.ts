@@ -5,7 +5,7 @@
 
 import { logger } from '../utils';
 import { parseBrazilianDate, toISODate } from '../utils/date-utils';
-import { format, isValid, isFuture, isPast, differenceInDays } from 'date-fns';
+import { isValid, isFuture, isPast, differenceInDays } from 'date-fns';
 
 export interface ValidationResult {
   valid: boolean;
@@ -30,6 +30,7 @@ export interface EnrichedMoney {
   valid: boolean;
   currency: string;
   warnings: string[];
+  errors: string[];
 }
 
 export interface EnrichedCNPJ {
@@ -157,6 +158,7 @@ export class MoneyValidator {
       valid: false,
       currency: 'BRL',
       warnings: [],
+      errors: [],
     };
 
     try {
@@ -170,12 +172,25 @@ export class MoneyValidator {
           .replace(/[R$\s]/g, '')
           .trim();
         
-        // Handle Brazilian format: 1.234,56 or 1234,56
-        if (cleaned.includes(',')) {
-          numValue = parseFloat(cleaned.replace(/\./g, '').replace(',', '.'));
+        const sanitized = cleaned.replace(/[^\d.,-]/g, '');
+        const lastComma = sanitized.lastIndexOf(',');
+        const lastDot = sanitized.lastIndexOf('.');
+
+        if (lastComma !== -1 && lastComma > lastDot) {
+          // Comma as decimal separator (Brazilian format)
+          numValue = parseFloat(sanitized.replace(/\./g, '').replace(',', '.'));
+        } else if (lastDot !== -1) {
+          const decimals = sanitized.length - lastDot - 1;
+          if (decimals <= 2) {
+            // Dot as decimal separator
+            numValue = parseFloat(sanitized.replace(/,/g, ''));
+          } else {
+            // Dot used for grouping; strip all separators
+            numValue = parseFloat(sanitized.replace(/[.,]/g, ''));
+          }
         } else {
-          // Handle international format: 1234.56
-          numValue = parseFloat(cleaned.replace(/\./g, ''));
+          // No decimal marker, just digits (possibly with grouping)
+          numValue = parseFloat(sanitized.replace(/[.,]/g, ''));
         }
       }
 

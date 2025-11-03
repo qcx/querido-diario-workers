@@ -64,7 +64,7 @@ async function processSingleAnalysis(
 
   // Apply deduplication to findings
   try {
-    const dedupeResult = await deduplicator.deduplicateFindings(analysis, 24);
+    const dedupeResult = await deduplicator.deduplicateFindings(analysis, 24, gazetteId);
     
     if (dedupeResult.duplicates.length > 0) {
       logger.info(`Deduplication removed ${dedupeResult.duplicates.length} duplicate findings`, {
@@ -76,21 +76,45 @@ async function processSingleAnalysis(
       });
 
       // Update analysis with deduplicated findings
+      const updatedAnalyses = analysis.analyses.map(a => ({
+        ...a,
+        findings: a.findings.filter((f: any) => 
+          dedupeResult.uniqueFindings.some((uf: any) => 
+            uf.type === f.type && 
+            uf.confidence === f.confidence &&
+            JSON.stringify(uf.data) === JSON.stringify(f.data)
+          )
+        )
+      }));
+
+      // Recalculate categories from deduplicated findings
+      const recalculatedCategories = new Set<string>();
+      for (const a of updatedAnalyses) {
+        for (const finding of a.findings) {
+          if (finding.type.startsWith('keyword:') && finding.data.category) {
+            recalculatedCategories.add(finding.data.category);
+          } else if (finding.type.startsWith('ai:')) {
+            if (finding.data.category) {
+              if (Array.isArray(finding.data.category)) {
+                finding.data.category.forEach((c: string) => recalculatedCategories.add(c));
+              } else {
+                recalculatedCategories.add(finding.data.category);
+              }
+            }
+            if (finding.data.categories && Array.isArray(finding.data.categories)) {
+              finding.data.categories.forEach((c: string) => recalculatedCategories.add(c));
+            }
+          }
+        }
+      }
+
       analysis = {
         ...analysis,
-        analyses: analysis.analyses.map(a => ({
-          ...a,
-          findings: a.findings.filter((f: any) => 
-            dedupeResult.uniqueFindings.some((uf: any) => 
-              uf.type === f.type && 
-              uf.confidence === f.confidence &&
-              JSON.stringify(uf.data) === JSON.stringify(f.data)
-            )
-          )
-        })),
+        analyses: updatedAnalyses,
         summary: {
           ...analysis.summary,
           totalFindings: dedupeResult.uniqueFindings.length,
+          categories: Array.from(recalculatedCategories),
           deduplicationApplied: true,
           duplicatesRemoved: dedupeResult.duplicates.length,
         }

@@ -161,7 +161,7 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
     const tableIndicators = [
       /\|\s*\w+\s*\|/, // Pipe-separated tables
       /---\s*---/, // Markdown table separators
-      /\d+[ªº°]\s+\w+/, // Numbered lists with ordinals
+      // Removed: /\d+[ªº°]\s+\w+/ - ordinals are common in active headings (e.g. "1ª Convocação")
       /edital.*\d{2,4}.*cargo/i, // Typical table headers
       /n[°º]\s*\d+.*data.*homologa[çc][ãa]o/i, // Reference tables
     ];

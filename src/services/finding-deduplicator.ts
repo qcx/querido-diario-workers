@@ -29,14 +29,15 @@ export class FindingDeduplicator {
    */
   async deduplicateFindings(
     analysis: GazetteAnalysis,
-    timeWindowHours: number = 24
+    timeWindowHours: number = 24,
+    currentGazetteId?: string
   ): Promise<DeduplicationResult> {
     const uniqueFindings: Finding[] = [];
     const duplicates: any[] = [];
 
     // Load recent findings from database if available
     if (this.databaseClient) {
-      await this.loadRecentFindings(analysis.territoryId, timeWindowHours);
+      await this.loadRecentFindings(analysis.territoryId, timeWindowHours, currentGazetteId);
     }
 
     // Process each finding
@@ -214,7 +215,8 @@ export class FindingDeduplicator {
    */
   private async loadRecentFindings(
     territoryId: string,
-    hoursBack: number
+    hoursBack: number,
+    excludeGazetteId?: string
   ): Promise<void> {
     if (!this.databaseClient) return;
 
@@ -230,7 +232,8 @@ export class FindingDeduplicator {
       })
       .from(schema.analysisResults)
       .where(sql`${schema.analysisResults.territoryId} = ${territoryId} 
-        AND ${schema.analysisResults.analyzedAt} >= ${cutoffTime.toISOString()}`)
+        AND ${schema.analysisResults.analyzedAt} >= ${cutoffTime.toISOString()}
+        ${excludeGazetteId ? sql`AND ${schema.analysisResults.gazetteId} != ${excludeGazetteId}` : sql``}`)
       .orderBy(sql`${schema.analysisResults.analyzedAt} DESC`)
       .limit(1000);
 

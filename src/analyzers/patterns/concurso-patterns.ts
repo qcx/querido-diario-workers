@@ -16,9 +16,6 @@ export interface ConcursoPattern {
   moderateKeywords?: string[]; // Tier 2: Contextual phrases requiring validation (weight: 0.6)
   weakKeywords?: string[]; // Tier 3: Generic references, only count with strong signals (weight: 0.3)
   
-  // Legacy support - will be removed after migration
-  keywords?: string[];
-  
   excludePatterns?: RegExp[]; // Patterns that should NOT match
   
   // Enhanced exclusion - keywords from other stages that conflict
