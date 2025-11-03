@@ -7,6 +7,7 @@
       "stateCode": "RO",
       "territoryId": "1100015",
       "spiderType": "rondonia",
+      "aliases": ["Alta Floresta", "Alta Floresta D Oeste", "Alta Floresta dOeste"],
       "config": {
         "type": "rondonia",
         "cityName": "Alta Floresta D'Oeste",
@@ -98,6 +99,7 @@
       "stateCode": "RO",
       "territoryId": "1100155",
       "spiderType": "rondonia",
+      "aliases": ["Guajara-Mirim", "Guajara Mirim", "Guajará Mirim"],
       "config": {
         "type": "rondonia",
         "cityName": "Guajará-Mirim",
@@ -124,6 +126,7 @@
       "stateCode": "RO",
       "territoryId": "1100205",
       "spiderType": "rondonia",
+      "aliases": ["Ji-Parana", "Ji Parana", "Ji Paraná"],
       "config": {
         "type": "rondonia",
         "cityName": "Ji-Paraná",

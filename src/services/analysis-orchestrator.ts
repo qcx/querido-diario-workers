@@ -16,8 +16,11 @@ import {
   AIAnalyzer,
   EntityExtractor,
   ConcursoAnalyzer,
+  ConcursoValidator,
 } from '../analyzers';
 import { logger, sha256Hash } from '../utils';
+import { TerritoryService } from './territory-service';
+import { TextFilterService } from './text-filter-service';
 
 interface AnalysisContext {
   documentTypes: Array<{ type: string; confidence: number }>;
@@ -82,6 +85,17 @@ export class AnalysisOrchestrator {
       );
     }
 
+    // Concurso Validator (for ambiguous keywords)
+    if (this.config.analyzers.concursoValidator?.enabled && this.config.analyzers.concursoValidator.apiKey) {
+      this.analyzers.push(
+        new ConcursoValidator({
+          ...this.config.analyzers.concursoValidator,
+          apiKey: this.config.analyzers.concursoValidator.apiKey,
+          model: this.config.analyzers.concursoValidator.model,
+        })
+      );
+    }
+
     // Sort by priority
     this.analyzers.sort((a, b) => a.getPriority() - b.getPriority());
 
@@ -128,8 +142,33 @@ export class AnalysisOrchestrator {
 
   /**
    * Analyze OCR result with all enabled analyzers
+   * For state-level gazettes, can create multiple analyses for different territories
    */
-  async analyze(ocrResult: OcrResult, territoryId?: string, jobId?: string): Promise<GazetteAnalysis> {
+  async analyze(
+    ocrResult: OcrResult, 
+    territoryId?: string, 
+    jobId?: string,
+    gazetteScope?: 'city' | 'state',
+    requestedTerritories?: string[]
+  ): Promise<GazetteAnalysis | GazetteAnalysis[]> {
+    // If state-level gazette with multiple territories requested, split analysis
+    if (gazetteScope === 'state' && requestedTerritories && requestedTerritories.length > 0) {
+      return this.analyzeMultiTerritoryGazette(ocrResult, requestedTerritories, jobId);
+    }
+    
+    // Otherwise, single territory analysis
+    return this.analyzeSingleTerritory(ocrResult, territoryId, jobId, gazetteScope);
+  }
+
+  /**
+   * Analyze OCR result for a single territory
+   */
+  private async analyzeSingleTerritory(
+    ocrResult: OcrResult, 
+    territoryId?: string, 
+    jobId?: string,
+    gazetteScope?: 'city' | 'state'
+  ): Promise<GazetteAnalysis> {
     const startTime = Date.now();
     // Use provided jobId or generate a fallback (for backward compatibility)
     const analysisJobId = jobId || `analysis-${ocrResult.jobId}-${Date.now()}`;
@@ -201,6 +240,13 @@ export class AnalysisOrchestrator {
         editionNumber: ocrResult.editionNumber,
         power: ocrResult.metadata?.power,
         isExtraEdition: ocrResult.metadata?.isExtraEdition,
+        gazetteScope: gazetteScope || ocrResult.metadata?.gazetteScope || 'city', // Include gazetteScope for dashboard queries
+        textLengths: {
+          originalOcrText: ocrResult.metadata?.originalTextLength || ocrResult.extractedText?.length || 0,
+          consideredForAnalysis: ocrResult.extractedText?.length || 0,
+          reductionPercentage: ocrResult.metadata?.reductionPercentage,
+          filtered: !!ocrResult.metadata?.filteredForTerritory,
+        },
       },
     };
 
@@ -211,6 +257,12 @@ export class AnalysisOrchestrator {
       ocrJobId: ocrResult.jobId,
       totalFindings: summary.totalFindings,
       totalTimeMs: totalTime,
+      textLengths: {
+        original: ocrResult.metadata?.originalTextLength || ocrResult.extractedText?.length || 0,
+        considered: ocrResult.extractedText?.length || 0,
+        filtered: !!ocrResult.metadata?.filteredForTerritory,
+        reductionPercentage: ocrResult.metadata?.reductionPercentage,
+      },
     });
 
     return gazetteAnalysis;
@@ -350,6 +402,103 @@ export class AnalysisOrchestrator {
       error: {
         message: error.message,
         code: error.code,
+      },
+    };
+  }
+
+  /**
+   * Analyze state-level gazette for multiple territories
+   * Splits the text by territory and creates separate analyses
+   */
+  private async analyzeMultiTerritoryGazette(
+    ocrResult: OcrResult,
+    requestedTerritories: string[],
+    jobId?: string
+  ): Promise<GazetteAnalysis[]> {
+    logger.info('Starting multi-territory analysis', {
+      ocrJobId: ocrResult.jobId,
+      requestedTerritories,
+      territoryCount: requestedTerritories.length,
+    });
+
+    const analyses: GazetteAnalysis[] = [];
+
+    // For each requested territory, filter text and analyze
+    for (const territoryId of requestedTerritories) {
+      try {
+        // Get territory information
+        const territoryInfo = TerritoryService.getTerritoryInfo(territoryId);
+        if (!territoryInfo) {
+          logger.warn(`Territory ${territoryId} not found in registry, skipping`);
+          continue;
+        }
+
+        // Filter OCR text to include only sections mentioning this territory
+        const filteredOcrResult = this.filterTextByTerritory(
+          ocrResult, 
+          territoryInfo.name, 
+          territoryId,
+          territoryInfo.aliases || []
+        );
+        
+        // Only analyze if we found relevant content
+        if (filteredOcrResult.extractedText && filteredOcrResult.extractedText.trim().length > 0) {
+          const territoryAnalysis = await this.analyzeSingleTerritory(
+            filteredOcrResult,
+            territoryId,
+            jobId ? `${jobId}-${territoryId}` : undefined,
+            'state' // Mark as state-level gazette
+          );
+          analyses.push(territoryAnalysis);
+        } else {
+          logger.info(`No content found for territory ${territoryInfo.name} (${territoryId}) in gazette`);
+        }
+      } catch (error) {
+        logger.error(`Failed to analyze territory ${territoryId}`, error as Error);
+      }
+    }
+
+    return analyses;
+  }
+
+  /**
+   * Filter OCR text to include only sections that mention a specific territory
+   * Uses TextFilterService for intelligent filtering with normalization and pattern matching
+   */
+  private filterTextByTerritory(
+    ocrResult: OcrResult, 
+    cityName: string, 
+    territoryId: string,
+    aliases: string[] = []
+  ): OcrResult {
+    const text = ocrResult.extractedText || '';
+    if (!text) {
+      return { ...ocrResult, extractedText: '' };
+    }
+
+    // Use TextFilterService for intelligent filtering
+    const filterResult = TextFilterService.filterTextByCity(text, cityName, aliases, true);
+
+    logger.info(`Filtered text for ${cityName}`, {
+      territoryId,
+      originalLength: filterResult.originalLength,
+      filteredLength: filterResult.filteredLength,
+      sectionsFound: filterResult.sectionsFound,
+      reductionPercentage: `${filterResult.reductionPercentage}%`,
+      aliasesUsed: aliases.length,
+    });
+
+    return {
+      ...ocrResult,
+      extractedText: filterResult.filteredText,
+      territoryId, // Override with specific territory
+      metadata: {
+        ...ocrResult.metadata,
+        filteredForTerritory: cityName,
+        originalTextLength: filterResult.originalLength,
+        filteredTextLength: filterResult.filteredLength,
+        sectionsFound: filterResult.sectionsFound,
+        reductionPercentage: filterResult.reductionPercentage,
       },
     };
   }

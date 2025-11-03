@@ -87,7 +87,7 @@ export const ocrResults = sqliteTable('ocr_results', {
   languageDetected: text('language_detected').default('pt'),
   processingMethod: text('processing_method').default('mistral'),
   createdAt: text('created_at').notNull().default(sql`(datetime('now'))`),
-  metadata: text('metadata').notNull().default('{}')
+  metadata: text('metadata').notNull().default('{}') // Includes aiUsage with cost info
 }, (table) => ({
   documentIdx: index('idx_ocr_results_document').on(table.documentType, table.documentId),
   createdAtIdx: index('idx_ocr_results_created_at').on(table.createdAt),
@@ -129,7 +129,7 @@ export const analysisResults = sqliteTable('analysis_results', {
   summary: text('summary').notNull().default('{}'), // JSON object
   processingTimeMs: integer('processing_time_ms'),
   analyzedAt: text('analyzed_at').notNull(), // ISO 8601 timestamp
-  metadata: text('metadata').notNull().default('{}')
+  metadata: text('metadata').notNull().default('{}') // Includes aiUsage costs, configSignature, etc.
 }, (table) => ({
   territoryDateIdx: index('idx_analysis_territory_date').on(table.territoryId, table.publicationDate),
   highConfidenceIdx: index('idx_analysis_high_confidence').on(table.highConfidenceFindings),

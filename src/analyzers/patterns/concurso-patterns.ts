@@ -381,12 +381,33 @@ export const EXTRACTION_PATTERNS = {
  */
 export function hasConcursoKeywords(text: string): boolean {
   const keywords = [
-    'concurso',
-  //  'processo seletivo',
+    'concurso público',
+    'concurso publico',  // without accent
   ];
   
   const lowerText = text.toLowerCase();
   return keywords.some(kw => lowerText.includes(kw));
+}
+
+/**
+ * Helper to detect if text contains ambiguous concurso terms needing AI validation
+ */
+export function hasAmbiguousConcursoKeywords(text: string): boolean {
+  const ambiguousKeywords = [
+    'concurso', // Without "público"
+    'processo seletivo',
+    'seleção pública',
+    'seleção simplificada',
+    'processo seletivo simplificado',
+  ];
+  
+  const lowerText = text.toLowerCase();
+  
+  // Check if text has ambiguous keywords but NOT the specific "concurso público"
+  const hasAmbiguous = ambiguousKeywords.some(kw => lowerText.includes(kw));
+  const hasSpecific = lowerText.includes('concurso público') || lowerText.includes('concurso publico');
+  
+  return hasAmbiguous && !hasSpecific;
 }
 
 /**

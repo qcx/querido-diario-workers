@@ -110,18 +110,31 @@ export class KeywordAnalyzer extends BaseAnalyzer {
    */
   private getDefaultPatterns(): KeywordPattern[] {
     return [
-      // Concursos Públicos - Gerais
+      // Concursos Públicos - Direct match (high confidence)
       {
         category: 'concurso_publico',
         keywords: [
           'concurso público',
-          'concurso',
-          'seleção pública',
-          'processo seletivo',
+          'concurso publico',  // without accent
         ],
         caseSensitive: false,
         wholeWord: false,
-        weight: 0.8,
+        weight: 0.95,  // Higher weight for exact match
+      },
+
+      // Ambiguous terms - require AI validation
+      {
+        category: 'concurso_ambiguous',  // Special category for AI validation
+        keywords: [
+          'concurso',  // Without "público" 
+          'seleção pública',
+          'processo seletivo',
+          'seleção simplificada',
+          'processo seletivo simplificado',
+        ],
+        caseSensitive: false,
+        wholeWord: false,
+        weight: 0.5,  // Lower weight - needs validation
       },
 
       // Concursos Públicos - Edital de Abertura

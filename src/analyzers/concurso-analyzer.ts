@@ -10,10 +10,12 @@ import {
   EXTRACTION_PATTERNS, 
   TITLE_PATTERNS,
   hasConcursoKeywords,
+  hasAmbiguousConcursoKeywords,
   calculateTypeConfidence
 } from './patterns/concurso-patterns';
 import { ProximityAnalyzer } from './utils/proximity-analyzer';
 import { logger } from '../utils';
+import { CostTracker, AIUsage } from '../services/cost-tracker';
 
 export interface ConcursoAnalyzerConfig extends AnalyzerConfig {
   useAIExtraction?: boolean;
@@ -91,15 +93,23 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
     const categoryMap: Record<ConcursoDocumentType, string> = {
       convocacao: 'concurso_publico_convocacao',
       edital_abertura: 'concurso_publico_abertura',
+      edital_retificacao: 'concurso_publico_retificacao',
       homologacao: 'concurso_publico_homologacao',
-      retificacao: 'concurso_publico_retificacao',
       prorrogacao: 'concurso_publico_prorrogacao',
-      cancelamento_suspensao: 'concurso_publico_cancelamento',
+      cancelamento: 'concurso_publico_cancelamento',
       resultado_parcial: 'concurso_publico_resultado',
       gabarito: 'concurso_publico_resultado',
-      recurso_impugnacao: 'concurso_publico',
       nao_classificado: 'concurso_publico',
     };
+
+    // Extract context - ensure it's never empty
+    const context = this.extractRelevantContext(text, documentTypeResult.type);
+    if (!context || context.trim().length === 0) {
+      logger.warn('Empty context extracted for concurso finding', {
+        documentType: documentTypeResult.type,
+        textLength: text.length,
+      });
+    }
 
     findings.push(
       this.createFinding(
@@ -111,7 +121,7 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
           documentType: documentTypeResult.type,
         },
         documentTypeResult.confidence,
-        this.extractRelevantContext(text, documentTypeResult.type)
+        context || text.substring(0, 3000) // Fallback to first 3000 chars if context is empty
       )
     );
 
@@ -409,6 +419,20 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
 
       const result = await response.json() as any;
       const content = result.choices?.[0]?.message?.content;
+      
+      // Track token usage and cost
+      if (result.usage) {
+        CostTracker.trackUsage(
+          'openai',
+          this.model,
+          'concurso_extraction',
+          result.usage,
+          {
+            documentType,
+            territoryId: patternData.cidades?.[0]?.territoryId,
+          }
+        );
+      }
 
       if (!content) {
         return null;
@@ -590,9 +614,16 @@ Extract and return JSON with any identifiable fields:
    * Extract relevant context around concurso information
    */
   private extractRelevantContext(text: string, documentType: ConcursoDocumentType): string {
+    // Ensure text is not empty
+    if (!text || text.trim().length === 0) {
+      logger.warn('extractRelevantContext called with empty text', {
+        documentType,
+      });
+      return '';
+    }
+
     // For AI extraction, we want the most relevant part of the document
     // Limit to ~3000 characters to save on API costs
-    
     const maxLength = 3000;
     
     if (text.length <= maxLength) {
@@ -614,6 +645,15 @@ Extract and return JSON with any identifiable fields:
 
     const relevantKeywords = keywords[documentType];
     
+    // Safety check: if keywords not found for type, use generic keywords
+    if (!relevantKeywords || relevantKeywords.length === 0) {
+      logger.warn('No keywords defined for document type, using generic keywords', {
+        documentType,
+      });
+      // Return first chunk as fallback
+      return text.substring(0, maxLength);
+    }
+    
     // Find section with most keyword matches
     const chunkSize = maxLength;
     let bestChunk = text.substring(0, chunkSize);
@@ -631,6 +671,15 @@ Extract and return JSON with any identifiable fields:
         bestScore = score;
         bestChunk = chunk;
       }
+    }
+
+    // Final safety check
+    if (!bestChunk || bestChunk.trim().length === 0) {
+      logger.warn('Best chunk is empty, falling back to first chunk', {
+        documentType,
+        textLength: text.length,
+      });
+      return text.substring(0, maxLength);
     }
 
     return bestChunk;
@@ -667,5 +716,114 @@ Extract and return JSON with any identifiable fields:
       hasAIExtraction,
       uniqueDocumentTypes: Object.keys(documentTypes),
     };
+  }
+
+  /**
+   * Analyze a specific text section (for use by ConcursoValidator)
+   * This is a public method that can be called to analyze validated ambiguous sections
+   */
+  public async analyzeTextSection(text: string, validatorContext?: {
+    keyword: string;
+    validationReason: string;
+    validationConfidence: number;
+  }): Promise<Finding | null> {
+    logger.info('Analyzing validated text section', {
+      textLength: text.length,
+      keyword: validatorContext?.keyword,
+    });
+
+    // Step 1: Detect document type from the section
+    const documentTypeResult = this.detectDocumentType(text);
+    
+    if (!documentTypeResult) {
+      logger.debug('Could not classify concurso document type from validated section');
+      return null;
+    }
+
+    logger.info('Detected concurso document from validated section', {
+      documentType: documentTypeResult.type,
+      confidence: documentTypeResult.confidence,
+      keyword: validatorContext?.keyword,
+    });
+
+    // Step 2: Extract structured data using patterns
+    const patternData = this.extractDataWithPatterns(text, documentTypeResult.type);
+
+    // Step 3: If AI extraction is enabled, enhance with AI
+    let finalData = patternData;
+    let extractionMethod: 'pattern' | 'ai' | 'hybrid' = 'pattern';
+
+    if (this.useAIExtraction && this.apiKey && documentTypeResult.confidence >= 0.6) {
+      logger.info('Using AI to extract structured data from validated section', {
+        documentType: documentTypeResult.type,
+      });
+
+      try {
+        const aiData = await this.extractDataWithAI(text, documentTypeResult.type, patternData);
+        if (aiData) {
+          finalData = this.mergeExtractedData(patternData, aiData);
+          extractionMethod = 'hybrid';
+        }
+      } catch (error) {
+        logger.error('AI extraction failed for validated section, using pattern-based data only', error as Error);
+      }
+    }
+
+    // Step 4: Create concurso data
+    const concursoData: ConcursoData = {
+      documentType: documentTypeResult.type,
+      documentTypeConfidence: documentTypeResult.confidence,
+      ...finalData,
+    };
+
+    // Map document type to webhook category
+    const categoryMap: Record<ConcursoDocumentType, string> = {
+      convocacao: 'concurso_publico_convocacao',
+      edital_abertura: 'concurso_publico_abertura',
+      edital_retificacao: 'concurso_publico_retificacao',
+      homologacao: 'concurso_publico_homologacao',
+      prorrogacao: 'concurso_publico_prorrogacao',
+      cancelamento: 'concurso_publico_cancelamento',
+      resultado_parcial: 'concurso_publico_resultado',
+      gabarito: 'concurso_publico_resultado',
+      nao_classificado: 'concurso_publico',
+    };
+
+    // Extract context - ensure it's never empty
+    const context = this.extractRelevantContext(text, documentTypeResult.type);
+    if (!context || context.trim().length === 0) {
+      logger.warn('Empty context extracted for validated concurso finding', {
+        documentType: documentTypeResult.type,
+        textLength: text.length,
+        validatorKeyword: validatorContext?.keyword,
+      });
+    }
+
+    // Create finding with type 'concurso' so it gets stored in the database
+    const finding = this.createFinding(
+      'concurso',
+      {
+        category: categoryMap[documentTypeResult.type] || 'concurso_publico',
+        concursoData,
+        extractionMethod: extractionMethod + '_from_validated' as any,
+        documentType: documentTypeResult.type,
+        // Add validator context for traceability
+        validatedBy: 'concurso-validator',
+        validatorKeyword: validatorContext?.keyword,
+        validationReason: validatorContext?.validationReason,
+        validationConfidence: validatorContext?.validationConfidence,
+      },
+      documentTypeResult.confidence,
+      context || text.substring(0, 3000) // Fallback to first 3000 chars if context is empty
+    );
+
+    logger.info('Created concurso finding from validated section', {
+      documentType: documentTypeResult.type,
+      confidence: finding.confidence,
+      orgao: concursoData.orgao,
+      totalVagas: concursoData.vagas?.total,
+    });
+
+    return finding;
   }
 }

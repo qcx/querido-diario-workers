@@ -6,11 +6,13 @@ import { BaseAnalyzer } from './base-analyzer';
 import { OcrResult, Finding, AIAnalysisPrompt, AnalyzerConfig } from '../types';
 import { logger } from '../utils';
 import { AIAnalysisError, toAppError } from '../types/errors';
+import { CostTracker, AIUsage } from '../services/cost-tracker';
 
 export class AIAnalyzer extends BaseAnalyzer {
   private apiKey: string;
   private prompts: AIAnalysisPrompt[];
   private model: string;
+  private currentAnalysisUsages: AIUsage[] = [];
 
   constructor(
     config: AnalyzerConfig & {
@@ -28,6 +30,9 @@ export class AIAnalyzer extends BaseAnalyzer {
 
   protected async performAnalysis(ocrResult: OcrResult): Promise<Finding[]> {
     const findings: Finding[] = [];
+    
+    // Reset usage tracking for this analysis
+    this.currentAnalysisUsages = [];
 
     // GPT-4o-mini supports 16k tokens (~64k characters)
     // Using 50k chars to leave room for prompts and responses
@@ -59,12 +64,38 @@ export class AIAnalyzer extends BaseAnalyzer {
         const aiError = error instanceof AIAnalysisError ? error : toAppError(error);
         logger.error(`AI analysis failed for prompt ${prompt.name}`, {
           promptName: prompt.name,
-          error: aiError.toJSON()
+          ...aiError.toJSON()
         });
       }
     }
 
     return findings;
+  }
+
+  protected getMetadata(findings: Finding[]): Record<string, any> {
+    const metadata: Record<string, any> = {
+      findingsCount: findings.length,
+      promptsUsed: this.prompts.length,
+    };
+
+    // Add cost tracking metadata
+    if (this.currentAnalysisUsages.length > 0) {
+      const totalCost = this.currentAnalysisUsages.reduce((sum, u) => sum + u.estimatedCost, 0);
+      const totalTokens = this.currentAnalysisUsages.reduce((sum, u) => sum + u.tokens.total, 0);
+      
+      metadata.aiUsage = {
+        totalCost,
+        totalTokens,
+        avgCostPerPrompt: totalCost / this.currentAnalysisUsages.length,
+        costBreakdown: this.currentAnalysisUsages.map(u => ({
+          operation: u.metadata?.promptName || 'unknown',
+          tokens: u.tokens.total,
+          cost: u.estimatedCost,
+        })),
+      };
+    }
+
+    return metadata;
   }
 
   /**
@@ -119,7 +150,29 @@ export class AIAnalyzer extends BaseAnalyzer {
       );
     }
     
-    const typedResult = result as { choices?: { message?: { content?: string } }[] };
+    const typedResult = result as { 
+      choices?: { message?: { content?: string } }[]; 
+      usage?: { prompt_tokens?: number; completion_tokens?: number; total_tokens?: number } 
+    };
+    
+    // Track token usage and cost
+    if (typedResult.usage) {
+      const usage = CostTracker.trackUsage(
+        'openai',
+        prompt.model || this.model,
+        'analysis',
+        typedResult.usage,
+        {
+          promptName: prompt.name,
+          territoryId: _metadata?.territoryId,
+          jobId: _metadata?.jobId,
+        }
+      );
+      
+      // Store usage info for later aggregation
+      this.currentAnalysisUsages.push(usage);
+    }
+    
     if (!typedResult.choices || !typedResult.choices[0]?.message?.content) {
       throw new AIAnalysisError(
         'AI response missing expected structure',

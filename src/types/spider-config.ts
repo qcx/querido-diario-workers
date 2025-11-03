@@ -48,6 +48,9 @@ export interface SpiderConfig {
   /** Gazette scope - city-specific or state-level */
   gazetteScope: GazetteScope;
   
+  /** Alternative names for text filtering in state gazettes (e.g., ["Alta Floresta", "Alta Floresta D Oeste"]) */
+  aliases?: string[];
+  
   /** Earliest date available for this municipality (ISO format) */
   startDate?: string;
   
