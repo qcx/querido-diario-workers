@@ -5,7 +5,7 @@
 
 import { logger } from '../utils';
 import { parseBrazilianDate, toISODate } from '../utils/date-utils';
-import { isValid, isFuture, isPast, differenceInDays } from 'date-fns';
+import { isValid, isFuture, isPast, differenceInDays, parseISO } from 'date-fns';
 
 export interface ValidationResult {
   valid: boolean;
@@ -64,8 +64,13 @@ export class DateValidator {
 
     try {
       // Try to parse Brazilian date format
-      const date = parseBrazilianDate(dateStr);
-      
+      let date = parseBrazilianDate(dateStr);
+      if (!isValid(date)) {
+        const isoCandidate = parseISO(dateStr);
+        if (isValid(isoCandidate)) {
+          date = isoCandidate;
+        }
+      }
       if (!isValid(date)) {
         return result;
       }

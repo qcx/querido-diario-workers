@@ -162,7 +162,7 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
       /\|\s*\w+\s*\|/, // Pipe-separated tables
       /---\s*---/, // Markdown table separators
       // Removed: /\d+[ªº°]\s+\w+/ - ordinals are common in active headings (e.g. "1ª Convocação")
-      /edital.*\d{2,4}.*cargo/i, // Typical table headers
+      // Removed: /edital.*\d{2,4}.*cargo/i - this matches real edital headings and blocks active detections
       /n[°º]\s*\d+.*data.*homologa[çc][ãa]o/i, // Reference tables
     ];
     

@@ -292,7 +292,7 @@ export class WebhookSenderService {
       const keywords = analysis.summary?.keywords || [];
 
       // Build raw data object
-      const rawData = {
+    /*  const rawData = {
         // Document classification
         documentType: record.documentType,
         extractionMethod: record.extractionMethod,
@@ -335,6 +335,38 @@ export class WebhookSenderService {
       });
 
       return enrichedData;
+      */
+
+      return {
+        // Document classification
+        documentType: record.documentType,
+        extractionMethod: record.extractionMethod,
+        
+        // Basic information
+        orgao: record.orgao,
+        editalNumero: record.editalNumero,
+
+        // Vacancies data
+        totalVagas: record.totalVagas || 0,
+        cargos: parsedCargos,
+
+        // Important dates
+        datas: parsedDatas,
+        
+        // Fees
+        taxas: parsedTaxas,
+        
+        // Organization/Banca
+        banca: parsedBanca,
+        
+        // Keywords for backward compatibility
+        keywords: keywords,
+        
+        // Database metadata
+        confidence: record.confidence,
+        territoryId: record.territoryId,
+        createdAt: record.createdAt,
+      };
     } catch (error) {
       logger.error('Failed to extract concurso data from database', error as Error, {
         analysisJobId: analysis.jobId,

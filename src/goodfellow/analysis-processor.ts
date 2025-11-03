@@ -76,33 +76,48 @@ async function processSingleAnalysis(
       });
 
       // Update analysis with deduplicated findings
+      // Create a Set of unique finding keys for O(1) lookup
+      const uniqueFindingKeys = new Set(
+        dedupeResult.uniqueFindings.map((uf: any) => {
+          // Create deterministic key by sorting object keys
+          const sortedData = JSON.stringify(uf.data, Object.keys(uf.data).sort());
+          return `${uf.type}:${uf.confidence}:${sortedData}`;
+        })
+      );
+      
       const updatedAnalyses = analysis.analyses.map(a => ({
         ...a,
-        findings: a.findings.filter((f: any) => 
-          dedupeResult.uniqueFindings.some((uf: any) => 
-            uf.type === f.type && 
-            uf.confidence === f.confidence &&
-            JSON.stringify(uf.data) === JSON.stringify(f.data)
-          )
-        )
+        findings: a.findings.filter((f: any) => {
+          const sortedData = JSON.stringify(f.data, Object.keys(f.data || {}).sort());
+          const key = `${f.type}:${f.confidence}:${sortedData}`;
+          return uniqueFindingKeys.has(key);
+        })
       }));
 
       // Recalculate categories from deduplicated findings
       const recalculatedCategories = new Set<string>();
       for (const a of updatedAnalyses) {
         for (const finding of a.findings) {
+          if (!finding.data) continue;
+          
           if (finding.type.startsWith('keyword:') && finding.data.category) {
             recalculatedCategories.add(finding.data.category);
           } else if (finding.type.startsWith('ai:')) {
             if (finding.data.category) {
               if (Array.isArray(finding.data.category)) {
-                finding.data.category.forEach((c: string) => recalculatedCategories.add(c));
+                finding.data.category.forEach((c) => {
+                  if (typeof c === 'string') recalculatedCategories.add(c);
+                });
               } else {
-                recalculatedCategories.add(finding.data.category);
+                if (typeof finding.data.category === 'string') {
+                  recalculatedCategories.add(finding.data.category);
+                }
               }
             }
             if (finding.data.categories && Array.isArray(finding.data.categories)) {
-              finding.data.categories.forEach((c: string) => recalculatedCategories.add(c));
+              finding.data.categories.forEach((c) => {
+                if (typeof c === 'string') recalculatedCategories.add(c);
+              });
             }
           }
         }
