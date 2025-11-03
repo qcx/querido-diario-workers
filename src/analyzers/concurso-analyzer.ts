@@ -54,9 +54,25 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
       return findings;
     }
 
-    logger.info('Detected concurso document', {
+    // Get the pattern for detailed logging
+    const detectedPattern = CONCURSO_PATTERNS.find(p => p.documentType === documentTypeResult.type);
+    const tieredScore = detectedPattern ? this.calculateTieredKeywordScore(text, detectedPattern) : null;
+    const conflicts = detectedPattern ? this.detectConflicts(text, detectedPattern) : null;
+    
+    logger.info('✓ Detected concurso document', {
       documentType: documentTypeResult.type,
-      confidence: documentTypeResult.confidence,
+      confidence: documentTypeResult.confidence.toFixed(3),
+      details: {
+        strongKeywords: tieredScore?.strongCount || 0,
+        moderateKeywords: tieredScore?.moderateCount || 0,
+        weakKeywords: tieredScore?.weakCount || 0,
+        conflictingStages: conflicts?.conflictCount || 0,
+        matchedKeywords: tieredScore?.matchedKeywords.slice(0, 5).map(m => ({
+          keyword: m.keyword,
+          tier: m.tier,
+        })) || [],
+        conflicts: conflicts?.conflictingKeywords.slice(0, 3) || [],
+      },
     });
 
     // Step 2: Extract structured data using patterns
@@ -129,6 +145,255 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
   }
 
   /**
+   * Detect if a keyword appears in an active, historical, or reference context
+   */
+  private detectContextType(
+    text: string,
+    keyword: string,
+    position: number
+  ): 'active' | 'historical' | 'reference' {
+    // Extract context window around the keyword (100 chars before and after)
+    const contextStart = Math.max(0, position - 100);
+    const contextEnd = Math.min(text.length, position + keyword.length + 100);
+    const context = text.substring(contextStart, contextEnd).toLowerCase();
+    
+    // Check for table/list indicators (historical reference)
+    const tableIndicators = [
+      /\|\s*\w+\s*\|/, // Pipe-separated tables
+      /---\s*---/, // Markdown table separators
+      /\d+[ªº°]\s+\w+/, // Numbered lists with ordinals
+      /edital.*\d{2,4}.*cargo/i, // Typical table headers
+      /n[°º]\s*\d+.*data.*homologa[çc][ãa]o/i, // Reference tables
+    ];
+    
+    for (const indicator of tableIndicators) {
+      if (indicator.test(context)) {
+        return 'historical';
+      }
+    }
+    
+    // Check for active action verbs near the keyword
+    const activeVerbs = [
+      /(?:torna|tornar)\s+p[uú]blic[oa]/i,
+      /(?:prorroga|prorrogar)/i,
+      /(?:retifica|retificar)/i,
+      /(?:convoca|convocar)/i,
+      /(?:homologa|homologar)/i,
+      /(?:cancela|cancelar)/i,
+      /(?:suspende|suspender)/i,
+      /fica(?:m)?\s+\w+/i, // "fica prorrogado", "ficam convocados"
+    ];
+    
+    const keywordPos = context.indexOf(keyword.toLowerCase());
+    const beforeKeyword = context.substring(Math.max(0, keywordPos - 50), keywordPos);
+    const afterKeyword = context.substring(keywordPos, Math.min(context.length, keywordPos + 50));
+    
+    for (const verb of activeVerbs) {
+      if (verb.test(beforeKeyword) || verb.test(afterKeyword)) {
+        return 'active';
+      }
+    }
+    
+    // Check for passive/reference indicators
+    const referenceIndicators = [
+      /conforme\s+(?:edital|publicado)/i,
+      /referente\s+ao/i,
+      /de\s+acordo\s+com/i,
+      /nos\s+termos\s+do/i,
+      /previsto\s+no/i,
+    ];
+    
+    for (const indicator of referenceIndicators) {
+      if (indicator.test(context)) {
+        return 'reference';
+      }
+    }
+    
+    // Default to active if no clear indicators
+    return 'active';
+  }
+  
+  /**
+   * Calculate tiered keyword score
+   */
+  private calculateTieredKeywordScore(
+    text: string,
+    pattern: any
+  ): {
+    score: number;
+    strongCount: number;
+    moderateCount: number;
+    weakCount: number;
+    matchedKeywords: Array<{ keyword: string; tier: string; context: string }>;
+  } {
+    const matchedKeywords: Array<{ keyword: string; tier: string; context: string }> = [];
+    let strongCount = 0;
+    let moderateCount = 0;
+    let weakCount = 0;
+    
+    // Check strong keywords (weight: 1.0)
+    for (const keyword of pattern.strongKeywords || []) {
+      const lowerText = text.toLowerCase();
+      const lowerKeyword = keyword.toLowerCase();
+      let lastIndex = 0;
+      
+      while (true) {
+        const index = lowerText.indexOf(lowerKeyword, lastIndex);
+        if (index === -1) break;
+        
+        const contextType = this.detectContextType(text, keyword, index);
+        
+        // Only count active contexts for strong keywords
+        if (contextType === 'active') {
+          strongCount++;
+          const contextStart = Math.max(0, index - 50);
+          const contextEnd = Math.min(text.length, index + keyword.length + 50);
+          matchedKeywords.push({
+            keyword,
+            tier: 'strong',
+            context: text.substring(contextStart, contextEnd),
+          });
+          break; // Count each unique keyword only once
+        }
+        
+        lastIndex = index + keyword.length;
+      }
+    }
+    
+    // Check moderate keywords (weight: 0.6)
+    for (const keyword of pattern.moderateKeywords || []) {
+      const lowerText = text.toLowerCase();
+      const lowerKeyword = keyword.toLowerCase();
+      
+      if (lowerText.includes(lowerKeyword)) {
+        moderateCount++;
+        const index = lowerText.indexOf(lowerKeyword);
+        const contextStart = Math.max(0, index - 50);
+        const contextEnd = Math.min(text.length, index + keyword.length + 50);
+        matchedKeywords.push({
+          keyword,
+          tier: 'moderate',
+          context: text.substring(contextStart, contextEnd),
+        });
+      }
+    }
+    
+    // Check weak keywords (weight: 0.3) - only if strong keywords exist
+    if (strongCount > 0) {
+      for (const keyword of pattern.weakKeywords || []) {
+        const lowerText = text.toLowerCase();
+        const lowerKeyword = keyword.toLowerCase();
+        
+        if (lowerText.includes(lowerKeyword)) {
+          weakCount++;
+          const index = lowerText.indexOf(lowerKeyword);
+          const contextStart = Math.max(0, index - 50);
+          const contextEnd = Math.min(text.length, index + keyword.length + 50);
+          matchedKeywords.push({
+            keyword,
+            tier: 'weak',
+            context: text.substring(contextStart, contextEnd),
+          });
+        }
+      }
+    }
+    
+    // Calculate weighted score
+    const score = (strongCount * 1.0) + (moderateCount * 0.6) + (weakCount * 0.3);
+    
+    return { score, strongCount, moderateCount, weakCount, matchedKeywords };
+  }
+  
+  /**
+   * Detect conflicts with other document types
+   */
+  private detectConflicts(
+    text: string,
+    currentPattern: any
+  ): {
+    hasConflict: boolean;
+    conflictCount: number;
+    conflictingKeywords: Array<{ keyword: string; stage: string }>;
+    conflictPenalty: number;
+  } {
+    const conflictingKeywords: Array<{ keyword: string; stage: string }> = [];
+    let conflictCount = 0;
+    
+    // Check for conflict keywords from the current pattern
+    if (currentPattern.conflictKeywords) {
+      for (const keyword of currentPattern.conflictKeywords) {
+        const lowerText = text.toLowerCase();
+        const lowerKeyword = keyword.toLowerCase();
+        
+        if (lowerText.includes(lowerKeyword)) {
+          // Find which stage this keyword belongs to
+          let belongsToStage = 'unknown';
+          for (const otherPattern of CONCURSO_PATTERNS) {
+            if (otherPattern.documentType === currentPattern.documentType) continue;
+            
+            const allKeywords = [
+              ...(otherPattern.strongKeywords || []),
+              ...(otherPattern.moderateKeywords || []),
+            ].map(k => k.toLowerCase());
+            
+            if (allKeywords.includes(lowerKeyword)) {
+              belongsToStage = otherPattern.documentType;
+              break;
+            }
+          }
+          
+          conflictingKeywords.push({ keyword, stage: belongsToStage });
+          conflictCount++;
+        }
+      }
+    }
+    
+    // Also check if strong keywords from OTHER patterns are present
+    for (const otherPattern of CONCURSO_PATTERNS) {
+      if (otherPattern.documentType === currentPattern.documentType) continue;
+      
+      for (const strongKeyword of otherPattern.strongKeywords || []) {
+        const lowerText = text.toLowerCase();
+        const lowerKeyword = strongKeyword.toLowerCase();
+        let lastIndex = 0;
+        
+        while (true) {
+          const index = lowerText.indexOf(lowerKeyword, lastIndex);
+          if (index === -1) break;
+          
+          const contextType = this.detectContextType(text, strongKeyword, index);
+          
+          // Only count active contexts as conflicts
+          if (contextType === 'active') {
+            conflictingKeywords.push({ 
+              keyword: strongKeyword, 
+              stage: otherPattern.documentType 
+            });
+            conflictCount++;
+            break; // Count each unique keyword once
+          }
+          
+          lastIndex = index + strongKeyword.length;
+        }
+      }
+    }
+    
+    // Calculate conflict penalty
+    // More conflicts = higher penalty
+    let conflictPenalty = 1.0;
+    if (conflictCount > 0) {
+      conflictPenalty = Math.max(0.4, 1.0 - (conflictCount * 0.15));
+    }
+    
+    return {
+      hasConflict: conflictCount > 0,
+      conflictCount,
+      conflictingKeywords,
+      conflictPenalty,
+    };
+  }
+
+  /**
    * Detect the type of concurso document with proximity awareness
    */
   private detectDocumentType(text: string): { type: ConcursoDocumentType; confidence: number } | null {
@@ -166,7 +431,6 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
 
     for (const pattern of sortedPatterns) {
       let patternMatches = 0;
-      let keywordMatches = 0;
       let proximityBonus = 1.0;
       let contextBonus = 1.0;
 
@@ -177,77 +441,140 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
         }
       }
 
-      // Check exclude patterns
+      // Check exclude patterns - HARD EXCLUSION
+      let hasExclusion = false;
       if (pattern.excludePatterns) {
         for (const excludeRegex of pattern.excludePatterns) {
           if (excludeRegex.test(text)) {
-            patternMatches = Math.max(0, patternMatches - 1);
+            hasExclusion = true;
+            break;
           }
         }
       }
+      
+      // If excluded, skip this pattern entirely (conservative approach)
+      if (hasExclusion) {
+        continue;
+      }
 
-      // Find keyword positions for proximity analysis
-      const keywordPositions = ProximityAnalyzer.findKeywordPositions(
-        text,
-        pattern.keywords,
-        false
-      );
+      // Calculate tiered keyword scores
+      const tieredScore = this.calculateTieredKeywordScore(text, pattern);
+      
+      // Check minimum strong keywords requirement
+      if (pattern.minStrongKeywords && tieredScore.strongCount < pattern.minStrongKeywords) {
+        continue; // Skip if minimum strong keywords not met
+      }
+      
+      // Detect conflicts with other stages
+      const conflicts = this.detectConflicts(text, pattern);
 
-      // Count unique keywords found
-      const foundKeywords = new Set(keywordPositions.map(p => p.keyword.toLowerCase()));
-      keywordMatches = foundKeywords.size;
+      // Collect all keywords for proximity analysis
+      const allKeywords = [
+        ...(pattern.strongKeywords || []),
+        ...(pattern.moderateKeywords || []),
+        ...(pattern.weakKeywords || []),
+      ];
 
       // Apply proximity analysis if required
-      if (pattern.proximity && keywordPositions.length > 1) {
-        const bestGroup = ProximityAnalyzer.findBestKeywordGroup(
-          keywordPositions,
-          pattern.keywords,
-          pattern.proximity.maxDistance
+      if (pattern.proximity && tieredScore.matchedKeywords.length > 1) {
+        const keywordPositions = ProximityAnalyzer.findKeywordPositions(
+          text,
+          allKeywords,
+          false
         );
+        
+        if (keywordPositions.length > 1) {
+          const bestGroup = ProximityAnalyzer.findBestKeywordGroup(
+            keywordPositions,
+            allKeywords,
+            pattern.proximity.maxDistance
+          );
 
-        if (bestGroup) {
-          // Check if minimum keywords are together
-          const uniqueInGroup = new Set(bestGroup.keywords.map(p => p.keyword.toLowerCase())).size;
-          if (uniqueInGroup >= (pattern.minKeywordsTogether || 2)) {
-            proximityBonus = bestGroup.averageProximity * 1.3; // Boost for good proximity
+          if (bestGroup) {
+            // Check if minimum keywords are together
+            const uniqueInGroup = new Set(bestGroup.keywords.map(p => p.keyword.toLowerCase())).size;
+            if (uniqueInGroup >= (pattern.minKeywordsTogether || 2)) {
+              proximityBonus = Math.min(bestGroup.averageProximity * 1.3, 1.5); // Boost for good proximity
+            } else if (pattern.proximity.required) {
+              // Required proximity not met
+              proximityBonus = 0.5; // Penalty
+            }
           } else if (pattern.proximity.required) {
-            // Required proximity not met
-            proximityBonus = 0.5; // Penalty
+            // No valid group found and proximity is required
+            continue; // Skip this pattern
           }
-        } else if (pattern.proximity.required) {
-          // No valid group found and proximity is required
-          continue; // Skip this pattern
         }
       }
 
       // Check for keywords in titles/headers for context bonus
       for (const title of structure.titles) {
-        if (pattern.keywords.some(kw => title.text.toLowerCase().includes(kw.toLowerCase()))) {
-          contextBonus = 1.2; // Title match bonus
+        const titleKeywords = [
+          ...(pattern.strongKeywords || []),
+          ...(pattern.moderateKeywords || []),
+        ];
+        if (titleKeywords.some(kw => title.text.toLowerCase().includes(kw.toLowerCase()))) {
+          contextBonus = 1.25; // Title match bonus
           break;
         }
       }
 
       // Calculate confidence with all factors
-      if (patternMatches > 0 || keywordMatches > 0) {
-        const baseConfidence = calculateTypeConfidence(
+      const hasSignificantMatch = patternMatches > 0 || tieredScore.strongCount > 0 || 
+                                   (tieredScore.moderateCount > 0 && tieredScore.score >= 1.0);
+      
+      if (hasSignificantMatch) {
+        // New confidence calculation using tiered scores
+        const patternScore = patternMatches / Math.max(pattern.patterns.length, 1);
+        const keywordScore = Math.min(tieredScore.score / 2.0, 1.0); // Normalize
+        
+        // Weight: 60% keywords, 40% patterns (keywords more important now)
+        const baseConfidence = (keywordScore * 0.6 + patternScore * 0.4) * pattern.weight;
+        
+        // Apply bonuses and penalties
+        let adjustedConfidence = baseConfidence * proximityBonus * contextBonus * conflicts.conflictPenalty;
+        
+        // Cap confidence
+        adjustedConfidence = Math.min(adjustedConfidence, 0.98);
+        
+        // Conservative threshold: require higher confidence when conflicts exist
+        const minConfidence = conflicts.hasConflict ? 0.65 : 0.50;
+        
+        if (adjustedConfidence < minConfidence) {
+          continue; // Skip low confidence matches
+        }
+
+        // Detailed logging for debugging
+        logger.debug('Pattern evaluation', {
+          documentType: pattern.documentType,
           patternMatches,
-          pattern.patterns.length,
-          keywordMatches,
-          pattern.weight
-        );
+          tieredScore: {
+            strong: tieredScore.strongCount,
+            moderate: tieredScore.moderateCount,
+            weak: tieredScore.weakCount,
+            totalScore: tieredScore.score,
+          },
+          conflicts: {
+            count: conflicts.conflictCount,
+            penalty: conflicts.conflictPenalty,
+            keywords: conflicts.conflictingKeywords.slice(0, 3), // First 3
+          },
+          bonuses: {
+            proximity: proximityBonus,
+            context: contextBonus,
+          },
+          confidence: adjustedConfidence,
+        });
 
-        const adjustedConfidence = Math.min(baseConfidence * proximityBonus * contextBonus, 1.0);
-
-        // High-priority patterns with strong matches can short-circuit
-        if (pattern.priority === 'primary' && adjustedConfidence >= 0.85) {
-          logger.info('High confidence match found', {
+        // High-priority patterns with strong matches and no/low conflicts can short-circuit
+        if (pattern.priority === 'primary' && 
+            adjustedConfidence >= 0.85 && 
+            conflicts.conflictCount <= 1 &&
+            tieredScore.strongCount > 0) {
+          logger.info('High confidence match found (short-circuit)', {
             documentType: pattern.documentType,
             confidence: adjustedConfidence,
-            patternMatches,
-            keywordMatches,
-            proximityBonus,
-            contextBonus
+            strongKeywords: tieredScore.strongCount,
+            conflicts: conflicts.conflictCount,
           });
           return {
             type: pattern.documentType,
@@ -269,9 +596,24 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
       logger.info('Document type detected', {
         type: results[0].type,
         confidence: results[0].confidence,
-        totalCandidates: results.length
+        totalCandidates: results.length,
+        topCandidates: results.slice(0, 3).map(r => ({
+          type: r.type,
+          confidence: r.confidence.toFixed(3),
+        })),
       });
       return results[0];
+    }
+    
+    // Log when no classification could be made
+    if (results.length > 0) {
+      logger.info('Document type detection failed - confidence too low', {
+        topCandidate: results[0].type,
+        confidence: results[0].confidence,
+        threshold: 0.5,
+      });
+    } else {
+      logger.info('Document type detection failed - no matches found');
     }
 
     // Fallback: if we detected concurso keywords but couldn't classify type
@@ -827,3 +1169,4 @@ Extract and return JSON with any identifiable fields:
     return finding;
   }
 }
+
