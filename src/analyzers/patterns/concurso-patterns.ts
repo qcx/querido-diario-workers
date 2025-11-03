@@ -637,6 +637,60 @@ export const EXTRACTION_PATTERNS = {
     /governo\s+do\s+estado\s+(?:de|do)\s+([^\n\r]+)/i,
     /([^\n\r]+)\s+torna\s+p[uú]blico/i,
   ],
+
+  // Education level / Requirements
+  escolaridade: [
+    /escolaridade:?\s*([^\n\r]+)/i,
+    /n[íi]vel\s+(?:de\s+)?escolaridade:?\s*([^\n\r]+)/i,
+    /requisito:?\s*([^\n\r]+)/i,
+    /forma[çc][ãa]o:?\s*([^\n\r]+)/i,
+    /(?:ensino|n[íi]vel)\s+(fundamental|m[ée]dio|superior|t[ée]cnico|gradua[çc][ãa]o|p[óo]s-gradua[çc][ãa]o)/i,
+  ],
+
+  // Work hours / Schedule
+  jornada: [
+    /jornada:?\s*([^\n\r]+)/i,
+    /carga\s+hor[áa]ria:?\s*([^\n\r]+)/i,
+    /(\d{1,2})\s*(?:h|horas?)(?:\s*semanais?)?/i,
+    /regime:?\s*(\d{1,2}\s*(?:h|horas?))/i,
+  ],
+
+  // Benefits
+  beneficios: [
+    /benef[íi]cios?:?\s*([^\n\r]+)/i,
+    /vale[- ](?:transporte|alimenta[çc][ãa]o|refei[çc][ãa]o)/i,
+    /aux[íi]lio[- ](?:transporte|alimenta[çc][ãa]o|sa[úu]de|creche)/i,
+    /plano\s+de\s+sa[úu]de/i,
+    /ticket\s+(?:alimenta[çc][ãa]o|refei[çc][ãa]o)/i,
+  ],
+
+  // Vacancy reservations
+  reservaVagas: [
+    /(?:reserva(?:das?)?|vagas?)\s+(?:para\s+)?(?:pessoas?\s+com\s+)?defici[êe]nci[ao]s?\s*\(?PCD\)?:?\s*(\d+)/i,
+    /PCD:?\s*(\d+)\s*vagas?/i,
+    /ampla\s+concorr[êe]ncia:?\s*(\d+)\s*vagas?/i,
+    /(?:negros?|cotistas?):?\s*(\d+)\s*vagas?/i,
+  ],
+
+  // Multiple cargo patterns (table-like structures)
+  cargoTable: [
+    /cargo[:\s]+([^\n\r|]+?)[\s|]+vagas?[:\s]+(\d+)[\s|]+(?:sal[áa]rio|remunera[çc][ãa]o|vencimento)[:\s]+R?\$?\s*([\d.,]+)/gi,
+    /([A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-záéíóúâêôãõç\s]+)\s+[-|]\s+(\d+)\s+vagas?\s+[-|]\s+R\$\s*([\d.,]+)/gi,
+  ],
+
+  // Requirements patterns
+  requisitos: [
+    /requisitos?:?\s*([^\n\r]+)/i,
+    /exig[êe]ncias?:?\s*([^\n\r]+)/i,
+    /qualifica[çc][õo]es?:?\s*([^\n\r]+)/i,
+  ],
+
+  // Work location
+  localTrabalho: [
+    /local\s+de\s+trabalho:?\s*([^\n\r]+)/i,
+    /lotac[çc][ãa]o:?\s*([^\n\r]+)/i,
+    /cidade:?\s*([^\n\r]+)/i,
+  ],
 };
 
 /**

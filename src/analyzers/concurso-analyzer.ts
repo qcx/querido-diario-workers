@@ -710,7 +710,108 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
       }
     }
 
+    // Extract multiple cargos from table-like structures
+    if (['edital_abertura', 'convocacao', 'homologacao'].includes(documentType)) {
+      const cargos = this.extractCargosFromTable(text);
+      if (cargos.length > 0) {
+        // Merge with existing vagas data
+        if (!data.vagas) {
+          data.vagas = {};
+        }
+        data.vagas.porCargo = cargos;
+        
+        // Calculate total if not already present
+        if (!data.vagas.total && cargos.length > 0) {
+          data.vagas.total = cargos.reduce((sum, cargo) => sum + (cargo.vagas || 0), 0);
+        }
+      }
+    }
+
     return data;
+  }
+
+  /**
+   * Extract multiple cargos from table-like structures in text
+   */
+  private extractCargosFromTable(text: string): Array<{
+    cargo: string;
+    vagas: number;
+    salario?: number;
+    requisitos?: string;
+    jornada?: string;
+    escolaridade?: string;
+    beneficios?: string[];
+  }> {
+    const cargos: any[] = [];
+    
+    // Try table patterns
+    for (const pattern of EXTRACTION_PATTERNS.cargoTable) {
+      let match;
+      while ((match = pattern.exec(text)) !== null) {
+        const cargo = {
+          cargo: match[1].trim(),
+          vagas: parseInt(match[2], 10),
+          salario: this.parseMoneyValue(match[3]),
+        };
+        
+        // Look for additional info near this cargo mention
+        const contextStart = Math.max(0, match.index - 200);
+        const contextEnd = Math.min(text.length, match.index + match[0].length + 200);
+        const context = text.substring(contextStart, contextEnd);
+        
+        // Try to extract requisitos
+        for (const reqPattern of EXTRACTION_PATTERNS.requisitos) {
+          const reqMatch = context.match(reqPattern);
+          if (reqMatch) {
+            cargo.requisitos = reqMatch[1].trim();
+            break;
+          }
+        }
+        
+        // Try to extract escolaridade
+        for (const escPattern of EXTRACTION_PATTERNS.escolaridade) {
+          const escMatch = context.match(escPattern);
+          if (escMatch) {
+            cargo.escolaridade = escMatch[1].trim();
+            break;
+          }
+        }
+        
+        // Try to extract jornada
+        for (const jornadaPattern of EXTRACTION_PATTERNS.jornada) {
+          const jornadaMatch = context.match(jornadaPattern);
+          if (jornadaMatch) {
+            cargo.jornada = jornadaMatch[1].trim();
+            break;
+          }
+        }
+        
+        // Try to extract beneficios
+        const beneficios: string[] = [];
+        for (const beneficioPattern of EXTRACTION_PATTERNS.beneficios) {
+          const beneficioMatch = context.match(beneficioPattern);
+          if (beneficioMatch) {
+            beneficios.push(beneficioMatch[0]);
+          }
+        }
+        if (beneficios.length > 0) {
+          cargo.beneficios = beneficios;
+        }
+        
+        cargos.push(cargo);
+      }
+    }
+    
+    // Remove duplicates (same cargo name)
+    const uniqueCargos = cargos.reduce((acc, cargo) => {
+      const existing = acc.find((c: any) => c.cargo === cargo.cargo);
+      if (!existing) {
+        acc.push(cargo);
+      }
+      return acc;
+    }, []);
+    
+    return uniqueCargos;
   }
 
   /**

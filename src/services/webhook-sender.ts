@@ -291,7 +291,8 @@ export class WebhookSenderService {
       // Extract keywords from analysis summary for backward compatibility
       const keywords = analysis.summary?.keywords || [];
 
-      return {
+      // Build raw data object
+      const rawData = {
         // Document classification
         documentType: record.documentType,
         extractionMethod: record.extractionMethod,
@@ -301,8 +302,10 @@ export class WebhookSenderService {
         editalNumero: record.editalNumero,
         
         // Vacancies data
-        totalVagas: record.totalVagas || 0,
-        cargos: parsedCargos,
+        vagas: {
+          total: record.totalVagas || 0,
+          porCargo: parsedCargos,
+        },
         
         // Important dates
         datas: parsedDatas,
@@ -321,11 +324,49 @@ export class WebhookSenderService {
         territoryId: record.territoryId,
         createdAt: record.createdAt,
       };
+
+      // Apply enrichment pipeline
+      const enrichedData = await this.enrichConcursoData(rawData);
+      
+      logger.info('Concurso data enriched for webhook', {
+        analysisJobId: analysis.jobId,
+        completeness: enrichedData._dataQuality?.completeness,
+        enrichedFields: enrichedData._enrichment?.enrichedFields?.length || 0,
+      });
+
+      return enrichedData;
     } catch (error) {
       logger.error('Failed to extract concurso data from database', error as Error, {
         analysisJobId: analysis.jobId,
       });
       return null;
+    }
+  }
+
+  /**
+   * Enrich concurso data with validation, normalization, and calculations
+   */
+  private async enrichConcursoData(rawData: any): Promise<any> {
+    // Import enrichment services dynamically to avoid circular dependencies
+    const { ConcursoEnricher } = await import('./concurso-enricher');
+    const { ExternalDataEnricher } = await import('./external-data-enricher');
+    const { ConcursoCalculator } = await import('./concurso-calculator');
+
+    try {
+      // Step 1: Validate and normalize data
+      let enriched = ConcursoEnricher.enrichConcursoData(rawData);
+
+      // Step 2: Enrich with external data (territories, known bancas)
+      enriched = await ExternalDataEnricher.enrichConcursoData(enriched);
+
+      // Step 3: Add calculations and inferences
+      enriched = ConcursoCalculator.enrichWithCalculations(enriched);
+
+      return enriched;
+    } catch (error) {
+      logger.error('Failed to enrich concurso data', error as Error);
+      // Return raw data if enrichment fails
+      return rawData;
     }
   }
 
