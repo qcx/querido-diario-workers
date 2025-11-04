@@ -16,6 +16,7 @@ import {
 import { ProximityAnalyzer } from './utils/proximity-analyzer';
 import { logger } from '../utils';
 import { CostTracker, AIUsage } from '../services/cost-tracker';
+import { parseBrazilianDate } from '../utils/date-utils';
 
 export interface ConcursoAnalyzerConfig extends AnalyzerConfig {
   useAIExtraction?: boolean;
@@ -66,6 +67,7 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
         strongKeywords: tieredScore?.strongCount || 0,
         moderateKeywords: tieredScore?.moderateCount || 0,
         weakKeywords: tieredScore?.weakCount || 0,
+        referenceKeywords: tieredScore?.referenceCount || 0,
         conflictingStages: conflicts?.conflictCount || 0,
         matchedKeywords: tieredScore?.matchedKeywords.slice(0, 5).map(m => ({
           keyword: m.keyword,
@@ -152,9 +154,9 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
     keyword: string,
     position: number
   ): 'active' | 'historical' | 'reference' {
-    // Extract context window around the keyword (100 chars before and after)
-    const contextStart = Math.max(0, position - 100);
-    const contextEnd = Math.min(text.length, position + keyword.length + 100);
+    // Extract context window around the keyword (200 chars before and after)
+    const contextStart = Math.max(0, position - 200);
+    const contextEnd = Math.min(text.length, position + keyword.length + 200);
     const context = text.substring(contextStart, contextEnd).toLowerCase();
     
     // Check for table/list indicators (historical reference)
@@ -224,14 +226,16 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
     strongCount: number;
     moderateCount: number;
     weakCount: number;
+    referenceCount: number;
     matchedKeywords: Array<{ keyword: string; tier: string; context: string }>;
   } {
     const matchedKeywords: Array<{ keyword: string; tier: string; context: string }> = [];
     let strongCount = 0;
     let moderateCount = 0;
     let weakCount = 0;
+    let referenceCount = 0;
     
-    // Check strong keywords (weight: 1.0)
+    // Check strong keywords (weight: 1.0 for active, 0.2 for reference)
     for (const keyword of pattern.strongKeywords || []) {
       const lowerText = text.toLowerCase();
       const lowerKeyword = keyword.toLowerCase();
@@ -243,7 +247,7 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
         
         const contextType = this.detectContextType(text, keyword, index);
         
-        // Only count active contexts for strong keywords
+        // Count active contexts as strong
         if (contextType === 'active') {
           strongCount++;
           const contextStart = Math.max(0, index - 50);
@@ -251,6 +255,19 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
           matchedKeywords.push({
             keyword,
             tier: 'strong',
+            context: text.substring(contextStart, contextEnd),
+          });
+          break; // Count each unique keyword only once
+        }
+        
+        // Count reference contexts as weak with reduced weight
+        if (contextType === 'reference') {
+          referenceCount++;
+          const contextStart = Math.max(0, index - 50);
+          const contextEnd = Math.min(text.length, index + keyword.length + 50);
+          matchedKeywords.push({
+            keyword,
+            tier: 'reference',
             context: text.substring(contextStart, contextEnd),
           });
           break; // Count each unique keyword only once
@@ -299,9 +316,9 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
     }
     
     // Calculate weighted score
-    const score = (strongCount * 1.0) + (moderateCount * 0.6) + (weakCount * 0.3);
+    const score = (strongCount * 1.0) + (moderateCount * 0.6) + (weakCount * 0.3) + (referenceCount * 0.2);
     
-    return { score, strongCount, moderateCount, weakCount, matchedKeywords };
+    return { score, strongCount, moderateCount, weakCount, referenceCount, matchedKeywords };
   }
   
   /**
@@ -551,6 +568,7 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
             strong: tieredScore.strongCount,
             moderate: tieredScore.moderateCount,
             weak: tieredScore.weakCount,
+            reference: tieredScore.referenceCount,
             totalScore: tieredScore.score,
           },
           conflicts: {
@@ -628,6 +646,75 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
   }
 
   /**
+   * Parse and validate a date string, normalizing to DD/MM/YYYY format
+   * Uses lenient validation: logs warnings but returns normalized date if parseable
+   */
+  private parseAndValidateDate(dateStr: string): string | null {
+    if (!dateStr || dateStr.trim().length === 0) {
+      return null;
+    }
+
+    try {
+      // Use existing parseBrazilianDate function
+      const date = parseBrazilianDate(dateStr);
+      
+      // Check if date is valid
+      if (isNaN(date.getTime())) {
+        logger.warn('Invalid date format detected', { dateStr });
+        return null;
+      }
+
+      // Validate the date components match (handles Feb 30, etc.)
+      const day = date.getDate();
+      const month = date.getMonth() + 1; // getMonth() returns 0-11
+      const year = date.getFullYear();
+      
+      // Re-parse to check if the date is real
+      const reconstructed = new Date(year, month - 1, day);
+      if (reconstructed.getFullYear() !== year || 
+          reconstructed.getMonth() !== month - 1 || 
+          reconstructed.getDate() !== day) {
+        logger.warn('Invalid date value detected (e.g., Feb 30)', { dateStr, parsed: `${day}/${month}/${year}` });
+        return null;
+      }
+
+      // Normalize to DD/MM/YYYY format
+      const normalized = `${String(day).padStart(2, '0')}/${String(month).padStart(2, '0')}/${year}`;
+      
+      return normalized;
+    } catch (error) {
+      logger.warn('Error parsing date', { dateStr, error });
+      return null;
+    }
+  }
+
+  /**
+   * Normalize cargo name by removing prefixes and normalizing whitespace
+   */
+  private normalizeCargoName(name: string): string {
+    return name
+      .replace(/\s+/g, ' ')  // Normalize whitespace
+      .replace(/^(cargo|função|emprego)[:\s]+/i, '')  // Remove prefix
+      .trim();
+  }
+
+  /**
+   * Extract a field from context using multiple patterns
+   * Returns the first match found, or undefined if none found
+   */
+  private extractField(context: string, patterns: RegExp[]): string | undefined {
+    for (const pattern of patterns) {
+      const match = context.match(pattern);
+      if (match && match[1]) {
+        const extracted = match[1].trim();
+        // Limit length to prevent excessive text
+        return extracted.substring(0, 200);
+      }
+    }
+    return undefined;
+  }
+
+  /**
    * Extract structured data using regex patterns
    */
   private extractDataWithPatterns(text: string, documentType: ConcursoDocumentType): Partial<ConcursoData> {
@@ -637,7 +724,18 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
     for (const pattern of EXTRACTION_PATTERNS.editalNumero) {
       const match = text.match(pattern);
       if (match) {
-        data.editalNumero = match[1];
+        // Normalize format: replace separators with "/" and pad numbers if needed
+        let editalNum = match[1].replace(/[._-]/g, '/');
+        // Ensure format is consistent (e.g., "001/2024" not "1/2024")
+        const parts = editalNum.split('/');
+        if (parts.length === 2) {
+          // Pad first part if it's a number and less than 3 digits
+          if (/^\d+$/.test(parts[0]) && parts[0].length < 3) {
+            parts[0] = parts[0].padStart(3, '0');
+          }
+          editalNum = parts.join('/');
+        }
+        data.editalNumero = editalNum;
         break;
       }
     }
@@ -646,33 +744,100 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
     for (const pattern of EXTRACTION_PATTERNS.orgao) {
       const match = text.match(pattern);
       if (match) {
-        data.orgao = match[1].trim();
-        break;
+        let orgaoName = match[1].trim();
+        // Remove common noise words at the end
+        orgaoName = orgaoName.replace(/\s*(?:através|por\s+meio|mediante|conforme|comunica|torna)$/i, '');
+        // Remove trailing punctuation
+        orgaoName = orgaoName.replace(/[,;]+$/, '').trim();
+        if (orgaoName.length > 0) {
+          data.orgao = orgaoName;
+          break;
+        }
       }
     }
 
     // Extract vacancies (only for relevant document types)
     if (['edital_abertura', 'convocacao', 'homologacao'].includes(documentType)) {
-      const vagasMatch = text.match(EXTRACTION_PATTERNS.vagas[0]);
-      if (vagasMatch) {
-        data.vagas = {
-          total: parseInt(vagasMatch[1], 10),
-        };
+      let totalVagas = 0;
+      let reservaPCD: number | undefined;
+      
+      // Try all vacancy patterns
+      for (const pattern of EXTRACTION_PATTERNS.vagas) {
+        const match = text.match(pattern);
+        if (match) {
+          totalVagas = parseInt(match[1], 10);
+          
+          // Check for PCD reservations nearby (within 200 chars)
+          const matchIndex = text.indexOf(match[0]);
+          if (matchIndex !== -1) {
+            const contextStart = Math.max(0, matchIndex - 200);
+            const contextEnd = Math.min(text.length, matchIndex + match[0].length + 200);
+            const context = text.substring(contextStart, contextEnd);
+            
+            // Try to find PCD reservation patterns
+            for (const reservaPattern of EXTRACTION_PATTERNS.reservaVagas) {
+              const reservaMatch = context.match(reservaPattern);
+              if (reservaMatch) {
+                reservaPCD = parseInt(reservaMatch[1], 10);
+                break;
+              }
+            }
+          }
+          
+          // Set vagas data
+          data.vagas = {
+            total: totalVagas,
+            ...(reservaPCD !== undefined ? { reservaPCD } : {}),
+          };
+          
+          break;
+        }
       }
     }
 
     // Extract dates
     const datas: any = {};
     
-    const inscricoesMatch = text.match(EXTRACTION_PATTERNS.inscricoes[0]);
-    if (inscricoesMatch) {
-      datas.inscricoesInicio = inscricoesMatch[1];
-      datas.inscricoesFim = inscricoesMatch[2];
+    // Try all inscription patterns
+    for (const pattern of EXTRACTION_PATTERNS.inscricoes) {
+      const match = text.match(pattern);
+      if (match && match[1] && match[2]) {
+        const inicio = this.parseAndValidateDate(match[1]);
+        const fim = this.parseAndValidateDate(match[2]);
+        if (inicio && fim) {
+          datas.inscricoesInicio = inicio;
+          datas.inscricoesFim = fim;
+          break;
+        }
+      }
     }
 
-    const provaMatch = text.match(EXTRACTION_PATTERNS.prova[0]);
-    if (provaMatch) {
-      datas.prova = provaMatch[1];
+    // Try all exam date patterns
+    for (const pattern of EXTRACTION_PATTERNS.prova) {
+      const match = text.match(pattern);
+      if (match && match[1]) {
+        // Handle written date format (e.g., "15 de março de 2024")
+        let dateStr = match[1];
+        if (match.length > 3 && match[2] && match[3]) {
+          // Reconstruct from written format
+          const monthNames: { [key: string]: string } = {
+            'janeiro': '01', 'fevereiro': '02', 'março': '03', 'marco': '03',
+            'abril': '04', 'maio': '05', 'junho': '06',
+            'julho': '07', 'agosto': '08', 'setembro': '09',
+            'outubro': '10', 'novembro': '11', 'dezembro': '12'
+          };
+          const month = monthNames[match[2].toLowerCase()];
+          if (month) {
+            dateStr = `${match[1].padStart(2, '0')}/${month}/${match[3]}`;
+          }
+        }
+        
+        const dataProva = this.parseAndValidateDate(dateStr);
+        if (dataProva) {
+          datas.prova = dataProva;
+          break;
+        }
+      }
     }
 
     if (Object.keys(datas).length > 0) {
@@ -742,76 +907,57 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
     escolaridade?: string;
     beneficios?: string[];
   }> {
-    const cargos: any[] = [];
+    const cargos: Map<string, any> = new Map(); // Use Map for better deduplication
     
     // Try table patterns
     for (const pattern of EXTRACTION_PATTERNS.cargoTable) {
+      pattern.lastIndex = 0; // Reset regex
       let match;
       while ((match = pattern.exec(text)) !== null) {
-        const cargo = {
-          cargo: match[1].trim(),
-          vagas: parseInt(match[2], 10),
-          salario: this.parseMoneyValue(match[3]),
-        };
+        const cargoNome = this.normalizeCargoName(match[1]);
         
-        // Look for additional info near this cargo mention
-        const contextStart = Math.max(0, match.index - 200);
-        const contextEnd = Math.min(text.length, match.index + match[0].length + 200);
+        // Look for additional info in a LARGER context (500 chars instead of 200)
+        const contextStart = Math.max(0, match.index - 500);
+        const contextEnd = Math.min(text.length, match.index + match[0].length + 500);
         const context = text.substring(contextStart, contextEnd);
         
-        // Try to extract requisitos
-        for (const reqPattern of EXTRACTION_PATTERNS.requisitos) {
-          const reqMatch = context.match(reqPattern);
-          if (reqMatch) {
-            cargo.requisitos = reqMatch[1].trim();
-            break;
+        // Create or update cargo entry
+        const cargo = cargos.get(cargoNome) || {
+          cargo: cargoNome,
+          vagas: parseInt(match[2], 10) || 0,
+          salario: match[3] ? this.parseMoneyValue(match[3]) : undefined,
+        };
+        
+        // Extract additional fields using helper method
+        if (!cargo.requisitos) {
+          cargo.requisitos = this.extractField(context, EXTRACTION_PATTERNS.requisitos);
+        }
+        if (!cargo.escolaridade) {
+          cargo.escolaridade = this.extractField(context, EXTRACTION_PATTERNS.escolaridade);
+        }
+        if (!cargo.jornada) {
+          cargo.jornada = this.extractField(context, EXTRACTION_PATTERNS.jornada);
+        }
+        
+        // Try to extract beneficios (can have multiple)
+        if (!cargo.beneficios) {
+          const beneficios: string[] = [];
+          for (const beneficioPattern of EXTRACTION_PATTERNS.beneficios) {
+            const beneficioMatch = context.match(beneficioPattern);
+            if (beneficioMatch) {
+              beneficios.push(beneficioMatch[0].substring(0, 100)); // Limit length
+            }
+          }
+          if (beneficios.length > 0) {
+            cargo.beneficios = beneficios;
           }
         }
         
-        // Try to extract escolaridade
-        for (const escPattern of EXTRACTION_PATTERNS.escolaridade) {
-          const escMatch = context.match(escPattern);
-          if (escMatch) {
-            cargo.escolaridade = escMatch[1].trim();
-            break;
-          }
-        }
-        
-        // Try to extract jornada
-        for (const jornadaPattern of EXTRACTION_PATTERNS.jornada) {
-          const jornadaMatch = context.match(jornadaPattern);
-          if (jornadaMatch) {
-            cargo.jornada = jornadaMatch[1].trim();
-            break;
-          }
-        }
-        
-        // Try to extract beneficios
-        const beneficios: string[] = [];
-        for (const beneficioPattern of EXTRACTION_PATTERNS.beneficios) {
-          const beneficioMatch = context.match(beneficioPattern);
-          if (beneficioMatch) {
-            beneficios.push(beneficioMatch[0]);
-          }
-        }
-        if (beneficios.length > 0) {
-          cargo.beneficios = beneficios;
-        }
-        
-        cargos.push(cargo);
+        cargos.set(cargoNome, cargo);
       }
     }
     
-    // Remove duplicates (same cargo name)
-    const uniqueCargos = cargos.reduce((acc, cargo) => {
-      const existing = acc.find((c: any) => c.cargo === cargo.cargo);
-      if (!existing) {
-        acc.push(cargo);
-      }
-      return acc;
-    }, []);
-    
-    return uniqueCargos;
+    return Array.from(cargos.values());
   }
 
   /**
@@ -1066,8 +1212,8 @@ Extract and return JSON with any identifiable fields:
     }
 
     // For AI extraction, we want the most relevant part of the document
-    // Limit to ~3000 characters to save on API costs
-    const maxLength = 3000;
+    // Limit to ~5000 characters to balance API costs and context coverage
+    const maxLength = 5000;
     
     if (text.length <= maxLength) {
       return text;
@@ -1130,11 +1276,50 @@ Extract and return JSON with any identifiable fields:
 
   /**
    * Parse money value from string
+   * Handles ranges, validates realistic ranges, and logs warnings for suspicious values
    */
   private parseMoneyValue(value: string): number {
-    // Remove dots (thousand separators) and replace comma with dot (decimal)
-    const normalized = value.replace(/\./g, '').replace(',', '.');
-    return parseFloat(normalized);
+    if (!value || value.trim().length === 0) {
+      return 0;
+    }
+
+    // Clean the value
+    let cleaned = value.trim().replace(/R\$?\s*/i, '');
+    
+    // Handle ranges - take the first value (e.g., "R$ 2.000 a 3.000" -> "2.000")
+    const rangeMatch = cleaned.match(/([\d.,]+)\s*(?:a|até|-)\s*[\d.,]+/);
+    if (rangeMatch) {
+      cleaned = rangeMatch[1];
+    }
+    
+    // Remove thousand separators (dots) and convert comma to decimal point
+    cleaned = cleaned.replace(/\./g, '').replace(',', '.');
+    
+    const parsed = parseFloat(cleaned);
+    
+    // Validate: check for NaN
+    if (isNaN(parsed)) {
+      logger.warn('Invalid money value format', { original: value, cleaned });
+      return 0;
+    }
+    
+    // Validation: realistic salary range (R$ 1,000 to R$ 50,000)
+    // Log warning for suspicious values but still return them (lenient approach)
+    if (parsed < 1000) {
+      logger.warn('Suspiciously low salary value detected', { 
+        original: value, 
+        parsed,
+        threshold: 1000 
+      });
+    } else if (parsed > 50000) {
+      logger.warn('Suspiciously high salary value detected', { 
+        original: value, 
+        parsed,
+        threshold: 50000 
+      });
+    }
+    
+    return parsed;
   }
 
   /**
@@ -1270,4 +1455,5 @@ Extract and return JSON with any identifiable fields:
     return finding;
   }
 }
+
 

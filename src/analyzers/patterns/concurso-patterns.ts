@@ -530,6 +530,9 @@ export const TITLE_PATTERNS: Array<{
       /^CONVOCA[ÇC][ÃA]O/i,
       /^EDITAL\s+DE\s+CONVOCA[ÇC][ÃA]O/i,
       /^[\d]+[ªº]?\s*CONVOCA[ÇC][ÃA]O/i, // "17ª CONVOCAÇÃO"
+      /CONVOCA[ÇC][ÃA]O.*CONCURSO\s+P[ÚU]BLICO/i,
+      /CONCURSO\s+P[ÚU]BLICO.*CONVOCA[ÇC][ÃA]O/i,
+      /EDITAIS?\s+.*\s+CONVOCA[ÇC][ÃA]O/i,
     ],
     baseConfidence: 0.85,
   },
@@ -571,6 +574,9 @@ export const EXTRACTION_PATTERNS = {
     /edital\s+n[°º]?\s*(\d+\/\d{4})/i,
     /edital\s+n[°º]?\s*(\d+[-\/]\d{4})/i,
     /processo\s+n[°º]?\s*(\d+\/\d{4})/i,
+    /edital\s+n[°º]?\s*(\d+[._-]\d{4})/i,  // Handles alternative separators (dots, underscores, dashes)
+    /edital\s+n[°º]?\s*(\d{4}[-\/]\d+)/i,  // Reversed format (2024/001)
+    /edital\s+de\s+\w+\s+n[°º]?\s*(\d+\/\d{4})/i,  // "Edital de Abertura nº..."
   ],
 
   // Vacancies
@@ -592,6 +598,9 @@ export const EXTRACTION_PATTERNS = {
     /remunera[çc][ãa]o:?\s*R\$\s*([\d.,]+)/i,
     /sal[áa]rio:?\s*R\$\s*([\d.,]+)/i,
     /vencimento:?\s*R\$\s*([\d.,]+)/i,
+    /(?:remunera[çc][ãa]o|sal[áa]rio|vencimento)[:\s]*R\$?\s*([\d.,]+)/i,  // With optional whitespace
+    /(?:valor|quantia)[:\s]*R\$?\s*([\d.,]+)(?:\s*\(.*?remunera[çc][ãa]o.*?\))?/i,  // With context
+    /R\$\s*([\d.,]+)\s*(?:mensais?|por\s+m[êe]s)/i,  // "R$ X mensais"
   ],
 
   // Registration period
@@ -605,6 +614,11 @@ export const EXTRACTION_PATTERNS = {
     /prova.*(\d{1,2}\/\d{1,2}\/\d{4})/i,
     /data\s+da\s+prova:?\s*(\d{1,2}\/\d{1,2}\/\d{4})/i,
     /realiza[çc][ãa]o.*(\d{1,2}\/\d{1,2}\/\d{4})/i,
+    /prova.*?(\d{1,2}\/\d{1,2}\/\d{4})/i,  // Non-greedy match
+    /data\s+da\s+prova[:\s]*(\d{1,2}\/\d{1,2}\/\d{4})/i,  // With optional whitespace
+    /realiza[çc][ãa]o[:\s]*(\d{1,2}\/\d{1,2}\/\d{4})/i,  // With optional whitespace
+    /prova\s+em[:\s]*(\d{1,2}\/\d{1,2}\/\d{4})/i,  // "prova em DD/MM/YYYY"
+    /(\d{1,2})\s+de\s+(\w+)\s+de\s+(\d{4})/i,  // Written format: "15 de março de 2024"
   ],
 
   // Registration fee
@@ -633,6 +647,10 @@ export const EXTRACTION_PATTERNS = {
     /c[âa]mara\s+municipal\s+de\s+([^\n\r]+)/i,
     /governo\s+do\s+estado\s+(?:de|do)\s+([^\n\r]+)/i,
     /([^\n\r]+)\s+torna\s+p[uú]blico/i,
+    /(?:^|\n)\s*(?:a\s+)?prefeitura\s+(?:municipal\s+)?de\s+([\wÀ-ÿ\s]{3,50}?)(?=[,\n]|torna|comunica|através)/i,  // With length limit and boundary
+    /(?:^|\n)\s*(?:a\s+)?c[âa]mara\s+municipal\s+de\s+([\wÀ-ÿ\s]{3,50}?)(?=[,\n]|torna)/i,  // With length limit and boundary
+    /(?:^|\n)\s*([\wÀ-ÿ\s]{5,60}?)(?:,|\s+)(?:através|por\s+meio).*?torna\s+p[uú]blico/i,  // Non-greedy with boundary
+    /secretaria\s+(?:municipal\s+)?de\s+([\wÀ-ÿ\s]{3,50}?)(?=[,\n])/i,  // For secretariats
   ],
 
   // Education level / Requirements
@@ -673,6 +691,9 @@ export const EXTRACTION_PATTERNS = {
   cargoTable: [
     /cargo[:\s]+([^\n\r|]+?)[\s|]+vagas?[:\s]+(\d+)[\s|]+(?:sal[áa]rio|remunera[çc][ãa]o|vencimento)[:\s]+R?\$?\s*([\d.,]+)/gi,
     /([A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-záéíóúâêôãõç\s]+)\s+[-|]\s+(\d+)\s+vagas?\s+[-|]\s+R\$\s*([\d.,]+)/gi,
+    /cargo[:\s]*([^\n]+)\n\s*vagas?[:\s]*(\d+)\n\s*(?:sal[áa]rio|remunera[çc][ãa]o|vencimento)[:\s]*R?\$?\s*([\d.,]+)/gi,  // Vertical format
+    /([A-ZÁÉÍÓÚÂÊÔÃÕÇ][^\t\n]+)\t+(\d+)\t+R?\$?\s*([\d.,]+)/gi,  // Tab-separated
+    /([A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-záéíóúâêôãõç\s]+)\s+[-|]\s+(\d+)\s+vaga[s]?\s+[-|]\s+R\$\s*([\d.,]+)\s+[-|]\s+(ensino\s+\w+|n[íi]vel\s+\w+)/gi,  // With escolaridade
   ],
 
   // Requirements patterns
