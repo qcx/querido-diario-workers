@@ -62,6 +62,46 @@ export interface GazetteAnalysis {
     keywords: string[];
     deduplicationApplied?: boolean;
     duplicatesRemoved?: number;
+    
+    // Processing statistics
+    processingStats?: {
+      totalAnalyzers: number;
+      successfulAnalyzers: number;
+      failedAnalyzers: number;
+      totalProcessingTime: number;
+      analyzerFindings: Record<string, number>;
+      skippedAnalyzers: string[];
+      warnings: string[];
+      analyzerMetadata: Record<string, any>;
+      aiUsage?: {
+        totalCost: number;
+        analyzersUsed: number;
+        totalTokens: number;
+        totalRequests: number;
+        analyzerBreakdown: Array<{
+          analyzer: string;
+          cost: number;
+          tokens: number;
+          requests: number;
+        }>;
+      };
+      deduplication?: {
+        applied: boolean;
+        originalFindings: number;
+        uniqueFindings: number;
+        duplicatesRemoved: number;
+        deduplicationRate: number; // Percentage
+        duplicatesByType: Record<string, number>;
+        similarityThreshold: number;
+      };
+    };
+    
+    // Quality indicators
+    qualityIndicators?: {
+      averageConfidence: number;
+      textCoverage: number; // Percentage of text analyzed
+      entityDensity: number; // Entities per 1000 words
+    };
   };
   
   // Metadata
@@ -173,10 +213,6 @@ export interface AnalysisConfig {
       apiKey?: string;
       model?: string;
     };
-    concursoValidator?: AnalyzerConfig & {
-      apiKey?: string;
-      model?: string;
-    };
   };
 }
 
@@ -201,6 +237,10 @@ export type ConcursoDocumentType =
   | 'prorrogacao'          // Deadline extension
   | 'cancelamento'         // Cancellation or suspension
   | 'resultado_parcial'    // Partial results
+  | 'resultado_insencao'   // Exemption fee results
+  | 'reclassificacao_resultado' // Reclassification results
+  | 'exoneracao'           // Employee dismissal/resignation
+  | 'nomeacao'             // Employee appointment
   | 'gabarito'             // Answer key
   | 'nao_classificado';    // Fallback: Document not classified
 

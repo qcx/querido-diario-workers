@@ -132,6 +132,24 @@ async function processSingleAnalysis(
           categories: Array.from(recalculatedCategories),
           deduplicationApplied: true,
           duplicatesRemoved: dedupeResult.duplicates.length,
+          
+          // Enhanced deduplication details in processing stats
+          processingStats: {
+            ...(analysis.summary.processingStats || {}),
+            deduplication: {
+              applied: true,
+              originalFindings: analysis.summary.totalFindings,
+              uniqueFindings: dedupeResult.uniqueFindings.length,
+              duplicatesRemoved: dedupeResult.duplicates.length,
+              deduplicationRate: Math.round((dedupeResult.duplicates.length / analysis.summary.totalFindings) * 100),
+              duplicatesByType: dedupeResult.duplicates.reduce((acc: Record<string, number>, dup: any) => {
+                const type = dup.finding?.type || 'unknown';
+                acc[type] = (acc[type] || 0) + 1;
+                return acc;
+              }, {}),
+              similarityThreshold: 0.8, // Default threshold used by deduplicator
+            },
+          } as any, // Type assertion to handle optional fields
         }
       };
     }
@@ -156,7 +174,7 @@ async function processSingleAnalysis(
     }
   }
 
-  // Update analysis metadata with aggregated AI usage
+  // Update analysis metadata and summary with aggregated AI usage
   if (aiUsageData.length > 0) {
     analysis = {
       ...analysis,
@@ -167,6 +185,25 @@ async function processSingleAnalysis(
           analyzers: aiUsageData,
           timestamp: new Date().toISOString(),
         },
+      },
+      summary: {
+        ...analysis.summary,
+        // Add AI usage details to processing stats
+        processingStats: {
+          ...(analysis.summary.processingStats || {}),
+          aiUsage: {
+            totalCost: totalAICost,
+            analyzersUsed: aiUsageData.length,
+            totalTokens: aiUsageData.reduce((sum, usage) => sum + (usage.totalTokens || 0), 0),
+            totalRequests: aiUsageData.reduce((sum, usage) => sum + (usage.requests || 0), 0),
+            analyzerBreakdown: aiUsageData.map(usage => ({
+              analyzer: usage.analyzer,
+              cost: usage.totalCost || 0,
+              tokens: usage.totalTokens || 0,
+              requests: usage.requests || 0,
+            })),
+          },
+        } as any, // Type assertion to handle optional fields
       },
     };
   }
@@ -321,23 +358,16 @@ function getAnalysisConfig(env: AnalysisProcessorEnv): AnalysisConfig {
       },
       concurso: {
         enabled: true,
-        priority: 1.5,
-        timeout: 40000,  // Increased from 20s to 40s for state gazettes
+        priority: 1.5,  // Unified analyzer handles both validation and extraction
+        timeout: 180000,  // Increased from 20s to 40s for state gazettes
         useAIExtraction: !!env.OPENAI_API_KEY,
-        apiKey: env.OPENAI_API_KEY,
-        model: 'gpt-4o-mini',
-      },
-      concursoValidator: {
-        enabled: !!env.OPENAI_API_KEY,
-        priority: 2,  // Run after keyword analyzer, before general AI
-        timeout: 90000,  // Increased from 45s to 90s for state gazettes
         apiKey: env.OPENAI_API_KEY,
         model: 'gpt-4o-mini',
       },
       ai: {
         enabled: !!env.OPENAI_API_KEY,
         priority: 3,
-        timeout: 60000,  // Increased from 30s to 60s for state gazettes
+        timeout: 120000,  // Increased from 30s to 60s for state gazettes
         apiKey: env.OPENAI_API_KEY,
       },
     },

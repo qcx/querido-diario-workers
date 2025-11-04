@@ -164,6 +164,8 @@ export class KeywordAnalyzer extends BaseAnalyzer {
           'processo seletivo',
           'seleção simplificada',
           'processo seletivo simplificado',
+          'processo de escolha',
+          'processo de seleção',
         ],
         caseSensitive: false,
         wholeWord: false,
