@@ -11,3 +11,4 @@ export type { D1DatabaseEnv } from './client';
 export { GazetteRegistryRepository } from './repositories/gazette_registry';
 export { OcrResultsRepository } from './repositories/ocr_results';
 export { AnalysisResultsRepository } from './repositories/analysis_results';
+export { ConcursoFindingsRepository } from './repositories/concurso_findings';

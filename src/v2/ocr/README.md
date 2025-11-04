@@ -59,7 +59,7 @@ ocr/
 ### OcrQueueMessage
 ```typescript
 interface OcrQueueMessage {
-  jobId: string;              // Unique OCR job identifier
+  ocrId: string;              // Unique OCR job identifier
   gazetteCrawl: GazetteCrawl; // Crawl record with PDF metadata
   gazette: GazetteRegistry;   // Gazette record from database
   crawlJobId: string;         // Associated crawl job ID

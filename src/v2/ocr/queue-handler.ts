@@ -373,7 +373,7 @@ export class OcrQueueHandler {
       jobId: `analysis-${jobId}`,
       gazetteCrawl,
       gazette,
-      ocrResult,
+      ocrResultId: ocrResult.id,
       spiderConfig,
       crawlJobId,
       queuedAt: new Date().toISOString()
@@ -481,7 +481,7 @@ export class OcrQueueHandler {
       jobId: `analysis-${jobId}`,
       gazetteCrawl,
       gazette,
-      ocrResult: ocrResultRecord,
+      ocrResultId: ocrResultRecord.id,
       spiderConfig,
       crawlJobId,
       queuedAt: new Date().toISOString()

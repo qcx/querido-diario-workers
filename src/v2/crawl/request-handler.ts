@@ -124,7 +124,7 @@ export async function handleCrawlRequest(c: Context<{ Bindings: CrawlRequestEnv 
   try {
     const request = await c.req.json<CrawlDispatchRequest>();
 
-    const hasCities = request.cities && (Array.isArray(request.cities) && request.cities.length > 0);
+    const hasCities = request.cities && ((Array.isArray(request.cities) && request.cities.length > 0) || request.cities === 'all');
 
     if (!hasCities) {
       return c.json<CrawlDispatchResponse>(

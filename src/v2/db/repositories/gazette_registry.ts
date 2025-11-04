@@ -179,4 +179,32 @@ export class GazetteRegistryRepository {
       );
     }
   }
+
+  /**
+   * Atomically link analysis to gazette crawl and update status
+   * Combines both operations in a single database update for consistency
+   */
+  async linkAnalysisAndUpdateStatus(
+    gazetteCrawlId: string, 
+    analysisResultId: string, 
+    status: GazetteCrawlStatus
+  ): Promise<void> {
+    const db = this.dbClient.getDb();
+    
+    try {
+      const result = await db.update(schema.gazetteCrawls)
+        .set({ 
+          analysisResultId,
+          status 
+        })
+        .where(eq(schema.gazetteCrawls.id, gazetteCrawlId))
+        .returning();
+
+      if (!result || result.length === 0) {
+        throw new Error('Update failed - no rows affected');
+      }
+    } catch (error: any) {
+      throw error;
+    }
+  }
 }

@@ -85,18 +85,6 @@ export class CrawlQueueHandler {
     const gazettes = await spider.crawl();
     const executionTimeMs = Date.now() - startTime;
 
-    // const result: CrawlResult = {
-    //  spiderId: queueMessage.spiderId,
-    //  territoryId: queueMessage.territoryId,
-    //  gazettes,
-    //  stats: {
-    //    totalFound: gazettes.length,
-    //    dateRange: queueMessage.dateRange,
-    //    requestCount: spider.getRequestCount(),
-    //    executionTimeMs,
-    //  },
-    //};
-
     if(gazettes.length > 0) {
       for(const gazette of gazettes) {
         await gazetteCallback({

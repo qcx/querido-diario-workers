@@ -3,5 +3,4 @@
  * Export all v2 analysis services
  */
 
-export { AnalysisOrchestrator } from './analysis-orchestrator';
-export { CacheService, type CacheConfig, type CachedAnalysisResult, type CachedOcrResult } from './cache-service';
+export { CacheService } from './cache-service';

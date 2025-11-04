@@ -68,7 +68,6 @@ async function handleQueue(
       const ocrQueueHandler = new OcrQueueHandler(env);
 
       await ocrQueueHandler.batchHandler(batch as MessageBatch<OcrQueueMessage>, async (analysisMessage) => {
-        // analysisMessage is already in AnalysisQueueMessage format from OCR handler
         await env.ANALYSIS_QUEUE.send(analysisMessage);
       });
       break;
@@ -79,22 +78,12 @@ async function handleQueue(
       await analysisQueueHandler.batchHandler(
         batch as MessageBatch<AnalysisQueueMessage>,
         async (webhookMessage: AnalysisCallbackMessage) => {
-          // webhookMessage is in AnalysisCallbackMessage format, ready for webhook queue
-          await env.WEBHOOK_QUEUE.send({
-            type: 'analysis_complete',
-            payload: webhookMessage,
-            timestamp: new Date().toISOString()
-          });
+          console.log('webhookMessage', webhookMessage);
         }
       );
       break;
 
     case 'goodfellow-webhook-queue':
-      // Webhook queue handler not yet implemented
-      // For now, just acknowledge the messages to prevent errors
-      for (const message of batch.messages) {
-        message.ack();
-      }
       break;
 
     default:

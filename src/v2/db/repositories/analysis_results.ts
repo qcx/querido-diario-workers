@@ -7,8 +7,8 @@ import { eq, and, desc } from 'drizzle-orm';
 import { DatabaseClient, schema } from '../client';
 import { analysisResults } from '../schema';
 import { logger } from '../../../utils';
-import type { GazetteAnalysis, AnalysisConfigSignature } from '../../../types';
 import type { AnalysisMetadata } from '../../analysis/types';
+import type { ProcessorResult } from '../../analysis/analyzers/processor';
 
 export class AnalysisResultsRepository {
   constructor(private client: DatabaseClient) {}
@@ -17,34 +17,91 @@ export class AnalysisResultsRepository {
    * Store analysis results in database
    */
   async storeAnalysis(
-    analysis: GazetteAnalysis,
+    processorResult: ProcessorResult,
+    ocrResult: typeof schema.ocrResults.$inferSelect,
     gazetteId: string,
-    configSignature: AnalysisConfigSignature,
+    territoryId: string,
+    publicationDate: string,
+    jobId: string,
+    configSignature: { version: string; analyzers: string[]; territoryId: string; gazetteId: string; configHash: string },
     metadata?: AnalysisMetadata
   ): Promise<typeof analysisResults.$inferSelect> {
     const db = this.client.getDb();
     const id = this.client.generateId();
 
     try {
+      // Extract all findings from analyzer results
+      const allFindings = processorResult.analyzerResults.flatMap(result => result.findings);
+      
+      // Extract categories from findings
+      const categoriesSet = new Set<string>();
+      for (const finding of allFindings) {
+        if (finding.data?.category) {
+          if (Array.isArray(finding.data.category)) {
+            finding.data.category.forEach((cat: string) => categoriesSet.add(cat));
+          } else if (typeof finding.data.category === 'string') {
+            categoriesSet.add(finding.data.category);
+          }
+        }
+        if (finding.data?.categories && Array.isArray(finding.data.categories)) {
+          finding.data.categories.forEach((cat: string) => categoriesSet.add(cat));
+        }
+      }
+      const categories = Array.from(categoriesSet);
+
+      // Extract keywords from findings
+      const keywordsSet = new Set<string>();
+      for (const finding of allFindings) {
+        if (finding.data?.keyword && typeof finding.data.keyword === 'string') {
+          keywordsSet.add(finding.data.keyword);
+        }
+        if (finding.data?.keywords && Array.isArray(finding.data.keywords)) {
+          finding.data.keywords.forEach((kw: string) => keywordsSet.add(kw));
+        }
+      }
+      const keywords = Array.from(keywordsSet);
+
+      // Count high confidence findings (>= 0.7)
+      const highConfidenceFindings = allFindings.filter(f => f.confidence >= 0.7).length;
+
       // Prepare data for storage
       const analysisData = {
         id,
-        jobId: analysis.jobId,
+        jobId,
         gazetteId,
-        territoryId: analysis.territoryId,
-        publicationDate: analysis.publicationDate,
-        totalFindings: analysis.summary.totalFindings,
-        highConfidenceFindings: analysis.summary.highConfidenceFindings,
-        categories: JSON.stringify(analysis.summary.categories || []),
-        keywords: JSON.stringify(analysis.summary.keywords || []),
-        findings: JSON.stringify(analysis.analyses.flatMap(a => a.findings)),
-        summary: JSON.stringify(analysis.summary),
-        processingTimeMs: analysis.analyses.reduce((sum, a) => sum + a.processingTimeMs, 0),
-        analyzedAt: analysis.analyzedAt,
+        territoryId,
+        publicationDate,
+        totalFindings: processorResult.totalFindings,
+        highConfidenceFindings,
+        categories: JSON.stringify(categories),
+        keywords: JSON.stringify(keywords),
+        findings: JSON.stringify(allFindings),
+        summary: JSON.stringify({
+          totalFindings: processorResult.totalFindings,
+          highConfidenceFindings,
+          categories,
+          keywords,
+          successCount: processorResult.successCount,
+          failureCount: processorResult.failureCount,
+          skippedCount: processorResult.skippedCount
+        }),
+        processingTimeMs: processorResult.totalProcessingTimeMs,
+        analyzedAt: new Date().toISOString(),
         metadata: JSON.stringify({
-          ...analysis.metadata,
           ...metadata,
-          configSignature
+          configSignature,
+          analyzerResults: processorResult.analyzerResults.map(r => ({
+            analyzerId: r.analyzerId,
+            analyzerType: r.analyzerType,
+            status: r.status,
+            findingsCount: r.findings.length,
+            processingTimeMs: r.processingTimeMs,
+            metadata: r.metadata
+          })),
+          ocrMetadata: {
+            textLength: ocrResult.extractedText?.length || 0,
+            quality: ocrResult.metadata
+          }
         })
       };
 
@@ -54,64 +111,46 @@ export class AnalysisResultsRepository {
         throw new Error('Failed to insert analysis - no result returned');
       }
 
-      logger.info('Analysis results stored successfully', {
-        id,
-        jobId: analysis.jobId,
-        gazetteId,
-        territoryId: analysis.territoryId,
-        totalFindings: analysis.summary.totalFindings
-      });
-
       return result[0];
     } catch (error) {
-      logger.error('Failed to store analysis results', error as Error, {
-        jobId: analysis.jobId,
-        gazetteId
-      });
       throw error;
     }
   }
 
   /**
-   * Find existing analysis by deduplication key
+   * Find existing analysis by config hash
+   * Queries by extracting configHash from metadata JSON field
    */
   async findExistingAnalysis(
-    territoryId: string,
-    gazetteId: string,
     configHash: string
-  ): Promise<string | null> {
+  ): Promise<typeof analysisResults.$inferSelect | null> {
     const db = this.client.getDb();
 
     try {
+      // Query all analysis results and filter by configHash in metadata
+      // Note: D1 SQLite supports JSON extraction, but for compatibility we scan and filter
       const results = await db
-        .select({ id: analysisResults.id })
+        .select()
         .from(analysisResults)
-        .where(
-          and(
-            eq(analysisResults.territoryId, territoryId),
-            eq(analysisResults.gazetteId, gazetteId)
-          )
-        )
-        .limit(1);
+        .orderBy(desc(analysisResults.analyzedAt))
+        .limit(100); // Limit to recent results for performance
 
-      if (results.length === 0) {
-        return null;
-      }
-
-      // Check if config hash matches
-      const analysis = await this.getAnalysisById(results[0].id);
-      if (!analysis) return null;
-
-      const metadata = JSON.parse(analysis.metadata);
-      if (metadata.configSignature?.configHash === configHash) {
-        return results[0].id;
+      // Find first match with matching configHash in metadata
+      for (const result of results) {
+        try {
+          const metadata = JSON.parse(result.metadata);
+          if (metadata.configSignature?.configHash === configHash) {
+            return result;
+          }
+        } catch (parseError) {
+          // Skip invalid metadata
+          continue;
+        }
       }
 
       return null;
     } catch (error) {
       logger.error('Failed to find existing analysis', error as Error, {
-        territoryId,
-        gazetteId,
         configHash
       });
       return null;

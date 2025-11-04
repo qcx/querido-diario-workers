@@ -20,8 +20,8 @@ export interface AnalysisQueueMessage {
   /** Reference to gazette registry record */
   gazette: typeof schema.gazetteRegistry.$inferSelect;
   
-  /** Reference to OCR result record */
-  ocrResult: typeof schema.ocrResults.$inferSelect;
+  /** OCR result ID for fetching from cache/database */
+  ocrResultId: string;
   
   /** Full spider configuration for scope detection and city filtering */
   spiderConfig: SpiderConfig;
@@ -175,8 +175,6 @@ export interface AnalysisMetadata {
  * Cache key components for analysis deduplication
  */
 export interface AnalysisCacheKey {
-  territoryId: string;
-  gazetteId: string;
   configHash: string;
   cityFilter?: string; // For state-level analyses
 }

@@ -5,29 +5,22 @@
 
 import { 
   DatabaseClient, 
-  getDatabase, 
-  schema, 
+  getDatabase,
   GazetteRegistryRepository,
   OcrResultsRepository,
-  AnalysisResultsRepository 
+  AnalysisResultsRepository,
+  ConcursoFindingsRepository
 } from '../db';
-import { CityKeywordAnalyzer } from './analyzers';
-import { AnalysisOrchestrator } from './services/analysis-orchestrator';
 import { CacheService } from './services/cache-service';
-import { SpiderConfig, SpiderScope } from '../crawl/spiders';
-import { logger } from '../../utils';
+import { sha256Hash, logger } from '../../utils';
 import type { 
   AnalysisQueueMessage, 
   AnalysisCallbackMessage,
-  AnalysisQueueHandlerEnv,
-  TerritoryInfo,
-  AnalysisRunConfig,
-  TerritoryAnalysisResult,
-  AnalysisMetadata
 } from './types';
-import type { OcrResult, GazetteAnalysis, AnalysisConfig } from '../../types';
+import { type AnalysisConfig, getAnalysisConfig } from './analyzers/config';
+import { createAnalysisProcessor } from './analyzers/processor';
 
-const RETRY_DELAY = 5;
+export interface AnalysisQueueHandlerEnv extends Env {}
 
 /**
  * Analysis Queue Handler
@@ -38,6 +31,7 @@ export class AnalysisQueueHandler {
   private gazetteRegistryRepository!: GazetteRegistryRepository;
   private ocrResultsRepository!: OcrResultsRepository;
   private analysisResultsRepository!: AnalysisResultsRepository;
+  private concursoFindingsRepository!: ConcursoFindingsRepository;
   private cacheService!: CacheService;
 
   constructor(private env: AnalysisQueueHandlerEnv) {
@@ -47,13 +41,10 @@ export class AnalysisQueueHandler {
     this.gazetteRegistryRepository = new GazetteRegistryRepository(this.databaseClient);
     this.ocrResultsRepository = new OcrResultsRepository(this.databaseClient);
     this.analysisResultsRepository = new AnalysisResultsRepository(this.databaseClient);
+    this.concursoFindingsRepository = new ConcursoFindingsRepository(this.databaseClient);
     
     this.cacheService = new CacheService(
-      {
-        ANALYSIS_RESULTS: this.env.ANALYSIS_RESULTS,
-        OCR_RESULTS: this.env.OCR_RESULTS,
-        defaultTtl: 86400 // 24 hours
-      },
+      this.env,
       this.analysisResultsRepository,
       this.ocrResultsRepository
     );
@@ -67,7 +58,7 @@ export class AnalysisQueueHandler {
     webhookCallback: (message: AnalysisCallbackMessage) => Promise<void>
   ): Promise<void> {
     logger.info(`Analysis handler: Processing batch of ${batch.messages.length} messages`);
-    
+
     for (const message of batch.messages) {
       await this.handle(message, webhookCallback);
     }
@@ -80,7 +71,126 @@ export class AnalysisQueueHandler {
     message: Message<AnalysisQueueMessage>,
     webhookCallback: (message: AnalysisCallbackMessage) => Promise<void>
   ): Promise<void> {
+    const startTime = Date.now();
     const analysisMessage = message.body;
-    const { gazette, gazetteCrawl, spiderConfig, crawlJobId, jobId } = analysisMessage;
+    
+    const { gazette, gazetteCrawl, jobId, ocrResultId, crawlJobId, spiderConfig } = analysisMessage;
+
+    try {
+      const config = getAnalysisConfig(this.env);
+      const configSignature = await this.generateConfigSignature(config, gazetteCrawl.territoryId, gazette.id);
+
+      // Check cache for existing analysis
+      const cachedAnalysis = await this.cacheService.getCachedAnalysis(configSignature.configHash);
+
+      if (cachedAnalysis) {
+        const { analysis } = cachedAnalysis;
+
+        await this.gazetteRegistryRepository.linkAnalysisAndUpdateStatus(
+          gazetteCrawl.id,
+          analysis.id,
+          'success'
+        );
+
+        message.ack();
+        return;
+      }
+
+      const ocrResult = await this.cacheService.getOcrResult(gazette.pdfUrl, ocrResultId);
+
+      if (!ocrResult) {
+        message.retry();
+        return;
+      }
+
+      const processor = createAnalysisProcessor(config);
+      const processorResult = await processor.process(ocrResult);
+
+      // Build metadata
+      const metadata = {
+        sourceSpider: spiderConfig.id,
+        gazetteScope: spiderConfig.gazetteScope,
+        spiderType: spiderConfig.spiderType,
+        processingTimeMs: processorResult.totalProcessingTimeMs
+      };
+
+      // Store analysis results
+      const analysisRecord = await this.analysisResultsRepository.storeAnalysis(
+        processorResult,
+        ocrResult,
+        gazette.id,
+        gazetteCrawl.territoryId,
+        gazette.publicationDate,
+        jobId,
+        configSignature,
+        metadata
+      );
+
+      // Link analysis to gazette crawl and update status
+      await this.gazetteRegistryRepository.linkAnalysisAndUpdateStatus(
+        gazetteCrawl.id,
+        analysisRecord.id,
+        'success'
+      );
+
+      // Store analysis in cache
+      await this.cacheService.cacheAnalysis(analysisRecord);
+
+      // Extract and store concurso findings
+      const allFindings = processorResult.analyzerResults.flatMap(result => result.findings);
+      const concursoFindings = allFindings.filter(
+        finding => finding.type === 'concurso' || finding.type.startsWith('concurso:')
+      );
+
+      if (concursoFindings.length > 0) {
+
+        for (const finding of concursoFindings) {
+          try {
+            await this.concursoFindingsRepository.storeConcursoFinding(
+              finding,
+              analysisRecord.jobId,
+              gazette.id,
+              gazetteCrawl.territoryId
+            );
+          } catch (error) {
+            logger.error('Failed to store concurso finding', error as Error, {
+              jobId,
+              findingType: finding.type
+            });
+          }
+        }
+      }
+
+      message.ack();
+    } catch (error) {
+
+      // Update gazette crawl status on final failure
+      if (message.attempts >= 3) {
+        message.ack();
+      } else {
+        message.retry();
+      }
+    }
+  }
+
+  private async generateConfigSignature(config: AnalysisConfig, territoryId: string, gazetteId: string) {
+    const enabledAnalyzers = Object.entries(config.analyzers)
+      .filter(([, cfg]) => Boolean((cfg as { enabled?: boolean } | undefined)?.enabled))
+      .map(([name]) => name)
+      .sort();
+
+    // Generate hash from stable representation
+    const hashInput = {
+      version: '1.0.0',
+      analyzers: enabledAnalyzers,
+      territoryId,
+      gazetteId,
+      configHash: ''
+    };
+
+    const fullHash = await sha256Hash(JSON.stringify(hashInput));
+    hashInput.configHash = fullHash.substring(0, 32); // Truncate to 32 chars for compatibility
+
+    return hashInput;
   }
 }
