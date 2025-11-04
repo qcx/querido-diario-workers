@@ -2,26 +2,41 @@
  * Concurso Validator - Uses AI to validate ambiguous concurso keywords
  * Determines if ambiguous terms like "concurso" or "processo seletivo" 
  * actually refer to public service competitions (concursos públicos)
+ * When validated, triggers ConcursoAnalyzer to extract structured data
  */
 
 import { BaseAnalyzer } from './base-analyzer';
+import { ConcursoAnalyzer, ConcursoAnalyzerConfig } from './concurso-analyzer';
 import { OcrResult, Finding, AnalyzerConfig } from '../types';
 import { logger } from '../utils';
 
 export interface ConcursoValidatorConfig extends AnalyzerConfig {
   apiKey: string;
   model?: string;
+  useAIExtraction?: boolean; // For ConcursoAnalyzer
 }
 
 export class ConcursoValidator extends BaseAnalyzer {
   private apiKey: string;
   private model: string;
+  private concursoAnalyzer: ConcursoAnalyzer;
 
   constructor(config: ConcursoValidatorConfig) {
     super('concurso-validator', 'ai', config);
     
     this.apiKey = config.apiKey;
     this.model = config.model || 'gpt-4o-mini';
+    
+    // Initialize ConcursoAnalyzer for extracting structured data from validated sections
+    const analyzerConfig: ConcursoAnalyzerConfig = {
+      enabled: true,
+      useAIExtraction: config.useAIExtraction,
+      apiKey: config.apiKey,
+      model: config.model,
+    };
+    this.concursoAnalyzer = new ConcursoAnalyzer(analyzerConfig);
+    
+    logger.info('ConcursoValidator initialized with ConcursoAnalyzer for data extraction');
   }
 
   protected async performAnalysis(ocrResult: OcrResult): Promise<Finding[]> {
@@ -42,6 +57,7 @@ export class ConcursoValidator extends BaseAnalyzer {
         const isValidConcurso = await this.validateSection(section);
         
         if (isValidConcurso.isValid) {
+          // Add validation finding (for tracking and metadata)
           findings.push({
             type: 'concurso_validated',
             confidence: isValidConcurso.confidence,
@@ -52,9 +68,44 @@ export class ConcursoValidator extends BaseAnalyzer {
               validationReason: isValidConcurso.reason,
               position: section.position,
               aiUsage: isValidConcurso.usage,
-              validated: isValidConcurso.confidence > 0.5,
+              validated: isValidConcurso.isValid
             },
           });
+
+          // Now trigger ConcursoAnalyzer to extract structured data
+          // This will create a 'concurso' type finding that gets stored in the database
+          logger.info('Triggering ConcursoAnalyzer for validated section', {
+            keyword: section.keyword,
+            confidence: isValidConcurso.confidence,
+          });
+
+          try {
+            const concursoFinding = await this.concursoAnalyzer.analyzeTextSection(
+              section.context,
+              {
+                keyword: section.keyword,
+                validationReason: isValidConcurso.reason,
+                validationConfidence: isValidConcurso.confidence,
+              }
+            );
+
+            if (concursoFinding) {
+              findings.push(concursoFinding);
+              logger.info('Successfully created concurso finding from validated section', {
+                keyword: section.keyword,
+                documentType: concursoFinding.data.documentType,
+                confidence: concursoFinding.confidence,
+              });
+            } else {
+              logger.warn('ConcursoAnalyzer could not extract structured data from validated section', {
+                keyword: section.keyword,
+              });
+            }
+          } catch (error) {
+            logger.error('Failed to extract concurso data from validated section', error as Error, {
+              keyword: section.keyword,
+            });
+          }
         }
       } catch (error) {
         logger.error('Failed to validate concurso section', error as Error);
@@ -192,9 +243,14 @@ Respond in JSON format:
   }
 
   protected getMetadata(findings: Finding[]): Record<string, any> {
+    const validatedFindings = findings.filter(f => f.type === 'concurso_validated');
+    const extractedFindings = findings.filter(f => f.type === 'concurso');
+    
     return {
-      validatedSections: findings.length,
-      confirmedConcursos: findings.filter(f => f.confidence >= 0.7).length,
+      validatedSections: validatedFindings.length,
+      confirmedConcursos: validatedFindings.filter(f => f.confidence >= 0.7).length,
+      extractedConcursos: extractedFindings.length,
+      totalFindings: findings.length,
     };
   }
 }

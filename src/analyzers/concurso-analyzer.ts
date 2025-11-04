@@ -54,9 +54,25 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
       return findings;
     }
 
-    logger.info('Detected concurso document', {
+    // Get the pattern for detailed logging
+    const detectedPattern = CONCURSO_PATTERNS.find(p => p.documentType === documentTypeResult.type);
+    const tieredScore = detectedPattern ? this.calculateTieredKeywordScore(text, detectedPattern) : null;
+    const conflicts = detectedPattern ? this.detectConflicts(text, detectedPattern) : null;
+    
+    logger.info('✓ Detected concurso document', {
       documentType: documentTypeResult.type,
-      confidence: documentTypeResult.confidence,
+      confidence: documentTypeResult.confidence.toFixed(3),
+      details: {
+        strongKeywords: tieredScore?.strongCount || 0,
+        moderateKeywords: tieredScore?.moderateCount || 0,
+        weakKeywords: tieredScore?.weakCount || 0,
+        conflictingStages: conflicts?.conflictCount || 0,
+        matchedKeywords: tieredScore?.matchedKeywords.slice(0, 5).map(m => ({
+          keyword: m.keyword,
+          tier: m.tier,
+        })) || [],
+        conflicts: conflicts?.conflictingKeywords.slice(0, 3) || [],
+      },
     });
 
     // Step 2: Extract structured data using patterns
@@ -93,15 +109,23 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
     const categoryMap: Record<ConcursoDocumentType, string> = {
       convocacao: 'concurso_publico_convocacao',
       edital_abertura: 'concurso_publico_abertura',
+      edital_retificacao: 'concurso_publico_retificacao',
       homologacao: 'concurso_publico_homologacao',
-      retificacao: 'concurso_publico_retificacao',
       prorrogacao: 'concurso_publico_prorrogacao',
-      cancelamento_suspensao: 'concurso_publico_cancelamento',
+      cancelamento: 'concurso_publico_cancelamento',
       resultado_parcial: 'concurso_publico_resultado',
       gabarito: 'concurso_publico_resultado',
-      recurso_impugnacao: 'concurso_publico',
       nao_classificado: 'concurso_publico',
     };
+
+    // Extract context - ensure it's never empty
+    const context = this.extractRelevantContext(text, documentTypeResult.type);
+    if (!context || context.trim().length === 0) {
+      logger.warn('Empty context extracted for concurso finding', {
+        documentType: documentTypeResult.type,
+        textLength: text.length,
+      });
+    }
 
     findings.push(
       this.createFinding(
@@ -113,11 +137,260 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
           documentType: documentTypeResult.type,
         },
         documentTypeResult.confidence,
-        this.extractRelevantContext(text, documentTypeResult.type)
+        context || text.substring(0, 3000) // Fallback to first 3000 chars if context is empty
       )
     );
 
     return findings;
+  }
+
+  /**
+   * Detect if a keyword appears in an active, historical, or reference context
+   */
+  private detectContextType(
+    text: string,
+    keyword: string,
+    position: number
+  ): 'active' | 'historical' | 'reference' {
+    // Extract context window around the keyword (100 chars before and after)
+    const contextStart = Math.max(0, position - 100);
+    const contextEnd = Math.min(text.length, position + keyword.length + 100);
+    const context = text.substring(contextStart, contextEnd).toLowerCase();
+    
+    // Check for table/list indicators (historical reference)
+    const tableIndicators = [
+      /\|\s*\w+\s*\|/, // Pipe-separated tables
+      /---\s*---/, // Markdown table separators
+      // Removed: /\d+[ªº°]\s+\w+/ - ordinals are common in active headings (e.g. "1ª Convocação")
+      // Removed: /edital.*\d{2,4}.*cargo/i - this matches real edital headings and blocks active detections
+      /n[°º]\s*\d+.*data.*homologa[çc][ãa]o/i, // Reference tables
+    ];
+    
+    for (const indicator of tableIndicators) {
+      if (indicator.test(context)) {
+        return 'historical';
+      }
+    }
+    
+    // Check for active action verbs near the keyword
+    const activeVerbs = [
+      /(?:torna|tornar)\s+p[uú]blic[oa]/i,
+      /(?:prorroga|prorrogar)/i,
+      /(?:retifica|retificar)/i,
+      /(?:convoca|convocar)/i,
+      /(?:homologa|homologar)/i,
+      /(?:cancela|cancelar)/i,
+      /(?:suspende|suspender)/i,
+      /fica(?:m)?\s+\w+/i, // "fica prorrogado", "ficam convocados"
+    ];
+    
+    const keywordPos = context.indexOf(keyword.toLowerCase());
+    const beforeKeyword = context.substring(Math.max(0, keywordPos - 50), keywordPos);
+    const afterKeyword = context.substring(keywordPos, Math.min(context.length, keywordPos + 50));
+    
+    for (const verb of activeVerbs) {
+      if (verb.test(beforeKeyword) || verb.test(afterKeyword)) {
+        return 'active';
+      }
+    }
+    
+    // Check for passive/reference indicators
+    const referenceIndicators = [
+      /conforme\s+(?:edital|publicado)/i,
+      /referente\s+ao/i,
+      /de\s+acordo\s+com/i,
+      /nos\s+termos\s+do/i,
+      /previsto\s+no/i,
+    ];
+    
+    for (const indicator of referenceIndicators) {
+      if (indicator.test(context)) {
+        return 'reference';
+      }
+    }
+    
+    // Default to active if no clear indicators
+    return 'active';
+  }
+  
+  /**
+   * Calculate tiered keyword score
+   */
+  private calculateTieredKeywordScore(
+    text: string,
+    pattern: any
+  ): {
+    score: number;
+    strongCount: number;
+    moderateCount: number;
+    weakCount: number;
+    matchedKeywords: Array<{ keyword: string; tier: string; context: string }>;
+  } {
+    const matchedKeywords: Array<{ keyword: string; tier: string; context: string }> = [];
+    let strongCount = 0;
+    let moderateCount = 0;
+    let weakCount = 0;
+    
+    // Check strong keywords (weight: 1.0)
+    for (const keyword of pattern.strongKeywords || []) {
+      const lowerText = text.toLowerCase();
+      const lowerKeyword = keyword.toLowerCase();
+      let lastIndex = 0;
+      
+      while (true) {
+        const index = lowerText.indexOf(lowerKeyword, lastIndex);
+        if (index === -1) break;
+        
+        const contextType = this.detectContextType(text, keyword, index);
+        
+        // Only count active contexts for strong keywords
+        if (contextType === 'active') {
+          strongCount++;
+          const contextStart = Math.max(0, index - 50);
+          const contextEnd = Math.min(text.length, index + keyword.length + 50);
+          matchedKeywords.push({
+            keyword,
+            tier: 'strong',
+            context: text.substring(contextStart, contextEnd),
+          });
+          break; // Count each unique keyword only once
+        }
+        
+        lastIndex = index + keyword.length;
+      }
+    }
+    
+    // Check moderate keywords (weight: 0.6)
+    for (const keyword of pattern.moderateKeywords || []) {
+      const lowerText = text.toLowerCase();
+      const lowerKeyword = keyword.toLowerCase();
+      
+      if (lowerText.includes(lowerKeyword)) {
+        moderateCount++;
+        const index = lowerText.indexOf(lowerKeyword);
+        const contextStart = Math.max(0, index - 50);
+        const contextEnd = Math.min(text.length, index + keyword.length + 50);
+        matchedKeywords.push({
+          keyword,
+          tier: 'moderate',
+          context: text.substring(contextStart, contextEnd),
+        });
+      }
+    }
+    
+    // Check weak keywords (weight: 0.3) - only if strong keywords exist
+    if (strongCount > 0) {
+      for (const keyword of pattern.weakKeywords || []) {
+        const lowerText = text.toLowerCase();
+        const lowerKeyword = keyword.toLowerCase();
+        
+        if (lowerText.includes(lowerKeyword)) {
+          weakCount++;
+          const index = lowerText.indexOf(lowerKeyword);
+          const contextStart = Math.max(0, index - 50);
+          const contextEnd = Math.min(text.length, index + keyword.length + 50);
+          matchedKeywords.push({
+            keyword,
+            tier: 'weak',
+            context: text.substring(contextStart, contextEnd),
+          });
+        }
+      }
+    }
+    
+    // Calculate weighted score
+    const score = (strongCount * 1.0) + (moderateCount * 0.6) + (weakCount * 0.3);
+    
+    return { score, strongCount, moderateCount, weakCount, matchedKeywords };
+  }
+  
+  /**
+   * Detect conflicts with other document types
+   */
+  private detectConflicts(
+    text: string,
+    currentPattern: any
+  ): {
+    hasConflict: boolean;
+    conflictCount: number;
+    conflictingKeywords: Array<{ keyword: string; stage: string }>;
+    conflictPenalty: number;
+  } {
+    const conflictingKeywords: Array<{ keyword: string; stage: string }> = [];
+    let conflictCount = 0;
+    
+    // Check for conflict keywords from the current pattern
+    if (currentPattern.conflictKeywords) {
+      for (const keyword of currentPattern.conflictKeywords) {
+        const lowerText = text.toLowerCase();
+        const lowerKeyword = keyword.toLowerCase();
+        
+        if (lowerText.includes(lowerKeyword)) {
+          // Find which stage this keyword belongs to
+          let belongsToStage = 'unknown';
+          for (const otherPattern of CONCURSO_PATTERNS) {
+            if (otherPattern.documentType === currentPattern.documentType) continue;
+            
+            const allKeywords = [
+              ...(otherPattern.strongKeywords || []),
+              ...(otherPattern.moderateKeywords || []),
+            ].map(k => k.toLowerCase());
+            
+            if (allKeywords.includes(lowerKeyword)) {
+              belongsToStage = otherPattern.documentType;
+              break;
+            }
+          }
+          
+          conflictingKeywords.push({ keyword, stage: belongsToStage });
+          conflictCount++;
+        }
+      }
+    }
+    
+    // Also check if strong keywords from OTHER patterns are present
+    for (const otherPattern of CONCURSO_PATTERNS) {
+      if (otherPattern.documentType === currentPattern.documentType) continue;
+      
+      for (const strongKeyword of otherPattern.strongKeywords || []) {
+        const lowerText = text.toLowerCase();
+        const lowerKeyword = strongKeyword.toLowerCase();
+        let lastIndex = 0;
+        
+        while (true) {
+          const index = lowerText.indexOf(lowerKeyword, lastIndex);
+          if (index === -1) break;
+          
+          const contextType = this.detectContextType(text, strongKeyword, index);
+          
+          // Only count active contexts as conflicts
+          if (contextType === 'active') {
+            conflictingKeywords.push({ 
+              keyword: strongKeyword, 
+              stage: otherPattern.documentType 
+            });
+            conflictCount++;
+            break; // Count each unique keyword once
+          }
+          
+          lastIndex = index + strongKeyword.length;
+        }
+      }
+    }
+    
+    // Calculate conflict penalty
+    // More conflicts = higher penalty
+    let conflictPenalty = 1.0;
+    if (conflictCount > 0) {
+      conflictPenalty = Math.max(0.4, 1.0 - (conflictCount * 0.15));
+    }
+    
+    return {
+      hasConflict: conflictCount > 0,
+      conflictCount,
+      conflictingKeywords,
+      conflictPenalty,
+    };
   }
 
   /**
@@ -158,7 +431,6 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
 
     for (const pattern of sortedPatterns) {
       let patternMatches = 0;
-      let keywordMatches = 0;
       let proximityBonus = 1.0;
       let contextBonus = 1.0;
 
@@ -169,77 +441,140 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
         }
       }
 
-      // Check exclude patterns
+      // Check exclude patterns - HARD EXCLUSION
+      let hasExclusion = false;
       if (pattern.excludePatterns) {
         for (const excludeRegex of pattern.excludePatterns) {
           if (excludeRegex.test(text)) {
-            patternMatches = Math.max(0, patternMatches - 1);
+            hasExclusion = true;
+            break;
           }
         }
       }
+      
+      // If excluded, skip this pattern entirely (conservative approach)
+      if (hasExclusion) {
+        continue;
+      }
 
-      // Find keyword positions for proximity analysis
-      const keywordPositions = ProximityAnalyzer.findKeywordPositions(
-        text,
-        pattern.keywords,
-        false
-      );
+      // Calculate tiered keyword scores
+      const tieredScore = this.calculateTieredKeywordScore(text, pattern);
+      
+      // Check minimum strong keywords requirement
+      if (pattern.minStrongKeywords && tieredScore.strongCount < pattern.minStrongKeywords) {
+        continue; // Skip if minimum strong keywords not met
+      }
+      
+      // Detect conflicts with other stages
+      const conflicts = this.detectConflicts(text, pattern);
 
-      // Count unique keywords found
-      const foundKeywords = new Set(keywordPositions.map(p => p.keyword.toLowerCase()));
-      keywordMatches = foundKeywords.size;
+      // Collect all keywords for proximity analysis
+      const allKeywords = [
+        ...(pattern.strongKeywords || []),
+        ...(pattern.moderateKeywords || []),
+        ...(pattern.weakKeywords || []),
+      ];
 
       // Apply proximity analysis if required
-      if (pattern.proximity && keywordPositions.length > 1) {
-        const bestGroup = ProximityAnalyzer.findBestKeywordGroup(
-          keywordPositions,
-          pattern.keywords,
-          pattern.proximity.maxDistance
+      if (pattern.proximity && tieredScore.matchedKeywords.length > 1) {
+        const keywordPositions = ProximityAnalyzer.findKeywordPositions(
+          text,
+          allKeywords,
+          false
         );
+        
+        if (keywordPositions.length > 1) {
+          const bestGroup = ProximityAnalyzer.findBestKeywordGroup(
+            keywordPositions,
+            allKeywords,
+            pattern.proximity.maxDistance
+          );
 
-        if (bestGroup) {
-          // Check if minimum keywords are together
-          const uniqueInGroup = new Set(bestGroup.keywords.map(p => p.keyword.toLowerCase())).size;
-          if (uniqueInGroup >= (pattern.minKeywordsTogether || 2)) {
-            proximityBonus = bestGroup.averageProximity * 1.3; // Boost for good proximity
+          if (bestGroup) {
+            // Check if minimum keywords are together
+            const uniqueInGroup = new Set(bestGroup.keywords.map(p => p.keyword.toLowerCase())).size;
+            if (uniqueInGroup >= (pattern.minKeywordsTogether || 2)) {
+              proximityBonus = Math.min(bestGroup.averageProximity * 1.3, 1.5); // Boost for good proximity
+            } else if (pattern.proximity.required) {
+              // Required proximity not met
+              proximityBonus = 0.5; // Penalty
+            }
           } else if (pattern.proximity.required) {
-            // Required proximity not met
-            proximityBonus = 0.5; // Penalty
+            // No valid group found and proximity is required
+            continue; // Skip this pattern
           }
-        } else if (pattern.proximity.required) {
-          // No valid group found and proximity is required
-          continue; // Skip this pattern
         }
       }
 
       // Check for keywords in titles/headers for context bonus
       for (const title of structure.titles) {
-        if (pattern.keywords.some(kw => title.text.toLowerCase().includes(kw.toLowerCase()))) {
-          contextBonus = 1.2; // Title match bonus
+        const titleKeywords = [
+          ...(pattern.strongKeywords || []),
+          ...(pattern.moderateKeywords || []),
+        ];
+        if (titleKeywords.some(kw => title.text.toLowerCase().includes(kw.toLowerCase()))) {
+          contextBonus = 1.25; // Title match bonus
           break;
         }
       }
 
       // Calculate confidence with all factors
-      if (patternMatches > 0 || keywordMatches > 0) {
-        const baseConfidence = calculateTypeConfidence(
+      const hasSignificantMatch = patternMatches > 0 || tieredScore.strongCount > 0 || 
+                                   (tieredScore.moderateCount > 0 && tieredScore.score >= 1.0);
+      
+      if (hasSignificantMatch) {
+        // New confidence calculation using tiered scores
+        const patternScore = patternMatches / Math.max(pattern.patterns.length, 1);
+        const keywordScore = Math.min(tieredScore.score / 2.0, 1.0); // Normalize
+        
+        // Weight: 60% keywords, 40% patterns (keywords more important now)
+        const baseConfidence = (keywordScore * 0.6 + patternScore * 0.4) * pattern.weight;
+        
+        // Apply bonuses and penalties
+        let adjustedConfidence = baseConfidence * proximityBonus * contextBonus * conflicts.conflictPenalty;
+        
+        // Cap confidence
+        adjustedConfidence = Math.min(adjustedConfidence, 0.98);
+        
+        // Conservative threshold: require higher confidence when conflicts exist
+        const minConfidence = conflicts.hasConflict ? 0.65 : 0.50;
+        
+        if (adjustedConfidence < minConfidence) {
+          continue; // Skip low confidence matches
+        }
+
+        // Detailed logging for debugging
+        logger.debug('Pattern evaluation', {
+          documentType: pattern.documentType,
           patternMatches,
-          pattern.patterns.length,
-          keywordMatches,
-          pattern.weight
-        );
+          tieredScore: {
+            strong: tieredScore.strongCount,
+            moderate: tieredScore.moderateCount,
+            weak: tieredScore.weakCount,
+            totalScore: tieredScore.score,
+          },
+          conflicts: {
+            count: conflicts.conflictCount,
+            penalty: conflicts.conflictPenalty,
+            keywords: conflicts.conflictingKeywords.slice(0, 3), // First 3
+          },
+          bonuses: {
+            proximity: proximityBonus,
+            context: contextBonus,
+          },
+          confidence: adjustedConfidence,
+        });
 
-        const adjustedConfidence = Math.min(baseConfidence * proximityBonus * contextBonus, 1.0);
-
-        // High-priority patterns with strong matches can short-circuit
-        if (pattern.priority === 'primary' && adjustedConfidence >= 0.85) {
-          logger.info('High confidence match found', {
+        // High-priority patterns with strong matches and no/low conflicts can short-circuit
+        if (pattern.priority === 'primary' && 
+            adjustedConfidence >= 0.85 && 
+            conflicts.conflictCount <= 1 &&
+            tieredScore.strongCount > 0) {
+          logger.info('High confidence match found (short-circuit)', {
             documentType: pattern.documentType,
             confidence: adjustedConfidence,
-            patternMatches,
-            keywordMatches,
-            proximityBonus,
-            contextBonus
+            strongKeywords: tieredScore.strongCount,
+            conflicts: conflicts.conflictCount,
           });
           return {
             type: pattern.documentType,
@@ -261,9 +596,24 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
       logger.info('Document type detected', {
         type: results[0].type,
         confidence: results[0].confidence,
-        totalCandidates: results.length
+        totalCandidates: results.length,
+        topCandidates: results.slice(0, 3).map(r => ({
+          type: r.type,
+          confidence: r.confidence.toFixed(3),
+        })),
       });
       return results[0];
+    }
+    
+    // Log when no classification could be made
+    if (results.length > 0) {
+      logger.info('Document type detection failed - confidence too low', {
+        topCandidate: results[0].type,
+        confidence: results[0].confidence,
+        threshold: 0.5,
+      });
+    } else {
+      logger.info('Document type detection failed - no matches found');
     }
 
     // Fallback: if we detected concurso keywords but couldn't classify type
@@ -360,7 +710,108 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
       }
     }
 
+    // Extract multiple cargos from table-like structures
+    if (['edital_abertura', 'convocacao', 'homologacao'].includes(documentType)) {
+      const cargos = this.extractCargosFromTable(text);
+      if (cargos.length > 0) {
+        // Merge with existing vagas data
+        if (!data.vagas) {
+          data.vagas = {};
+        }
+        data.vagas.porCargo = cargos;
+        
+        // Calculate total if not already present
+        if (!data.vagas.total && cargos.length > 0) {
+          data.vagas.total = cargos.reduce((sum, cargo) => sum + (cargo.vagas || 0), 0);
+        }
+      }
+    }
+
     return data;
+  }
+
+  /**
+   * Extract multiple cargos from table-like structures in text
+   */
+  private extractCargosFromTable(text: string): Array<{
+    cargo: string;
+    vagas: number;
+    salario?: number;
+    requisitos?: string;
+    jornada?: string;
+    escolaridade?: string;
+    beneficios?: string[];
+  }> {
+    const cargos: any[] = [];
+    
+    // Try table patterns
+    for (const pattern of EXTRACTION_PATTERNS.cargoTable) {
+      let match;
+      while ((match = pattern.exec(text)) !== null) {
+        const cargo = {
+          cargo: match[1].trim(),
+          vagas: parseInt(match[2], 10),
+          salario: this.parseMoneyValue(match[3]),
+        };
+        
+        // Look for additional info near this cargo mention
+        const contextStart = Math.max(0, match.index - 200);
+        const contextEnd = Math.min(text.length, match.index + match[0].length + 200);
+        const context = text.substring(contextStart, contextEnd);
+        
+        // Try to extract requisitos
+        for (const reqPattern of EXTRACTION_PATTERNS.requisitos) {
+          const reqMatch = context.match(reqPattern);
+          if (reqMatch) {
+            cargo.requisitos = reqMatch[1].trim();
+            break;
+          }
+        }
+        
+        // Try to extract escolaridade
+        for (const escPattern of EXTRACTION_PATTERNS.escolaridade) {
+          const escMatch = context.match(escPattern);
+          if (escMatch) {
+            cargo.escolaridade = escMatch[1].trim();
+            break;
+          }
+        }
+        
+        // Try to extract jornada
+        for (const jornadaPattern of EXTRACTION_PATTERNS.jornada) {
+          const jornadaMatch = context.match(jornadaPattern);
+          if (jornadaMatch) {
+            cargo.jornada = jornadaMatch[1].trim();
+            break;
+          }
+        }
+        
+        // Try to extract beneficios
+        const beneficios: string[] = [];
+        for (const beneficioPattern of EXTRACTION_PATTERNS.beneficios) {
+          const beneficioMatch = context.match(beneficioPattern);
+          if (beneficioMatch) {
+            beneficios.push(beneficioMatch[0]);
+          }
+        }
+        if (beneficios.length > 0) {
+          cargo.beneficios = beneficios;
+        }
+        
+        cargos.push(cargo);
+      }
+    }
+    
+    // Remove duplicates (same cargo name)
+    const uniqueCargos = cargos.reduce((acc, cargo) => {
+      const existing = acc.find((c: any) => c.cargo === cargo.cargo);
+      if (!existing) {
+        acc.push(cargo);
+      }
+      return acc;
+    }, []);
+    
+    return uniqueCargos;
   }
 
   /**
@@ -606,9 +1057,16 @@ Extract and return JSON with any identifiable fields:
    * Extract relevant context around concurso information
    */
   private extractRelevantContext(text: string, documentType: ConcursoDocumentType): string {
+    // Ensure text is not empty
+    if (!text || text.trim().length === 0) {
+      logger.warn('extractRelevantContext called with empty text', {
+        documentType,
+      });
+      return '';
+    }
+
     // For AI extraction, we want the most relevant part of the document
     // Limit to ~3000 characters to save on API costs
-    
     const maxLength = 3000;
     
     if (text.length <= maxLength) {
@@ -630,6 +1088,15 @@ Extract and return JSON with any identifiable fields:
 
     const relevantKeywords = keywords[documentType];
     
+    // Safety check: if keywords not found for type, use generic keywords
+    if (!relevantKeywords || relevantKeywords.length === 0) {
+      logger.warn('No keywords defined for document type, using generic keywords', {
+        documentType,
+      });
+      // Return first chunk as fallback
+      return text.substring(0, maxLength);
+    }
+    
     // Find section with most keyword matches
     const chunkSize = maxLength;
     let bestChunk = text.substring(0, chunkSize);
@@ -647,6 +1114,15 @@ Extract and return JSON with any identifiable fields:
         bestScore = score;
         bestChunk = chunk;
       }
+    }
+
+    // Final safety check
+    if (!bestChunk || bestChunk.trim().length === 0) {
+      logger.warn('Best chunk is empty, falling back to first chunk', {
+        documentType,
+        textLength: text.length,
+      });
+      return text.substring(0, maxLength);
     }
 
     return bestChunk;
@@ -684,4 +1160,114 @@ Extract and return JSON with any identifiable fields:
       uniqueDocumentTypes: Object.keys(documentTypes),
     };
   }
+
+  /**
+   * Analyze a specific text section (for use by ConcursoValidator)
+   * This is a public method that can be called to analyze validated ambiguous sections
+   */
+  public async analyzeTextSection(text: string, validatorContext?: {
+    keyword: string;
+    validationReason: string;
+    validationConfidence: number;
+  }): Promise<Finding | null> {
+    logger.info('Analyzing validated text section', {
+      textLength: text.length,
+      keyword: validatorContext?.keyword,
+    });
+
+    // Step 1: Detect document type from the section
+    const documentTypeResult = this.detectDocumentType(text);
+    
+    if (!documentTypeResult) {
+      logger.debug('Could not classify concurso document type from validated section');
+      return null;
+    }
+
+    logger.info('Detected concurso document from validated section', {
+      documentType: documentTypeResult.type,
+      confidence: documentTypeResult.confidence,
+      keyword: validatorContext?.keyword,
+    });
+
+    // Step 2: Extract structured data using patterns
+    const patternData = this.extractDataWithPatterns(text, documentTypeResult.type);
+
+    // Step 3: If AI extraction is enabled, enhance with AI
+    let finalData = patternData;
+    let extractionMethod: 'pattern' | 'ai' | 'hybrid' = 'pattern';
+
+    if (this.useAIExtraction && this.apiKey && documentTypeResult.confidence >= 0.6) {
+      logger.info('Using AI to extract structured data from validated section', {
+        documentType: documentTypeResult.type,
+      });
+
+      try {
+        const aiData = await this.extractDataWithAI(text, documentTypeResult.type, patternData);
+        if (aiData) {
+          finalData = this.mergeExtractedData(patternData, aiData);
+          extractionMethod = 'hybrid';
+        }
+      } catch (error) {
+        logger.error('AI extraction failed for validated section, using pattern-based data only', error as Error);
+      }
+    }
+
+    // Step 4: Create concurso data
+    const concursoData: ConcursoData = {
+      documentType: documentTypeResult.type,
+      documentTypeConfidence: documentTypeResult.confidence,
+      ...finalData,
+    };
+
+    // Map document type to webhook category
+    const categoryMap: Record<ConcursoDocumentType, string> = {
+      convocacao: 'concurso_publico_convocacao',
+      edital_abertura: 'concurso_publico_abertura',
+      edital_retificacao: 'concurso_publico_retificacao',
+      homologacao: 'concurso_publico_homologacao',
+      prorrogacao: 'concurso_publico_prorrogacao',
+      cancelamento: 'concurso_publico_cancelamento',
+      resultado_parcial: 'concurso_publico_resultado',
+      gabarito: 'concurso_publico_resultado',
+      nao_classificado: 'concurso_publico',
+    };
+
+    // Extract context - ensure it's never empty
+    const context = this.extractRelevantContext(text, documentTypeResult.type);
+    if (!context || context.trim().length === 0) {
+      logger.warn('Empty context extracted for validated concurso finding', {
+        documentType: documentTypeResult.type,
+        textLength: text.length,
+        validatorKeyword: validatorContext?.keyword,
+      });
+    }
+
+    // Create finding with type 'concurso' so it gets stored in the database
+    const finding = this.createFinding(
+      'concurso',
+      {
+        category: categoryMap[documentTypeResult.type] || 'concurso_publico',
+        concursoData,
+        extractionMethod: extractionMethod + '_from_validated' as any,
+        documentType: documentTypeResult.type,
+        // Add validator context for traceability
+        validatedBy: 'concurso-validator',
+        validatorKeyword: validatorContext?.keyword,
+        validationReason: validatorContext?.validationReason,
+        validationConfidence: validatorContext?.validationConfidence,
+      },
+      documentTypeResult.confidence,
+      context || text.substring(0, 3000) // Fallback to first 3000 chars if context is empty
+    );
+
+    logger.info('Created concurso finding from validated section', {
+      documentType: documentTypeResult.type,
+      confidence: finding.confidence,
+      orgao: concursoData.orgao,
+      totalVagas: concursoData.vagas?.total,
+    });
+
+    return finding;
+  }
 }
+

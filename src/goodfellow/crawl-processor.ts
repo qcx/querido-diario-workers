@@ -261,17 +261,42 @@ export async function processCrawlBatch(
 
     for (const crawlJobId of crawlJobIds) {
       // Check job completion status
-      const jobStatsResult = await db.select({
+      // Note: Using separate queries to avoid SQLite limitation with COUNT(DISTINCT CASE ...)
+      const totalResult = await db.select({
         total: sql<number>`COUNT(DISTINCT territory_id)`,
-        completed: sql<number>`COUNT(DISTINCT CASE WHEN status = 'completed' THEN territory_id END)`,
-        failed: sql<number>`COUNT(DISTINCT CASE WHEN status = 'failed' THEN territory_id END)`
       })
       .from(schema.crawlTelemetry)
       .where(and(
         eq(schema.crawlTelemetry.crawlJobId, crawlJobId),
         eq(schema.crawlTelemetry.step, 'crawl_end')
       ));
-      const jobStats = jobStatsResult;
+
+      const completedResult = await db.select({
+        completed: sql<number>`COUNT(DISTINCT territory_id)`,
+      })
+      .from(schema.crawlTelemetry)
+      .where(and(
+        eq(schema.crawlTelemetry.crawlJobId, crawlJobId),
+        eq(schema.crawlTelemetry.step, 'crawl_end'),
+        eq(schema.crawlTelemetry.status, 'completed')
+      ));
+
+      const failedResult = await db.select({
+        failed: sql<number>`COUNT(DISTINCT territory_id)`,
+      })
+      .from(schema.crawlTelemetry)
+      .where(and(
+        eq(schema.crawlTelemetry.crawlJobId, crawlJobId),
+        eq(schema.crawlTelemetry.step, 'crawl_end'),
+        eq(schema.crawlTelemetry.status, 'failed')
+      ));
+
+      // Combine results into the expected format
+      const jobStats = [{
+        total: totalResult[0]?.total || 0,
+        completed: completedResult[0]?.completed || 0,
+        failed: failedResult[0]?.failed || 0,
+      }];
 
       if (jobStats.length > 0 && jobStats[0].total > 0) {
         const { total, completed, failed } = jobStats[0];
