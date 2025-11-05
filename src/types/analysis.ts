@@ -238,9 +238,8 @@ export type ConcursoDocumentType =
   | 'cancelamento'         // Cancellation or suspension
   | 'resultado_parcial'    // Partial results
   | 'resultado_insencao'   // Exemption fee results
-  | 'reclassificacao_resultado' // Reclassification results
-  | 'exoneracao'           // Employee dismissal/resignation
-  | 'nomeacao'             // Employee appointment
+  | 'reclassificacao_resultado' // Reclassification results  
+  | 'nomeacao_exoneracao'   // Employee appointment and dismissal
   | 'gabarito'             // Answer key
   | 'nao_classificado';    // Fallback: Document not classified
 

@@ -60,6 +60,11 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       'abertas as inscrições para',
       'são requisitos para inscrição',
       'requisitos para inscrição',
+      'as inscrições estão abertas',
+      'as inscrições ficarão abertas',
+      'período de inscrições aberto',
+      'pedido de inscrição no site',
+      'inscrições ficarão abertas'
     ],
     moderateKeywords: [
       'edital de abertura',
@@ -80,15 +85,21 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       /torna\s+p[uú]blic[oa]\s+que\s+est[ãa]o\s+abertas.*inscri[çc][õo]es/i,
       /est[ãa]o\s+abertas.*inscri[çc][õo]es.*concurso\s+p[uú]blico/i,
       /abertas.*inscri[çc][õo]es.*concurso\s+p[uú]blico/i,
+      // Conselho Tutelar selection process patterns
+      /faz\s+publicar\s+este\s+edital\s+para\s+a\s+realiza[çc][ãa]o\s+do\s+processo\s+de\s+escolha/i,
+      /processo\s+de\s+escolha.*para\s+membros\s+do\s+conselho\s+tutelar/i,
+      /edital\s+para\s+a\s+realiza[çc][ãa]o\s+do\s+processo\s+de\s+escolha/i,
+      /inscri[çc][õo]es\s+ficar[ãa]o\s+abertas.*exclusivamente/i,
+      /per[íi]odo\s+para\s+inscri[çc][ãa]o\s+de\s+candidatos/i,
     ],
     excludePatterns: [
-      /prorroga(?:[çc][ãa]o|r|ndo)/i,
+      /prorroga(?:[çc][ãa]o|r|ndo).*(?:concurso|edital|inscri[çc][õo]es)/i,  // Only exclude if near concurso terms
+      /(?:concurso|edital|inscri[çc][õo]es).*prorroga(?:[çc][ãa]o|r|ndo)/i,  // Bidirectional
       /retifica(?:[çc][ãa]o|r|ndo)/i,
       /resultado\s+(?:final|preliminar|parcial)/i,
       /classifica[çc][ãa]o\s+(?:final|preliminar)/i,
-      /homologa(?:[çc][ãa]o|r|ndo)/i,
-      /cancelamento/i,
-      /suspens[ãa]o/i,
+      /(?:edital\s+de\s+)?homologa(?:[çc][ãa]o|r|ndo).*(?:resultado\s+final|classifica[çc][ãa]o\s+final|concurso\s+p[úu]blico)/i,
+      /(?:concurso|edital|inscri[çc][õo]es).*homologa(?:[çc][ãa]o|r|ndo)/i,  
       // NEW: Exclude resultado_parcial patterns
       /edital\s+de\s+classifica[çc][ãa]o/i,
       /edital\s+de\s+notas/i,
@@ -109,7 +120,7 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
     ],
     proximity: {
       required: true,
-      maxDistance: 150,
+      maxDistance: 200,
       boostNearby: true,
     },
     minKeywordsTogether: 2,
@@ -767,12 +778,13 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
     minStrongKeywords: 1,
   },
 
-  // Exoneração (Employee Dismissal/Resignation)
+  // Exoneração e Nomeação (Employee Dismissal/Resignation and Appointment - Combined)
   {
-    documentType: 'exoneracao',
-    weight: 0.88,
+    documentType: 'exoneracao_nomeacao',
+    weight: 0.90,
     priority: 'primary',
     strongKeywords: [
+      // Exoneração strong keywords
       'exonerar servidor',
       'exoneração do cargo',
       'desligar a pedido',
@@ -791,22 +803,61 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       'sem efeito as nomeações',
       'anular nomeações',
       'anulação de nomeações',
+      // Nomeação strong keywords
+      'nomear para o cargo',
+      'nomeação para exercer',
+      'nomear servidor',
+      'nomeação do candidato',
+      'nomear o aprovado',
+      'nomeação para o cargo',
+      'nomear para exercer',
+      'nomeação do servidor',
+      'designar para o cargo',
+      'designação para exercer',
+      'resolve nomear',
+      'fica nomeado',
+      'fica nomeada',
+      'portaria de nomeação',
+      'nomeação efetuada',
+      'tomada de posse',
+      'comparecer para posse',
+      'apresentar documentos para posse',
+      'nomeação dos candidatos aprovados',
+      'nomeação de candidatos aprovados',
+      'decreto nomeação',
+      'candidato aprovado no concurso público',
+      'aprovado no concurso público',
+      'para provimento de cargo',
+      'quadro efetivo de pessoal',
     ],
     moderateKeywords: [
+      // Exoneração moderate keywords
       'exoneração',
       'exonerar',
       'desligamento',
       'desligar',
       'demissão',
       'demitir',
+      // Nomeação moderate keywords
+      'nomeação',
+      'nomear',
+      'designar',
+      'designação',
+      'candidato aprovado',
       'servidor',
+      'posse',
+      'apresentação',
+      'documentos necessários',
+      'prazo legal',
     ],
     weakKeywords: [
       'cargo',
       'função',
       'pedido',
+      'concurso',
     ],
     patterns: [
+      // Exoneração patterns
       /exonerar.*servidor/i,
       /exonera[çc][ãa]o.*(?:do\s+)?cargo/i,
       /desligar.*(?:a\s+)?pedido/i,
@@ -818,84 +869,7 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       /sem\s+efeito.*(?:atos?\s+de\s+)?nomea[çc][ãa]o/i,
       /anula(?:r|[çc][ãa]o).*nomea[çc][õo]es/i,
       /(?:resolve|fica).*sem\s+efeito.*nomea[çc][ãa]o/i,
-    ],
-    excludePatterns: [
-      /(?<!sem\s+efeito.*|anula.*|torna.*sem\s+efeito.*)nomea[çc][ãa]o(?!\s+que\s+menciona)/i,
-      /(?<!sem\s+efeito.*|anula.*|torna.*sem\s+efeito.*)nomear/i,
-      /designa[çc][ãa]o/i,
-      /abertura\s+de\s+inscri[çc][õo]es/i,
-      /edital\s+de\s+abertura/i,
-    ],
-    conflictKeywords: [
-      'nomeação',
-      'nomear',
-      'designação',
-      'designar',
-      'abertura de inscrições',
-      'edital de abertura',
-    ],
-    proximity: {
-      required: true,
-      maxDistance: 150,
-      boostNearby: true,
-    },
-    minKeywordsTogether: 2,
-    minStrongKeywords: 1,
-  },
-
-  // Nomeação (Employee Appointment)
-  {
-    documentType: 'nomeacao',
-    weight: 0.90, // Increased weight for better competition with edital_abertura
-    priority: 'primary',
-    strongKeywords: [
-      'nomear para o cargo',
-      'nomeação para exercer',
-      'nomear servidor',
-      'nomeação do candidato',
-      'nomear o aprovado',
-      'nomeação para o cargo',
-      'nomear para exercer',
-      'nomeação do servidor',
-      'designar para o cargo',
-      'designação para exercer',
-      // NEW: Enhanced strong keywords for better detection
-      'resolve nomear',
-      'fica nomeado',
-      'fica nomeada',
-      'portaria de nomeação',
-      'nomeação efetuada',
-      'tomada de posse',
-      'comparecer para posse',
-      'apresentar documentos para posse',
-      // NEW: Decree-specific strong keywords
-      'nomeação dos candidatos aprovados',
-      'nomeação de candidatos aprovados',
-      'decreto nomeação',
-      'candidato aprovado no concurso público',
-      'aprovado no concurso público',
-      'para provimento de cargo',
-      'quadro efetivo de pessoal',
-    ],
-    moderateKeywords: [
-      'nomeação',
-      'nomear',
-      'designar',
-      'designação',
-      'candidato aprovado',
-      'servidor',
-      // NEW: Additional moderate keywords
-      'posse',
-      'apresentação',
-      'documentos necessários',
-      'prazo legal',
-    ],
-    weakKeywords: [
-      'cargo',
-      'função',
-      'concurso',
-    ],
-    patterns: [
+      // Nomeação patterns
       /nomear.*(?:para\s+(?:o\s+)?)?cargo/i,
       /nomea[çc][ãa]o.*(?:para\s+)?exercer/i,
       /nomear.*servidor/i,
@@ -903,14 +877,12 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       /nomear.*aprovado/i,
       /designar.*cargo/i,
       /(?:resolve|fica).*nomea(?:r|do)/i,
-      // NEW: Enhanced patterns for better nomeacao detection
       /portaria.*nomea[çc][ãa]o/i,
       /nomea[çc][ãa]o.*efetuada/i,
       /tomada\s+de\s+posse/i,
       /comparecer.*posse/i,
       /apresentar.*documentos.*posse/i,
       /prazo.*posse/i,
-      // NEW: Decree-specific patterns
       /decreto.*nomea[çc][ãa]o/i,
       /nomea[çc][ãa]o\s+dos?\s+candidatos?\s+aprovados?/i,
       /candidatos?\s+aprovados?\s+no\s+concurso\s+p[uú]blico/i,
@@ -920,27 +892,15 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
       /decreta:?\s*art\.?\s*\d+[°º]?\s+.*nomea[çc][ãa]o/i,
     ],
     excludePatterns: [
-      /exonera[çc][ãa]o/i,
-      /exonerar/i,
-      /desligamento/i,
-      /desligar/i,
-      /demiss[ãa]o/i,
       /abertura\s+de\s+inscri[çc][õo]es/i,
-      // NEW: Enhanced exclusion patterns for reference contexts
       /torna\s+p[uú]blic[oa].*abertura/i,
       /inscri[çc][õo]es\s+abertas/i,
       /realiza[çc][ãa]o\s+de\s+concurso/i,
       /est[ãa]o\s+abertas.*inscri[çc][õo]es/i,
     ],
     conflictKeywords: [
-      'exoneração',
-      'exonerar',
-      'desligamento',
-      'desligar',
-      'demissão',
       'abertura de inscrições',
       'edital de abertura',
-      // NEW: Enhanced conflict detection for edital references
       'torna público a abertura',
       'torna pública a abertura',
       'inscrições abertas',
@@ -950,7 +910,7 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
     ],
     proximity: {
       required: true,
-      maxDistance: 200, // Increased distance for better context capture
+      maxDistance: 200,
       boostNearby: true,
     },
     minKeywordsTogether: 2,

@@ -283,7 +283,7 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
     
     // Also check for titles from structure analysis with concurso priority
     for (const title of structure.titles) {
-      const isConcursoTitle = /(?:EDITAL\s+DE\s+(?:CONVOCA[ÇC][ÃA]O|ABERTURA|HOMOLOGA[ÇC][ÃA]O)|CONVOCA[ÇC][ÃA]O.*(?:CONCURSO|P[ÚU]BLICO))/i.test(title.text);
+      const isConcursoTitle = /(?:EDITAL\s+DE\s+(?:CONVOCA[ÇC][ÃA]O|ABERTURA|HOMOLOGA[ÇC][ÃA]O)|CONVOCA[ÇC][ÃA]O.*(?:CONCURSO|P[ÚU]BLICO|PROCESSO\s+(?:DE\s+ESCOLHA|SELETIVO(?:\s+SIMPLIFICADO)?)))/i.test(title.text);
       const isGeneralTitle = /(?:DECRETO|PORTARIA|EDITAL|RESOLUÇÃO|RESOLUCAO|LEI)\s+N?[°º]?\s*[\d.,/-]+/i.test(title.text);
       
       if (isConcursoTitle || isGeneralTitle) {
@@ -627,6 +627,14 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
       try {
         const validation = await this.validateAmbiguousKeyword(segment.text, kw.keyword);
         
+        // Find keyword position for context
+        const keywordIndex = segment.text.toLowerCase().indexOf(kw.keyword.toLowerCase());
+        const contextStart = Math.max(0, keywordIndex - 150);
+        const contextEnd = Math.min(segment.text.length, keywordIndex + kw.keyword.length + 150);
+        const textContext = keywordIndex >= 0 
+          ? segment.text.substring(contextStart, contextEnd).replace(/\s+/g, ' ')
+          : '';
+        
         // Always log validation result for debugging
         logger.info('AI validation result', {
           keyword: kw.keyword,
@@ -634,6 +642,7 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
           confidence: validation.confidence,
           reason: validation.reason,
           segmentTitle: segment.title,
+          textContext,
         });
         
         if (validation.isValid) {          
@@ -884,8 +893,7 @@ Respond in JSON format:
       resultado_parcial: 'concurso_publico_resultado',
       resultado_insencao: 'concurso_publico_insencao',
       reclassificacao_resultado: 'concurso_publico_reclassificacao',
-      exoneracao: 'concurso_publico_exoneracao',
-      nomeacao: 'concurso_publico_nomeacao',
+      nomeacao_exoneracao: 'concurso_publico_nomeacao_exoneracao',
       gabarito: 'concurso_publico_resultado',
       nao_classificado: 'concurso_publico',
     };
@@ -929,6 +937,12 @@ Respond in JSON format:
     
     for (const indicator of tableIndicators) {
       if (indicator.test(context)) {
+        console.log('-----------------------------> Historical context', {
+          context,
+          keyword,
+          position,
+          text,
+        });     
         return 'historical';
       }
     }
@@ -951,24 +965,25 @@ Respond in JSON format:
       /previstos?\s+no?\s+edital/i,
       
       // NEW: General reference patterns for documents citing other documents
-      /(?:do|da|no|na)\s+edital\s+(?:de\s+)?(?:abertura|concurso)/i,
-      /(?:segundo|conforme|como)\s+(?:previsto|estabelecido|determinado)/i,
+      /(?:conforme|segundo|previsto|estabelecido|determinado|disposto)\s+(?:do|da|no|na)\s+edital\s+(?:de\s+)?(?:abertura|concurso)/i,
+      /(?:segundo|conforme|como)\s+(?:previsto|estabelecido|determinado)\s+(?:do|da|no|na)\s+edital\s+(?:de\s+)?(?:abertura|concurso)/i,
       /em\s+conformidade\s+com/i,
       /de\s+acordo\s+com\s+o\s+(?:edital|disposto)/i,
       
       // NEW: Patterns indicating requirements or conditions from other documents
       /(?:requisitos?|condi[çc][õo]es?|exig[êe]ncias?).*(?:do|no)\s+edital/i,
       /documentos?\s+(?:necess[áa]rios?|exigidos?).*edital/i,
-      /prazo.*(?:legal|estabelecido|previsto)/i,
-      
-      // NEW: Patterns for nomeacao documents referencing concurso editais
-      /aprovados?\s+no\s+concurso/i,
-      /classificados?\s+no\s+concurso/i,
-      /candidatos?\s+(?:aprovados?|classificados?).*concurso/i,
+      /prazo.*(?:legal|estabelecido|previsto)/i
     ];
     
     for (const indicator of referenceIndicators) {
       if (indicator.test(context)) {
+        console.log('-----------------------------> Reference context', {
+          context,
+          keyword,
+          position,
+          text,
+        });     
         return 'reference';
       }
     }
@@ -983,13 +998,17 @@ Respond in JSON format:
       /(?:cancela|cancelar)/i,
       /(?:suspende|suspender)/i,
       /fica(?:m)?\s+\w+/i, // "fica prorrogado", "ficam convocados"
-      
+      /(?:disp[õo]e\s+sobre|trata\s+(?:da|de))\s+(?:a\s+)?convoca[çc][ãa]o/i, 
       // NEW: Additional active verbs for better detection (more flexible patterns)
       /resolve/i, // "resolve nomear" - check for resolve anywhere in context
       /fica\s+(?:nomeado|nomeada|exonerado|exonerada)/i,
       /(?:autoriza|autorizado)/i,
       /(?:designa|designado)/i,
       /para\s+realizar\s+a?\s+inscri[çc][ãa]o/i, // "para realizar a inscrição"
+      /formalizar[ãa]o\s+pedido\s+de/i, // "formalizarão pedido de"
+      /ficar[ãa]o\s+abertas?/i, // "ficarão abertas"
+      /(?:nomear|nomea[çc][ãa]o)\s+(?:d[oa]s?\s+)?candidat[oa]s?\s+aprovad[oa]s?/i, // "nomear candidatos aprovados", "nomeação dos candidatos aprovados"
+      /(?:exonerar|exonera[çc][ãa]o)\s+(?:d[oa]s?\s+)?(?:candidat[oa]s?|servidor[ae]s?|funcion[áa]ri[oa]s?)/i, // "exonerar candidatos", "exoneração dos servidores"
     ];
     
     const keywordPos = context.indexOf(keyword.toLowerCase());
@@ -1079,12 +1098,20 @@ Respond in JSON format:
         if (index === -1) break;
         
         const contextType = this.detectContextType(text, keyword, index);
+
+        logger.debug('-----------------------------> Context type', {
+          contextType,
+          keyword,
+          index,
+          matchedKeywords,
+          referenceCount,
+        });
         
         // NEW: Override reference context if AI validated nearby keyword
         if (contextType === 'reference' && aiValidatedKeyword) {
           // Check if validated keyword is nearby (within 200 chars)
-          const contextStart = Math.max(0, index - 200);
-          const contextEnd = Math.min(text.length, index + keyword.length + 200);
+          const contextStart = Math.max(0, index - 300);
+          const contextEnd = Math.min(text.length, index + keyword.length + 300);
           const contextWindow = text.substring(contextStart, contextEnd).toLowerCase();
           
           if (contextWindow.includes(aiValidatedKeyword.toLowerCase())) {
@@ -1562,10 +1589,20 @@ Respond in JSON format:
 
       // Check exclude patterns - HARD EXCLUSION
       let hasExclusion = false;
+      let matchedExcludePattern: RegExp | undefined;
+      let excludeContext = '';
+      
       if (pattern.excludePatterns) {
         for (const excludeRegex of pattern.excludePatterns) {
-          if (excludeRegex.test(text)) {
+          const match = text.match(excludeRegex);
+          if (match) {
             hasExclusion = true;
+            matchedExcludePattern = excludeRegex;
+            // Get context around the match
+            const matchIndex = text.indexOf(match[0]);
+            const contextStart = Math.max(0, matchIndex - 100);
+            const contextEnd = Math.min(text.length, matchIndex + match[0].length + 100);
+            excludeContext = text.substring(contextStart, contextEnd).replace(/\s+/g, ' ');
             break;
           }
         }
@@ -1576,6 +1613,9 @@ Respond in JSON format:
         logger.debug('Pattern excluded by exclude patterns', {
           documentType: pattern.documentType,
           isSegmentedDocument,
+          matchedExcludePattern: matchedExcludePattern?.source,
+          excludeContext,
+          segmentTitle: segmentTitle || structure.titles[0]?.text || '',
         });
         continue;
       }
@@ -1589,6 +1629,13 @@ Respond in JSON format:
           documentType: pattern.documentType,
           requiredStrongKeywords: pattern.minStrongKeywords,
           foundStrongKeywords: tieredScore.strongCount,
+          matchedKeywords: tieredScore.matchedKeywords.filter(k => k.tier === 'strong').map(k => ({
+            keyword: k.keyword,
+            context: k.context,
+          })),
+          allMatchedKeywordTiers: tieredScore.matchedKeywords.map(k => k.tier),
+          textPreview: text.substring(0, 300).replace(/\s+/g, ' '),
+          segmentTitle: segmentTitle || structure.titles[0]?.text || '',
           isSegmentedDocument,
         });
         continue; // Skip if minimum strong keywords not met
