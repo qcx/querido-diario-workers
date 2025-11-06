@@ -292,20 +292,36 @@ app.post('/crawl', async (c) => {
 
     const dateRange = getDateRange(request.startDate, request.endDate);
 
-    let configs =
-      request.cities === 'all'
-        ? spiderRegistry.getAllConfigs()
-        : request.cities
-            .map((id) => spiderRegistry.getConfig(id))
-            .filter((config): config is NonNullable<typeof config> => config !== undefined);
+    // Use new registry manager to resolve spider IDs based on version
+    const resolution = spiderRegistry.resolveSpiderIds(
+      request.cities, 
+      request.version, 
+      request.executionStrategy
+    );
+    
+    let configs = resolution.configs;
+
+    // Filter for active spiders only
+    const originalConfigCount = configs.length;
+    configs = configs.filter(config => config.active);
+
+    logger.info(`Using spider system version ${resolution.version}`, {
+      originalCount: originalConfigCount,
+      activeCount: configs.length,
+      executionStrategy: resolution.executionStrategy
+    });
 
     if (configs.length === 0) {
+      const errorMessage = originalConfigCount > 0 
+        ? `No active spider configurations found. ${originalConfigCount} spiders exist but are inactive.`
+        : 'No valid spider configurations found';
+      
       return c.json<DispatchResponse>(
         {
           success: false,
           tasksEnqueued: 0,
           cities: [],
-          error: 'No valid spider configurations found',
+          error: errorMessage,
         },
         400
       );
@@ -424,6 +440,25 @@ app.post('/crawl/today-yesterday', async (c) => {
     let configs = platform
       ? allConfigs.filter((config) => config.spiderType === platform)
       : allConfigs;
+
+    // Filter for active spiders only
+    const originalConfigCount = configs.length;
+    configs = configs.filter(config => config.active);
+
+    if (configs.length === 0) {
+      const errorMessage = originalConfigCount > 0 
+        ? `No active spider configurations found. ${originalConfigCount} spiders exist but are inactive.`
+        : 'No valid spider configurations found';
+      
+      return c.json(
+        {
+          success: false,
+          tasksEnqueued: 0,
+          error: errorMessage,
+        },
+        400
+      );
+    }
 
     // Apply scope filtering at endpoint level
     const originalCount = configs.length;
@@ -544,11 +579,19 @@ app.post('/crawl/cities', async (c) => {
       .map((id) => spiderRegistry.getConfig(id))
       .filter((config): config is NonNullable<typeof config> => config !== undefined);
 
+    // Filter for active spiders only
+    const originalConfigCount = configs.length;
+    configs = configs.filter(config => config.active);
+
     if (configs.length === 0) {
+      const errorMessage = originalConfigCount > 0 
+        ? `No active spider configurations found for provided cities. ${originalConfigCount} spiders exist but are inactive.`
+        : 'No valid spider configurations found for provided cities';
+      
       return c.json(
         {
           success: false,
-          error: 'No valid spider configurations found for provided cities',
+          error: errorMessage,
         },
         400
       );
@@ -934,12 +977,15 @@ app.get('/spiders', (c) => {
 
   return c.json({
     total: configs.length,
+    active: configs.filter(config => config.active).length,
+    inactive: configs.filter(config => !config.active).length,
     spiders: configs.map((config) => ({
       id: config.id,
       name: config.name,
       territoryId: config.territoryId,
       type: config.spiderType,
       startDate: config.startDate,
+      active: config.active,
     })),
   });
 });

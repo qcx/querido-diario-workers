@@ -12,7 +12,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ADAMANTINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_adolfo",
@@ -27,7 +28,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ADOLFO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_agua_",
@@ -42,7 +44,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AGUAÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_agudos",
@@ -57,7 +60,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AGUDOS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_alambari",
@@ -72,7 +76,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ALAMBARI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_alfredo_marcondes",
@@ -87,7 +92,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ALFREDO MARCONDES"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_altair",
@@ -102,7 +108,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ALTAIR"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_altin_polis",
@@ -117,7 +124,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ALTINÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_alum_nio",
@@ -132,7 +140,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ALUMÍNIO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp__lvaro_de_carvalho",
@@ -147,7 +156,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ÁLVARO DE CARVALHO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_alvinl_ndia",
@@ -162,7 +172,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ALVINLÂNDIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_americana",
@@ -177,7 +188,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AMERICANA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_am_rico_de_campos",
@@ -192,7 +204,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AMÉRICO DE CAMPOS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_anal_ndia",
@@ -207,7 +220,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ANALÂNDIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_andradina",
@@ -222,7 +236,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ANDRADINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_angatuba",
@@ -237,7 +252,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ANGATUBA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_aparecida",
@@ -252,7 +268,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "APARECIDA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_aparecida_d_oeste",
@@ -267,7 +284,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "APARECIDA D'OESTE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_apia_",
@@ -282,7 +300,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "APIAÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ara_ariguama",
@@ -297,7 +316,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARAÇARIGUAMA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ara_oiaba_da_serra",
@@ -312,7 +332,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARAÇOIABA DA SERRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_aramina",
@@ -327,7 +348,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARAMINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_arandu",
@@ -342,7 +364,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARANDU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_arape_",
@@ -357,7 +380,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARAPEÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_araraquara",
@@ -372,7 +396,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARARAQUARA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_arco_ris",
@@ -387,7 +412,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARCO-ÍRIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_arealva",
@@ -402,7 +428,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AREALVA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_areias",
@@ -417,7 +444,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AREIAS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_arei_polis",
@@ -432,7 +460,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AREIÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_aruj_",
@@ -447,7 +476,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ARUJÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_assis",
@@ -462,7 +492,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ASSIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_assist_ncia_m_dica",
@@ -477,7 +508,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ASSISTÊNCIA MÉDICA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_atibaia",
@@ -492,7 +524,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ATIBAIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_auriflama",
@@ -507,7 +540,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AURIFLAMA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_avanhandava",
@@ -522,7 +556,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AVANHANDAVA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_avar_",
@@ -537,7 +572,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "AVARÉ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_balbinos",
@@ -552,7 +588,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BALBINOS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_b_lsamo",
@@ -567,7 +604,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BÁLSAMO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bananal",
@@ -582,7 +620,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BANANAL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bar_o_de_antonina",
@@ -597,7 +636,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BARÃO DE ANTONINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_barbosa",
@@ -612,7 +652,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BARBOSA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_barra_bonita",
@@ -627,7 +668,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BARRA BONITA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_barra_do_chap_u",
@@ -642,7 +684,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BARRA DO CHAPÉU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_barrinha",
@@ -657,7 +700,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BARRINHA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_barueri",
@@ -672,7 +716,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BARUERI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bastos",
@@ -687,7 +732,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BASTOS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_batatais",
@@ -702,7 +748,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BATATAIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bauru",
@@ -717,7 +764,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BAURU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bebedouro",
@@ -732,7 +780,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BEBEDOURO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bernardino_de_campos",
@@ -747,7 +796,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BERNARDINO DE CAMPOS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bertioga",
@@ -762,7 +812,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BERTIOGA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bilac",
@@ -777,7 +828,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BILAC"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_birigui",
@@ -792,7 +844,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BIRIGUI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_biritiba_mirim",
@@ -807,7 +860,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BIRITIBA-MIRIM"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bocaina",
@@ -822,7 +876,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BOCAINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_boituva",
@@ -837,7 +892,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BOITUVA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bom_jesus_dos_perd_es",
@@ -852,7 +908,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BOM JESUS DOS PERDÕES"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bom_sucesso_de_itarar_",
@@ -867,7 +924,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BOM SUCESSO DE ITARARÉ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bombeiros_do_m_dio_tiet_",
@@ -882,7 +940,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BOMBEIROS DO MÉDIO TIETÊ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bor_",
@@ -897,7 +956,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BORÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_borborema",
@@ -912,7 +972,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BORBOREMA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_borebi",
@@ -927,7 +988,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BOREBI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bragan_a_paulista",
@@ -942,7 +1004,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BRAGANÇA PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_bra_na",
@@ -957,7 +1020,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BRAÚNA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_brodowski",
@@ -972,7 +1036,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BRODOWSKI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_brotas",
@@ -987,7 +1052,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BROTAS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_buri",
@@ -1002,7 +1068,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BURI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_buritama",
@@ -1017,7 +1084,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BURITAMA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_buritizal",
@@ -1032,7 +1100,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "BURITIZAL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cabr_lia_paulista",
@@ -1047,7 +1116,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CABRÁLIA PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cabre_va",
@@ -1062,7 +1132,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CABREÚVA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cachoeira_paulista",
@@ -1077,7 +1148,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CACHOEIRA PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_caconde",
@@ -1092,7 +1164,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CACONDE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_caiabu",
@@ -1107,7 +1180,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAIABU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_caieiras",
@@ -1122,7 +1196,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAIEIRAS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_caiu_",
@@ -1137,7 +1212,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAIUÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cajamar",
@@ -1152,7 +1228,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAJAMAR"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cajati",
@@ -1167,7 +1244,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAJATI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cajobi",
@@ -1182,7 +1260,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAJOBI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cajuru",
@@ -1197,7 +1276,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAJURU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_campina_do_monte_alegre",
@@ -1212,7 +1292,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAMPINA DO MONTE ALEGRE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_campo_limpo_paulista",
@@ -1227,7 +1308,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAMPO LIMPO PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_campos_do_jord_o",
@@ -1242,7 +1324,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAMPOS DO JORDÃO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_campos_novos_paulista",
@@ -1257,7 +1340,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAMPOS NOVOS PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_canas",
@@ -1272,7 +1356,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CANAS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_c_ndido_mota",
@@ -1287,7 +1372,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CÂNDIDO MOTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_canitar",
@@ -1302,7 +1388,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CANITAR"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cap_o_bonito",
@@ -1317,7 +1404,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAPÃO BONITO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_capela_do_alto",
@@ -1332,7 +1420,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAPELA DO ALTO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_capivari",
@@ -1347,7 +1436,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CAPIVARI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_caraguatatuba",
@@ -1362,7 +1452,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CARAGUATATUBA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_carapicu_ba",
@@ -1377,7 +1468,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CARAPICUÍBA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_casa_branca",
@@ -1392,7 +1484,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CASA BRANCA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_c_ssia_dos_coqueiros",
@@ -1407,7 +1500,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CÁSSIA DOS COQUEIROS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_castilho",
@@ -1422,7 +1516,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CASTILHO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_catigu_",
@@ -1437,7 +1532,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CATIGUÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cedral",
@@ -1452,7 +1548,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CEDRAL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cerqueira_c_sar",
@@ -1467,7 +1564,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CERQUEIRA CÉSAR"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cerquilho",
@@ -1482,7 +1580,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CERQUILHO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ces_rio_lange",
@@ -1497,7 +1596,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CESÁRIO LANGE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_charqueada",
@@ -1512,7 +1612,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CHARQUEADA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_chavantes",
@@ -1527,7 +1628,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CHAVANTES"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_clementina",
@@ -1542,7 +1644,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CLEMENTINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_colina",
@@ -1557,7 +1660,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "COLINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_col_mbia",
@@ -1572,7 +1676,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "COLÔMBIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_conchal",
@@ -1587,7 +1692,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CONCHAL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_conchas",
@@ -1602,7 +1708,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CONCHAS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_corumbata_",
@@ -1617,7 +1724,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CORUMBATAÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cosm_polis",
@@ -1632,7 +1740,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "COSMÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cosmorama",
@@ -1647,7 +1756,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "COSMORAMA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cotia",
@@ -1662,7 +1772,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "COTIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cravinhos",
@@ -1677,7 +1788,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CRAVINHOS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cristais_paulista",
@@ -1692,7 +1804,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CRISTAIS PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": true
   },
   {
     "id": "sp_cruz_lia",
@@ -1707,7 +1820,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CRUZÁLIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cruzeiro",
@@ -1722,7 +1836,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CRUZEIRO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_cubat_o",
@@ -1737,7 +1852,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "CUBATÃO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_descalvado",
@@ -1752,7 +1868,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DESCALVADO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_desenvolvimento_dos_munic_pios_do_alto_tiet_",
@@ -1767,7 +1884,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DESENVOLVIMENTO DOS MUNICÍPIOS DO ALTO TIETÊ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_diadema",
@@ -1782,7 +1900,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DIADEMA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_dirce_reis",
@@ -1797,7 +1916,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DIRCE REIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_divinol_ndia",
@@ -1812,7 +1932,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DIVINOLÂNDIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_dobrada",
@@ -1827,7 +1948,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DOBRADA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_dolcin_polis",
@@ -1842,7 +1964,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DOLCINÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_duartina",
@@ -1857,7 +1980,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DUARTINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_dumont",
@@ -1872,7 +1996,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "DUMONT"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_embu",
@@ -1887,7 +2012,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "EMBU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_embu_gua_u",
@@ -1902,7 +2028,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "EMBU-GUAÇU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_engenheiro_coelho",
@@ -1917,7 +2044,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ENGENHEIRO COELHO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_esp_rito_santo_do_turvo",
@@ -1932,7 +2060,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ESPÍRITO SANTO DO TURVO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_estiva_gerbi",
@@ -1947,7 +2076,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ESTIVA GERBI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_estrela_d_oeste",
@@ -1962,7 +2092,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ESTRELA D'OESTE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_fartura",
@@ -1977,7 +2108,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FARTURA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_fernando_prestes",
@@ -1992,7 +2124,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FERNANDO PRESTES"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_fernand_polis",
@@ -2007,7 +2140,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FERNANDÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_fern_o",
@@ -2022,7 +2156,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FERNÃO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ferraz_de_vasconcelos",
@@ -2037,7 +2172,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FERRAZ DE VASCONCELOS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_fieb_funda_o_instituto_de_educa_o_de_barueri",
@@ -2052,7 +2188,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FIEB - FUNDAÇÃO INSTITUTO DE EDUCAÇÃO DE BARUERI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_floreal",
@@ -2067,7 +2204,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FLOREAL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_flor_nea",
@@ -2082,7 +2220,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FLORÍNEA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_franca",
@@ -2097,7 +2236,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FRANCA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_francisco_morato",
@@ -2112,7 +2252,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FRANCISCO MORATO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_franco_da_rocha",
@@ -2127,7 +2268,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FRANCO DA ROCHA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_funda_o_indaiatubana_de_educa_o_e_cultura",
@@ -2142,7 +2284,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "FUNDAÇÃO INDAIATUBANA DE EDUCAÇÃO E CULTURA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_gabriel_monteiro",
@@ -2157,7 +2300,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GABRIEL MONTEIRO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_g_lia",
@@ -2172,7 +2316,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GÁLIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_gar_a",
@@ -2187,7 +2332,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GARÇA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_general_salgado",
@@ -2202,7 +2348,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GENERAL SALGADO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guai_ara",
@@ -2217,7 +2364,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUAIÇARA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guaimb_",
@@ -2232,7 +2380,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUAIMBÉ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_gua_ra",
@@ -2247,7 +2396,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUAÍRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guapia_u",
@@ -2262,7 +2412,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUAPIAÇU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guapiara",
@@ -2277,7 +2428,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUAPIARA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guar_",
@@ -2292,7 +2444,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guara_a_",
@@ -2307,7 +2460,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARAÇAÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guaraci",
@@ -2322,7 +2476,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARACI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guarani_d_oeste",
@@ -2337,7 +2492,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARANI D'OESTE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guarant_",
@@ -2352,7 +2508,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARANTÃ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guararapes",
@@ -2367,7 +2524,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARARAPES"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guararema",
@@ -2382,7 +2540,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARAREMA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guaratinguet_",
@@ -2397,7 +2556,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARATINGUETÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guare_",
@@ -2412,7 +2572,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUAREÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guariba",
@@ -2427,7 +2588,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARIBA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guaruj_",
@@ -2442,7 +2604,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARUJÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guarulhos",
@@ -2457,7 +2620,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUARULHOS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guatapar_",
@@ -2472,7 +2636,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUATAPARÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_guzol_ndia",
@@ -2487,7 +2652,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "GUZOLÂNDIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_hercul_ndia",
@@ -2502,7 +2668,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "HERCULÂNDIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_holambra",
@@ -2517,7 +2684,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "HOLAMBRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_hortol_ndia",
@@ -2532,7 +2700,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "HORTOLÂNDIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_iacri",
@@ -2547,7 +2716,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IACRI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_iaras",
@@ -2562,7 +2732,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IARAS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ibir_",
@@ -2577,7 +2748,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IBIRÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ibirarema",
@@ -2592,7 +2764,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IBIRAREMA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ibitinga",
@@ -2607,7 +2780,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IBITINGA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ibi_na",
@@ -2622,7 +2796,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IBIÚNA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ic_m",
@@ -2637,7 +2812,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ICÉM"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_iep_",
@@ -2652,7 +2828,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IEPÊ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_igara_u_do_tiet_",
@@ -2667,7 +2844,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IGARAÇU DO TIETÊ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_igarapava",
@@ -2682,7 +2860,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IGARAPAVA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_iguape",
@@ -2697,7 +2876,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IGUAPE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ilha_comprida",
@@ -2712,7 +2892,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ILHA COMPRIDA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ilhabela",
@@ -2727,7 +2908,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ILHABELA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_indaiatuba",
@@ -2742,7 +2924,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "INDAIATUBA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_instituto_de_previd_ncia_e_assist_ncia_social_de_pirapora_do_bom_jesus",
@@ -2757,7 +2940,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "INSTITUTO DE PREVIDÊNCIA E ASSISTÊNCIA SOCIAL DE PIRAPORA DO BOM JESUS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_instituto_de_previd_ncia_municipal_de_caieiras_iprem",
@@ -2772,7 +2956,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "INSTITUTO DE PREVIDÊNCIA MUNICIPAL DE CAIEIRAS - IPREM"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_in_bia_paulista",
@@ -2787,7 +2972,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "INÚBIA PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ipaussu",
@@ -2802,7 +2988,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IPAUÇU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_iper_",
@@ -2817,7 +3004,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IPERÓ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ipe_na",
@@ -2832,7 +3020,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IPEÚNA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_iporanga",
@@ -2847,7 +3036,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IPORANGA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_iracem_polis",
@@ -2862,7 +3052,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IRACEMÁPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_irapuru",
@@ -2877,7 +3068,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "IRAPURU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itaber_",
@@ -2892,7 +3084,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITABERÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ita_",
@@ -2907,7 +3100,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itajobi",
@@ -2922,7 +3116,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAJOBI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itaju",
@@ -2937,7 +3132,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAJU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itanha_m",
@@ -2952,7 +3148,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITANHAÉM"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itaoca",
@@ -2967,7 +3164,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAOCA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itapecerica_da_serra",
@@ -2982,7 +3180,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPECERICA DA SERRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itapetininga",
@@ -2997,7 +3196,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPETININGA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itapeva",
@@ -3012,7 +3212,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPEVA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itapevi",
@@ -3027,7 +3228,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPEVI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itapira",
@@ -3042,7 +3244,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPIRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itapirapu_paulista",
@@ -3057,7 +3260,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPIRAPUÃ PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_it_polis",
@@ -3072,7 +3276,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITÁPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itaporanga",
@@ -3087,7 +3292,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPORANGA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itapu_",
@@ -3102,7 +3308,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPUÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itapura",
@@ -3117,7 +3324,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAPURA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itaquaquecetuba",
@@ -3132,7 +3340,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITAQUAQUECETUBA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itarar_",
@@ -3147,7 +3356,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITARARÉ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itariri",
@@ -3162,7 +3372,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITARIRI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itatiba",
@@ -3177,7 +3388,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITATIBA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itirapina",
@@ -3192,7 +3404,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITIRAPINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itirapu_",
@@ -3207,7 +3420,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITIRAPUÃ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itobi",
@@ -3222,7 +3436,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITOBI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_itu",
@@ -3237,7 +3452,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ituverava",
@@ -3252,7 +3468,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ITUVERAVA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_jaboticabal",
@@ -3267,7 +3484,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JABOTICABAL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_jacare_",
@@ -3282,7 +3500,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JACAREÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_jaci",
@@ -3297,7 +3516,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JACI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_jales",
@@ -3312,7 +3532,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JALES"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_jambeiro",
@@ -3327,7 +3548,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JAMBEIRO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_jandira",
@@ -3342,7 +3564,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JANDIRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_jardin_polis",
@@ -3357,7 +3580,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JARDINÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_jarinu",
@@ -3372,7 +3596,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JARINU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_jau",
@@ -3387,7 +3612,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JAHU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_jeriquara",
@@ -3402,7 +3628,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JERIQUARA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_joan_polis",
@@ -3417,7 +3644,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JOANÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_j_lio_mesquita",
@@ -3432,7 +3660,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JÚLIO MESQUITA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_jundia_",
@@ -3447,7 +3676,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JUNDIAÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_juqui_",
@@ -3462,7 +3692,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JUQUIÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_juquitiba",
@@ -3477,7 +3708,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "JUQUITIBA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_lagoinha",
@@ -3492,7 +3724,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LAGOINHA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_laranjal_paulista",
@@ -3507,7 +3740,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LARANJAL PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_lavrinhas",
@@ -3522,7 +3756,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LAVRINHAS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_len_is_paulista",
@@ -3537,7 +3772,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LENÇÓIS PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_lindoia",
@@ -3552,7 +3788,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LINDOIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_lins",
@@ -3567,7 +3804,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LINS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_lorena",
@@ -3582,7 +3820,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LORENA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_louveira",
@@ -3597,7 +3836,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LOUVEIRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_luc_lia",
@@ -3612,7 +3852,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LUCÉLIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_lucian_polis",
@@ -3627,7 +3868,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LUCIANÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_luiz_ant_nio",
@@ -3642,7 +3884,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LUIZ ANTÔNIO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_luizi_nia",
@@ -3657,7 +3900,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LUIZIÂNIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_lup_rcio",
@@ -3672,7 +3916,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LUPÉRCIO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_lut_cia",
@@ -3687,7 +3932,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "LUTÉCIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_macatuba",
@@ -3702,7 +3948,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MACATUBA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mairinque",
@@ -3717,7 +3964,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MAIRINQUE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mairipor_",
@@ -3732,7 +3980,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MAIRIPORÃ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_manduri",
@@ -3747,7 +3996,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MANDURI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_maraca_",
@@ -3762,7 +4012,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MARACAÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_marin_polis",
@@ -3777,7 +4028,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MARINÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_martin_polis",
@@ -3792,7 +4044,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MARTINÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mat_o",
@@ -3807,7 +4060,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MATÃO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mau_",
@@ -3822,7 +4076,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MAUÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mendon_a",
@@ -3837,7 +4092,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MENDONÇA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_meridiano",
@@ -3852,7 +4108,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MERIDIANO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_miguel_polis",
@@ -3867,7 +4124,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MIGUELÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mineiros_do_tiet_",
@@ -3882,7 +4140,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MINEIROS DO TIETÊ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mirand_polis",
@@ -3897,7 +4156,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MIRANDÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mirante_do_paranapanema",
@@ -3912,7 +4172,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MIRANTE DO PARANAPANEMA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mirassol_ndia",
@@ -3927,7 +4188,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MIRASSOLÂNDIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mococa",
@@ -3942,7 +4204,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MOCOCA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mogi_das_cruzes",
@@ -3957,7 +4220,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MOGI DAS CRUZES"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mogi_gua_u",
@@ -3972,7 +4236,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MOGI GUAÇU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mogi_mirim",
@@ -3987,7 +4252,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MOGI MIRIM"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mombuca",
@@ -4002,7 +4268,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MOMBUCA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_mon_es",
@@ -4017,7 +4284,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MONÇÕES"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_monte_alegre_do_sul",
@@ -4032,7 +4300,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MONTE ALEGRE DO SUL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_monte_alto",
@@ -4047,7 +4316,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MONTE ALTO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_monte_apraz_vel",
@@ -4062,7 +4332,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MONTE APRAZÍVEL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_monte_azul_paulista",
@@ -4077,7 +4348,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MONTE AZUL PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_monte_mor",
@@ -4092,7 +4364,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MONTE MOR"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_monteiro_lobato",
@@ -4107,7 +4380,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MONTEIRO LOBATO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_morro_agudo",
@@ -4122,7 +4396,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MORRO AGUDO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_murutinga_do_sul",
@@ -4137,7 +4412,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "MURUTINGA DO SUL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_natividade_da_serra",
@@ -4152,7 +4428,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NATIVIDADE DA SERRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_neves_paulista",
@@ -4167,7 +4444,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NEVES PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_nhandeara",
@@ -4182,7 +4460,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NHANDEARA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_nipo_",
@@ -4197,7 +4476,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NIPOÃ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_nova_alian_a",
@@ -4212,7 +4492,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NOVA ALIANÇA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_nova_campina",
@@ -4227,7 +4508,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NOVA CAMPINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_nova_cana_paulista",
@@ -4242,7 +4524,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NOVA CANAÃ PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_nova_independ_ncia",
@@ -4257,7 +4540,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NOVA INDEPENDÊNCIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_nova_odessa",
@@ -4272,7 +4556,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NOVA ODESSA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_novais",
@@ -4287,7 +4572,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NOVAIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_novo_horizonte",
@@ -4302,7 +4588,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "NOVO HORIZONTE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ocau_u",
@@ -4317,7 +4604,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "OCAUÇU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp__leo",
@@ -4332,7 +4620,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ÓLEO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ol_mpia",
@@ -4347,7 +4636,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "OLÍMPIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_onda_verde",
@@ -4362,7 +4652,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ONDA VERDE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_oriente",
@@ -4377,7 +4668,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ORIENTE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_osasco",
@@ -4392,7 +4684,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "OSASCO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_oscar_bressane",
@@ -4407,7 +4700,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "OSCAR BRESSANE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_osvaldo_cruz",
@@ -4422,7 +4716,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "OSVALDO CRUZ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ourinhos",
@@ -4437,7 +4732,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "OURINHOS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ouroeste",
@@ -4452,7 +4748,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "OUROESTE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_palmares_paulista",
@@ -4467,7 +4764,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PALMARES PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_palmeira_d_oeste",
@@ -4482,7 +4780,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PALMEIRA D'OESTE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_palmital",
@@ -4497,7 +4796,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PALMITAL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_panorama",
@@ -4512,7 +4812,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PANORAMA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_paragua_u_paulista",
@@ -4527,7 +4828,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PARAGUAÇU PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_paraibuna",
@@ -4542,7 +4844,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PARAIBUNA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_para_so",
@@ -4557,7 +4860,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PARAÍSO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_parapu_",
@@ -4572,7 +4876,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PARAPUÃ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pardinho",
@@ -4587,7 +4892,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PARDINHO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pariquera_a_u",
@@ -4602,7 +4908,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PARIQUERA-AÇU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_parisi",
@@ -4617,7 +4924,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PARISI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_patroc_nio_paulista",
@@ -4632,7 +4940,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PATROCÍNIO PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_paulic_ia",
@@ -4647,7 +4956,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PAULICÉIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_paul_nia",
@@ -4662,7 +4972,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PAULÍNIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_paulist_nia",
@@ -4677,7 +4988,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PAULISTÂNIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pedra_bela",
@@ -4692,7 +5004,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PEDRA BELA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pedran_polis",
@@ -4707,7 +5020,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PEDRANÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pedregulho",
@@ -4722,7 +5036,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PEDREGULHO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pedrinhas_paulista",
@@ -4737,7 +5052,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PEDRINHAS PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pen_polis",
@@ -4752,7 +5068,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PENÁPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pereira_barreto",
@@ -4767,7 +5084,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PEREIRA BARRETO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pereiras",
@@ -4782,7 +5100,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PEREIRAS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_peru_be",
@@ -4797,7 +5116,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PERUÍBE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_piacatu",
@@ -4812,7 +5132,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIACATU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_piedade",
@@ -4827,7 +5148,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIEDADE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pilar_do_sul",
@@ -4842,7 +5164,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PILAR DO SUL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pindamonhangaba",
@@ -4857,7 +5180,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PINDAMONHANGABA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pinhalzinho",
@@ -4872,7 +5196,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PINHALZINHO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_piquerobi",
@@ -4887,7 +5212,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIQUEROBI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_piquete",
@@ -4902,7 +5228,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIQUETE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_piracicaba",
@@ -4917,7 +5244,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIRACICABA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_piraju",
@@ -4932,7 +5260,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIRAJU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_piraju_",
@@ -4947,7 +5276,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIRAJUÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pirangi",
@@ -4962,7 +5292,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIRANGI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pirapora_do_bom_jesus",
@@ -4977,7 +5308,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIRAPORA DO BOM JESUS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pirassununga",
@@ -4992,7 +5324,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIRASSUNUNGA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_piratininga",
@@ -5007,7 +5340,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PIRATININGA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pitangueiras",
@@ -5022,7 +5356,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PITANGUEIRAS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_planalto",
@@ -5037,7 +5372,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PLANALTO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_platina",
@@ -5052,7 +5388,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PLATINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_po_",
@@ -5067,7 +5404,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "POÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_poloni",
@@ -5082,7 +5420,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "POLONI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pompeia",
@@ -5097,7 +5436,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "POMPEIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ponga_",
@@ -5112,7 +5452,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PONGAÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pontalinda",
@@ -5127,7 +5468,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PONTALINDA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_pontes_gestal",
@@ -5142,7 +5484,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PONTES GESTAL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_populina",
@@ -5157,7 +5500,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "POPULINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_porangaba",
@@ -5172,7 +5516,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PORANGABA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_porto_feliz",
@@ -5187,7 +5532,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PORTO FELIZ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_porto_ferreira",
@@ -5202,7 +5548,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PORTO FERREIRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_potim",
@@ -5217,7 +5564,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "POTIM"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_praia_grande",
@@ -5232,7 +5580,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PRAIA GRANDE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_prat_nia",
@@ -5247,7 +5596,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PRATÂNIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_presidente_alves",
@@ -5262,7 +5612,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PRESIDENTE ALVES"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_presidente_bernardes",
@@ -5277,7 +5628,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PRESIDENTE BERNARDES"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_presidente_epit_cio",
@@ -5292,7 +5644,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PRESIDENTE EPITÁCIO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_presidente_prudente",
@@ -5307,7 +5660,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "PRESIDENTE PRUDENTE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_quadra",
@@ -5322,7 +5676,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "QUADRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_quat_",
@@ -5337,7 +5692,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "QUATÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_queiroz",
@@ -5352,7 +5708,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "QUEIROZ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_queluz",
@@ -5367,7 +5724,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "QUELUZ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_quintana",
@@ -5382,7 +5740,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "QUINTANA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_rafard",
@@ -5397,7 +5756,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RAFARD"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_rancharia",
@@ -5412,7 +5772,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RANCHARIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_regente_feij_",
@@ -5427,7 +5788,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "REGENTE FEIJÓ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_regin_polis",
@@ -5442,7 +5804,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "REGINÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_registro",
@@ -5457,7 +5820,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "REGISTRO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_restinga",
@@ -5472,7 +5836,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RESTINGA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ribeira",
@@ -5487,7 +5852,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIBEIRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ribeir_o_branco",
@@ -5502,7 +5868,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIBEIRÃO BRANCO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ribeir_o_corrente",
@@ -5517,7 +5884,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIBEIRÃO CORRENTE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ribeir_o_do_sul",
@@ -5532,7 +5900,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIBEIRÃO DO SUL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ribeir_o_grande",
@@ -5547,7 +5916,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIBEIRÃO GRANDE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ribeir_o_pires",
@@ -5562,7 +5932,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIBEIRÃO PIRES"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ribeir_o_preto",
@@ -5577,7 +5948,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIBEIRÃO PRETO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_rifaina",
@@ -5592,7 +5964,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIFAINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_rinc_o",
@@ -5607,7 +5980,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RINCÃO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_rin_polis",
@@ -5622,7 +5996,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RINÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_rio_claro",
@@ -5637,7 +6012,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIO CLARO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_rio_das_pedras",
@@ -5652,7 +6028,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIO DAS PEDRAS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_rio_grande_da_serra",
@@ -5667,7 +6044,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIO GRANDE DA SERRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_riol_ndia",
@@ -5682,7 +6060,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RIOLÂNDIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_roseira",
@@ -5697,7 +6076,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ROSEIRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_rubi_cea",
@@ -5712,7 +6092,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RUBIÁCEA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_rubineia",
@@ -5727,7 +6108,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "RUBINEIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_sabino",
@@ -5742,7 +6124,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SABINO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_sales_oliveira",
@@ -5757,7 +6140,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SALES OLIVEIRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_sales_polis",
@@ -5772,7 +6156,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SALESÓPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_salmour_o",
@@ -5787,7 +6172,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SALMOURÃO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_salto",
@@ -5802,7 +6188,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SALTO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_salto_de_pirapora",
@@ -5817,7 +6204,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SALTO DE PIRAPORA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_salto_grande",
@@ -5832,7 +6220,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SALTO GRANDE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_ad_lia",
@@ -5847,7 +6236,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA ADÉLIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_b_rbara_d_oeste",
@@ -5862,7 +6252,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA BÁRBARA D'OESTE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_clara_d_oeste",
@@ -5877,7 +6268,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA CLARA D'OESTE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_cruz_da_esperan_a",
@@ -5892,7 +6284,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA CRUZ DA ESPERANÇA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_cruz_das_palmeiras",
@@ -5907,7 +6300,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA CRUZ DAS PALMEIRAS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_cruz_do_rio_pardo",
@@ -5922,7 +6316,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA CRUZ DO RIO PARDO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_ernestina",
@@ -5937,7 +6332,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA ERNESTINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_f_do_sul",
@@ -5952,7 +6348,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA FÉ DO SUL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_gertrudes",
@@ -5967,7 +6364,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA GERTRUDES"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_isabel",
@@ -5982,7 +6380,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA ISABEL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_l_cia",
@@ -5997,7 +6396,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA LÚCIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_maria_da_serra",
@@ -6012,7 +6412,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA MARIA DA SERRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_rita_d_oeste",
@@ -6027,7 +6428,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA RITA D'OESTE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_rita_do_passa_quatro",
@@ -6042,7 +6444,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA RITA DO PASSA QUATRO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santa_salete",
@@ -6057,7 +6460,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTA SALETE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santana_da_ponte_pensa",
@@ -6072,7 +6476,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTANA DA PONTE PENSA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santana_de_parna_ba",
@@ -6087,7 +6492,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTANA DE PARNAÍBA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santo_ant_nio_de_posse",
@@ -6102,7 +6508,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTO ANTÔNIO DE POSSE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santo_ant_nio_do_aracangu_",
@@ -6117,7 +6524,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTO ANTÔNIO DO ARACANGUÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santo_ant_nio_do_jardim",
@@ -6132,7 +6540,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTO ANTÔNIO DO JARDIM"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_santo_ant_nio_do_pinhal",
@@ -6147,7 +6556,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SANTO ANTÔNIO DO PINHAL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_bento_do_sapuca_",
@@ -6162,7 +6572,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO BENTO DO SAPUCAÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_bernardo_do_campo",
@@ -6177,7 +6588,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO BERNARDO DO CAMPO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_caetano_do_sul",
@@ -6192,7 +6604,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO CAETANO DO SUL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_carlos",
@@ -6207,7 +6620,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO CARLOS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_francisco",
@@ -6222,7 +6636,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO FRANCISCO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_jo_o_da_boa_vista",
@@ -6237,7 +6652,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO JOÃO DA BOA VISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_jo_o_das_duas_pontes",
@@ -6252,7 +6668,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO JOÃO DAS DUAS PONTES"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_jo_o_de_iracema",
@@ -6267,7 +6684,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO JOÃO DE IRACEMA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_joaquim_da_barra",
@@ -6282,7 +6700,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO JOAQUIM DA BARRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_jos_da_bela_vista",
@@ -6297,7 +6716,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO JOSÉ DA BELA VISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_jos_do_barreiro",
@@ -6312,7 +6732,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO JOSÉ DO BARREIRO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_jos_do_rio_preto",
@@ -6327,7 +6748,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO JOSÉ DO RIO PRETO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_louren_o_da_serra",
@@ -6342,7 +6764,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO LOURENÇO DA SERRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_luiz_do_paraitinga",
@@ -6357,7 +6780,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO LUIZ DO PARAITINGA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_manuel",
@@ -6372,7 +6796,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO MANUEL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_miguel_arcanjo",
@@ -6387,7 +6812,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO MIGUEL ARCANJO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_pedro",
@@ -6402,7 +6828,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO PEDRO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_pedro_do_turvo",
@@ -6417,7 +6844,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO PEDRO DO TURVO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_roque",
@@ -6432,7 +6860,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO ROQUE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_sebasti_o",
@@ -6447,7 +6876,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO SEBASTIÃO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_sebasti_o_da_grama",
@@ -6462,7 +6892,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO SEBASTIÃO DA GRAMA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_sim_o",
@@ -6477,7 +6908,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO SIMÃO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_s_o_vicente",
@@ -6492,7 +6924,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SÃO VICENTE"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_secretaria_de_assist_ncia_social",
@@ -6507,7 +6940,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SECRETARIA DE ASSISTÊNCIA SOCIAL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_serra_azul",
@@ -6522,7 +6956,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SERRA AZUL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_serrana",
@@ -6537,7 +6972,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SERRANA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_sert_ozinho",
@@ -6552,7 +6988,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SERTÃOZINHO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_sever_nia",
@@ -6567,7 +7004,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SEVERÍNIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_silveiras",
@@ -6582,7 +7020,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SILVEIRAS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_socorro",
@@ -6597,7 +7036,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SOCORRO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_sorocaba",
@@ -6612,7 +7052,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SOROCABA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_sud_menucci",
@@ -6627,7 +7068,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SUD MENUCCI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_sumar_",
@@ -6642,7 +7084,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SUMARÉ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_suzan_polis",
@@ -6657,7 +7100,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SUZANÁPOLIS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_suzano",
@@ -6672,7 +7116,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "SUZANO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_tabatinga",
@@ -6687,7 +7132,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TABATINGA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_tabo_o_da_serra",
@@ -6702,7 +7148,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TABOÃO DA SERRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_tagua_",
@@ -6717,7 +7164,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TAGUAÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_tanabi",
@@ -6732,7 +7180,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TANABI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_tapiratiba",
@@ -6747,7 +7196,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TAPIRATIBA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_taquaral",
@@ -6762,7 +7212,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TAQUARAL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_taquaritinga",
@@ -6777,7 +7228,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TAQUARITINGA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_taquarituba",
@@ -6792,7 +7244,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TAQUARITUBA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_tatu_",
@@ -6807,7 +7260,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TATUÍ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_taubat_",
@@ -6822,7 +7276,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TAUBATÉ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_tejup_",
@@ -6837,7 +7292,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TEJUPÁ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_teodoro_sampaio",
@@ -6852,7 +7308,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TEODORO SAMPAIO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_terra_roxa",
@@ -6867,7 +7324,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TERRA ROXA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_timburi",
@@ -6882,7 +7340,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TIMBURI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_torre_de_pedra",
@@ -6897,7 +7356,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TORRE DE PEDRA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_trememb_",
@@ -6912,7 +7372,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TREMEMBÉ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_tr_s_fronteiras",
@@ -6927,7 +7388,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TRÊS FRONTEIRAS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_tuiuti",
@@ -6942,7 +7404,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TUIUTI"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_tup_",
@@ -6957,7 +7420,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TUPÃ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_tupi_paulista",
@@ -6972,7 +7436,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TUPI PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_turmalina",
@@ -6987,7 +7452,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "TURMALINA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ubarana",
@@ -7002,7 +7468,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "UBARANA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ubatuba",
@@ -7017,7 +7484,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "UBATUBA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ubirajara",
@@ -7032,7 +7500,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "UBIRAJARA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_uchoa",
@@ -7047,7 +7516,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "UCHOA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_ur_nia",
@@ -7062,7 +7532,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "URÂNIA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_uru",
@@ -7077,7 +7548,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "URU"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_urup_s",
@@ -7092,7 +7564,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "URUPÊS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_valinhos",
@@ -7107,7 +7580,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VALINHOS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_vargem",
@@ -7122,7 +7596,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VARGEM"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_vargem_grande_paulista",
@@ -7137,7 +7612,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VARGEM GRANDE PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_v_rzea_paulista",
@@ -7152,7 +7628,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VÁRZEA PAULISTA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_vera_cruz",
@@ -7167,7 +7644,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VERA CRUZ"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_vinhedo",
@@ -7182,7 +7660,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VINHEDO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_vista_alegre_do_alto",
@@ -7197,7 +7676,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VISTA ALEGRE DO ALTO"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_vit_ria_brasil",
@@ -7212,7 +7692,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VITÓRIA BRASIL"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_votorantim",
@@ -7227,7 +7708,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VOTORANTIM"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_votuporanga",
@@ -7242,7 +7724,8 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "VOTUPORANGA"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sp_zacarias",
@@ -7257,6 +7740,7 @@
       "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
       "territoryFilter": "ZACARIAS"
     },
-    "gazetteScope": "state"
+    "gazetteScope": "city",
+    "active": false
   }
 ]

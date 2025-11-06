@@ -10,7 +10,8 @@
       "urlUf": "se",
       "urlCity": "aquidaba"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_areia_branca",
@@ -23,7 +24,8 @@
       "urlUf": "se",
       "urlCity": "areiabranca"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_barra_dos_coqueiros",
@@ -36,7 +38,8 @@
       "urlUf": "se",
       "urlCity": "barradoscoqueiros"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_campo_do_brito",
@@ -49,7 +52,8 @@
       "urlUf": "se",
       "urlCity": "campodobrito"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_canhoba",
@@ -62,7 +66,8 @@
       "urlUf": "se",
       "urlCity": "canhoba"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_caninde_de_sao_francisco",
@@ -75,7 +80,8 @@
       "urlUf": "se",
       "urlCity": "canindedesaofrancisco"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_capela",
@@ -88,7 +94,8 @@
       "urlUf": "se",
       "urlCity": "capela"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_divina_pastora",
@@ -101,7 +108,8 @@
       "urlUf": "se",
       "urlCity": "divinapastora"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_frei_paulo",
@@ -114,7 +122,8 @@
       "urlUf": "se",
       "urlCity": "freipaulo"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_ilha_das_flores",
@@ -127,7 +136,8 @@
       "urlUf": "se",
       "urlCity": "ilhadasflores"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_itabaiana",
@@ -140,7 +150,8 @@
       "urlUf": "se",
       "urlCity": "itabaiana"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_itabaianinha",
@@ -153,7 +164,8 @@
       "urlUf": "se",
       "urlCity": "itabaianinha"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_japaratuba",
@@ -166,7 +178,8 @@
       "urlUf": "se",
       "urlCity": "japaratuba"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_moita_bonita",
@@ -179,7 +192,8 @@
       "urlUf": "se",
       "urlCity": "moitabonita"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_muribeca",
@@ -192,7 +206,8 @@
       "urlUf": "se",
       "urlCity": "muribeca"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_nossa_senhora_das_dores",
@@ -205,7 +220,8 @@
       "urlUf": "se",
       "urlCity": "nossasenhoradasdores"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_nossa_senhora_de_lourdes",
@@ -218,7 +234,8 @@
       "urlUf": "se",
       "urlCity": "nossasenhoradelourdes"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_pedra_mole",
@@ -231,7 +248,8 @@
       "urlUf": "se",
       "urlCity": "pedramole"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_pirambu",
@@ -244,7 +262,8 @@
       "urlUf": "se",
       "urlCity": "pirambu"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_poco_verde",
@@ -257,7 +276,8 @@
       "urlUf": "se",
       "urlCity": "pocoverde"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_riachao_do_dantas",
@@ -270,7 +290,8 @@
       "urlUf": "se",
       "urlCity": "riachaododantas"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_rosario_do_catete",
@@ -283,7 +304,8 @@
       "urlUf": "se",
       "urlCity": "rosariodocatete"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_sao_domingos",
@@ -296,7 +318,8 @@
       "urlUf": "se",
       "urlCity": "saodomingos"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_simao_dias",
@@ -309,7 +332,8 @@
       "urlUf": "se",
       "urlCity": "simaodias"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_siriri",
@@ -322,7 +346,8 @@
       "urlUf": "se",
       "urlCity": "siriri"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_telha",
@@ -335,6 +360,7 @@
       "urlUf": "se",
       "urlCity": "telha"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   }
 ]

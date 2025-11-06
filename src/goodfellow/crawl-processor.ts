@@ -76,6 +76,7 @@ export async function processCrawlBatch(
         territoryId: queueMessage.territoryId,
         spiderType: queueMessage.spiderType,
         gazetteScope: queueMessage.gazetteScope || 'city', // Default to city scope if not specified
+        active: true, // Assume active since it's being processed
         startDate: '',
         config: queueMessage.config,
       };

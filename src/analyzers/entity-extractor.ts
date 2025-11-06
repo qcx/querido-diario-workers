@@ -33,6 +33,15 @@ export class EntityExtractor extends BaseAnalyzer {
       findings.push(...entities);
     }
 
+    console.log('🔵 Entity Extractor Findings:', findings.map((f) => (
+      {
+        type: f.type,
+        context: f.context || 'No context',
+        data: f.data,
+        location: f.location
+      }
+    )));
+
     return findings;
   }
 

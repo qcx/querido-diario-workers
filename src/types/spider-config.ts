@@ -27,6 +27,7 @@ export type SpiderType =
   | 'rondonia'
   | 'acre'
   | 'espirito_santo'
+  | 'domunicipal'
   | 'custom';
 
 /**
@@ -47,6 +48,9 @@ export interface SpiderConfig {
   
   /** Gazette scope - city-specific or state-level */
   gazetteScope: GazetteScope;
+  
+  /** Whether this spider is active and should be used for crawling */
+  active: boolean;
   
   /** Alternative names for text filtering in state gazettes (e.g., ["Alta Floresta", "Alta Floresta D Oeste"]) */
   aliases?: string[];
@@ -84,6 +88,7 @@ export type SpiderPlatformConfig =
   | RondoniaConfig
   | AcreConfig
   | EspiritoSantoConfig
+  | DomunicipalConfig
   | CustomConfig;
 
 /**
@@ -282,4 +287,15 @@ export interface EspiritoSantoConfig {
   type: 'espirito_santo';
   /** Power of the gazette (executive_legislative for municipal content) */
   power: 'executive' | 'legislative' | 'executive_legislative';
+}
+
+/**
+ * Configuration for DOMunicipal platform spiders
+ */
+export interface DomunicipalConfig {
+  type: 'domunicipal';
+  /** Base URL for the DOMunicipal platform (e.g., "https://domunicipal.com.br") */
+  baseUrl: string;
+  /** Organization ID for the municipality (e.g., "3" for Cristais Paulista) */
+  orgaoId: string;
 }

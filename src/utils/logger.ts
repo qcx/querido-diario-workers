@@ -31,21 +31,21 @@ class Logger {
    * Logs a debug message
    */
   debug(message: string, context?: LogContext): void {
-    this.log('debug', message, context);
+  //  this.log('debug', message, context);
   }
 
   /**
    * Logs an info message
    */
   info(message: string, context?: LogContext): void {
-    this.log('info', message, context);
+  //  this.log('info', message, context);
   }
 
   /**
    * Logs a warning message
    */
   warn(message: string, context?: LogContext): void {
-    this.log('warn', message, context);
+ //   this.log('warn', message, context);
   }
 
   /**

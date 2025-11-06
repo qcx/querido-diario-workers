@@ -12,7 +12,8 @@
         "cityName": "Acrelândia",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200054",
@@ -25,7 +26,8 @@
         "cityName": "Assis Brasil",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200104",
@@ -38,7 +40,8 @@
         "cityName": "Brasiléia",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200138",
@@ -51,7 +54,8 @@
         "cityName": "Bujari",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200179",
@@ -64,7 +68,8 @@
         "cityName": "Capixaba",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200203",
@@ -77,7 +82,8 @@
         "cityName": "Cruzeiro do Sul",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200252",
@@ -90,7 +96,8 @@
         "cityName": "Epitaciolândia",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200302",
@@ -103,7 +110,8 @@
         "cityName": "Feijó",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200328",
@@ -116,7 +124,8 @@
         "cityName": "Jordão",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200336",
@@ -129,7 +138,8 @@
         "cityName": "Mâncio Lima",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200344",
@@ -142,7 +152,8 @@
         "cityName": "Manoel Urbano",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200351",
@@ -155,7 +166,8 @@
         "cityName": "Marechal Thaumaturgo",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200385",
@@ -168,7 +180,8 @@
         "cityName": "Plácido de Castro",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200393",
@@ -181,7 +194,8 @@
         "cityName": "Porto Acre",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200401",
@@ -194,7 +208,8 @@
         "cityName": "Porto Walter",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200427",
@@ -207,7 +222,8 @@
         "cityName": "Rio Branco",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200435",
@@ -220,7 +236,8 @@
         "cityName": "Rodrigues Alves",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200450",
@@ -233,7 +250,8 @@
         "cityName": "Santa Rosa do Purus",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200500",
@@ -246,7 +264,8 @@
         "cityName": "Sena Madureira",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200609",
@@ -259,7 +278,8 @@
         "cityName": "Senador Guiomard",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200708",
@@ -272,7 +292,8 @@
         "cityName": "Tarauacá",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ac_1200807",
@@ -285,7 +306,8 @@
         "cityName": "Xapuri",
         "power": "executive_legislative"
       },
-      "gazetteScope": "state"
+      "gazetteScope": "city",
+      "active": false
     }
   ]
 }

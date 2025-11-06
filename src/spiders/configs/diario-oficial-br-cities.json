@@ -9,7 +9,8 @@
       "type": "diario_oficial_br",
       "baseUrl": "https://diariooficial.aguiarnopolis.to.gov.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_campos_lindos",
@@ -21,7 +22,8 @@
       "type": "diario_oficial_br",
       "baseUrl": "https://camposlindos.diariooficialbr.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_caseara",
@@ -33,7 +35,8 @@
       "type": "diario_oficial_br",
       "baseUrl": "https://caseara.diariooficialbr.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_goiatins",
@@ -45,7 +48,8 @@
       "type": "diario_oficial_br",
       "baseUrl": "https://goiatins.diariooficialbr.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_miracema_do_tocantins",
@@ -57,7 +61,8 @@
       "type": "diario_oficial_br",
       "baseUrl": "https://miracema.diariooficialbr.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_muricilandia",
@@ -69,7 +74,8 @@
       "type": "diario_oficial_br",
       "baseUrl": "https://muricilandia.diariooficialbr.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_peixe",
@@ -81,7 +87,8 @@
       "type": "diario_oficial_br",
       "baseUrl": "https://peixe.diariooficialbr.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_santa_fe_do_araguaia",
@@ -93,7 +100,8 @@
       "type": "diario_oficial_br",
       "baseUrl": "https://santafedoaraguaia.diariooficialbr.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_talisma",
@@ -105,7 +113,8 @@
       "type": "diario_oficial_br",
       "baseUrl": "https://talisma.diariooficialbr.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_tocantinia",
@@ -117,6 +126,7 @@
       "type": "diario_oficial_br",
       "baseUrl": "https://tocantinia.diariooficialbr.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   }
 ]

@@ -88,6 +88,8 @@ export abstract class BaseSpider {
         retries: 2
       });
 
+      console.log('🔺 Resolved Gazette URL:', resolvedUrl);
+
       return {
         date: toISODate(date),
         fileUrl: resolvedUrl,

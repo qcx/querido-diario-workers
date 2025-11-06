@@ -10,7 +10,8 @@
       "website": "https://diario.igaci.al.gov.br",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_abare",
@@ -23,7 +24,8 @@
       "website": "https://sai.io.org.br/ba/abare/site/diariooficial",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_adustina",
@@ -36,7 +38,8 @@
       "website": "https://diario.adustina.ba.gov.br",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_almadina",
@@ -49,7 +52,8 @@
       "website": "https://diario.almadina.ba.gov.br",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_anage",
@@ -62,7 +66,8 @@
       "website": "https://diario.anage.ba.gov.br",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_andorinha",
@@ -75,7 +80,8 @@
       "website": "https://sai.io.org.br/ba/andorinha/site/diariooficial",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_antas",
@@ -88,7 +94,8 @@
       "website": "https://diario.antas.ba.gov.br/",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_apuarema",
@@ -101,7 +108,8 @@
       "website": "https://diario.apuarema.ba.gov.br",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_aracas",
@@ -114,7 +122,8 @@
       "website": "https://diario.aracas.ba.gov.br",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_aramari",
@@ -127,7 +136,8 @@
       "website": "https://diario.aramari.ba.gov.br",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_arataca",
@@ -140,7 +150,8 @@
       "website": "https://diario.arataca.ba.gov.br",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_itatim",
@@ -153,7 +164,8 @@
       "website": "https://diario.itatim.ba.gov.br",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_jaborandi",
@@ -166,7 +178,8 @@
       "website": "https://sai.io.org.br/ba/jaborandi/site/diariooficial",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_jeremoabo",
@@ -179,7 +192,8 @@
       "website": "https://diario.jeremoabo.ba.gov.br",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_lauro_de_freitas",
@@ -192,7 +206,8 @@
       "website": "https://sai.io.org.br/ba/laurodefreitas/site/diariooficial",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_luis_eduardo_magalhaes",
@@ -205,7 +220,8 @@
       "website": "https://sai.io.org.br/ba/luiseduardomagalhaes/site/diariooficial",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_maragogipe",
@@ -218,7 +234,8 @@
       "website": "https://sai.io.org.br/ba/maragojipe/site/diariooficial",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_riachao_das_neves",
@@ -231,7 +248,8 @@
       "website": "https://sai.io.org.br/ba/riachaodasneves/site/diariooficial",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_santa_luzia_2024",
@@ -244,7 +262,8 @@
       "website": "https://diario.santaluzia.ba.gov.br",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_estancia",
@@ -257,6 +276,7 @@
       "website": "https://diario.estancia.se.gov.br",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   }
 ]

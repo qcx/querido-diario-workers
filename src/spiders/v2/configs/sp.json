@@ -1,0 +1,36 @@
+[
+  {
+    "id": "sp_cristais_paulista",
+    "name": "Cristais Paulista - SP",
+    "territoryId": "3513207",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "CRISTAIS PAULISTA"
+        }
+      },
+      {
+        "spiderType": "domunicipal",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "domunicipal",
+          "baseUrl": "https://domunicipal.com.br",
+          "orgaoId": "3"
+        }
+      }
+    ]
+  }
+]
+  

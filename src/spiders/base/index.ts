@@ -22,3 +22,4 @@ export * from './dom-sc-spider';
 export * from './rondonia-spider';
 export * from './acre-spider';
 export * from './espirito-santo-spider';
+export * from './domunicipal-spider';

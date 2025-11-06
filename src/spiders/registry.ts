@@ -1,5 +1,5 @@
 import { SpiderConfig, SpiderType, DateRange } from '../types';
-import { BaseSpider, DoemSpider, InstarSpider, DospSpider, DiofSpider, ADiariosV1Spider, SigpubSpider, BarcoDigitalSpider, SiganetSpider, RondoniaSpider, AcreSpider, EspiritoSantoSpider } from './base';
+import { BaseSpider, DoemSpider, InstarSpider, DospSpider, DiofSpider, ADiariosV1Spider, SigpubSpider, BarcoDigitalSpider, SiganetSpider, RondoniaSpider, AcreSpider, EspiritoSantoSpider, DomunicipalSpider } from './base';
 import { DiarioOficialBRSpider } from './base/diario-oficial-br-spider';
 import { ModernizacaoSpider } from './base/modernizacao-spider';
 import { ADiariosV2Spider } from './base/adiarios-v2-spider';
@@ -36,6 +36,7 @@ import doeSpCitiesConfig from './configs/doe-sp-cities.json';
 import rondoniaCitiesConfig from './configs/rondonia-cities.json';
 import acreCitiesConfig from './configs/acre-cities.json';
 import espiritoSantoCitiesConfig from './configs/espirito-santo-cities.json';
+import domunicipalCitiesConfig from './configs/domunicipal-cities.json';
 
 /**
  * Spider registry - maps spider IDs to configurations
@@ -175,6 +176,11 @@ class SpiderRegistry {
     for (const config of espiritoSantoData.municipalities as SpiderConfig[]) {
       this.configs.set(config.id, config);
     }
+    
+    // Load DOMunicipal cities
+    for (const config of domunicipalCitiesConfig as SpiderConfig[]) {
+      this.configs.set(config.id, config);
+    }
   }
 
   /**
@@ -278,6 +284,9 @@ class SpiderRegistry {
       case 'espirito_santo':
         return new EspiritoSantoSpider(config, dateRange);
       
+      case 'domunicipal':
+        return new DomunicipalSpider(config, dateRange);
+      
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);
       
@@ -294,5 +303,6 @@ class SpiderRegistry {
   }
 }
 
-// Singleton instance
-export const spiderRegistry = new SpiderRegistry();
+// Singleton instance - now using unified registry manager
+import { SpiderRegistryManager } from './registry-manager';
+export const spiderRegistry = new SpiderRegistryManager();

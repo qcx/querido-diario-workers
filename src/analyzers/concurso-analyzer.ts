@@ -142,6 +142,16 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
       elapsedMs,
       timedOut: processedSegments < segments.length,
     });
+
+    console.log('🔵 Concurso Analyzer Findings:', findings.map((f) => (
+      {
+        type: f.type,
+        context: f.context || 'No context',
+        data: f.data,
+        location: f.location
+      }
+    )));
+
     return findings;
   }
 
@@ -154,13 +164,13 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
     // Keep certain keywords restrictive - only explicit "concurso público" mentions
     const certainKeywords = ['concurso público', 'concurso publico', 'concursos públicos', 'concursos publicos'];
     const ambiguousKeywords = [
-      'processo seletivo simplificado',
-      'seleção pública',
-      'seleção simplificada',
-      'processo seletivo',
-      'processo de escolha',
-      'processo de seleção',
-      'concurso', // Check last (after compound phrases)
+   //   'processo seletivo simplificado',
+   //   'seleção pública',
+   //   'seleção simplificada',
+   //   'processo seletivo',
+   //   'processo de escolha',
+   //   'processo de seleção',
+   //   'concurso', // Check last (after compound phrases)
     ];
     
     const lowerText = text.toLowerCase();
@@ -220,6 +230,15 @@ export class ConcursoAnalyzer extends BaseAnalyzer {
     
     // Sort by position
     occurrences.sort((a, b) => a.position - b.position);
+
+    console.log('🔹 Concurso Analyzer Occurrences:', occurrences.map((f) => (
+      {
+        keyword: f.keyword,
+        type: f.type,
+        position: f.position,
+        context: f.context
+      }
+    )));
     
     return occurrences;
   }
@@ -794,7 +813,7 @@ Respond in JSON format:
 }`;
 
     try {
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      const response = await fetch('https://gateway.ai.cloudflare.com/v1/dd6e3021bfaef6eec1a68e26a593f4ca/alexandria/openai/chat/completions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -1462,7 +1481,7 @@ Respond in JSON format:
   "listsSpecificCandidates": true/false
 }`;
 
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      const response = await fetch('https://gateway.ai.cloudflare.com/v1/dd6e3021bfaef6eec1a68e26a593f4ca/alexandria/openai/chat/completions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -2400,7 +2419,7 @@ Respond in JSON format:
       
       const prompt = this.buildExtractionPrompt(documentType, contextText, patternData);
 
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      const response = await fetch('https://gateway.ai.cloudflare.com/v1/dd6e3021bfaef6eec1a68e26a593f4ca/alexandria/openai/chat/completions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

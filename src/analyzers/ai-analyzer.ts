@@ -69,6 +69,15 @@ export class AIAnalyzer extends BaseAnalyzer {
       }
     }
 
+    console.log('🔵 AI Analyzer Findings:', findings.map((f) => (
+      {
+        type: f.type,
+        context: f.context || 'No context',
+        data: f.data,
+        location: f.location
+      }
+    )));
+
     return findings;
   }
 
@@ -102,7 +111,7 @@ export class AIAnalyzer extends BaseAnalyzer {
    * Run AI analysis with a specific prompt
    */
   private async runAIAnalysis(text: string, prompt: AIAnalysisPrompt, _metadata?: Record<string, unknown>): Promise<Finding[]> {
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    const response = await fetch('https://gateway.ai.cloudflare.com/v1/dd6e3021bfaef6eec1a68e26a593f4ca/alexandria/openai/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -131,7 +140,7 @@ export class AIAnalyzer extends BaseAnalyzer {
       throw new AIAnalysisError(
         `AI API error: ${response.status} - ${errorText}`,
         'openai', // or detect from config
-        'https://api.openai.com/v1/chat/completions',
+        'https://gateway.ai.cloudflare.com/v1/dd6e3021bfaef6eec1a68e26a593f4ca/alexandria/openai/chat/completions',
         response.status,
         errorText
       );
@@ -144,7 +153,7 @@ export class AIAnalyzer extends BaseAnalyzer {
       throw new AIAnalysisError(
         'Invalid AI response format',
         'openai',
-        'https://api.openai.com/v1/chat/completions',
+        'https://gateway.ai.cloudflare.com/v1/dd6e3021bfaef6eec1a68e26a593f4ca/alexandria/openai/chat/completions',
         undefined,
         JSON.stringify(result).substring(0, 500)
       );
@@ -177,7 +186,7 @@ export class AIAnalyzer extends BaseAnalyzer {
       throw new AIAnalysisError(
         'AI response missing expected structure',
         'openai',
-        'https://api.openai.com/v1/chat/completions'
+        'https://gateway.ai.cloudflare.com/v1/dd6e3021bfaef6eec1a68e26a593f4ca/alexandria/openai/chat/completions'
       );
     }
     

@@ -9,7 +9,8 @@
       "type": "ptio",
       "baseUrl": "http://rj.portaldatransparencia.com.br/prefeitura/areal/"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "rj_comendador_levy_gasparian",
@@ -21,7 +22,8 @@
       "type": "ptio",
       "baseUrl": "http://rj.portaldatransparencia.com.br/prefeitura/comendadorlevygasparian/"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "rj_sapucaia",
@@ -33,6 +35,7 @@
       "type": "ptio",
       "baseUrl": "http://rj.portaldatransparencia.com.br/prefeitura/sapucaia/"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   }
 ]

@@ -27,6 +27,8 @@ export function createMockSpiderConfig(overrides?: Partial<SpiderConfig>): Spide
     name: 'Test City',
     territoryId: '1234567',
     spiderType: 'doem',
+    gazetteScope: 'city',
+    active: true,
     startDate: '2020-01-01',
     config: {
       type: 'doem',

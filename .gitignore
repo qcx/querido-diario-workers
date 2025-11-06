@@ -38,4 +38,18 @@ coverage/
 .nyc_output/
 test-results/
 
-data/*/*.json
+dev/data/*/batch_*.json
+
+segments.json
+links.txt
+last_logs.md
+municipios_ibge.json
+gazette_crawls_export.json
+export.json
+spiders_diagnostics.json
+crawler_summary.json
+crawler_resolvidos.json
+crawler_unresolved.json
+resultados_comparacao.json
+sp_spider_ids.json
+resumo_cobertura.json

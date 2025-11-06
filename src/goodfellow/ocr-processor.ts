@@ -143,6 +143,7 @@ export async function processOcrBatch(
   const successfulResults: { ocrMessage: OcrQueueMessage; result: OcrResult }[] = [];
 
   for (const message of batch.messages) {
+
     const startTime = Date.now();
     const ocrMessage = message.body;
     const crawlJobId = ocrMessage.metadata?.crawlJobId || 'unknown';
@@ -161,6 +162,8 @@ export async function processOcrBatch(
       r2PublicUrl: env.R2_PUBLIC_URL,
       databaseClient: databaseClient,
     });
+
+    console.log('🟠 OCR Processor Message:', { pdfUrl: ocrMessage.pdfUrl, editionNumber: ocrMessage.editionNumber });
 
     try {
       logger.info(`Processing OCR job ${ocrMessage.jobId}`, {
@@ -616,6 +619,7 @@ export async function processOcrBatch(
       }
 
       // Store in database with retry logic
+      console.log(`🔸 OCR Result for ${ocrMessage.pdfUrl}:`, result?.extractedText?.substring(0, 100) || 'No text');
       let storageSucceeded = false;
 
       if (result.status === 'success' && result.extractedText) {
@@ -1067,6 +1071,8 @@ export async function processOcrBatch(
       logger.error('Failed to send to analysis queue', error);
     }
   }
+
+  console.log('🔸 OCR Processor: Successful Results:', successfulResults.map((r) => ({pdfUrl: r.ocrMessage.pdfUrl, text: r.result?.extractedText?.substring(0, 100) || 'No text'})));
 
   logger.info(`OCR Processor: Batch processing completed`, {
     total: batch.messages.length,

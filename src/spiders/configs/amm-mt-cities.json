@@ -11,7 +11,8 @@
         "url": "https://amm.diariomunicipal.org/",
         "cityName": "BOA ESPERANCA DO NORTE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "mt_5103361",
@@ -23,7 +24,8 @@
         "url": "https://amm.diariomunicipal.org/",
         "cityName": "CONQUISTA D'OESTE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "mt_5107800",
@@ -35,7 +37,8 @@
         "url": "https://amm.diariomunicipal.org/",
         "cityName": "SANTO ANTONIO DE LEVERGER"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     }
   ]
 }

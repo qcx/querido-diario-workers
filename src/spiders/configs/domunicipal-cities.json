@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sp_cristais_paulista",
+    "name": "Cristais Paulista - SP",
+    "territoryId": "3513009",
+    "spiderType": "domunicipal",
+    "gazetteScope": "city",
+    "active": true,
+    "startDate": "2020-01-01",
+    "config": {
+      "type": "domunicipal",
+      "baseUrl": "https://domunicipal.com.br",
+      "orgaoId": "3"
+    }
+  }
+]
+

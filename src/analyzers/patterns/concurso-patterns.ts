@@ -1286,24 +1286,25 @@ export function hasConcursoKeywords(text: string): boolean {
  */
 export function hasAmbiguousConcursoKeywords(text: string): boolean {
   const ambiguousKeywords = [
-    'concurso', // Without "público"
-    'processo seletivo',
-    'processo seletivo simplificado',
-    'seleção pública',
-    'seleção publica',  // without accent
-    'seleção simplificada',
-    'edital de prorrogação',
-    'prorrogação de processos seletivos',
-    'prorrogação de seleções públicas',
+ //   'concurso', // Without "público"
+ //   'processo seletivo',
+//    'processo seletivo simplificado',
+  //  'seleção pública',
+  //  'seleção publica',  // without accent
+   // 'seleção simplificada',
+   // 'edital de prorrogação',
+   // 'prorrogação de processos seletivos',
+   // 'prorrogação de seleções públicas',
   ];
   
   const lowerText = text.toLowerCase();
   
   // Check if text has ambiguous keywords but NOT the specific "concurso público"
-  const hasAmbiguous = ambiguousKeywords.some(kw => lowerText.includes(kw));
-  const hasSpecific = lowerText.includes('concurso público') || lowerText.includes('concurso publico');
+  //const hasAmbiguous = ambiguousKeywords.some(kw => lowerText.includes(kw));
+  //const hasSpecific = lowerText.includes('concurso público') || lowerText.includes('concurso publico');
   
-  return hasAmbiguous && !hasSpecific;
+  //return hasAmbiguous && !hasSpecific;
+  return false;
 }
 
 /**

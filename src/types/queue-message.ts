@@ -46,6 +46,12 @@ export interface DispatchRequest {
   
   /** Optional filter by gazette scope */
   scopeFilter?: GazetteScope | GazetteScope[];
+  
+  /** Optional version parameter to choose v1 or v2 spider system */
+  version?: 'v1' | 'v2';
+  
+  /** Optional execution strategy for V2 system */
+  executionStrategy?: 'priority-fallback' | 'all-parallel';
 }
 
 /**
