@@ -1,5 +1,5 @@
 import { SpiderConfig, SpiderType, DateRange } from '../types';
-import { BaseSpider, DoemSpider, InstarSpider, DospSpider, DiofSpider, ADiariosV1Spider, SigpubSpider, BarcoDigitalSpider, SiganetSpider, RondoniaSpider, AcreSpider, EspiritoSantoSpider, DomunicipalSpider } from './base';
+import { BaseSpider, DoemSpider, InstarSpider, DospSpider, DiofSpider, ADiariosV1Spider, SigpubSpider, BarcoDigitalSpider, SiganetSpider, RondoniaSpider, AcreSpider, EspiritoSantoSpider, DomunicipalSpider, ImprensaOficialJundiaiSpider, PrefeituraRioPretoSpider } from './base';
 import { DiarioOficialBRSpider } from './base/diario-oficial-br-spider';
 import { ModernizacaoSpider } from './base/modernizacao-spider';
 import { ADiariosV2Spider } from './base/adiarios-v2-spider';
@@ -286,6 +286,16 @@ class SpiderRegistry {
       
       case 'domunicipal':
         return new DomunicipalSpider(config, dateRange);
+      
+      case 'imprensaoficialjundiai':
+        return new ImprensaOficialJundiaiSpider(config, dateRange);
+      
+      case 'prefeiturariopreto':
+        const rioPretospider = new PrefeituraRioPretoSpider(config, dateRange);
+        if (browser) {
+          rioPretospider.setBrowser(browser);
+        }
+        return rioPretospider;
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);

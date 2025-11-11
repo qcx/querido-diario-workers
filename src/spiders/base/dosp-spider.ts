@@ -213,6 +213,7 @@ export class DospSpider extends BaseSpider {
       return await this.createGazette(date, publicationUrl, {
         power: 'executive',
         sourceText: `Municipality: ${municipalityName} | Title: ${publication.title} | ID: ${publication.id}`,
+        requiresClientRendering: this.dospConfig.requiresClientRendering,
       });
 
     } catch (error) {

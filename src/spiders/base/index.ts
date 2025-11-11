@@ -23,3 +23,6 @@ export * from './rondonia-spider';
 export * from './acre-spider';
 export * from './espirito-santo-spider';
 export * from './domunicipal-spider';
+export * from './imprensaoficialjundiai-spider';
+export * from './prefeiturariopreto-spider';
+export * from './doeletronico-miguelopolis-spider';

@@ -128,6 +128,7 @@ export interface OcrProcessorEnv extends D1DatabaseEnv {
   OCR_RESULTS?: KVNamespace;
   GAZETTE_PDFS?: R2Bucket;
   R2_PUBLIC_URL?: string;
+  BROWSER?: Fetcher;
 }
 
 /**
@@ -161,6 +162,7 @@ export async function processOcrBatch(
       r2Bucket: env.GAZETTE_PDFS,
       r2PublicUrl: env.R2_PUBLIC_URL,
       databaseClient: databaseClient,
+      browser: env.BROWSER,
     });
 
     console.log('🟠 OCR Processor Message:', { pdfUrl: ocrMessage.pdfUrl, editionNumber: ocrMessage.editionNumber });
@@ -230,8 +232,11 @@ export async function processOcrBatch(
               isReusedResult = true; // Mark as reused
               result = existingResult;
               
-              // Check if gazette is missing R2 key and retry upload
-              if (!gazette.pdfR2Key && env.GAZETTE_PDFS) {
+              // Check if gazette is missing R2 key and retry upload (only for PDF extractions)
+              const cachedExtractionMethod = existingResult.metadata?.extractionMethod || 'mistral';
+              const isCachedHtml = cachedExtractionMethod === 'html';
+              
+              if (!gazette.pdfR2Key && env.GAZETTE_PDFS && !isCachedHtml) {
                 logger.info('Cached OCR result found but missing R2 key, attempting upload', {
                   gazetteId: gazette.id,
                   jobId: ocrMessage.jobId,
@@ -270,6 +275,12 @@ export async function processOcrBatch(
                     error: uploadResult.error.message
                   });
                 }
+              } else if (isCachedHtml) {
+                logger.info('Skipping R2 upload for cached HTML extraction', {
+                  gazetteId: gazette.id,
+                  jobId: ocrMessage.jobId,
+                  extractionMethod: cachedExtractionMethod
+                });
               }
             } else {
             // Status says success but no OCR result - data inconsistency!
@@ -487,8 +498,11 @@ export async function processOcrBatch(
                   isReusedResult = true; // Mark as reused
                   result = existingResult;
                   
-                  // Check if gazette is missing R2 key and retry upload
-                  if (!gazette.pdfR2Key && env.GAZETTE_PDFS) {
+                  // Check if gazette is missing R2 key and retry upload (only for PDF extractions)
+                  const cachedExtractionMethod = existingResult.metadata?.extractionMethod || 'mistral';
+                  const isCachedHtml = cachedExtractionMethod === 'html';
+                  
+                  if (!gazette.pdfR2Key && env.GAZETTE_PDFS && !isCachedHtml) {
                     logger.info('Cached OCR result found but missing R2 key, attempting upload', {
                       gazetteId: gazette.id,
                       jobId: ocrMessage.jobId,
@@ -527,6 +541,12 @@ export async function processOcrBatch(
                         error: uploadResult.error.message
                       });
                     }
+                  } else if (isCachedHtml) {
+                    logger.info('Skipping R2 upload for cached HTML extraction (after claim failure)', {
+                      gazetteId: gazette.id,
+                      jobId: ocrMessage.jobId,
+                      extractionMethod: cachedExtractionMethod
+                    });
                   }
                 } else {
                   logger.error('Gazette marked success but no OCR found after claim failure', {
@@ -620,6 +640,19 @@ export async function processOcrBatch(
 
       // Store in database with retry logic
       console.log(`🔸 OCR Result for ${ocrMessage.pdfUrl}:`, result?.extractedText?.substring(0, 100) || 'No text');
+      
+      // Check extraction method to determine storage strategy
+      const extractionMethod = result.metadata?.extractionMethod || 'mistral';
+      const isHtmlExtraction = extractionMethod === 'html';
+      
+      if (isHtmlExtraction) {
+        logger.info('HTML-based extraction detected, skipping R2 storage', {
+          jobId: ocrMessage.jobId,
+          pdfUrl: ocrMessage.pdfUrl,
+          extractionMethod,
+        });
+      }
+      
       let storageSucceeded = false;
 
       if (result.status === 'success' && result.extractedText) {
@@ -645,10 +678,11 @@ export async function processOcrBatch(
           logger.info(`OCR result stored in database`, {
             jobId: ocrMessage.jobId,
             textLength: result.extractedText.length,
+            extractionMethod,
           });
           
-          // Update gazette with R2 key if available
-          if (result.pdfR2Key && gazette) {
+          // Update gazette with R2 key if available (only for PDF/Mistral extractions)
+          if (result.pdfR2Key && gazette && !isHtmlExtraction) {
             try {
               await gazetteRepo.updateR2Key(gazette.id, result.pdfR2Key);
               logger.info(`Updated gazette with R2 key`, {
@@ -734,8 +768,8 @@ export async function processOcrBatch(
         }
       }
 
-      // Store in KV cache (always cache results, even if reused)
-      if (env.OCR_RESULTS) {
+      // Store in KV cache (only for PDF/Mistral extractions, skip for HTML)
+      if (env.OCR_RESULTS && !isHtmlExtraction) {
         const cacheKey = generateOcrCacheKey(ocrMessage.pdfUrl);
         await env.OCR_RESULTS.put(
           cacheKey,
@@ -748,7 +782,14 @@ export async function processOcrBatch(
           cacheKey,
           jobId: ocrMessage.jobId,
           pdfUrl: ocrMessage.pdfUrl,
-          isReused: isReusedResult
+          isReused: isReusedResult,
+          extractionMethod,
+        });
+      } else if (isHtmlExtraction) {
+        logger.info('Skipped KV cache storage for HTML extraction', {
+          jobId: ocrMessage.jobId,
+          pdfUrl: ocrMessage.pdfUrl,
+          extractionMethod,
         });
       }
 

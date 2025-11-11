@@ -4,7 +4,7 @@
     "name": "Cristais Paulista - SP",
     "territoryId": "3513207",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "dosp",
@@ -16,7 +16,8 @@
           "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
           "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
           "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
-          "territoryFilter": "CRISTAIS PAULISTA"
+          "territoryFilter": "CRISTAIS PAULISTA",
+          "requiresClientRendering": true
         }
       },
       {
@@ -31,6 +32,104 @@
         }
       }
     ]
+  },
+  {
+    "id": "sp_jundia_",
+    "name": "Jundiaí - SP",
+    "territoryId": "3525904",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "JUNDIAÍ",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "imprensaoficialjundiai",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialjundiai",
+          "baseUrl": "https://imprensaoficial.jundiai.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_s_o_jos_do_rio_preto",
+    "name": "São José do Rio Preto - SP",
+    "territoryId": "3549805",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "SÃO JOSÉ DO RIO PRETO",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeiturariopreto",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturariopreto",
+          "baseUrl": "https://www.riopreto.sp.gov.br/DiarioOficial/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_miguel_polis",
+    "name": "Miguelópolis - SP",
+    "territoryId": "3529708",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "MIGUELÓPOLIS",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "doeletronicomiguelopolis",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doeletronicomiguelopolis",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/miguelopolis"
+        }
+      }
+    ]
   }
 ]
-  

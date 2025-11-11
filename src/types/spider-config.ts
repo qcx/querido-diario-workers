@@ -28,6 +28,9 @@ export type SpiderType =
   | 'acre'
   | 'espirito_santo'
   | 'domunicipal'
+  | 'imprensaoficialjundiai'
+  | 'prefeiturariopreto'
+  | 'doeletronicomiguelopolis'
   | 'custom';
 
 /**
@@ -89,6 +92,9 @@ export type SpiderPlatformConfig =
   | AcreConfig
   | EspiritoSantoConfig
   | DomunicipalConfig
+  | ImprensaOficialJundiaiConfig
+  | PrefeituraRioPretoConfig
+  | DoEletronicoMiguelopolisConfig
   | CustomConfig;
 
 /**
@@ -116,6 +122,8 @@ export interface DospConfig {
   sectionId?: string;
   /** Territory ID filter for specific municipalities in DOE SP */
   territoryFilter?: string;
+  /** Whether this spider requires client-side rendering (browser) for JavaScript-heavy pages */
+  requiresClientRendering?: boolean;
 }
 
 /**
@@ -298,4 +306,31 @@ export interface DomunicipalConfig {
   baseUrl: string;
   /** Organization ID for the municipality (e.g., "3" for Cristais Paulista) */
   orgaoId: string;
+}
+
+/**
+ * Configuration for Imprensa Oficial Jundiaí spider
+ */
+export interface ImprensaOficialJundiaiConfig {
+  type: 'imprensaoficialjundiai';
+  /** Base URL for the Imprensa Oficial Jundiaí platform */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Rio Preto spider
+ */
+export interface PrefeituraRioPretoConfig {
+  type: 'prefeiturariopreto';
+  /** Base URL for the Prefeitura Rio Preto platform */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Diário Oficial Eletrônico Miguelópolis spider
+ */
+export interface DoEletronicoMiguelopolisConfig {
+  type: 'doeletronicomiguelopolis';
+  /** Base URL for the Imprensa Oficial Municipal platform */
+  baseUrl: string;
 }

@@ -38,6 +38,8 @@ export interface OcrQueueMessage {
     detectedDocumentType?: string;
     detectedCategories?: string[];
     keyEntities?: Record<string, any>;
+    gazetteScope?: 'city' | 'state';
+    requiresClientRendering?: boolean;
   };
 }
 
@@ -103,6 +105,21 @@ export interface OcrResult {
     detectedDocumentType?: string;
     detectedCategories?: string[];
     keyEntities?: Record<string, any>;
+    /** Method used for text extraction */
+    extractionMethod?: 'mistral' | 'html';
+    /** AI usage information (for Mistral OCR) */
+    aiUsage?: {
+      provider: string;
+      model: string;
+      totalTokens: number;
+      estimatedCost: number;
+      timestamp: string;
+    };
+    /** HTML extraction details (for HTML-based extraction) */
+    htmlExtraction?: {
+      redirectCount: number;
+      finalUrl: string;
+    };
   };
 }
 

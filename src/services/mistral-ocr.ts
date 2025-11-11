@@ -3,7 +3,7 @@
  * Handles PDF processing using Mistral's OCR API
  */
 
-import { OcrQueueMessage, OcrResult, MistralOcrConfig } from '../types';
+import { OcrQueueMessage, OcrResult, MistralOcrConfig } from '../types/ocr';
 import { logger } from '../utils';
 import type { 
   MistralOcrResponse, 
@@ -15,17 +15,20 @@ import { isMistralOcrResponse } from '../types/external-apis';
 import { MistralOcrError, toAppError } from '../types/errors';
 import { DrizzleDatabaseClient, schema } from './database';
 import { CostTracker, AIUsage } from './cost-tracker';
+import { processHtmlToText, processHtmlWithBrowser, isHtmlContent } from './html-ocr';
 
 export class MistralOcrService {
   private config: MistralOcrConfig;
   private r2Bucket?: R2Bucket;
   private r2PublicUrl?: string;
   private dbClient?: DrizzleDatabaseClient;
+  private browser?: Fetcher;
 
   constructor(config: MistralOcrConfig & { 
     r2Bucket?: R2Bucket; 
     r2PublicUrl?: string;
     databaseClient?: DrizzleDatabaseClient;
+    browser?: Fetcher;
   }) {
     this.config = {
       endpoint: 'https://api.mistral.ai/v1/ocr',
@@ -37,6 +40,7 @@ export class MistralOcrService {
     this.r2Bucket = config.r2Bucket;
     this.r2PublicUrl = config.r2PublicUrl;
     this.dbClient = config.databaseClient;
+    this.browser = config.browser;
   }
 
   /**
@@ -59,7 +63,7 @@ export class MistralOcrService {
    * Returns the R2 key if successful, undefined if failed
    * Errors are caught and returned for proper logging
    */
-  async uploadToR2(pdfUrl: string, jobId: string): Promise<{
+  async uploadToR2(pdfUrl: string, jobId: string, requiresClientRendering: boolean = false): Promise<{
     r2Key: string | undefined;
     uploaded: boolean;
     error?: Error;
@@ -88,20 +92,31 @@ export class MistralOcrService {
         return { r2Key, uploaded: false };
       }
 
-      logger.info(`Downloading PDF from ${pdfUrl} for R2 upload`);
-      
-      // Download PDF
-      const pdfResponse = await fetch(pdfUrl, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0',
-          'Accept': 'application/pdf,*/*',
-        },
+      logger.info(`Downloading PDF from ${pdfUrl} for R2 upload`, {
+        requiresClientRendering,
+        hasBrowser: !!this.browser,
       });
-      if (!pdfResponse.ok) {
-        throw new Error(`Failed to download PDF: ${pdfResponse.status}`);
-      }
       
-      const pdfData = await pdfResponse.arrayBuffer();
+      let pdfData: ArrayBuffer;
+      
+      // Use browser for download if required and available
+      if (requiresClientRendering && this.browser) {
+        logger.info('Using browser to download PDF', { jobId, pdfUrl });
+        pdfData = await this.downloadPdfWithBrowser(pdfUrl, jobId);
+      } else {
+        // Regular fetch download
+        const pdfResponse = await fetch(pdfUrl, {
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0',
+            'Accept': 'application/pdf,*/*',
+          },
+        });
+        if (!pdfResponse.ok) {
+          throw new Error(`Failed to download PDF: ${pdfResponse.status}`);
+        }
+        
+        pdfData = await pdfResponse.arrayBuffer();
+      }
       
       // Upload to R2
       logger.info(`Uploading PDF to R2: ${r2Key}`);
@@ -135,6 +150,81 @@ export class MistralOcrService {
   }
 
   /**
+   * Download PDF using browser (Puppeteer) for links that require session/cookies
+   */
+  private async downloadPdfWithBrowser(pdfUrl: string, jobId: string): Promise<ArrayBuffer> {
+    if (!this.browser) {
+      throw new Error('Browser not available for client-side rendering');
+    }
+
+    const puppeteer = await import('@cloudflare/puppeteer');
+    let browserInstance = null;
+    let page = null;
+
+    try {
+      logger.info('Launching browser for PDF download', { jobId, pdfUrl });
+      browserInstance = await puppeteer.default.launch(this.browser);
+      page = await browserInstance.newPage();
+
+      // Set up response interception to capture PDF data
+      let pdfBuffer: Buffer | null = null;
+
+      page.on('response', async (response: any) => {
+        try {
+          const url = response.url();
+          const contentType = response.headers()['content-type'] || '';
+          
+          if (url === pdfUrl || contentType.includes('application/pdf')) {
+            logger.info('Captured PDF response', { jobId, url, contentType });
+            pdfBuffer = await response.buffer();
+          }
+        } catch (error) {
+          logger.warn('Error capturing response', { jobId, error: (error as Error).message });
+        }
+      });
+
+      // Navigate to the PDF URL
+      await page.goto(pdfUrl, {
+        waitUntil: 'networkidle0',
+        timeout: 30000,
+      });
+
+      // Wait a bit to ensure the download is captured
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      if (!pdfBuffer) {
+        throw new Error('Failed to capture PDF data from browser');
+      }
+
+      logger.info('Successfully downloaded PDF with browser', {
+        jobId,
+        pdfUrl,
+        sizeBytes: pdfBuffer.length,
+      });
+
+      return pdfBuffer.buffer;
+    } catch (error) {
+      logger.error('Failed to download PDF with browser', error as Error, { jobId, pdfUrl });
+      throw error;
+    } finally {
+      if (page) {
+        try {
+          await page.close();
+        } catch (e) {
+          logger.warn('Error closing page', e as Error);
+        }
+      }
+      if (browserInstance) {
+        try {
+          await browserInstance.close();
+        } catch (e) {
+          logger.warn('Error closing browser', e as Error);
+        }
+      }
+    }
+  }
+
+  /**
    * Process a PDF using Mistral OCR
    */
   async processPdf(message: OcrQueueMessage): Promise<OcrResult> {
@@ -147,8 +237,8 @@ export class MistralOcrService {
     });
 
     try {
-      // Call Mistral API with PDF URL directly
-      const { extractedText, pagesProcessed, pdfR2Key, usage } = await this.callMistralApi(message.pdfUrl, message.jobId);
+      // Call Mistral API with PDF URL directly (or HTML processor if HTML detected)
+      const { extractedText, pagesProcessed, pdfR2Key, usage, extractionMethod, htmlExtraction } = await this.callMistralApi(message.pdfUrl, message.jobId, message);
       
       const processingTimeMs = Date.now() - startTime;
       
@@ -156,7 +246,27 @@ export class MistralOcrService {
         jobId: message.jobId,
         processingTimeMs,
         textLength: extractedText.length,
+        extractionMethod,
       });
+
+      // Build metadata based on extraction method
+      const metadata: any = {
+        ...message.metadata,
+        extractionMethod,
+      };
+
+      // Add method-specific metadata
+      if (extractionMethod === 'mistral' && usage) {
+        metadata.aiUsage = {
+          provider: 'mistral',
+          model: this.config.model || 'mistral-ocr-latest',
+          totalTokens: usage.tokens.total,
+          estimatedCost: usage.estimatedCost,
+          timestamp: usage.timestamp,
+        };
+      } else if (extractionMethod === 'html' && htmlExtraction) {
+        metadata.htmlExtraction = htmlExtraction;
+      }
 
       return {
         jobId: message.jobId,
@@ -171,16 +281,7 @@ export class MistralOcrService {
         pagesProcessed,
         processingTimeMs,
         completedAt: new Date().toISOString(),
-        metadata: {
-          ...message.metadata,
-          aiUsage: {
-            provider: 'mistral',
-            model: this.config.model || 'mistral-ocr-latest',
-            totalTokens: usage.tokens.total,
-            estimatedCost: usage.estimatedCost,
-            timestamp: usage.timestamp,
-          },
-        },
+        metadata,
       };
     } catch (error: unknown) {
       const processingTimeMs = Date.now() - startTime;
@@ -253,7 +354,82 @@ export class MistralOcrService {
   /**
    * Call Mistral API for OCR
    */
-  private async callMistralApi(pdfUrl: string, jobId: string): Promise<{extractedText: string, pagesProcessed: number, pdfR2Key?: string}> {
+  private async callMistralApi(pdfUrl: string, jobId: string, message?: OcrQueueMessage): Promise<{extractedText: string, pagesProcessed: number, pdfR2Key?: string, usage?: any, extractionMethod: 'mistral' | 'html', htmlExtraction?: {redirectCount: number, finalUrl: string}}> {
+    logger.debug(`Checking content type for job ${jobId}`);
+
+    // First, detect if the URL returns HTML instead of PDF
+    let isHtml = false;
+    let contentToCheck = '';
+    
+    try {
+      const initialResponse = await fetch(pdfUrl, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0',
+          'Accept': 'application/pdf,text/html,*/*',
+        },
+        signal: AbortSignal.timeout(30000),
+      });
+      
+      const contentType = initialResponse.headers.get('content-type') || '';
+      
+      // Quick check via content-type
+      if (contentType.includes('text/html') || contentType.includes('application/xhtml')) {
+        isHtml = true;
+        logger.info('Detected HTML content via Content-Type header', {
+          jobId,
+          contentType,
+          pdfUrl,
+        });
+      } else {
+        // If not obvious, peek at content
+        contentToCheck = await initialResponse.text();
+        isHtml = isHtmlContent(contentType, contentToCheck.substring(0, 1000));
+        
+        if (isHtml) {
+          logger.info('Detected HTML content via content inspection', {
+            jobId,
+            contentType,
+            pdfUrl,
+          });
+        }
+      }
+    } catch (error) {
+      logger.warn('Failed to detect content type, assuming PDF', {
+        jobId,
+        pdfUrl,
+        error: error instanceof Error ? error.message : String(error),
+      });
+    }
+    
+    // If HTML detected, use HTML processor instead of Mistral
+    if (isHtml) {
+      const requiresClientRendering = message?.metadata?.requiresClientRendering || false;
+      
+      logger.info('Using HTML extraction for text processing', {
+        jobId,
+        pdfUrl,
+        requiresClientRendering,
+        hasBrowser: !!this.browser,
+      });
+      
+      // Use browser-based extraction if required and available
+      const htmlResult = (requiresClientRendering && this.browser)
+        ? await processHtmlWithBrowser(pdfUrl, jobId, this.browser)
+        : await processHtmlToText(pdfUrl, jobId);
+      
+      return {
+        extractedText: htmlResult.text,
+        pagesProcessed: 1, // HTML is treated as single page
+        pdfR2Key: undefined, // No R2 storage for HTML
+        extractionMethod: 'html',
+        htmlExtraction: {
+          redirectCount: htmlResult.redirectCount,
+          finalUrl: htmlResult.finalUrl,
+        },
+      };
+    }
+    
+    // Continue with PDF processing via Mistral
     logger.debug(`Calling Mistral OCR API for job ${jobId}`);
 
     let finalPdfUrl = pdfUrl;
@@ -420,7 +596,13 @@ export class MistralOcrService {
       estimatedTokens: usage.tokens.total,
     });
 
-    return { extractedText, pagesProcessed: result.pages.length, pdfR2Key, usage };
+    return { 
+      extractedText, 
+      pagesProcessed: result.pages.length, 
+      pdfR2Key, 
+      usage,
+      extractionMethod: 'mistral',
+    };
   }
 
   /**

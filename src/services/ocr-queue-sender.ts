@@ -56,6 +56,7 @@ export class OcrQueueSender {
         gazetteCrawlId: gazetteCrawlId,
         spiderType: spiderType,
         gazetteScope: gazetteScope, // Pass gazette scope for downstream filtering
+        requiresClientRendering: gazette.requiresClientRendering,
       },
     };
 

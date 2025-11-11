@@ -44,7 +44,10 @@ import {
   RondoniaSpider, 
   AcreSpider, 
   EspiritoSantoSpider,
-  DomunicipalSpider
+  DomunicipalSpider,
+  ImprensaOficialJundiaiSpider,
+  PrefeituraRioPretoSpider,
+  DoEletronicoMiguelopolisSpider
 } from './base';
 import { DiarioOficialBRSpider } from './base/diario-oficial-br-spider';
 import { ModernizacaoSpider } from './base/modernizacao-spider';
@@ -399,6 +402,23 @@ export class SpiderRegistryManager {
       
       case 'domunicipal':
         return new DomunicipalSpider(config, dateRange);
+      
+      case 'imprensaoficialjundiai':
+        return new ImprensaOficialJundiaiSpider(config, dateRange);
+      
+      case 'prefeiturariopreto':
+        const rioPretospider = new PrefeituraRioPretoSpider(config, dateRange);
+        if (browser) {
+          rioPretospider.setBrowser(browser);
+        }
+        return rioPretospider;
+      
+      case 'doeletronicomiguelopolis':
+        const miguelopolisSpider = new DoEletronicoMiguelopolisSpider(config, dateRange);
+        if (browser) {
+          miguelopolisSpider.setBrowser(browser);
+        }
+        return miguelopolisSpider;
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);

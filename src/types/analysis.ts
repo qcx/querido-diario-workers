@@ -257,10 +257,10 @@ export interface ConcursoData {
   
   // Job positions and vacancies
   vagas?: {
-    total?: number;
+    total?: number | string; // number or "CR" (Cadastro Reserva = reserve registration)
     porCargo?: Array<{
       cargo: string;
-      vagas: number;
+      vagas: number | string; // number or "CR" (Cadastro Reserva)
       requisitos?: string;
       salario?: number;
       jornada?: string;
@@ -296,7 +296,7 @@ export interface ConcursoData {
   cidades?: Array<{
     nome: string;
     territoryId?: string;
-    vagas?: number;
+    vagas?: number | string; // number or "CR" (Cadastro Reserva)
   }>;
   
   // Current status

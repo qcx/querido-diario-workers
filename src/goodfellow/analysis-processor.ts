@@ -3,9 +3,9 @@
  * Processes analysis queue messages and sends results to webhook queue
  */
 
-import { AnalysisQueueMessage, GazetteAnalysis, AnalysisConfig } from '../types';
+import { AnalysisQueueMessage, GazetteAnalysis } from '../types';
 import type { D1DatabaseEnv } from '../services/database';
-import { AnalysisOrchestrator } from '../services/analysis-orchestrator';
+import { AnalysisOrchestratorV2, AnalysisConfigV2 } from '../analyzers/v2';
 import { logger, shortHash } from '../utils';
 import {
   getDatabase,
@@ -49,7 +49,7 @@ async function processSingleAnalysis(
   
   // Generate config signature for this territory
   const config = getAnalysisConfig(env);
-  const orchestrator = new AnalysisOrchestrator(config);
+  const orchestrator = new AnalysisOrchestratorV2(config);
   const configSignature = await orchestrator.generateConfigSignature(config, territoryId);
   
   // Generate deterministic jobId for this territory
@@ -341,9 +341,9 @@ export interface AnalysisProcessorEnv extends D1DatabaseEnv {
 }
 
 /**
- * Get analysis configuration from environment
+ * Get V2 analysis configuration from environment
  */
-function getAnalysisConfig(env: AnalysisProcessorEnv): AnalysisConfig {
+function getAnalysisConfig(env: AnalysisProcessorEnv): AnalysisConfigV2 {
   return {
     analyzers: {
       keyword: {
@@ -357,18 +357,45 @@ function getAnalysisConfig(env: AnalysisProcessorEnv): AnalysisConfig {
         timeout: 30000,  // Increased from 15s to 30s for state gazettes
       },
       concurso: {
-        enabled: true,
-        priority: 1.5,  // Unified analyzer handles both validation and extraction
-        timeout: 180000,  // Increased from 20s to 40s for state gazettes
+        enabled: false, // Disable concurso analyzer in V2 for now (only keyword analyzer implemented)
+        priority: 1.5,
+        timeout: 180000,
         useAIExtraction: !!env.OPENAI_API_KEY,
         apiKey: env.OPENAI_API_KEY,
         model: 'gpt-4o-mini',
       },
       ai: {
-        enabled: !!env.OPENAI_API_KEY,
+        enabled: false,
         priority: 3,
-        timeout: 120000,  // Increased from 30s to 60s for state gazettes
+        timeout: 120000,
         apiKey: env.OPENAI_API_KEY,
+      },
+    },
+    // V2-specific configuration
+    preprocessor: {
+      removeHeadersFooters: true,
+      parseSections: true,
+      minSectionLength: 50,
+      repetitionThreshold: 3,
+    },
+    analyzersV2: {
+      keyword: {
+        enabled: true,
+        useSectionRelevance: true,
+        contextRadius: 300,
+        includeSectionHierarchy: true,
+      },
+      ambiguousValidator: {
+        enabled: !!env.OPENAI_API_KEY,
+        apiKey: env.OPENAI_API_KEY,
+        model: 'gpt-4o-mini',
+        confidenceThreshold: 0.7,
+      },
+      aberturaExtractor: {
+        enabled: !!env.OPENAI_API_KEY,
+        apiKey: env.OPENAI_API_KEY,
+        model: 'gpt-4o-mini',
+        timeout: 30000,
       },
     },
   };
@@ -386,7 +413,7 @@ export async function processAnalysisBatch(
   // Create analysis configuration
   const config = getAnalysisConfig(env);
 
-  const orchestrator = new AnalysisOrchestrator(config);
+  const orchestrator = new AnalysisOrchestratorV2(config);
   
   // Initialize database services
   const databaseClient = getDatabase(env);
@@ -774,13 +801,13 @@ async function storeConcursoFindings(
  */
 async function processAnalysisMessage(
   message: Message<AnalysisQueueMessage>,
-  orchestrator: AnalysisOrchestrator,
+  orchestrator: AnalysisOrchestratorV2,
   env: AnalysisProcessorEnv,
   telemetry: TelemetryService,
   analysisRepo: AnalysisRepository,
   concursoRepo: ConcursoRepository,
   deduplicator: any,
-  config: AnalysisConfig,
+  config: AnalysisConfigV2,
   databaseClient: ReturnType<typeof getDatabase>
 ): Promise<any[]> {
   const { jobId, ocrJobId, territoryId } = message.body;
@@ -1094,14 +1121,12 @@ async function processAnalysisMessage(
   // Perform analysis with deterministic jobId
   // This enables database-level deduplication via the unique constraint on job_id
   const gazetteScope = message.body.metadata?.gazetteScope;
-  const requestedTerritories = message.body.metadata?.requestedTerritories;
   
   const analysisResult = await orchestrator.analyze(
     ocrResult, 
     territoryId, 
     deterministicJobId,
-    gazetteScope,
-    requestedTerritories
+    gazetteScope
   );
 
   // Handle single or multiple analyses

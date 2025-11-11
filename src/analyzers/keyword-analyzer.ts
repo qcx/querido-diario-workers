@@ -33,7 +33,7 @@ export class KeywordAnalyzer extends BaseAnalyzer {
       findings.push(...matches);
     }
 
-    console.log('🔵 Keyword Analyzer Findings:', findings.filter((f) => ['keyword:concurso_publico'].includes(f.type)).map((f) => (
+    console.log('🔵 Keyword Analyzer Findings:', findings.map((f) => (
       {
         type: f.type,
         context: f.context || 'No context',

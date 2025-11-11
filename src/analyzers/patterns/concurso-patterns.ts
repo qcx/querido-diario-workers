@@ -780,7 +780,7 @@ export const CONCURSO_PATTERNS: ConcursoPattern[] = [
 
   // Exoneração e Nomeação (Employee Dismissal/Resignation and Appointment - Combined)
   {
-    documentType: 'exoneracao_nomeacao',
+    documentType: 'nomeacao_exoneracao',
     weight: 0.90,
     priority: 'primary',
     strongKeywords: [
@@ -993,20 +993,16 @@ export const TITLE_PATTERNS: Array<{
     baseConfidence: 0.88,
   },
   {
-    documentType: 'exoneracao',
+    documentType: 'nomeacao_exoneracao',
     patterns: [
+      // Exoneração patterns
       /^PORTARIA.*EXONERA[ÇC][ÃA]O/i,
       /^PORTARIA.*DESLIGAMENTO/i,
       /^EXONERA[ÇC][ÃA]O/i,
       /^DESLIGAMENTO/i,
       /EXONERA[ÇC][ÃA]O.*SERVIDOR/i,
       /DESLIGAMENTO.*SERVIDOR/i,
-    ],
-    baseConfidence: 0.85,
-  },
-  {
-    documentType: 'nomeacao',
-    patterns: [
+      // Nomeação patterns
       /^PORTARIA.*NOMEA[ÇC][ÃA]O/i,
       /^NOMEA[ÇC][ÃA]O/i,
       /^EDITAL.*NOMEA[ÇC][ÃA]O/i,
@@ -1284,26 +1280,9 @@ export function hasConcursoKeywords(text: string): boolean {
 /**
  * Helper to detect if text contains ambiguous concurso terms needing AI validation
  */
-export function hasAmbiguousConcursoKeywords(text: string): boolean {
-  const ambiguousKeywords = [
- //   'concurso', // Without "público"
- //   'processo seletivo',
-//    'processo seletivo simplificado',
-  //  'seleção pública',
-  //  'seleção publica',  // without accent
-   // 'seleção simplificada',
-   // 'edital de prorrogação',
-   // 'prorrogação de processos seletivos',
-   // 'prorrogação de seleções públicas',
-  ];
-  
-  const lowerText = text.toLowerCase();
-  
-  // Check if text has ambiguous keywords but NOT the specific "concurso público"
-  //const hasAmbiguous = ambiguousKeywords.some(kw => lowerText.includes(kw));
-  //const hasSpecific = lowerText.includes('concurso público') || lowerText.includes('concurso publico');
-  
-  //return hasAmbiguous && !hasSpecific;
+export function hasAmbiguousConcursoKeywords(_text: string): boolean {
+  // Currently disabled - all ambiguous patterns are commented out
+  // This function is kept for future use if needed
   return false;
 }
 

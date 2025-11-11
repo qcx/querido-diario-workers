@@ -78,6 +78,7 @@ export abstract class BaseSpider {
       isExtraEdition?: boolean;
       power?: 'executive' | 'legislative' | 'executive_legislative';
       sourceText?: string;
+      requiresClientRendering?: boolean;
     } = {}
   ): Promise<Gazette | null> {
     try {
@@ -99,6 +100,7 @@ export abstract class BaseSpider {
         isExtraEdition: options.isExtraEdition ?? false,
         power: options.power ?? 'executive_legislative',
         sourceText: options.sourceText,
+        requiresClientRendering: options.requiresClientRendering,
       };
     } catch (error) {
       logger.error('Failed to resolve gazette URL', {
