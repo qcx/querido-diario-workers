@@ -30,7 +30,15 @@ export type SpiderType =
   | 'domunicipal'
   | 'imprensaoficialjundiai'
   | 'prefeiturariopreto'
-  | 'doeletronicomiguelopolis'
+  | 'imprensaoficialmunicipal'
+  | 'prefeituraitirapua'
+  | 'kingdiario'
+  | 'prefeituranovaodessa'
+  | 'prefeituramogidascruzes'
+  | 'prefeiturasaojoaodaboavista'
+  | 'prefeiturajoanopolis'
+  | 'prefeiturabarbosa'
+  | 'prefeiturabatais'
   | 'custom';
 
 /**
@@ -94,7 +102,15 @@ export type SpiderPlatformConfig =
   | DomunicipalConfig
   | ImprensaOficialJundiaiConfig
   | PrefeituraRioPretoConfig
-  | DoEletronicoMiguelopolisConfig
+  | ImprensaOficialMunicipalConfig
+  | PrefeituraItirapuaConfig
+  | KingDiarioConfig
+  | PrefeituraNovaOdessaConfig
+  | PrefeituraMogiDasCruzesConfig
+  | PrefeituraSaoJoaoDaBoaVistaConfig
+  | PrefeituraJoanopolisConfig
+  | PrefeituraBarbosaConfig
+  | PrefeituraBatataisConfig
   | CustomConfig;
 
 /**
@@ -327,10 +343,83 @@ export interface PrefeituraRioPretoConfig {
 }
 
 /**
- * Configuration for Diário Oficial Eletrônico Miguelópolis spider
+ * Configuration for Imprensa Oficial Municipal platform spider
+ * Used by municipalities like Miguelópolis and Caiabu
  */
-export interface DoEletronicoMiguelopolisConfig {
-  type: 'doeletronicomiguelopolis';
+export interface ImprensaOficialMunicipalConfig {
+  type: 'imprensaoficialmunicipal';
   /** Base URL for the Imprensa Oficial Municipal platform */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura Itirapuã spider
+ * ASP.NET/GeneXus platform requiring browser automation
+ */
+export interface PrefeituraItirapuaConfig {
+  type: 'prefeituraitirapua';
+  /** Base URL for the Prefeitura Itirapuã platform */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for KingDiario platform spider
+ * King Page platform requiring browser automation for form-based search
+ */
+export interface KingDiarioConfig {
+  type: 'kingdiario';
+  /** Base URL for the KingDiario platform */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura Nova Odessa spider
+ * Year-based pages with no date filter - all gazettes for a year on one page
+ */
+export interface PrefeituraNovaOdessaConfig {
+  type: 'prefeituranovaodessa';
+  /** Base URL for the Prefeitura Nova Odessa platform (e.g., "https://www.novaodessa.sp.gov.br/servicos/diario") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Mogi das Cruzes spider
+ * Year and category-based pages with accordion structure
+ */
+export interface PrefeituraMogiDasCruzesConfig {
+  type: 'prefeituramogidascruzes';
+  /** Base URL for the Prefeitura Mogi das Cruzes platform (e.g., "https://diario-oficial.mogidascruzes.sp.gov.br/diarios/publicacoes") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de São João da Boa Vista spider
+ * Vue.js/Vuetify application with year/month URL structure and pagination
+ */
+export interface PrefeituraSaoJoaoDaBoaVistaConfig {
+  type: 'prefeiturasaojoaodaboavista';
+  /** Base URL for the Prefeitura São João da Boa Vista platform (e.g., "https://publicacoes.boavista.rr.gov.br/diarios/2025/2") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Joanópolis spider
+ * Date range-based URL structure with HTML list of gazettes
+ */
+export interface PrefeituraJoanopolisConfig {
+  type: 'prefeiturajoanopolis';
+  /** Base URL for the Prefeitura Joanópolis platform (e.g., "https://www.joanopolis.sp.gov.br/portal/diario-oficial") */
+  baseUrl: string;
+}
+
+export interface PrefeituraBarbosaConfig {
+  type: 'prefeiturabarbosa';
+  /** Base URL for the Prefeitura Barbosa platform (e.g., "https://www.barbosa.sp.gov.br/portal/diario-oficial") */
+  baseUrl: string;
+}
+
+export interface PrefeituraBatataisConfig {
+  type: 'prefeiturabatais';
+  /** Base URL for the Prefeitura Batatais platform (e.g., "https://www.batatais.sp.gov.br/diario-oficial") */
   baseUrl: string;
 }

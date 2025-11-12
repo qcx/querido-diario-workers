@@ -47,7 +47,15 @@ import {
   DomunicipalSpider,
   ImprensaOficialJundiaiSpider,
   PrefeituraRioPretoSpider,
-  DoEletronicoMiguelopolisSpider
+  ImprensaOficialMunicipalSpider,
+  PrefeituraItirapuaSpider,
+  KingDiarioSpider,
+  PrefeituraNovaOdessaSpider,
+  PrefeituraMogiDasCruzesSpider,
+  PrefeituraSaoJoaoDaBoaVistaSpider,
+  PrefeituraJoanopolisSpider,
+  PrefeituraBarbosaSpider,
+  PrefeituraBatataisSpider
 } from './base';
 import { DiarioOficialBRSpider } from './base/diario-oficial-br-spider';
 import { ModernizacaoSpider } from './base/modernizacao-spider';
@@ -413,12 +421,48 @@ export class SpiderRegistryManager {
         }
         return rioPretospider;
       
-      case 'doeletronicomiguelopolis':
-        const miguelopolisSpider = new DoEletronicoMiguelopolisSpider(config, dateRange);
+      case 'imprensaoficialmunicipal':
+        const imprensaOficialMunicipalSpider = new ImprensaOficialMunicipalSpider(config, dateRange);
         if (browser) {
-          miguelopolisSpider.setBrowser(browser);
+          imprensaOficialMunicipalSpider.setBrowser(browser);
         }
-        return miguelopolisSpider;
+        return imprensaOficialMunicipalSpider;
+      
+      case 'prefeituraitirapua':
+        const itirapuaSpider = new PrefeituraItirapuaSpider(config, dateRange);
+        if (browser) {
+          itirapuaSpider.setBrowser(browser);
+        }
+        return itirapuaSpider;
+      
+      case 'kingdiario':
+        const kingDiarioSpider = new KingDiarioSpider(config, dateRange);
+        if (browser) {
+          kingDiarioSpider.setBrowser(browser);
+        }
+        return kingDiarioSpider;
+      
+      case 'prefeituranovaodessa':
+        return new PrefeituraNovaOdessaSpider(config, dateRange);
+      
+      case 'prefeituramogidascruzes':
+        return new PrefeituraMogiDasCruzesSpider(config, dateRange);
+      
+      case 'prefeiturasaojoaodaboavista':
+        const saoJoaoSpider = new PrefeituraSaoJoaoDaBoaVistaSpider(config, dateRange);
+        if (browser) {
+          saoJoaoSpider.setBrowser(browser);
+        }
+        return saoJoaoSpider;
+      
+      case 'prefeiturajoanopolis':
+        return new PrefeituraJoanopolisSpider(config, dateRange);
+      
+      case 'prefeiturabarbosa':
+        return new PrefeituraBarbosaSpider(config, dateRange);
+      
+      case 'prefeiturabatais':
+        return new PrefeituraBatataisSpider(config, dateRange);
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);

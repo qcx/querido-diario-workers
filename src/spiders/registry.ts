@@ -1,5 +1,5 @@
 import { SpiderConfig, SpiderType, DateRange } from '../types';
-import { BaseSpider, DoemSpider, InstarSpider, DospSpider, DiofSpider, ADiariosV1Spider, SigpubSpider, BarcoDigitalSpider, SiganetSpider, RondoniaSpider, AcreSpider, EspiritoSantoSpider, DomunicipalSpider, ImprensaOficialJundiaiSpider, PrefeituraRioPretoSpider } from './base';
+import { BaseSpider, DoemSpider, InstarSpider, DospSpider, DiofSpider, ADiariosV1Spider, SigpubSpider, BarcoDigitalSpider, SiganetSpider, RondoniaSpider, AcreSpider, EspiritoSantoSpider, DomunicipalSpider, ImprensaOficialJundiaiSpider, PrefeituraRioPretoSpider, PrefeituraItirapuaSpider, PrefeituraNovaOdessaSpider, PrefeituraMogiDasCruzesSpider, PrefeituraSaoJoaoDaBoaVistaSpider, PrefeituraJoanopolisSpider, PrefeituraBarbosaSpider, PrefeituraBatataisSpider } from './base';
 import { DiarioOficialBRSpider } from './base/diario-oficial-br-spider';
 import { ModernizacaoSpider } from './base/modernizacao-spider';
 import { ADiariosV2Spider } from './base/adiarios-v2-spider';
@@ -296,6 +296,35 @@ class SpiderRegistry {
           rioPretospider.setBrowser(browser);
         }
         return rioPretospider;
+      
+      case 'prefeituraitirapua':
+        const itirapuaSpider = new PrefeituraItirapuaSpider(config, dateRange);
+        if (browser) {
+          itirapuaSpider.setBrowser(browser);
+        }
+        return itirapuaSpider;
+      
+      case 'prefeituranovaodessa':
+        return new PrefeituraNovaOdessaSpider(config, dateRange);
+      
+      case 'prefeituramogidascruzes':
+        return new PrefeituraMogiDasCruzesSpider(config, dateRange);
+      
+      case 'prefeiturasaojoaodaboavista':
+        const saoJoaoSpider = new PrefeituraSaoJoaoDaBoaVistaSpider(config, dateRange);
+        if (browser) {
+          saoJoaoSpider.setBrowser(browser);
+        }
+        return saoJoaoSpider;
+      
+      case 'prefeiturajoanopolis':
+        return new PrefeituraJoanopolisSpider(config, dateRange);
+      
+      case 'prefeiturabarbosa':
+        return new PrefeituraBarbosaSpider(config, dateRange);
+      
+      case 'prefeiturabatais':
+        return new PrefeituraBatataisSpider(config, dateRange);
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);

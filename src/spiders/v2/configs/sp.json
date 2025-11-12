@@ -104,7 +104,7 @@
     "name": "Miguelópolis - SP",
     "territoryId": "3529708",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "dosp",
@@ -121,13 +121,475 @@
         }
       },
       {
-        "spiderType": "doeletronicomiguelopolis",
+        "spiderType": "imprensaoficialmunicipal",
         "priority": 2,
         "active": true,
         "gazetteScope": "city",
         "config": {
-          "type": "doeletronicomiguelopolis",
+          "type": "imprensaoficialmunicipal",
           "baseUrl": "https://imprensaoficialmunicipal.com.br/miguelopolis"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_mat_o",
+    "name": "Matão - SP",
+    "territoryId": "3529500",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "MATÃO",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "instar",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.camaramatao.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itirapu_",
+    "name": "Itirapuã - SP",
+    "territoryId": "3523909",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "ITIRAPUÃ",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeituraitirapua",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraitirapua",
+          "baseUrl": "https://s58.asp.srv.br/diariooficial.pm.itirapua.sp/servlet/com.asp.diariooficial.diariooficialeletronico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_divinol_ndia",
+    "name": "Divinolândia - SP",
+    "territoryId": "3513850",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "DIVINOLÂNDIA",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "kingdiario",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "baseUrl": "https://www.divinolandia.sp.gov.br/diario-oficial-eletronico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_caiabu",
+    "name": "Caiabu - SP",
+    "territoryId": "3508900",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "CAIABU",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/caiabu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_nova_odessa",
+    "name": "Nova Odessa - SP",
+    "territoryId": "3533403",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "NOVA ODESSA",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeituranovaodessa",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituranovaodessa",
+          "baseUrl": "https://www.novaodessa.sp.gov.br/servicos/diario"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_mogi_das_cruzes",
+    "name": "Mogi das Cruzes - SP",
+    "territoryId": "3530607",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "MOGI DAS CRUZES",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeituramogidascruzes",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramogidascruzes",
+          "baseUrl": "https://diario-oficial.mogidascruzes.sp.gov.br/diarios/publicacoes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_santa_rita_do_passa_quatro",
+    "name": "Santa Rita do Passa Quatro - SP",
+    "territoryId": "3547809",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "SANTA RITA DO PASSA QUATRO",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/santa_rita_do_passa_quatro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_s_o_jo_o_da_boa_vista",
+    "name": "São João da Boa Vista - SP",
+    "territoryId": "3549102",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "SÃO JOÃO DA BOA VISTA",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeiturasaojoaodaboavista",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasaojoaodaboavista",
+          "baseUrl": "https://publicacoes.boavista.rr.gov.br/diarios/2025/2"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_avar_",
+    "name": "Avaré - SP",
+    "territoryId": "3504503",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "AVARÉ",  
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/avare"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_joan_polis",
+    "name": "Joanópolis - SP",
+    "territoryId": "3525508",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "JOANÓPOLIS",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeiturajoanopolis",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturajoanopolis",
+          "baseUrl": "https://www.joanopolis.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_salto",
+    "name": "Salto - SP",
+    "territoryId": "3545209",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+       "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "SALTO",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/salto"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_am_rico_de_campos",
+    "name": "Américo de Campos - SP",
+    "territoryId": "3501806",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+    {
+      "spiderType": "dosp",
+      "priority": 1,
+      "active": true,
+      "gazetteScope": "state",
+      "config": {
+        "type": "dosp",
+        "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+        "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+        "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+        "territoryFilter": "AMÉRICO DE CAMPOS",
+        "requiresClientRendering": true
+      }
+    },
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/americo_de_campos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_barbosa",
+    "name": "Barbosa - SP",
+    "territoryId": "3505302",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+    {
+      "spiderType": "dosp",
+      "priority": 1,
+      "active": true,
+      "gazetteScope": "state",
+      "config": {
+        "type": "dosp",
+        "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+        "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+        "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+        "territoryFilter": "BARBOSA",
+        "requiresClientRendering": true
+      }
+    },
+      {
+        "spiderType": "prefeiturabarbosa",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarbosa",
+          "baseUrl": "https://www.barbosa.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_batatais",
+    "name": "Batatais - SP",
+    "territoryId": "3505906",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "BATATAIS",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeiturabatais",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabatais",
+          "baseUrl": "https://www.batatais.sp.gov.br/diario-oficial"
         }
       }
     ]

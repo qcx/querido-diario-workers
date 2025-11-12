@@ -31,25 +31,25 @@ class Logger {
    * Logs a debug message
    */
   debug(message: string, context?: LogContext): void {
-  //  this.log('debug', message, context);
+  this.log('debug', message, context);
   }
 
   /**
    * Logs an info message
    */
   info(message: string, context?: LogContext): void {
-  //  this.log('info', message, context);
+  this.log('info', message, context);
   }
 
   /**
    * Logs a warning message
    */
   warn(message: string, context?: LogContext): void {
- //   this.log('warn', message, context);
+    this.log('warn', message, context);
   }
 
   /**
-   * Logs an error message
+   * Logs an error message 
    */
   error(message: string, error?: Error | unknown, context?: LogContext): void {
     this.log('error', message, {
@@ -67,7 +67,7 @@ class Logger {
       ...context,
     };
 
-    // Use appropriate console method
+  // Use appropriate console method
     switch (level) {
       case 'debug':
         console.debug(JSON.stringify(logData));

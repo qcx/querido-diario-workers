@@ -1,13 +1,14 @@
 import puppeteer from '@cloudflare/puppeteer';
 import { BaseSpider } from './base-spider';
 import { Gazette } from '../../types/gazette';
-import { SpiderConfig, DoEletronicoMiguelopolisConfig } from '../../types/spider-config';
+import { SpiderConfig, ImprensaOficialMunicipalConfig } from '../../types/spider-config';
 import { DateRange } from '../../types';
 import { logger } from '../../utils/logger';
 import { toISODate } from '../../utils/date-utils';
 
 /**
- * Spider for Miguelópolis Diário Oficial Eletrônico
+ * Spider for Imprensa Oficial Municipal platform
+ * Used by municipalities like Miguelópolis and Caiabu
  * 
  * Uses Cloudflare Browser Rendering (Puppeteer) to handle:
  * - JavaScript-rendered gazette listings
@@ -22,13 +23,13 @@ import { toISODate } from '../../utils/date-utils';
  * 4. Each edition has an "Original Eletrônico" button linking to the PDF
  * 5. Pagination in #Pagination div for multiple pages of results
  */
-export class DoEletronicoMiguelopolisSpider extends BaseSpider {
+export class ImprensaOficialMunicipalSpider extends BaseSpider {
   private baseUrl: string;
   private browser: Fetcher | null = null;
 
   constructor(config: SpiderConfig, dateRange: DateRange, browser?: Fetcher) {
     super(config, dateRange);
-    const platformConfig = config.config as DoEletronicoMiguelopolisConfig;
+    const platformConfig = config.config as ImprensaOficialMunicipalConfig;
     this.baseUrl = platformConfig.baseUrl;
     this.browser = browser || null;
   }
@@ -42,12 +43,12 @@ export class DoEletronicoMiguelopolisSpider extends BaseSpider {
 
   async crawl(): Promise<Gazette[]> {
     if (!this.browser) {
-      logger.error(`DoEletronicoMiguelopolisSpider for ${this.config.name} requires browser binding`);
+      logger.error(`ImprensaOficialMunicipalSpider for ${this.config.name} requires browser binding`);
       return [];
     }
 
     const gazettes: Gazette[] = [];
-    logger.info(`Crawling Diário Oficial Eletrônico Miguelópolis for ${this.config.name}...`);
+    logger.info(`Crawling Imprensa Oficial Municipal for ${this.config.name}...`);
 
     let browserInstance = null;
     let page = null;
@@ -81,10 +82,10 @@ export class DoEletronicoMiguelopolisSpider extends BaseSpider {
         currentDate.setDate(currentDate.getDate() + 1);
       }
       
-      logger.info(`Successfully crawled ${gazettes.length} gazettes from Diário Oficial Eletrônico Miguelópolis`);
+      logger.info(`Successfully crawled ${gazettes.length} gazettes from Imprensa Oficial Municipal`);
       
     } catch (error) {
-      logger.error(`Error crawling Diário Oficial Eletrônico Miguelópolis:`, error as Error);
+      logger.error(`Error crawling Imprensa Oficial Municipal:`, error as Error);
       throw error;
     } finally {
       // Clean up
@@ -265,4 +266,3 @@ export class DoEletronicoMiguelopolisSpider extends BaseSpider {
     }
   }
 }
-
