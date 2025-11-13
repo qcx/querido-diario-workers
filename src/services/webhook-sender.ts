@@ -21,6 +21,7 @@ export class WebhookSenderService {
   private r2PublicUrl?: string;
   private gazetteRepo?: any; // GazetteRepository for fetching R2 keys
   private concursoRepo?: any; // ConcursoRepository for checking concurso findings
+  private ocrRepo?: any; // OcrRepository for fetching OCR result IDs
 
   constructor(
     webhookQueue: Queue<WebhookQueueMessage>, 
@@ -28,7 +29,8 @@ export class WebhookSenderService {
     webhookRepo?: any,
     r2PublicUrl?: string,
     gazetteRepo?: any,
-    concursoRepo?: any
+    concursoRepo?: any,
+    ocrRepo?: any
   ) {
     this.webhookQueue = webhookQueue;
     this.subscriptionsKV = subscriptionsKV;
@@ -36,6 +38,7 @@ export class WebhookSenderService {
     this.r2PublicUrl = r2PublicUrl;
     this.gazetteRepo = gazetteRepo;
     this.concursoRepo = concursoRepo;
+    this.ocrRepo = ocrRepo;
   }
 
   /**
@@ -138,6 +141,42 @@ export class WebhookSenderService {
           subscription.filters
         );
 
+        // Fetch OCR result ID and gazette original PDF URL
+        let ocrResultId: string | undefined;
+        let gazetteOriginalPdfUrl: string | undefined;
+        
+        if (gazetteId) {
+          // Fetch OCR result ID
+          if (this.ocrRepo) {
+            try {
+              const ocrResult = await this.ocrRepo.getOcrResultByGazetteId(gazetteId);
+              if (ocrResult) {
+                ocrResultId = ocrResult.id;
+              }
+            } catch (error: any) {
+              logger.warn('Failed to fetch OCR result ID for webhook', {
+                gazetteId,
+                error: error.message,
+              });
+            }
+          }
+          
+          // Fetch gazette original PDF URL
+          if (this.gazetteRepo) {
+            try {
+              const gazette = await this.gazetteRepo.getGazetteById(gazetteId);
+              if (gazette) {
+                gazetteOriginalPdfUrl = gazette.pdfUrl;
+              }
+            } catch (error: any) {
+              logger.warn('Failed to fetch gazette original PDF URL for webhook', {
+                gazetteId,
+                error: error.message,
+              });
+            }
+          }
+        }
+
         // Create webhook notification
         const territoryInfo = TerritoryService.getTerritoryInfo(analysis.territoryId);
         const notification: WebhookNotification = {
@@ -159,6 +198,9 @@ export class WebhookSenderService {
             pdfUrl: await this.getPdfUrl(analysis, gazetteId),
             spiderId: analysis.metadata?.spiderId || 'unknown',
             spiderType: territoryInfo?.spiderType || 'unknown',
+            gazetteId,
+            gazetteOriginalPdfUrl,
+            ocrResultId,
           },
           analysis: {
             jobId: analysis.jobId,
@@ -282,7 +324,7 @@ export class WebhookSenderService {
         totalVagas: record.totalVagas,
       });
       
-      // Parse JSON fields safely
+      // Parse JSON fields safely (repository may return already parsed objects or JSON strings)
       const parsedCargos = this.parseJsonSafely(record.cargos, []);
       const parsedDatas = this.parseJsonSafely(record.datas, {});
       const parsedTaxas = this.parseJsonSafely(record.taxas, []);
@@ -291,51 +333,18 @@ export class WebhookSenderService {
       // Extract keywords from analysis summary for backward compatibility
       const keywords = analysis.summary?.keywords || [];
 
-      // Build raw data object
-    /*  const rawData = {
-        // Document classification
-        documentType: record.documentType,
-        extractionMethod: record.extractionMethod,
-        
-        // Basic information
-        orgao: record.orgao,
-        editalNumero: record.editalNumero,
-        
-        // Vacancies data
-        vagas: {
-          total: record.totalVagas || 0,
-          porCargo: parsedCargos,
-        },
-        
-        // Important dates
-        datas: parsedDatas,
-        
-        // Fees
-        taxas: parsedTaxas,
-        
-        // Organization/Banca
-        banca: parsedBanca,
-        
-        // Keywords for backward compatibility
-        keywords: keywords,
-        
-        // Database metadata
-        confidence: record.confidence,
-        territoryId: record.territoryId,
-        createdAt: record.createdAt,
-      };
+      // Structure dates into separate inscricoes and provas objects for backward compatibility
+      const inscricoes = parsedDatas.inscricoesInicio || parsedDatas.inscricoesFim ? {
+        inicio: parsedDatas.inscricoesInicio,
+        fim: parsedDatas.inscricoesFim,
+      } : undefined;
 
-      // Apply enrichment pipeline
-      const enrichedData = await this.enrichConcursoData(rawData);
-      
-      logger.info('Concurso data enriched for webhook', {
-        analysisJobId: analysis.jobId,
-        completeness: enrichedData._dataQuality?.completeness,
-        enrichedFields: enrichedData._enrichment?.enrichedFields?.length || 0,
-      });
-
-      return enrichedData;
-      */
+      const provas = parsedDatas.prova || parsedDatas.provaObjetiva ? {
+        data: parsedDatas.prova,
+        objetiva: parsedDatas.provaObjetiva,
+        pratica: parsedDatas.provaPratica,
+        oral: parsedDatas.provaOral,
+      } : undefined;
 
       return {
         // Document classification
@@ -350,8 +359,12 @@ export class WebhookSenderService {
         totalVagas: record.totalVagas || 0,
         cargos: parsedCargos,
 
-        // Important dates
+        // Important dates - full structured format
         datas: parsedDatas,
+        
+        // Legacy date fields for backward compatibility
+        inscricoes,
+        provas,
         
         // Fees
         taxas: parsedTaxas,
@@ -404,13 +417,25 @@ export class WebhookSenderService {
 
   /**
    * Safely parse JSON string with fallback
+   * Handles both already-parsed objects/arrays and JSON strings
    */
-  private parseJsonSafely(jsonString: string, fallback: any): any {
-    try {
-      return JSON.parse(jsonString || JSON.stringify(fallback));
-    } catch {
-      return fallback;
+  private parseJsonSafely(value: any, fallback: any): any {
+    // If value is already parsed (object or array), return it as-is
+    if (typeof value === 'object' && value !== null) {
+      return value;
     }
+    
+    // If value is a string, try to parse it
+    if (typeof value === 'string') {
+      try {
+        return JSON.parse(value || JSON.stringify(fallback));
+      } catch {
+        return fallback;
+      }
+    }
+    
+    // For other types (null, undefined, etc.), return fallback
+    return fallback;
   }
 
   /**

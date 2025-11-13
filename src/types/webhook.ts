@@ -112,6 +112,9 @@ export interface WebhookNotification {
     pdfUrl: string;
     spiderId: string;
     spiderType: string;
+    gazetteId?: string;
+    gazetteOriginalPdfUrl?: string;
+    ocrResultId?: string;
   };
   
   /** Analysis summary */
@@ -130,15 +133,94 @@ export interface WebhookNotification {
   
   /** Concurso-specific data (when event is concurso.detected) */
   concurso?: {
+    // Document classification
+    documentType?: string | null;
+    extractionMethod?: string | null;
+    
+    // Basic information
+    orgao?: string | null;
+    editalNumero?: string | null;
+    
+    // Vacancies data
     totalVagas: number;
     cargos: Array<{
       cargo: string;
-      vagas: number;
+      vagas: string | number;
+      salario?: number;
+      requisitos?: string;
+      jornada?: string;
+      escolaridade?: string;
+      local?: string;
+      beneficios?: string[];
     }>;
-    inscricoes?: any;
-    provas?: any;
-    taxas?: any[];
+    
+    // Important dates - structured format
+    datas?: {
+      inscricoesInicio?: string;
+      inscricoesFim?: string;
+      prova?: string;
+      provaObjetiva?: string;
+      provaPratica?: string;
+      provaOral?: string;
+      resultado?: string;
+      resultadoPreliminar?: string;
+      resultadoFinal?: string;
+      recursos?: string;
+      recursosGabarito?: string;
+      homologacao?: string;
+      convocacao?: string;
+      posse?: string;
+    };
+    
+    // Legacy date fields for backward compatibility
+    inscricoes?: {
+      inicio?: string;
+      fim?: string;
+    };
+    provas?: {
+      data?: string;
+      objetiva?: string;
+      pratica?: string;
+      oral?: string;
+    };
+    
+    // Fees
+    taxas?: Array<{
+      cargo?: string;
+      valor: number;
+      moeda?: string;
+      prazoVencimento?: string;
+      formasPagamento?: string[];
+      descontos?: Array<{
+        tipo: string;
+        valor?: number;
+        condicoes: string;
+      }>;
+    }>;
+    
+    // Organization/Banca
+    banca?: {
+      nome?: string;
+      cnpj?: string;
+      contato?: {
+        telefone?: string;
+        email?: string;
+        site?: string;
+        endereco?: string;
+      };
+      experiencia?: {
+        outrosConcursos?: string[];
+        especializacoes?: string[];
+      };
+    };
+    
+    // Keywords for backward compatibility
     keywords: string[];
+    
+    // Database metadata
+    confidence?: number | null;
+    territoryId?: string;
+    createdAt?: string;
   };
   
   /** Enhanced metadata */

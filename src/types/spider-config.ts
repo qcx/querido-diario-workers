@@ -36,9 +36,18 @@ export type SpiderType =
   | 'prefeituranovaodessa'
   | 'prefeituramogidascruzes'
   | 'prefeiturasaojoaodaboavista'
-  | 'prefeiturajoanopolis'
-  | 'prefeiturabarbosa'
   | 'prefeiturabatais'
+  | 'prefeituracajamar'
+  | 'prefeituracosmopolis'
+  | 'prefeituracotia'
+  | 'prefeituraguarulhos'
+  | 'prefeituraitaitiba'
+  | 'prefeituramaripora'
+  | 'prefeituranarandiba'
+  | 'prefeiturapiraju'
+  | 'prefeituraitaquaquecetuba'
+  | 'prefeiturapiraporadobomjesus'
+  | 'eatos'
   | 'custom';
 
 /**
@@ -108,9 +117,18 @@ export type SpiderPlatformConfig =
   | PrefeituraNovaOdessaConfig
   | PrefeituraMogiDasCruzesConfig
   | PrefeituraSaoJoaoDaBoaVistaConfig
-  | PrefeituraJoanopolisConfig
-  | PrefeituraBarbosaConfig
   | PrefeituraBatataisConfig
+  | PrefeituraCajamarConfig
+  | PrefeituraCosmopolisConfig
+  | PrefeituraCotiaConfig
+  | PrefeituraGuarulhosConfig
+  | PrefeituraItatibaConfig
+  | PrefeituraMairiporaConfig
+  | PrefeituraNarandibaConfig
+  | PrefeituraPirajuConfig
+  | PrefeituraItaquaquecetubaConfig
+  | PrefeituraPiraporadobomjesusConfig
+  | EatosConfig
   | CustomConfig;
 
 /**
@@ -349,7 +367,9 @@ export interface PrefeituraRioPretoConfig {
 export interface ImprensaOficialMunicipalConfig {
   type: 'imprensaoficialmunicipal';
   /** Base URL for the Imprensa Oficial Municipal platform */
-  baseUrl: string;
+  baseUrl?: string;
+  /** URL for the Imprensa Oficial Municipal platform (alternative to baseUrl for backward compatibility) */
+  url?: string;
 }
 
 /**
@@ -369,7 +389,9 @@ export interface PrefeituraItirapuaConfig {
 export interface KingDiarioConfig {
   type: 'kingdiario';
   /** Base URL for the KingDiario platform */
-  baseUrl: string;
+  baseUrl?: string;
+  /** URL for the KingDiario platform (alternative to baseUrl for backward compatibility) */
+  url?: string;
 }
 
 /**
@@ -402,24 +424,112 @@ export interface PrefeituraSaoJoaoDaBoaVistaConfig {
   baseUrl: string;
 }
 
-/**
- * Configuration for Prefeitura de Joanópolis spider
- * Date range-based URL structure with HTML list of gazettes
- */
-export interface PrefeituraJoanopolisConfig {
-  type: 'prefeiturajoanopolis';
-  /** Base URL for the Prefeitura Joanópolis platform (e.g., "https://www.joanopolis.sp.gov.br/portal/diario-oficial") */
-  baseUrl: string;
-}
-
-export interface PrefeituraBarbosaConfig {
-  type: 'prefeiturabarbosa';
-  /** Base URL for the Prefeitura Barbosa platform (e.g., "https://www.barbosa.sp.gov.br/portal/diario-oficial") */
-  baseUrl: string;
-}
-
 export interface PrefeituraBatataisConfig {
   type: 'prefeiturabatais';
   /** Base URL for the Prefeitura Batatais platform (e.g., "https://www.batatais.sp.gov.br/diario-oficial") */
+  baseUrl: string;
+}
+
+export interface PrefeituraCajamarConfig {
+  type: 'prefeituracajamar';
+  /** Base URL for the Prefeitura Cajamar platform (e.g., "https://cajamar.sp.gov.br/diariooficial") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Cosmópolis spider
+ * Paginated pages with date filtering during crawling
+ */
+export interface PrefeituraCosmopolisConfig {
+  type: 'prefeituracosmopolis';
+  /** Base URL for the Prefeitura Cosmópolis platform (e.g., "https://cosmopolis.sp.gov.br/semanario/") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Cotia spider
+ * Browser-based calendar interaction on LeisMunicipais.com.br platform
+ */
+export interface PrefeituraCotiaConfig {
+  type: 'prefeituracotia';
+  /** Base URL for the Prefeitura Cotia platform (e.g., "https://leismunicipais.com.br/diario-oficial/sp/cotia") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Guarulhos spider
+ * Browser-based calendar interaction with jQuery show/hide divs
+ */
+export interface PrefeituraGuarulhosConfig {
+  type: 'prefeituraguarulhos';
+  /** Base URL for the Prefeitura Guarulhos platform (e.g., "https://diariooficial.guarulhos.sp.gov.br/index.php") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Itatiba spider
+ * Browser-based pagination with query parameters (dataDe, dataAte, pagina)
+ */
+export interface PrefeituraItatibaConfig {
+  type: 'prefeituraitaitiba';
+  /** Base URL for the Prefeitura Itatiba platform (e.g., "https://www.itatiba.sp.gov.br/ImprensaOficial") */
+  url: string;
+}
+
+/**
+ * Configuration for Prefeitura de Mairiporã spider
+ * Browser-based infinite scroll with year-based URLs (/imprensa-oficial-{YEAR}-2/)
+ */
+export interface PrefeituraMairiporaConfig {
+  type: 'prefeituramaripora';
+  /** Base URL for the Prefeitura Mairiporã platform (e.g., "https://www.mairipora.sp.gov.br") */
+  url: string;
+}
+
+/**
+ * Configuration for Prefeitura de Narandiba spider
+ * Simple HTML page with all gazettes listed (no pagination)
+ */
+export interface PrefeituraNarandibaConfig {
+  type: 'prefeituranarandiba';
+  /** Base URL for the Prefeitura Narandiba platform (e.g., "https://www.donarandiba.com.br/paginas/diario.php") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Piraju spider
+ * Browser-based JSF/PrimeFaces application with date filters and pagination
+ */
+export interface PrefeituraPirajuConfig {
+  type: 'prefeiturapiraju';
+  /** Base URL for the Prefeitura Piraju platform (e.g., "https://diariooficialnovo.jelastic.saveincloud.net/paginas/public/diario_externo.xhtml?idCidade=3") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Itaquaquecetuba spider
+ */
+export interface PrefeituraItaquaquecetubaConfig {
+  type: 'prefeituraitaquaquecetuba';
+  /** Base URL for the Prefeitura Itaquaquecetuba platform (e.g., "https://www.itaquaquecetuba.sp.gov.br/diario-oficial/") */
+  url: string;
+}
+
+/**
+ * Configuration for Prefeitura de Pirapora do Bom Jesus spider
+ */
+export interface PrefeituraPiraporadobomjesusConfig {
+  type: 'prefeiturapiraporadobomjesus';
+  /** Base URL for the Prefeitura Pirapora do Bom Jesus platform (e.g., "https://imprensa.piraporadobomjesus.net.br/") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for EATOS (e-Atos) platform spider
+ * Browser-based Nuxt.js application with calendar and list interface
+ */
+export interface EatosConfig {
+  type: 'eatos';
+  /** Base URL for the EATOS platform (e.g., "https://publicacoesmunicipais.com.br/eatos/ilhacomprida") */
   baseUrl: string;
 }

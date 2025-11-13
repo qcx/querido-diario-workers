@@ -30,7 +30,13 @@ export class ImprensaOficialMunicipalSpider extends BaseSpider {
   constructor(config: SpiderConfig, dateRange: DateRange, browser?: Fetcher) {
     super(config, dateRange);
     const platformConfig = config.config as ImprensaOficialMunicipalConfig;
-    this.baseUrl = platformConfig.baseUrl;
+    // Support both 'baseUrl' and 'url' for backward compatibility
+    this.baseUrl = platformConfig.baseUrl || platformConfig.url;
+    if (!this.baseUrl) {
+      logger.error(`ImprensaOficialMunicipalSpider config for ${config.name}:`, JSON.stringify(config.config, null, 2));
+      throw new Error(`ImprensaOficialMunicipalSpider requires baseUrl or url in config for ${config.name}`);
+    }
+    logger.debug(`ImprensaOficialMunicipalSpider initialized with baseUrl: ${this.baseUrl} for ${config.name}`);
     this.browser = browser || null;
   }
 

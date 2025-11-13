@@ -541,9 +541,10 @@ export async function processAnalysisBatch(
   if (allWebhookMessages.length > 0 && env.WEBHOOK_QUEUE && env.WEBHOOK_SUBSCRIPTIONS) {
     try {
       const { WebhookSenderService } = await import('../services/webhook-sender');
-      const { WebhookRepository, GazetteRepository } = await import('../services/database');
+      const { WebhookRepository, GazetteRepository, OcrRepository } = await import('../services/database');
       const webhookRepo = new WebhookRepository(databaseClient);
       const gazetteRepo = new GazetteRepository(databaseClient);
+      const ocrRepo = new OcrRepository(databaseClient);
       
       const webhookSender = new WebhookSenderService(
         env.WEBHOOK_QUEUE,
@@ -551,7 +552,8 @@ export async function processAnalysisBatch(
         webhookRepo,
         env.R2_PUBLIC_URL,
         gazetteRepo,
-        concursoRepo
+        concursoRepo,
+        ocrRepo
       );
 
       await webhookSender.sendWebhookBatch(allWebhookMessages);
@@ -593,9 +595,10 @@ async function processWebhooksForAnalysis(
   if (env.WEBHOOK_QUEUE && env.WEBHOOK_SUBSCRIPTIONS) {
     try {
       const { WebhookSenderService } = await import('../services/webhook-sender');
-      const { WebhookRepository, GazetteRepository } = await import('../services/database');
+      const { WebhookRepository, GazetteRepository, OcrRepository } = await import('../services/database');
       const webhookRepo = new WebhookRepository(databaseClient);
       const gazetteRepo = new GazetteRepository(databaseClient);
+      const ocrRepo = new OcrRepository(databaseClient);
       
       const webhookSender = new WebhookSenderService(
         env.WEBHOOK_QUEUE,
@@ -603,7 +606,8 @@ async function processWebhooksForAnalysis(
         webhookRepo,
         env.R2_PUBLIC_URL,
         gazetteRepo,
-        concursoRepo
+        concursoRepo,
+        ocrRepo
       );
 
       const webhookMessages = await webhookSender.processAnalysisForWebhooks(

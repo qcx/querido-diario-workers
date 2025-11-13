@@ -25,7 +25,13 @@ export class KingDiarioSpider extends BaseSpider {
   constructor(config: SpiderConfig, dateRange: DateRange, browser?: Fetcher) {
     super(config, dateRange);
     const platformConfig = config.config as KingDiarioConfig;
-    this.baseUrl = platformConfig.baseUrl;
+    // Support both 'baseUrl' and 'url' for backward compatibility
+    this.baseUrl = platformConfig.baseUrl || platformConfig.url;
+    if (!this.baseUrl) {
+      logger.error(`KingDiarioSpider config for ${config.name}:`, JSON.stringify(config.config, null, 2));
+      throw new Error(`KingDiarioSpider requires baseUrl or url in config for ${config.name}`);
+    }
+    logger.debug(`KingDiarioSpider initialized with baseUrl: ${this.baseUrl} for ${config.name}`);
     this.browser = browser || null;
   }
 
