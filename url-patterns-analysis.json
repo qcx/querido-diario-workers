@@ -1,0 +1,224 @@
+{
+  "platformCounts": {
+    "transparencia": 55,
+    "diariooficial": 180,
+    "custom": 237,
+    "gov.br": 849,
+    "portaldatransparencia": 97,
+    "imprensaoficial": 22,
+    "tce": 366
+  },
+  "topDomains": [
+    {
+      "domain": "diariooficial.pi.gov.br",
+      "count": 134
+    },
+    {
+      "domain": "app.tcema.tc.br",
+      "count": 133
+    },
+    {
+      "domain": "tcm.ioepa.com.br",
+      "count": 127
+    },
+    {
+      "domain": "tcepi.tc.br",
+      "count": 72
+    },
+    {
+      "domain": "publicacao.tce.pb.gov.br",
+      "count": 49
+    },
+    {
+      "domain": "diariomunicipalaam.org.br",
+      "count": 48
+    },
+    {
+      "domain": "ce.portaldatransparencia.com.br",
+      "count": 43
+    },
+    {
+      "domain": "tce.sc.gov.br",
+      "count": 33
+    },
+    {
+      "domain": "rn.portaldatransparencia.com.br",
+      "count": 31
+    },
+    {
+      "domain": "www1.tce.pr.gov.br",
+      "count": 28
+    },
+    {
+      "domain": "agencia.ac.gov.br",
+      "count": 20
+    },
+    {
+      "domain": "imprensaoficial.com.br",
+      "count": 20
+    },
+    {
+      "domain": "tce.ro.gov.br",
+      "count": 17
+    },
+    {
+      "domain": "diariooficial.rs.gov.br",
+      "count": 17
+    },
+    {
+      "domain": "tce.ap.gov.br",
+      "count": 15
+    },
+    {
+      "domain": "mpac.mp.br",
+      "count": 10
+    },
+    {
+      "domain": "tce.rj.gov.br",
+      "count": 10
+    },
+    {
+      "domain": "diariooficial.rn.gov.br",
+      "count": 9
+    },
+    {
+      "domain": "diario.tcees.tc.br",
+      "count": 6
+    },
+    {
+      "domain": "doe.to.gov.br",
+      "count": 4
+    }
+  ],
+  "estadoPlatformCounts": {
+    "RO": {
+      "transparencia": 3,
+      "diariooficial": 1,
+      "custom": 2,
+      "gov.br": 10,
+      "portaldatransparencia": 1,
+      "tce": 17
+    },
+    "RR": {
+      "imprensaoficial": 1,
+      "custom": 1
+    },
+    "AP": {
+      "gov.br": 12,
+      "tce": 15,
+      "custom": 1,
+      "portaldatransparencia": 3
+    },
+    "TO": {
+      "gov.br": 45,
+      "diariooficial": 10,
+      "custom": 12
+    },
+    "MA": {
+      "gov.br": 146,
+      "transparencia": 46,
+      "custom": 5,
+      "tce": 133,
+      "portaldatransparencia": 2,
+      "diariooficial": 6
+    },
+    "AC": {
+      "gov.br": 21,
+      "custom": 10,
+      "portaldatransparencia": 1
+    },
+    "MS": {
+      "gov.br": 4,
+      "portaldatransparencia": 2
+    },
+    "AM": {
+      "custom": 49,
+      "gov.br": 6,
+      "imprensaoficial": 1,
+      "diariooficial": 1
+    },
+    "PI": {
+      "tce": 72,
+      "custom": 9,
+      "transparencia": 3,
+      "gov.br": 126,
+      "diariooficial": 134
+    },
+    "PA": {
+      "custom": 133,
+      "gov.br": 37,
+      "diariooficial": 1,
+      "portaldatransparencia": 2
+    },
+    "RN": {
+      "portaldatransparencia": 31,
+      "gov.br": 14,
+      "diariooficial": 10
+    },
+    "PB": {
+      "gov.br": 26,
+      "tce": 49,
+      "transparencia": 1,
+      "portaldatransparencia": 3
+    },
+    "PE": {
+      "custom": 1,
+      "portaldatransparencia": 4,
+      "transparencia": 1,
+      "gov.br": 1
+    },
+    "AL": {
+      "gov.br": 2,
+      "tce": 2,
+      "custom": 1
+    },
+    "MG": {
+      "gov.br": 90,
+      "portaldatransparencia": 3,
+      "custom": 3
+    },
+    "ES": {
+      "portaldatransparencia": 1,
+      "tce": 6,
+      "gov.br": 5
+    },
+    "RJ": {
+      "gov.br": 10,
+      "tce": 10
+    },
+    "SP": {
+      "gov.br": 18,
+      "imprensaoficial": 20
+    },
+    "PR": {
+      "custom": 2,
+      "tce": 28,
+      "gov.br": 25,
+      "portaldatransparencia": 1
+    },
+    "SC": {
+      "gov.br": 32,
+      "tce": 33,
+      "custom": 1
+    },
+    "RS": {
+      "gov.br": 64,
+      "diariooficial": 17,
+      "custom": 5
+    },
+    "CE": {
+      "gov.br": 129,
+      "portaldatransparencia": 43,
+      "custom": 2,
+      "tce": 1,
+      "transparencia": 1
+    },
+    "MT": {
+      "gov.br": 16
+    },
+    "GO": {
+      "gov.br": 10
+    }
+  },
+  "totalMunicipios": 1806
+}
