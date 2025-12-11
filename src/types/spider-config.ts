@@ -48,6 +48,7 @@ export type SpiderType =
   | 'prefeituraitaquaquecetuba'
   | 'prefeiturapiraporadobomjesus'
   | 'eatos'
+  | 'prefeiturapiracicaba'
   | 'custom';
 
 /**
@@ -129,6 +130,7 @@ export type SpiderPlatformConfig =
   | PrefeituraItaquaquecetubaConfig
   | PrefeituraPiraporadobomjesusConfig
   | EatosConfig
+  | PrefeituraPiracicabaConfig
   | CustomConfig;
 
 /**
@@ -533,3 +535,17 @@ export interface EatosConfig {
   /** Base URL for the EATOS platform (e.g., "https://publicacoesmunicipais.com.br/eatos/ilhacomprida") */
   baseUrl: string;
 }
+
+/**
+ * Configuration for Prefeitura de Piracicaba spider
+ * 
+ * Site structure:
+ * - Page URL: https://diariooficial.piracicaba.sp.gov.br/{YYYY}/{MM}/{DD}/
+ * - PDF URL: https://files.pmp.sp.gov.br/semad/diariooficial/{YYYY}/{MM}/{YYYYMMDD}.pdf
+ */
+export interface PrefeituraPiracicabaConfig {
+  type: 'prefeiturapiracicaba';
+  /** Base URL for the Prefeitura Piracicaba platform (e.g., "https://diariooficial.piracicaba.sp.gov.br/") */
+  baseUrl: string;
+}
+

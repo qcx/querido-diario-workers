@@ -43,3 +43,4 @@ export * from './prefeiturapiraju-spider';
 export * from './prefeituraitaquaquecetuba-spider';
 export * from './prefeiturapiraporadobomjesus-spider';
 export * from './eatos-spider';
+export * from './prefeiturapiracicaba-spider';
