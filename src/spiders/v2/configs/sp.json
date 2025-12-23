@@ -1470,5 +1470,122 @@
         }
       }
     ]
+  },
+  {
+    "id": "sp_sao_bernardo_do_campo",
+    "name": "São Bernardo do Campo - SP",
+    "territoryId": "3548708",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/sao_bernardo_do_campo",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_santo_andre",
+    "name": "Santo André - SP",
+    "territoryId": "3547809",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://web.santoandre.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sorocaba",
+    "name": "Sorocaba - SP",
+    "territoryId": "3552205",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasorocaba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasorocaba",
+          "baseUrl": "https://noticias.sorocaba.sp.gov.br/jornal/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_piracicaba",
+    "name": "Piracicaba - SP",
+    "territoryId": "3538709",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapiracicaba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapiracicaba",
+          "baseUrl": "https://diariooficial.piracicaba.sp.gov.br/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_bauru",
+    "name": "Bauru - SP",
+    "territoryId": "3506003",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabauru",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabauru",
+          "baseUrl": "https://www2.bauru.sp.gov.br/juridico/diariooficial.aspx",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sao_jose_dos_campos",
+    "name": "São José dos Campos - SP",
+    "territoryId": "3549904",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariomunicipiosjc",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariomunicipiosjc",
+          "baseUrl": "https://diariodomunicipio.sjc.sp.gov.br"
+        }
+      }
+    ]
   }
 ]

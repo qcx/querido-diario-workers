@@ -1,4 +1,4 @@
-import { format, parse, eachMonthOfInterval, isWithinInterval, parseISO } from 'date-fns';
+import { format, parse, eachMonthOfInterval, eachDayOfInterval, isWithinInterval, parseISO } from 'date-fns';
 
 /**
  * Generates a sequence of month/year strings between two dates
@@ -133,4 +133,14 @@ export function formatBrazilianDate(date: Date): string {
  */
 export function getMonthlySequence(startDate: Date, endDate: Date): Date[] {
   return eachMonthOfInterval({ start: startDate, end: endDate });
+}
+
+/**
+ * Gets the sequence of days between two dates
+ * @param startDate Start date
+ * @param endDate End date
+ * @returns Array of Date objects (each day in the range)
+ */
+export function getDailySequence(startDate: Date, endDate: Date): Date[] {
+  return eachDayOfInterval({ start: startDate, end: endDate });
 }

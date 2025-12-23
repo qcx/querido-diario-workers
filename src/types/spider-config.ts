@@ -49,6 +49,9 @@ export type SpiderType =
   | 'prefeiturapiraporadobomjesus'
   | 'eatos'
   | 'prefeiturapiracicaba'
+  | 'prefeiturabauru'
+  | 'prefeiturasorocaba'
+  | 'diariomunicipiosjc'
   | 'custom';
 
 /**
@@ -131,6 +134,9 @@ export type SpiderPlatformConfig =
   | PrefeituraPiraporadobomjesusConfig
   | EatosConfig
   | PrefeituraPiracicabaConfig
+  | PrefeituraBauruConfig
+  | PrefeituraSorocabaConfig
+  | DiarioMunicipioSJCConfig
   | CustomConfig;
 
 /**
@@ -546,6 +552,59 @@ export interface EatosConfig {
 export interface PrefeituraPiracicabaConfig {
   type: 'prefeiturapiracicaba';
   /** Base URL for the Prefeitura Piracicaba platform (e.g., "https://diariooficial.piracicaba.sp.gov.br/") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Bauru spider
+ * 
+ * Site structure:
+ * - Page URL: https://www2.bauru.sp.gov.br/juridico/diariooficial.aspx
+ * - PDF URL: https://www2.bauru.sp.gov.br/arquivos/sist_diariooficial/{YYYY}/{MM}/do_{YYYYMMDD}_{EDITION}.pdf
+ * 
+ * Requires browser rendering due to ASP.NET postback and JavaScript-rendered accordion menu
+ */
+export interface PrefeituraBauruConfig {
+  type: 'prefeiturabauru';
+  /** Base URL for the Prefeitura Bauru platform (e.g., "https://www2.bauru.sp.gov.br/juridico/diariooficial.aspx") */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Sorocaba spider
+ * 
+ * Site structure:
+ * - Page URL: https://noticias.sorocaba.sp.gov.br/jornal/
+ * 
+ * Requires browser rendering for JavaScript-heavy pages
+ */
+export interface PrefeituraSorocabaConfig {
+  type: 'prefeiturasorocaba';
+  /** Base URL for the Prefeitura Sorocaba platform (e.g., "https://noticias.sorocaba.sp.gov.br/jornal/") */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Diário do Município de São José dos Campos spider
+ * 
+ * API Structure:
+ * - Editions by date: {baseUrl}/apifront/portal/edicoes/edicoes_from_data/{YYYY-MM-DD}.json
+ * - Download PDF: {baseUrl}/portal/edicoes/download/{id}
+ * 
+ * Response format:
+ * {
+ *   "erro": false,
+ *   "msg": "",
+ *   "itens": [{ "id": 2587, "data": "10/12/2025", "suplemento": 0, "numero": 3611, ... }]
+ * }
+ */
+export interface DiarioMunicipioSJCConfig {
+  type: 'diariomunicipiosjc';
+  /** Base URL for the Diário do Município SJC platform (e.g., "https://diariodomunicipio.sjc.sp.gov.br") */
   baseUrl: string;
 }
 

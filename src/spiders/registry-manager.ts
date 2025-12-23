@@ -65,7 +65,9 @@ import {
   PrefeituraItaquaquecetubaSpider,
   PrefeituraPiraporadobomjesusSpider,
   EatosSpider,
-  PrefeituraPiracicabaSpider
+  PrefeituraPiracicabaSpider,
+  PrefeituraBauruSpider,
+  DiarioMunicipioSJCSpider
 } from './base';
 import { DiarioOficialBRSpider } from './base/diario-oficial-br-spider';
 import { ModernizacaoSpider } from './base/modernizacao-spider';
@@ -524,6 +526,16 @@ export class SpiderRegistryManager {
           piracicabaSpider.setBrowser(browser);
         }
         return piracicabaSpider;
+      
+      case 'prefeiturabauru':
+        const bauruSpider = new PrefeituraBauruSpider(config, dateRange);
+        if (browser) {
+          bauruSpider.setBrowser(browser);
+        }
+        return bauruSpider;
+      
+      case 'diariomunicipiosjc':
+        return new DiarioMunicipioSJCSpider(config, dateRange);
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);
