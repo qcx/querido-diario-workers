@@ -67,7 +67,14 @@ import {
   EatosSpider,
   PrefeituraPiracicabaSpider,
   PrefeituraBauruSpider,
-  DiarioMunicipioSJCSpider
+  DiarioMunicipioSJCSpider,
+  PrefeiturasantoandreSpider,
+  PrefeituracampinasSpider,
+  PrefeituraosascoSpider,
+  PrefeiturasantosSpider,
+  PrefeituramauaSpider,
+  PrefeituradiademaSpider,
+  PrefeituracarapicuibaSpider
 } from './base';
 import { DiarioOficialBRSpider } from './base/diario-oficial-br-spider';
 import { ModernizacaoSpider } from './base/modernizacao-spider';
@@ -507,8 +514,7 @@ export class SpiderRegistryManager {
         return pirajuSpider;
       
       case 'prefeituraitaquaquecetuba':
-        const itaquaquecetubaSpider = new PrefeituraItaquaquecetubaSpider(config, dateRange, browser);
-        return itaquaquecetubaSpider;
+        return new PrefeituraItaquaquecetubaSpider(config, dateRange);
       
       case 'prefeiturapiraporadobomjesus':
         return new PrefeituraPiraporadobomjesusSpider(config, dateRange);
@@ -536,6 +542,31 @@ export class SpiderRegistryManager {
       
       case 'diariomunicipiosjc':
         return new DiarioMunicipioSJCSpider(config, dateRange);
+      
+      case 'prefeiturasantoandre':
+        const santoAndreSpider = new PrefeiturasantoandreSpider(config, dateRange);
+        if (browser) {
+          santoAndreSpider.setBrowser(browser);
+        }
+        return santoAndreSpider;
+      
+      case 'prefeituracampinas':
+        return new PrefeituracampinasSpider(config, dateRange);
+      
+      case 'prefeituraosasco':
+        return new PrefeituraosascoSpider(config, dateRange);
+      
+      case 'prefeiturasantos':
+        return new PrefeiturasantosSpider(config, dateRange);
+      
+      case 'prefeituramaua':
+        return new PrefeituramauaSpider(config, dateRange);
+      
+      case 'prefeituradiadema':
+        return new PrefeituradiademaSpider(config, dateRange);
+      
+      case 'prefeituracarapicuiba':
+        return new PrefeituracarapicuibaSpider(config, dateRange);
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);

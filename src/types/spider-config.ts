@@ -52,6 +52,13 @@ export type SpiderType =
   | 'prefeiturabauru'
   | 'prefeiturasorocaba'
   | 'diariomunicipiosjc'
+  | 'prefeiturasantoandre'
+  | 'prefeituracampinas'
+  | 'prefeituraosasco'
+  | 'prefeiturasantos'
+  | 'prefeituramaua'
+  | 'prefeituradiadema'
+  | 'prefeituracarapicuiba'
   | 'custom';
 
 /**
@@ -137,6 +144,13 @@ export type SpiderPlatformConfig =
   | PrefeituraBauruConfig
   | PrefeituraSorocabaConfig
   | DiarioMunicipioSJCConfig
+  | PrefeiturasantoandreConfig
+  | PrefeituracampinasConfig
+  | PrefeituraosascoConfig
+  | PrefeiturasantosConfig
+  | PrefeituramauaConfig
+  | PrefeituradiademaConfig
+  | PrefeituracarapicuibaConfig
   | CustomConfig;
 
 /**
@@ -606,5 +620,128 @@ export interface DiarioMunicipioSJCConfig {
   type: 'diariomunicipiosjc';
   /** Base URL for the Diário do Município SJC platform (e.g., "https://diariodomunicipio.sjc.sp.gov.br") */
   baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura Santo André spider
+ * 
+ * Site Structure:
+ * - Page URL: https://web.santoandre.sp.gov.br/portal/diario-oficial
+ * - Search form with date range filters
+ * - List of editions with "Ler online" and "Baixar" links
+ * - Pattern: "Edição nº XXXX", date in format DD/MM/YYYY
+ * 
+ * Based on Instar-like pattern with custom implementation
+ */
+export interface PrefeiturasantoandreConfig {
+  type: 'prefeiturasantoandre';
+  /** Base URL for the Prefeitura Santo André platform */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Campinas spider
+ * 
+ * API Structure:
+ * - Endpoint: https://portal-api.campinas.sp.gov.br/api/v1/publicacoes-dom/{type}/{YYYYMM}?_format=json
+ * - Response: Array of objects with dom_id, dom_edicao, dom_data_pub, dom_arquivo
+ * - PDF URL: https://portal-api.campinas.sp.gov.br{dom_arquivo}
+ */
+export interface PrefeituracampinasConfig {
+  type: 'prefeituracampinas';
+  /** Base API URL (e.g., "https://portal-api.campinas.sp.gov.br") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Osasco spider
+ * 
+ * Site Structure:
+ * - URL: https://osasco.sp.gov.br/imprensa-oficial/
+ * - Year tabs for filtering
+ * - List of IOMO editions with links to PDFs
+ * 
+ * Requires browser rendering for JavaScript content
+ */
+export interface PrefeituraosascoConfig {
+  type: 'prefeituraosasco';
+  /** Base URL for the Prefeitura Osasco platform */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Santos spider
+ * 
+ * Site Structure:
+ * - URL: https://diariooficial.santos.sp.gov.br/
+ * - Date range filter (from/to)
+ * - List of editions with "Leitura Digital" and "Download PDF" links
+ * 
+ * Requires browser rendering
+ */
+export interface PrefeiturasantosConfig {
+  type: 'prefeiturasantos';
+  /** Base URL for the Prefeitura Santos platform */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Mauá spider
+ * 
+ * Site Structure:
+ * - URL: https://dom.maua.sp.gov.br/
+ * - Filters by poder (executivo/legislativo) and categories
+ * - List of publications with links
+ * 
+ * Requires browser rendering
+ */
+export interface PrefeituramauaConfig {
+  type: 'prefeituramaua';
+  /** Base URL for the Prefeitura Mauá platform */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Diadema spider
+ * 
+ * Site Structure:
+ * - URL: https://diariooficial.diadema.sp.gov.br/
+ * - Search form with tipo, secretaria, date range
+ * - Grid of edition cards with links
+ * 
+ * Requires browser rendering
+ */
+export interface PrefeituradiademaConfig {
+  type: 'prefeituradiadema';
+  /** Base URL for the Prefeitura Diadema platform */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Carapicuíba spider
+ * 
+ * Site Structure:
+ * - URL: https://diario.carapicuiba.sp.gov.br/
+ * - Search by keyword, assunto, date range
+ * - List of editions with links
+ * 
+ * Requires browser rendering
+ */
+export interface PrefeituracarapicuibaConfig {
+  type: 'prefeituracarapicuiba';
+  /** Base URL for the Prefeitura Carapicuíba platform */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
 }
 

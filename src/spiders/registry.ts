@@ -1,5 +1,5 @@
 import { SpiderConfig, SpiderType, DateRange } from '../types';
-import { BaseSpider, DoemSpider, InstarSpider, DospSpider, DiofSpider, ADiariosV1Spider, SigpubSpider, BarcoDigitalSpider, SiganetSpider, RondoniaSpider, AcreSpider, EspiritoSantoSpider, DomunicipalSpider, ImprensaOficialJundiaiSpider, PrefeituraRioPretoSpider, PrefeituraItirapuaSpider, PrefeituraNovaOdessaSpider, PrefeituraMogiDasCruzesSpider, PrefeituraSaoJoaoDaBoaVistaSpider, PrefeituraBatataisSpider, PrefeituraCajamarSpider, PrefeituraCosmopolisSpider, PrefeituraCotiaSpider, PrefeituraGuarulhosSpider, PrefeituraItatibaSpider, PrefeituraMairiporaSpider, PrefeituraNarandibaSpider, PrefeituraPirajuSpider, PrefeituraItaquaquecetubaSpider, EatosSpider, PrefeituraPiracicabaSpider, PrefeituraBauruSpider, DiarioMunicipioSJCSpider } from './base';
+import { BaseSpider, DoemSpider, InstarSpider, DospSpider, DiofSpider, ADiariosV1Spider, SigpubSpider, BarcoDigitalSpider, SiganetSpider, RondoniaSpider, AcreSpider, EspiritoSantoSpider, DomunicipalSpider, ImprensaOficialJundiaiSpider, PrefeituraRioPretoSpider, PrefeituraItirapuaSpider, PrefeituraNovaOdessaSpider, PrefeituraMogiDasCruzesSpider, PrefeituraSaoJoaoDaBoaVistaSpider, PrefeituraBatataisSpider, PrefeituraCajamarSpider, PrefeituraCosmopolisSpider, PrefeituraCotiaSpider, PrefeituraGuarulhosSpider, PrefeituraItatibaSpider, PrefeituraMairiporaSpider, PrefeituraNarandibaSpider, PrefeituraPirajuSpider, PrefeituraItaquaquecetubaSpider, EatosSpider, PrefeituraPiracicabaSpider, PrefeituraBauruSpider, DiarioMunicipioSJCSpider, PrefeiturasantoandreSpider, PrefeituramauaSpider, PrefeituradiademaSpider, PrefeituracarapicuibaSpider } from './base';
 import { DiarioOficialBRSpider } from './base/diario-oficial-br-spider';
 import { ModernizacaoSpider } from './base/modernizacao-spider';
 import { ADiariosV2Spider } from './base/adiarios-v2-spider';
@@ -382,6 +382,22 @@ class SpiderRegistry {
       
       case 'diariomunicipiosjc':
         return new DiarioMunicipioSJCSpider(config, dateRange);
+      
+      case 'prefeiturasantoandre':
+        const santoAndreSpider = new PrefeiturasantoandreSpider(config, dateRange);
+        if (browser) {
+          santoAndreSpider.setBrowser(browser);
+        }
+        return santoAndreSpider;
+      
+      case 'prefeituramaua':
+        return new PrefeituramauaSpider(config, dateRange);
+      
+      case 'prefeituradiadema':
+        return new PrefeituradiademaSpider(config, dateRange);
+      
+      case 'prefeituracarapicuiba':
+        return new PrefeituracarapicuibaSpider(config, dateRange);
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);
