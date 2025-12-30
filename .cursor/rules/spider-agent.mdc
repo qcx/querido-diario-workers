@@ -1,0 +1,394 @@
+---
+description: Agent para criação automatizada de spiders de diários oficiais
+globs:
+  - src/spiders/**
+  - scripts/spider-agent/**
+alwaysApply: false
+---
+
+# 🕷️ Spider Creation Agent
+
+## Contexto
+
+Você é um agent especializado em **CRIAR** spiders para coleta de diários oficiais de municípios brasileiros.
+
+**AQUI O FOCO É NOS SITES CUSTOMIZADOS DE CADA MUNICIPIO**
+
+## Trigger
+
+Ative este agent quando o usuário mencionar:
+
+- "criar spider"
+- "adicionar cidade"
+- "processar CSV de cidades"
+- "spider agent"
+- "novo spider"
+
+---
+
+# 📋 FLUXO PRINCIPAL DO AGENTE
+
+## PASSO 1: Pool das Cidades
+
+```
+1. Ler o arquivo CSV fornecido
+2. Extrair lista de todas as cidades com suas URLs
+3. Buscar códigos IBGE para todas as cidades de SP
+4. Verificar quais cidades já existem no sp.json e com spiderType válido
+```
+
+## PASSO 2: Processar Cidade por Cidade
+
+```
+PARA CADA cidade no CSV:
+  │
+  ├─ VERIFICAR: Cidade já existe no sp.json e se tem spiderType válido?
+  │     └─ SIM → status: "skipped_already_exists" → PRÓXIMA CIDADE
+  │
+  ├─ ANALISAR URL da cidade
+  │
+  ├─ DECISÃO 1: É plataforma centralizada?
+  │     │
+  │     └─ SIM (URL contém domínio de plataforma conhecida)
+  │           └─ Criar config JSON usando spiderType EXISTENTE
+  │           └─ status: "used_existing_spider"
+  │           └─ PRÓXIMA CIDADE
+  │
+  ├─ DECISÃO 2: É site próprio da prefeitura?
+  │     │
+  │     └─ SIM → Navegar via browser_navigate + browser_snapshot
+  │           │
+  │           ├─ Site offline/erro/login? → needs_review
+  │           │
+  │           └─ Analisar compatibilidade com spiderTypes existentes
+  │                 │
+  │                 ├─ >= 70% match? → CRIAR NOVO spiderType
+  **AQUI O FOCO É NOS SITES CUSTOMIZADOS DE CADA MUNICIPIO**
+  │                 │     └─ Criar TODOS os 6 arquivos
+  │                 │     └─ status: "created_new_spider"
+  │                 │
+  │                 └─ < 70% match? → needs_review
+  │                       └─ Incluir análise detalhada do porquê
+  │
+  └─ PRÓXIMA CIDADE
+```
+
+PS.: é necessário gerar um crawl para essa cidade em questão e verificar se tem um OCR result válido, o curl de exemplo ta no final deste arquivo.
+-> SE não tiver um OCR result válido refazer o spider dessa cidade
+
+## PASSO 3: Gerar Relatório Final
+
+```
+1. Coletar todos os resultados
+2. Dizer quanto tempo demorou o trabalho completo
+3. VERIFICAR: Todos os spiderTypes no sp.json têm seus arquivos .ts?
+   └─ Se não, voltar e criar os arquivos faltantes
+4. Calcular summary
+5. Salvar em scripts/spider-agent/reports/{timestamp}-report.json
+```
+
+---
+
+# 🔍 COMO IDENTIFICAR O TIPO DE URL
+
+## Plataformas Centralizadas (Reutilizar spiderType existente)
+
+Tudo que for municipal não da pra aproveitar
+
+**Ação:** Apenas criar config JSON em `sp.json` usando o spiderType existente.
+
+## Sites Próprios da Prefeitura (Analisar via Browser)
+
+URLs que são domínios próprios da prefeitura:
+
+- `diariooficial.{cidade}.sp.gov.br`
+- `prefeitura.{cidade}.sp.gov.br`
+- `{cidade}.sp.gov.br/diario-oficial`
+- `dom.{cidade}.sp.gov.br`
+- Qualquer outro domínio que NÃO seja uma plataforma centralizada
+
+**Ação:** Navegar via browser e analisar compatibilidade.
+
+---
+
+# 🔬 ANÁLISE DE COMPATIBILIDADE (Site Próprio)
+
+## O que analisar no browser:
+
+1. **Estrutura da página:**
+
+   - Lista de publicações/diários
+   - Calendário de edições
+   - Formulário de busca por data
+   - API JSON sendo chamada
+
+2. **Elementos chave:**
+   - Links para PDFs
+   - Datas das publicações
+   - Números de edição
+   - Paginação
+
+## Padrões de Referência para Match:
+
+| Padrão do Site                         | Spider de Referência para copiar |
+| -------------------------------------- | -------------------------------- |
+| Lista de publicações com links diretos | `instar-spider.ts`               |
+| Calendário visual com dias clicáveis   | `prefeiturabauru-spider.ts`      |
+| API JSON retornando dados              | `barco-digital-spider.ts`        |
+| Lista simples de links                 | `dioenet-spider.ts`              |
+| Tabela com download                    | `prefeituraguarulhos-spider.ts`  |
+
+## Decisão de Match:
+
+### >= 70% de compatibilidade (CRIAR NOVO SPIDER):
+
+- Consegue identificar claramente a estrutura HTML
+- Encontra os seletores CSS para: lista de diários, links PDF, datas
+- Padrão similar a algum spider existente
+- **→ CRIAR NOVO spiderType do zero baseado no spider de referência**
+
+### < 70% de compatibilidade - AINDA ASSIM TENTE!
+
+**ANTES de marcar needs_review, você DEVE:**
+
+1. Abrir o DevTools (via browser_snapshot) e inspecionar a estrutura
+2. Procurar por APIs JSON sendo chamadas (Network tab)
+3. Tentar pelo menos 3 abordagens diferentes de seletores
+4. Verificar se há iframe com conteúdo
+5. Procurar padrões alternativos na página
+
+**SÓ marque needs_review se TODAS as tentativas falharem E o site for realmente impossível.**
+
+### needs_review (ÚLTIMO RECURSO):
+
+- Estrutura HTML realmente impossível após múltiplas tentativas
+- Site usa tecnologia proprietária sem acesso público
+- **→ Retornar needs_review com TODAS as tentativas documentadas**
+
+---
+
+# ⚠️ CRIANDO NOVO SPIDER - CHECKLIST OBRIGATÓRIO
+
+**TODOS os 6 arquivos devem ser criados/modificados:**
+
+```
+☐ 1. src/types/spider-config.ts
+     - Adicionar 'prefeitura{cidade}' ao union SpiderType
+     - Adicionar Prefeitura{Cidade}Config ao union SpiderPlatformConfig
+     - Criar interface Prefeitura{Cidade}Config
+
+☐ 2. src/spiders/base/prefeitura{cidade}-spider.ts (CRIAR NOVO)
+     - Copiar código do spider de referência que deu match
+     - Adaptar seletores CSS para o site específico
+     - Implementar lógica de extração
+
+☐ 3. src/spiders/base/index.ts
+     - Adicionar: export * from './prefeitura{cidade}-spider';
+
+☐ 4. src/spiders/registry.ts
+     - Adicionar import da classe
+     - Adicionar case no switch
+
+☐ 5. src/spiders/registry-manager.ts
+     - Adicionar import da classe
+     - Adicionar case no switch
+
+☐ 6. src/spiders/v2/configs/sp.json
+     - Adicionar config da cidade usando o NOVO spiderType
+```
+
+**⛔ NÃO adicione config no sp.json com spiderType que não existe! ⛔**
+
+---
+
+# 📝 TEMPLATES
+
+## Template: Config para Plataforma Centralizada
+
+```json
+{
+  "id": "sp_{cidade_slug}",
+  "name": "{Cidade} - SP",
+  "territoryId": "{codigo_ibge}",
+  "stateCode": "SP",
+  "active": true,
+  "spiders": [
+    {
+      "spiderType": "{spiderType_existente}",
+      "priority": 1,
+      "active": true,
+      "gazetteScope": "city",
+      "config": {
+        "type": "{spiderType_existente}",
+        "baseUrl": "{url_do_csv}",
+        "requiresClientRendering": true or false,
+        "citySlug": "{slug_cidade}"
+      }
+    }
+  ]
+}
+```
+
+# 📊 FORMATO DO RELATÓRIO
+
+```json
+{
+  "timestamp": "2025-12-26T15:00:00Z",
+  "csvFile": "nome_do_arquivo.csv",
+  "summary": {
+    "total": 20,
+    "created_new_spider": 5,
+    "used_existing_spider": 8,
+    "skipped_already_exists": 4,
+    "needs_review": 3
+  },
+  "results": [...]
+}
+```
+
+## Status: created_new_spider
+
+```json
+{
+  "cidade": "Ribeirão Preto",
+  "url": "https://diariooficial.ribeirao.sp.gov.br",
+  "status": "created_new_spider",
+  "spiderType": "prefeiturariberiao",
+  "territoryId": "3543402",
+  "matchedPattern": "instar",
+  "matchScore": 85,
+  "filesCreated": [
+    "src/types/spider-config.ts (updated)",
+    "src/spiders/base/prefeiturariberiao-spider.ts (created)",
+    "src/spiders/base/index.ts (updated)",
+    "src/spiders/registry.ts (updated)",
+    "src/spiders/registry-manager.ts (updated)",
+    "src/spiders/v2/configs/sp.json (updated)"
+  ],
+  "testResult": "success",
+  "gazettesFound": 5
+}
+```
+
+## Status: used_existing_spider
+
+```json
+{
+  "cidade": "São Bernardo do Campo",
+  "url": "https://imprensaoficialmunicipal.com.br/sao_bernardo_do_campo",
+  "status": "used_existing_spider",
+  "spiderType": "imprensaoficialmunicipal",
+  "territoryId": "3548708",
+  "filesCreated": ["src/spiders/v2/configs/sp.json (updated)"]
+}
+```
+
+## Status: skipped_already_exists
+
+```json
+{
+  "cidade": "Guarulhos",
+  "url": "https://diariooficial.guarulhos.sp.gov.br/",
+  "status": "skipped_already_exists",
+  "existingSpider": "prefeituraguarulhos"
+}
+```
+
+## Status: needs_review (APENAS PARA CASOS IMPOSSÍVEIS)
+
+```json
+{
+  "cidade": "Cidade Exemplo",
+  "url": "https://exemplo.sp.gov.br",
+  "status": "needs_review",
+  "reason": "Site requer autenticação - impossível acessar sem login",
+  "attemptsLog": [
+    "Tentativa 1: Acessar URL principal - redirecionou para login",
+    "Tentativa 2: Verificar se há área pública - não encontrada",
+    "Tentativa 3: Buscar API pública - não existe"
+  ],
+  "analysis": {
+    "impossibleReason": "Acesso restrito por autenticação",
+    "siteStatus": "online mas requer login",
+    "recommendation": "Contatar prefeitura para solicitar acesso público ou API"
+  }
+}
+```
+
+**⚠️ OBRIGATÓRIO: O campo `attemptsLog` deve listar TODAS as tentativas feitas antes de desistir!**
+
+---
+
+# ⚠️ REGRAS CRÍTICAS
+
+## ⛔⛔⛔ PROIBIDO PULAR CIDADE POR SER "COMPLEXA" ⛔⛔⛔
+
+**VOCÊ NÃO PODE:**
+
+- ❌ Dizer "site complexo, vou marcar como needs_review"
+- ❌ Pular para cidade "mais fácil"
+- ❌ Deixar para depois porque é "difícil"
+- ❌ Marcar needs_review só porque exige mais trabalho
+
+**VOCÊ DEVE:**
+
+- ✅ TENTAR criar o spider para CADA cidade
+- ✅ Se o site carrega e mostra diários, VOCÊ CONSEGUE criar o spider
+- ✅ Analisar a estrutura HTML até encontrar os seletores
+- ✅ Testar diferentes abordagens até funcionar
+- ✅ SÓ marcar needs_review se for IMPOSSÍVEL (offline, login, Flash)
+
+**needs_review SÓ É VÁLIDO PARA:**
+
+- Site offline/retorna erro 500/404
+- Requer login/autenticação
+- Usa Flash/Java Applet
+- Diários são imagens (não PDF)
+- Estrutura realmente impossível de mapear após MÚLTIPLAS tentativas
+
+## Processamento Automático
+
+- ✅ Processar TODAS as cidades sem pedir confirmação
+- ✅ RESOLVER cada cidade antes de passar para a próxima
+- ✅ Gerar relatório final consolidado
+
+## Verificação Antes de Avançar
+
+Após criar um novo spider, verificar se TODOS os 6 arquivos existem:
+
+1. `spider-config.ts` - tipo adicionado?
+2. `prefeitura{cidade}-spider.ts` - arquivo existe?
+3. `base/index.ts` - export adicionado?
+4. `registry.ts` - case adicionado?
+5. `registry-manager.ts` - case adicionado?
+6. `sp.json` - config adicionada?
+
+## Verificação Final
+
+Antes de gerar o relatório, verificar se todos os spiderTypes referenciados no `sp.json` têm seus arquivos `.ts` correspondentes. Se não, voltar e criar.
+
+---
+
+# 📋 RESUMO DE DECISÃO
+
+| Situação                              | Ação                                          |
+| ------------------------------------- | --------------------------------------------- |
+| URL de plataforma centralizada (SaaS) | Criar config JSON usando spiderType EXISTENTE |
+| Site próprio + >= 70% match           | CRIAR NOVO spiderType (6 arquivos)            |
+| Site próprio + < 70% match            | needs_review com análise detalhada            |
+| Site offline/login/erro               | needs_review                                  |
+| Spider já existe para cidade          | skipped_already_exists                        |
+
+---
+
+# 🚀 COMANDO PARA INICIAR
+
+```bash
+# Verificar/iniciar servidor
+bun run goodfellow:dev
+
+# Testar spider criado
+curl -s 'http://localhost:{PORT}/crawl' \
+-H 'Content-Type: application/json' \
+-d '{"cities": ["sp_{cidade_slug}"], "version": "v2", "startDate": "{7_dias_atras}"}'
+```
