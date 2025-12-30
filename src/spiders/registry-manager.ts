@@ -74,7 +74,17 @@ import {
   PrefeiturasantosSpider,
   PrefeituramauaSpider,
   PrefeituradiademaSpider,
-  PrefeituracarapicuibaSpider
+  PrefeituracarapicuibaSpider,
+  GdoeSpider,
+  OnedomSpider,
+  AssistechSpider,
+  CesproSpider,
+  GeosiapSpider,
+  LegislacaoDigitalSpider,
+  PrefeiturasaopauloSpider,
+  PrefeiturasaovicenteSpider,
+  PrefeiturafrancaSpider,
+  PrefeituraguarujaSpider
 } from './base';
 import { DiarioOficialBRSpider } from './base/diario-oficial-br-spider';
 import { ModernizacaoSpider } from './base/modernizacao-spider';
@@ -567,6 +577,64 @@ export class SpiderRegistryManager {
       
       case 'prefeituracarapicuiba':
         return new PrefeituracarapicuibaSpider(config, dateRange);
+      
+      case 'gdoe':
+        return new GdoeSpider(config, dateRange);
+      
+      case 'onedom':
+        return new OnedomSpider(config, dateRange);
+      
+      case 'assistech':
+        return new AssistechSpider(config, dateRange);
+      
+      case 'cespro':
+        const cesproSpider = new CesproSpider(config, dateRange);
+        if (browser) {
+          cesproSpider.setBrowser(browser);
+        }
+        return cesproSpider;
+      
+      case 'geosiap':
+        const geosiapSpider = new GeosiapSpider(config, dateRange);
+        if (browser) {
+          geosiapSpider.setBrowser(browser);
+        }
+        return geosiapSpider;
+      
+      case 'legislacaodigital':
+        const legislacaoSpider = new LegislacaoDigitalSpider(config, dateRange);
+        if (browser) {
+          legislacaoSpider.setBrowser(browser);
+        }
+        return legislacaoSpider;
+      
+      case 'prefeiturasaopaulo':
+        const spSpider = new PrefeiturasaopauloSpider(config, dateRange);
+        if (browser) {
+          spSpider.setBrowser(browser);
+        }
+        return spSpider;
+
+      case 'prefeiturasaovicente':
+        const saoVicenteSpider = new PrefeiturasaovicenteSpider(config, dateRange);
+        if (browser) {
+          saoVicenteSpider.setBrowser(browser);
+        }
+        return saoVicenteSpider;
+
+      case 'prefeiturafranca':
+        const francaSpider = new PrefeiturafrancaSpider(config, dateRange);
+        if (browser) {
+          francaSpider.setBrowser(browser);
+        }
+        return francaSpider;
+
+      case 'prefeituraguaruja':
+        const guarujaSpider = new PrefeituraguarujaSpider(config, dateRange);
+        if (browser) {
+          guarujaSpider.setBrowser(browser);
+        }
+        return guarujaSpider;
       
       case 'custom':
         throw new Error(`Custom spider ${config.id} not implemented`);

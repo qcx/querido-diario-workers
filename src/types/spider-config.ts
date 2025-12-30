@@ -59,6 +59,13 @@ export type SpiderType =
   | 'prefeituramaua'
   | 'prefeituradiadema'
   | 'prefeituracarapicuiba'
+  | 'gdoe'
+  | 'onedom'
+  | 'assistech'
+  | 'cespro'
+  | 'geosiap'
+  | 'legislacaodigital'
+  | 'prefeiturasaopaulo'
   | 'custom';
 
 /**
@@ -151,6 +158,16 @@ export type SpiderPlatformConfig =
   | PrefeituramauaConfig
   | PrefeituradiademaConfig
   | PrefeituracarapicuibaConfig
+  | GdoeConfig
+  | OnedomConfig
+  | AssistechConfig
+  | CesproConfig
+  | GeosiapConfig
+  | LegislacaoDigitalConfig
+  | PrefeiturasaopauloConfig
+  | PrefeiturasaovicenteConfig
+  | PrefeiturafrancaConfig
+  | PrefeituraguarujaConfig
   | CustomConfig;
 
 /**
@@ -278,6 +295,8 @@ export interface AplusConfig {
 export interface DioenetConfig {
   type: 'dioenet';
   baseUrl: string;
+  /** City ID used in the dioenet API (e.g., 36 for Praia Grande) */
+  cityId: number;
 }
 
 export interface AdministracaoPublicaConfig {
@@ -743,5 +762,122 @@ export interface PrefeituracarapicuibaConfig {
   baseUrl: string;
   /** Whether this spider requires client-side rendering */
   requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for GDOE platform spider
+ * Used by municipalities like Assis and Artur Nogueira
+ */
+export interface GdoeConfig {
+  type: 'gdoe';
+  /** Base URL for the GDOE platform (e.g., "https://www.gdoe.com.br/assis") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for 1DOM platform spider
+ * Used by municipalities like Araraquara and Pindamonhangaba
+ */
+export interface OnedomConfig {
+  type: 'onedom';
+  /** Base URL for the 1DOM platform (e.g., "https://araraquara.1dom.com.br") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Assistech Publicações platform spider
+ * Used by municipalities like Araras
+ */
+export interface AssistechConfig {
+  type: 'assistech';
+  /** Base URL for the Assistech platform (e.g., "https://assistechpublicacoes.com.br/app/pmararassp/diario-oficial") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for CESPRO platform spider
+ * Used by municipalities like Ribeirão Preto and São Sebastião
+ */
+export interface CesproConfig {
+  type: 'cespro';
+  /** Base URL for the CESPRO platform */
+  baseUrl: string;
+  /** Municipality code in CESPRO system (e.g., "9314" for Ribeirão Preto) */
+  cdMunicipio: string;
+}
+
+/**
+ * Configuration for GeoSIAP platform spider
+ * Used by municipalities like Jacareí
+ */
+export interface GeosiapConfig {
+  type: 'geosiap';
+  /** Base URL for the GeoSIAP platform (e.g., "https://boletinsoficiais.geosiap.net/pmjacarei/public/publicacoes") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Legislação Digital platform spider
+ * Used by municipalities like Arujá
+ */
+export interface LegislacaoDigitalConfig {
+  type: 'legislacaodigital';
+  /** Base URL for the Legislação Digital platform (e.g., "https://www.legislacaodigital.com.br/Aruja-SP/") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de São Paulo spider
+ * The capital has a unique portal structure
+ */
+export interface PrefeiturasaopauloConfig {
+  type: 'prefeiturasaopaulo';
+  /** Base URL for the Prefeitura São Paulo platform */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de São Vicente spider
+ * 
+ * Site uses Plone CMS (gov.cidades theme) with PDF listings
+ * PDFs are at: /transparencia/bom/bom-edicao-{EDITION}-{DDMMYYYY}-versaoimpressao.pdf/view
+ */
+export interface PrefeiturasaovicenteConfig {
+  type: 'prefeiturasaovicente';
+  /** Base URL for the São Vicente BOM page */
+  baseUrl: string;
+}
+
+/**
+ * Alias for Plone portal config (used by some spiders)
+ */
+export type PlonePortalConfig = PrefeiturasaovicenteConfig;
+
+/**
+ * Configuration for Prefeitura de Franca spider
+ * 
+ * Site uses custom AngularJS app with REST API
+ * API: /pmf-diario/rest/diario/buscaPorArquivo/DD-MM-YYYY
+ * PDFs at: https://webpmf.franca.sp.gov.br/arquivos/diario-oficial/documentos/
+ */
+export interface PrefeiturafrancaConfig {
+  type: 'prefeiturafranca';
+  /** Base URL for the Franca portal */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Guarujá spider
+ * 
+ * Site uses WordPress with custom API
+ * API: /list-diario-oficial?data=YYYY-MM
+ * Returns JSON with PDFs in metas.pdf
+ */
+export interface PrefeituraguarujaConfig {
+  type: 'prefeituraguaruja';
+  /** Base URL for the Guarujá portal */
+  baseUrl: string;
 }
 

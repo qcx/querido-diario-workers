@@ -4,83 +4,78 @@ import { SpiderConfig, PrefeituradiademaConfig } from '../../types/spider-config
 import { DateRange } from '../../types';
 import { logger } from '../../utils/logger';
 
+interface Publication {
+  pdfUrl: string;
+  date: string; // YYYY-MM-DD format
+  editionNumber?: string;
+}
+
 /**
  * Spider for Prefeitura de Diadema - Diário Oficial
  * 
  * Site Structure:
- * - URL: https://diariooficial.diadema.sp.gov.br/
- * - Search form with tipo, secretaria, date range
- * - Grid of edition cards with links
+ * - Main site: https://diariooficial.diadema.sp.gov.br/
+ * - Uses ScriptCase application for document management
+ * - API endpoint: /appconsulta_sc/appconsulta_sc_mobile/
+ * - PDFs hosted at: https://arquivosanexos.diadema.sp.gov.br/arquivos_diario_oficial/publicacoes/
  * 
- * The site provides a list of gazette editions that can be filtered.
+ * PDF URL pattern:
+ * - https://arquivosanexos.diadema.sp.gov.br/arquivos_diario_oficial/publicacoes/{YEAR}/{ID}/{DDMMYYYY}_DOE_Diadema_{EDITION}.pdf
+ * - Date format in filename: DDMMYYYY
  */
 export class PrefeituradiademaSpider extends BaseSpider {
   private baseUrl: string;
+  private mobileApiUrl: string;
 
   constructor(config: SpiderConfig, dateRange: DateRange) {
     super(config, dateRange);
     const diademaConfig = config.config as PrefeituradiademaConfig;
     this.baseUrl = diademaConfig.baseUrl || 'https://diariooficial.diadema.sp.gov.br';
+    this.mobileApiUrl = `${this.baseUrl}/appconsulta_sc/appconsulta_sc_mobile/`;
   }
 
   async crawl(): Promise<Gazette[]> {
     const gazettes: Gazette[] = [];
+    const seenUrls = new Set<string>();
 
-    logger.info(`Crawling Diadema gazettes from ${this.baseUrl}...`);
+    logger.info(`Crawling Diadema gazettes from ${this.mobileApiUrl}...`);
 
     try {
-      const response = await fetch(this.baseUrl);
+      const response = await fetch(this.mobileApiUrl, {
+        headers: {
+          'Accept': 'text/html',
+          'User-Agent': 'Mozilla/5.0 (compatible; QDSpider/1.0)',
+        }
+      });
       
       if (!response.ok) {
-        logger.error(`Failed to fetch ${this.baseUrl}: ${response.status}`);
+        logger.error(`Failed to fetch ${this.mobileApiUrl}: ${response.status}`);
         return gazettes;
       }
 
       const html = await response.text();
-      
-      // Extract gazette links from the page
-      // Pattern matches PDF links and gazette edition pages
-      const gazettePattern = /<a[^>]*href="([^"]*(?:diario|edicao|pdf)[^"]*)"[^>]*>/gi;
-      const datePattern = /(\d{2})\/(\d{2})\/(\d{4})/g;
-      
-      let match;
-      while ((match = gazettePattern.exec(html)) !== null) {
-        const url = match[1];
-        
-        // Try to extract date from URL or nearby text
-        const urlDateMatch = url.match(/(\d{4})-(\d{2})-(\d{2})/);
-        let dateStr: string;
-        
-        if (urlDateMatch) {
-          dateStr = `${urlDateMatch[1]}-${urlDateMatch[2]}-${urlDateMatch[3]}`;
-        } else {
-          // Use current context to find date
-          const contextStart = Math.max(0, match.index - 100);
-          const contextEnd = Math.min(html.length, match.index + 200);
-          const context = html.substring(contextStart, contextEnd);
-          
-          const dateMatch = context.match(/(\d{2})\/(\d{2})\/(\d{4})/);
-          if (dateMatch) {
-            dateStr = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`;
-          } else {
-            continue;
-          }
+      const publications = this.extractPublications(html);
+
+      for (const pub of publications) {
+        const pubDate = new Date(pub.date);
+
+        if (pubDate > this.endDate) continue;
+        if (pubDate < this.startDate) continue;
+
+        if (!seenUrls.has(pub.pdfUrl)) {
+          seenUrls.add(pub.pdfUrl);
+
+          const gazette: Gazette = {
+            date: pub.date,
+            fileUrl: pub.pdfUrl,
+            territoryId: this.config.territoryId,
+            scrapedAt: new Date().toISOString(),
+            editionNumber: pub.editionNumber,
+            power: 'executive',
+          };
+
+          gazettes.push(gazette);
         }
-
-        const documentDate = new Date(dateStr);
-
-        if (documentDate > this.endDate) continue;
-        if (documentDate < this.startDate) continue;
-
-        const gazette: Gazette = {
-          date: dateStr,
-          fileUrl: url.startsWith('http') ? url : `${this.baseUrl}${url}`,
-          territoryId: this.config.territoryId,
-          scrapedAt: new Date().toISOString(),
-          power: 'executive',
-        };
-
-        gazettes.push(gazette);
       }
 
       logger.info(`Successfully crawled ${gazettes.length} gazettes for ${this.config.name}`);
@@ -89,6 +84,35 @@ export class PrefeituradiademaSpider extends BaseSpider {
       logger.error(`Error crawling Diadema gazettes: ${error}`);
       return gazettes;
     }
+  }
+
+  private extractPublications(html: string): Publication[] {
+    const publications: Publication[] = [];
+    
+    // Pattern for PDF URLs:
+    // https://arquivosanexos.diadema.sp.gov.br/arquivos_diario_oficial/publicacoes/2025/1174/29122025_DOE_Diadema_1027.pdf
+    const pdfPattern = /href="(https:\/\/arquivosanexos\.diadema\.sp\.gov\.br\/arquivos_diario_oficial\/publicacoes\/\d{4}\/\d+\/(\d{8})_DOE_Diadema_(\d+)\.pdf)"/gi;
+    
+    let match;
+    while ((match = pdfPattern.exec(html)) !== null) {
+      const pdfUrl = match[1];
+      const dateStr = match[2]; // DDMMYYYY
+      const editionNumber = match[3];
+
+      // Parse date from DDMMYYYY format
+      const day = dateStr.substring(0, 2);
+      const month = dateStr.substring(2, 4);
+      const year = dateStr.substring(4, 8);
+      const isoDate = `${year}-${month}-${day}`;
+
+      publications.push({
+        pdfUrl,
+        date: isoDate,
+        editionNumber,
+      });
+    }
+
+    return publications;
   }
 }
 

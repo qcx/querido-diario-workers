@@ -16,7 +16,7 @@ import { logger } from '../../utils/logger';
  * - Each document has: dom_id, dom_edicao, dom_data_pub (DD/MM/YYYY), dom_arquivo, dom_extra_arquivo
  * 
  * File URLs:
- * - Base URL: https://campinas.sp.gov.br
+ * - Base URL: https://portal-api.campinas.sp.gov.br (not the main campinas.sp.gov.br domain)
  * - PDF path: {dom_arquivo}
  * 
  * Extra Editions:
@@ -24,7 +24,8 @@ import { logger } from '../../utils/logger';
  */
 export class PrefeituracampinasSpider extends BaseSpider {
   private apiBaseUrl = 'https://portal-api.campinas.sp.gov.br';
-  private fileBaseUrl = 'https://campinas.sp.gov.br';
+  // Note: PDF files are hosted on portal-api subdomain, not the main campinas.sp.gov.br
+  private fileBaseUrl = 'https://portal-api.campinas.sp.gov.br';
 
   constructor(config: SpiderConfig, dateRange: DateRange) {
     super(config, dateRange);
