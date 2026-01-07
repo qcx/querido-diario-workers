@@ -86,8 +86,9 @@ export class CesproSpider extends BaseSpider {
         // Extract gazette links for this month
         const monthGazettes = await this.extractGazettesForMonth(page, year, month);
         
+        // Add all gazettes from this month (date filtering already done in extractGazettesForMonth)
         for (const gazette of monthGazettes) {
-          if (gazette && this.isInDateRange(new Date(gazette.date))) {
+          if (gazette) {
             gazettes.push(gazette);
           }
         }
@@ -125,7 +126,7 @@ export class CesproSpider extends BaseSpider {
       
       // Select year
       await page.evaluate((yr: number) => {
-        const yearSelect = document.querySelector('select[name*="ano"], select:has(option[value="2025"])') as HTMLSelectElement;
+        const yearSelect = document.querySelector('select[name*="ano"], select:has(option[value="2025"])') as unknown as HTMLSelectElement | null;
         if (yearSelect) {
           yearSelect.value = yr.toString();
           yearSelect.dispatchEvent(new Event('change', { bubbles: true }));
@@ -214,33 +215,52 @@ export class CesproSpider extends BaseSpider {
           
           // Extract gazette info from the expanded view
           const gazetteInfo = await page.evaluate(() => {
-            const results: Array<{editionNumber: string, pdfUrl: string | null}> = [];
+            const results: Array<{editionNumber: string, pdfUrl: string | null, isSupplementar: boolean}> = [];
             
-            // Look for edition info and download links
-            const downloadLinks = document.querySelectorAll('a[href*="download"], a:has(button:contains("Download"))');
+            // CESPRO shows gazettes in a modal/accordion with Download links
+            // The structure is: div containing edition info + Download/Leitura Digital links
             
-            for (const link of Array.from(downloadLinks)) {
+            // First try to find all download links
+            const allLinks = document.querySelectorAll('a');
+            
+            for (const link of Array.from(allLinks)) {
               const href = link.getAttribute('href');
-              // Try to find edition number nearby
-              const container = link.closest('div, tr, li');
-              const text = container?.textContent || '';
-              const editionMatch = text.match(/[Ee]di[çc][ãa]o\s+[nN]?[°º]?\s*(\d+\.?\d*)/i);
+              const linkText = link.textContent?.trim() || '';
               
-              results.push({
-                editionNumber: editionMatch ? editionMatch[1].replace('.', '') : 'N/A',
-                pdfUrl: href
-              });
+              // Check if this is a Download link
+              if (linkText.toLowerCase() === 'download' && href) {
+                // Try to find edition number in the parent container
+                let container = link.closest('div[class*="row"], div.modal-body, div.panel');
+                if (!container) {
+                  container = link.parentElement?.parentElement || null;
+                }
+                
+                const containerText = container?.textContent || '';
+                
+                // Match edition number patterns like "Edição 12.311" or "Edição nº 12311"
+                const editionMatch = containerText.match(/[Ee]di[çc][ãa]o\s+(?:n[º°]?\s*)?(\d+\.?\d*)(?:-?(SUPLEMENTAR|EXTRA))?/i);
+                const isSupplementar = editionMatch ? 
+                  (editionMatch[2]?.toUpperCase() === 'SUPLEMENTAR' || editionMatch[2]?.toUpperCase() === 'EXTRA') : 
+                  containerText.toUpperCase().includes('SUPLEMENTAR') || containerText.toUpperCase().includes('EXTRA');
+                
+                results.push({
+                  editionNumber: editionMatch ? editionMatch[1].replace('.', '') : 'N/A',
+                  pdfUrl: href,
+                  isSupplementar: isSupplementar,
+                });
+              }
             }
             
             // If no download links found, try to find any PDF links
             if (results.length === 0) {
-              const allLinks = document.querySelectorAll('a[href*=".pdf"], a[href*="pdf"]');
-              for (const link of Array.from(allLinks)) {
+              const pdfLinks = document.querySelectorAll('a[href*=".pdf"]');
+              for (const link of Array.from(pdfLinks)) {
                 const href = link.getAttribute('href');
                 if (href) {
                   results.push({
                     editionNumber: 'N/A',
-                    pdfUrl: href
+                    pdfUrl: href,
+                    isSupplementar: false,
                   });
                 }
               }
@@ -260,7 +280,7 @@ export class CesproSpider extends BaseSpider {
               
               const gazette = await this.createGazette(gazetteDate, pdfUrl, {
                 editionNumber: info.editionNumber,
-                isExtraEdition: false,
+                isExtraEdition: info.isSupplementar,
                 power: 'executive',
               });
               

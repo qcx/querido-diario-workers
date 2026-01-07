@@ -2,7 +2,7 @@
  * Main test runner for automated spider testing
  */
 
-import { spiderRegistry } from '../spiders/registry';
+import { spiderRegistryManager } from '../spiders/registry-manager';
 import { SpiderConfig, DateRange } from '../types';
 import {
   TestConfig,
@@ -98,7 +98,7 @@ export class TestRunner {
    * Gets the list of cities to test based on configuration
    */
   private getCitiesToTest(): SpiderConfig[] {
-    const allConfigs = spiderRegistry.getAllConfigs();
+    const allConfigs = spiderRegistryManager.getAllConfigs();
 
     switch (this.config.mode) {
       case 'full':
@@ -119,6 +119,12 @@ export class TestRunner {
         if (!this.config.cities || this.config.cities.length === 0) {
           throw new Error('Cities must be specified for single mode');
         }
+        // Use resolveSpiderIds to properly handle both V1 and V2 territory IDs
+        const resolvedConfigs = spiderRegistryManager.resolveSpiderIds(this.config.cities);
+        if (resolvedConfigs.configs.length > 0) {
+          return this.filterSkippedCities(resolvedConfigs.configs);
+        }
+        // Fallback to direct ID matching
         return this.filterSkippedCities(
           allConfigs.filter((c) => this.config.cities!.includes(c.id))
         );
@@ -216,7 +222,7 @@ export class TestRunner {
 
     try {
       // Create spider instance
-      const spider = spiderRegistry.createSpider(config, dateRange);
+      const spider = spiderRegistryManager.createSpider(config, dateRange);
 
       // Run test with timeout
       const result = await this.runWithTimeout(
@@ -403,7 +409,7 @@ export class TestRunner {
    */
   private async runUntilMode(): Promise<void> {
     const targetGazettes = this.config.targetGazettes || 15;
-    const allConfigs = spiderRegistry.getAllConfigs();
+    const allConfigs = spiderRegistryManager.getAllConfigs();
     const availableConfigs = this.filterSkippedCities(allConfigs);
     
     this.log('info', `Target: ${targetGazettes} gazettes from different origins`);

@@ -1,3 +1,4 @@
+import puppeteer from '@cloudflare/puppeteer';
 import { BaseSpider } from './base-spider';
 import { Gazette } from '../../types/gazette';
 import { SpiderConfig, DateRange } from '../../types';
@@ -11,216 +12,214 @@ export interface GdoeConfig {
   type: 'gdoe';
   /** Base URL for the GDOE platform (e.g., "https://www.gdoe.com.br/assis") */
   baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
 }
 
 /**
  * Spider for GDOE platform (Ordem Pública Tecnologia)
  * Used by municipalities like Assis and Artur Nogueira
  * 
+ * Uses Cloudflare Browser Rendering (Puppeteer) to handle:
+ * - JavaScript-driven content loading
+ * - Dynamic list of gazettes
+ * - PDF links on detail pages
+ * 
  * Site structure:
  * - List of gazettes with links containing date and edition info
  * - Pattern: "DD/MM/YYYY - Ano XX Edição nº XXXX (X páginas)"
- * - PDF links available on detail pages
- * - Search by date and keyword supported
+ * - Links format: ./publicacao/?arq={hash}.pdf
+ * - Real PDF URL: https://gdoe.nyc3.digitaloceanspaces.com/diarios/{citySlug}/{hash}.pdf
  */
 export class GdoeSpider extends BaseSpider {
   private baseUrl: string;
+  private browser: Fetcher | null = null;
+  private citySlug: string;
 
-  constructor(config: SpiderConfig, dateRange: DateRange) {
+  constructor(config: SpiderConfig, dateRange: DateRange, browser?: Fetcher) {
     super(config, dateRange);
     const platformConfig = config.config as GdoeConfig;
     this.baseUrl = platformConfig.baseUrl;
+    this.browser = browser || null;
+    
+    // Extract city slug from base URL (e.g., "arturnogueira" from "https://www.gdoe.com.br/arturnogueira")
+    const urlParts = this.baseUrl.replace(/\/$/, '').split('/');
+    this.citySlug = urlParts[urlParts.length - 1];
     
     if (!this.baseUrl) {
       throw new Error(`GdoeSpider requires baseUrl in config for ${config.name}`);
     }
   }
 
+  /**
+   * Set browser instance (for queue consumer context)
+   */
+  setBrowser(browser: Fetcher): void {
+    this.browser = browser;
+  }
+
   async crawl(): Promise<Gazette[]> {
+    if (!this.browser) {
+      logger.error(`GdoeSpider for ${this.config.name} requires browser binding`);
+      return [];
+    }
+
     const gazettes: Gazette[] = [];
     logger.info(`Crawling GDOE for ${this.config.name}...`);
 
+    let browserInstance = null;
+    let page = null;
+
     try {
-      // Iterate through each day in the date range
-      const currentDate = new Date(this.startDate);
-      const endDate = new Date(this.endDate);
+      // Launch browser
+      browserInstance = await puppeteer.launch(this.browser);
+      page = await browserInstance.newPage();
       
-      while (currentDate <= endDate) {
-        try {
-          const formattedDate = this.formatDateForApi(currentDate);
-          const dayGazettes = await this.crawlDay(currentDate, formattedDate);
-          gazettes.push(...dayGazettes);
+      // Navigate to base URL and extract all gazette info
+      await page.goto(this.baseUrl, { waitUntil: 'networkidle0', timeout: 30000 });
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      this.requestCount++;
+      
+      // Close modal if present by clicking outside or pressing Escape
+      try {
+        await page.keyboard.press('Escape');
+        await new Promise(resolve => setTimeout(resolve, 500));
+      } catch (e) {
+        // Ignore if no modal
+      }
+      
+      // Extract gazette data from all visible links using the HTML structure
+      const allGazetteData = await page.evaluate(() => {
+        const results: Array<{
+          dateStr: string;
+          editionNumber: string;
+          isExtra: boolean;
+          pdfHash: string;
+          linkText: string;
+        }> = [];
+        
+        // Find all gazette download links (class btn-download)
+        const downloadLinks = document.querySelectorAll('a.btn-download[href*="publicacao"]');
+        
+        for (const link of Array.from(downloadLinks)) {
+          const href = (link as HTMLAnchorElement).getAttribute('href') || '';
+          const text = (link as HTMLElement).textContent || '';
           
-          if (dayGazettes.length > 0) {
-            logger.info(`Found ${dayGazettes.length} gazette(s) for ${toISODate(currentDate)}`);
-          }
-        } catch (error) {
-          logger.error(`Error crawling date ${toISODate(currentDate)}:`, error as Error);
+          // Extract hash from href (e.g., "./publicacao/?arq=6945d7365f6a7.pdf" -> "6945d7365f6a7")
+          const hashMatch = href.match(/arq=([a-f0-9]+)\.pdf/i);
+          if (!hashMatch) continue;
+          
+          const pdfHash = hashMatch[1];
+          
+          // Extract date from text (e.g., "19/12/2025")
+          const dateMatch = text.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+          if (!dateMatch) continue;
+          
+          const dateStr = `${dateMatch[1]}/${dateMatch[2]}/${dateMatch[3]}`;
+          
+          // Extract edition number (e.g., "966" or "965-A")
+          const editionMatch = text.match(/Edi[çc][ãa]o\s+n[°º]?\s*(\d+[A-Za-z-]*)/i);
+          const editionNumber = editionMatch ? editionMatch[1] : '';
+          
+          // Check if extra edition
+          const isExtra = editionNumber.includes('-') || /[A-Za-z]$/.test(editionNumber);
+          
+          results.push({
+            dateStr,
+            editionNumber,
+            isExtra,
+            pdfHash,
+            linkText: text.trim().replace(/\s+/g, ' ')
+          });
         }
         
-        // Move to next day
-        currentDate.setDate(currentDate.getDate() + 1);
+        return results;
+      });
+      
+      logger.info(`Found ${allGazetteData.length} gazette entries on page`);
+      
+      // Filter by date range and create gazette objects
+      for (const gazetteData of allGazetteData) {
+        try {
+          // Parse date from DD/MM/YYYY format
+          const [day, month, year] = gazetteData.dateStr.split('/').map(Number);
+          const gazetteDate = new Date(year, month - 1, day);
+          
+          // Check if within date range
+          const startDate = new Date(this.startDate);
+          const endDate = new Date(this.endDate);
+          
+          // Normalize dates to midnight for comparison
+          gazetteDate.setHours(0, 0, 0, 0);
+          startDate.setHours(0, 0, 0, 0);
+          endDate.setHours(0, 0, 0, 0);
+          
+          if (gazetteDate < startDate || gazetteDate > endDate) {
+            logger.debug(`Skipping gazette from ${gazetteData.dateStr} - outside date range`);
+            continue;
+          }
+          
+          // Build the real PDF URL from DigitalOcean Spaces
+          const pdfUrl = `https://gdoe.nyc3.digitaloceanspaces.com/diarios/${this.citySlug}/${gazetteData.pdfHash}.pdf`;
+          
+          const cleanEditionNumber = gazetteData.editionNumber.replace(/[^0-9]/g, '');
+          
+          const platformConfig = this.config.config as GdoeConfig;
+          const gazette = await this.createGazette(gazetteDate, pdfUrl, {
+            editionNumber: cleanEditionNumber || undefined,
+            isExtraEdition: gazetteData.isExtra,
+            power: 'executive_legislative',
+            requiresClientRendering: platformConfig.requiresClientRendering || true,
+          });
+          
+          if (gazette) {
+            gazettes.push(gazette);
+            logger.info(`Found gazette: ${pdfUrl} (Date: ${gazetteData.dateStr}, Edition: ${gazetteData.editionNumber || 'N/A'})`);
+          }
+        } catch (error) {
+          logger.warn(`Failed to process gazette data:`, error as Error);
+        }
+      }
+      
+      // If no gazettes found on first page, try pagination
+      if (gazettes.length === 0) {
+        logger.debug('No gazettes found on first page, checking if pagination needed');
         
-        // Add delay between requests
-        await new Promise(resolve => setTimeout(resolve, 300));
+        // Check for pagination and iterate through pages if needed
+        const hasMorePages = await page.evaluate(() => {
+          const pagination = document.querySelector('.pagination');
+          return pagination !== null;
+        });
+        
+        if (hasMorePages) {
+          logger.debug('Pagination found, but limiting to first page for efficiency');
+        }
       }
 
       logger.info(`Successfully crawled ${gazettes.length} gazettes from GDOE`);
+      
     } catch (error) {
-      logger.error(`Error crawling GDOE: ${error}`);
+      logger.error(`Error crawling GDOE:`, error as Error);
       throw error;
-    }
-
-    return gazettes;
-  }
-
-  /**
-   * Crawl gazettes for a specific day
-   */
-  private async crawlDay(date: Date, formattedDate: string): Promise<Gazette[]> {
-    const gazettes: Gazette[] = [];
-    
-    try {
-      // GDOE uses search by date
-      const searchUrl = `${this.baseUrl}?data=${formattedDate}`;
-      
-      logger.debug(`Fetching: ${searchUrl}`);
-      const response = await fetch(searchUrl);
-      this.requestCount++;
-      
-      if (!response.ok) {
-        logger.warn(`Failed to fetch page: ${response.status}`);
-        return gazettes;
-      }
-
-      const html = await response.text();
-      
-      // Find gazette links with date pattern
-      // Pattern: DD/MM/YYYY - Ano XX Edição nº XXXX
-      const dateStr = this.formatDateDisplay(date);
-      const escapedDate = dateStr.replace(/\//g, '\\/');
-      
-      // Look for links containing the date
-      const linkPattern = new RegExp(
-        `<a[^>]+href="([^"]+)"[^>]*>[^<]*${escapedDate}[^<]*Edi[çc][ãa]o\\s+n[°º]?\\s*(\\d+)`,
-        'gi'
-      );
-      
-      const matches = html.matchAll(linkPattern);
-      
-      for (const match of matches) {
-        const linkUrl = match[1];
-        const editionNumber = match[2];
-        
-        // Resolve relative URLs
-        let fullUrl = linkUrl;
-        if (!fullUrl.startsWith('http')) {
-          const baseUrlObj = new URL(this.baseUrl);
-          fullUrl = `${baseUrlObj.origin}${fullUrl.startsWith('/') ? '' : '/'}${fullUrl}`;
-        }
-        
-        // Fetch detail page to get PDF URL
+    } finally {
+      // Clean up
+      if (page) {
         try {
-          const pdfUrl = await this.extractPdfUrl(fullUrl);
-          
-          if (pdfUrl) {
-            // Check if extra edition
-            const isExtraEdition = linkUrl.toLowerCase().includes('extra') || 
-                                   editionNumber.includes('-') ||
-                                   editionNumber.includes('A');
-            
-            const gazette = await this.createGazette(date, pdfUrl, {
-              editionNumber: editionNumber.replace(/[^0-9]/g, ''),
-              isExtraEdition,
-              power: 'executive_legislative',
-            });
-            
-            if (gazette) {
-              gazettes.push(gazette);
-            }
-          }
-        } catch (error) {
-          logger.warn(`Failed to extract PDF from ${fullUrl}:`, error as Error);
-        }
-        
-        // Add delay between requests
-        await new Promise(resolve => setTimeout(resolve, 200));
-      }
-      
-      // Alternative: look for date in link text without edition pattern
-      if (gazettes.length === 0) {
-        // Try simple link extraction
-        const simpleLinkPattern = /<a[^>]+href="([^"]+\.pdf[^"]*)"[^>]*>/gi;
-        const simpleMatches = html.matchAll(simpleLinkPattern);
-        
-        for (const match of simpleMatches) {
-          const pdfUrl = match[1];
-          let fullPdfUrl = pdfUrl;
-          if (!fullPdfUrl.startsWith('http')) {
-            const baseUrlObj = new URL(this.baseUrl);
-            fullPdfUrl = `${baseUrlObj.origin}${pdfUrl.startsWith('/') ? '' : '/'}${pdfUrl}`;
-          }
-          
-          // Check if this PDF matches the date
-          const dateInUrl = toISODate(date).replace(/-/g, '');
-          if (fullPdfUrl.includes(dateInUrl) || fullPdfUrl.includes(dateStr.replace(/\//g, ''))) {
-            const gazette = await this.createGazette(date, fullPdfUrl, {
-              power: 'executive_legislative',
-            });
-            
-            if (gazette) {
-              gazettes.push(gazette);
-            }
-          }
+          await page.close();
+        } catch (e) {
+          logger.warn('Error closing page', e as Error);
         }
       }
-      
-    } catch (error) {
-      logger.error(`Error in crawlDay for ${toISODate(date)}:`, error as Error);
+      if (browserInstance) {
+        try {
+          await browserInstance.close();
+        } catch (e) {
+          logger.warn('Error closing browser', e as Error);
+        }
+      }
     }
-    
+
     return gazettes;
-  }
-
-  /**
-   * Extract PDF URL from detail page
-   */
-  private async extractPdfUrl(detailUrl: string): Promise<string | null> {
-    try {
-      const response = await fetch(detailUrl);
-      this.requestCount++;
-      
-      if (!response.ok) {
-        return null;
-      }
-
-      const html = await response.text();
-      
-      // Look for PDF download link
-      // Common patterns: href="...pdf", data-href="...pdf", onclick with PDF
-      const pdfPatterns = [
-        /href="([^"]+\.pdf[^"]*)"/gi,
-        /data-href="([^"]+\.pdf[^"]*)"/gi,
-        /window\.open\(['"]([^'"]+\.pdf[^'"]*)['"]/gi,
-      ];
-      
-      for (const pattern of pdfPatterns) {
-        const match = pattern.exec(html);
-        if (match) {
-          let pdfUrl = match[1];
-          if (!pdfUrl.startsWith('http')) {
-            const baseUrlObj = new URL(this.baseUrl);
-            pdfUrl = `${baseUrlObj.origin}${pdfUrl.startsWith('/') ? '' : '/'}${pdfUrl}`;
-          }
-          return pdfUrl;
-        }
-      }
-      
-      return null;
-    } catch (error) {
-      logger.warn(`Failed to extract PDF URL from ${detailUrl}:`, error as Error);
-      return null;
-    }
   }
 
   /**
@@ -243,4 +242,3 @@ export class GdoeSpider extends BaseSpider {
     return `${day}/${month}/${year}`;
   }
 }
-

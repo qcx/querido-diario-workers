@@ -129,29 +129,48 @@ export class InstarSpider extends BaseSpider {
       while (hasMorePages) {
         logger.debug(`Extracting gazettes from page ${currentPage}`);
         
-        // Wait for either edocman structure or standard Instar format
+        // Wait for either edocman structure, standard Instar format, or article-based format
         try {
-          await page.waitForSelector('.edocman-document-title-td, table tbody tr, .dof_publicacao_diario', { timeout: 10000 });
+          await page.waitForSelector('.edocman-document-title-td, table tbody tr, .dof_publicacao_diario, article', { timeout: 10000 });
         } catch (error) {
           logger.warn('Document table/list not found, may be empty');
           break;
         }
         
-        // Check which format the page uses
-        const hasEdocman = await page.$('.edocman-document-title-td, table tbody tr');
+        // Check which format the page uses - use specific selectors first
         const hasStandardInstar = await page.$('.dof_publicacao_diario');
+        const hasEdocmanSpecific = await page.$('.edocman-document-title-td');
+        const hasEdocmanTable = await page.$('table tbody tr');
         
         let pageGazettes: Gazette[] = [];
+        let extractionMethod = '';
         
-        if (hasEdocman) {
-          // Extract using edocman format
-          logger.debug('Using edocman format extraction');
-          pageGazettes = await this.extractGazettesFromPage(page);
-        } else if (hasStandardInstar) {
-          // Extract using standard Instar format
+        // Priority 1: Standard Instar format (.dof_publicacao_diario) - most specific
+        if (hasStandardInstar) {
           logger.debug('Using standard Instar format extraction');
+          extractionMethod = 'standardInstar';
           pageGazettes = await this.extractStandardInstarGazettes(page);
-        } else {
+        }
+        
+        // Priority 2: Edocman format - try if standardInstar found nothing or not present
+        if (pageGazettes.length === 0 && (hasEdocmanSpecific || hasEdocmanTable)) {
+          logger.debug('Using edocman format extraction');
+          extractionMethod = 'edocman';
+          pageGazettes = await this.extractGazettesFromPage(page);
+        }
+        
+        // Priority 3: Article-based format - fallback for custom sites like Pedreira
+        if (pageGazettes.length === 0) {
+          const hasArticleFormat = await page.$('article');
+          if (hasArticleFormat) {
+            logger.debug('Using article-based format extraction (fallback)');
+            extractionMethod = 'article';
+            pageGazettes = await this.extractArticleBasedGazettes(page);
+          }
+        }
+        
+        // If no method found anything
+        if (pageGazettes.length === 0 && !extractionMethod) {
           logger.warn('No recognized format found on page');
           break;
         }
@@ -165,13 +184,32 @@ export class InstarSpider extends BaseSpider {
         
         logger.debug(`Found ${pageGazettes.length} gazettes on page ${currentPage}, ${gazettes.length} in date range`);
         
-        // Check for pagination
-        const nextPageButton = await page.$('a[href*="page"], .pagination .next:not(.disabled), .pager .next:not(.disabled)');
-        if (nextPageButton) {
+        // Check if we've found gazettes older than our date range - stop pagination early
+        const foundOlderGazettes = pageGazettes.some(g => {
+          const gazetteDate = new Date(g.date);
+          const startDate = new Date(this.dateRange.start);
+          return gazetteDate < startDate;
+        });
+        
+        if (foundOlderGazettes) {
+          logger.debug('Found gazettes older than date range, stopping pagination');
+          hasMorePages = false;
+          continue;
+        }
+        
+        // Check for pagination - look for various pagination patterns
+        const nextPageButton = await page.$('a[href*="page"], .pagination .next:not(.disabled), .pager .next:not(.disabled), button[name="Anteriores"], [class*="pagination"] button:not(:disabled)');
+        if (nextPageButton && pageGazettes.length > 0) {
           logger.debug(`Clicking next page button`);
           await nextPageButton.click();
           await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for page to load
           currentPage++;
+          
+          // Safety limit to avoid infinite loops
+          if (currentPage > 50) {
+            logger.warn('Reached maximum page limit (50), stopping pagination');
+            hasMorePages = false;
+          }
         } else {
           hasMorePages = false;
         }
@@ -210,6 +248,42 @@ export class InstarSpider extends BaseSpider {
     const gazettes: Gazette[] = [];
 
     try {
+      // First, fetch the base page to detect format
+      logger.info(`Fetching base URL: ${this.instarConfig.url}`);
+      const basePageHtml = await this.fetch(this.instarConfig.url);
+      const basePageRoot = parse(basePageHtml);
+      
+      // Check if it's a static article-based format (like Caçapava)
+      // These sites have article.list-item elements with direct PDF links
+      const articleElements = basePageRoot.querySelectorAll('article.list-item, article');
+      if (articleElements.length > 0) {
+        logger.info(`Detected static article-based format with ${articleElements.length} articles`);
+        return this.crawlStaticArticleFormat(basePageHtml);
+      }
+      
+      // Check if it has Instar URL pattern support (sw_qtde_resultados indicator)
+      const hasInstarPattern = basePageRoot.querySelector('.sw_qtde_resultados') !== null;
+      
+      if (!hasInstarPattern) {
+        // Try the standard Instar URL pattern anyway
+        const startDate = formatBrazilianDate(new Date(this.dateRange.start));
+        const endDate = formatBrazilianDate(new Date(this.dateRange.end));
+        const testUrl = `${this.instarConfig.url}/1/${startDate}/${endDate}/0/0/`;
+        
+        try {
+          const testPageHtml = await this.fetch(testUrl);
+          const testRoot = parse(testPageHtml);
+          const testResults = testRoot.querySelector('.sw_qtde_resultados');
+          if (!testResults) {
+            logger.warn(`Site ${this.spiderConfig.name} does not support standard Instar URL pattern, trying article format`);
+            return this.crawlStaticArticleFormat(basePageHtml);
+          }
+        } catch (error) {
+          logger.warn(`Could not access Instar URL pattern, falling back to article format`);
+          return this.crawlStaticArticleFormat(basePageHtml);
+        }
+      }
+      
       const startDate = formatBrazilianDate(new Date(this.dateRange.start));
       const endDate = formatBrazilianDate(new Date(this.dateRange.end));
       
@@ -267,6 +341,196 @@ export class InstarSpider extends BaseSpider {
       logger.error(`Error crawling ${this.spiderConfig.name}:`, error as Error);
     }
 
+    return gazettes;
+  }
+
+  /**
+   * Crawl static article-based format (like Caçapava)
+   * These sites render HTML statically with article.list-item elements
+   * 
+   * HTML Structure:
+   * <article class="list-item">
+   *   <div class="list-item__info">
+   *     <h3 class="list-item__title">Edição nº XXX</h3>
+   *     <p class="list-item__description">DD/MM/YYYY</p>
+   *     <a href="https://ecrie.com.br/.../xxx.pdf">Download</a>
+   *   </div>
+   * </article>
+   */
+  private async crawlStaticArticleFormat(firstPageHtml: string): Promise<Gazette[]> {
+    const gazettes: Gazette[] = [];
+    let currentPageHtml = firstPageHtml;
+    let pageNum = 1;
+    const maxPages = 100;
+    let foundOlderThanRange = false;
+
+    while (pageNum <= maxPages && !foundOlderThanRange) {
+      logger.debug(`Processing page ${pageNum} for static article format`);
+      const root = parse(currentPageHtml);
+      
+      // Find all article elements
+      const articles = root.querySelectorAll('article.list-item, article');
+      
+      if (articles.length === 0) {
+        logger.info(`No articles found on page ${pageNum}, stopping`);
+        break;
+      }
+
+      for (const article of articles) {
+        try {
+          // Extract title (edition number)
+          const titleElement = article.querySelector('.list-item__title, h1, h2, h3, h4, h5, h6');
+          const titleText = titleElement?.text?.trim() || '';
+          
+          // Extract date
+          const dateElement = article.querySelector('.list-item__description, p, time');
+          const dateText = dateElement?.text?.trim() || '';
+          
+          // Parse date (DD/MM/YYYY)
+          const dateMatch = dateText.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+          if (!dateMatch) {
+            logger.debug(`Could not parse date from: ${dateText}`);
+            continue;
+          }
+          
+          const [, day, month, year] = dateMatch;
+          const gazetteDate = new Date(`${year}-${month}-${day}`);
+          
+          // Check if older than range
+          if (gazetteDate < new Date(this.dateRange.start)) {
+            foundOlderThanRange = true;
+            continue;
+          }
+          
+          // Skip if not in range
+          if (!this.isInDateRange(gazetteDate)) {
+            continue;
+          }
+          
+          // Extract PDF link
+          const pdfLink = article.querySelector('a[href*=".pdf"], a[href*="ecrie"], a[href*="download"]');
+          let pdfUrl = pdfLink?.getAttribute('href');
+          
+          if (!pdfUrl) {
+            logger.debug(`No PDF link found for article: ${titleText}`);
+            continue;
+          }
+          
+          // Make absolute URL if relative
+          if (!pdfUrl.startsWith('http')) {
+            const baseUrlObj = new URL(this.instarConfig.url);
+            pdfUrl = `${baseUrlObj.origin}${pdfUrl.startsWith('/') ? '' : '/'}${pdfUrl}`;
+          }
+          
+          // Extract edition number
+          const editionMatch = titleText.match(/[Ee]di[çc][ãa]o\s+[nN]?[°º]?\s*(\d+)/i) || titleText.match(/(\d+)/);
+          const editionNumber = editionMatch ? editionMatch[1] : undefined;
+          
+          // Check if extra edition
+          const isExtraEdition = titleText.toLowerCase().includes('extra') || 
+                                 titleText.includes(' - A') || 
+                                 titleText.includes(' - B');
+          
+          // Create gazette
+          const gazette = await this.createGazette(gazetteDate, pdfUrl, {
+            editionNumber,
+            isExtraEdition,
+            power: 'executive_legislative',
+            sourceText: `${titleText} - ${dateText}`,
+          });
+          
+          if (gazette) {
+            gazettes.push(gazette);
+          }
+          
+        } catch (error) {
+          logger.error(`Error processing article:`, error as Error);
+        }
+      }
+      
+      logger.debug(`Found ${gazettes.length} gazettes so far after page ${pageNum}`);
+      
+      // Stop if we found gazettes older than range
+      if (foundOlderThanRange) {
+        logger.info(`Found gazettes older than date range, stopping pagination`);
+        break;
+      }
+      
+      // Look for pagination - try to find next page link
+      // Common patterns: ?page=N, ?pagina=N, /page/N, /p/N, or select with page options
+      const paginationSelect = root.querySelector('select.pagination__select, select[name*="page"], select[aria-label*="página"], select[class*="page"]');
+      const nextPageLink = root.querySelector('a[href*="page="], a[href*="pagina="], a[href*="/page/"], a[rel="next"], button[name="Anteriores"]');
+      
+      // Try URL-based pagination first
+      let nextPageUrl: string | null = null;
+      
+      if (paginationSelect) {
+        // Find the next option value
+        const options = paginationSelect.querySelectorAll('option');
+        const currentPageStr = String(pageNum);
+        let foundCurrent = false;
+        
+        for (const option of options) {
+          const value = option.getAttribute('value') || option.text?.trim();
+          if (foundCurrent && value) {
+            // Construct URL with page parameter - use 'pagina' which is common in Brazilian gov sites
+            const baseUrl = new URL(this.instarConfig.url);
+            // Check if site uses 'pagina' or 'page' by looking at the current URL
+            const usesPagina = this.instarConfig.url.includes('pagina=') || 
+                               !this.instarConfig.url.includes('page=');
+            baseUrl.searchParams.set(usesPagina ? 'pagina' : 'page', value);
+            nextPageUrl = baseUrl.toString();
+            break;
+          }
+          if (value === currentPageStr) {
+            foundCurrent = true;
+          }
+        }
+      } else if (nextPageLink) {
+        nextPageUrl = nextPageLink.getAttribute('href') || null;
+        if (nextPageUrl && !nextPageUrl.startsWith('http')) {
+          const baseUrlObj = new URL(this.instarConfig.url);
+          nextPageUrl = `${baseUrlObj.origin}${nextPageUrl.startsWith('/') ? '' : '/'}${nextPageUrl}`;
+        }
+      }
+      
+      // If no pagination found via select or link, stop - don't try random page params
+      // This avoids infinite loops with sites that don't support URL-based pagination
+      
+      if (!nextPageUrl) {
+        logger.debug(`No next page link found, stopping pagination`);
+        break;
+      }
+      
+      // Fetch next page
+      try {
+        const nextPageHtml = await this.fetch(nextPageUrl);
+        const nextRoot = parse(nextPageHtml);
+        const nextArticles = nextRoot.querySelectorAll('article.list-item, article');
+        
+        // Check if we got the same page (pagination ended)
+        if (nextArticles.length === 0) {
+          logger.debug(`Next page has no articles, stopping pagination`);
+          break;
+        }
+        
+        // Check if first article is the same as current page's first (loop detection)
+        const firstCurrentTitle = articles[0]?.querySelector('.list-item__title, h1, h2, h3')?.text?.trim();
+        const firstNextTitle = nextArticles[0]?.querySelector('.list-item__title, h1, h2, h3')?.text?.trim();
+        if (firstCurrentTitle && firstNextTitle && firstCurrentTitle === firstNextTitle) {
+          logger.debug(`Pagination loop detected, stopping`);
+          break;
+        }
+        
+        currentPageHtml = nextPageHtml;
+        pageNum++;
+      } catch (error) {
+        logger.debug(`Error fetching page ${pageNum + 1}, stopping pagination: ${error}`);
+        break;
+      }
+    }
+    
+    logger.info(`Successfully crawled ${gazettes.length} gazettes using static article format`);
     return gazettes;
   }
 
@@ -526,6 +790,148 @@ export class InstarSpider extends BaseSpider {
       
     } catch (error) {
       logger.error(`Error extracting standard Instar gazettes from page:`, error as Error);
+    }
+    
+    return gazettes;
+  }
+
+  /**
+   * Extract gazettes from browser page using article-based format
+   * Used by custom sites like Pedreira that display gazettes as article cards
+   * 
+   * HTML Structure:
+   * <article>
+   *   <div>
+   *     <h2>Edição nº XXXX</h2>
+   *     <div>DD/MM/YYYY</div>
+   *     <a href="...">Download</a>
+   *   </div>
+   * </article>
+   */
+  private async extractArticleBasedGazettes(page: any): Promise<Gazette[]> {
+    const gazettes: Gazette[] = [];
+    
+    try {
+      // Extract all article elements
+      const articleElements = await page.evaluate(() => {
+        const elements: any[] = [];
+        const articles = document.querySelectorAll('article');
+        
+        for (const article of Array.from(articles)) {
+          // Extract title/edition from heading
+          const headingElement = article.querySelector('h1, h2, h3, h4, h5, h6, [class*="heading"]');
+          const titleText = headingElement ? headingElement.textContent?.trim() : '';
+          
+          // Extract date - look for element containing DD/MM/YYYY pattern
+          let dateText = '';
+          const allElements = article.querySelectorAll('div, span, p, time');
+          for (const el of Array.from(allElements)) {
+            const text = el.textContent?.trim() || '';
+            // Match exact date format DD/MM/YYYY (not in a heading)
+            if (text.match(/^\d{2}\/\d{2}\/\d{4}$/)) {
+              dateText = text;
+              break;
+            }
+          }
+          
+          // Extract download link - look for anchor with "Download" text or href containing pdf/download
+          const downloadLink = article.querySelector('a[href*=".pdf"], a[href*="download"], a');
+          let downloadHref = downloadLink ? downloadLink.getAttribute('href') : null;
+          const downloadText = downloadLink ? downloadLink.textContent?.trim() : '';
+          
+          // Only use link if it looks like a download link
+          if (downloadHref && !downloadText?.toLowerCase().includes('download') && !downloadHref.includes('.pdf') && !downloadHref.includes('download')) {
+            // Check if there's another link that's more likely the download
+            const allLinks = article.querySelectorAll('a');
+            for (const link of Array.from(allLinks)) {
+              const href = link.getAttribute('href');
+              const text = link.textContent?.trim();
+              if (text?.toLowerCase().includes('download') || href?.includes('.pdf') || href?.includes('download')) {
+                downloadHref = href;
+                break;
+              }
+            }
+          }
+          
+          if (titleText || dateText || downloadHref) {
+            elements.push({
+              titleText,
+              dateText,
+              downloadHref,
+            });
+          }
+        }
+        
+        return elements;
+      });
+      
+      logger.debug(`Found ${articleElements.length} article-based gazette elements on page`);
+      
+      // Process each element
+      for (const element of articleElements) {
+        try {
+          // Parse date
+          let gazetteDate: Date | null = null;
+          if (element.dateText) {
+            const dateMatch = element.dateText.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+            if (dateMatch) {
+              const [, day, month, year] = dateMatch;
+              gazetteDate = new Date(`${year}-${month}-${day}`);
+            }
+          }
+          
+          if (!gazetteDate) {
+            logger.debug(`Could not parse date from article: ${element.titleText}`);
+            continue;
+          }
+          
+          // Check if date is in range
+          if (!this.isInDateRange(gazetteDate)) {
+            continue;
+          }
+          
+          // Get PDF URL
+          if (!element.downloadHref) {
+            logger.warn(`No download link found for article gazette: ${element.titleText}`);
+            continue;
+          }
+          
+          // Construct full PDF URL
+          let pdfUrl = element.downloadHref;
+          if (!pdfUrl.startsWith('http')) {
+            const baseUrlObj = new URL(this.instarConfig.url);
+            pdfUrl = `${baseUrlObj.origin}${pdfUrl.startsWith('/') ? '' : '/'}${pdfUrl}`;
+          }
+          
+          // Log resolved URL
+          logger.debug(`Resolved article gazette URL: ${pdfUrl}`);
+          
+          // Extract edition number
+          const editionMatch = element.titleText?.match(/[Ee]di[çc][ãa]o\s+[nN]?[°º]?\s*(\d+)/i);
+          const editionNumber = editionMatch ? editionMatch[1] : undefined;
+          
+          // Check if it's an extra edition
+          const isExtraEdition = element.titleText?.toLowerCase().includes('extra') || false;
+          
+          // Create gazette
+          const gazette = await this.createGazette(gazetteDate, pdfUrl, {
+            editionNumber,
+            isExtraEdition,
+            power: 'executive_legislative',
+            sourceText: element.titleText || `Gazette ${toISODate(gazetteDate)}`,
+          });
+          
+          if (gazette) {
+            gazettes.push(gazette);
+          }
+          
+        } catch (error) {
+          logger.error(`Error processing article-based gazette element:`, error as Error);
+        }
+      }
+      
+    } catch (error) {
+      logger.error(`Error extracting article-based gazettes from page:`, error as Error);
     }
     
     return gazettes;

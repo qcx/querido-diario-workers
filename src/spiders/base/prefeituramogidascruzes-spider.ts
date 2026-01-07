@@ -1,3 +1,4 @@
+import puppeteer from '@cloudflare/puppeteer';
 import { BaseSpider } from './base-spider';
 import { SpiderConfig, Gazette, DateRange, PrefeituraMogiDasCruzesConfig } from '../../types';
 import { logger } from '../../utils/logger';
@@ -20,22 +21,25 @@ const CATEGORY_POWER_MAP: Record<string, 'executive' | 'legislative' | 'executiv
 /**
  * PrefeituraMogiDasCruzesSpider implementation
  * 
+ * Uses Cloudflare Browser Rendering (Puppeteer) to handle JavaScript-rendered content.
+ * 
  * Crawls Mogi das Cruzes's official gazette website which organizes gazettes
  * by year and category (executivo, legislativo, autarquias).
  * 
  * The spider:
  * 1. Generates years from date range
  * 2. For each year, iterates through categories
- * 3. Constructs URL: {baseUrl}?year={year}&category={category}#doe-pmmc
- * 4. Fetches HTML and parses PDF links from accordion content divs
- * 5. Extracts dates from text (DD/MM/YYYY format)
+ * 3. Constructs URL: {baseUrl}?year={year}&category={category}
+ * 4. Uses Puppeteer to render JavaScript and extract PDF links
+ * 5. Extracts dates from link text (DD/MM/YYYY format)
  * 6. Extracts edition numbers and detects extra editions
  * 7. Filters gazettes to match the requested date range
  */
 export class PrefeituraMogiDasCruzesSpider extends BaseSpider {
   protected mogiDasCruzesConfig: PrefeituraMogiDasCruzesConfig;
+  private browser: Fetcher | null = null;
 
-  constructor(spiderConfig: SpiderConfig, dateRange: DateRange) {
+  constructor(spiderConfig: SpiderConfig, dateRange: DateRange, browser?: Fetcher) {
     super(spiderConfig, dateRange);
     this.mogiDasCruzesConfig = spiderConfig.config as PrefeituraMogiDasCruzesConfig;
     
@@ -44,13 +48,33 @@ export class PrefeituraMogiDasCruzesSpider extends BaseSpider {
     }
     
     logger.info(`Initializing PrefeituraMogiDasCruzesSpider for ${spiderConfig.name}`);
+    this.browser = browser || null;
+  }
+
+  /**
+   * Set browser instance (for queue consumer context)
+   */
+  setBrowser(browser: Fetcher): void {
+    this.browser = browser;
   }
 
   async crawl(): Promise<Gazette[]> {
+    if (!this.browser) {
+      logger.error(`PrefeituraMogiDasCruzesSpider for ${this.spiderConfig.name} requires browser binding`);
+      return [];
+    }
+
     logger.info(`Crawling ${this.mogiDasCruzesConfig.baseUrl} for ${this.spiderConfig.name}...`);
     const gazettes: Gazette[] = [];
 
+    let browserInstance = null;
+    let page = null;
+
     try {
+      // Launch browser
+      browserInstance = await puppeteer.launch(this.browser);
+      page = await browserInstance.newPage();
+
       // Generate list of years to crawl
       const years = this.generateYears();
       logger.info(`Generated ${years.length} years to crawl: ${years.join(', ')}`);
@@ -59,7 +83,7 @@ export class PrefeituraMogiDasCruzesSpider extends BaseSpider {
       for (const year of years) {
         for (const category of CATEGORIES) {
           try {
-            const categoryGazettes = await this.crawlCategory(year, category);
+            const categoryGazettes = await this.crawlCategory(page, year, category);
             gazettes.push(...categoryGazettes);
             logger.info(`Crawled ${categoryGazettes.length} gazettes from year ${year}, category ${category}`);
           } catch (error) {
@@ -73,6 +97,22 @@ export class PrefeituraMogiDasCruzesSpider extends BaseSpider {
       
     } catch (error) {
       logger.error(`Error crawling ${this.spiderConfig.name}:`, error as Error);
+    } finally {
+      // Clean up
+      if (page) {
+        try {
+          await page.close();
+        } catch {
+          // Ignore close errors
+        }
+      }
+      if (browserInstance) {
+        try {
+          await browserInstance.close();
+        } catch {
+          // Ignore close errors
+        }
+      }
     }
 
     return gazettes;
@@ -94,73 +134,85 @@ export class PrefeituraMogiDasCruzesSpider extends BaseSpider {
   }
 
   /**
-   * Crawl all gazettes for a specific year and category
+   * Crawl all gazettes for a specific year and category using Puppeteer
    */
-  private async crawlCategory(year: number, category: string): Promise<Gazette[]> {
+  private async crawlCategory(page: puppeteer.Page, year: number, category: string): Promise<Gazette[]> {
     const gazettes: Gazette[] = [];
     
     try {
-      // Build URL: {baseUrl}?year={year}&category={category}#doe-pmmc
-      const categoryUrl = `${this.mogiDasCruzesConfig.baseUrl}?year=${year}&category=${category}#doe-pmmc`;
+      // Build URL: {baseUrl}?year={year}&category={category}
+      const categoryUrl = `${this.mogiDasCruzesConfig.baseUrl}?year=${year}&category=${category}`;
       logger.debug(`Fetching category page: ${categoryUrl}`);
 
-      const pageHtml = await this.fetch(categoryUrl);
-      const $ = this.loadHTML(pageHtml);
+      // Navigate to the page and wait for content to load
+      await page.goto(categoryUrl, { 
+        waitUntil: 'networkidle0',
+        timeout: 30000 
+      });
 
-      // Find all accordion content divs (they contain PDF links even when collapsed)
-      const accordionContents = $('[id^="content-"]');
-      logger.debug(`Found ${accordionContents.length} accordion content divs`);
+      // Wait for gazette links to appear (they're inside main content)
+      try {
+        await page.waitForSelector('a[href*=".pdf"]', { timeout: 10000 });
+      } catch {
+        logger.debug(`No PDF links found on ${categoryUrl}`);
+        return gazettes;
+      }
 
-      // Extract PDF links from all accordion content divs
-      const pdfLinks = accordionContents.find('a[href*=".pdf"]');
-      logger.debug(`Found ${pdfLinks.length} PDF links on year ${year}, category ${category} page`);
+      // Extract gazette data from the page
+      const gazetteData = await page.evaluate(() => {
+        const results: Array<{
+          pdfUrl: string;
+          text: string;
+        }> = [];
 
-      // Process each PDF link
+        // Find all PDF links
+        const links = document.querySelectorAll('a[href*=".pdf"]');
+        links.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href) {
+            // Get the parent container text for date/edition info
+            const container = link.closest('div.flex, li, article') || link.parentElement;
+            const text = container?.textContent || link.textContent || '';
+            results.push({
+              pdfUrl: href,
+              text: text.trim()
+            });
+          }
+        });
+
+        return results;
+      });
+
+      logger.debug(`Found ${gazetteData.length} PDF links on year ${year}, category ${category} page`);
+
+      // Process each gazette data
       const gazettePromises: Promise<Gazette | null>[] = [];
       
-      pdfLinks.each((_, element) => {
+      for (const data of gazetteData) {
         try {
-          const $link = $(element);
-          const pdfUrl = $link.attr('href');
-          
-          if (!pdfUrl) {
-            logger.debug('Skipping link without href');
-            return;
-          }
-
-          // Find the parent container div to extract date and edition info
-          const $container = $link.closest('.flex.p-4');
-          if ($container.length === 0) {
-            logger.debug('Could not find container div for PDF link');
-            return;
-          }
-
-          // Extract text content from the container
-          const containerText = $container.text();
-
-          // Parse date from container text (format: DD/MM/YYYY)
-          const gazetteDate = this.parseDate(containerText);
+          // Parse date from text (format: DD/MM/YYYY)
+          const gazetteDate = this.parseDate(data.text);
           
           if (!gazetteDate) {
-            logger.warn(`Could not parse date from: ${containerText.substring(0, 100)}`);
-            return;
+            logger.debug(`Could not parse date from: ${data.text.substring(0, 100)}`);
+            continue;
           }
 
           // Check if date is in our crawl range
           if (!this.isInDateRange(gazetteDate)) {
             logger.debug(`Gazette date ${toISODate(gazetteDate)} is outside crawl range`);
-            return;
+            continue;
           }
 
           // Extract edition number (pattern: "Edição {category} nº {number}" or "Edição {category} Extraordinária nº {number}")
-          const editionMatch = containerText.match(/Edi[çc][ãa]o\s+(?:.+?\s+)?n[º°]\s*(\d+)/i);
+          const editionMatch = data.text.match(/Edi[çc][ãa]o\s+(?:.+?\s+)?n[º°]\s*(\d+)/i);
           const editionNumber = editionMatch ? editionMatch[1] : undefined;
 
           // Check if it's an extra edition
-          const isExtraEdition = /extraordin[áa]ria/i.test(containerText);
+          const isExtraEdition = /extraordin[áa]ria/i.test(data.text);
 
           // Resolve relative URL to absolute URL
-          const absoluteUrl = this.resolveUrl(pdfUrl);
+          const absoluteUrl = this.resolveUrl(data.pdfUrl);
 
           // Map category to power type
           const power = CATEGORY_POWER_MAP[category] || 'executive_legislative';
@@ -171,14 +223,15 @@ export class PrefeituraMogiDasCruzesSpider extends BaseSpider {
               editionNumber,
               isExtraEdition,
               power,
-              sourceText: containerText.substring(0, 200), // Limit source text length
+              sourceText: data.text.substring(0, 200), // Limit source text length
+              requiresClientRendering: true,
             })
           );
 
         } catch (error) {
-          logger.error(`Error processing PDF link:`, error as Error);
+          logger.error(`Error processing gazette data:`, error as Error);
         }
-      });
+      }
 
       // Await all gazette creation promises
       const results = await Promise.all(gazettePromises);
@@ -252,4 +305,3 @@ export class PrefeituraMogiDasCruzesSpider extends BaseSpider {
     return new URL(url, this.mogiDasCruzesConfig.baseUrl).toString();
   }
 }
-

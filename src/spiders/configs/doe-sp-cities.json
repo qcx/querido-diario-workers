@@ -1517,17 +1517,14 @@
     "name": "Capivari - SP",
     "territoryId": "3510401",
     "startDate": "2020-01-01",
-    "spiderType": "dosp",
+    "spiderType": "prefeituracapivari",
     "config": {
-      "type": "dosp",
-      "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
-      "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
-      "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
-      "territoryFilter": "CAPIVARI",
+      "type": "prefeituracapivari",
+      "url": "https://capivari.sp.gov.br/portal/servicos/diario-oficial/",
       "requiresClientRendering": true
     },
     "gazetteScope": "city",
-    "active": false
+    "active": true
   },
   {
     "id": "sp_caraguatatuba",

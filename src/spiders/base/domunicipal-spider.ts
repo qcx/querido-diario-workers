@@ -138,11 +138,14 @@ export class DomunicipalSpider extends BaseSpider {
         return null;
       }
       
-      const pdfUrl = pdfLink.attr('href');
+      let pdfUrl = pdfLink.attr('href');
       if (!pdfUrl) {
         logger.warn('PDF URL is empty');
         return null;
       }
+      
+      // Encode spaces in PDF URLs to prevent 404 errors
+      pdfUrl = pdfUrl.replace(/ /g, '%20');
 
       // Extract edition number
       const editionText = element.find('l.text-success').first().text();

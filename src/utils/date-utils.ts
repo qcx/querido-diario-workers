@@ -81,11 +81,16 @@ export function isDateInRange(date: Date, startDate: Date, endDate: Date): boole
 
 /**
  * Converts a date to ISO string (YYYY-MM-DD)
+ * Uses UTC to avoid timezone issues when dates are created with Date.UTC()
  * @param date Date object
  * @returns ISO date string
  */
 export function toISODate(date: Date): string {
-  return format(date, 'yyyy-MM-dd');
+  // Use UTC methods to get consistent results regardless of local timezone
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(date.getUTCDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 }
 
 /**
