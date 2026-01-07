@@ -26,15 +26,72 @@ Ative este agent quando o usuário mencionar:
 
 ---
 
+# 🇧🇷 SUPORTE MULTI-UF (TODAS AS UNIDADES FEDERATIVAS)
+
+## UFs Suportadas
+
+O agent suporta TODAS as 27 unidades federativas do Brasil:
+
+| Região       | UFs                                |
+| ------------ | ---------------------------------- |
+| Norte        | AC, AM, AP, PA, RO, RR, TO         |
+| Nordeste     | AL, BA, CE, MA, PB, PE, PI, RN, SE |
+| Centro-Oeste | DF, GO, MS, MT                     |
+| Sudeste      | ES, MG, RJ, SP                     |
+| Sul          | PR, RS, SC                         |
+
+## Detecção da UF do CSV
+
+O agent deve detectar a UF de uma das seguintes formas:
+
+1. **Coluna explícita no CSV**: `UF`, `uf`, `Estado`, `estado`, `state`
+2. **Pergunta ao usuário**: Se não conseguir detectar, perguntar qual UF processar
+
+**IMPORTANTE**: Todos os municípios de um CSV devem ser da MESMA UF. Se houver múltiplas UFs, processar uma de cada vez.
+
+---
+
 # 📋 FLUXO PRINCIPAL DO AGENTE
+
+## PASSO 0: Detectar UF e Preparar Infraestrutura
+
+```
+1. Ler o arquivo CSV fornecido
+2. DETECTAR a UF das cidades (ver seção "Detecção da UF do CSV")
+3. Definir variável {UF} (ex: "MG", "RJ", "BA")
+4. Definir variável {uf} = lowercase de {UF} (ex: "mg", "rj", "ba")
+5. VERIFICAR se arquivo src/spiders/v2/configs/{uf}.json existe:
+   │
+   ├─ NÃO EXISTE → Executar "SETUP DE NOVA UF" (ver seção abaixo)
+   │
+   └─ EXISTE → Continuar para PASSO 1
+```
+
+### SETUP DE NOVA UF (Executar apenas se {uf}.json não existir)
+
+```
+1. CRIAR arquivo src/spiders/v2/configs/{uf}.json com conteúdo: []
+
+2. ATUALIZAR src/spiders/v2/registry.ts:
+
+   a) Adicionar import após os imports existentes:
+      import {uf}Configs from './configs/{uf}.json';
+
+   b) Adicionar ao objeto STATE_CONFIGS:
+      const STATE_CONFIGS = {
+        'SP': spConfigs,
+        '{UF}': {uf}Configs,  // ← ADICIONAR ESTA LINHA
+      } as const;
+```
 
 ## PASSO 1: Pool das Cidades
 
 ```
 1. Ler o arquivo CSV fornecido
 2. Extrair lista de todas as cidades com suas URLs
-3. Buscar códigos IBGE para todas as cidades de SP
-4. Verificar quais cidades já existem no sp.json e com spiderType válido
+3. Buscar códigos IBGE para todas as cidades da UF {UF}
+4. Verificar em grupos de 20 cidades, quais já existem no {uf}.json e com spiderType válido
+5. Só parar o Agent quando terminar todas as cidades do csv
 ```
 
 ## PASSO 2: Processar Cidade por Cidade
@@ -42,7 +99,7 @@ Ative este agent quando o usuário mencionar:
 ```
 PARA CADA cidade no CSV:
   │
-  ├─ VERIFICAR: Cidade já existe no sp.json e se tem spiderType válido?
+  ├─ VERIFICAR: Cidade já existe no {uf}.json e se tem spiderType válido?
   │     └─ SIM → status: "skipped_already_exists" → PRÓXIMA CIDADE
   │
   ├─ ANALISAR URL da cidade
@@ -62,13 +119,11 @@ PARA CADA cidade no CSV:
   │           │
   │           └─ Analisar compatibilidade com spiderTypes existentes
   │                 │
-  │                 ├─ >= 70% match? → CRIAR NOVO spiderType
-  **AQUI O FOCO É NOS SITES CUSTOMIZADOS DE CADA MUNICIPIO**
-  │                 │     └─ Criar TODOS os 6 arquivos
-  │                 │     └─ status: "created_new_spider"
+  │                 ├─ Pegar o mais compatível e criar um spider com base no mais compatível, sempre testando se será preciso requiresClientRendering = true ... ou se precisa carregar o conteúdo via javascript e tudo mais ... nesse momento é uma análise minusciosa do que precisamos fazer para extrair os diários oficiais das urls
   │                 │
-  │                 └─ < 70% match? → needs_review
-  │                       └─ Incluir análise detalhada do porquê
+  │                 ├─ Mesmo que seja complexo faça o spider e só siga para a próxima cidade se tiver ocr result válido ou nos casos descritos como necessário para needs_review na seção de REGRAS CRÍTICAS
+  │                 │
+  │                 ├─ É nesse momento que criaremos um spiderType, é preciso que o agente navegue pela URL base para identificar o que será preciso na criação desse spiderType.
   │
   └─ PRÓXIMA CIDADE
 ```
@@ -81,33 +136,11 @@ PS.: é necessário gerar um crawl para essa cidade em questão e verificar se t
 ```
 1. Coletar todos os resultados
 2. Dizer quanto tempo demorou o trabalho completo
-3. VERIFICAR: Todos os spiderTypes no sp.json têm seus arquivos .ts?
+3. VERIFICAR: Todos os spiderTypes no {uf}.json têm seus arquivos .ts?
    └─ Se não, voltar e criar os arquivos faltantes
 4. Calcular summary
-5. Salvar em scripts/spider-agent/reports/{timestamp}-report.json
+5. Salvar em scripts/spider-agent/reports/{timestamp}-{uf}-report.json
 ```
-
----
-
-# 🔍 COMO IDENTIFICAR O TIPO DE URL
-
-## Plataformas Centralizadas (Reutilizar spiderType existente)
-
-Tudo que for municipal não da pra aproveitar
-
-**Ação:** Apenas criar config JSON em `sp.json` usando o spiderType existente.
-
-## Sites Próprios da Prefeitura (Analisar via Browser)
-
-URLs que são domínios próprios da prefeitura:
-
-- `diariooficial.{cidade}.sp.gov.br`
-- `prefeitura.{cidade}.sp.gov.br`
-- `{cidade}.sp.gov.br/diario-oficial`
-- `dom.{cidade}.sp.gov.br`
-- Qualquer outro domínio que NÃO seja uma plataforma centralizada
-
-**Ação:** Navegar via browser e analisar compatibilidade.
 
 ---
 
@@ -140,22 +173,10 @@ URLs que são domínios próprios da prefeitura:
 
 ## Decisão de Match:
 
-### >= 70% de compatibilidade (CRIAR NOVO SPIDER):
-
 - Consegue identificar claramente a estrutura HTML
 - Encontra os seletores CSS para: lista de diários, links PDF, datas
 - Padrão similar a algum spider existente
 - **→ CRIAR NOVO spiderType do zero baseado no spider de referência**
-
-### < 70% de compatibilidade - AINDA ASSIM TENTE!
-
-**ANTES de marcar needs_review, você DEVE:**
-
-1. Abrir o DevTools (via browser_snapshot) e inspecionar a estrutura
-2. Procurar por APIs JSON sendo chamadas (Network tab)
-3. Tentar pelo menos 3 abordagens diferentes de seletores
-4. Verificar se há iframe com conteúdo
-5. Procurar padrões alternativos na página
 
 **SÓ marque needs_review se TODAS as tentativas falharem E o site for realmente impossível.**
 
@@ -193,11 +214,11 @@ URLs que são domínios próprios da prefeitura:
      - Adicionar import da classe
      - Adicionar case no switch
 
-☐ 6. src/spiders/v2/configs/sp.json
+☐ 6. src/spiders/v2/configs/{uf}.json
      - Adicionar config da cidade usando o NOVO spiderType
 ```
 
-**⛔ NÃO adicione config no sp.json com spiderType que não existe! ⛔**
+**⛔ NÃO adicione config no {uf}.json com spiderType que não existe! ⛔**
 
 ---
 
@@ -207,10 +228,10 @@ URLs que são domínios próprios da prefeitura:
 
 ```json
 {
-  "id": "sp_{cidade_slug}",
-  "name": "{Cidade} - SP",
+  "id": "{uf}_{cidade_slug}",
+  "name": "{Cidade} - {UF}",
   "territoryId": "{codigo_ibge}",
-  "stateCode": "SP",
+  "stateCode": "{UF}",
   "active": true,
   "spiders": [
     {
@@ -229,12 +250,46 @@ URLs que são domínios próprios da prefeitura:
 }
 ```
 
+---
+
+# 🔢 CÓDIGOS IBGE POR UF
+
+Para buscar códigos IBGE, use a API do IBGE:
+
+```
+https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/municipios
+```
+
+Exemplos:
+
+- SP: https://servicodados.ibge.gov.br/api/v1/localidades/estados/SP/municipios
+- MG: https://servicodados.ibge.gov.br/api/v1/localidades/estados/MG/municipios
+- RJ: https://servicodados.ibge.gov.br/api/v1/localidades/estados/RJ/municipios
+
+**Formato da resposta:**
+
+```json
+[
+  {
+    "id": 3106200,
+    "nome": "Belo Horizonte"
+  },
+  ...
+]
+```
+
+O campo `id` é o código IBGE (territoryId).
+
+---
+
 # 📊 FORMATO DO RELATÓRIO
 
 ```json
 {
   "timestamp": "2025-12-26T15:00:00Z",
   "csvFile": "nome_do_arquivo.csv",
+  "stateCode": "{UF}",
+  "configFile": "src/spiders/v2/configs/{uf}.json",
   "summary": {
     "total": 20,
     "created_new_spider": 5,
@@ -361,11 +416,11 @@ Após criar um novo spider, verificar se TODOS os 6 arquivos existem:
 3. `base/index.ts` - export adicionado?
 4. `registry.ts` - case adicionado?
 5. `registry-manager.ts` - case adicionado?
-6. `sp.json` - config adicionada?
+6. `{uf}.json` - config adicionada?
 
 ## Verificação Final
 
-Antes de gerar o relatório, verificar se todos os spiderTypes referenciados no `sp.json` têm seus arquivos `.ts` correspondentes. Se não, voltar e criar.
+Antes de gerar o relatório, verificar se todos os spiderTypes referenciados no `{uf}.json` têm seus arquivos `.ts` correspondentes. Se não, voltar e criar.
 
 ---
 
@@ -390,5 +445,5 @@ bun run goodfellow:dev
 # Testar spider criado
 curl -s 'http://localhost:{PORT}/crawl' \
 -H 'Content-Type: application/json' \
--d '{"cities": ["sp_{cidade_slug}"], "version": "v2", "startDate": "{7_dias_atras}"}'
+-d '{"cities": ["{uf}_{cidade_slug}"], "version": "v2", "startDate": "{7_dias_atras}"}'
 ```

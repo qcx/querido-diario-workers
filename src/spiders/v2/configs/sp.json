@@ -207,14 +207,27 @@
     "active": true,
     "spiders": [
       {
-        "spiderType": "prefeituramogidascruzes",
+        "spiderType": "dosp",
         "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "MOGI DAS CRUZES",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeituramogidascruzes",
+        "priority": 2,
         "active": true,
         "gazetteScope": "city",
         "config": {
           "type": "prefeituramogidascruzes",
-          "baseUrl": "https://diario-oficial.mogidascruzes.sp.gov.br/diarios/publicacoes/",
-          "requiresClientRendering": true
+          "baseUrl": "https://diario-oficial.mogidascruzes.sp.gov.br/diarios/publicacoes"
         }
       }
     ]
@@ -702,14 +715,27 @@
     "active": true,
     "spiders": [
       {
-        "spiderType": "prefeituramaripora",
+        "spiderType": "dosp",
         "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "MAIRIPORÃ",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeituramaripora",
+        "priority": 2,
         "active": true,
         "gazetteScope": "city",
         "config": {
           "type": "prefeituramaripora",
-          "url": "https://www.mairipora.sp.gov.br/imprensa-oficial/",
-          "requiresClientRendering": true
+          "url": "https://www.mairipora.sp.gov.br"
         }
       }
     ]
