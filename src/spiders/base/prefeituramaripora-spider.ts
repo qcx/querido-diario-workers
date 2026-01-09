@@ -10,11 +10,11 @@ import { logger } from '../../utils/logger';
  * 
  * Uses Cloudflare Browser Rendering (Puppeteer) to handle:
  * - JavaScript-rendered gazette listings
- * - Year-based URL structure: /imprensa-oficial/imprensa-oficial-{YEAR}-2/
+ * - Year-based URL structure: /imprensa-oficial/imprensa-oficial-{YEAR}/
  * - Elementor-based page structure
  * 
  * The site structure:
- * 1. Navigate to URL: /imprensa-oficial/imprensa-oficial-{YEAR}-2/
+ * 1. Navigate to URL: /imprensa-oficial/imprensa-oficial-{YEAR}/
  * 2. Gazettes are displayed in elementor-column elements (.elementor-col-25 or .elementor-col-100)
  * 3. Each column contains:
  *    - .elementor-image-box widget with:
@@ -46,9 +46,9 @@ export class PrefeituraMairiporaSpider extends BaseSpider {
    * Build URL for a specific year
    */
   private buildYearUrl(year: number): string {
-    // URL pattern: /imprensa-oficial/imprensa-oficial-{YEAR}-2/
+    // URL pattern: /imprensa-oficial/imprensa-oficial-{YEAR}/
     const url = this.baseUrl.endsWith('/') ? this.baseUrl.slice(0, -1) : this.baseUrl;
-    return `${url}/imprensa-oficial/imprensa-oficial-${year}-2/`;
+    return `${url}/imprensa-oficial/imprensa-oficial-${year}/`;
   }
 
   /**

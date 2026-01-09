@@ -1,0 +1,193 @@
+---
+description: Classify URL content and choose/implement the correct gazette spider (Diário Oficial)
+alwaysApply: false
+---
+
+## Goal
+
+Given 1..N URLs, classify crawling complexity and ensure we can return **a list of gazettes (Diários Oficiais) for a requested date range**, preferably using HTTP-only mode, falling back to browser rendering only when required.
+
+Output per URL: `processed_url | config_id | final_status`
+
+**Non-goals:** extracting article text, metadata beyond what is needed to identify/download gazettes, or any content not required to fetch gazette PDFs.
+
+---
+
+## Definitions
+
+- **Gazette**: a Diário Oficial issue entry for a specific date, with a resolvable final PDF URL (or direct file URL).
+- **HTTP mode**: fetch via `curl`/`fetch`/axios (no JS runtime).
+- **Browser mode**: uses `this.browser` to render JS-dependent pages.
+
+---
+
+## Inputs required for implementation
+
+For each URL, assume we need to support a date range:
+- `start_date` (YYYY-MM-DD)
+- `end_date` (YYYY-MM-DD)
+
+If the caller did not provide dates, default to last **7 days** (inclusive).
+
+---
+
+## Step 1 — Probe (HTTP)
+
+Do a GET probe (curl or equivalent) with:
+- Follow redirects
+- Capture: final URL after redirects, status code, headers, and first ~200KB of body
+- Set a realistic User-Agent
+
+Classify the probe result:
+
+### 1A. HTTP Success
+If status is 2xx and body is non-empty: proceed to Step 2.
+
+### 1B. HTTP Blocked / Needs JS / Access issue
+If any of the following:
+- 401/403
+- 429
+- 5xx repeatedly
+- 2xx but body indicates JS challenge (e.g., “enable javascript”, Cloudflare challenge, empty root with heavy scripts)
+- Content-Type is HTML but body is basically a shell (very small, no real links/content)
+
+→ Skip to Step 4 (browser candidate), but still keep probe artifacts for debugging.
+
+### 1C. Non-HTML Direct File
+If Content-Type is `application/pdf` (or URL ends with `.pdf` and bytes look like PDF):
+- Treat as a single gazette endpoint or index PDF.
+- Implement HTTP-only spider that returns this as one gazette for the date range **only if** it matches the requested dates. If the endpoint does not support date selection, mark as `manual_review_needed` unless date can be inferred safely.
+
+Proceed to Step 3/4 depending on whether an existing spider already handles “direct PDF”.
+
+---
+
+## Step 2 — Identify “gazette index” signals (HTTP body analysis)
+
+Only run if Step 1A succeeded.
+
+Determine if the response is a gazette listing/search page.
+
+Check signals (count them):
+
+1) HTML contains terms like:
+   - "Diário Oficial", "Diários Oficiais", "Imprensa Oficial", "DOE", "DOM"
+2) Page contains **date UI or parameters**:
+   - inputs/selects with date names (data, dt, date, periodo, start/end)
+   - querystring patterns like `?data=YYYY-MM-DD`
+3) Presence of **issue links**:
+   - repeated anchors/buttons per edition
+   - patterns like `/edicao/`, `/arquivo/`, `/visualizar/`, `/download/`
+4) Presence of **PDF references** (direct or indirect):
+   - `.pdf` links OR endpoints that likely generate PDFs
+5) Pagination or calendar navigation (by date)
+
+If **>= 2 signals**: treat as a gazette page and proceed to Step 3.
+Otherwise: proceed to Step 4 (custom spider likely).
+
+Also record a short classification note per URL:
+- `gazette_index_likely` / `unclear` / `not_gazette`
+
+---
+
+## Step 3 — Reuse existing spider when possible
+
+Try to match the detected HTML/URL pattern against existing spiders:
+
+Search in:
+- `src/spiders/base`
+- existing configs in `src/spiders/v2/configs`
+
+Matching criteria:
+- same domain/path family OR same DOM/link patterns OR same API endpoints.
+
+### If match found
+1) Reuse the existing spider.
+2) Create/adjust config in `src/spiders/v2/configs` for this URL.
+3) Run the spider test (no mocks) for a small date window (e.g., 1 day) to validate.
+
+If the test passes: go to Step 5.
+If it fails: treat as “needs fix” and proceed to Step 4 (either improve the existing spider or create a new one).
+
+### If no match found
+Proceed to Step 4.
+
+---
+
+## Step 4 — Implement or extend a spider (prefer HTTP)
+
+Create or extend a spider so that, given `start_date` and `end_date`, it returns:
+
+- `[{ date, title?, pdf_url, source_url }]` (exact shape depends on your existing types, but **must** include `date` and resolvable `pdf_url`)
+
+Implementation decision tree:
+
+### 4A. Can it be done via HTTP only?
+Prefer HTTP if any of these are true:
+- PDF links exist in HTML
+- There are intermediary HTML pages that lead to PDF with static requests
+- There is a JSON/API endpoint discoverable from the page/network calls
+
+If yes:
+- Implement HTTP spider using requests + HTML parsing or API calls.
+- Support date filtering:
+  - querystring, path params, or API params
+  - otherwise crawl and filter client-side by parsed dates (only within reasonable bounds)
+
+### 4B. Browser required?
+Use browser mode only if:
+- The listing/PDF links are only generated after JS execution
+- The endpoint requires interaction to load results (SPA, lazy-loaded via JS with no discoverable API)
+- Anti-bot measures block HTTP mode but allow browser automation
+
+If yes:
+- Use `this.browser` to render, then extract links and/or capture underlying XHR endpoints for future HTTP refactor.
+
+### 4C. PDF resolution rules
+
+For each candidate gazette entry:
+- Prefer direct `.pdf` URL.
+- If only an intermediate URL exists:
+  - request it and follow redirects until reaching final PDF
+  - or parse the intermediate HTML for the PDF link
+- Validate the final URL returns PDF bytes (or PDF content-type).
+
+### 4D. Wiring / Registry updates
+
+After implementing:
+1) Create config in `src/spiders/v2/configs`
+2) Update all required plumbing so it is discoverable:
+   - `src/types/spider-config.ts`
+   - `src/spiders/base/index.ts`
+   - `src/spiders/registry.ts`
+   - `src/spiders/registry-manager.ts`
+
+### 4E. Tests (no mocks)
+Add/adjust an integration test that:
+- Calls the spider for a short real date window
+- Asserts:
+  - returns array (possibly empty if truly no editions in that window)
+  - if non-empty: each item has `date` and a working `pdf_url` (HEAD/GET verifies PDF)
+- Test must run against real endpoints (no mock).
+
+### 4F. Browser minimization review
+After the test passes:
+- Re-evaluate: can you replace browser mode with HTTP by using discovered API calls?
+- If yes: refactor to HTTP-only.
+
+---
+
+## Step 5 — Final report
+
+Return one line per processed URL:
+
+`processed_url | config_id | final_status`
+
+Where `final_status` is one of:
+- `reused_existing_spider_ok`
+- `new_http_spider_ok`
+- `new_browser_spider_ok`
+- `fixed_existing_spider_ok`
+- `manual_review_needed` (explain briefly: blocked, auth required, unclear gazette signals, etc.)
+
+Include short notes only when status is not OK.

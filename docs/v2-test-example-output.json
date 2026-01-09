@@ -1,0 +1,73 @@
+{
+  "successful": [
+    {
+      "spiderId": "sp_3550308",
+      "territoryId": "sp_3550308",
+      "gazetteCount": 8,
+      "ocrResults": [
+        {
+          "id": "550e8400-e29b-41d4-a716-446655440001",
+          "gazetteId": "550e8400-e29b-41d4-a716-446655440010",
+          "textLength": 25430,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "550e8400-e29b-41d4-a716-446655440002",
+          "gazetteId": "550e8400-e29b-41d4-a716-446655440011",
+          "textLength": 18920,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "550e8400-e29b-41d4-a716-446655440003",
+          "gazetteId": "550e8400-e29b-41d4-a716-446655440012",
+          "textLength": 32100,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "rj_3304557",
+      "territoryId": "rj_3304557",
+      "gazetteCount": 5,
+      "ocrResults": [
+        {
+          "id": "550e8400-e29b-41d4-a716-446655440004",
+          "gazetteId": "550e8400-e29b-41d4-a716-446655440013",
+          "textLength": 15200,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "550e8400-e29b-41d4-a716-446655440005",
+          "gazetteId": "550e8400-e29b-41d4-a716-446655440014",
+          "textLength": 22800,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    }
+  ],
+  "failed": [
+    {
+      "spiderId": "mg_3106200",
+      "territoryId": "mg_3106200",
+      "reason": "OCR results found but validation failed",
+      "gazetteCount": 3,
+      "hasGazette": true,
+      "hasOcr": true,
+      "ocrIssue": "2 OCR results not in markdown format; 1 OCR results missing \"Diário Oficial\" text"
+    }
+  ],
+  "noResults": [],
+  "summary": {
+    "totalCities": 3,
+    "successful": 2,
+    "failed": 1,
+    "noResults": 0,
+    "executionTimeMs": 425000,
+    "timedOut": false
+  }
+}

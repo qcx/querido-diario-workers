@@ -41,7 +41,8 @@
     "setup:d1": "npx tsx scripts/setup-d1.ts",
     "import:ocr": "npx tsx dev/import-data.ts ocr",
     "import:gazette": "npx tsx dev/import-data.ts gazette",
-    "import:all": "npx tsx dev/import-data.ts all"
+    "import:all": "npx tsx dev/import-data.ts all",
+    "test:v2-ocr": "npx tsx scripts/v2-test-until-ocr.ts"
   },
   "keywords": [
     "cloudflare-workers",

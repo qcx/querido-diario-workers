@@ -1,8 +1,7 @@
 ---
 description: Agent para criação automatizada de spiders de diários oficiais
 globs:
-  - src/spiders/**
-  - scripts/spider-agent/**
+
 alwaysApply: false
 ---
 
