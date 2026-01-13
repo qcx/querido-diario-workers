@@ -63,12 +63,15 @@ export class InstarSpider extends BaseSpider {
   async crawl(): Promise<Gazette[]> {
     logger.info(`Crawling ${this.instarConfig.url} for ${this.spiderConfig.name}...`);
     
-    // Use browser-based crawling if browser is available
-    if (this.browser) {
+    // Use browser-based crawling ONLY if:
+    // 1. Browser is available AND
+    // 2. requiresClientRendering is explicitly set to true in config
+    // This ensures sites that work with fetch don't accidentally use slower/less reliable browser mode
+    if (this.browser && this.instarConfig.requiresClientRendering === true) {
       return this.crawlWithBrowser();
     }
     
-    // Otherwise use standard fetch-based crawling
+    // Otherwise use standard fetch-based crawling (faster and more reliable for most Instar sites)
     return this.crawlWithFetch();
   }
 
@@ -795,7 +798,7 @@ export class InstarSpider extends BaseSpider {
     return gazettes;
   }
 
-  /**
+/**
    * Extract gazettes from browser page using article-based format
    * Used by custom sites like Pedreira that display gazettes as article cards
    * 

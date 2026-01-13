@@ -29,6 +29,7 @@ export type SpiderType =
   | 'rondonia'
   | 'acre'
   | 'espirito_santo'
+  | 'amunes'
   | 'domunicipal'
   | 'imprensaoficialjundiai'
   | 'prefeiturariopreto'
@@ -113,6 +114,67 @@ export type SpiderType =
   | 'prefeituravarzeapaulista'
   | 'prefeiturailhasolteira'
   | 'prefeiturasaosebastiao'
+  | 'prefeiturabelohorizonte'
+  | 'prefeiturabetim'
+  | 'prefeiturajuizdefora'
+  | 'prefeiturauberlandia'
+  | 'prefeituramontesclaros'
+  | 'prefeituraipatinga'
+  | 'prefeituragovernadovaladares'
+  | 'prefeiturasantaluziamg'
+  | 'prefeiturauberaba'
+  | 'prefeiturapocosdecaldas'
+  | 'prefeiturabarbacena'
+  | 'prefeituraaraguari'
+  | 'folhadesabara'
+  | 'prefeiturasabara'
+  | 'prefeituracoronelfabriciano'
+  | 'prefeituraaraxa'
+  | 'prefeituralavras'
+  | 'prefeituranolalima'
+  | 'prefeituraitauna'
+  | 'prefeiturauba'
+  | 'prefeituraituiutaba'
+  | 'prefeituraparademinas'
+  | 'prefeiturasaojoaodelrei'
+  | 'prefeiturapatrocinio'
+  | 'prefeituracaratinga'
+  | 'prefeiturabomdespacho'
+  | 'prefeituraunai'
+  | 'prefeituraesmeraldas'
+  | 'prefeituratimoteo'
+  | 'prefeituraitajuba'
+  | 'prefeituramanhuacu'
+  | 'prefeituraalfenas'
+  | 'prefeituraalfenasatosoficiais'
+  | 'prefeituravicosa'
+  | 'prefeituraouropreto'
+  | 'prefeiturajanauba'
+  | 'prefeiturajanaubapublicacoes'
+  | 'prefeituramariana'
+  | 'prefeituracataguases'
+  | 'prefeiturafrutal'
+  | 'prefeituraextrema'
+  | 'prefeituracongonhas'
+  | 'prefeiturabaraodecocais'
+  | 'prefeituraespinosa'
+  | 'prefeituraeloi_mendes'
+  | 'prefeituraconceicaodasalagoas_concursos'
+  | 'prefeituraconceicaodasalagoas_atos'
+  | 'plenus_dioenet'
+  | 'portalfacil'
+  | 'diario_oficial_link'
+  | 'prefeituraalegre'
+  | 'prefeituravitoria'
+  | 'prefeituracariacica'
+  | 'prefeiturlinhares'
+  | 'prefeituracastelo'
+  | 'prefeituraguacui'
+  | 'prefeituravilavelha'
+  | 'prefeituracachoeiro'
+  | 'prefeituraserra'
+  | 'prefeituramarataizes'
+  | 'prefeituraguanhaes'
   | 'custom';
 
 /**
@@ -164,6 +226,7 @@ export type SpiderPlatformConfig =
   | ModernizacaoConfig
   | AplusConfig
   | DioenetConfig
+  | PlenusDioenetConfig
   | AdministracaoPublicaConfig
   | PtioConfig
   | MunicipioOnlineConfig
@@ -174,6 +237,7 @@ export type SpiderPlatformConfig =
   | RondoniaConfig
   | AcreConfig
   | EspiritoSantoConfig
+  | AmunesConfig
   | DomunicipalConfig
   | ImprensaOficialJundiaiConfig
   | PrefeituraRioPretoConfig
@@ -257,6 +321,66 @@ export type SpiderPlatformConfig =
   | PrefeituraVarzeaPaulistaConfig
   | PrefeituraIlhaSolteiraConfig
   | PrefeiturasaosebastiaoeConfig
+  | PrefeituraBeloHorizonteConfig
+  | PrefeiturabetimConfig
+  | PrefeituraJuizDeForaConfig
+  | PrefeiturauberlandiaConfig
+  | PrefeituramontesclarosConfig
+  | PrefeituraIpatingaConfig
+  | PrefeituraGovernadorValadaresConfig
+  | PrefeiturasantaluziamgConfig
+  | PrefeiturauberabaConfig
+  | PrefeituraPocosdecaldasConfig
+  | PrefeiturabarbacenaConfig
+  | PrefeituraAraguariConfig
+  | FolhadesabaraConfig
+  | PrefeiturasabaraConfig
+  | PrefeituraCoronelFabricianoConfig
+  | PrefeituraAraxaConfig
+  | PrefeituraLavrasConfig
+  | PrefeituraNovaLimaConfig
+  | PrefeituraItaunaConfig
+  | PrefeituraUbaConfig
+  | PrefeituraItuiutabaConfig
+  | PrefeituraParademinasConfig
+  | PrefeituraSaoJoaoDelReiConfig
+  | PrefeituraPatrocinioConfig
+  | PrefeituraCaratingaConfig
+  | PrefeituraUnaiConfig
+  | PrefeituraBrumadinhoConfig
+  | PrefeituraEsmeraldasConfig
+  | PrefeituraTimoteoConfig
+  | PrefeituraItajubaConfig
+  | PrefeituraManhuacuConfig
+  | PrefeituraAlfenasConfig
+  | PrefeituraAlfenasAtosOficiaisConfig
+  | PrefeituraVicosaConfig
+  | PrefeituraOuroPretoConfig
+  | PrefeituraJanaubaConfig
+  | PrefeituraJanaubaPublicacoesConfig
+  | PrefeituraMarianaConfig
+  | PrefeituraCataguasesConfig
+  | PrefeituraFrutalConfig
+  | PrefeituraExtremaConfig
+  | PrefeituraCongonhasConfig
+  | PrefeituraBaraoDeCocaisConfig
+  | PrefeituraEspinosaConfig
+  | PrefeituraEloiMendesConfig
+  | PrefeituraConceicaoDasAlagoasConcursosConfig
+  | PrefeituraConceicaoDasAlagoasAtosConfig
+  | SimpleSSConfig
+  | PortalfacilConfig
+  | DiarioOficialLinkConfig
+  | PrefeituraAlegreConfig
+  | PrefeituraVitoriaConfig
+  | PrefeituraCariacicaConfig
+  | PrefeituraLinharesConfig
+  | PrefeituraCasteloConfig
+  | PrefeituraGuacuiConfig
+  | PrefeituraVilaVelhaConfig
+  | PrefeituraCachoeiroConfig
+  | PrefeituraSerraConfig
+  | PrefeituraMarataizesConfig
   | CustomConfig;
 
 /**
@@ -266,6 +390,8 @@ export interface InstarConfig {
   type: 'instar';
   /** Base URL for the Instar platform */
   url: string;
+  /** Whether the site requires client-side rendering (browser mode) */
+  requiresClientRendering?: boolean;
   // Add other Instar-specific configuration properties here if needed
 }
 
@@ -400,6 +526,12 @@ export interface DioenetConfig {
   cityId: number;
 }
 
+export interface PlenusDioenetConfig {
+  type: 'plenus_dioenet';
+  /** Base URL for the list page (e.g., "https://plenussistemas.dioenet.com.br/list/sacramento") */
+  baseUrl: string;
+}
+
 export interface AdministracaoPublicaConfig {
   type: 'administracao_publica';
   token: string;
@@ -469,6 +601,16 @@ export interface AcreConfig {
  */
 export interface EspiritoSantoConfig {
   type: 'espirito_santo';
+  /** Power of the gazette (executive_legislative for municipal content) */
+  power: 'executive' | 'legislative' | 'executive_legislative';
+}
+
+/**
+ * Configuration for AMUNES consortium spider (Associação dos Municípios do Espírito Santo)
+ * Consórcio dos municípios do Espírito Santo que publicam no sistema centralizado AMUNES
+ */
+export interface AmunesConfig {
+  type: 'amunes';
   /** Power of the gazette (executive_legislative for municipal content) */
   power: 'executive' | 'legislative' | 'executive_legislative';
 }
@@ -1683,3 +1825,805 @@ export interface PrefeiturasaosebastiaoeConfig {
   baseUrl: string;
 }
 
+/**
+ * Configuration for Prefeitura de Belo Horizonte spider
+ * 
+ * Site Structure:
+ * - Vue.js frontend at https://dom-web.pbh.gov.br/
+ * - API backend at https://api-dom.pbh.gov.br/api/v1/
+ * - API protected by GoCache WAF - requires browser rendering
+ * 
+ * API Endpoints:
+ * - /edicoes/buscarultimapublicacao - Get latest publication
+ * - /edicoes?dataInicio={date}&dataFim={date} - Search editions by date
+ * - /edicoes/{id}/sumario - Get edition summary
+ * - /documentos/{hash}/download?prefix={YYYYMMDD} - Download PDF
+ */
+export interface PrefeituraBeloHorizonteConfig {
+  type: 'prefeiturabelohorizonte';
+  /** Base URL for the web frontend */
+  baseUrl: string;
+  /** API base URL */
+  apiBaseUrl?: string;
+  /** Whether client rendering is required */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Betim spider
+ * 
+ * Site Structure:
+ * - URL: https://www.betim.mg.gov.br/portal/diario-oficial/
+ * - Uses SIGPub/voxtecnologia platform embedded in the page
+ * - Calendar-based navigation with month/year selectors
+ * - List of editions with "Ler online" and "Baixar" links
+ * - PDFs hosted on www-storage.voxtecnologia.com.br
+ */
+export interface PrefeiturabetimConfig {
+  type: 'prefeituraBetim';
+  /** Base URL for the Prefeitura Betim diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Juiz de Fora spider
+ * 
+ * Site Structure:
+ * - URL: https://www.pjf.mg.gov.br/e_atos/e_atos.php
+ * - Government acts published daily with individual PDFs
+ * - Search form with date range and type filters
+ * - Anos anteriores: https://www.pjf.mg.gov.br/e_atos/anos_anteriores.php
+ * - PDFs attached to individual acts: ./anexos/{filename}.pdf
+ * 
+ * The site publishes "Atos do Governo" which is the official DOM of Juiz de Fora.
+ * Acts are published individually, with some having PDF attachments.
+ */
+export interface PrefeituraJuizDeForaConfig {
+  type: 'prefeiturajuizdefora';
+  /** Base URL for the Prefeitura Juiz de Fora e-atos page */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Uberlândia spider
+ * 
+ * Site structure:
+ * - Diário Oficial published as WordPress custom post type
+ * - URLs: https://www.uberlandia.mg.gov.br/diariooficial/edicao-{number}/
+ * - Redirects to PDF: https://docs.uberlandia.mg.gov.br/wp-content/uploads/{YYYY}/{MM}/{number}.pdf
+ * 
+ * The spider iterates over edition numbers to find available gazettes.
+ */
+export interface PrefeiturauberlandiaConfig {
+  type: 'prefeiturauberlandia';
+  /** Base URL for the municipality site */
+  baseUrl: string;
+  /** Starting edition number to crawl from (for reference) */
+  startEdition?: number;
+  /** Current/latest known edition number */
+  currentEdition?: number;
+}
+
+/**
+ * Configuration for Prefeitura de Montes Claros spider
+ * 
+ * Site Structure:
+ * - Base URL: https://diariooficial.montesclaros.mg.gov.br/
+ * - Uses BEE platform (custom municipal portal system)
+ * - Listing pages: /exercicio-{YYYY} for each year
+ * - Gazette pages: /{YYYY}/{mes}/{slug} with JS redirect to PDF
+ * - PDFs hosted on: https://admin.montesclaros.mg.gov.br/upload/diario-oficial/files/edicoes/
+ * 
+ * The site displays gazette links that redirect via JavaScript to PDF files.
+ * Each gazette page contains a script tag with window.location redirect to the PDF.
+ */
+export interface PrefeituramontesclarosConfig {
+  type: 'prefeituramontesclaros';
+  /** Base URL for the Prefeitura Montes Claros diário oficial site */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Ipatinga spider
+ * 
+ * Site Structure:
+ * - URL: https://www.ipatinga.mg.gov.br/diariooficial
+ * - Uses Portal Fácil platform with AjaxPro for loading gazettes
+ * - Gazettes loaded via JavaScript (diel_diel_lis.GetDiario)
+ * - PDF URLs: https://www.ipatinga.mg.gov.br/abrir_arquivo.aspx?cdLocal=12&arquivo={GUID}.pdf
+ * 
+ * Requires browser rendering due to JavaScript-heavy page
+ */
+export interface PrefeituraIpatingaConfig {
+  type: 'prefeituraipatinga';
+  /** Base URL for the Prefeitura Ipatinga diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering (always true for this spider) */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Governador Valadares spider
+ * 
+ * Site Structure:
+ * - URL: https://www.valadares.mg.gov.br/diario-eletronico/caderno/governador-valadares-mg/1
+ * - Uses Portal Fácil platform with AjaxPro for loading gazettes
+ * - Gazettes loaded via JavaScript (diel_diel_lis.GetDiario)
+ * - PDF URLs: https://www.valadares.mg.gov.br/abrir_arquivo.aspx?cdLocal=12&arquivo={GUID}.pdf
+ * 
+ * Requires browser rendering due to JavaScript-heavy page
+ */
+export interface PrefeituraGovernadorValadaresConfig {
+  type: 'prefeituragovernadovaladares';
+  /** Base URL for the Prefeitura Governador Valadares diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering (always true for this spider) */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Santa Luzia - MG spider
+ * 
+ * Site Structure:
+ * - WordPress site with Modern Events Calendar plugin
+ * - REST API: /index.php?rest_route=/wp/v2/posts
+ * - PDFs embedded via pdf-poster plugin with data-attributes containing file URL
+ * - PDF URL pattern: https://dom.santaluzia.mg.gov.br/wp-content/uploads/YYYY/MM/{number}-DOM.pdf
+ */
+export interface PrefeiturasantaluziamgConfig {
+  type: 'prefeiturasantaluziamg';
+  /** Base URL for the Santa Luzia DOM platform */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Uberaba spider
+ * 
+ * Site Structure:
+ * - Base URL: http://www.uberaba.mg.gov.br/portal/galeriaarquivos,portavoz/arquivos
+ * - Folder structure: /YYYY/ (years)
+ * - PDFs organized by month within each year folder
+ * - Official gazette name: "Porta-Voz"
+ * 
+ * The site uses a file gallery system with year-based folders containing PDFs.
+ */
+export interface PrefeiturauberabaConfig {
+  type: 'prefeiturauberaba';
+  /** Base URL for the Prefeitura Uberaba Porta-Voz archive */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Poços de Caldas spider
+ * 
+ * Site Structure:
+ * - Portal do Cidadão: https://sistemas.pocosdecaldas.mg.gov.br/portalcidadao/
+ * - Uses GWT (Google Web Toolkit) with hash-based routing
+ * - Diário Oficial search page accessible via specific hash in URL
+ * - Search interface with: Edição, Data (from/to), Texto, Verificador
+ * 
+ * The city does NOT publish in AMM-MG. They have their own proprietary system.
+ * Requires browser rendering due to GWT framework complexity.
+ */
+export interface PrefeituraPocosdecaldasConfig {
+  type: 'prefeiturapocosdecaldas';
+  /** Base URL for the Portal do Cidadão (e.g., "https://sistemas.pocosdecaldas.mg.gov.br/portalcidadao/") */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering (always true for this spider) */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Barbacena spider
+ * 
+ * Site structure:
+ * - Main page: https://www1.barbacena.mg.gov.br/portal/diario-oficial
+ * - Open Data API: https://www1.barbacena.mg.gov.br/portal/dados-abertos/diario-oficial/{YEAR}
+ * - Download URL: https://www1.barbacena.mg.gov.br/portal/download/diario-oficial/{TOKEN}/
+ * 
+ * The site provides a JSON API with gazette metadata.
+ */
+export interface PrefeiturabarbacenaConfig {
+  type: 'prefeiturabarbacena';
+  /** Base URL for the Prefeitura Barbacena portal (e.g., "https://www1.barbacena.mg.gov.br") */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Araguari spider
+ * 
+ * Site Structure:
+ * - Base URL: https://araguari.mg.gov.br/correio
+ * - Pagination: /p/{offset} (20 items per page)
+ * - Each gazette is in a .panel.panel-info block
+ * - Date: <h6><em>{weekday}, {DD} de {month} de {YYYY}</em></h6>
+ * - PDF: <a href="...pdf">Leia Aqui</a>
+ */
+export interface PrefeituraAraguariConfig {
+  type: 'prefeituraaraguari';
+  /** Base URL for the Correio Oficial page */
+  baseUrl?: string;
+  /** Alternative URL property */
+  url?: string;
+}
+
+export interface PrefeituraCoronelFabricianoConfig {
+  type: 'prefeituracoronelfabriciano';
+  /** Base URL for the Diário Oficial page */
+  baseUrl: string;
+}
+
+export interface PrefeituraAraxaConfig {
+  type: 'prefeituraaraxa';
+  /** Base URL for the e.DOMA list page */
+  baseUrl: string;
+}
+
+export interface PrefeituraLavrasConfig {
+  type: 'prefeituralavras';
+  /** Base URL for the Portal do Cidadão */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering (always true for GWT applications) */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraNovaLimaConfig {
+  type: 'prefeituranolalima';
+  /** Base URL for the Prefeitura Nova Lima website */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraItaunaConfig {
+  type: 'prefeituraitauna';
+  /** Base URL for the Prefeitura Itaúna diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraUbaConfig {
+  type: 'prefeiturauba';
+  /** Base URL for the Prefeitura Ubá diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraItuiutabaConfig {
+  type: 'prefeituraituiutaba';
+  /** Base URL for the Prefeitura Ituiutaba diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraParademinasConfig {
+  type: 'prefeituraparademinas';
+  /** Base URL for the Prefeitura Pará de Minas diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraSaoJoaoDelReiConfig {
+  type: 'prefeiturasaojoaodelrei';
+  /** Base URL for the Prefeitura São João del-Rei diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraPatrocinioConfig {
+  type: 'prefeiturapatrocinio';
+  /** Base URL for the Prefeitura Patrocínio diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraCaratingaConfig {
+  type: 'prefeituracaratinga';
+  /** Base URL for the Prefeitura Caratinga diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraUnaiConfig {
+  type: 'prefeituraunai';
+  /** Base URL for the Prefeitura Unaí diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraBrumadinhoConfig {
+  type: 'prefeiturabrumadinho';
+  /** URL for the Prefeitura Brumadinho diário oficial list page */
+  url: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraEsmeraldasConfig {
+  type: 'prefeituraesmeraldas';
+  /** Base URL for the Prefeitura Esmeraldas diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraTimoteoConfig {
+  type: 'prefeituratimoteo';
+  /** Base URL for the Prefeitura Timóteo diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraItajubaConfig {
+  type: 'prefeituraitajuba';
+  /** Base URL for the Prefeitura Itajubá diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraManhuacuConfig {
+  type: 'prefeituramanhuacu';
+  /** Base URL for the Prefeitura Manhuaçu diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Alfenas spider
+ * 
+ * Site Structure:
+ * - URL: https://www.alfenas.mg.gov.br/publicacoes/diario-oficial
+ * - Uses Portal Fácil platform with AjaxPro for loading gazettes
+ * - Gazettes loaded via JavaScript
+ * - Similar structure to PrefeituraIpatinga
+ * 
+ * Requires browser rendering due to JavaScript-heavy page
+ */
+export interface PrefeituraAlfenasConfig {
+  type: 'prefeituraalfenas';
+  /** Base URL for the Prefeitura Alfenas diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering (always true for this spider) */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura Alfenas Atos Oficiais spider
+ */
+export interface PrefeituraAlfenasAtosOficiaisConfig {
+  type: 'prefeituraalfenasatosoficiais';
+  /** Base URL for the Atos Oficiais page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Viçosa spider
+ * 
+ * Site Structure:
+ * - URL: https://www.vicosa.mg.gov.br/diario-eletronico
+ * - Uses Portal Fácil platform with AjaxPro for loading gazettes
+ * - Gazettes loaded via JavaScript (diel_diel_lis.GetDiario)
+ * - List of editions with "Visualizar arquivo" links
+ * - PDF URLs: https://www.vicosa.mg.gov.br/abrir_arquivo.aspx?cdLocal=12&arquivo={GUID}.pdf
+ * 
+ * Data Structure per gazette:
+ * - Edition number (N° XXXX / YYYY)
+ * - Date (DD/Mês/YYYY)
+ * - Size (X.XXX MB)
+ * - Link to PDF
+ * 
+ * Requires browser rendering due to JavaScript-heavy page
+ */
+export interface PrefeituraVicosaConfig {
+  type: 'prefeituravicosa';
+  /** Base URL for the Prefeitura Viçosa diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering (always true for this spider) */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Ouro Preto spider
+ * 
+ * Site Structure:
+ * - URL: https://www.ouropreto.mg.gov.br/transparencia/diario
+ * - List of publications with format "PUBLICAÇÃO Nº XXXX - DD/MM/YYYY"
+ * - Each publication has direct PDF link to sgm.ouropreto.mg.gov.br
+ */
+export interface PrefeituraOuroPretoConfig {
+  type: 'prefeituraouropreto';
+  /** Base URL for the Prefeitura Ouro Preto diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Janaúba spider
+ * 
+ * Site Structure:
+ * - URL: https://www.janauba.mg.gov.br/transparencia
+ * - Diário oficial accessible through transparency portal
+ * - Structure to be determined
+ */
+export interface PrefeituraJanaubaConfig {
+  type: 'prefeiturajanauba';
+  /** Base URL for the Prefeitura Janaúba diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Janaúba publicações page
+ * 
+ * Site Structure:
+ * - URL: https://janauba.mg.gov.br/transparencia/publicacoes
+ * - List of publications with date and download links
+ * - Pagination support
+ */
+export interface PrefeituraJanaubaPublicacoesConfig {
+  type: 'prefeiturajanaubapublicacoes';
+  /** Base URL for the Prefeitura Janaúba publicações page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Folha de Sabará spider
+ * 
+ * Local newspaper that publishes legal notices for Sabará
+ * Site URL: https://folhadesabara.com.br/publicacao-leg
+ */
+export interface FolhadesabaraConfig {
+  type: 'folhadesabara';
+  /** Base URL for the Folha de Sabará publications page */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Sabará spider
+ * 
+ * Sabará does not have a consolidated daily gazette.
+ * Official acts (decretos, portarias) are published individually on the city website.
+ * Site URL: https://site.sabara.mg.gov.br/prefeitura/decretos/
+ */
+export interface PrefeiturasabaraConfig {
+  type: 'prefeiturasabara';
+  /** Base URL for the Prefeitura Sabará decretos page */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Mariana spider
+ * 
+ * Site Structure:
+ * - URL: https://www.mariana.mg.gov.br/diario-oficial
+ * - List of publications with format "PUBLICAÇÃO Nº XXXX - DD/MM/YYYY"
+ * - Each publication has a download link with hash-based URL
+ * - Uses simple HTML list structure
+ */
+export interface PrefeituraMarianaConfig {
+  type: 'prefeituramariana';
+  /** Base URL for the Prefeitura Mariana diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Cataguases spider
+ * 
+ * Site Structure:
+ * - URL: https://cataguases.mg.gov.br/jornal-de-cataguases/
+ * - WordPress blog with posts containing PDF links
+ * - Posts in format: /jornal-cataguases-{date}/
+ */
+export interface PrefeituraCataguasesConfig {
+  type: 'prefeituracataguases';
+  /** Base URL for the Jornal Cataguases page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Frutal spider
+ * 
+ * Site Structure:
+ * - URL: https://frutal.publicabrasil.net/
+ * - Uses PublicaBrasil platform (WordPress-based)
+ * - Editions in format: /documentos/diario-oficial-eletronico-edicao-XXX/
+ */
+export interface PrefeituraFrutalConfig {
+  type: 'prefeiturafrutal';
+  /** Base URL for the Frutal diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraExtremaConfig {
+  type: 'prefeituraextrema';
+  /** Base URL for the Prefeitura Extrema diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeituraCongonhasConfig {
+  type: 'prefeituracongonhas';
+  /** Base URL for the Prefeitura Congonhas diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for SimpleSS platform spiders
+ * 
+ * SimpleSS is a platform used by some Brazilian municipalities.
+ * API Structure:
+ * - Endpoint: {baseUrl}/listarDiario/
+ * - Method: POST
+ * - Response: Array of gazette objects with data, numero_edicao, pasta, arquivo, etc.
+ * - PDF URLs: https://pub.simpless.com.br/files/{pasta}{arquivo}
+ */
+export interface SimpleSSConfig {
+  type: 'simpless';
+  /** Base URL for the SimpleSS platform (e.g., "https://www.almenara.mg.gov.br/diario") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Prefeitura de Barão de Cocais spider
+ * 
+ * Site Structure:
+ * - URL: https://www.baraodecocais.mg.gov.br/downloads/categoria/editais/7
+ * - Downloads page with category filter for "Editais"
+ * - List of publications with download links
+ * - Pagination support
+ */
+export interface PrefeituraBaraoDeCocaisConfig {
+  type: 'prefeiturabaraodecocais';
+  /** Base URL for the downloads page with category filter (e.g., "https://www.baraodecocais.mg.gov.br/downloads/categoria/editais/7") */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Espinosa spider
+ * 
+ * Site Structure:
+ * - URL: https://espinosa.mg.gov.br/category/diario-oficial-espinosa-mg/
+ * - WordPress category page with posts for each gazette edition
+ * - Pagination: /category/diario-oficial-espinosa-mg/page/{N}/
+ * - Each post contains a PDF link to the gazette
+ */
+export interface PrefeituraEspinosaConfig {
+  type: 'prefeituraespinosa';
+  /** Base URL for the category page (e.g., "https://espinosa.mg.gov.br/category/diario-oficial-espinosa-mg/") */
+  url: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Elói Mendes spider
+ * 
+ * Site Structure:
+ * - URL: https://eloimendes.mg.gov.br/category/editais/concurso-publico/
+ * - WordPress category page with posts for each gazette edition
+ * - Pagination: /category/editais/concurso-publico/page/{N}/
+ * - Each post contains a PDF link to the gazette
+ * - Note: Only concurso-publico category found, no general atos/editions page available
+ */
+export interface PrefeituraEloiMendesConfig {
+  type: 'prefeituraeloi_mendes';
+  /** Base URL for the category page (e.g., "https://eloimendes.mg.gov.br/category/editais/concurso-publico/") */
+  url: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura Conceição das Alagoas - Concursos
+ * - WordPress page with posts for each competition/decree
+ * - URL: https://www.conceicaodasalagoas.mg.gov.br/concursos/
+ * - Pagination: /concursos/page/{N}/
+ */
+export interface PrefeituraConceicaoDasAlagoasConcursosConfig {
+  type: 'prefeituraconceicaodasalagoas_concursos';
+  /** Base URL for the concursos page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura Conceição das Alagoas - Atos Oficiais
+ * - WordPress page with posts for each official act
+ * - URL: https://www.conceicaodasalagoas.mg.gov.br/atos-oficiais/
+ * - Pagination: /atos-oficiais/{N}/
+ */
+export interface PrefeituraConceicaoDasAlagoasAtosConfig {
+  type: 'prefeituraconceicaodasalagoas_atos';
+  /** Base URL for the atos oficiais page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Portal Fácil/Actcon.net platform spider
+ * 
+ * Portal Fácil is a common platform used by many Brazilian municipalities.
+ * Developed by Actcon.net, it uses AjaxPro for loading gazettes via JavaScript.
+ * 
+ * Site Structure:
+ * - Uses Portal Fácil platform with AjaxPro for loading gazettes
+ * - Gazettes are loaded via JavaScript (typically diel_diel_lis.GetDiario)
+ * - List of editions with "Visualizar arquivo" or similar links
+ * - PDF URLs typically: {baseUrl}/abrir_arquivo.aspx?cdLocal=12&arquivo={GUID}.pdf
+ * 
+ * Requires browser rendering due to JavaScript-heavy page
+ */
+export interface DiarioOficialLinkConfig {
+  type: 'diario_oficial_link';
+  /** Base URL for the diário oficial page (e.g., "https://www.jacutinga.mg.gov.br/diariooficial") */
+  url: string;
+  /** Whether client-side rendering is required (always true for this spider) */
+  requiresClientRendering?: boolean;
+}
+
+export interface PortalfacilConfig {
+  type: 'portalfacil';
+  /** Base URL for the Portal Fácil diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering (always true for Portal Fácil) */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Alegre - ES
+ * WordPress site with PDFs organized by category (decretos, leis) and year
+ */
+export interface PrefeituraAlegreConfig {
+  type: 'prefeituraalegre';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Vitória - ES
+ * ASP.NET site with ExibirArquivo.aspx endpoints
+ */
+export interface PrefeituraVitoriaConfig {
+  type: 'prefeituravitoria';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Cariacica - ES
+ * Next.js site that requires browser rendering
+ */
+export interface PrefeituraCariacicaConfig {
+  type: 'prefeituracariacica';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering (always true for Next.js) */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Linhares - ES
+ */
+export interface PrefeituraLinharesConfig {
+  type: 'prefeiturlinhares';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Castelo - ES
+ */
+export interface PrefeituraCasteloConfig {
+  type: 'prefeituracastelo';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Guaçuí - ES
+ */
+export interface PrefeituraGuacuiConfig {
+  type: 'prefeituraguacui';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Vila Velha - ES
+ */
+export interface PrefeituraVilaVelhaConfig {
+  type: 'prefeituravilavelha';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Cachoeiro de Itapemirim - ES
+ */
+export interface PrefeituraCachoeiroConfig {
+  type: 'prefeituracachoeiro';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Serra - ES
+ * 
+ * Site Structure:
+ * - URL: https://ioes.dio.es.gov.br/diariodaserra
+ * - Uses ioes.dio.es.gov.br platform (same as AMUNES but city-specific URL)
+ * - Search form with date picker (DD/MM/YYYY format)
+ * - May use same API as AMUNES with city filter
+ */
+export interface PrefeituraSerraConfig {
+  type: 'prefeituraserra';
+  /** Base URL for the diário oficial page (e.g., "https://ioes.dio.es.gov.br/diariodaserra") */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Marataízes - ES
+ * 
+ * Site Structure:
+ * - URL: https://www.marataizes.es.gov.br/diario_oficial
+ * - HTML table structure with gazette listings
+ * - Each table row contains: edition number, date, and PDF link
+ * - PDF links in format: /uploads/diario_oficial/diario-oficial-{edition}-{DD}-{MM}-{YYYY}-{hash}.pdf
+ */
+export interface PrefeituraMarataizesConfig {
+  type: 'prefeituramarataizes';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}

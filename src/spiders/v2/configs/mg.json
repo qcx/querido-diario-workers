@@ -1,0 +1,2740 @@
+[
+  {
+    "id": "mg_belo_horizonte",
+    "name": "Belo Horizonte - MG",
+    "territoryId": "3106200",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabelohorizonte",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabelohorizonte",
+          "baseUrl": "https://dom-web.pbh.gov.br",
+          "apiBaseUrl": "https://api-dom.pbh.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_divinopolis",
+    "name": "Divinópolis - MG",
+    "territoryId": "3122306",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "entityId": "760"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_betim",
+    "name": "Betim - MG",
+    "territoryId": "3106705",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabetim",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraBetim",
+          "baseUrl": "https://www.betim.mg.gov.br/portal/diario-oficial/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_contagem",
+    "name": "Contagem - MG",
+    "territoryId": "3118601",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://portal.contagem.mg.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_patos_de_minas",
+    "name": "Patos de Minas - MG",
+    "territoryId": "3148004",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.patosdeminas.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_varginha",
+    "name": "Varginha - MG",
+    "territoryId": "3170701",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.varginha.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_uberlandia",
+    "name": "Uberlândia - MG",
+    "territoryId": "3170206",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturauberlandia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturauberlandia",
+          "baseUrl": "https://www.uberlandia.mg.gov.br",
+          "currentEdition": 7500
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_juiz_de_fora",
+    "name": "Juiz de Fora - MG",
+    "territoryId": "3136702",
+    "stateCode": "MG",
+    "active": false,
+    "notes": "DESATIVADO: O site e_atos.php não publica um Diário Oficial em PDF. Publica atos individuais com anexos opcionais que são documentos específicos (editais, credenciamentos, etc), não o diário oficial consolidado.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturajuizdefora",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturajuizdefora",
+          "baseUrl": "https://www.pjf.mg.gov.br/e_atos/e_atos.php"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_montes_claros",
+    "name": "Montes Claros - MG",
+    "territoryId": "3143302",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituramontesclaros",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramontesclaros",
+          "baseUrl": "https://diariooficial.montesclaros.mg.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_ipatinga",
+    "name": "Ipatinga - MG",
+    "territoryId": "3131307",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraipatinga",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraipatinga",
+          "baseUrl": "https://www.ipatinga.mg.gov.br/diariooficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_sete_lagoas",
+    "name": "Sete Lagoas - MG",
+    "territoryId": "3167202",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraipatinga",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraipatinga",
+          "baseUrl": "https://www.setelagoas.mg.gov.br/diario-eletronico",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  { 
+    "id": "mg_ribeirao_das_neves",
+    "name": "Ribeirão das Neves - MG",
+    "territoryId": "3154606",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_governador_valadares",
+    "name": "Governador Valadares - MG",
+    "territoryId": "3127701",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituragovernadovaladares",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituragovernadovaladares",
+          "baseUrl": "https://www.valadares.mg.gov.br/diario-eletronico/caderno/governador-valadares-mg/1",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_pouso_alegre",
+    "name": "Pouso Alegre - MG",
+    "territoryId": "3152501",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_teofilo_otoni",
+    "name": "Teófilo Otoni - MG",
+    "territoryId": "3168606",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_vespasiano",
+    "name": "Vespasiano - MG",
+    "territoryId": "3171204",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_muriae",
+    "name": "Muriaé - MG",
+    "territoryId": "3143906",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_paracatu",
+    "name": "Paracatu - MG",
+    "territoryId": "3147006",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_curvelo",
+    "name": "Curvelo - MG",
+    "territoryId": "3120904",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_joao_monlevade",
+    "name": "João Monlevade - MG",
+    "territoryId": "3136207",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_tres_coracoes",
+    "name": "Três Corações - MG",
+    "territoryId": "3169307",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_lagoa_santa",
+    "name": "Lagoa Santa - MG",
+    "territoryId": "3137601",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_sao_sebastiao_do_paraiso",
+    "name": "São Sebastião do Paraíso - MG",
+    "territoryId": "3164704",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_formiga",
+    "name": "Formiga - MG",
+    "territoryId": "3126109",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_pirapora",
+    "name": "Pirapora - MG",
+    "territoryId": "3151206",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_tres_pontas",
+    "name": "Três Pontas - MG",
+    "territoryId": "3169406",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_sao_francisco",
+    "name": "São Francisco - MG",
+    "territoryId": "3161106",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_lagoa_da_prata",
+    "name": "Lagoa da Prata - MG",
+    "territoryId": "3137205",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_leopoldina",
+    "name": "Leopoldina - MG",
+    "territoryId": "3138401",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_guaxupe",
+    "name": "Guaxupé - MG",
+    "territoryId": "3128709",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_diamantina",
+    "name": "Diamantina - MG",
+    "territoryId": "3121605",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_monte_carmelo",
+    "name": "Monte Carmelo - MG",
+    "territoryId": "3143104",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_sao_lourenco",
+    "name": "São Lourenço - MG",
+    "territoryId": "3163706",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_arcos",
+    "name": "Arcos - MG",
+    "territoryId": "3104205",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_sao_gotardo",
+    "name": "São Gotardo - MG",
+    "territoryId": "3162104",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_boa_esperanca",
+    "name": "Boa Esperança - MG",
+    "territoryId": "3107109",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_ouro_branco",
+    "name": "Ouro Branco - MG",
+    "territoryId": "3145901",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_ouro_fino",
+    "name": "Ouro Fino - MG",
+    "territoryId": "3146008",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_alem_paraiba",
+    "name": "Além Paraíba - MG",
+    "territoryId": "3101508",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_santa_barbara",
+    "name": "Santa Bárbara - MG",
+    "territoryId": "3157203",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_tres_marias",
+    "name": "Três Marias - MG",
+    "territoryId": "3169356",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_prata",
+    "name": "Prata - MG",
+    "territoryId": "3152808",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_santo_antonio_do_monte",
+    "name": "Santo Antônio do Monte - MG",
+    "territoryId": "3160405",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_tupaciguara",
+    "name": "Tupaciguara - MG",
+    "territoryId": "3169604",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_uberaba",
+    "name": "Uberaba - MG",
+    "territoryId": "3170107",
+    "stateCode": "MG",
+    "active": false,
+    "notes": "Uberaba NÃO está na AMM-MG. Possui diário oficial próprio 'Porta-Voz'. PROBLEMA: Site usa JavaScript pesado (Getz Framework) e estrutura de pastas não exibe PDFs diretamente. URLs testadas sem sucesso: portal.uberaba.mg.gov.br/paginas/jornal-porta-voz e www.uberaba.mg.gov.br/portal/acervo/portavoz/arquivos. Requer investigação da API interna do sistema pmudrive ou contato com a prefeitura.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturauberaba",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturauberaba",
+          "baseUrl": "http://www.uberaba.mg.gov.br/portal/acervo/portavoz/arquivos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_conselheiro_lafaiete",
+    "name": "Conselheiro Lafaiete - MG",
+    "territoryId": "3118304",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "eatos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "eatos",
+          "baseUrl": "https://publicacoesmunicipais.com.br/eatos/conselheirolafaiete"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_santa_luzia",
+    "name": "Santa Luzia - MG",
+    "territoryId": "3157807",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasantaluziamg",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasantaluziamg",
+          "baseUrl": "https://dom.santaluzia.mg.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_ibirite",
+    "name": "Ibirité - MG",
+    "territoryId": "3129707",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraipatinga",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraipatinga",
+          "baseUrl": "https://www.ibirite.mg.gov.br/diario-eletronico",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_pocos_de_caldas",
+    "name": "Poços de Caldas - MG",
+    "territoryId": "3151800",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_sabara",
+    "name": "Sabará - MG",
+    "territoryId": "3156700",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "folhadesabara",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "folhadesabara",
+          "baseUrl": "https://folhadesabara.com.br/publicacao-leg"
+        }
+      },
+      {
+        "spiderType": "prefeiturasabara",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasabara",
+          "baseUrl": "https://site.sabara.mg.gov.br/prefeitura/decretos/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_barbacena",
+    "name": "Barbacena - MG",
+    "territoryId": "3105608",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabarbacena",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarbacena",
+          "baseUrl": "https://www1.barbacena.mg.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_araguari",
+    "name": "Araguari - MG",
+    "territoryId": "3103504",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraaraguari",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraaraguari",
+          "baseUrl": "https://araguari.mg.gov.br/correio"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_itabira",
+    "name": "Itabira - MG",
+    "territoryId": "3131703",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraipatinga",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraipatinga",
+          "baseUrl": "https://meioambiente.itabira.mg.gov.br/diario-eletronico",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_passos",
+    "name": "Passos - MG",
+    "territoryId": "3147907",
+    "stateCode": "MG",
+    "active": false,
+    "notes": "DESATIVADO: A página de diário oficial existe (https://www.passos.mg.gov.br/portal/diario-oficial) mas não tem publicações. A API /portal/calendario/diario_oficial/{mes}/{ano}/ retorna 'Nenhum registro foi encontrado' para todos os meses testados (2024-2026). Passos não está na AMM-MG. Há relatos de problemas de transparência no portal (investigação do MP-MG). Requer monitoramento para verificar quando as publicações serão disponibilizadas.",
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.passos.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_nova_serrana",
+    "name": "Nova Serrana - MG",
+    "territoryId": "3145208",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.novaserrana.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_coronel_fabriciano",
+    "name": "Coronel Fabriciano - MG",
+    "territoryId": "3119401",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracoronelfabriciano",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracoronelfabriciano",
+          "baseUrl": "https://diario.fabriciano.mg.gov.br/todas-publicações"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_araxa",
+    "name": "Araxá - MG",
+    "territoryId": "3104007",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraaraxa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraaraxa",
+          "baseUrl": "https://www.araxa.mg.gov.br/doma-listar"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_lavras",
+    "name": "Lavras - MG",
+    "territoryId": "3138203",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituralavras",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituralavras",
+          "baseUrl": "https://sistemas.lavras.mg.gov.br/GRP/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_nova_lima",
+    "name": "Nova Lima - MG",
+    "territoryId": "3144805",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituranolalima",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituranolalima",
+          "baseUrl": "https://novalima.mg.gov.br/empresas/publicacoes-oficiais",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_itauna",
+    "name": "Itaúna - MG",
+    "territoryId": "3133808",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraitauna",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraitauna",
+          "baseUrl": "https://www.itauna.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_uba",
+    "name": "Ubá - MG",
+    "territoryId": "3169901",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturauba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturauba",
+          "baseUrl": "https://www.uba.mg.gov.br/diario-eletronico",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_ituiutaba",
+    "name": "Ituiutaba - MG",
+    "territoryId": "3134202",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraituiutaba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraituiutaba",
+          "baseUrl": "https://www.ituiutaba.mg.gov.br/diariooficial/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_para_de_minas",
+    "name": "Pará de Minas - MG",
+    "territoryId": "3147105",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraparademinas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraparademinas",
+          "baseUrl": "https://diario.parademinas.mg.gov.br/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_itajuba",
+    "name": "Itajubá - MG",
+    "territoryId": "3132404",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraitajuba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraitajuba",
+          "baseUrl": "https://www.itajuba.mg.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_manhuacu",
+    "name": "Manhuaçu - MG",
+    "territoryId": "3139409",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituramanhuacu",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramanhuacu",
+          "baseUrl": "https://www.manhuacu.mg.gov.br/diario-eletronico",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_sao_joao_del_rei",
+    "name": "São João del-Rei - MG",
+    "territoryId": "3162500",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasaojoaodelrei",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasaojoaodelrei",
+          "baseUrl": "https://www.saojoaodelrei.mg.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_patrocinio",
+    "name": "Patrocínio - MG",
+    "territoryId": "3148103",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapatrocinio",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapatrocinio",
+          "baseUrl": "https://www.patrocinio.mg.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_caratinga",
+    "name": "Caratinga - MG",
+    "territoryId": "3113404",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracaratinga",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracaratinga",
+          "baseUrl": "https://caratinga.mg.gov.br/diario-executivo/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_unai",
+    "name": "Unaí - MG",
+    "territoryId": "3170404",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraunai",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraunai",
+          "baseUrl": "https://www.prefeituraunai.mg.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_esmeraldas",
+    "name": "Esmeraldas - MG",
+    "territoryId": "3124104",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.esmeraldas.mg.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_timoteo",
+    "name": "Timóteo - MG",
+    "territoryId": "3168705",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituratimoteo",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituratimoteo",
+          "baseUrl": "https://www.timoteo.mg.gov.br/diariooficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_alfenas",
+    "name": "Alfenas - MG",
+    "territoryId": "3101607",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraalfenas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraalfenas",
+          "baseUrl": "https://www.alfenas.mg.gov.br/publicacoes/diario-oficial",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeituraalfenasatosoficiais",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraalfenasatosoficiais",
+          "baseUrl": "https://www.alfenas.mg.gov.br/publicacoes/atos-oficiais",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_vicosa",
+    "name": "Viçosa - MG",
+    "territoryId": "3171303",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituravicosa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituravicosa",
+          "baseUrl": "https://www.vicosa.mg.gov.br/diario-eletronico",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_ouro_preto",
+    "name": "Ouro Preto - MG",
+    "territoryId": "3146107",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraouropreto",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraouropreto",
+          "baseUrl": "https://www.ouropreto.mg.gov.br/transparencia/diario",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_janauba",
+    "name": "Janaúba - MG",
+    "territoryId": "3135100",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturajanauba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturajanauba",
+          "baseUrl": "https://www.janauba.mg.leg.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeiturajanaubapublicacoes",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturajanaubapublicacoes",
+          "baseUrl": "https://janauba.mg.gov.br/transparencia/publicacoes",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_januaria",
+    "name": "Januária - MG",
+    "territoryId": "3135209",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.januaria.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_mariana",
+    "name": "Mariana - MG",
+    "territoryId": "3140001",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituramariana",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramariana",
+          "baseUrl": "https://www.mariana.mg.gov.br/diario-oficial-pmm",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_cataguases",
+    "name": "Cataguases - MG",
+    "territoryId": "3115300",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracataguases",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracataguases",
+          "baseUrl": "https://cataguases.mg.gov.br/jornal-de-cataguases",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_pedro_leopoldo",
+    "name": "Pedro Leopoldo - MG",
+    "territoryId": "3149309",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_frutal",
+    "name": "Frutal - MG",
+    "territoryId": "3127107",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturafrutal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturafrutal",
+          "baseUrl": "https://frutal.publicabrasil.net",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_ponte_nova",
+    "name": "Ponte Nova - MG",
+    "territoryId": "3152105",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_extrema",
+    "name": "Extrema - MG",
+    "territoryId": "3125101",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraextrema",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraextrema",
+          "baseUrl": "https://extrema.mg.gov.br/diariooficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_itabirito",
+    "name": "Itabirito - MG",
+    "territoryId": "3131901",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_congonhas",
+    "name": "Congonhas - MG",
+    "territoryId": "3118007",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracongonhas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracongonhas",
+          "baseUrl": "https://www.congonhas.mg.gov.br/index.php/diario-eletronico/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_campo_belo",
+    "name": "Campo Belo - MG",
+    "territoryId": "3111200",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.campobelo.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_bom_despacho",
+    "name": "Bom Despacho - MG",
+    "territoryId": "3107406",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabomdespacho",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "http://web.bomdespacho.mg.gov.br/dome/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_joao_pinheiro",
+    "name": "João Pinheiro - MG",
+    "territoryId": "3136306",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabomdespacho",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.joaopinheiro.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_igarape",
+    "name": "Igarapé - MG",
+    "territoryId": "3130101",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabomdespacho",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.igarape.mg.gov.br/diario-eletronico",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_santana_do_paraiso",
+    "name": "Santana do Paraíso - MG",
+    "territoryId": "3158953",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabomdespacho",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://santanadoparaiso.mg.gov.br/diario-eletronico/caderno/prefeitura/1",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_santos_dumont",
+    "name": "Santos Dumont - MG",
+    "territoryId": "3160702",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "entityId": "2075046"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_santa_rita_do_sapucai",
+    "name": "Santa Rita do Sapucaí - MG",
+    "territoryId": "3159605",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.santaritadosapucai.mg.gov.br/portal/diario-oficial/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_andradas",
+    "name": "Andradas - MG",
+    "territoryId": "3102605",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.andradas.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_almenara",
+    "name": "Almenara - MG",
+    "territoryId": "3101706",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "simpless",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "simpless",
+          "baseUrl": "https://www.almenara.mg.gov.br/diario"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_salinas",
+    "name": "Salinas - MG",
+    "territoryId": "3157005",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.salinas.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_bocaiuva",
+    "name": "Bocaiuva - MG",
+    "territoryId": "3107307",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/pesquisar",
+          "entityId": "2192382"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_capelinha",
+    "name": "Capelinha - MG",
+    "territoryId": "3112307",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "needs_review",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "needs_review",
+          "reason": "Site acessível mas não foi encontrado link claro para diário oficial."
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_oliveira",
+    "name": "Oliveira - MG",
+    "territoryId": "3145604",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.oliveira.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_visconde_do_rio_branco",
+    "name": "Visconde do Rio Branco - MG",
+    "territoryId": "3172004",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/pesquisar",
+          "entityId": "107885"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_brumadinho",
+    "name": "Brumadinho - MG",
+    "territoryId": "3109006",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabrumadinho",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabrumadinho",
+          "url": "https://novo.brumadinho.mg.gov.br/portal/diario-oficial/lista",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_caete",
+    "name": "Caeté - MG",
+    "territoryId": "3110004",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "needs_review",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "needs_review",
+          "reason": "Site acessível mas não foi encontrado link claro para diário oficial."
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_iturama",
+    "name": "Iturama - MG",
+    "territoryId": "3134400",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/iturama"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_mateus_leme",
+    "name": "Mateus Leme - MG",
+    "territoryId": "3140704",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "entityId": "923974"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_matozinhos",
+    "name": "Matozinhos - MG",
+    "territoryId": "3141108",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/matozinhos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_taiobeiras",
+    "name": "Taiobeiras - MG",
+    "territoryId": "3168002",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.taiobeiras.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_sacramento",
+    "name": "Sacramento - MG",
+    "territoryId": "3156908",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "plenus_dioenet",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "plenus_dioenet",
+          "baseUrl": "https://plenussistemas.dioenet.com.br/list/sacramento"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_camanducaia",
+    "name": "Camanducaia - MG",
+    "territoryId": "3110509",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ecrie",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ecrie",
+          "baseUrl": "https://camanducaia.mg.gov.br/diariooficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_pitangui",
+    "name": "Pitangui - MG",
+    "territoryId": "3151404",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://pitangui.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_jacutinga",
+    "name": "Jacutinga - MG",
+    "territoryId": "3134905",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diario_oficial_link",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diario_oficial_link",
+          "url": "https://www.jacutinga.mg.gov.br/diariooficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_brasilia_de_minas",
+    "name": "Brasília de Minas - MG",
+    "territoryId": "3108602",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_carangola",
+    "name": "Carangola - MG",
+    "territoryId": "3113305",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_pompeu",
+    "name": "Pompéu - MG",
+    "territoryId": "3152006",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_barao_de_cocais",
+    "name": "Barão de Cocais - MG",
+    "territoryId": "3105400",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabaraodecocais",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabaraodecocais",
+          "baseUrl": "https://www.baraodecocais.mg.gov.br/downloads/categoria/editais/7",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_juatuba",
+    "name": "Juatuba - MG",
+    "territoryId": "3136652",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "instar",
+          "url": "https://www.juatuba.mg.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_espinosa",
+    "name": "Espinosa - MG",
+    "territoryId": "3124302",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraespinosa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraespinosa",
+          "url": "https://espinosa.mg.gov.br/category/diario-oficial-espinosa-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_claudio",
+    "name": "Cláudio - MG",
+    "territoryId": "3116605",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_cambui",
+    "name": "Cambuí - MG",
+    "territoryId": "3110608",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_carmo_do_paranaiba",
+    "name": "Carmo do Paranaíba - MG",
+    "territoryId": "3114303",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_coromandel",
+    "name": "Coromandel - MG",
+    "territoryId": "3119302",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_conceicao_das_alagoas",
+    "name": "Conceição das Alagoas - MG",
+    "territoryId": "3117306",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraconceicaodasalagoas_concursos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraconceicaodasalagoas_concursos",
+          "baseUrl": "https://www.conceicaodasalagoas.mg.gov.br/concursos/",
+          "requiresClientRendering": false
+        }
+      },
+      {
+        "spiderType": "prefeituraconceicaodasalagoas_atos",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraconceicaodasalagoas_atos",
+          "baseUrl": "https://www.conceicaodasalagoas.mg.gov.br/atos-oficiais/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_rio_pardo_de_minas",
+    "name": "Rio Pardo de Minas - MG",
+    "territoryId": "3155603",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_mutum",
+    "name": "Mutum - MG",
+    "territoryId": "3144003",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_novo_cruzeiro",
+    "name": "Novo Cruzeiro - MG",
+    "territoryId": "3145307",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.novocruzeiro.mg.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_mantena",
+    "name": "Mantena - MG",
+    "territoryId": "3139607",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_eloi_mendes",
+    "name": "Elói Mendes - MG",
+    "territoryId": "3123601",
+    "stateCode": "MG",
+    "active": true,
+    "notes": "Apenas foi encontrado link para categoria de concursos públicos (https://eloimendes.mg.gov.br/category/editais/concurso-publico/). Não foi possível localizar uma página específica para visualizar os atos/diário oficial completo. O site usa WordPress com estrutura de categorias.",
+    "spiders": [
+      {
+        "spiderType": "prefeituraeloi_mendes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraeloi_mendes",
+          "url": "https://eloimendes.mg.gov.br/category/editais/concurso-publico/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_campos_gerais",
+    "name": "Campos Gerais - MG",
+    "territoryId": "3111606",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_sao_jose_da_lapa",
+    "name": "São José da Lapa - MG",
+    "territoryId": "3162955",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_sao_joao_nepomuceno",
+    "name": "São João Nepomuceno - MG",
+    "territoryId": "3162906",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "portalfacil",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalfacil",
+          "baseUrl": "https://www.sjnepomuceno.mg.gov.br/diario-eletronico",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_machado",
+    "name": "Machado - MG",
+    "territoryId": "3139003",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraipatinga",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraipatinga",
+          "baseUrl": "https://www.machado.mg.gov.br/diario-eletronico",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_sarzedo",
+    "name": "Sarzedo - MG",
+    "territoryId": "3165537",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraipatinga",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraipatinga",
+          "baseUrl": "https://www.sarzedo.mg.gov.br/diario-eletronico",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_porteirinha",
+    "name": "Porteirinha - MG",
+    "territoryId": "3152204",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://porteirinha.mg.gov.br/diario-oficial-categorias",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_nanuque",
+    "name": "Nanuque - MG",
+    "territoryId": "3144300",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.nanuque.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_varzea_da_palma",
+    "name": "Várzea da Palma - MG",
+    "territoryId": "3170800",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.varzeadapalma.mg.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_guanhaes",
+    "name": "Guanhães - MG",
+    "territoryId": "3128006",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraguanhaes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.guanhaes.mg.gov.br/portal/diario-oficial/ver/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_jaiba",
+    "name": "Jaíba - MG",
+    "territoryId": "3135050",
+    "stateCode": "MG",
+    "active": false,
+    "notes": "Site de legislação encontrado (legislacao.jaiba.mg.gov.br) mas estrutura não identificada. Requer investigação adicional.",
+    "spiders": [
+      {
+        "spiderType": "needs_review",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "needs_review",
+          "reason": "Site de legislação encontrado mas estrutura não identificada. URL: https://legislacao.jaiba.mg.gov.br/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_piumhi",
+    "name": "Piumhi - MG",
+    "territoryId": "3151503",
+    "stateCode": "MG",
+    "active": false,
+    "notes": "Não foi possível localizar URL específica para diário oficial. Requer investigação adicional.",
+    "spiders": [
+      {
+        "spiderType": "needs_review",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "needs_review",
+          "reason": "Não foi possível localizar URL específica para diário oficial no site da prefeitura."
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_sao_joaquim_de_bicas",
+    "name": "São Joaquim de Bicas - MG",
+    "territoryId": "3162922",
+    "stateCode": "MG",
+    "active": false,
+    "notes": "Não foi possível localizar URL específica para diário oficial. Requer investigação adicional.",
+    "spiders": [
+      {
+        "spiderType": "needs_review",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "needs_review",
+          "reason": "Não foi possível localizar URL específica para diário oficial no site da prefeitura."
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_aracuai",
+    "name": "Araçuaí - MG",
+    "territoryId": "3103405",
+    "stateCode": "MG",
+    "active": false,
+    "notes": "Não foi possível localizar URL específica para diário oficial. Requer investigação adicional.",
+    "spiders": [
+      {
+        "spiderType": "needs_review",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "needs_review",
+          "reason": "Não foi possível localizar URL específica para diário oficial no site da prefeitura."
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_itamarandiba",
+    "name": "Itamarandiba - MG",
+    "territoryId": "3132503",
+    "stateCode": "MG",
+    "active": false,
+    "notes": "Não foi possível localizar URL específica para diário oficial. Requer investigação adicional.",
+    "spiders": [
+      {
+        "spiderType": "needs_review",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "needs_review",
+          "reason": "Não foi possível localizar URL específica para diário oficial no site da prefeitura."
+        }
+      }
+    ]
+  }
+]
