@@ -30,6 +30,8 @@ export type SpiderType =
   | 'acre'
   | 'espirito_santo'
   | 'amunes'
+  | 'aemerj'
+  | 'aprece'
   | 'domunicipal'
   | 'imprensaoficialjundiai'
   | 'prefeiturariopreto'
@@ -48,6 +50,7 @@ export type SpiderType =
   | 'prefeituramaripora'
   | 'prefeituranarandiba'
   | 'prefeiturapiraju'
+  | 'supernova'
   | 'prefeituraitaquaquecetuba'
   | 'prefeiturapiraporadobomjesus'
   | 'eatos'
@@ -68,6 +71,7 @@ export type SpiderType =
   | 'cespro'
   | 'geosiap'
   | 'geosiap_api'
+  | 'geosiap_portal'
   | 'legislacaodigital'
   | 'prefeiturasaopaulo'
   | 'prefeiturasaovicente'
@@ -175,6 +179,77 @@ export type SpiderType =
   | 'prefeituraserra'
   | 'prefeituramarataizes'
   | 'prefeituraguanhaes'
+  | 'prefeituraniiteroi'
+  | 'prefeiturariodejaneiro'
+  | 'prefeiturasaogoncalo'
+  | 'prefeituraduquedecaxias'
+  | 'prefeituracamposdosgoytacazes'
+  | 'prefeiturasaojoaodemeriti'
+  | 'prefeituravoltaredonda'
+  | 'prefeitrapetropolis'
+  | 'prefeituramacae'
+  | 'prefeituramage'
+  | 'prefeituraitaborai'
+  | 'prefeituracabofrio'
+  | 'prefeituramarica'
+  | 'prefeituranovafriburgo'
+  | 'prefeiturabarramansa'
+  | 'prefeituraangradosreis'
+  | 'prefeituramesquita'
+  | 'prefeiturateresopolis'
+  | 'prefeiturarjodasostras'
+  | 'prefeituranilopolis'
+  | 'prefeituraqueimados'
+  | 'prefeiturarjararuama'
+  | 'prefeiturarjresende'
+  | 'prefeiturarjitaguai'
+  | 'prefeiturarjsaopedrodaaldeia'
+  | 'prefeiturarjitaperuna'
+  | 'prefeiturarjjaperi'
+  | 'prefeiturarjbarradopirai'
+  | 'prefeiturarjsaquarema'
+  | 'prefeiturarjseropedica'
+  | 'prefeiturarjtresrios'
+  | 'prefeiturarjvalenca'
+  | 'prefeiturarjcachoeirasdemacacu'
+  | 'prefeiturarjriobonito'
+  | 'prefeiturarjguapimirim'
+  | 'prefeiturarjcasimirodeabreu'
+  | 'prefeiturarjparaty'
+  | 'prefeiturarjsaofranciscodeitabapoana'
+  | 'prefeiturarjparaibadosul'
+  | 'prefeiturarjparaibadosulv2'
+  | 'prefeiturarjparacambi'
+  | 'prefeiturarjparacambiv2'
+  | 'prefeiturarjsantoantoniopadua'
+  | 'prefeiturarjmangaratiba'
+  | 'prefeiturarjarmacaodosbuzios'
+  | 'prefeiturarjsaofidelis'
+  | 'prefeiturarjsaofidelisv2'
+  | 'prefeiturarjsaojoaodabarra'
+  | 'prefeiturarjsaojoaodabarrav2'
+  | 'prefeiturarjbomjesusdoitabapoana'
+  | 'prefeiturarjvassouras'
+  | 'prefeiturarjtangua'
+  | 'prefeiturarjarraialdocabo'
+  | 'prefeiturarjarraialdocabov2'
+  | 'prefeiturarjitatiaia'
+  | 'prefeiturarjpatydoalferes'
+  | 'prefeiturarjbomjardim'
+  | 'prefeiturarjiguabagrande'
+  | 'prefeiturarjmiracema'
+  | 'prefeiturarjmiguelpereira'
+  | 'prefeiturarjpirai'
+  | 'diario_oficial_online'
+  | 'phocadownload'
+  | 'npibrasil'
+  | 'prefeiturace'
+  | 'prefeituracaucaia'
+  | 'prefeiturasobral'
+  | 'prefeituracrato'
+  | 'plugtecnologia'
+  | 'wordpress_publicacoes'
+  | 'edocman'
   | 'custom';
 
 /**
@@ -238,6 +313,8 @@ export type SpiderPlatformConfig =
   | AcreConfig
   | EspiritoSantoConfig
   | AmunesConfig
+  | AemerjConfig
+  | ApreceConfig
   | DomunicipalConfig
   | ImprensaOficialJundiaiConfig
   | PrefeituraRioPretoConfig
@@ -256,6 +333,7 @@ export type SpiderPlatformConfig =
   | PrefeituraMairiporaConfig
   | PrefeituraNarandibaConfig
   | PrefeituraPirajuConfig
+  | SupernovaConfig
   | PrefeituraItaquaquecetubaConfig
   | PrefeituraPiraporadobomjesusConfig
   | EatosConfig
@@ -276,6 +354,7 @@ export type SpiderPlatformConfig =
   | CesproConfig
   | GeosiapConfig
   | GeosiapApiConfig
+  | GeosiapPortalConfig
   | LegislacaoDigitalConfig
   | PrefeiturasaopauloConfig
   | PrefeiturasaovicenteConfig
@@ -381,6 +460,77 @@ export type SpiderPlatformConfig =
   | PrefeituraCachoeiroConfig
   | PrefeituraSerraConfig
   | PrefeituraMarataizesConfig
+  | PrefeituraNiteroiConfig
+  | PrefeituraRioDeJaneiroConfig
+  | PrefeituraSaoGoncaloConfig
+  | PrefeituraDuqueDeCaxiasConfig
+  | PrefeituraCamposDosGoytacazesConfig
+  | PrefeituraSaoJoaoDeMeritiConfig
+  | PrefeituraVoltaRedondaConfig
+  | PrefeituraPetropolisConfig
+  | PrefeituraMacaeConfig
+  | PrefeituraMageConfig
+  | PrefeituraItaboraiConfig
+  | PrefeituraCaboFrioConfig
+  | PrefeituraMaricaConfig
+  | PrefeituraNovaFriburgoConfig
+  | PrefeituraBarraMansaConfig
+  | PrefeituraAngraDosReisConfig
+  | PrefeituraMesquitaConfig
+  | PrefeituraTeresopolisConfig
+  | PrefeituraRjOdasOstrasConfig
+  | PrefeituraNilopolisConfig
+  | PrefeituraQueimadosConfig
+  | PrefeituraRjAraruamaConfig
+  | PrefeituraRjResendeConfig
+  | PrefeituraRjItaguaiConfig
+  | PrefeituraRjSaoPedroDaAldeiaConfig
+  | PrefeituraRjItaperunaConfig
+  | PrefeituraRjJaperiConfig
+  | PrefeituraRjBarraDoPixaiConfig
+  | PrefeituraRjSaquaremaConfig
+  | PrefeituraRjSeropedicaConfig
+  | PrefeituraRjTresRiosConfig
+  | PrefeituraRjValencaConfig
+  | PrefeituraRjCachoeirasDeMacacuConfig
+  | PrefeituraRjRioBonitoConfig
+  | PrefeituraRjGuapimirimConfig
+  | PrefeituraRjCasimiroDeAbreuConfig
+  | PrefeituraRjParatyConfig
+  | PrefeituraRjSaoFranciscoDeItabapoanaConfig
+  | PrefeituraRjParaibaDoSulConfig
+  | PrefeituraRjParaibaDoSulV2Config
+  | PrefeituraRjParacambiConfig
+  | PrefeituraRjSantoAntonioDePaduaConfig
+  | PrefeituraRjMangaratibaConfig
+  | PrefeituraRjArmacaoDosBuziosConfig
+  | PrefeituraRjSaoFidelisConfig
+  | PrefeituraRjSaoFidelisV2Config
+  | PrefeituraRjSaoJoaoDaBarraConfig
+  | PrefeituraRjSaoJoaoDaBarraV2Config
+  | PrefeituraRjBomJesusDoItabapoanaConfig
+  | PrefeituraRjVassourasConfig
+  | PrefeituraRjTanguaConfig
+  | PrefeituraRjArraialDoCaboConfig
+  | PrefeituraRjArraialDoCaboV2Config
+  | PrefeituraRjItatiaiaConfig
+  | PrefeituraRjPatyDoAlferesConfig
+  | PrefeituraRjBomJardimConfig
+  | PrefeituraRjIguabaGrandeConfig
+  | PrefeituraRjMiracemaConfig
+  | PrefeituraRjMiguelPereiraConfig
+  | PrefeituraRjPiraiConfig
+  | DiarioOficialOnlineConfig
+  | PhocaDownloadConfig
+  | NPIBrasilConfig
+  | PrefeituraCEConfig
+  | AssesiConfig
+  | PrefeituraJuazeiroDoNorteConfig
+  | PrefeituraSobralConfig
+  | PrefeituraCratoConfig
+  | PlugTecnologiaConfig
+  | WordPressPublicacoesConfig
+  | EdocmanConfig
   | CustomConfig;
 
 /**
@@ -469,6 +619,20 @@ export interface AdiariosConfig {
   
   /** Municipality identifier in the platform */
   municipalityId?: string;
+}
+
+/**
+ * Configuration for NPI Brasil transparency portal spiders
+ * 
+ * The NPI Brasil platform is commonly used by municipalities in Rio de Janeiro.
+ * URL pattern: transparencia.{city}.rj.gov.br/jornal.php
+ */
+export interface NPIBrasilConfig {
+  type: 'npibrasil';
+  /** Base URL for the transparency portal */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
 }
 
 /**
@@ -613,6 +777,35 @@ export interface AmunesConfig {
   type: 'amunes';
   /** Power of the gazette (executive_legislative for municipal content) */
   power: 'executive' | 'legislative' | 'executive_legislative';
+}
+
+/**
+ * Configuration for AEMERJ consortium spider (Associação Estadual de Municípios do Rio de Janeiro)
+ * Consórcio dos municípios do Rio de Janeiro que publicam no sistema centralizado AEMERJ
+ * URL: https://www.diariomunicipal.com.br/aemerj/
+ */
+export interface AemerjConfig {
+  type: 'aemerj';
+  /** Power of the gazette (executive_legislative for municipal content) */
+  power: 'executive' | 'legislative' | 'executive_legislative';
+  /** Entity name as it appears in the AEMERJ system (e.g., "Prefeitura Municipal de Vassouras") */
+  entityName: string;
+}
+
+/**
+ * Configuration for APRECE (Associação dos Municípios do Estado do Ceará) spiders
+ * 
+ * This spider collects gazettes from the centralized APRECE system
+ * using the SIGPub platform from Vox Tecnologia.
+ * 
+ * URL: https://www.diariomunicipal.com.br/aprece/
+ */
+export interface ApreceConfig {
+  type: 'aprece';
+  /** Power of the gazette (executive_legislative for municipal content) */
+  power: 'executive' | 'legislative' | 'executive_legislative';
+  /** Entity name as it appears in the APRECE system (e.g., "Prefeitura Municipal de Iguatu") */
+  entityName: string;
 }
 
 /**
@@ -799,6 +992,18 @@ export interface PrefeituraPirajuConfig {
   type: 'prefeiturapiraju';
   /** Base URL for the Prefeitura Piraju platform (e.g., "https://diariooficialnovo.jelastic.saveincloud.net/paginas/public/diario_externo.xhtml?idCidade=3") */
   baseUrl: string;
+}
+
+/**
+ * Configuration for Supernova/Moderna Portal da Transparência spider
+ * Browser-based JSF/PrimeFaces application with dropdown filters and pagination
+ */
+export interface SupernovaConfig {
+  type: 'supernova';
+  /** Base URL for the Supernova portal (e.g., "https://webtangua.supernova.com.br:8443/contaspublicas/pages/publicacao_demais_relatorio.xhtml?faces-redirect=true&idTipoRelatorio=1") */
+  baseUrl: string;
+  /** Whether the site requires client-side JavaScript rendering */
+  requiresClientRendering?: boolean;
 }
 
 /**
@@ -1087,6 +1292,24 @@ export interface GeosiapApiConfig {
 }
 
 /**
+ * Configuration for GeoSIAP Portal de Transparência spider
+ * Used by municipalities like Japeri-RJ
+ * 
+ * URL pattern: https://{city}.geosiap.net.br/portal-transparencia/...
+ * API: /api/default/publicacoes/publicacoes?id_publicacao_tipo=7&id_entidade={entityId}
+ * Download: /api/default/publicacoes/get_arquivo.anexo?id_publicacao={id}
+ */
+export interface GeosiapPortalConfig {
+  type: 'geosiap_portal';
+  /** Base URL for the GeoSIAP Portal de Transparência (e.g., "https://japeri.geosiap.net.br/portal-transparencia/...") */
+  baseUrl: string;
+  /** Entity ID in the portal (default: 10 for Prefeitura Municipal) */
+  entityId?: number;
+  /** Publication type ID (default: 7 for Diário Oficial) */
+  publicationTypeId?: number;
+}
+
+/**
  * Configuration for Legislação Digital platform spider
  * Used by municipalities like Arujá
  */
@@ -1177,6 +1400,8 @@ export interface PrefeituraPresidentePrudenteConfig {
   type: 'prefeiturapresidenteprudente';
   /** Base URL for the Presidente Prudente portal */
   baseUrl: string;
+  /** Whether this site requires client-side rendering (browser) */
+  requiresClientRendering?: boolean;
 }
 
 /**
@@ -2625,5 +2850,876 @@ export interface PrefeituraMarataizesConfig {
   /** Base URL for the diário oficial page */
   baseUrl: string;
   /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Niterói - RJ
+ * 
+ * Site Structure:
+ * - URL: https://diariooficial.niteroi.rj.gov.br/
+ * - PDF URL pattern: /do/{year}/{monthName}/{day}.pdf
+ * - Example: /do/2026/janeiro/19.pdf
+ */
+export interface PrefeituraNiteroiConfig {
+  type: 'prefeituraniiteroi';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura do Rio de Janeiro - RJ
+ * 
+ * Site Structure:
+ * - URL: https://doweb.rio.rj.gov.br/
+ * - Page contains embedded JSON data in JavaScript variables
+ * - PDF URL pattern: /portal/edicoes/download/{id}
+ */
+export interface PrefeituraRioDeJaneiroConfig {
+  type: 'prefeiturariodejaneiro';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de São Gonçalo - RJ
+ * Site that requires browser rendering to search for official gazettes
+ */
+export interface PrefeituraSaoGoncaloConfig {
+  type: 'prefeiturasaogoncalo';
+  /** Base URL for the diário oficial page (e.g., "https://do.pmsg.rj.gov.br") */
+  url: string;
+  /** Whether client-side rendering is required (always true for this spider) */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Campos dos Goytacazes - RJ
+ * 
+ * Site Structure:
+ * - URL: https://www.campos.rj.gov.br/diario-oficial.php
+ * - HTML page with list of gazettes
+ * - Each gazette has a link: /app/assets/diario-oficial/link/{id}
+ * - Links redirect directly to PDFs
+ * - Pagination: ?PGpagina=2&PGporPagina=15
+ */
+export interface PrefeituraCamposDosGoytacazesConfig {
+  type: 'prefeituracamposdosgoytacazes';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Duque de Caxias - RJ
+ * 
+ * Site Structure:
+ * - URL: https://transparencia.duquedecaxias.rj.gov.br/diario_oficial_busca.php
+ * - Interface with monthly tabs (Jan, Fev, Mar, etc.) and year dropdown
+ * - Each month tab shows a list of gazettes with date, edition number, and PDF links
+ * - Requires browser rendering to interact with tabs and load content dynamically
+ */
+export interface PrefeituraDuqueDeCaxiasConfig {
+  type: 'prefeituraduquedecaxias';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering (always true for this spider) */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de São João de Meriti - RJ
+ * 
+ * Site Structure:
+ * - URL: https://transparencia.meriti.rj.gov.br/diario_oficial_busca.php
+ * - Interface with monthly tabs (Jan, Fev, Mar, etc.) and year dropdown
+ * - Each month tab shows a list of gazettes with date, edition number, and PDF links
+ * - Requires browser rendering to interact with tabs and load content dynamically
+ */
+export interface PrefeituraSaoJoaoDeMeritiConfig {
+  type: 'prefeiturasaojoaodemeriti';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering (always true for this spider) */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Volta Redonda - RJ
+ * 
+ * Site Structure:
+ * - URL: https://www.voltaredonda.rj.gov.br/vrdestaque/index.php
+ * - The site has a section for "Diário Oficial" with a list of gazettes
+ * - Each gazette entry contains date, edition number, and PDF download link
+ * - May require browser rendering to access dynamic content
+ */
+export interface PrefeituraVoltaRedondaConfig {
+  type: 'prefeituravoltaredonda';
+  /** Base URL for the diário oficial page */
+  url: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Petrópolis - RJ
+ * 
+ * Site Structure:
+ * - URL: https://www.petropolis.rj.gov.br/pmp/index.php/servicos-cidadao/diario-oficial
+ * - Uses Joomla-based site with tab-based navigation
+ * - Gazettes are displayed in a tabbed interface organized by year/month
+ * - Requires browser rendering to interact with tabs and load content dynamically
+ */
+export interface PrefeituraPetropolisConfig {
+  type: 'prefeitrapetropolis';
+  /** Base URL for the diário oficial page */
+  url: string;
+  /** Whether this spider requires client-side rendering (always true for this spider) */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Macaé - RJ
+ * 
+ * Site Structure:
+ * - URL: https://do.macae.rj.gov.br/
+ * - DataTables-based table with columns: Edição, Ano, Data, Ações
+ * - Requires browser rendering for JavaScript-rendered DataTables
+ */
+export interface PrefeituraMacaeConfig {
+  type: 'prefeituramacae';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering (always true for this spider) */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Magé - RJ
+ */
+export interface PrefeituraMageConfig {
+  type: 'prefeituramage';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Itaboraí - RJ
+ */
+export interface PrefeituraItaboraiConfig {
+  type: 'prefeituraitaborai';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Cabo Frio - RJ
+ */
+export interface PrefeituraCaboFrioConfig {
+  type: 'prefeituracabofrio';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Maricá - RJ
+ */
+export interface PrefeituraMaricaConfig {
+  type: 'prefeituramarica';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Nova Friburgo - RJ
+ */
+export interface PrefeituraNovaFriburgoConfig {
+  type: 'prefeituranovafriburgo';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Barra Mansa - RJ
+ */
+export interface PrefeituraBarraMansaConfig {
+  type: 'prefeiturabarramansa';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Angra dos Reis - RJ
+ */
+export interface PrefeituraAngraDosReisConfig {
+  type: 'prefeituraangradosreis';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Mesquita - RJ
+ */
+export interface PrefeituraMesquitaConfig {
+  type: 'prefeituramesquita';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Teresópolis - RJ
+ */
+export interface PrefeituraTeresopolisConfig {
+  type: 'prefeiturateresopolis';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Rio das Ostras - RJ
+ */
+export interface PrefeituraRjOdasOstrasConfig {
+  type: 'prefeiturarjodasostras';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Nilópolis - RJ
+ */
+export interface PrefeituraNilopolisConfig {
+  type: 'prefeituranilopolis';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Queimados - RJ
+ */
+export interface PrefeituraQueimadosConfig {
+  type: 'prefeituraqueimados';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Araruama - RJ
+ */
+export interface PrefeituraRjAraruamaConfig {
+  type: 'prefeiturarjararuama';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Resende - RJ
+ */
+export interface PrefeituraRjResendeConfig {
+  type: 'prefeiturarjresende';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Itaguaí - RJ
+ */
+export interface PrefeituraRjItaguaiConfig {
+  type: 'prefeiturarjitaguai';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de São Pedro da Aldeia - RJ
+ */
+export interface PrefeituraRjSaoPedroDaAldeiaConfig {
+  type: 'prefeiturarjsaopedrodaaldeia';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Itaperuna - RJ
+ */
+export interface PrefeituraRjItaperunaConfig {
+  type: 'prefeiturarjitaperuna';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Japeri - RJ
+ */
+export interface PrefeituraRjJaperiConfig {
+  type: 'prefeiturarjjaperi';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Barra do Piraí - RJ
+ */
+export interface PrefeituraRjBarraDoPixaiConfig {
+  type: 'prefeiturarjbarradopirai';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Saquarema - RJ
+ */
+export interface PrefeituraRjSaquaremaConfig {
+  type: 'prefeiturarjsaquarema';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Seropédica - RJ
+ */
+export interface PrefeituraRjSeropedicaConfig {
+  type: 'prefeiturarjseropedica';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Três Rios - RJ
+ */
+export interface PrefeituraRjTresRiosConfig {
+  type: 'prefeiturarjtresrios';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Valença - RJ
+ */
+export interface PrefeituraRjValencaConfig {
+  type: 'prefeiturarjvalenca';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Cachoeiras de Macacu - RJ
+ */
+export interface PrefeituraRjCachoeirasDeMacacuConfig {
+  type: 'prefeiturarjcachoeirasdemacacu';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Rio Bonito - RJ
+ */
+export interface PrefeituraRjRioBonitoConfig {
+  type: 'prefeiturarjriobonito';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Guapimirim - RJ
+ */
+export interface PrefeituraRjGuapimirimConfig {
+  type: 'prefeiturarjguapimirim';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Casimiro de Abreu - RJ
+ */
+export interface PrefeituraRjCasimiroDeAbreuConfig {
+  type: 'prefeiturarjcasimirodeabreu';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Paraty - RJ
+ */
+export interface PrefeituraRjParatyConfig {
+  type: 'prefeiturarjparaty';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de São Francisco de Itabapoana - RJ
+ */
+export interface PrefeituraRjSaoFranciscoDeItabapoanaConfig {
+  type: 'prefeiturarjsaofranciscodeitabapoana';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Paraíba do Sul - RJ
+ */
+export interface PrefeituraRjParaibaDoSulConfig {
+  type: 'prefeiturarjparaibadosul';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Paraíba do Sul - RJ (V2 - Google Drive based)
+ */
+export interface PrefeituraRjParaibaDoSulV2Config {
+  type: 'prefeiturarjparaibadosulv2';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Paracambi - RJ
+ */
+export interface PrefeituraRjParacambiConfig {
+  type: 'prefeiturarjparacambi';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Santo Antônio de Pádua - RJ
+ */
+export interface PrefeituraRjSantoAntonioDePaduaConfig {
+  type: 'prefeiturarjsantoantoniopadua';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Mangaratiba - RJ
+ */
+export interface PrefeituraRjMangaratibaConfig {
+  type: 'prefeiturarjmangaratiba';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Armação dos Búzios - RJ
+ */
+export interface PrefeituraRjArmacaoDosBuziosConfig {
+  type: 'prefeiturarjarmacaodosbuzios';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de São Fidélis - RJ
+ */
+export interface PrefeituraRjSaoFidelisConfig {
+  type: 'prefeiturarjsaofidelis';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de São Fidélis - RJ v2
+ * Uses HTTP-only mode (no browser required)
+ */
+export interface PrefeituraRjSaoFidelisV2Config {
+  type: 'prefeiturarjsaofidelisv2';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de São João da Barra - RJ
+ */
+export interface PrefeituraRjSaoJoaoDaBarraConfig {
+  type: 'prefeiturarjsaojoaodabarra';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de São João da Barra - RJ V2
+ * Uses HTTP-only mode with PHP API (no browser required)
+ */
+export interface PrefeituraRjSaoJoaoDaBarraV2Config {
+  type: 'prefeiturarjsaojoaodabarrav2';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Bom Jesus do Itabapoana - RJ
+ */
+export interface PrefeituraRjBomJesusDoItabapoanaConfig {
+  type: 'prefeiturarjbomjesusdoitabapoana';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Vassouras - RJ
+ */
+export interface PrefeituraRjVassourasConfig {
+  type: 'prefeiturarjvassouras';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Tanguá - RJ
+ */
+export interface PrefeituraRjTanguaConfig {
+  type: 'prefeiturarjtangua';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Arraial do Cabo - RJ
+ */
+export interface PrefeituraRjArraialDoCaboConfig {
+  type: 'prefeiturarjarraialdocabo';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Arraial do Cabo - RJ (v2)
+ * New site structure at https://www.arraial.rj.gov.br/diariooficial
+ */
+export interface PrefeituraRjArraialDoCaboV2Config {
+  type: 'prefeiturarjarraialdocabov2';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Itatiaia - RJ
+ */
+export interface PrefeituraRjItatiaiaConfig {
+  type: 'prefeiturarjitatiaia';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Paty do Alferes - RJ
+ */
+export interface PrefeituraRjPatyDoAlferesConfig {
+  type: 'prefeiturarjpatydoalferes';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Bom Jardim - RJ
+ */
+export interface PrefeituraRjBomJardimConfig {
+  type: 'prefeiturarjbomjardim';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Iguaba Grande - RJ
+ */
+export interface PrefeituraRjIguabaGrandeConfig {
+  type: 'prefeiturarjiguabagrande';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Miracema - RJ
+ */
+export interface PrefeituraRjMiracemaConfig {
+  type: 'prefeiturarjmiracema';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Miguel Pereira - RJ
+ */
+export interface PrefeituraRjMiguelPereiraConfig {
+  type: 'prefeiturarjmiguelpereira';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Piraí - RJ
+ */
+export interface PrefeituraRjPiraiConfig {
+  type: 'prefeiturarjpirai';
+  /** Base URL for the diário oficial page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for DiarioOficialOnline platform spiders
+ * Used for sites hosted on diario-oficial.online (e.g., Bom Jardim - RJ)
+ */
+export interface DiarioOficialOnlineConfig {
+  type: 'diario_oficial_online';
+  /** Base URL for the gazette listing page (e.g., https://diario-oficial.online/publicacoes/todas/1) */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for Phoca Download (Joomla component) spiders
+ * Used for sites that use Phoca Download to organize gazette files in hierarchical categories
+ */
+export interface PhocaDownloadConfig {
+  type: 'phocadownload';
+  /** Base URL for the Phoca Download category page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Ceará municipality gazette spiders
+ * Used for sites that use the standard CE template (diariooficial.php)
+ */
+export interface PrefeituraCEConfig {
+  type: 'prefeiturace';
+  /** Base URL for the gazette list page (e.g., https://www.caucaia.ce.gov.br/diariooficial.php) */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for ASSESI gazette spider
+ * ASSESI is a common system used by municipalities in Ceará.
+ * Uses a custom template with list-group-item structure.
+ * 
+ * URL pattern: https://www.{cidade}.ce.gov.br/{slug}.php
+ * PDF URL pattern: https://www.{cidade}.ce.gov.br/arquivos_download.php?id={ID}&pg={slug}
+ * 
+ * Available slugs (all accessible from /acessoainformacao.php):
+ * - diariooficial - Diário Oficial
+ * - leis - Leis
+ * - decretos - Decretos
+ * - processoseletivo - Processo Seletivo
+ * - publicacoes - Publicações
+ */
+export interface AssesiConfig {
+  type: 'assesi';
+  /** Base URL for the gazette list page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+  /** 
+   * When true, searches all available slugs (diariooficial, leis, decretos, processoseletivo, publicacoes)
+   * Default: false (only searches the slug specified in baseUrl)
+   */
+  searchAllSlugs?: boolean;
+  /**
+   * Specific slugs to search (overrides searchAllSlugs)
+   * Example: ['diariooficial', 'leis', 'decretos']
+   */
+  slugs?: string[];
+}
+
+/**
+ * Configuration for Juazeiro do Norte gazette spider
+ * Uses diariolista.php with direct PDF links
+ * URL pattern: https://www.juazeirodonorte.ce.gov.br/diariolista.php
+ * PDF URL pattern: diario/{ID}/{EDITION}_{YEAR}_0000001.pdf
+ */
+export interface PrefeituraJuazeiroDoNorteConfig {
+  type: 'prefeiturajuazeirodonorte';
+  /** Base URL for the gazette list page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Sobral gazette spider
+ * Sobral uses a custom DOM system with direct PDF links
+ */
+export interface PrefeituraSobralConfig {
+  type: 'prefeiturasobral';
+  /** Base URL for the gazette search page */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Crato gazette spider
+ * Crato uses a custom paginated table system
+ * URL: https://mail.crato.ce.gov.br/diariooficial/?p=
+ * PDF URLs: https://mail.crato.ce.gov.br/site/conteudo/2/{TIMESTAMP}_1.pdf
+ */
+export interface PrefeituraCratoConfig {
+  type: 'prefeituracrato';
+  /** Base URL for the gazette list page (e.g., https://mail.crato.ce.gov.br/diariooficial/?p=) */
+  baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Plug Tecnologia transparency portal spiders
+ * 
+ * Platform Structure:
+ * - Main URL: /transparencia/exibir/{CATEGORY_ID}/0/1/{SLUG} - shows year folders
+ * - Year URL: /transparencia/exibir/{CATEGORY_ID}/{FOLDER_ID}/1/{SLUG} - shows gazette list
+ * - Download: /transparencia/download/{FILE_ID} - redirects to PDF
+ * 
+ * Example: https://miracema.plugtecnologia.com.br/transparencia/exibir/20/0/1/boletim-oficial
+ */
+export interface PlugTecnologiaConfig {
+  type: 'plugtecnologia';
+  /** Base URL for the gazette page (e.g., "https://miracema.plugtecnologia.com.br/transparencia/exibir/20/0/1/boletim-oficial") */
+  baseUrl: string;
+}
+
+/**
+ * Configuration for WordPress sites with custom post type "publicacoes"
+ * 
+ * This spider uses the WordPress REST API to fetch publications.
+ * Each publication may have PDF attachments that are fetched via the media endpoint.
+ * 
+ * API endpoints:
+ * - Publications list: /wp-json/wp/v2/publicacoes
+ * - Media for a post: /wp-json/wp/v2/media?parent={post_id}
+ * 
+ * Example site: https://camocim.ce.gov.br/publicacoes/
+ */
+export interface WordPressPublicacoesConfig {
+  type: 'wordpress_publicacoes';
+  /** Base URL for the WordPress site (e.g., "https://camocim.ce.gov.br") */
+  baseUrl: string;
+  /** Custom post type slug (default: "publicacoes") */
+  postType?: string;
+  /** Number of posts per page (default: 100) */
+  perPage?: number;
+}
+
+/**
+ * Configuration for Joomla EDocman component spiders
+ * 
+ * EDocman is a document management extension for Joomla that provides
+ * a structured way to organize and publish documents.
+ * 
+ * Example site: https://parambu.ce.gov.br/transparencia-2/transparencia/diario-oficial
+ */
+export interface EdocmanConfig {
+  type: 'edocman';
+  /** Base URL for the gazette listing page */
+  baseUrl: string;
+  /** Whether the site requires client-side JavaScript rendering */
   requiresClientRendering?: boolean;
 }

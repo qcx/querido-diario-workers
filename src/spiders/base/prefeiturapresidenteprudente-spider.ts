@@ -7,6 +7,7 @@ import { toISODate, getCurrentTimestamp } from '../../utils/date-utils';
 interface PrefeituraPresidentePrudenteConfig {
   type: 'prefeiturapresidenteprudente';
   baseUrl: string;
+  requiresClientRendering?: boolean;
 }
 
 interface EditionInfo {
@@ -63,12 +64,23 @@ export class PrefeituraPresidentePrudenteSpider extends BaseSpider {
     const gazettes: Gazette[] = [];
     const startDateStr = toISODate(this.startDate);
     const endDateStr = toISODate(this.endDate);
+    const platformConfig = this.config.config as PrefeituraPresidentePrudenteConfig;
     
-    logger.info(`Crawling Prefeitura de Presidente Prudente from ${startDateStr} to ${endDateStr}`);
+    logger.info(`Crawling Prefeitura de Presidente Prudente from ${startDateStr} to ${endDateStr}`, {
+      hasBrowser: !!this.browser,
+      requiresClientRendering: platformConfig.requiresClientRendering,
+    });
 
     // This site blocks Cloudflare Workers IPs - requires browser binding
-    if (this.browser) {
+    // Use browser if available and requiresClientRendering is true
+    if (this.browser && platformConfig.requiresClientRendering === true) {
+      logger.debug('Using browser-based crawling for site that blocks datacenter IPs');
       return this.crawlWithBrowser(startDateStr, endDateStr);
+    }
+    
+    if (platformConfig.requiresClientRendering === true && !this.browser) {
+      logger.error('Browser binding required but not available - cannot crawl site that blocks datacenter IPs. Make sure BROWSER binding is configured in wrangler.jsonc and available in your environment.');
+      return [];
     }
     
     // Fallback to direct fetch (will likely fail due to IP blocking)

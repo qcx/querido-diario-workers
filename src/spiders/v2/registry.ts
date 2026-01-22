@@ -6,6 +6,8 @@ import { logger } from '../../utils/logger';
 import spConfigs from './configs/sp.json';
 import mgConfigs from './configs/mg.json';
 import esConfigs from './configs/es.json';
+import rjConfigs from './configs/rj.json';
+import ceConfigs from './configs/ce.json';
 
 /**
  * Registry of all state configuration files
@@ -15,8 +17,9 @@ const STATE_CONFIGS = {
   'SP': spConfigs,
   'MG': mgConfigs,
   'ES': esConfigs,
+  'RJ': rjConfigs,
+  'CE': ceConfigs,
   // Add more states here as needed:
-  // 'RJ': rjConfigs,
   // etc.
 } as const;
 

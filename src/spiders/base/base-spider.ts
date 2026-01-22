@@ -79,17 +79,23 @@ export abstract class BaseSpider {
       power?: 'executive' | 'legislative' | 'executive_legislative';
       sourceText?: string;
       requiresClientRendering?: boolean;
+      skipUrlResolution?: boolean; // Skip URL resolution for sites with session-based URLs
     } = {}
   ): Promise<Gazette | null> {
     try {
-      // Resolve the URL to its final destination
-      const resolvedUrl = await resolveFinalUrl(fileUrl, {
-        maxRedirects: 10,
-        timeout: 15000,
-        retries: 2
-      });
-
-      console.log('🔺 Resolved Gazette URL:', resolvedUrl);
+      // Resolve the URL to its final destination (unless skipped)
+      let resolvedUrl = fileUrl;
+      
+      if (!options.skipUrlResolution) {
+        resolvedUrl = await resolveFinalUrl(fileUrl, {
+          maxRedirects: 10,
+          timeout: 15000,
+          retries: 2
+        });
+        console.log('🔺 Resolved Gazette URL:', resolvedUrl);
+      } else {
+        console.log('🔺 Skipping URL resolution, using:', resolvedUrl);
+      }
 
       return {
         date: toISODate(date),

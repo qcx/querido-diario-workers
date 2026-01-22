@@ -1491,11 +1491,12 @@
     "spiderType": "sigpub",
     "config": {
       "url": "https://www.diariomunicipal.com.br/aprece/",
-      "entityId": "764",
+      "entityId": "3081",
+      "entityName": "Prefeitura Municipal de Quixadá",
       "type": "sigpub"
     },
     "gazetteScope": "city",
-    "active": false
+    "active": true
   },
   {
     "id": "ce_2311355",
