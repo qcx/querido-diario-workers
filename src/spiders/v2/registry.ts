@@ -8,6 +8,9 @@ import mgConfigs from './configs/mg.json';
 import esConfigs from './configs/es.json';
 import rjConfigs from './configs/rj.json';
 import ceConfigs from './configs/ce.json';
+import baConfigs from './configs/ba.json';
+import peConfigs from './configs/pe.json';
+import piConfigs from './configs/pi.json';
 
 /**
  * Registry of all state configuration files
@@ -19,6 +22,9 @@ const STATE_CONFIGS = {
   'ES': esConfigs,
   'RJ': rjConfigs,
   'CE': ceConfigs,
+  'BA': baConfigs,
+  'PE': peConfigs,
+  'PI': piConfigs,
   // Add more states here as needed:
   // etc.
 } as const;

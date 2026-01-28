@@ -1,0 +1,2388 @@
+[
+  {
+    "id": "ba_salvador",
+    "name": "Salvador - BA",
+    "territoryId": "2927408",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasalvador",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasalvador",
+          "baseUrl": "http://dom.salvador.ba.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_feira_de_santana",
+    "name": "Feira de Santana - BA",
+    "territoryId": "2910800",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturafeiradesantana",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturafeiradesantana",
+          "baseUrl": "https://diariooficial.feiradesantana.ba.gov.br/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_vitoria_da_conquista",
+    "name": "Vitória da Conquista - BA",
+    "territoryId": "2933307",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituravitoiriadaconquista",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituravitoiriadaconquista",
+          "baseUrl": "https://dom.pmvc.ba.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_camacari",
+    "name": "Camaçari - BA",
+    "territoryId": "2905701",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracamacari",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracamacari",
+          "baseUrl": "https://www.camacari.ba.gov.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_juazeiro",
+    "name": "Juazeiro - BA",
+    "territoryId": "2918407",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/juazeiro",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_lauro_de_freitas",
+    "name": "Lauro de Freitas - BA",
+    "territoryId": "2919207",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/laurodefreitas/site/diariooficial",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_itabuna",
+    "name": "Itabuna - BA",
+    "territoryId": "2914802",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Sistema Procede Bahia. API: api.procedebahia.com.br/diaries?cod_entity=88",
+    "spiders": [
+      {
+        "spiderType": "procede",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "procede",
+          "codEntity": 88,
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_ilheus",
+    "name": "Ilhéus - BA",
+    "territoryId": "2913606",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturailheus",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturailheus",
+          "baseUrl": "https://www.ilheus.ba.gov.br/diario-eletronico",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_porto_seguro",
+    "name": "Porto Seguro - BA",
+    "territoryId": "2925303",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraportoseguro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraportoseguro",
+          "baseUrl": "https://www.acessoinformacao.com.br/ba/portoseguro/diario-externo.php",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_barreiras",
+    "name": "Barreiras - BA",
+    "territoryId": "2903201",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabarreiras",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarreiras",
+          "baseUrl": "https://barreiras.ba.gov.br/diario-oficial/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_jequie",
+    "name": "Jequié - BA",
+    "territoryId": "2918001",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/jequie/site/diariooficial",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_alagoinhas",
+    "name": "Alagoinhas - BA",
+    "territoryId": "2900702",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/alagoinhas",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_teixeira_de_freitas",
+    "name": "Teixeira de Freitas - BA",
+    "territoryId": "2931350",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Site antigo (diario.teixeiradefreitas.ba.gov.br) desatualizado desde 2022. Usando SAI/IO.ORG.BR",
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/teixeiradefreitas/site/diariooficial",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_simoes_filho",
+    "name": "Simões Filho - BA",
+    "territoryId": "2930709",
+    "stateCode": "BA",
+    "active": false,
+    "notes": "Diário oficial digital não disponível. Site antigo (pmsimoesfilhoba.imprensaoficial.org) bloqueado pelo Cloudflare. Sistema diario.io.org.br (clientId 753) não retorna dados. Página da prefeitura só mostra links para anos 2014-2018.",
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/simoesfilho/site/diariooficial",
+          "power": "executive",
+          "clientId": "753",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_eunapolis",
+    "name": "Eunápolis - BA",
+    "territoryId": "2910727",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://diario.eunapolis.ba.gov.br",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_paulo_afonso",
+    "name": "Paulo Afonso - BA",
+    "territoryId": "2924009",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapauloafonso",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapauloafonso",
+          "clientId": 587,
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_luis_eduardo_magalhaes",
+    "name": "Luís Eduardo Magalhães - BA",
+    "territoryId": "2919553",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/luiseduardomagalhaes/site/diariooficial",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_santo_antonio_de_jesus",
+    "name": "Santo Antônio de Jesus - BA",
+    "territoryId": "2928703",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/santoantoniodejesus/site/diariooficial",
+          "power": "executive",
+          "clientId": "699",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_guanambi",
+    "name": "Guanambi - BA",
+    "territoryId": "2911709",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Sistema Procede Bahia. API: api.procedebahia.com.br/diaries?cod_entity=1",
+    "spiders": [
+      {
+        "spiderType": "procede",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "procede",
+          "codEntity": 1,
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_valenca",
+    "name": "Valença - BA",
+    "territoryId": "2932903",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma DIOF (diario.io.org.br) com clientId 810",
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://diario.io.org.br/810",
+          "power": "executive",
+          "clientId": "810",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_senhor_do_bonfim",
+    "name": "Senhor do Bonfim - BA",
+    "territoryId": "2930105",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/senhordobonfim",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_campo_formoso",
+    "name": "Campo Formoso - BA",
+    "territoryId": "2906006",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/campoformoso",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_jacobina",
+    "name": "Jacobina - BA",
+    "territoryId": "2917508",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma acessoinformacao.com.br (mesma de Porto Seguro)",
+    "spiders": [
+      {
+        "spiderType": "prefeituraportoseguro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraportoseguro",
+          "baseUrl": "https://www.acessoinformacao.com.br/ba/jacobina/diario-externo.php",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_serrinha",
+    "name": "Serrinha - BA",
+    "territoryId": "2930501",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma Imprensa Oficial (Knack-based) que requer browser rendering para carregar conteúdo dinâmico via iframe.",
+    "spiders": [
+      {
+        "spiderType": "imprensaoficial",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficial",
+          "subdomain": "pmserrinhaba",
+          "requiresClientRendering": true
+        },
+        "description": "Diário Oficial de Serrinha via Imprensa Oficial (Knack)"
+      }
+    ]
+  },
+  {
+    "id": "ba_irece",
+    "name": "Irecê - BA",
+    "territoryId": "2914604",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Sistema Procede Bahia. API: api.procedebahia.com.br/diaries?cod_entity=50",
+    "spiders": [
+      {
+        "spiderType": "procede",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "procede",
+          "codEntity": 50,
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_candeias",
+    "name": "Candeias - BA",
+    "territoryId": "2906501",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/candeias",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_casa_nova",
+    "name": "Casa Nova - BA",
+    "territoryId": "2907202",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "transparenciaoficialba",
+        "config": {
+          "type": "transparenciaoficialba",
+          "subdomain": "pmcasanova"
+        },
+        "priority": 1,
+        "active": true,
+        "description": "Diário Oficial de Casa Nova via Transparência Oficial BA"
+      }
+    ]
+  },
+  {
+    "id": "ba_dias_davila",
+    "name": "Dias d'Ávila - BA",
+    "territoryId": "2910057",
+    "stateCode": "BA",
+    "active": false,
+    "notes": "DOEM (doem.org.br/ba/diasdavila) existe mas está vazio. Site da prefeitura (diasdavila.ba.gov.br) tem link para Diário Oficial mas não carrega corretamente. Precisa investigar plataforma atual.",
+    "spiders": []
+  },
+  {
+    "id": "ba_brumado",
+    "name": "Brumado - BA",
+    "territoryId": "2904605",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "portalgov",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalgov",
+          "slug": "prefeitura-municipal-de-brumado",
+          "requiresClientRendering": false
+        },
+        "description": "Diário Oficial de Brumado via PortalGov"
+      }
+    ]
+  },
+  {
+    "id": "ba_conceicao_do_coite",
+    "name": "Conceição do Coité - BA",
+    "territoryId": "2908408",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma domunicipio.com (cityId=34). Diários oficiais a partir de 2021.",
+    "spiders": [
+      {
+        "spiderType": "domunicipio",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "domunicipio",
+          "cityId": 34,
+          "includeExtraordinary": true,
+          "requiresClientRendering": false
+        },
+        "description": "Diário Oficial de Conceição do Coité via domunicipio.com"
+      }
+    ]
+  },
+  {
+    "id": "ba_itapetinga",
+    "name": "Itapetinga - BA",
+    "territoryId": "2916401",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/itapetinga",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_cruz_das_almas",
+    "name": "Cruz das Almas - BA",
+    "territoryId": "2909802",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/cruzdasalmas",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_santo_estevao",
+    "name": "Santo Estêvão - BA",
+    "territoryId": "2928802",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/santoestevao",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_itaberaba",
+    "name": "Itaberaba - BA",
+    "territoryId": "2914703",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/itaberaba/site/diariooficial",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_ribeira_do_pombal",
+    "name": "Ribeira do Pombal - BA",
+    "territoryId": "2926608",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/ribeiradopombal/site/diariooficial",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_itamaraju",
+    "name": "Itamaraju - BA",
+    "territoryId": "2915601",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma DOEM (doem.org.br). O acessoinformacao.com.br redireciona para DOEM.",
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/itamaraju",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_ipira",
+    "name": "Ipirá - BA",
+    "territoryId": "2914000",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "transparenciaoficialba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "transparenciaoficialba",
+          "subdomain": "pmipira"
+        },
+        "description": "Diário Oficial de Ipirá via Transparência Oficial BA"
+      }
+    ]
+  },
+  {
+    "id": "ba_santo_amaro",
+    "name": "Santo Amaro - BA",
+    "territoryId": "2928604",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "transparenciaoficialba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "transparenciaoficialba",
+          "subdomain": "pmsantoamaro"
+        },
+        "description": "Diário Oficial de Santo Amaro via Transparência Oficial BA"
+      }
+    ]
+  },
+  {
+    "id": "ba_bom_jesus_da_lapa",
+    "name": "Bom Jesus da Lapa - BA",
+    "territoryId": "2903904",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma Procede Bahia. API: api.procedebahia.com.br/diaries?cod_entity=39",
+    "spiders": [
+      {
+        "spiderType": "procede",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "procede",
+          "codEntity": 39,
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_euclides_da_cunha",
+    "name": "Euclides da Cunha - BA",
+    "territoryId": "2910701",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Portal IOP - última edição em 31/08/2022. Dados históricos disponíveis.",
+    "spiders": [
+      {
+        "spiderType": "portaliop",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portaliop",
+          "stateCode": "BA",
+          "citySlug": "EuclidesdaCunha",
+          "clientId": 3117,
+          "requiresClientRendering": true
+        },
+        "description": "Diário Oficial de Euclides da Cunha via Portal IOP"
+      }
+    ]
+  },
+  {
+    "id": "ba_caetite",
+    "name": "Caetité - BA",
+    "territoryId": "2905206",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/caetite",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_barra",
+    "name": "Barra - BA",
+    "territoryId": "2902708",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Portal da Transparência BA (ba.portaldatransparencia.com.br)",
+    "spiders": [
+      {
+        "spiderType": "ptio",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ptio",
+          "baseUrl": "http://ba.portaldatransparencia.com.br/prefeitura/barra/",
+          "requiresClientRendering": false
+        },
+        "description": "Diário Oficial de Barra via Portal da Transparência BA"
+      }
+    ]
+  },
+  {
+    "id": "ba_tucano",
+    "name": "Tucano - BA",
+    "territoryId": "2931905",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/tucano",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_araci",
+    "name": "Araci - BA",
+    "territoryId": "2902005",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma INDAP (diario.indap.org.br). Parâmetros: estado_id=5, cidade_id=1853.",
+    "spiders": [
+      {
+        "spiderType": "indap",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "indap",
+          "estadoId": 5,
+          "cidadeId": 1853,
+          "cidade": "Araci",
+          "estado": "BA",
+          "orgao": "Prefeitura",
+          "requiresClientRendering": true
+        },
+        "description": "Diário Oficial de Araci via INDAP - requer browser rendering"
+      }
+    ]
+  },
+  {
+    "id": "ba_pocoes",
+    "name": "Poções - BA",
+    "territoryId": "2925204",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/pocoes/site/diariooficial",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_catu",
+    "name": "Catu - BA",
+    "territoryId": "2907509",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/catu/site/diariooficial",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_monte_santo",
+    "name": "Monte Santo - BA",
+    "territoryId": "2921500",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/montesanto",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_seabra",
+    "name": "Seabra - BA",
+    "territoryId": "2929909",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/seabra/site/diariooficial",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_jaguaquara",
+    "name": "Jaguaquara - BA",
+    "territoryId": "2917607",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/jaguaquara",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_xique_xique",
+    "name": "Xique-Xique - BA",
+    "territoryId": "2933604",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/xiquexique",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_livramento_de_nossa_senhora",
+    "name": "Livramento de Nossa Senhora - BA",
+    "territoryId": "2919504",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://diario.livramentodenossasenhora.ba.gov.br",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_mata_de_sao_joao",
+    "name": "Mata de São João - BA",
+    "territoryId": "2921005",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://diario.matadesaojoao.ba.gov.br",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_vera_cruz",
+    "name": "Vera Cruz - BA",
+    "territoryId": "2933208",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficial",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficial",
+          "subdomain": "pmveracruzba",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_macaubas",
+    "name": "Macaúbas - BA",
+    "territoryId": "2919801",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "transparenciaoficialba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "transparenciaoficialba",
+          "subdomain": "pmmacaubas"
+        },
+        "description": "Diário Oficial de Macaúbas via Transparência Oficial BA"
+      }
+    ]
+  },
+  {
+    "id": "ba_sao_sebastiao_do_passe",
+    "name": "São Sebastião do Passé - BA",
+    "territoryId": "2929503",
+    "stateCode": "BA",
+    "active": false,
+    "spiders": []
+  },
+  {
+    "id": "ba_ipiau",
+    "name": "Ipiaú - BA",
+    "territoryId": "2913903",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/ipiau",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_remanso",
+    "name": "Remanso - BA",
+    "territoryId": "2926004",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "impublicacoes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "impublicacoes",
+          "territoryId": "2926004",
+          "entityType": "pref",
+          "requiresClientRendering": true
+        },
+        "description": "Diário Oficial de Remanso via IM Publicações (desde 01/01/2022)"
+      }
+    ]
+  },
+  {
+    "id": "ba_sao_goncalo_dos_campos",
+    "name": "São Gonçalo dos Campos - BA",
+    "territoryId": "2929305",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "transparenciaoficialba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "transparenciaoficialba",
+          "subdomain": "pmsaogoncalodoscampos"
+        },
+        "description": "Diário Oficial de São Gonçalo dos Campos via Transparência Oficial BA"
+      }
+    ]
+  },
+  {
+    "id": "ba_nova_vicosa",
+    "name": "Nova Viçosa - BA",
+    "territoryId": "2923001",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://diario.novavicosa.ba.gov.br",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_sao_francisco_do_conde",
+    "name": "São Francisco do Conde - BA",
+    "territoryId": "2929206",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficial",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficial",
+          "subdomain": "pmsaofranciscodocondeba",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_santa_maria_da_vitoria",
+    "name": "Santa Maria da Vitória - BA",
+    "territoryId": "2928109",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/santamariadavitoria",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_sento_se",
+    "name": "Sento Sé - BA",
+    "territoryId": "2930204",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/sentose",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_entre_rios",
+    "name": "Entre Rios - BA",
+    "territoryId": "2910503",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/entrerios",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_mucuri",
+    "name": "Mucuri - BA",
+    "territoryId": "2922003",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/mucuri",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_santaluz",
+    "name": "Santaluz - BA",
+    "territoryId": "2928000",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "indap",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "indap",
+          "estadoId": 5,
+          "cidadeId": 2169,
+          "cidade": "Santaluz",
+          "estado": "BA",
+          "orgao": "Prefeitura",
+          "requiresClientRendering": true
+        },
+        "description": "INDAP exibe publicações como texto inline, sem PDFs disponíveis para download"
+      }
+    ]
+  },
+  {
+    "id": "ba_jeremoabo",
+    "name": "Jeremoabo - BA",
+    "territoryId": "2918100",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://diario.jeremoabo.ba.gov.br",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_cansancao",
+    "name": "Cansanção - BA",
+    "territoryId": "2906808",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "indap",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "indap",
+          "estadoId": 5,
+          "cidadeId": 1909,
+          "cidade": "Cansanção",
+          "estado": "BA",
+          "orgao": "Prefeitura",
+          "requiresClientRendering": true
+        },
+        "description": "Diário Oficial de Cansanção via INDAP - requer browser rendering"
+      }
+    ]
+  },
+  {
+    "id": "ba_barra_do_choca",
+    "name": "Barra do Choça - BA",
+    "territoryId": "2902906",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/barradochoca/site",
+          "clientId": "69",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_amargosa",
+    "name": "Amargosa - BA",
+    "territoryId": "2901007",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficial",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficial",
+          "subdomain": "pmamargosaba",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_maragogipe",
+    "name": "Maragogipe - BA",
+    "territoryId": "2920601",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/maragojipe/site/diariooficial",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_rio_real",
+    "name": "Rio Real - BA",
+    "territoryId": "2926905",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraportoseguro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraportoseguro",
+          "baseUrl": "https://www.acessoinformacao.com.br/ba/rioreal/diario-externo.php",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_pilao_arcado",
+    "name": "Pilão Arcado - BA",
+    "territoryId": "2924306",
+    "stateCode": "BA",
+    "active": false,
+    "spiders": []
+  },
+  {
+    "id": "ba_conceicao_do_jacuipe",
+    "name": "Conceição do Jacuípe - BA",
+    "territoryId": "2908309",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://diario.conceicaodojacuipe.ba.gov.br",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_prado",
+    "name": "Prado - BA",
+    "territoryId": "2925501",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/prado",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_serra_do_ramalho",
+    "name": "Serra do Ramalho - BA",
+    "territoryId": "2930154",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma Procede Bahia (api.procedebahia.com.br) com codEntity=63. Site: serradoramalho.ba.gov.br/diario_oficial",
+    "spiders": [
+      {
+        "spiderType": "procede",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "procede",
+          "codEntity": 63,
+          "requiresClientRendering": false
+        },
+        "description": "Diário Oficial de Serra do Ramalho via Procede Bahia"
+      }
+    ]
+  },
+  {
+    "id": "ba_curaca",
+    "name": "Curaçá - BA",
+    "territoryId": "2909901",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma IM Publicações (impublicacoes.org). Publicações disponíveis via calendário mensal.",
+    "spiders": [
+      {
+        "spiderType": "impublicacoes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "impublicacoes",
+          "territoryId": "2909901",
+          "entityType": "pref",
+          "requiresClientRendering": true
+        },
+        "description": "Diário Oficial de Curaçá via IM Publicações"
+      }
+    ]
+  },
+  {
+    "id": "ba_itiuba",
+    "name": "Itiúba - BA",
+    "territoryId": "2917003",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma INDAP (diario.indap.org.br). Requer renderização client-side.",
+    "spiders": [
+      {
+        "spiderType": "indap",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "indap",
+          "estadoId": 5,
+          "cidadeId": 2028,
+          "cidade": "Itiúba",
+          "estado": "BA",
+          "orgao": "Prefeitura",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_inhambupe",
+    "name": "Inhambupe - BA",
+    "territoryId": "2913804",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma DOEM (doem.org.br). Edição 3.658 - Ano 15 em janeiro/2026.",
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/inhambupe",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_morro_do_chapeu",
+    "name": "Morro do Chapéu - BA",
+    "territoryId": "2921708",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/morrodochapeu",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_riachao_do_jacuipe",
+    "name": "Riachão do Jacuípe - BA",
+    "territoryId": "2926108",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "3tecnos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "3tecnos",
+          "urlUf": "ba",
+          "urlCity": "riachaodojacuipe",
+          "requiresClientRendering": true
+        },
+        "description": "Diário Oficial de Riachão do Jacuípe via 3Tecnos/MunicipioOnline - requer browser rendering"
+      }
+    ]
+  },
+  {
+    "id": "ba_capim_grosso",
+    "name": "Capim Grosso - BA",
+    "territoryId": "2906873",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma IBDM (transparencia.capimgrosso.ba.gov.br). Spider customizado para plataforma IBDM.",
+    "spiders": [
+      {
+        "spiderType": "ibdmtransparencia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ibdmtransparencia",
+          "baseUrl": "https://transparencia.capimgrosso.ba.gov.br",
+          "citySlug": "capimgrosso",
+          "requiresClientRendering": false
+        },
+        "description": "Diário Oficial de Capim Grosso via plataforma IBDM Transparência"
+      }
+    ]
+  },
+  {
+    "id": "ba_sao_desiderio",
+    "name": "São Desidério - BA",
+    "territoryId": "2928901",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraportoseguro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraportoseguro",
+          "baseUrl": "https://www.acessoinformacao.com.br/ba/saodesiderio/diario-externo.php",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_jaguarari",
+    "name": "Jaguarari - BA",
+    "territoryId": "2917706",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/jaguarari",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_canavieiras",
+    "name": "Canavieiras - BA",
+    "territoryId": "2906303",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://diario.canavieiras.ba.gov.br",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_esplanada",
+    "name": "Esplanada - BA",
+    "territoryId": "2910602",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/esplanada",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_correntina",
+    "name": "Correntina - BA",
+    "territoryId": "2909307",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/correntina",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_gandu",
+    "name": "Gandu - BA",
+    "territoryId": "2911204",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/gandu/site/diariooficial",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_pojuca",
+    "name": "Pojuca - BA",
+    "territoryId": "2925204",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/pojuca/site/diariooficial",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_itapicuru",
+    "name": "Itapicuru - BA",
+    "territoryId": "2916500",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/itapicuru",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_cicero_dantas",
+    "name": "Cícero Dantas - BA",
+    "territoryId": "2907806",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/cicerodantas",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_riacho_de_santana",
+    "name": "Riacho de Santana - BA",
+    "territoryId": "2926400",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/riachodesantana",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_campo_alegre_de_lourdes",
+    "name": "Campo Alegre de Lourdes - BA",
+    "territoryId": "2905909",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/campoalegredelourdes",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_camamu",
+    "name": "Camamu - BA",
+    "territoryId": "2905800",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://diario.camamu.ba.gov.br",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_paratinga",
+    "name": "Paratinga - BA",
+    "territoryId": "2923704",
+    "stateCode": "BA",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "ptio",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ptio",
+          "baseUrl": "http://ba.portaldatransparencia.com.br/prefeitura/paratinga/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_cachoeira",
+    "name": "Cachoeira - BA",
+    "territoryId": "2904902",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://diario.cachoeira.ba.gov.br",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_santa_cruz_cabralia",
+    "name": "Santa Cruz Cabrália - BA",
+    "territoryId": "2927705",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/santacruzcabralia",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_carinhanha",
+    "name": "Carinhanha - BA",
+    "territoryId": "2907103",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma Procede Bahia. API: api.procedebahia.com.br/diaries?cod_entity=8. Site oficial: carinhanha.ba.gov.br/Diario_Oficial",
+    "spiders": [
+      {
+        "spiderType": "procede",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "procede",
+          "codEntity": 8,
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_muritiba",
+    "name": "Muritiba - BA",
+    "territoryId": "2922300",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma Transparência Oficial BA (pmmuritiba.transparenciaoficialba.com.br).",
+    "spiders": [
+      {
+        "spiderType": "transparenciaoficialba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "transparenciaoficialba",
+          "subdomain": "pmmuritiba"
+        },
+        "description": "Diário Oficial de Muritiba via Transparência Oficial BA"
+      }
+    ]
+  },
+  {
+    "id": "ba_ruy_barbosa",
+    "name": "Ruy Barbosa - BA",
+    "territoryId": "2927200",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "institutopublicacoes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "institutopublicacoes",
+          "url": "http://www.ruybarbosa.ba.gov.br/diario?codCategoria=0&codSubcategoria=0",
+          "requiresClientRendering": true
+        },
+        "description": "Diário Oficial de Ruy Barbosa via Instituto de Publicações"
+      }
+    ]
+  },
+  {
+    "id": "ba_itabela",
+    "name": "Itabela - BA",
+    "territoryId": "2914653",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/itabela/site/diariooficial",
+          "power": "executive",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_irara",
+    "name": "Irará - BA",
+    "territoryId": "2914505",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/irara",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_presidente_tancredo_neves",
+    "name": "Presidente Tancredo Neves - BA",
+    "territoryId": "2925758",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa sistema AIRDOC próprio da prefeitura. URL: presidentetancredoneves.ba.gov.br/diario",
+    "spiders": [
+      {
+        "spiderType": "airdoc",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "airdoc",
+          "baseUrl": "http://presidentetancredoneves.ba.gov.br",
+          "requiresClientRendering": false
+        },
+        "description": "Sistema AIRDOC de Presidente Tancredo Neves - Diário Oficial"
+      }
+    ]
+  },
+  {
+    "id": "ba_itacare",
+    "name": "Itacaré - BA",
+    "territoryId": "2914901",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa sistema SAI/DIOF (sai.io.org.br) com clientId 355 para o executivo municipal.",
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://sai.io.org.br/ba/itacare/site/diariooficial",
+          "clientId": "355",
+          "power": "executive",
+          "requiresClientRendering": false
+        },
+        "description": "Diário Oficial da Prefeitura de Itacaré - Sistema SAI"
+      }
+    ]
+  },
+  {
+    "id": "ba_maracas",
+    "name": "Maracás - BA",
+    "territoryId": "2920502",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa sistema SAI/DIOF (maracas.ba.gov.br). Estimativa clientId 495 baseada em Handler.ashx.",
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://www.maracas.ba.gov.br/site/diariooficial",
+          "clientId": "495",
+          "power": "executive",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_santa_rita_de_cassia",
+    "name": "Santa Rita de Cássia - BA",
+    "territoryId": "2928406",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/santaritadecassia",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_nazare",
+    "name": "Nazaré - BA",
+    "territoryId": "2922508",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "transparenciaoficialba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "transparenciaoficialba",
+          "subdomain": "pmnazare"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_coracao_de_maria",
+    "name": "Coração de Maria - BA",
+    "territoryId": "2908903",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "indap",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "indap",
+          "estadoId": 5,
+          "cidadeId": 1935,
+          "cidade": "Coração de Maria",
+          "estado": "BA",
+          "orgao": "Prefeitura",
+          "requiresClientRendering": false
+        },
+        "description": "Diário Oficial de Coração de Maria via INDAP - usa API HTTP direta"
+      }
+    ]
+  },
+  {
+    "id": "ba_paripiranga",
+    "name": "Paripiranga - BA",
+    "territoryId": "2923803",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa sistema SAI/DIOF (paripiranga.ba.gov.br). Estimativa clientId 583 baseada em Handler.ashx.",
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://www.paripiranga.ba.gov.br/site/diariooficial",
+          "clientId": "583",
+          "power": "executive",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_ibotirama",
+    "name": "Ibotirama - BA",
+    "territoryId": "2913200",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa sistema SAI/DIOF (ibotirama.ba.gov.br). Estimativa clientId 317 baseada em Handler.ashx.",
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://www.ibotirama.ba.gov.br/site/diariooficial",
+          "clientId": "317",
+          "power": "executive",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_barra_da_estiva",
+    "name": "Barra da Estiva - BA",
+    "territoryId": "2902807",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma DIOF (diof.io.org.br) com clientId 67. Site: diario.barradaestiva.ba.gov.br. Publicações desde 02/01/2017.",
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diof",
+          "website": "https://diario.barradaestiva.ba.gov.br",
+          "power": "executive",
+          "clientId": "67",
+          "requiresClientRendering": false
+        },
+        "description": "Diário Oficial de Barra da Estiva via DIOF API"
+      }
+    ]
+  },
+  {
+    "id": "ba_queimadas",
+    "name": "Queimadas - BA",
+    "territoryId": "2925808",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma INDAP (diario.indap.org.br). Parâmetros: estado_id=5, cidade_id=2144.",
+    "spiders": [
+      {
+        "spiderType": "indap",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "indap",
+          "estadoId": 5,
+          "cidadeId": 2144,
+          "cidade": "Queimadas",
+          "estado": "BA",
+          "orgao": "Prefeitura",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_formosa_do_rio_preto",
+    "name": "Formosa do Rio Preto - BA",
+    "territoryId": "2911105",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "ba/formosadoriopreto",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_lapao",
+    "name": "Lapão - BA",
+    "territoryId": "2919157",
+    "stateCode": "BA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "procede",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "procede",
+          "codEntity": 36,
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ba_sobradinho",
+    "name": "Sobradinho - BA",
+    "territoryId": "2930774",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa plataforma IM Publicações (impublicacoes.org). Publicações disponíveis via calendário mensal.",
+    "spiders": [
+      {
+        "spiderType": "impublicacoes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "impublicacoes",
+          "territoryId": "2930774",
+          "entityType": "pref",
+          "requiresClientRendering": true
+        },
+        "description": "Diário Oficial de Sobradinho via IM Publicações"
+      }
+    ]
+  },
+  {
+    "id": "ba_anage",
+    "name": "Anagé - BA",
+    "territoryId": "2901205",
+    "stateCode": "BA",
+    "active": true,
+    "notes": "Usa sistema PortalTP/PortalGov próprio com PDFs em anage.ba.gov.br/arquivos/diariooficial/",
+    "spiders": [
+      {
+        "spiderType": "prefeituraanage",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraanage",
+          "baseUrl": "https://anage.ba.gov.br",
+          "requiresClientRendering": true
+        },
+        "description": "Diário Oficial de Anagé - Sistema PortalTP customizado"
+      }
+    ]
+  }
+]

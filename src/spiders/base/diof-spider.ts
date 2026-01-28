@@ -70,12 +70,20 @@ export class DiofSpider extends BaseSpider {
 
   /**
    * Extract client_id from the website
-   * Supports 3 different methods:
+   * Supports 4 different methods:
+   * 0. Direct config: use clientId from config if provided
    * 1. Direct DIOF site: call API
    * 2. SAI site: extract from iframe
    * 3. IMAP site: extract from URL
    */
   private async getClientId(): Promise<void> {
+    // Method 0: Use clientId from config if provided (fastest)
+    if (this.diofConfig.clientId) {
+      this.clientId = this.diofConfig.clientId;
+      logger.info(`Using client_id from config: ${this.clientId}`);
+      return;
+    }
+    
     const website = this.diofConfig.website;
     
     if (website.includes('sai.io')) {
@@ -87,6 +95,10 @@ export class DiofSpider extends BaseSpider {
       let clientMatch = html.match(/src="[^"]*[?&]c=(\d+)/);
       if (!clientMatch) {
         clientMatch = html.match(/[?&]c=(\d+)/);
+      }
+      if (!clientMatch) {
+        // New pattern: extract ID from diario.io.org.br/ID iframe URL
+        clientMatch = html.match(/src="https?:\/\/diario\.io\.org\.br\/(\d+)"/);
       }
       if (!clientMatch) {
         clientMatch = html.match(/cliente['":\s]*(\d+)/i);
