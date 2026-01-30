@@ -1,18 +1,24 @@
-import { BaseSpider } from './base-spider';
-import { SpiderConfig, Gazette, DateRange, SigpubConfig } from '../../types';
-import { logger } from '../../utils/logger';
-import { toISODate } from '../../utils/date-utils';
+import { BaseSpider } from "./base-spider";
+import { SpiderConfig, Gazette, DateRange, SigpubConfig } from "../../types";
+import { logger } from "../../utils/logger";
+import { toISODate } from "../../utils/date-utils";
 
 /**
- * Improved SigpubSpider using Cloudflare Browser Rendering
- * 
- * This spider uses Puppeteer via Cloudflare Browser Rendering to:
- * 1. Navigate to the calendar page
- * 2. Extract edition links from the interactive calendar
- * 3. Download gazette PDFs
- * 
- * The SIGPub platform requires JavaScript interaction to access the calendar,
- * making browser rendering necessary for reliable scraping.
+ * SigpubSpider for SIGPub/Vox Tecnologia platforms (AMUPE, APRECE, AEMERJ, etc.)
+ *
+ * IMPORTANT LIMITATION:
+ * The SIGPub platform publishes CONSOLIDATED gazettes - all municipalities
+ * publish in the same PDF. The entityId is used for search filtering in the
+ * web interface (which requires reCAPTCHA), not for separate PDF downloads.
+ *
+ * Current approach:
+ * - Downloads the consolidated gazette PDF from the main page
+ * - The PDF contains publications from ALL member municipalities
+ * - Text extraction/OCR would be needed to filter content per municipality
+ *
+ * Future improvements:
+ * - Use browser rendering to navigate the calendar and search interface
+ * - Implement OCR-based filtering to extract municipality-specific content
  */
 export class SigpubSpider extends BaseSpider {
   protected sigpubConfig: SigpubConfig;
@@ -20,18 +26,26 @@ export class SigpubSpider extends BaseSpider {
   constructor(spiderConfig: SpiderConfig, dateRange: DateRange) {
     super(spiderConfig, dateRange);
     this.sigpubConfig = spiderConfig.config as SigpubConfig;
-    logger.info(`Initializing SigpubSpider for ${spiderConfig.name} with URL: ${this.sigpubConfig.url}`);
+    const cityName = this.sigpubConfig.cityName || this.spiderConfig.name;
+    logger.info(
+      `Initializing SigpubSpider for ${cityName} with URL: ${this.sigpubConfig.url}, entityId: ${this.sigpubConfig.entityId}`,
+    );
   }
 
   async crawl(): Promise<Gazette[]> {
-    logger.info(`Crawling ${this.sigpubConfig.url} for ${this.spiderConfig.name}...`);
+    const cityName = this.sigpubConfig.cityName || this.spiderConfig.name;
+    logger.info(
+      `Crawling ${this.sigpubConfig.url} for ${cityName} (entityId: ${this.sigpubConfig.entityId})...`,
+    );
+    logger.warn(
+      `Note: SIGPub uses consolidated PDFs. The gazette will contain all municipalities, not just ${cityName}.`,
+    );
     const gazettes: Gazette[] = [];
 
     try {
       // Always use direct URL construction for now
       // TODO: Implement browser rendering when needed
       return await this.crawlWithDirectUrls();
-      
     } catch (error) {
       logger.error(`Error crawling ${this.spiderConfig.name}:`, error as Error);
     }
@@ -44,9 +58,9 @@ export class SigpubSpider extends BaseSpider {
    */
   private async crawlWithBrowser(): Promise<Gazette[]> {
     const gazettes: Gazette[] = [];
-    
-    logger.info('Using browser rendering for SIGPub crawling');
-    
+
+    logger.info("Using browser rendering for SIGPub crawling");
+
     // This would use Puppeteer via Cloudflare Browser Rendering
     // Example implementation:
     /*
@@ -101,60 +115,104 @@ export class SigpubSpider extends BaseSpider {
       await page.close();
     }
     */
-    
-    logger.warn('Browser rendering not implemented yet - using fallback method');
+
+    logger.warn(
+      "Browser rendering not implemented yet - using fallback method",
+    );
     return await this.crawlWithDirectUrls();
   }
 
   /**
    * Crawl by constructing direct URLs (fallback method)
-   * 
+   *
    * This method attempts to fetch the main page and extract PDF links
    * directly from the HTML. Less reliable than browser rendering but
    * works without Puppeteer.
+   *
+   * NOTE: The PDFs found are CONSOLIDATED - they contain all municipalities.
+   * The entityId is not used for filtering here (would require reCAPTCHA).
    */
   private async crawlWithDirectUrls(): Promise<Gazette[]> {
     const gazettes: Gazette[] = [];
-    
+    const cityName = this.sigpubConfig.cityName || this.spiderConfig.name;
+    const entityId = this.sigpubConfig.entityId;
+
     try {
       const response = await this.fetch(this.sigpubConfig.url);
-      
-      logger.debug(`Fetched HTML (first 500 chars): ${response.substring(0, 500)}`);
-      
+
+      logger.debug(
+        `Fetched HTML (first 500 chars): ${response.substring(0, 500)}`,
+      );
+
       // Extract PDF URLs from the HTML
-      const pdfUrlRegex = /https:\/\/www-storage\.voxtecnologia\.com\.br\/\?m=sigpub\.publicacao&f=\d+&i=publicado_\d+_(\d{4}-\d{2}-\d{2})_[a-f0-9]+\.pdf/g;
-      
+      // Pattern: https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=XXX&i=publicado_XXX_YYYY-MM-DD_hash.pdf
+      const pdfUrlRegex =
+        /https:\/\/www-storage\.voxtecnologia\.com\.br\/\?m=sigpub\.publicacao&f=(\d+)&i=publicado_(\d+)_(\d{4}-\d{2}-\d{2})_[a-f0-9]+\.pdf/g;
+
       const matches = response.matchAll(pdfUrlRegex);
       let matchCount = 0;
-      
+      const seenDates = new Set<string>();
+
       for (const match of matches) {
         matchCount++;
         const url = match[0];
-        const dateStr = match[1];
-        const gazetteDate = new Date(dateStr + 'T00:00:00.000Z'); // Force UTC to match range dates
-        
-        logger.debug(`Match ${matchCount}: Date ${dateStr}, URL: ${url.substring(0, 100)}...`);
-        logger.debug(`Date range check: ${dateStr} is in range ${this.dateRange.start} to ${this.dateRange.end}? ${this.isInDateRange(gazetteDate)}`);
-        
+        const pdfAssociationId = match[1]; // The association ID in the PDF URL (e.g., "365" for AMUPE)
+        const pdfEditionId = match[2];
+        const dateStr = match[3];
+        const gazetteDate = new Date(dateStr + "T00:00:00.000Z"); // Force UTC to match range dates
+
+        // Avoid duplicate gazettes for the same date
+        if (seenDates.has(dateStr)) {
+          continue;
+        }
+
+        logger.debug(
+          `Match ${matchCount}: Date ${dateStr}, Association ID in PDF: ${pdfAssociationId}, Edition: ${pdfEditionId}`,
+        );
+
+        // Format date range for logging (handle both Date objects and strings)
+        const startStr =
+          this.dateRange.start instanceof Date
+            ? toISODate(this.dateRange.start)
+            : String(this.dateRange.start);
+        const endStr =
+          this.dateRange.end instanceof Date
+            ? toISODate(this.dateRange.end)
+            : String(this.dateRange.end);
+        logger.debug(
+          `Date range check: ${dateStr} is in range ${startStr} to ${endStr}? ${this.isInDateRange(gazetteDate)}`,
+        );
+
         if (this.isInDateRange(gazetteDate)) {
+          seenDates.add(dateStr);
+
           const gazette = await this.createGazette(gazetteDate, url, {
-            editionNumber: 'N/A',
+            editionNumber: pdfEditionId,
             isExtraEdition: false,
-            power: 'executive',
+            power: "executive",
           });
-          
+
           if (gazette) {
+            // Add metadata about the consolidated nature
+            gazette.notes = `Consolidated gazette from ${this.sigpubConfig.url}. Contains publications from multiple municipalities. EntityId for ${cityName}: ${entityId}`;
             gazettes.push(gazette);
           }
         }
       }
-      
-      logger.info(`Found ${gazettes.length} gazettes from ${matchCount} matches using direct URL extraction`);
-      
+
+      logger.info(
+        `Found ${gazettes.length} gazettes from ${matchCount} matches for ${cityName} using direct URL extraction`,
+      );
+
+      if (gazettes.length === 0 && matchCount > 0) {
+        logger.warn(
+          `Found ${matchCount} PDF URLs but none in the requested date range. The main page only shows the latest edition.`,
+        );
+      }
     } catch (error) {
-      logger.error('Error in direct URL extraction:', error as Error);
+      logger.error("Error in direct URL extraction:", error as Error);
     }
-    
+
     return gazettes;
   }
 
@@ -163,6 +221,6 @@ export class SigpubSpider extends BaseSpider {
    */
   private extractEditionNumber(text: string): string {
     const match = text.match(/(?:edição|edicao)\s*(?:n[°º]?)?\s*(\d+)/i);
-    return match ? match[1] : 'N/A';
+    return match ? match[1] : "N/A";
   }
 }

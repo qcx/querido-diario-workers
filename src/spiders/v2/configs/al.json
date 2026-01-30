@@ -1,0 +1,443 @@
+[
+  {
+    "id": "al_maceio",
+    "name": "Maceió - AL",
+    "territoryId": "2704302",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/maceio/",
+          "entityId": "3493",
+          "cityName": "Maceió"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_arapiraca",
+    "name": "Arapiraca - AL",
+    "territoryId": "2700300",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3910",
+          "cityName": "Arapiraca"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_rio_largo",
+    "name": "Rio Largo - AL",
+    "territoryId": "2707701",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2169",
+          "cityName": "Rio Largo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_palmeira_dos_indios",
+    "name": "Palmeira dos Índios - AL",
+    "territoryId": "2706307",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioio",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioio",
+          "clientId": "11052",
+          "cityName": "Palmeira dos Índios",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_marechal_deodoro",
+    "name": "Marechal Deodoro - AL",
+    "territoryId": "2704708",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2997",
+          "cityName": "Marechal Deodoro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_uniao_dos_palmares",
+    "name": "União dos Palmares - AL",
+    "territoryId": "2709301",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariomunicipalalwordpress",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariomunicipalalwordpress",
+          "baseUrl": "https://www.diariomunicipal-al.com.br/uniao/",
+          "cityName": "União dos Palmares"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_penedo",
+    "name": "Penedo - AL",
+    "territoryId": "2706703",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioio",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioio",
+          "clientId": "11064",
+          "cityName": "Penedo",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_sao_miguel_dos_campos",
+    "name": "São Miguel dos Campos - AL",
+    "territoryId": "2708600",
+    "stateCode": "AL",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "kalana",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kalana",
+          "cnpj": "12264222000109",
+          "cityName": "São Miguel dos Campos",
+          "requiresClientRendering": true
+        },
+        "description": "TEMPORARIAMENTE DESATIVADO: Plataforma Kalana usa Flutter Web (canvas rendering). A API retorna apenas dados de permissões na inicialização, não os diários. A cidade não está no portal AMA/SIGPub. Fonte: https://www.kalana.com.br/diario_oficial/12264222000109/0000. Investigar alternativas ou contatar prefeitura."
+      }
+    ]
+  },
+  {
+    "id": "al_delmiro_gouveia",
+    "name": "Delmiro Gouveia - AL",
+    "territoryId": "2702405",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2097",
+          "cityName": "Delmiro Gouveia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_coruripe",
+    "name": "Coruripe - AL",
+    "territoryId": "2702306",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracoruripe",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracoruripe",
+          "baseUrl": "https://diario.coruripe.al.gov.br",
+          "cityName": "Coruripe"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_santana_do_ipanema",
+    "name": "Santana do Ipanema - AL",
+    "territoryId": "2708006",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2168",
+          "cityName": "Santana do Ipanema"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_teotonio_vilela",
+    "name": "Teotônio Vilela - AL",
+    "territoryId": "2709152",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3521",
+          "cityName": "Teotônio Vilela"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_atalaia",
+    "name": "Atalaia - AL",
+    "territoryId": "2700409",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2065",
+          "cityName": "Atalaia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_girau_do_ponciano",
+    "name": "Girau do Ponciano - AL",
+    "territoryId": "2702900",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3013",
+          "cityName": "Girau do Ponciano"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_pilar",
+    "name": "Pilar - AL",
+    "territoryId": "2706901",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2155",
+          "cityName": "Pilar"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_maragogi",
+    "name": "Maragogi - AL",
+    "territoryId": "2704500",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2398",
+          "cityName": "Maragogi"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_campo_alegre",
+    "name": "Campo Alegre - AL",
+    "territoryId": "2701407",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2073",
+          "cityName": "Campo Alegre"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_sao_sebastiao",
+    "name": "São Sebastião - AL",
+    "territoryId": "2708808",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2172",
+          "cityName": "São Sebastião"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_sao_luis_do_quitunde",
+    "name": "São Luís do Quitunde - AL",
+    "territoryId": "2708501",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "3tecnos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "3tecnos",
+          "urlUf": "al",
+          "urlCity": "saoluisdoquitunde",
+          "requiresClientRendering": true
+        },
+        "description": "Diário Oficial de São Luís do Quitunde via 3Tecnos/MunicipioOnline - requer browser rendering"
+      }
+    ]
+  },
+  {
+    "id": "al_sao_jose_da_tapera",
+    "name": "São José da Tapera - AL",
+    "territoryId": "2708402",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2170",
+          "cityName": "São José da Tapera"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_craibas",
+    "name": "Craíbas - AL",
+    "territoryId": "2702355",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2093",
+          "cityName": "Craíbas"
+        }
+      }
+    ]
+  }
+]

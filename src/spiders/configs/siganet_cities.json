@@ -114,11 +114,12 @@
       "baseUrl": "https://transparencia.viana.ma.gov.br/acessoInformacao/diario/diario"
     },
     "gazetteScope": "city",
-    "active": false
+    "active": true,
+    "notes": "Também disponível em administracaopublica.com.br com token 40c86c40b280ad723c77e753387d5e9ce9a15599. Lei Municipal nº 446 de 20/04/2017. ISSN 2764-7293."
   },
   {
     "id": "ma_ze_doca",
-    "name": "Ze Doca - MA",
+    "name": "Zé Doca - MA",
     "territoryId": "2114007",
     "startDate": "2018-06-04",
     "spiderType": "siganet",
@@ -127,6 +128,7 @@
       "baseUrl": "https://transparencia.zedoca.ma.gov.br/acessoInformacao/diario/diario"
     },
     "gazetteScope": "city",
-    "active": false
+    "active": true,
+    "notes": "Portal Siganet. Diário oficial disponível em zedoca.ma.gov.br/diario/diario/ e também em transparencia.zedoca.ma.gov.br."
   }
 ]

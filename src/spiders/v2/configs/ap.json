@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ap_macapa",
+    "name": "Macapá - AP",
+    "territoryId": "1600303",
+    "stateCode": "AP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituramacapa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramacapa",
+          "baseUrl": "https://macapa.ap.gov.br/diarios-oficiais/",
+          "cityName": "Macapá"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ap_santana",
+    "name": "Santana - AP",
+    "territoryId": "1600600",
+    "stateCode": "AP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasantanaap",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasantanaap",
+          "baseUrl": "https://santana.ap.gov.br/diario-oficial/",
+          "cityName": "Santana"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ap_laranjal_do_jari",
+    "name": "Laranjal do Jari - AP",
+    "territoryId": "1600279",
+    "stateCode": "AP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituralaranjaldojari",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituralaranjaldojari",
+          "baseUrl": "https://laranjaldojari.ap.gov.br/diario-oficial/",
+          "cityName": "Laranjal do Jari"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ap_oiapoque",
+    "name": "Oiapoque - AP",
+    "territoryId": "1600501",
+    "stateCode": "AP",
+    "active": true,
+    "notes": "Portal de transparência desatualizado desde Janeiro/2018. Contém 337 edições históricas (2016-2018). A cidade pode estar publicando no Diário Oficial do Estado do Amapá (DIOFE) atualmente.",
+    "spiders": [
+      {
+        "spiderType": "ptio",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ptio",
+          "baseUrl": "http://ap.portaldatransparencia.com.br/prefeitura/oiapoque/?pagina=dop"
+        }
+      }
+    ]
+  }
+]

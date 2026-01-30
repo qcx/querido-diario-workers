@@ -1,0 +1,1260 @@
+[
+  {
+    "id": "ma_sao_luis",
+    "name": "São Luís - MA",
+    "territoryId": "2111300",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Capital do estado. Site customizado diariooficial.saoluis.ma.gov.br com listagem de edições e PDFs. Requer browser rendering pois o servidor bloqueia fetch direto do Cloudflare Workers.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturasaoluis",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasaoluis",
+          "baseUrl": "https://diariooficial.saoluis.ma.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_imperatriz",
+    "name": "Imperatriz - MA",
+    "territoryId": "2105302",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma própria diariooficial.imperatriz.ma.gov.br com edições listadas e downloads em PDF.",
+    "spiders": [
+      {
+        "spiderType": "prefeituraimperatriz",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraimperatriz",
+          "baseUrl": "http://diariooficial.imperatriz.ma.gov.br/edicoes",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_sao_jose_de_ribamar",
+    "name": "São José de Ribamar - MA",
+    "territoryId": "2111201",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "portalfacil",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalfacil",
+          "baseUrl": "https://www.saojosederibamar.ma.gov.br/diario-eletronico",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_timon",
+    "name": "Timon - MA",
+    "territoryId": "2112209",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Site customizado timon.ma.gov.br/diario-oficial usando ScriptCase. Duas fontes: Executivo e Legislativo em iframes separados. PDFs com padrão de nome incluindo data.",
+    "spiders": [
+      {
+        "spiderType": "prefeituratimon",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituratimon",
+          "baseUrl": "https://www.timon.ma.gov.br/diario-oficial/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_caxias",
+    "name": "Caxias - MA",
+    "territoryId": "2103000",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracaxias",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracaxias",
+          "baseUrl": "https://caxias.ma.gov.br/dom/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_paco_do_lumiar",
+    "name": "Paço do Lumiar - MA",
+    "territoryId": "2107506",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma customizada com tabela de edições. PDF requer hash único por edição obtido via página de detalhe. Site requer JavaScript para renderizar.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturapacodolumiar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapacodolumiar",
+          "baseUrl": "https://pacodolumiar.ma.gov.br/diariooficial/edicoes-anteriores",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_codo",
+    "name": "Codó - MA",
+    "territoryId": "2103307",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma AgenciaPlus em dom.codo.ma.gov.br. Listagem de edições com Ver Detalhes e paginação.",
+    "spiders": [
+      {
+        "spiderType": "aplus",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "aplus",
+          "baseUrl": "https://dom.codo.ma.gov.br/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_acailandia",
+    "name": "Açailândia - MA",
+    "territoryId": "2100055",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Mesma plataforma de Paço do Lumiar. Site em acailandia.ma.gov.br/diariooficial. Tabela com edições, links diretos para PDFs em /arquivos/diariooficial/. 3018 edições disponíveis.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturapacodolumiar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapacodolumiar",
+          "baseUrl": "https://acailandia.ma.gov.br/diariooficial/edicoes-anteriores",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_bacabal",
+    "name": "Bacabal - MA",
+    "territoryId": "2101202",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Portal próprio em bacabal.ma.gov.br/diario. PDFs em /DOM/BAC{YYYYMMDD}-a.pdf com paginação simples.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturabacabal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabacabal",
+          "baseUrl": "https://www.bacabal.ma.gov.br/diario"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_balsas",
+    "name": "Balsas - MA",
+    "territoryId": "2101400",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma Assesi em balsas.ma.gov.br/diariooficial.php. Estrutura padrão Assesi com listagem e download de PDFs.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.balsas.ma.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_santa_ines",
+    "name": "Santa Inês - MA",
+    "territoryId": "2109908",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma Gestor Web em santaines.ma.gov.br/diariooficial. Filtros por categoria e data, edições com PDFs assinados digitalmente. Padrão de URL: /arquivos/diariooficial/{hash}/DiarioOficial_Edicao_{numero}.pdf",
+    "spiders": [
+      {
+        "spiderType": "prefeiturasantaines",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasantaines",
+          "baseUrl": "https://santaines.ma.gov.br/diariooficial",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_pinheiro",
+    "name": "Pinheiro - MA",
+    "territoryId": "2108603",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "WordPress (WebAtiva) em diariooficial.pinheiro.ma.gov.br. Listagem de edições com PDFs assinados. Padrão: /wp-content/uploads/YYYY/MM/diario-oficial-YYYY-MM-DD-assinado.pdf",
+    "spiders": [
+      {
+        "spiderType": "prefeiturapinheiro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapinheiro",
+          "baseUrl": "https://diariooficial.pinheiro.ma.gov.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_barra_do_corda",
+    "name": "Barra do Corda - MA",
+    "territoryId": "2101608",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Aplicação React SPA em dom.barradocorda.ma.gov.br. Requer renderização JavaScript. Padrão de PDFs: /uploads/editions/13/{timestamp}_signature.pdf. ISSN: 2764-6572.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturabarradocorda",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarradocorda",
+          "baseUrl": "https://dom.barradocorda.ma.gov.br/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_chapadinha",
+    "name": "Chapadinha - MA",
+    "territoryId": "2103208",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma customizada em chapadinha.ma.gov.br/transparencia/diario-oficial. Tabela HTML com 1226 edições. Links diretos para PDFs sem necessidade de JS.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturachapadinha",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturachapadinha",
+          "baseUrl": "https://chapadinha.ma.gov.br/transparencia/diario-oficial",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_grajau",
+    "name": "Grajaú - MA",
+    "territoryId": "2104800",
+    "stateCode": "MA",
+    "active": false,
+    "notes": "SITE QUEBRADO: grajau.ma.gov.br/diario-oficial retorna 'Notícia não encontrada'. A cidade publica no Diário Oficial da FAMEM (diariooficial.famem.org.br) que é um diário CONSOLIDADO de todos os municípios do Maranhão. Necessário implementar spider FAMEM ou aguardar correção do site municipal.",
+    "spiders": [
+      {
+        "spiderType": "prefeituragrajau",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituragrajau",
+          "baseUrl": "https://grajau.ma.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_barreirinhas",
+    "name": "Barreirinhas - MA",
+    "territoryId": "2101707",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "WebService Sistemas (Adianti Framework) em transparencia.barreirinhas.ma.gov.br. Edições com código de autenticidade SHA-1. PDFs em transparencia.webservicesistemas.com.br.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturabarreirinhas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarreirinhas",
+          "baseUrl": "https://www.transparencia.barreirinhas.ma.gov.br/engine.php?class=diario_home"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_itapecuru_mirim",
+    "name": "Itapecuru-Mirim - MA",
+    "territoryId": "2105401",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona. 1226 edições disponíveis. Filtros por palavra-chave, número, período e esfera. ISSN: 2966-0793.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.itapecurumirim.ma.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_coroata",
+    "name": "Coroatá - MA",
+    "territoryId": "2103604",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma prefeituratransparente.com.br (Laravel + Vue.js SPA). Antiga URL aplus não funciona mais.",
+    "spiders": [
+      {
+        "spiderType": "prefeituratransparente",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituratransparente",
+          "baseUrl": "https://dom.coroata.ma.gov.br/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_santa_luzia",
+    "name": "Santa Luzia - MA",
+    "territoryId": "2110005",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "CMS customizado em santaluzia.ma.gov.br. Página /diario-oficial com última edição e /edicoes com lista de cards. Padrão: /upload/diario_oficial/{hash}.pdf",
+    "spiders": [
+      {
+        "spiderType": "prefeiturasantaluziama",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasantaluziama",
+          "baseUrl": "https://santaluzia.ma.gov.br/edicoes",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_buriticupu",
+    "name": "Buriticupu - MA",
+    "territoryId": "2102325",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://buriticupu.ma.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_lago_da_pedra",
+    "name": "Lago da Pedra - MA",
+    "territoryId": "2105708",
+    "stateCode": "MA",
+    "active": true,
+
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.lagodapedra.ma.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_vargem_grande",
+    "name": "Vargem Grande - MA",
+    "territoryId": "2112704",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma Assesi em vargemgrande.ma.gov.br/diariooficial.php. 1.918 edições disponíveis. Certificado ICP-Brasil e Carimbo de Tempo.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://vargemgrande.ma.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_presidente_dutra",
+    "name": "Presidente Dutra - MA",
+    "territoryId": "2109106",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapresidentedutra",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapresidentedutra",
+          "baseUrl": "https://presidentedutra.ma.gov.br/transparencia/diario-oficial",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_coelho_neto",
+    "name": "Coelho Neto - MA",
+    "territoryId": "2103406",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracoelhoneto",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracoelhoneto",
+          "baseUrl": "https://dom.coelhoneto.ma.gov.br/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_tutoia",
+    "name": "Tutóia - MA",
+    "territoryId": "2112506",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma Gestor Web em tutoia.ma.gov.br/diariooficial. Mesma estrutura de Paço do Lumiar e Santa Inês. Edições listadas em tabela com link para PDF via DEFAULT_URL ou getFile.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturapacodolumiar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapacodolumiar",
+          "baseUrl": "https://tutoia.ma.gov.br/diariooficial/edicoes-anteriores"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_sao_bento",
+    "name": "São Bento - MA",
+    "territoryId": "2110500",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Portal de Transparência em transparencia.saobento.ma.gov.br. Plataforma Adianti Framework (WebService Sistemas) com diário oficial eletrônico. Edições diárias (seg-sex). Vol. 6 - Nº 1356/2026 publicado em 27/01/2026.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturabarreirinhas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarreirinhas",
+          "baseUrl": "https://transparencia.saobento.ma.gov.br/index.php?class=diario_home"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_santa_helena",
+    "name": "Santa Helena - MA",
+    "territoryId": "2109809",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "administracao_publica",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "administracao_publica",
+          "token": "24ab449ecc6a5305cc973c81039fd9c15c204fec"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_viana",
+    "name": "Viana - MA",
+    "territoryId": "2112902",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma AdministracaoPublica. Lei Municipal nº 446/2017. ISSN: 2764-7293. Publicações de segunda a sexta.",
+    "spiders": [
+      {
+        "spiderType": "administracao_publica",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "administracao_publica",
+          "token": "40c86c40b280ad723c77e753387d5e9ce9a15599"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_ze_doca",
+    "name": "Zé Doca - MA",
+    "territoryId": "2114007",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma Siganet em transparencia.zedoca.ma.gov.br. Também disponível em zedoca.ma.gov.br/diario/diario/.",
+    "spiders": [
+      {
+        "spiderType": "siganet",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "siganet",
+          "baseUrl": "https://transparencia.zedoca.ma.gov.br/acessoInformacao/diario/diario"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_colinas",
+    "name": "Colinas - MA",
+    "territoryId": "2103505",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Colinas publica no Diário Oficial da FAMEM (Federação dos Municípios do Estado do Maranhão). O município aderiu oficialmente ao diário eletrônico da FAMEM. O site diariooficial.famem.org.br usa plataforma Siganet e disponibiliza busca por publicações com filtro por palavra-chave (nome do município).",
+    "spiders": [
+      {
+        "spiderType": "famem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "famem",
+          "baseUrl": "https://www.diariooficial.famem.org.br",
+          "cityName": "Colinas",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_araioses",
+    "name": "Araioses - MA",
+    "territoryId": "2100907",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma Prefeitura Transparente (Vue.js SPA) em dom.araioses.ma.gov.br. Listagem de edições com botões Baixar e paginação. Requer JavaScript para renderizar.",
+    "spiders": [
+      {
+        "spiderType": "prefeituratransparente",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituratransparente",
+          "baseUrl": "https://dom.araioses.ma.gov.br/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_sao_mateus_do_maranhao",
+    "name": "São Mateus do Maranhão - MA",
+    "territoryId": "2111508",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://saomateus.ma.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_rosario",
+    "name": "Rosário - MA",
+    "territoryId": "2109601",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabarreirinhas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarreirinhas",
+          "baseUrl": "https://transparencia.rosario.ma.gov.br/engine.php?class=diario_home"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_turiacu",
+    "name": "Turiaçu - MA",
+    "territoryId": "2112407",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "WebService Sistemas (Adianti Framework). Usa endpoint DomDiarioList para listagem via HTTP puro (sem Puppeteer).",
+    "spiders": [
+      {
+        "spiderType": "prefeiturabarreirinhas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarreirinhas",
+          "baseUrl": "https://transparencia.turiacu.ma.gov.br/engine.php?class=diario_home"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_amarante_do_maranhao",
+    "name": "Amarante do Maranhão - MA",
+    "territoryId": "2100600",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Site customizado em amarante.ma.gov.br/edicoes. Vol 7 | Nº 1239/2026. ISSN 2764-6653. Lista paginada de edições com PDFs em /upload/diario_oficial/.",
+    "spiders": [
+      {
+        "spiderType": "prefeituraamarante",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraamarante",
+          "baseUrl": "https://www.amarante.ma.gov.br/edicoes",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_pedreiras",
+    "name": "Pedreiras - MA",
+    "territoryId": "2108207",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma Assesi em pedreiras.ma.gov.br/diariooficial.php. ISSN 2764-7129. 2.624 edições disponíveis. Certificado ICP-Brasil e Carimbo de Tempo.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://pedreiras.ma.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_santa_rita",
+    "name": "Santa Rita - MA",
+    "territoryId": "2110203",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabarreirinhas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarreirinhas",
+          "baseUrl": "http://transparencia.santarita.ma.gov.br/index.php?class=diario_home"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_tuntum",
+    "name": "Tuntum - MA",
+    "territoryId": "2112308",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma Assesi em tuntum.ma.gov.br/diariooficial.php. ISSN 2965-3246. 963 edições disponíveis. Certificado ICP-Brasil e Carimbo de Tempo.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://tuntum.ma.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_brejo",
+    "name": "Brejo - MA",
+    "territoryId": "2102101",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma Siganet em transparencia.brejo.ma.gov.br. Diário oficial com tabela de edições e paginação.",
+    "spiders": [
+      {
+        "spiderType": "siganet",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "siganet",
+          "baseUrl": "https://transparencia.brejo.ma.gov.br/acessoInformacao/diario/diario"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_sao_domingos_do_maranhao",
+    "name": "São Domingos do Maranhão - MA",
+    "territoryId": "2110708",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "famem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "famem",
+          "baseUrl": "https://www.diariooficial.famem.org.br",
+          "cityName": "São Domingos do Maranhão",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_estreito",
+    "name": "Estreito - MA",
+    "territoryId": "2104057",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Estreito publica no Diário Oficial da FAMEM (Federação dos Municípios do Estado do Maranhão). O site municipal não possui diário oficial próprio funcional.",
+    "spiders": [
+      {
+        "spiderType": "famem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "famem",
+          "baseUrl": "https://www.diariooficial.famem.org.br",
+          "cityName": "Estreito",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_bom_jardim",
+    "name": "Bom Jardim - MA",
+    "territoryId": "2102002",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma Assesi em bomjardim.ma.gov.br/diariooficial.php. ISSN 2965-5684. 1.839 edições disponíveis. Certificado ICP-Brasil e Carimbo de Tempo.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://bomjardim.ma.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_urbano_santos",
+    "name": "Urbano Santos - MA",
+    "territoryId": "2112605",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma WordPress DOM com tema portaldatransparencia2020. API REST em /wp-json/wp/v2/diarios",
+    "spiders": [
+      {
+        "spiderType": "domwordpress",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "domwordpress",
+          "baseUrl": "https://dom.urbanosantos.ma.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_penalva",
+    "name": "Penalva - MA",
+    "territoryId": "2108306",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma Siganet em penalva.ma.gov.br/diario/diario. Tabela de edições com paginação e busca.",
+    "spiders": [
+      {
+        "spiderType": "siganet",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "siganet",
+          "baseUrl": "https://penalva.ma.gov.br/diario/diario"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_matoes",
+    "name": "Matões - MA",
+    "territoryId": "2106607",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Matões publica no Diário Oficial da FAMEM (Federação dos Municípios do Estado do Maranhão). O site municipal matoes.ma.gov.br não possui diário oficial próprio funcional.",
+    "spiders": [
+      {
+        "spiderType": "famem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "famem",
+          "baseUrl": "https://www.diariooficial.famem.org.br",
+          "cityName": "Matões",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_turilandia",
+    "name": "Turilândia - MA",
+    "territoryId": "2112456",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma AdministracaoPublica em administracaopublica.com.br. Lei Municipal nº 280/2021. ISSN: 2965-2170. Publicações de segunda a sexta.",
+    "spiders": [
+      {
+        "spiderType": "administracao_publica",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "administracao_publica",
+          "token": "9664abfc624b73571a05e874f98fd6d114834924"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_cururupu",
+    "name": "Cururupu - MA",
+    "territoryId": "2103703",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabarreirinhas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarreirinhas",
+          "baseUrl": "https://transparencia.cururupu.ma.gov.br/engine.php?class=diario_home"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_pindare_mirim",
+    "name": "Pindaré-Mirim - MA",
+    "territoryId": "2108504",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma Assesi em pindaremirim.ma.gov.br/diariooficial.php. 1.375 edições disponíveis (4003/2026). Certificado ICP-Brasil e Carimbo de Tempo.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://pindaremirim.ma.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_parnarama",
+    "name": "Parnarama - MA",
+    "territoryId": "2107803",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma DiarioOficialMunicipal em parnarama.diariooficialmunicipal.com. API Laravel com paginação. ISSN: 3086-0512. 2240+ edições disponíveis.",
+    "spiders": [
+      {
+        "spiderType": "diariooficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialmunicipal",
+          "citySlug": "parnarama"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_vitorino_freire",
+    "name": "Vitorino Freire - MA",
+    "territoryId": "2113009",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "WebService Sistemas (Adianti Framework) em transparencia.vitorinofreire.ma.gov.br. ISSN: 2764-6866. Usa endpoint diario_home para listagem.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturabarreirinhas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarreirinhas",
+          "baseUrl": "https://transparencia.vitorinofreire.ma.gov.br/engine.php?class=diario_home"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_raposa",
+    "name": "Raposa - MA",
+    "territoryId": "2109452",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma AdministracaoPublica em administracaopublica.com.br. Lei Municipal nº 290/2017. Publicações de segunda a sexta.",
+    "spiders": [
+      {
+        "spiderType": "administracao_publica",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "administracao_publica",
+          "token": "1fea43fec0ccd7f2b0cbf55804aca8182177ab79"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_vitoria_do_mearim",
+    "name": "Vitória do Mearim - MA",
+    "territoryId": "2112902",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapacodolumiar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapacodolumiar",
+          "baseUrl": "https://www.vitoriadomearim.ma.gov.br/diariooficial/edicoes-anteriores"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_buriti",
+    "name": "Buriti - MA",
+    "territoryId": "2102200",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "famem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "famem",
+          "baseUrl": "https://www.diariooficial.famem.org.br",
+          "cityName": "Buriti",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_arari",
+    "name": "Arari - MA",
+    "territoryId": "2101004",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma AdministracaoPublica em administracaopublica.com.br. Lei Municipal nº 008/2013. Decreto nº 022/2023. Publicações de segunda a sexta.",
+    "spiders": [
+      {
+        "spiderType": "administracao_publica",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "administracao_publica",
+          "token": "87454fa86e6ac8d393138b77f02107fd964b0a99"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_bom_jesus_das_selvas",
+    "name": "Bom Jesus das Selvas - MA",
+    "territoryId": "2102036",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "administracao_publica",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "administracao_publica",
+          "token": "1ffcea7007fcd2e4635e427841f4914f42375691"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_moncao",
+    "name": "Monção - MA",
+    "territoryId": "2106904",
+    "stateCode": "MA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "vfmtransparencia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "vfmtransparencia",
+          "baseUrl": "https://moncao3.websiteseguro.com/transparencia",
+          "diretorioDiario": "DIÁRIO-OFICIAL"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_sao_bernardo",
+    "name": "São Bernardo - MA",
+    "territoryId": "2110609",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Plataforma Prefeitura Transparente (Vue.js SPA) em dom.saobernardo.ma.gov.br. Listagem de edições com botões Baixar e paginação. 128 páginas de edições disponíveis.",
+    "spiders": [
+      {
+        "spiderType": "prefeituratransparente",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituratransparente",
+          "baseUrl": "https://dom.saobernardo.ma.gov.br/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_timbiras",
+    "name": "Timbiras - MA",
+    "territoryId": "2112100",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Timbiras publica diários no portal de transparência próprio usando plataforma Siganet. API: transparencia.timbiras.ma.gov.br/acessoInformacao/diario/diario/listarDiario",
+    "spiders": [
+      {
+        "spiderType": "siganet",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "siganet",
+          "baseUrl": "https://transparencia.timbiras.ma.gov.br/acessoInformacao/diario/diario"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_alto_alegre_do_pindare",
+    "name": "Alto Alegre do Pindaré - MA",
+    "territoryId": "2100477",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Alto Alegre do Pindaré publica em diariodomunicipio.info (plataforma WordPress com WP File Download). O site municipal usa plataforma Siganet/Workcenter.",
+    "spiders": [
+      {
+        "spiderType": "diariodomunicipioinfo",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariodomunicipioinfo",
+          "baseUrl": "https://diariodomunicipio.info",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_humberto_de_campos",
+    "name": "Humberto de Campos - MA",
+    "territoryId": "2105005",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "WebService Sistemas (Adianti Framework) em transparencia.humbertodecampos.ma.gov.br. ISSN: 2965-2324. Vol. 3 - Nº 1470/2026. Usa endpoint diario_home para listagem.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturabarreirinhas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarreirinhas",
+          "baseUrl": "https://transparencia.humbertodecampos.ma.gov.br/engine.php?class=diario_home"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ma_arame",
+    "name": "Arame - MA",
+    "territoryId": "2100956",
+    "stateCode": "MA",
+    "active": true,
+    "notes": "Arame publica no Diário Oficial da FAMEM (Federação dos Municípios do Estado do Maranhão). Confirmado na lista de adesão municipal da FAMEM.",
+    "spiders": [
+      {
+        "spiderType": "famem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "famem",
+          "baseUrl": "https://www.diariooficial.famem.org.br",
+          "cityName": "Arame",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  }
+]

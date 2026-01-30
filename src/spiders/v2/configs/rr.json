@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rr_boa_vista",
+    "name": "Boa Vista - RR",
+    "territoryId": "1400100",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasaojoaodaboavista",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasaojoaodaboavista",
+          "baseUrl": "https://publicacoes.boavista.rr.gov.br/diarios/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rr_rorainopolis",
+    "name": "Rorainópolis - RR",
+    "territoryId": "1400472",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amr/",
+          "entityId": "38433",
+          "cityName": "Rorainópolis"
+        }
+      }
+    ]
+  }
+]

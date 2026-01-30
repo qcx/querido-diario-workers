@@ -1,30 +1,46 @@
-import { SpiderConfig, SpiderType } from '../../types';
-import { TerritoryConfigV2 } from './types';
-import { logger } from '../../utils/logger';
+import { SpiderConfig, SpiderType } from "../../types";
+import { TerritoryConfigV2 } from "./types";
+import { logger } from "../../utils/logger";
 
 // Import all state config files
-import spConfigs from './configs/sp.json';
-import mgConfigs from './configs/mg.json';
-import esConfigs from './configs/es.json';
-import rjConfigs from './configs/rj.json';
-import ceConfigs from './configs/ce.json';
-import baConfigs from './configs/ba.json';
-import peConfigs from './configs/pe.json';
-import piConfigs from './configs/pi.json';
+import spConfigs from "./configs/sp.json";
+import mgConfigs from "./configs/mg.json";
+import esConfigs from "./configs/es.json";
+import rjConfigs from "./configs/rj.json";
+import ceConfigs from "./configs/ce.json";
+import baConfigs from "./configs/ba.json";
+import peConfigs from "./configs/pe.json";
+import piConfigs from "./configs/pi.json";
+import maConfigs from "./configs/ma.json";
+import rnConfigs from "./configs/rn.json";
+import dfConfigs from "./configs/df.json";
+import pbConfigs from "./configs/pb.json";
+import alConfigs from "./configs/al.json";
+import seConfigs from "./configs/se.json";
+import apConfigs from "./configs/ap.json";
+import rrConfigs from "./configs/rr.json";
 
 /**
  * Registry of all state configuration files
  * Add new state imports here and include them in the STATE_CONFIGS object
  */
 const STATE_CONFIGS = {
-  'SP': spConfigs,
-  'MG': mgConfigs,
-  'ES': esConfigs,
-  'RJ': rjConfigs,
-  'CE': ceConfigs,
-  'BA': baConfigs,
-  'PE': peConfigs,
-  'PI': piConfigs,
+  SP: spConfigs,
+  MG: mgConfigs,
+  ES: esConfigs,
+  RJ: rjConfigs,
+  CE: ceConfigs,
+  BA: baConfigs,
+  PE: peConfigs,
+  PI: piConfigs,
+  MA: maConfigs,
+  RN: rnConfigs,
+  DF: dfConfigs,
+  PB: pbConfigs,
+  AL: alConfigs,
+  SE: seConfigs,
+  AP: apConfigs,
+  RR: rrConfigs,
   // Add more states here as needed:
   // etc.
 } as const;
@@ -48,39 +64,49 @@ export class SpiderRegistryV2 {
   private loadTerritoryConfigs(): void {
     const allConfigs: TerritoryConfigV2[] = [];
     let loadedStatesCount = 0;
-    
+
     // Process each state configuration
     for (const [stateCode, stateConfigs] of Object.entries(STATE_CONFIGS)) {
       try {
         // Process each territory config in the state file
         for (const territoryConfig of stateConfigs as TerritoryConfigV2[]) {
           // Ensure the territory config has the correct state prefix
-          if (!territoryConfig.id.startsWith(stateCode.toLowerCase() + '_')) {
-            logger.warn(`Territory config ${territoryConfig.id} in ${stateCode} doesn't follow expected naming convention (${stateCode.toLowerCase()}_*)`);
+          if (!territoryConfig.id.startsWith(stateCode.toLowerCase() + "_")) {
+            logger.warn(
+              `Territory config ${territoryConfig.id} in ${stateCode} doesn't follow expected naming convention (${stateCode.toLowerCase()}_*)`,
+            );
           }
-          
+
           // Add stateCode property if not present
           const configWithState = {
             ...territoryConfig,
-            stateCode: territoryConfig.stateCode || stateCode
+            stateCode: territoryConfig.stateCode || stateCode,
           };
-          
+
           allConfigs.push(configWithState);
         }
-        
-        logger.info(`Loaded ${stateConfigs.length} territory configurations from ${stateCode} state`);
+
+        logger.info(
+          `Loaded ${stateConfigs.length} territory configurations from ${stateCode} state`,
+        );
         loadedStatesCount++;
       } catch (error) {
-        logger.error(`Failed to load config for state ${stateCode}:`, error as Error);
+        logger.error(
+          `Failed to load config for state ${stateCode}:`,
+          error as Error,
+        );
       }
     }
-    
+
     // Process all loaded configurations
     for (const territoryConfig of allConfigs) {
       // Store territory config
       this.territoryConfigs.set(territoryConfig.id, territoryConfig);
-      this.territoryIdToConfigId.set(territoryConfig.territoryId, territoryConfig.id);
-      
+      this.territoryIdToConfigId.set(
+        territoryConfig.territoryId,
+        territoryConfig.id,
+      );
+
       // Generate individual spider configs for backward compatibility
       territoryConfig.spiders.forEach((spider, index) => {
         const spiderConfig: SpiderConfig = {
@@ -88,18 +114,20 @@ export class SpiderRegistryV2 {
           name: `${territoryConfig.name} - ${spider.spiderType.toUpperCase()}`,
           territoryId: territoryConfig.territoryId,
           spiderType: spider.spiderType,
-          gazetteScope: spider.gazetteScope || 'city',
+          gazetteScope: spider.gazetteScope || "city",
           active: territoryConfig.active && spider.active,
           aliases: spider.aliases,
           startDate: spider.startDate,
-          config: spider.config
+          config: spider.config,
         };
-        
+
         this.spiderConfigs.set(spiderConfig.id, spiderConfig);
       });
     }
 
-    logger.info(`Loaded ${allConfigs.length} territory configurations from ${loadedStatesCount} states with ${this.spiderConfigs.size} individual spider configs`);
+    logger.info(
+      `Loaded ${allConfigs.length} territory configurations from ${loadedStatesCount} states with ${this.spiderConfigs.size} individual spider configs`,
+    );
   }
 
   /**
@@ -112,7 +140,9 @@ export class SpiderRegistryV2 {
   /**
    * Get territory configuration by IBGE territory ID
    */
-  getTerritoryConfigByTerritoryId(territoryId: string): TerritoryConfigV2 | undefined {
+  getTerritoryConfigByTerritoryId(
+    territoryId: string,
+  ): TerritoryConfigV2 | undefined {
     const configId = this.territoryIdToConfigId.get(territoryId);
     return configId ? this.territoryConfigs.get(configId) : undefined;
   }
@@ -128,7 +158,7 @@ export class SpiderRegistryV2 {
    * Get all active territory configurations
    */
   getActiveTerritoryConfigs(): TerritoryConfigV2[] {
-    return this.getAllTerritoryConfigs().filter(config => config.active);
+    return this.getAllTerritoryConfigs().filter((config) => config.active);
   }
 
   /**
@@ -150,7 +180,7 @@ export class SpiderRegistryV2 {
    */
   getSpidersForTerritory(territoryId: string): SpiderConfig[] {
     return Array.from(this.spiderConfigs.values()).filter(
-      config => config.territoryId === territoryId
+      (config) => config.territoryId === territoryId,
     );
   }
 
@@ -164,12 +194,16 @@ export class SpiderRegistryV2 {
     }
 
     return this.getSpidersForTerritory(territoryId)
-      .filter(config => config.active)
+      .filter((config) => config.active)
       .sort((a, b) => {
         // Get priority from territory config
-        const spiderA = territoryConfig.spiders.find(s => s.spiderType === a.spiderType);
-        const spiderB = territoryConfig.spiders.find(s => s.spiderType === b.spiderType);
-        
+        const spiderA = territoryConfig.spiders.find(
+          (s) => s.spiderType === a.spiderType,
+        );
+        const spiderB = territoryConfig.spiders.find(
+          (s) => s.spiderType === b.spiderType,
+        );
+
         return (spiderA?.priority || 999) - (spiderB?.priority || 999);
       });
   }
@@ -179,7 +213,7 @@ export class SpiderRegistryV2 {
    */
   getSpiderConfigsByType(spiderType: SpiderType): SpiderConfig[] {
     return Array.from(this.spiderConfigs.values()).filter(
-      config => config.spiderType === spiderType
+      (config) => config.spiderType === spiderType,
     );
   }
 
@@ -203,8 +237,10 @@ export class SpiderRegistryV2 {
   getSpiderPriority(territoryId: string, spiderType: SpiderType): number {
     const territoryConfig = this.getTerritoryConfigByTerritoryId(territoryId);
     if (!territoryConfig) return 999;
-    
-    const spider = territoryConfig.spiders.find(s => s.spiderType === spiderType);
+
+    const spider = territoryConfig.spiders.find(
+      (s) => s.spiderType === spiderType,
+    );
     return spider?.priority || 999;
   }
 
@@ -227,7 +263,7 @@ export class SpiderRegistryV2 {
    */
   getTerritoriesByState(stateCode: string): TerritoryConfigV2[] {
     return this.getAllTerritoryConfigs().filter(
-      config => config.stateCode?.toUpperCase() === stateCode.toUpperCase()
+      (config) => config.stateCode?.toUpperCase() === stateCode.toUpperCase(),
     );
   }
 
@@ -236,7 +272,7 @@ export class SpiderRegistryV2 {
    */
   getAvailableStates(): string[] {
     const states = new Set<string>();
-    this.getAllTerritoryConfigs().forEach(config => {
+    this.getAllTerritoryConfigs().forEach((config) => {
       if (config.stateCode) {
         states.add(config.stateCode.toUpperCase());
       }
@@ -248,9 +284,9 @@ export class SpiderRegistryV2 {
    * Get territory configurations by state code prefix in ID
    */
   getTerritoriesByStatePrefix(statePrefix: string): TerritoryConfigV2[] {
-    const prefix = statePrefix.toLowerCase() + '_';
-    return this.getAllTerritoryConfigs().filter(
-      config => config.id.startsWith(prefix)
+    const prefix = statePrefix.toLowerCase() + "_";
+    return this.getAllTerritoryConfigs().filter((config) =>
+      config.id.startsWith(prefix),
     );
   }
 
