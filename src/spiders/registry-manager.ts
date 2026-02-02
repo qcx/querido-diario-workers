@@ -61,6 +61,7 @@ import {
   PrefeituraNovaOdessaSpider,
   PrefeituraMogiDasCruzesSpider,
   PrefeituraSaoJoaoDaBoaVistaSpider,
+  PrefeituraBoaVistaSpider,
   PrefeituraBatataisSpider,
   PrefeituraCajamarSpider,
   PrefeituraCosmopolisSpider,
@@ -329,6 +330,12 @@ import { EasywebPortalSpider } from "./base/easywebportal-spider";
 import { PrefeituramacapaSpider } from "./base/prefeituramacapa-spider";
 import { PrefeiturasantanaapSpider } from "./base/prefeiturasantanaap-spider";
 import { PrefeituralaranjaldojariSpider } from "./base/prefeituralaranjaldojari-spider";
+import { DiagramacaoSpider } from "./base/diagramacao-spider";
+import { PrefeiturapalmastSpider } from "./base/prefeiturapalmas-spider";
+import { PrefeituragurupiSpider } from "./base/prefeituragurupi-spider";
+import { NucleogovSpider } from "./base/nucleogov-spider";
+import { PrefeituraaraguainaSpider } from "./base/prefeituraaraguaina-spider";
+import { PrefeituraportonacionalSpider } from "./base/prefeituraportonacional-spider";
 import { PrefeituraQueimadasPBSpider } from "./base/prefeituraqueimadaspb-spider";
 import { PrefeiturapedrasdefogoSpider } from "./base/prefeiturapedrasdefogo-spider";
 import { PrefeiturasaobentopbSpider } from "./base/prefeiturasaobentopb-spider";
@@ -345,6 +352,7 @@ import { PrefeituraMacaibaSpider } from "./base/prefeituramacaiba-spider";
 import { PrefeituraParnamirimSpider } from "./base/prefeituraparnamirim-spider";
 import { PrefeituraAssuSpider } from "./base/prefeituraassu-spider";
 import { PrefeituramacaurnSpider } from "./base/prefeituramacaurn-spider";
+import { PrefeituraVilhenaSpider } from "./base/prefeituravilhena-spider";
 import { PrefeiturasantainesSpider } from "./base/prefeiturasantaines-spider";
 import { PrefeiturapinheiroSpider } from "./base/prefeiturapinheiro-spider";
 import { PrefeiturabarradocordaSpider } from "./base/prefeiturabarradocorda-spider";
@@ -815,7 +823,11 @@ export class SpiderRegistryManager {
         return new RondoniaSpider(config, dateRange);
 
       case "acre":
-        return new AcreSpider(config, dateRange);
+        const acreSpider = new AcreSpider(config, dateRange);
+        if (browser) {
+          acreSpider.setBrowser(browser);
+        }
+        return acreSpider;
 
       case "dodf":
         return new DODFSpider(config, dateRange);
@@ -887,6 +899,9 @@ export class SpiderRegistryManager {
           saoJoaoSpider.setBrowser(browser);
         }
         return saoJoaoSpider;
+
+      case "prefeituraboavista":
+        return new PrefeituraBoaVistaSpider(config, dateRange);
 
       case "prefeiturabatais":
         return new PrefeituraBatataisSpider(config, dateRange);
@@ -2085,6 +2100,9 @@ export class SpiderRegistryManager {
       case "prefeituramacaurn":
         return new PrefeituramacaurnSpider(config, dateRange);
 
+      case "prefeituravilhena":
+        return new PrefeituraVilhenaSpider(config, dateRange);
+
       case "prefeiturasantaines":
         return new PrefeiturasantainesSpider(config, dateRange);
 
@@ -2247,6 +2265,24 @@ export class SpiderRegistryManager {
 
       case "prefeituralaranjaldojari":
         return new PrefeituralaranjaldojariSpider(config, dateRange);
+
+      case "diagramacao":
+        return new DiagramacaoSpider(config, dateRange);
+
+      case "prefeiturapalmas":
+        return new PrefeiturapalmastSpider(config, dateRange);
+
+      case "prefeituragurupi":
+        return new PrefeituragurupiSpider(config, dateRange);
+
+      case "nucleogov":
+        return new NucleogovSpider(config, dateRange);
+
+      case "prefeituraaraguaina":
+        return new PrefeituraaraguainaSpider(config, dateRange);
+
+      case "prefeituraportonacional":
+        return new PrefeituraportonacionalSpider(config, dateRange);
 
       default:
         throw new Error(`Unknown spider type: ${config.spiderType}`);

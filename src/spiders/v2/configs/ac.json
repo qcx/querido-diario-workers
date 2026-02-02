@@ -1,0 +1,128 @@
+[
+  {
+    "id": "ac_rio_branco",
+    "name": "Rio Branco - AC",
+    "territoryId": "1200401",
+    "stateCode": "AC",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "acre",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "acre",
+          "cityName": "Rio Branco",
+          "power": "executive_legislative",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ac_cruzeiro_do_sul",
+    "name": "Cruzeiro do Sul - AC",
+    "territoryId": "1200203",
+    "stateCode": "AC",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "acre",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "acre",
+          "cityName": "Cruzeiro do Sul",
+          "power": "executive_legislative",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ac_tarauaca",
+    "name": "Tarauacá - AC",
+    "territoryId": "1200609",
+    "stateCode": "AC",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "acre",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "acre",
+          "cityName": "Tarauacá",
+          "power": "executive_legislative",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ac_sena_madureira",
+    "name": "Sena Madureira - AC",
+    "territoryId": "1200500",
+    "stateCode": "AC",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "acre",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "acre",
+          "cityName": "Sena Madureira",
+          "power": "executive_legislative",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ac_feijo",
+    "name": "Feijó - AC",
+    "territoryId": "1200302",
+    "stateCode": "AC",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "acre",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "acre",
+          "cityName": "Feijó",
+          "power": "executive_legislative",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ac_brasileia",
+    "name": "Brasiléia - AC",
+    "territoryId": "1200104",
+    "stateCode": "AC",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "acre",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "acre",
+          "cityName": "Brasiléia",
+          "power": "executive_legislative",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  }
+]

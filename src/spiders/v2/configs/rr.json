@@ -7,16 +7,17 @@
     "active": true,
     "spiders": [
       {
-        "spiderType": "prefeiturasaojoaodaboavista",
+        "spiderType": "prefeituraboavista",
         "priority": 1,
         "active": true,
         "gazetteScope": "city",
         "config": {
-          "type": "prefeiturasaojoaodaboavista",
-          "baseUrl": "https://publicacoes.boavista.rr.gov.br/diarios/"
+          "type": "prefeituraboavista",
+          "baseUrl": "https://publicacoes.boavista.rr.gov.br"
         }
       }
-    ]
+    ],
+    "notes": "Capital de Roraima. Portal de publicações com API JSON em /api/v1/diarios. PDFs disponíveis em /ler/diario/{edicao}."
   },
   {
     "id": "rr_rorainopolis",

@@ -19,6 +19,9 @@ import alConfigs from "./configs/al.json";
 import seConfigs from "./configs/se.json";
 import apConfigs from "./configs/ap.json";
 import rrConfigs from "./configs/rr.json";
+import toConfigs from "./configs/to.json";
+import acConfigs from "./configs/ac.json";
+import roConfigs from "./configs/ro.json";
 
 /**
  * Registry of all state configuration files
@@ -41,6 +44,9 @@ const STATE_CONFIGS = {
   SE: seConfigs,
   AP: apConfigs,
   RR: rrConfigs,
+  AC: acConfigs,
+  TO: toConfigs,
+  RO: roConfigs,
   // Add more states here as needed:
   // etc.
 } as const;
