@@ -1,4 +1,5 @@
 import puppeteer from '@cloudflare/puppeteer';
+import type { Fetcher } from '@cloudflare/workers-types';
 import { BaseSpider } from './base-spider';
 import { Gazette } from '../../types/gazette';
 import { SpiderConfig, DateRange } from '../../types';
@@ -61,24 +62,24 @@ export class PrefeituracuritibaSpider extends BaseSpider {
         await page.goto(this.baseUrl, { waitUntil: 'networkidle0', timeout: 30000 });
         await new Promise((r) => setTimeout(r, 1500));
 
-        // Select year and month
-        await page.select('select[id*="ddlAno"]', year.toString());
-        await page.select('select[id*="ddlMes"]', month.toString());
-        await new Promise((r) => setTimeout(r, 500));
+        // Select year using the correct selector: ddlGrAno
+        await page.select('select[id*="ddlGrAno"], select[name*="ddlGrAno"]', year.toString());
+        await new Promise((r) => setTimeout(r, 800));
 
-        // Click Pesquisar
-        await page.evaluate(() => {
-          const btn = document.querySelector('input[id*="btnPesquisar"], button[id*="btnPesquisar"]') as HTMLElement;
-          if (btn) btn.click();
-        });
+        // Click the month tab (months are tabs, not dropdown; 0=Jan, 1=Feb, etc.)
+        const monthIndex = month - 1;
+        await page.evaluate((idx: number) => {
+          const tabs = document.querySelectorAll('[id*="__tab_ctl00_cphMasterPrincipal_TabContainer1_tabPanel_"]');
+          if (tabs[idx]) (tabs[idx] as HTMLElement).click();
+        }, monthIndex);
         await new Promise((r) => setTimeout(r, 2500));
 
         const rows = await page.evaluate((): CuritibaRow[] => {
           const result: CuritibaRow[] = [];
-          const trs = document.querySelectorAll('table[id*="gdvGrid"] tr');
+          const trs = document.querySelectorAll('table[id*="gdvGrid2"] tr.grid_Row, table[id*="gdvGrid"] tr');
           trs.forEach((tr) => {
             const tds = tr.querySelectorAll('td');
-            if (tds.length < 2) return;
+            if (tds.length < 3) return;
             const editionNumber = (tds[0].textContent || '').trim();
             const dateStr = (tds[1].textContent || '').trim();
             if (!/^\d{2}\/\d{2}\/\d{4}$/.test(dateStr)) return;
@@ -229,9 +230,9 @@ export class PrefeituracuritibaSpider extends BaseSpider {
         formData.append('__VIEWSTATE', viewStateMatch[1]);
         formData.append('__EVENTVALIDATION', eventValidationMatch[1]);
         if (viewStateGeneratorMatch) formData.append('__VIEWSTATEGENERATOR', viewStateGeneratorMatch[1]);
-        formData.append('ctl00$cphMasterPrincipal$ddlAno', year.toString());
-        formData.append('ctl00$cphMasterPrincipal$ddlMes', month.toString());
-        formData.append('ctl00$cphMasterPrincipal$btnPesquisar', 'Pesquisar');
+        formData.append('ctl00$cphMasterPrincipal$ddlGrAno', year.toString());
+        formData.append('ctl00$cphMasterPrincipal$TabContainer1_ClientState', `activeTabIndex:${month - 1}`);
+        formData.append('ctl00$cphMasterPrincipal$TabContainer1', `ctl00$cphMasterPrincipal$TabContainer1$tabPanel_${this.getMonthName(month)}`);
 
         const searchResponse = await fetch(this.baseUrl, {
           method: 'POST',
@@ -254,7 +255,7 @@ export class PrefeituracuritibaSpider extends BaseSpider {
         const searchViewStateGeneratorMatch = searchHtml.match(/id="__VIEWSTATEGENERATOR"\s+value="([^"]*)"/);
 
         const rowRegex =
-          /<tr[^>]*>[\s\S]*?<td[^>]*>([^<]*)<\/td>[\s\S]*?<td[^>]*>(\d{2}\/\d{2}\/\d{4})<\/td>[\s\S]*?__doPostBack\s*\(\s*(?:&#39;|')([^'&]+)(?:&#39;|')/g;
+          /<tr[^>]*class="grid_Row"[^>]*>[\s\S]*?<td[^>]*>([^<]*)<\/td>[\s\S]*?<td[^>]*>(\d{2}\/\d{2}\/\d{4})<\/td>[\s\S]*?__doPostBack\s*\(\s*(?:&#39;|')([^'&]+)(?:&#39;|')/g;
         const rows: Array<{ editionNumber: string; dateStr: string; eventTarget: string }> = [];
         let match;
         while ((match = rowRegex.exec(searchHtml)) !== null) {
@@ -320,6 +321,12 @@ export class PrefeituracuritibaSpider extends BaseSpider {
       logger.error(`Error crawling Curitiba: ${error}`);
     }
     return gazettes;
+  }
+
+  private getMonthName(monthNum: number): string {
+    const months = ['Janeiro', 'Fevereiro', 'Marco', 'Abril', 'Maio', 'Junho', 
+                   'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    return months[monthNum - 1] || 'Janeiro';
   }
 
   private async getGazetteUrlFromPostback(
