@@ -211,5 +211,621 @@
         }
       }
     ]
+  },
+  {
+    "id": "rs_rio_grande",
+    "name": "Rio Grande - RS",
+    "territoryId": "4315602",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Rio Grande"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_alvorada",
+    "name": "Alvorada - RS",
+    "territoryId": "4300604",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Alvorada"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_santa_cruz_do_sul",
+    "name": "Santa Cruz do Sul - RS",
+    "territoryId": "4316808",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Santa Cruz do Sul"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_sapucaia_do_sul",
+    "name": "Sapucaia do Sul - RS",
+    "territoryId": "4320008",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Sapucaia do Sul"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_erechim",
+    "name": "Erechim - RS",
+    "territoryId": "4307005",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Erechim"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_guaiba",
+    "name": "Guaíba - RS",
+    "territoryId": "4309308",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Guaíba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_santana_do_livramento",
+    "name": "Santana do Livramento - RS",
+    "territoryId": "4317103",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Santana do Livramento"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_santo_angelo",
+    "name": "Santo Ângelo - RS",
+    "territoryId": "4317509",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Santo Ângelo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_esteio",
+    "name": "Esteio - RS",
+    "territoryId": "4307708",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Esteio"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_alegrete",
+    "name": "Alegrete - RS",
+    "territoryId": "4300406",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Alegrete"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_venancio_aires",
+    "name": "Venâncio Aires - RS",
+    "territoryId": "4322608",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Venâncio Aires"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_vacaria",
+    "name": "Vacaria - RS",
+    "territoryId": "4322509",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Vacaria"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_capao_da_canoa",
+    "name": "Capão da Canoa - RS",
+    "territoryId": "4304630",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Capão da Canoa"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_campo_bom",
+    "name": "Campo Bom - RS",
+    "territoryId": "4303905",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Campo Bom"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_sao_gabriel",
+    "name": "São Gabriel - RS",
+    "territoryId": "4318309",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "São Gabriel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_tramandai",
+    "name": "Tramandaí - RS",
+    "territoryId": "4321600",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Tramandaí"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_taquara",
+    "name": "Taquara - RS",
+    "territoryId": "4321204",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Taquara"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_parobe",
+    "name": "Parobé - RS",
+    "territoryId": "4314050",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Parobé"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_santiago",
+    "name": "Santiago - RS",
+    "territoryId": "4317400",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Santiago"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_osorio",
+    "name": "Osório - RS",
+    "territoryId": "4313508",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Osório"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_santo_antonio_da_patrulha",
+    "name": "Santo Antônio da Patrulha - RS",
+    "territoryId": "4317608",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Santo Antônio da Patrulha"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_eldorado_do_sul",
+    "name": "Eldorado do Sul - RS",
+    "territoryId": "4306767",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Eldorado do Sul"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_itaqui",
+    "name": "Itaqui - RS",
+    "territoryId": "4310603",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Itaqui"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_flores_da_cunha",
+    "name": "Flores da Cunha - RS",
+    "territoryId": "4308201",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Flores da Cunha"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_dois_irmaos",
+    "name": "Dois Irmãos - RS",
+    "territoryId": "4306403",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Dois Irmãos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_triunfo",
+    "name": "Triunfo - RS",
+    "territoryId": "4322004",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Triunfo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_imbe",
+    "name": "Imbé - RS",
+    "territoryId": "4310330",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Imbé"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_capao_do_leao",
+    "name": "Capão do Leão - RS",
+    "territoryId": "4304663",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Capão do Leão"
+        }
+      }
+    ]
   }
 ]
