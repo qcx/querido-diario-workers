@@ -6,6 +6,7 @@ import {
 } from "../../types/spider-config";
 import { DateRange } from "../../types";
 import { logger } from "../../utils/logger";
+import type { Fetcher } from "@cloudflare/workers-types";
 
 /**
  * Spider for Maringá - PR Diário Oficial.
@@ -19,6 +20,7 @@ import { logger } from "../../utils/logger";
 export class PrefeituramaringaSpider extends BaseSpider {
   private baseUrl: string;
   private listBaseUrl: string;
+  private browser: Fetcher | null = null;
 
   private static readonly MONTH_MAP: Record<string, string> = {
     janeiro: "01",
@@ -36,13 +38,17 @@ export class PrefeituramaringaSpider extends BaseSpider {
     dezembro: "12",
   };
 
-  constructor(config: SpiderConfig, dateRange: DateRange) {
+  constructor(config: SpiderConfig, dateRange: DateRange, browser?: Fetcher) {
     super(config, dateRange);
     const platformConfig = config.config as PrefeituramaringaConfig;
     const urlObj = new URL(platformConfig.baseUrl);
     this.baseUrl = platformConfig.baseUrl;
-    // List page base: origin + pathname (no query) so we can build ?pagina=dop and pagination
     this.listBaseUrl = `${urlObj.origin}${urlObj.pathname}`.replace(/\/$/, "");
+    this.browser = browser ?? null;
+  }
+
+  setBrowser(browser: Fetcher): void {
+    this.browser = browser;
   }
 
   private parseDate(rawDate: string): string | null {
@@ -64,13 +70,18 @@ export class PrefeituramaringaSpider extends BaseSpider {
   }
 
   private buildListUrl(page: number): string {
+    const separator = this.listBaseUrl.includes("?") ? "&" : "?";
     if (page === 1) {
-      return `${this.listBaseUrl}?pagina=dop`;
+      return `${this.listBaseUrl}${separator}pagina=dop`;
     }
-    return `${this.listBaseUrl}?pagina=dop&pagina=${page}`;
+    return `${this.listBaseUrl}${separator}pagina=dop&page=${page}`;
   }
 
   async crawl(): Promise<Gazette[]> {
+    return this.crawlWithFetch();
+  }
+
+  private async crawlWithFetch(): Promise<Gazette[]> {
     const gazettes: Gazette[] = [];
     logger.info(`Crawling Maringá (prefeituramaringa) for ${this.config.name}...`);
 
@@ -83,15 +94,42 @@ export class PrefeituramaringaSpider extends BaseSpider {
         const url = this.buildListUrl(currentPage);
         logger.debug(`Fetching page ${currentPage}: ${url}`);
 
-        const response = await fetch(url, {
-          headers: {
-            "User-Agent":
-              "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            Accept:
-              "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
-          },
-        });
+        let response;
+        let lastError;
+        let retries = 0;
+        const maxRetries = 3;
+
+        while (retries < maxRetries) {
+          try {
+            response = await fetch(url, {
+              headers: {
+                "User-Agent":
+                  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                Accept:
+                  "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+              },
+            });
+            break;
+          } catch (error) {
+            lastError = error;
+            retries++;
+            if (retries < maxRetries) {
+              logger.debug(
+                `Retry ${retries}/${maxRetries} for page ${currentPage}, waiting 1000ms...`
+              );
+              await new Promise((resolve) => setTimeout(resolve, 1000));
+            }
+          }
+        }
+
+        if (!response) {
+          logger.debug(
+            `Failed to fetch page ${currentPage} after ${maxRetries} retries. Website may not be accessible via HTTP requests.`
+          );
+          break;
+        }
+
         if (!response.ok) {
           logger.warn(`Failed to fetch page ${currentPage}: ${response.status}`);
           break;
@@ -189,7 +227,6 @@ export class PrefeituramaringaSpider extends BaseSpider {
       );
     } catch (error) {
       logger.error(`Error crawling prefeituramaringa: ${error}`);
-      throw error;
     }
 
     return gazettes;

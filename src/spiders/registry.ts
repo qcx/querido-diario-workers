@@ -25,6 +25,7 @@ import {
   AcreSpider,
   EspiritoSantoSpider,
   DODFSpider,
+  DomeletronicSpider,
   DomunicipalSpider,
   ImprensaOficialJundiaiSpider,
   PrefeituraRioPretoSpider,
@@ -47,6 +48,7 @@ import {
   EatosSpider,
   PrefeituraPiracicabaSpider,
   PrefeituraBauruSpider,
+  PrefeiturabentogoncalvesSpider,
   DiarioMunicipioSJCSpider,
   GazetaMunicipalSpider,
   DiarioOficialGuarantadonorteSpider,
@@ -800,6 +802,9 @@ class SpiderRegistry {
       case "dodf":
         return new DODFSpider(config, dateRange);
 
+      case "domeletronico":
+        return new DomeletronicSpider(config, dateRange);
+
       case "espirito_santo":
         return new EspiritoSantoSpider(config, dateRange);
 
@@ -941,6 +946,9 @@ class SpiderRegistry {
           bauruSpider.setBrowser(browser);
         }
         return bauruSpider;
+
+      case "prefeiturabentogoncalves":
+        return new PrefeiturabentogoncalvesSpider(config, dateRange);
 
       case "diariomunicipiosjc":
         return new DiarioMunicipioSJCSpider(config, dateRange);
@@ -2176,7 +2184,11 @@ class SpiderRegistry {
         return new PrefeiturapontagrossaSpider(config, dateRange);
 
       case "prefeituramaringa":
-        return new PrefeituramaringaSpider(config, dateRange);
+        const maringaSpider = new PrefeituramaringaSpider(config, dateRange, browser);
+        if (browser) {
+          maringaSpider.setBrowser(browser);
+        }
+        return maringaSpider;
 
       case "prefeituracascavel":
         return new PrefeituracascavelSpider(config, dateRange);

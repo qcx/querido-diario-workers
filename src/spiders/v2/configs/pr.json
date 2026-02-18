@@ -51,7 +51,7 @@
         "gazetteScope": "city",
         "config": {
           "type": "prefeituramaringa",
-          "baseUrl": "https://pr.portaldatransparencia.com.br/prefeitura/maringa/?pagina=dop"
+          "baseUrl": "https://pr.portaldatransparencia.com.br/prefeitura/maringa"
         }
       }
     ]
