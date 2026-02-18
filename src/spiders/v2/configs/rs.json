@@ -5,7 +5,7 @@
     "territoryId": "4314902",
     "stateCode": "RS",
     "active": true,
-    "notes": "DOPA em www2.portoalegre.rs.gov.br/dopa/. Busca por data, protocolo ou palavra-chave.",
+    "notes": "DOPA em dopa.portoalegre.rs.gov.br. Angular SPA que requer renderização. Busca por data, protocolo ou palavra-chave.",
     "spiders": [
       {
         "spiderType": "prefeituraportoalegre",

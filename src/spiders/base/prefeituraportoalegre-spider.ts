@@ -5,9 +5,12 @@ import { logger } from "../../utils/logger";
 /**
  * Spider for Prefeitura de Porto Alegre - RS (DOPA)
  *
- * Site: www2.portoalegre.rs.gov.br/dopa/
- * Diário Oficial de Porto Alegre - busca por data, protocolo ou palavra-chave.
- * Usa estrutura compatível com Instar para extração.
+ * Site: dopa.portoalegre.rs.gov.br
+ * Diário Oficial de Porto Alegre - Angular SPA application.
+ * 
+ * This spider requires browser rendering due to the Angular-based frontend.
+ * When browser is available, it will render and extract gazette data.
+ * Configuration: requiresClientRendering=true
  */
 export class PrefeituraportoalegreSpider extends InstarSpider {
   constructor(spiderConfig: SpiderConfig, dateRange: DateRange, browser?: any) {
@@ -21,7 +24,7 @@ export class PrefeituraportoalegreSpider extends InstarSpider {
       },
     };
     super(instarConfig, dateRange, browser);
-    logger.info(`Initializing PrefeituraportoalegreSpider (via Instar) for ${spiderConfig.name}`);
+    logger.info(`Initializing PrefeituraportoalegreSpider (via Instar) for ${spiderConfig.name} with browser rendering required`);
   }
 
   async crawl(): Promise<Gazette[]> {
