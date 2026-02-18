@@ -1,3 +1,5 @@
+import puppeteer from "@cloudflare/puppeteer";
+import type { Fetcher } from "@cloudflare/workers-types";
 import { BaseSpider } from "./base-spider";
 import { Gazette } from "../../types/gazette";
 import {
@@ -6,7 +8,6 @@ import {
 } from "../../types/spider-config";
 import { DateRange } from "../../types";
 import { logger } from "../../utils/logger";
-import type { Fetcher } from "@cloudflare/workers-types";
 
 /**
  * Spider for Maringá - PR Diário Oficial.
@@ -16,6 +17,9 @@ import type { Fetcher } from "@cloudflare/workers-types";
  * - Blocks: div.edicoes
  * - Date: div.data-caderno (e.g. "6/Janeiro/2026")
  * - PDF: button/link with pagina=abreDocumento&arquivo=...
+ *
+ * Uses browser automation (Puppeteer) for more reliable extraction since the portal
+ * has protective measures against simple HTTP requests.
  */
 export class PrefeituramaringaSpider extends BaseSpider {
   private baseUrl: string;
@@ -78,12 +82,145 @@ export class PrefeituramaringaSpider extends BaseSpider {
   }
 
   async crawl(): Promise<Gazette[]> {
+    if (this.browser) {
+      return this.crawlWithBrowser();
+    }
     return this.crawlWithFetch();
+  }
+
+  private async crawlWithBrowser(): Promise<Gazette[]> {
+    const gazettes: Gazette[] = [];
+    let browserInstance: any = null;
+    let page: any = null;
+
+    try {
+      logger.info(
+        `Crawling Maringá (prefeituramaringa) with browser for ${this.config.name}...`
+      );
+
+      browserInstance = await puppeteer.launch(this.browser!);
+      page = await browserInstance.newPage();
+
+      let currentPage = 1;
+      let hasNextPage = true;
+
+      while (hasNextPage) {
+        const url = this.buildListUrl(currentPage);
+        logger.debug(`Fetching page ${currentPage} with browser: ${url}`);
+
+        await page.goto(url, {
+          waitUntil: "networkidle0",
+          timeout: 30000,
+        });
+
+        const html = await page.content();
+        const gazetteBlocks = html.split(/<div[^>]*class="edicoes"[^>]*>/);
+        let foundGazettes = 0;
+        let foundOlderThanRange = false;
+        const baseUrlObj = new URL(this.listBaseUrl);
+
+        for (let i = 1; i < gazetteBlocks.length; i++) {
+          const gazetteHtml = gazetteBlocks[i];
+          const dateMatch = gazetteHtml.match(
+            /class="data-caderno[^"]*"[^>]*>([^<]+)</
+          );
+          if (!dateMatch) continue;
+
+          const rawDate = dateMatch[1].trim();
+          const date = this.parseDate(rawDate);
+          if (!date) continue;
+
+          if (date > this.dateRange.end) continue;
+          if (date < this.dateRange.start) {
+            foundOlderThanRange = true;
+            continue;
+          }
+
+          const editionMatch = gazetteHtml.match(/Edição\s+([\d.]+)/i);
+          const editionNumber = editionMatch
+            ? editionMatch[1].replace(/\./g, "")
+            : undefined;
+
+          let fileUrl: string | null = null;
+          const buttonHrefMatch = gazetteHtml.match(
+            /<button[^>]*href="([^"]+)"/
+          );
+          if (buttonHrefMatch && buttonHrefMatch[1].includes("abreDocumento")) {
+            const queryMatch = buttonHrefMatch[1].match(/\?(.+)/);
+            if (queryMatch) {
+              fileUrl = `${baseUrlObj.origin}${baseUrlObj.pathname}?${queryMatch[1]}`;
+            }
+          }
+          if (!fileUrl) {
+            const onClickMatch = gazetteHtml.match(
+              /onClick="[^"]*\?pagina=abreDocumento&arquivo=([^'"]+)/
+            );
+            if (onClickMatch) {
+              fileUrl = `${baseUrlObj.origin}${baseUrlObj.pathname}?pagina=abreDocumento&arquivo=${onClickMatch[1]}`;
+            }
+          }
+          if (!fileUrl) {
+            const linkMatch = gazetteHtml.match(
+              /<a[^>]*href="([^"]*abreDocumento[^"]*)"/
+            );
+            if (linkMatch) {
+              const href = linkMatch[1];
+              fileUrl = href.startsWith("http")
+                ? href
+                : `${baseUrlObj.origin}${href.startsWith("/") ? "" : baseUrlObj.pathname}${href}`;
+            }
+          }
+
+          if (!fileUrl) continue;
+
+          gazettes.push({
+            date,
+            editionNumber,
+            fileUrl,
+            territoryId: this.config.territoryId,
+            isExtraEdition: false,
+            power: "executive",
+            scrapedAt: new Date().toISOString(),
+          });
+          foundGazettes++;
+        }
+
+        if (foundOlderThanRange) {
+          hasNextPage = false;
+          continue;
+        }
+
+        const nextPageMatch =
+          html.match(/<a[^>]*class="proximo"[^>]*href="([^"]+)"/) ||
+          html.match(/<a[^>]*href="[^"]*\?[^"]*pagina=(\d+)"[^>]*>\s*»\s*<\/a>/);
+        hasNextPage = !!nextPageMatch && foundGazettes > 0;
+
+        if (hasNextPage) {
+          currentPage++;
+          await new Promise((resolve) => setTimeout(resolve, 500));
+        }
+      }
+
+      logger.info(
+        `Successfully crawled ${gazettes.length} gazettes from Maringá (prefeituramaringa) with browser`
+      );
+    } catch (error) {
+      logger.error(`Error crawling prefeituramaringa with browser: ${error}`);
+      logger.debug(`Falling back to fetch method...`);
+      return this.crawlWithFetch();
+    } finally {
+      if (page) await page.close();
+      if (browserInstance) await browserInstance.close();
+    }
+
+    return gazettes;
   }
 
   private async crawlWithFetch(): Promise<Gazette[]> {
     const gazettes: Gazette[] = [];
-    logger.info(`Crawling Maringá (prefeituramaringa) for ${this.config.name}...`);
+    logger.info(
+      `Crawling Maringá (prefeituramaringa) for ${this.config.name}...`
+    );
 
     try {
       let currentPage = 1;
@@ -131,7 +268,9 @@ export class PrefeituramaringaSpider extends BaseSpider {
         }
 
         if (!response.ok) {
-          logger.warn(`Failed to fetch page ${currentPage}: ${response.status}`);
+          logger.warn(
+            `Failed to fetch page ${currentPage}: ${response.status}`
+          );
           break;
         }
 
