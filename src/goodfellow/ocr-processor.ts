@@ -167,26 +167,69 @@ export async function processOcrBatch(
 
     console.log('🟠 OCR Processor Message:', { pdfUrl: ocrMessage.pdfUrl, editionNumber: ocrMessage.editionNumber });
 
+    // Get territoryId - try from message first, then fallback to gazette lookup
+    let territoryId = ocrMessage?.territoryId;
+    if (!territoryId || territoryId.trim() === '') {
+      try {
+        // Try to get territoryId from gazette in database
+        const gazetteResult = await db.select()
+          .from(schema.gazetteRegistry)
+          .where(eq(schema.gazetteRegistry.pdfUrl, ocrMessage.pdfUrl))
+          .limit(1);
+        
+        if (gazetteResult.length > 0) {
+          // Try to get territoryId from gazette_crawls
+          const crawlResult = await db.select()
+            .from(schema.gazetteCrawls)
+            .where(eq(schema.gazetteCrawls.gazetteId, gazetteResult[0].id))
+            .limit(1);
+          
+          if (crawlResult.length > 0) {
+            territoryId = crawlResult[0].territoryId;
+            logger.info('Retrieved territoryId from database', {
+              jobId: ocrMessage.jobId,
+              territoryId,
+              pdfUrl: ocrMessage.pdfUrl
+            });
+          }
+        }
+      } catch (lookupError) {
+        logger.warn('Failed to lookup territoryId from database', lookupError as Error, {
+          jobId: ocrMessage.jobId,
+          pdfUrl: ocrMessage.pdfUrl
+        });
+      }
+    }
+
     try {
       logger.info(`Processing OCR job ${ocrMessage.jobId}`, {
         jobId: ocrMessage.jobId,
         pdfUrl: ocrMessage.pdfUrl,
-        territoryId: ocrMessage.territoryId,
+        territoryId: territoryId || 'NOT_FOUND',
+        originalTerritoryId: ocrMessage.territoryId || 'NOT_IN_MESSAGE',
         crawlJobId,
       });
 
-      // Track OCR start
-      await telemetry.trackCityStep(
-        crawlJobId,
-        ocrMessage.territoryId,
-        ocrMessage.spiderId,
-        'ocr_start',
-        'started',
-        undefined,
-        undefined,
-        undefined,
-        ocrMessage.metadata?.spiderType
-      );
+      // Track OCR start - only if we have a valid territoryId
+      if (territoryId && territoryId.trim() !== '') {
+        await telemetry.trackCityStep(
+          crawlJobId,
+          territoryId,
+          ocrMessage.spiderId || 'unknown',
+          'ocr_start',
+          'started',
+          undefined,
+          undefined,
+          undefined,
+          ocrMessage.metadata?.spiderType
+        );
+      } else {
+        logger.warn('Skipping ocr_start telemetry: territoryId not available', {
+          jobId: ocrMessage.jobId,
+          pdfUrl: ocrMessage.pdfUrl,
+          crawlJobId
+        });
+      }
 
       let result: OcrResult;
       let isReusedResult = false; // Track if result was reused vs freshly processed
@@ -865,18 +908,26 @@ export async function processOcrBatch(
         });
       }
 
-      // Track OCR completion
-      await telemetry.trackCityStep(
-        crawlJobId,
-        ocrMessage.territoryId,
-        ocrMessage.spiderId,
-        'ocr_end',
-        result.status === 'success' ? 'completed' : 'failed',
-        undefined,
-        executionTimeMs,
-        result.error?.message,
-        ocrMessage.metadata?.spiderType
-      );
+      // Track OCR completion - only if we have a valid territoryId
+      if (territoryId && territoryId.trim() !== '') {
+        await telemetry.trackCityStep(
+          crawlJobId,
+          territoryId,
+          ocrMessage.spiderId || 'unknown',
+          'ocr_end',
+          result.status === 'success' ? 'completed' : 'failed',
+          undefined,
+          executionTimeMs,
+          result.error?.message,
+          ocrMessage.metadata?.spiderType
+        );
+      } else {
+        logger.warn('Skipping ocr_end telemetry: territoryId not available', {
+          jobId: ocrMessage.jobId,
+          pdfUrl: ocrMessage.pdfUrl,
+          crawlJobId
+        });
+      }
 
       // Handle failure results (OCR service returns failure, doesn't throw)
       if (result.status === 'failure') {
@@ -984,17 +1035,52 @@ export async function processOcrBatch(
       }
 
       // Track OCR failure
-      await telemetry.trackCityStep(
-        crawlJobId,
-        ocrMessage.territoryId,
-        ocrMessage.spiderId,
-        'ocr_end',
-        'failed',
-        undefined,
-        executionTimeMs,
-        errorMessage,
-        ocrMessage.metadata?.spiderType
-      );
+      // Get territoryId - try from message first, then fallback to gazette lookup
+      let territoryId = ocrMessage?.territoryId;
+      if (!territoryId || territoryId.trim() === '') {
+        try {
+          // Try to get territoryId from gazette in database
+          const gazetteResult = await db.select()
+            .from(schema.gazetteRegistry)
+            .where(eq(schema.gazetteRegistry.pdfUrl, ocrMessage.pdfUrl))
+            .limit(1);
+          
+          if (gazetteResult.length > 0) {
+            // Try to get territoryId from gazette_crawls
+            const crawlResult = await db.select()
+              .from(schema.gazetteCrawls)
+              .where(eq(schema.gazetteCrawls.gazetteId, gazetteResult[0].id))
+              .limit(1);
+            
+            if (crawlResult.length > 0) {
+              territoryId = crawlResult[0].territoryId;
+            }
+          }
+        } catch (lookupError) {
+          logger.warn('Failed to lookup territoryId from database', lookupError as Error);
+        }
+      }
+
+      // Only track telemetry if we have a valid territoryId
+      if (territoryId && territoryId.trim() !== '') {
+        await telemetry.trackCityStep(
+          crawlJobId,
+          territoryId,
+          ocrMessage.spiderId || 'unknown',
+          'ocr_end',
+          'failed',
+          undefined,
+          executionTimeMs,
+          errorMessage,
+          ocrMessage.metadata?.spiderType
+        );
+      } else {
+        logger.warn('Skipping telemetry record: territoryId not available', {
+          jobId: ocrMessage.jobId,
+          pdfUrl: ocrMessage.pdfUrl,
+          crawlJobId
+        });
+      }
 
       // Track the OCR error directly in database
       logger.info('🔥 ABOUT TO INSERT ERROR INTO DATABASE', {

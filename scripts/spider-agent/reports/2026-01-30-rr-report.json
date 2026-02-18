@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-01-30T17:12:00Z",
+  "stateCode": "RR",
+  "configFile": "src/spiders/v2/configs/rr.json",
+  "summary": {
+    "total": 2,
+    "created_new_spider": 0,
+    "used_existing_spider": 1,
+    "skipped_already_exists": 0,
+    "needs_review": 1
+  },
+  "results": [
+    {
+      "cidade": "Boa Vista",
+      "url": "https://publicacoes.boavista.rr.gov.br/diarios/",
+      "status": "used_existing_spider",
+      "spiderType": "prefeiturasaojoaodaboavista",
+      "territoryId": "1400100",
+      "matchedPattern": "Vue.js/Vuetify platform with year/month URL structure",
+      "matchScore": 100,
+      "notes": "Site usa mesma plataforma que São João da Boa Vista - SP. Spider existente funciona perfeitamente.",
+      "testResult": "success",
+      "testDetails": {
+        "crawlJobId": "fe56fa37-e65b-4b9e-9a57-17d946e3ec8f",
+        "gazettesFound": true,
+        "ocrProcessed": true,
+        "analysisCompleted": true,
+        "samplePdfUrl": "https://publicacoes.boavista.rr.gov.br/storage/9218/c8721d6ea9bae27d468ad6580f0f4d07.pdf"
+      },
+      "filesCreated": [
+        "src/spiders/v2/configs/rr.json (created)"
+      ]
+    },
+    {
+      "cidade": "Rorainópolis",
+      "url": "https://rorainopolis.rr.gov.br/",
+      "status": "needs_review",
+      "spiderType": null,
+      "territoryId": "1400472",
+      "reason": "Município não possui diário oficial municipal próprio",
+      "attemptsLog": [
+        "Tentativa 1: Acessar site da prefeitura (rorainopolis.rr.gov.br) - Site funciona mas não tem seção de Diário Oficial",
+        "Tentativa 2: Verificar link 'Diário Oficial' no rodapé - Redireciona para página 404",
+        "Tentativa 3: Buscar URLs alternativas (/diario-oficial, /publicacoes, /editais) - Todas retornam 404",
+        "Tentativa 4: Verificar Diário Oficial do Estado de Roraima (imprensaoficial.rr.gov.br) - Município publica através do DOE RR"
+      ],
+      "analysis": {
+        "impossibleReason": "Município não possui diário oficial municipal próprio. Publica através do Diário Oficial do Estado de Roraima (DOE RR)",
+        "siteStatus": "online mas sem seção de diário oficial",
+        "stateGazetteUrl": "https://www.imprensaoficial.rr.gov.br/app/_visualizar-mes/",
+        "stateGazettePdfPattern": "https://www.imprensaoficial.rr.gov.br/app/_edicoes/{year}/{month}/doe-{yyyymmdd}.pdf",
+        "recommendation": "Criar spider para DOE RR que filtre publicações por município, ou aguardar município criar diário oficial próprio"
+      }
+    }
+  ],
+  "filesModified": [
+    "src/spiders/v2/configs/rr.json (created)",
+    "src/spiders/v2/registry.ts (updated - added RR import)"
+  ],
+  "executionTimeMinutes": 15
+}

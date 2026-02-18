@@ -9,6 +9,15 @@ import {
   ADiariosV1Spider,
   SigpubSpider,
   SigpubSeSpider,
+  SigpubMtSpider,
+  SigpubPaSpider,
+  AgmSpider,
+  GoianesiaSpider,
+  PlanaltinaGoSpider,
+  CristalinaGoSpider,
+  SantoAntonioDescobertoGoSpider,
+  CamaraManausSpider,
+  DomManausSpider,
   BarcoDigitalSpider,
   SiganetSpider,
   DiarioOficialMunicipalSpider,
@@ -39,6 +48,15 @@ import {
   PrefeituraPiracicabaSpider,
   PrefeituraBauruSpider,
   DiarioMunicipioSJCSpider,
+  GazetaMunicipalSpider,
+  DiarioOficialGuarantadonorteSpider,
+  DiarioOficialCaldasnovasSpider,
+  DiarioOficialMSSpider,
+  PrefeituraCampoGrandeSpider,
+  PrefeituraDouradosSpider,
+  PrefeituraPontaPoraSpider,
+  PrefeituraNovaAndradinaSpider,
+  PrefeituraAquidauanaSpider,
   PrefeiturasantoandreSpider,
   PrefeituramauaSpider,
   PrefeituradiademaSpider,
@@ -194,9 +212,20 @@ import {
   PrefeituraRjMiguelPereiraSpider,
   PrefeituraRjPiraiSpider,
 } from "./base";
+import { PrefeituracuritibaSpider } from "./base/prefeituracuritiba-spider";
+import { PrefeituralondrinaSpider } from "./base/prefeituralondrina-spider";
+import { PrefeiturapontagrossaSpider } from "./base/prefeiturapontagrossa-spider";
+import { PrefeituramaringaSpider } from "./base/prefeituramaringa-spider";
+import { PrefeituracascavelSpider } from "./base/prefeituracascavel-spider";
+import { PrefeiturasjpSpider } from "./base/prefeiturasjp-spider";
+import { PrefeiturafozSpider } from "./base/prefeiturafoz-spider";
+import { PrefeituraguarapuavaSpider } from "./base/prefeituraguarapuava-spider";
+import { PrefeituraraucariaSpider } from "./base/prefeituraraucaria-spider";
 import { DiarioOficialBRSpider } from "./base/diario-oficial-br-spider";
 import { ModernizacaoSpider } from "./base/modernizacao-spider";
 import { InstarPortalSpider } from "./base/instar-portal-spider";
+import { DiarioParauapebasPaSpider } from "./base/diario-parauapebas-pa-spider";
+import { DocCastanhalSpider } from "./base/doc-castanhal-spider";
 import { ADiariosV2Spider } from "./base/adiarios-v2-spider";
 import { AplusSpider } from "./base/aplus-spider";
 import { DioenetSpider } from "./base/dioenet-spider";
@@ -241,6 +270,14 @@ import { PrefeiturabarreirinhasSpider } from "./base/prefeiturabarreirinhas-spid
 import { PrefeiturasantaluziamaSpider } from "./base/prefeiturasantaluziama-spider";
 import { PrefeituracaxiasSpider } from "./base/prefeituracaxias-spider";
 import { PrefeiturapacodolumiarSpider } from "./base/prefeiturapacodolumiar-spider";
+import { PrefeituraportoalegreSpider } from "./base/prefeituraportoalegre-spider";
+import { PrefeituracaxiasdosulSpider } from "./base/prefeituracaxiasdosul-spider";
+import { PrefeituracanoasSpider } from "./base/prefeituracanoas-spider";
+import { PrefeiturapelotasSpider } from "./base/prefeiturapelotas-spider";
+import { PrefeiturasantamariaSpider } from "./base/prefeiturasantamaria-spider";
+import { PrefeituranovohamburgoSpider } from "./base/prefeituranovohamburgo-spider";
+import { PrefeiturasaoleopoldoSpider } from "./base/prefeiturasaoleopoldo-spider";
+import { PrefeiturapassofundoSpider } from "./base/prefeiturapassofundo-spider";
 import { PrefeituraTimonSpider } from "./base/prefeituratimon-spider";
 import { PrefeiturabacabalSpider } from "./base/prefeiturabacabal-spider";
 import { PrefeituraJoaoPessoaSpider } from "./base/prefeiturajoaopessoa-spider";
@@ -266,10 +303,31 @@ import { PrefeituragurupiSpider } from "./base/prefeituragurupi-spider";
 import { NucleogovSpider } from "./base/nucleogov-spider";
 import { PrefeituraaraguainaSpider } from "./base/prefeituraaraguaina-spider";
 import { PrefeituraportonacionalSpider } from "./base/prefeituraportonacional-spider";
+import { PrefeiturarondonopolisSpider } from "./base/prefeiturarondonopolis-spider";
+import { PrefeituragoianiaSpider } from "./base/prefeituragoiania-spider";
+import { PrefeituraJataiSpider } from "./base/prefeiturajatai-spider";
+import { PrefeituraprimaveradolesteSpider } from "./base/prefeituraprimaveradoleste-spider";
+import { PrefeituraNovoGamaSpider } from "./base/prefeitura-novogama-spider";
+import { SantaHelenaGoSpider } from "./base/santa-helena-go-spider";
+import { PrefeituraJaraguaSpider } from "./base/prefeiturajaragua-spider";
+import { MorrinhosGoSpider } from "./base/morrinhos-go-spider";
 import { MunicipioOnlineSpider } from "./base/municipio-online-spider";
 import { TresTecnosSpider } from "./base/trestecnos-spider";
 import { AtendeV2Spider } from "./base/atende-v2-spider";
 import { DomScSpider } from "./base/dom-sc-spider";
+import { DomScEdicaoSpider } from "./base/dom-sc-edicao-spider";
+import { PrefeituraAltamiraSpider } from "./base/prefeituraaltamira-spider";
+import { PrefeituraPaPublicacoesSpider } from "./base/prefeitura-pa-publicacoes-spider";
+import { PrefeituraUlianopolisSpider } from "./base/prefeituraulianopolis-spider";
+import { PrefeituraSantanaAraguaiaSpider } from "./base/prefeituasantanaaraguaia-spider";
+import { PrefeituraSaodomingosdocapimSpider } from "./base/prefeitura-saodomingosdocapim-spider";
+import { PortalCr2Spider } from "./base/portalcr2-spider";
+import { PortalCr2CoSpider } from "./base/portalcr2co-spider";
+import { PrefeituraBelemSpider } from "./base/prefeiturabeelem-spider";
+import { PrefeituraAnanindeuaSpider } from "./base/prefeituraananindeua-spider";
+import { PrefeituracametaSpider } from "./base/prefeituracameta-spider";
+import { PrefeituraJoinvilleScSpider } from "./base/prefeitura-joinville-sc-spider";
+import { PrefeituraScSpider } from "./base/prefeitura-sc-spider";
 import { DiarioBaSpider } from "./base/diario-ba-spider";
 import { AmmMtSpider } from "./base/amm-mt-spider";
 import { FamemSpider } from "./base/famem-spider";
@@ -531,6 +589,12 @@ class SpiderRegistry {
         );
         return instarPortalSpider;
 
+      case "diario_parauapebas_pa":
+        return new DiarioParauapebasPaSpider(config, dateRange, browser);
+
+      case "doc_castanhal":
+        return new DocCastanhalSpider(config, dateRange);
+
       case "mentor":
         const mentorSpider = new MentorSpider(config, dateRange, browser);
         return mentorSpider;
@@ -544,8 +608,45 @@ class SpiderRegistry {
       case "sigpub":
         return new SigpubSpider(config, dateRange);
 
+      case "camaramanaus": {
+        const camaramanausSpider = new CamaraManausSpider(config, dateRange);
+        if (browser) {
+          camaramanausSpider.setBrowser(browser);
+        }
+        return camaramanausSpider;
+      }
+
+      case "dommanaus": {
+        const dommanausSpider = new DomManausSpider(config, dateRange);
+        if (browser) {
+          dommanausSpider.setBrowser(browser);
+        }
+        return dommanausSpider;
+      }
+
       case "sigpub_se":
         return new SigpubSeSpider(config, dateRange);
+
+      case "sigpub_mt":
+        return new SigpubMtSpider(config, dateRange);
+
+      case "sigpub_pa":
+        return new SigpubPaSpider(config, dateRange);
+
+      case "agm":
+        return new AgmSpider(config, dateRange);
+
+      case "goianesia":
+        return new GoianesiaSpider(config, dateRange);
+
+      case "planaltina_go":
+        return new PlanaltinaGoSpider(config, dateRange);
+
+      case "cristalina_go":
+        return new CristalinaGoSpider(config, dateRange);
+
+      case "santo_antonio_descoberto_go":
+        return new SantoAntonioDescobertoGoSpider(config, dateRange);
 
       case "barco_digital":
         return new BarcoDigitalSpider(config, dateRange);
@@ -609,6 +710,76 @@ class SpiderRegistry {
 
       case "dom_sc":
         return new DomScSpider(config, dateRange);
+
+      case "dom_sc_edicao":
+        return new DomScEdicaoSpider(config, dateRange);
+
+      case "prefeituraananindeua":
+        return new PrefeituraAnanindeuaSpider(config, dateRange);
+      case "prefeituracameta":
+        return new PrefeituracametaSpider(config, dateRange);
+      case "prefeiturabeelem":
+        const belemSpider = new PrefeituraBelemSpider(
+          config,
+          dateRange,
+          browser,
+        );
+        if (browser) {
+          belemSpider.setBrowser(browser);
+        }
+        return belemSpider;
+      case "prefeituraaltamira":
+        return new PrefeituraAltamiraSpider(config, dateRange);
+      case "prefeituraulianopolis":
+        return new PrefeituraUlianopolisSpider(config, dateRange);
+      case "prefeituasantanaaraguaia":
+        return new PrefeituraSantanaAraguaiaSpider(config, dateRange);
+      case "prefeiturasaodomingosdocapim":
+        return new PrefeituraSaodomingosdocapimSpider(config, dateRange);
+      case "portalcr2":
+        const portalCr2Spider = new PortalCr2Spider(config, dateRange, browser);
+        if (browser) portalCr2Spider.setBrowser(browser);
+        return portalCr2Spider;
+      case "portalcr2co":
+        const portalCr2CoSpider = new PortalCr2CoSpider(
+          config,
+          dateRange,
+          browser,
+        );
+        if (browser) portalCr2CoSpider.setBrowser(browser);
+        return portalCr2CoSpider;
+      case "prefeituraaugustocorrea":
+      case "prefeiturapacaja":
+      case "prefeituraportodemoz":
+      case "prefeituraigarapeacu":
+      case "prefeituravigia":
+      case "prefeituraalmeirim":
+      case "prefeituracurralinho":
+      case "prefeituraoeirasdopara":
+      case "prefeituraourilandianorte":
+      case "prefeituraipixunadopara":
+      case "prefeituralimoeirodoajuru":
+      case "prefeituramedicilandia":
+      case "prefeituraconcordiadopara":
+      case "prefeituragoianesiadopara":
+      case "prefeituramaracana":
+      case "prefeiturasaosebastiaodaboavista":
+        return new PrefeituraPaPublicacoesSpider(config, dateRange);
+      case "prefeituramelgaco":
+        return new PrefeituraSaodomingosdocapimSpider(config, dateRange);
+      case "prefeiturajoinville_sc":
+        return new PrefeituraJoinvilleScSpider(config, dateRange);
+
+      case "prefeituraflorianopolis_sc":
+      case "prefeiturablumenau_sc":
+      case "prefeiturasaojose_sc":
+      case "prefeituraitajai_sc":
+      case "prefeiturachapeco_sc":
+      case "prefeiturapalhoca_sc":
+      case "prefeituracriciuma_sc":
+      case "prefeiturajaraguadosul_sc":
+      case "prefeituralages_sc":
+        return new PrefeituraScSpider(config, dateRange);
 
       case "diario-ba":
         return new DiarioBaSpider(config, dateRange);
@@ -773,6 +944,70 @@ class SpiderRegistry {
 
       case "diariomunicipiosjc":
         return new DiarioMunicipioSJCSpider(config, dateRange);
+
+      case "gazetamunicipal":
+        return new GazetaMunicipalSpider(config, dateRange);
+
+      case "diariooficialguarantadonorte":
+        return new DiarioOficialGuarantadonorteSpider(config, dateRange);
+
+      case "diariooficialcaldasnovas":
+        return new DiarioOficialCaldasnovasSpider(config, dateRange);
+
+      case "diariooficialms":
+        const diariooficialmsSpider = new DiarioOficialMSSpider(
+          config,
+          dateRange,
+          browser,
+        );
+        if (browser) {
+          diariooficialmsSpider.setBrowser(browser);
+        }
+        return diariooficialmsSpider;
+
+      case "prefeituracampogrande":
+        const campoGrandeSpider = new PrefeituraCampoGrandeSpider(
+          config,
+          dateRange,
+        );
+        if (browser) {
+          campoGrandeSpider.setBrowser(browser);
+        }
+        return campoGrandeSpider;
+
+      case "prefeituradourados":
+        const douradosSpider = new PrefeituraDouradosSpider(
+          config,
+          dateRange,
+          browser,
+        );
+        if (browser) {
+          douradosSpider.setBrowser(browser);
+        }
+        return douradosSpider;
+
+      case "prefeiturapontapora":
+        return new PrefeituraPontaPoraSpider(config, dateRange);
+
+      case "prefeituranovaandradina":
+        const novaAndradinaSpider = new PrefeituraNovaAndradinaSpider(
+          config,
+          dateRange,
+        );
+        if (browser) {
+          novaAndradinaSpider.setBrowser(browser);
+        }
+        return novaAndradinaSpider;
+
+      case "prefeituraaquidauana":
+        const aquidauanaSpider = new PrefeituraAquidauanaSpider(
+          config,
+          dateRange,
+        );
+        if (browser) {
+          aquidauanaSpider.setBrowser(browser);
+        }
+        return aquidauanaSpider;
 
       case "prefeiturasantoandre":
         const santoAndreSpider = new PrefeiturasantoandreSpider(
@@ -1749,6 +1984,78 @@ class SpiderRegistry {
       case "prefeiturapacodolumiar":
         return new PrefeiturapacodolumiarSpider(config, dateRange);
 
+      case "prefeituraportoalegre":
+        const portoAlegreSpider = new PrefeituraportoalegreSpider(
+          config,
+          dateRange,
+          browser,
+        );
+        if (browser) portoAlegreSpider.setBrowser(browser);
+        return portoAlegreSpider;
+
+      case "prefeituracaxiasdosul":
+        const caxiasSulSpider = new PrefeituracaxiasdosulSpider(
+          config,
+          dateRange,
+          browser,
+        );
+        if (browser) caxiasSulSpider.setBrowser(browser);
+        return caxiasSulSpider;
+
+      case "prefeituracanoas":
+        const canoasSpider = new PrefeituracanoasSpider(
+          config,
+          dateRange,
+          browser,
+        );
+        if (browser) canoasSpider.setBrowser(browser);
+        return canoasSpider;
+
+      case "prefeiturapelotas":
+        const pelotasSpider = new PrefeiturapelotasSpider(
+          config,
+          dateRange,
+          browser,
+        );
+        if (browser) pelotasSpider.setBrowser(browser);
+        return pelotasSpider;
+
+      case "prefeiturasantamaria":
+        const santaMariaSpider = new PrefeiturasantamariaSpider(
+          config,
+          dateRange,
+          browser,
+        );
+        if (browser) santaMariaSpider.setBrowser(browser);
+        return santaMariaSpider;
+
+      case "prefeituranovohamburgo":
+        const novoHamburgoSpider = new PrefeituranovohamburgoSpider(
+          config,
+          dateRange,
+          browser,
+        );
+        if (browser) novoHamburgoSpider.setBrowser(browser);
+        return novoHamburgoSpider;
+
+      case "prefeiturasaoleopoldo":
+        const saoLeopoldoSpider = new PrefeiturasaoleopoldoSpider(
+          config,
+          dateRange,
+          browser,
+        );
+        if (browser) saoLeopoldoSpider.setBrowser(browser);
+        return saoLeopoldoSpider;
+
+      case "prefeiturapassofundo":
+        const passoFundoSpider = new PrefeiturapassofundoSpider(
+          config,
+          dateRange,
+          browser,
+        );
+        if (browser) passoFundoSpider.setBrowser(browser);
+        return passoFundoSpider;
+
       case "prefeituratimon":
         return new PrefeituraTimonSpider(config, dateRange);
 
@@ -1830,6 +2137,61 @@ class SpiderRegistry {
 
       case "prefeituraportonacional":
         return new PrefeituraportonacionalSpider(config, dateRange);
+
+      case "prefeiturarondonopolis":
+        return new PrefeiturarondonopolisSpider(config, dateRange);
+
+      case "prefeituragoiania":
+        return new PrefeituragoianiaSpider(config, dateRange);
+
+      case "prefeiturajatai":
+        return new PrefeituraJataiSpider(config, dateRange);
+
+      case "prefeituraprimaveradoleste":
+        return new PrefeituraprimaveradolesteSpider(config, dateRange);
+
+      case "prefeituraNovoGama":
+        return new PrefeituraNovoGamaSpider(config, dateRange);
+
+      case "santa_helena_go":
+        return new SantaHelenaGoSpider(config, dateRange);
+
+      case "prefeiturajaragua":
+        return new PrefeituraJaraguaSpider(config, dateRange);
+
+      case "prefeituracuritiba": {
+        const curitibaSpider = new PrefeituracuritibaSpider(
+          config,
+          dateRange,
+          browser,
+        );
+        if (browser) curitibaSpider.setBrowser(browser);
+        return curitibaSpider;
+      }
+
+      case "prefeituralondrina":
+        return new PrefeituralondrinaSpider(config, dateRange);
+
+      case "prefeiturapontagrossa":
+        return new PrefeiturapontagrossaSpider(config, dateRange);
+
+      case "prefeituramaringa":
+        return new PrefeituramaringaSpider(config, dateRange);
+
+      case "prefeituracascavel":
+        return new PrefeituracascavelSpider(config, dateRange);
+
+      case "prefeiturasjp":
+        return new PrefeiturasjpSpider(config, dateRange);
+
+      case "prefeiturafoz":
+        return new PrefeiturafozSpider(config, dateRange);
+
+      case "prefeituraguarapuava":
+        return new PrefeituraguarapuavaSpider(config, dateRange);
+
+      case "prefeituraraucaria":
+        return new PrefeituraraucariaSpider(config, dateRange);
 
       default:
         throw new Error(`Unknown spider type: ${config.spiderType}`);

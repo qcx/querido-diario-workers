@@ -1,0 +1,85 @@
+{
+  "timestamp": "2026-01-29T15:00:00Z",
+  "stateCode": "SE",
+  "configFile": "src/spiders/v2/configs/se.json",
+  "summary": {
+    "total": 7,
+    "used_existing_spider": 6,
+    "needs_review": 1,
+    "created_new_spider": 0,
+    "skipped_already_exists": 0
+  },
+  "results": [
+    {
+      "cidade": "Itabaianinha",
+      "url": "https://www.municipioonline.com.br/se/prefeitura/itabaianinha/cidadao/diariooficial",
+      "status": "used_existing_spider",
+      "spiderType": "3tecnos",
+      "territoryId": "2803005",
+      "filesCreated": ["src/spiders/v2/configs/se.json (updated)"],
+      "notes": "Plataforma MunicípioOnline/3Tecnos com interface AngularJS. Edição 1973/2026 disponível em 28/01/2026."
+    },
+    {
+      "cidade": "Itaporanga d'Ajuda",
+      "url": "https://www.municipioonline.com.br/se/prefeitura/itaporangadajuda/cidadao/diariooficial",
+      "status": "used_existing_spider",
+      "spiderType": "3tecnos",
+      "territoryId": "2803203",
+      "filesCreated": ["src/spiders/v2/configs/se.json (updated)"],
+      "notes": "Plataforma MunicípioOnline/3Tecnos. Edições 143/2026 e 144/2026 disponíveis em 28/01/2026."
+    },
+    {
+      "cidade": "Poço Redondo",
+      "url": "https://publicacoesmunicipais.com.br/eatos/pocoredondo",
+      "status": "used_existing_spider",
+      "spiderType": "eatos",
+      "territoryId": "2805406",
+      "filesCreated": ["src/spiders/v2/configs/se.json (updated)"],
+      "notes": "Plataforma e-atos (publicacoesmunicipais.com.br). Edição 1694 disponível em 28/01/2026."
+    },
+    {
+      "cidade": "Capela",
+      "url": "https://municipioonline.com.br/se/prefeitura/capela/cidadao/diariooficial",
+      "status": "used_existing_spider",
+      "spiderType": "3tecnos",
+      "territoryId": "2801306",
+      "filesCreated": ["src/spiders/v2/configs/se.json (updated)"],
+      "notes": "Plataforma MunicípioOnline/3Tecnos. Edição 1160/2026 disponível em 29/01/2026."
+    },
+    {
+      "cidade": "Canindé de São Francisco",
+      "url": "https://www.municipioonline.com.br/se/prefeitura/canindedesaofrancisco/cidadao/diariooficial",
+      "status": "used_existing_spider",
+      "spiderType": "3tecnos",
+      "territoryId": "2801207",
+      "filesCreated": ["src/spiders/v2/configs/se.json (updated)"],
+      "notes": "Plataforma MunicípioOnline/3Tecnos. Edição 1043/2025 disponível em 20/02/2025 (última edição encontrada)."
+    },
+    {
+      "cidade": "Propriá",
+      "url": "https://www.municipioonline.com.br/se/prefeitura/propria/cidadao/diariooficial",
+      "status": "used_existing_spider",
+      "spiderType": "3tecnos",
+      "territoryId": "2805703",
+      "filesCreated": ["src/spiders/v2/configs/se.json (updated)"],
+      "notes": "Plataforma MunicípioOnline/3Tecnos. Edição 1033/2026 disponível em 29/01/2026."
+    },
+    {
+      "cidade": "Porto da Folha",
+      "url": "https://agportal.agapesistemas.com.br/DiarioOficial/?alias=pmportofolha",
+      "status": "needs_review",
+      "territoryId": "2805604",
+      "reason": "Usa plataforma Ágape Sistemas que não possui spider implementado",
+      "attemptsLog": [
+        "Tentativa 1: Verificar MunicipioOnline - serviço indisponível para este município",
+        "Tentativa 2: Acessar site da prefeitura - link de Diário Oficial redireciona para Ágape Sistemas",
+        "Tentativa 3: Verificar plataforma Ágape - funciona mas não existe spider para esta plataforma"
+      ],
+      "analysis": {
+        "siteStatus": "online e funcional",
+        "platform": "Ágape Sistemas (agportal.agapesistemas.com.br)",
+        "recommendation": "Criar novo spider para plataforma Ágape Sistemas. A plataforma usa formulário de busca com filtros por órgão, tipo de documento e período."
+      }
+    }
+  ]
+}

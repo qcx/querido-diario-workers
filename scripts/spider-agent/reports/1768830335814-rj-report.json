@@ -1,0 +1,377 @@
+{
+  "timestamp": "2026-01-19T13:45:35.814Z",
+  "csvFile": "diarios_oficiais_rj_consolidado.csv",
+  "stateCode": "RJ",
+  "configFile": "src/spiders/v2/configs/rj.json",
+  "summary": {
+    "total": 57,
+    "created_new_spider": 0,
+    "used_existing_spider": 10,
+    "skipped_already_exists": 0,
+    "needs_review": 47
+  },
+  "results": [
+    {
+      "cidade": "Rio de Janeiro",
+      "url": "https://doweb.rio.rj.gov.br/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "São Gonçalo",
+      "url": "https://do.pmsg.rj.gov.br/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Duque de Caxias",
+      "url": "https://transparencia.duquedecaxias.rj.gov.br/diario_oficial_busca.php",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Nova Iguaçu",
+      "url": "https://doweb.novaiguacu.rj.gov.br/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Campos dos Goytacazes",
+      "url": "https://www.campos.rj.gov.br/diario-oficial.php",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Belford Roxo",
+      "url": "https://www.belfordr.instartecnologia.com.br/",
+      "status": "used_existing_spider",
+      "spiderType": "instar",
+      "territoryId": "3300456",
+      "citySlug": "belford_roxo"
+    },
+    {
+      "cidade": "Niterói",
+      "url": "https://diariooficial.niteroi.rj.gov.br/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "São João de Meriti",
+      "url": "https://transparencia.meriti.rj.gov.br/diario_oficial_busca.php",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Petrópolis",
+      "url": "https://www.petropolis.rj.gov.br/pmp/index.php/servicos-cidadao/diario-oficial",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Volta Redonda",
+      "url": "https://www.voltaredonda.rj.gov.br/vrdestaque/index.php",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Macaé",
+      "url": "https://do.macae.rj.gov.br/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Magé",
+      "url": "https://www.diariomunicipal.com.br/aemerj/",
+      "status": "used_existing_spider",
+      "spiderType": "diariomunicipal",
+      "territoryId": "3302502",
+      "citySlug": "mage"
+    },
+    {
+      "cidade": "Itaboraí",
+      "url": "https://site.ib.itaborai.rj.gov.br/diario-oficial/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Cabo Frio",
+      "url": "https://transparencia.cabofrio.rj.gov.br/diariooficial.php",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Maricá",
+      "url": "https://www.marica.rj.gov.br/jom/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Nova Friburgo",
+      "url": "https://diario.novafriburgo.rj.gov.br/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Barra Mansa",
+      "url": "https://portaltransparencia.barramansa.rj.gov.br/boletim-oficial/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Angra dos Reis",
+      "url": "https://portal.angra.rj.gov.br/boletim-oficial.asp?indexsigla=imp",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Mesquita",
+      "url": "https://transparencia.mesquita.rj.gov.br/diario_oficial_busca.php",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Teresópolis",
+      "url": "https://atos.teresopolis.rj.gov.br/diario/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Rio das Ostras",
+      "url": "https://www.riodasostras.rj.gov.br/jornal-oficial/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Nilópolis",
+      "url": "https://nilopolis.rj.gov.br/diario-oficial-extra-online/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Queimados",
+      "url": "https://transparencia.queimados.rj.gov.br/diario_oficial_busca.php",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Araruama",
+      "url": "https://www.araruama.rj.gov.br/publicacoes/diario-oficial",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Resende",
+      "url": "https://resende.rj.gov.br/blogtransparencia/page/boletim_oficial.asp",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Itaguaí",
+      "url": "https://portal.transparencia.itaguai.rj.gov.br/diario_oficial_busca.php",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "São Pedro da Aldeia",
+      "url": "https://pmspa.aexecutivo.com.br/publicacoes.php",
+      "status": "used_existing_spider",
+      "spiderType": "aexecutivo",
+      "territoryId": "3305208",
+      "citySlug": "sao_pedro_da_aldeia"
+    },
+    {
+      "cidade": "Itaperuna",
+      "url": "https://www.itaperuna.rj.gov.br/pmi/jornal-oficial-2022",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Japeri",
+      "url": "https://japeri.geosiap.net.br/portal-transparencia/pmjaperi.geosiap.net.br/portal-transparencia/publicacoes?id_publicacao_tipo=7",
+      "status": "used_existing_spider",
+      "spiderType": "geosiap",
+      "territoryId": "3302270",
+      "citySlug": "japeri"
+    },
+    {
+      "cidade": "Barra do Piraí",
+      "url": "https://portal.prebarradopirai.rj.gov.br/page/4edb08b8-3bae-4279-ad18-e8b88e798bda/diario-oficial-eletronico",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Saquarema",
+      "url": "https://dos.saquarema.rj.gov.br/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Seropédica",
+      "url": "https://portaltransparencia.seropedica.rj.gov.br/boletim_oficial_view",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Três Rios",
+      "url": "https://tresrios.rj.gov.br/bio/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Valença",
+      "url": "https://www.diariomunicipal.com.br/aemerj/pesquisar?municipio=265",
+      "status": "used_existing_spider",
+      "spiderType": "diariomunicipal",
+      "territoryId": "3306107",
+      "citySlug": "valenca"
+    },
+    {
+      "cidade": "Cachoeiras de Macacu",
+      "url": "https://www.prefeituracachoeiras.com/diariooficial",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Rio Bonito",
+      "url": "https://www.diariomunicipal.com.br/aemerj/pesquisar",
+      "status": "used_existing_spider",
+      "spiderType": "diariomunicipal",
+      "territoryId": "3304300",
+      "citySlug": "rio_bonito"
+    },
+    {
+      "cidade": "Guapimirim",
+      "url": "https://guapimirim.rj.gov.br/site/diario-oficial/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Casimiro de Abreu",
+      "url": "https://transparencia.casimirodeabreu.rj.gov.br/jornal.php",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Paraty",
+      "url": "https://www.paraty.rj.gov.br/multimidia/documentos",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "São Francisco de Itabapoana",
+      "url": "https://www.pmsfi.rj.gov.br/diariooficial",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Paraíba do Sul",
+      "url": "https://paraibadosul.rj.gov.br/page/3e364d6c-e018-47c3-aa46-db0c771424f6/diario-oficial",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Paracambi",
+      "url": "https://paracambi.rj.gov.br/diario-oficial/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Santo Antônio de Pádua",
+      "url": "https://www.santoantoniodepadua.rj.gov.br/portal/arquivo/3",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Mangaratiba",
+      "url": "https://www.mangaratiba.rj.gov.br/novoportal/publicacoes",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Armação dos Búzios",
+      "url": "https://buzios.aexecutivo.com.br/jornal.php",
+      "status": "used_existing_spider",
+      "spiderType": "aexecutivo",
+      "territoryId": "3300233",
+      "citySlug": "armacao_dos_buzios"
+    },
+    {
+      "cidade": "São Fidélis",
+      "url": "https://saofidelis.rj.gov.br/diariooficial/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "São João da Barra",
+      "url": "https://www.sjb.rj.gov.br/site/diarios_oficiais",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Bom Jesus do Itabapoana",
+      "url": "https://bomjesus.rj.gov.br/site/diarios_oficiais",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Vassouras",
+      "url": "https://www.diariomunicipal.com.br/aemerj/pesquisar?busca_avancada%5B__paper%5D=1&busca_avancada%5BentidadeUsuaria%5D=41297",
+      "status": "used_existing_spider",
+      "spiderType": "diariomunicipal",
+      "territoryId": "3306206",
+      "citySlug": "vassouras"
+    },
+    {
+      "cidade": "Tanguá",
+      "url": "http://www.rj.diariooficialdosmunicipios.org/prefeitura/tangua",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Arraial do Cabo",
+      "url": "https://www.arraial.rj.gov.br/diariooficial",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Itatiaia",
+      "url": "https://itatiaia.rj.gov.br/boletim-oficial",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Paty do Alferes",
+      "url": "https://patydoalferes.rj.gov.br/diario-oficial/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Bom Jardim",
+      "url": "https://diario-oficial.online/bomjardim",
+      "status": "used_existing_spider",
+      "spiderType": "diariooficialonline",
+      "territoryId": "3300506",
+      "citySlug": "bom_jardim"
+    },
+    {
+      "cidade": "Iguaba Grande",
+      "url": "https://transparencia.iguaba.rj.gov.br/boletim-informativo/",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    },
+    {
+      "cidade": "Miracema",
+      "url": "https://miracema.boletimoficialbr.com.br/",
+      "status": "used_existing_spider",
+      "spiderType": "boletimoficialbr",
+      "territoryId": "3303005",
+      "citySlug": "miracema"
+    },
+    {
+      "cidade": "Miguel Pereira",
+      "url": "https://transparencia.miguelpereira.rj.gov.br/diario_oficial_busca.php",
+      "status": "needs_review",
+      "reason": "Custom site - needs browser analysis"
+    }
+  ]
+}

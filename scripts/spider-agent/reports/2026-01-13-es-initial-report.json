@@ -1,0 +1,195 @@
+{
+  "timestamp": "2026-01-13T15:20:00Z",
+  "csvFile": "diarios_oficiais_es_consolidado.csv",
+  "stateCode": "ES",
+  "configFile": "src/spiders/v2/configs/es.json",
+  "summary": {
+    "total": 28,
+    "created_new_spider": 0,
+    "used_existing_spider": 0,
+    "skipped_already_exists": 0,
+    "needs_review": 28,
+    "pending_analysis": 28
+  },
+  "results": [
+    {
+      "cidade": "Serra",
+      "url": "https://www.serra.es.gov.br/diario-oficial/",
+      "status": "needs_review",
+      "reason": "Site retorna erro 500 - too many redirects",
+      "territoryId": "3205002"
+    },
+    {
+      "cidade": "Vila Velha",
+      "url": "https://www.vilavelha.es.gov.br/diario-oficial/",
+      "status": "needs_review",
+      "reason": "Controller não encontrado - erro no site",
+      "territoryId": "3205200"
+    },
+    {
+      "cidade": "Cariacica",
+      "url": "https://www.cariacica.es.gov.br/diario-oficial/",
+      "status": "needs_review",
+      "reason": "Erro 404 - Página não encontrada",
+      "territoryId": "3201308"
+    },
+    {
+      "cidade": "Vitória",
+      "url": "https://www.vitoria.es.gov.br/diariooficial/",
+      "status": "needs_review",
+      "reason": "Request Rejected - site bloqueando acesso",
+      "territoryId": "3205309"
+    },
+    {
+      "cidade": "Cachoeiro de Itapemirim",
+      "url": "https://www.cachoeiro.es.gov.br/diario-oficial/",
+      "status": "needs_review",
+      "reason": "Erro 404 - Página não encontrada",
+      "territoryId": "3201209"
+    },
+    {
+      "cidade": "Linhares",
+      "url": "https://www.linhares.es.gov.br/diario-oficial/",
+      "status": "needs_review",
+      "reason": "Redireciona para página WordPress não relacionada",
+      "territoryId": "3203205"
+    },
+    {
+      "cidade": "Guarapari",
+      "url": "https://www.guarapari.es.gov.br/diario-oficial/",
+      "status": "needs_review",
+      "reason": "Erro 404 - Página não encontrada",
+      "territoryId": "3202405"
+    },
+    {
+      "cidade": "São Mateus",
+      "url": "https://www.saomateus.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3204906"
+    },
+    {
+      "cidade": "Colatina",
+      "url": "https://www.colatina.es.gov.br/diario-oficial/",
+      "status": "needs_review",
+      "reason": "Erro ao carregar página",
+      "territoryId": "3201506"
+    },
+    {
+      "cidade": "Aracruz",
+      "url": "https://www.aracruz.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3200607"
+    },
+    {
+      "cidade": "Viana",
+      "url": "https://www.viana.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3205101"
+    },
+    {
+      "cidade": "Nova Venécia",
+      "url": "https://www.novavenecia.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3203908"
+    },
+    {
+      "cidade": "Barra de São Francisco",
+      "url": "https://www.pmbsf.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3200904"
+    },
+    {
+      "cidade": "Marataízes",
+      "url": "https://www.marataizes.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3203320"
+    },
+    {
+      "cidade": "Santa Maria de Jetibá",
+      "url": "https://www.pmsmj.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3204559"
+    },
+    {
+      "cidade": "Itapemirim",
+      "url": "https://www.itapemirim.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3202801"
+    },
+    {
+      "cidade": "Castelo",
+      "url": "https://www.castelo.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3201407"
+    },
+    {
+      "cidade": "Domingos Martins",
+      "url": "https://www.domingosmartins.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3201902"
+    },
+    {
+      "cidade": "Afonso Cláudio",
+      "url": "https://www.afonsoclaudio.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3200102"
+    },
+    {
+      "cidade": "Baixo Guandu",
+      "url": "https://www.baixoguandu.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3200805"
+    },
+    {
+      "cidade": "Anchieta",
+      "url": "https://www.anchieta.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3200409"
+    },
+    {
+      "cidade": "Guaçuí",
+      "url": "https://www.guacui.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "reason": "Site customizado - precisa análise detalhada",
+      "territoryId": "3202306"
+    },
+    {
+      "cidade": "Alegre",
+      "url": "https://www.alegre.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "reason": "WordPress - precisa análise",
+      "territoryId": "3200201"
+    },
+    {
+      "cidade": "Jaguaré",
+      "url": "https://www.jaguare.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3203056"
+    },
+    {
+      "cidade": "Iúna",
+      "url": "https://www.iuna.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3203007"
+    },
+    {
+      "cidade": "Conceição da Barra",
+      "url": "https://www.conceicaodabarra.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3201605"
+    },
+    {
+      "cidade": "Sooretama",
+      "url": "https://www.sooretama.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3205010"
+    },
+    {
+      "cidade": "Ibatiba",
+      "url": "https://www.ibatiba.es.gov.br/diario-oficial/",
+      "status": "pending_analysis",
+      "territoryId": "3202454"
+    }
+  ],
+  "note": "Muitas cidades têm URLs quebradas ou sites com problemas. Será necessário investigar URLs alternativas ou contatar as prefeituras para obter as URLs corretas dos diários oficiais."
+}

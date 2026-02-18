@@ -1,0 +1,970 @@
+[
+  {
+    "id": "go_goiania",
+    "name": "Goiânia - GO",
+    "territoryId": "5208707",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituragoiania",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituragoiania",
+          "baseUrl": "https://www.goiania.go.gov.br",
+          "silegUrl": "http://sileg.goiania.go.gov.br",
+          "diarioOficialUrl": "https://www.goiania.go.gov.br/casa-civil/diario-oficial"
+        }
+      }
+    ],
+    "notes": "Diário Oficial via Casa Civil (sileg). Consulta em goiania.go.gov.br/casa-civil/diario-oficial/ e sileg.goiania.go.gov.br."
+  },
+  {
+    "id": "go_aparecida_de_goiania",
+    "name": "Aparecida de Goiânia - GO",
+    "territoryId": "5201405",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "nucleogov",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "nucleogov",
+          "baseUrl": "https://doe.aparecida.go.gov.br"
+        }
+      }
+    ],
+    "notes": "Diário Oficial Eletrônico em doe.aparecida.go.gov.br (plataforma própria). API /api/diarios compatível com NúcleoGov."
+  },
+  {
+    "id": "go_anapolis",
+    "name": "Anápolis - GO",
+    "territoryId": "5201108",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "nucleogov",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "nucleogov",
+          "baseUrl": "https://dom.anapolis.go.gov.br"
+        }
+      }
+    ],
+    "notes": "DOM em dom.anapolis.go.gov.br. Sistema NúcleoGov com calendário e API /api/diarios."
+  },
+  {
+    "id": "go_rio_verde",
+    "name": "Rio Verde - GO",
+    "territoryId": "5218805",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Rio Verde"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (Associação Goiana de Municípios) em diariomunicipal.com.br/agm/. Portal do cidadão: acessoainformacao.rioverde.go.gov.br."
+  },
+  {
+    "id": "go_aguas_lindas_de_goias",
+    "name": "Águas Lindas de Goiás - GO",
+    "territoryId": "5200258",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Águas Lindas de Goiás"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/). Município de Águas Lindas de Goiás no SIGPub."
+  },
+  {
+    "id": "go_luziania",
+    "name": "Luziânia - GO",
+    "territoryId": "5212501",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Luziânia"
+        }
+      }
+    ],
+    "notes": "DOE2 em luziania.go.gov.br/doe2/ pode estar vazio; fallback AGM (diariomunicipal.com.br/agm/) para edições consolidadas."
+  },
+  {
+    "id": "go_valparaiso_de_goias",
+    "name": "Valparaíso de Goiás - GO",
+    "territoryId": "5221858",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "nucleogov",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "nucleogov",
+          "baseUrl": "https://diariooficial.valparaisodegoias.go.gov.br"
+        }
+      }
+    ],
+    "notes": "Diário Oficial em diariooficial.valparaisodegoias.go.gov.br. Sistema NúcleoGov."
+  },
+  {
+    "id": "go_senador_canedo",
+    "name": "Senador Canedo - GO",
+    "territoryId": "5220454",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Senador Canedo"
+        }
+      }
+    ],
+    "notes": "Publicações até 09/09/2024 no AGM (diariomunicipal.com.br/agm/). Novo sistema em diario.senadorcanedo.go.gov.br a partir de 09/09/2024."
+  },
+  {
+    "id": "go_trindade",
+    "name": "Trindade - GO",
+    "territoryId": "5221403",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Trindade"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/). Município de Trindade no SIGPub."
+  },
+  {
+    "id": "go_formosa",
+    "name": "Formosa - GO",
+    "territoryId": "5208004",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Formosa"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/). Munícipio de Formosa no SIGPub."
+  },
+  {
+    "id": "go_catalao",
+    "name": "Catalão - GO",
+    "territoryId": "5205109",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "agm",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "agm",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "cityName": "Catalão"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/). Transparência em catalao.go.gov.br não lista DO; AGM é o canal consolidado para municípios goianos."
+  },
+  {
+    "id": "go_itumbiara",
+    "name": "Itumbiara - GO",
+    "territoryId": "5211503",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Itumbiara"
+        }
+      }
+    ],
+    "notes": "Diário Oficial em itumbiara.go.gov.br/diario-oficial (conteúdo carregado por JS). Fallback AGM (diariomunicipal.com.br/agm/) para edições."
+  },
+  {
+    "id": "go_jatai",
+    "name": "Jataí - GO",
+    "territoryId": "5211909",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturajatai",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturajatai",
+          "baseUrl": "https://intranet.jatai.go.gov.br/intranet/sistemas/diario-oficial"
+        }
+      }
+    ],
+    "notes": "Diário Oficial na intranet da prefeitura: intranet.jatai.go.gov.br/intranet/sistemas/diario-oficial/diario-site.php (tabela com edições e PDFs)."
+  },
+  {
+    "id": "go_planaltina",
+    "name": "Planaltina - GO",
+    "territoryId": "5217609",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "planaltina_go",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "planaltina_go",
+          "baseUrl": "https://planaltina.bsit-br.com.br/portal"
+        }
+      }
+    ],
+    "notes": "Atos normativos (diário oficial) em planaltina.bsit-br.com.br/portal/legislation.jsf (BSIT/SIGEP)."
+  },
+  {
+    "id": "go_novo_gama",
+    "name": "Novo Gama - GO",
+    "territoryId": "5215231",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraNovoGama",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraNovoGama",
+          "baseUrl": "https://acessoainformacao.novogama.go.gov.br"
+        }
+      }
+    ],
+    "notes": "Diário Oficial no portal de transparência (NúcleoGov) em acessoainformacao.novogama.go.gov.br."
+  },
+  {
+    "id": "go_caldas_novas",
+    "name": "Caldas Novas - GO",
+    "territoryId": "5204508",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialcaldasnovas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialcaldasnovas",
+          "baseUrl": "https://diariooficialcal1.websiteseguro.com"
+        }
+      }
+    ],
+    "notes": "DO próprio em diariooficialcal1.websiteseguro.com (calendário por data ?data=DD/MM/YYYY). Spider diariooficialcaldasnovas."
+  },
+  {
+    "id": "go_cidade_ocidental",
+    "name": "Cidade Ocidental - GO",
+    "territoryId": "5205497",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "nucleogov",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "nucleogov",
+          "baseUrl": "https://dom.cidadeocidental.go.gov.br"
+        }
+      }
+    ],
+    "notes": "Diário Oficial em dom.cidadeocidental.go.gov.br. Sistema NúcleoGov com API /api/diarios e PDFs em S3."
+  },
+  {
+    "id": "go_goianesia",
+    "name": "Goianésia - GO",
+    "territoryId": "5208608",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "goianesia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "goianesia",
+          "baseUrl": "https://www.goianesia.go.gov.br",
+          "listPaths": ["editais-e-publicacoes", "editais-e-publicacoes2"]
+        }
+      }
+    ],
+    "notes": "Diário/Editais e publicações em goianesia.go.gov.br (não utiliza AGM)."
+  },
+  {
+    "id": "go_santo_antonio_do_descoberto",
+    "name": "Santo Antônio do Descoberto - GO",
+    "territoryId": "5219753",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "santo_antonio_descoberto_go",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "santo_antonio_descoberto_go",
+          "baseUrl": "https://santoantoniododescoberto.go.gov.br",
+          "diarioPath": "diario-oficial"
+        }
+      }
+    ],
+    "notes": "Diário Oficial no portal da prefeitura (santoantoniododescoberto.go.gov.br/diario-oficial/). Não utiliza AGM."
+  },
+  {
+    "id": "go_goianira",
+    "name": "Goianira - GO",
+    "territoryId": "5208806",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Goianira"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/). Publicações em prefeituradegoianira.sigepnet.com.br."
+  },
+  {
+    "id": "go_mineiros",
+    "name": "Mineiros - GO",
+    "territoryId": "5213103",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Mineiros"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/). Site prefeitura mineiros.go.gov.br sem link próprio para DO; AGM é fonte consolidada para municípios goianos."
+  },
+  {
+    "id": "go_cristalina",
+    "name": "Cristalina - GO",
+    "territoryId": "5206206",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "cristalina_go",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "cristalina_go",
+          "baseUrl": "https://prefeitura-de-cristalina.webnode.page/diario-oficial"
+        }
+      }
+    ],
+    "notes": "Diário Oficial em prefeitura-de-cristalina.webnode.page/diario-oficial/ (Webnode). Não utiliza AGM; spider cristalina_go."
+  },
+  {
+    "id": "go_inhumas",
+    "name": "Inhumas - GO",
+    "territoryId": "5210000",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Inhumas"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/). Transparência em inhumas.go.gov.br e prefeituradeinhumas.sigepnet.com.br; DO na AGM."
+  },
+  {
+    "id": "go_morrinhos",
+    "name": "Morrinhos - GO",
+    "territoryId": "5213806",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "morrinhos_go",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "morrinhos_go",
+          "baseUrl": "https://acessoainformacao.morrinhos.go.gov.br"
+        }
+      }
+    ],
+    "notes": "Diário Oficial no portal de transparência (NúcleoGov) em acessoainformacao.morrinhos.go.gov.br; não utiliza AGM."
+  },
+  {
+    "id": "go_quirinopolis",
+    "name": "Quirinópolis - GO",
+    "territoryId": "5218508",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Quirinópolis"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/). Legislação e transparência em quirinopolis.go.gov.br e acessoainformacao.quirinopolis.go.gov.br; DO na AGM."
+  },
+  {
+    "id": "go_jaragua",
+    "name": "Jaraguá - GO",
+    "territoryId": "5211800",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturajaragua",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturajaragua",
+          "baseUrl": "https://acessoainformacao.jaragua.go.gov.br"
+        }
+      }
+    ],
+    "notes": "Diário Oficial no portal de acesso à informação (NúcleoGov) em acessoainformacao.jaragua.go.gov.br. Jaraguá não utiliza AGM."
+  },
+  {
+    "id": "go_itaberai",
+    "name": "Itaberaí - GO",
+    "territoryId": "5210406",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Itaberaí"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/). Acesso à informação em acessoainformacao.itaberai.go.gov.br; DO consolidado na AGM."
+  },
+  {
+    "id": "go_porangatu",
+    "name": "Porangatu - GO",
+    "territoryId": "5218003",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Porangatu"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/). Transparência em acessoainformacao.porangatu.go.gov.br; publicações oficiais na AGM."
+  },
+  {
+    "id": "go_uruacu",
+    "name": "Uruaçu - GO",
+    "territoryId": "5221601",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "megasofttransparencia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "megasofttransparencia",
+          "baseUrl": "https://uruacu.megasofttransparencia.com.br",
+          "diarioPath": "legislacao-e-publicacoes"
+        }
+      }
+    ],
+    "notes": "Diário Oficial via portal Megasoft Transparência (uruacu.megasofttransparencia.com.br). Não utiliza AGM."
+  },
+  {
+    "id": "go_santa_helena_de_goias",
+    "name": "Santa Helena de Goiás - GO",
+    "territoryId": "5219308",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "santa_helena_go",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "santa_helena_go",
+          "baseUrl": "https://acessoainformacao.santahelena.go.gov.br"
+        }
+      }
+    ],
+    "notes": "Diário Oficial no portal próprio (não utiliza AGM). Portal de transparência em acessoainformacao.santahelena.go.gov.br (API NúcleoGov /api/diarios)."
+  },
+  {
+    "id": "go_ipora",
+    "name": "Iporá - GO",
+    "territoryId": "5210208",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Iporá"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/)."
+  },
+  {
+    "id": "go_goiatuba",
+    "name": "Goiatuba - GO",
+    "territoryId": "5209101",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Goiatuba"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/)."
+  },
+  {
+    "id": "go_padre_bernardo",
+    "name": "Padre Bernardo - GO",
+    "territoryId": "5215603",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "padre_bernardo_go",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "padre_bernardo_go",
+          "baseUrl": "https://acessoainformacao.padrebernardo.go.gov.br"
+        }
+      }
+    ],
+    "notes": "Portal NúcleoGov (acessoainformacao.padrebernardo.go.gov.br). Diário via API /api/diarios quando disponível."
+  },
+  {
+    "id": "go_niquelandia",
+    "name": "Niquelândia - GO",
+    "territoryId": "5214606",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "nucleogov",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "nucleogov",
+          "baseUrl": "https://dom.niquelandia.go.gov.br"
+        }
+      }
+    ],
+    "notes": "Diário Oficial em dom.niquelandia.go.gov.br. Sistema NúcleoGov com API /api/diarios e calendário."
+  },
+  {
+    "id": "go_posse",
+    "name": "Posse - GO",
+    "territoryId": "5218300",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Posse"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/)."
+  },
+  {
+    "id": "go_bela_vista_de_goias",
+    "name": "Bela Vista de Goiás - GO",
+    "territoryId": "5203302",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Bela Vista de Goiás"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/)."
+  },
+  {
+    "id": "go_sao_luis_de_montes_belos",
+    "name": "São Luís de Montes Belos - GO",
+    "territoryId": "5220108",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sao_luis_montes_belos_go",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sao_luis_montes_belos_go",
+          "baseUrl": "https://saoluisdemontesbelos.go.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "go_pires_do_rio",
+    "name": "Pires do Rio - GO",
+    "territoryId": "5217401",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "pires_do_rio_go",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "pires_do_rio_go",
+          "baseUrl": "https://acessoainformacao.piresdorio.go.gov.br"
+        }
+      }
+    ],
+    "notes": "Portal NúcleoGov (acessoainformacao.piresdorio.go.gov.br). Diário via API /api/diarios quando disponível."
+  },
+  {
+    "id": "go_neropolis",
+    "name": "Nerópolis - GO",
+    "territoryId": "5214507",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Nerópolis"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/)."
+  },
+  {
+    "id": "go_palmeiras_de_goias",
+    "name": "Palmeiras de Goiás - GO",
+    "territoryId": "5215702",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Palmeiras de Goiás"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/)."
+  },
+  {
+    "id": "go_hidrolandia",
+    "name": "Hidrolândia - GO",
+    "territoryId": "5209705",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Hidrolândia"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/). Portal do cidadão: acessoainformacao.hidrolandia.go.gov.br."
+  },
+  {
+    "id": "go_minacu",
+    "name": "Minaçu - GO",
+    "territoryId": "5213087",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "nucleogov",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "nucleogov",
+          "baseUrl": "https://acessoainformacao.minacu.go.gov.br"
+        }
+      }
+    ],
+    "notes": "Diário Oficial via portal do cidadão (acessoainformacao.minacu.go.gov.br). API /api/diarios quando disponível. Prefeitura: minacu.go.gov.br."
+  },
+  {
+    "id": "go_alexania",
+    "name": "Alexânia - GO",
+    "territoryId": "5200308",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Alexânia"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/). Portal: acessoainformacao.alexania.go.gov.br."
+  },
+  {
+    "id": "go_pirenopolis",
+    "name": "Pirenópolis - GO",
+    "territoryId": "5217302",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "nucleogov",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "nucleogov",
+          "baseUrl": "https://dom.pirenopolis.go.gov.br"
+        }
+      }
+    ],
+    "notes": "Diário Oficial em dom.pirenopolis.go.gov.br. Sistema NúcleoGov com calendário e API /api/diarios."
+  },
+  {
+    "id": "go_itapuranga",
+    "name": "Itapuranga - GO",
+    "territoryId": "5211206",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "nucleogov",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "nucleogov",
+          "baseUrl": "https://acessoainformacao.itapuranga.go.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "go_ipameri",
+    "name": "Ipameri - GO",
+    "territoryId": "5210109",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "entityId": "agm",
+          "cityName": "Ipameri"
+        }
+      }
+    ],
+    "notes": "Diário via AGM (diariomunicipal.com.br/agm/). Portal: acessoainformacao.ipameri.go.gov.br; publicações também em ipmbrasil.org.br."
+  }
+]

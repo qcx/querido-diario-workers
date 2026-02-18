@@ -1,0 +1,522 @@
+[
+  {
+    "id": "am_manaus",
+    "name": "Manaus - AM",
+    "territoryId": "1302603",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dommanaus",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "dommanaus",
+          "baseUrl": "https://dom.manaus.am.gov.br/?go=dom",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_itacoatiara",
+    "name": "Itacoatiara - AM",
+    "territoryId": "1301902",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_manacapuru",
+    "name": "Manacapuru - AM",
+    "territoryId": "1302504",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_parintins",
+    "name": "Parintins - AM",
+    "territoryId": "1303403",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_tefe",
+    "name": "Tefé - AM",
+    "territoryId": "1304203",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_coari",
+    "name": "Coari - AM",
+    "territoryId": "1301209",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_tabatinga",
+    "name": "Tabatinga - AM",
+    "territoryId": "1304062",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_maues",
+    "name": "Maués - AM",
+    "territoryId": "1302900",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_iranduba",
+    "name": "Iranduba - AM",
+    "territoryId": "1301852",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_humaita",
+    "name": "Humaitá - AM",
+    "territoryId": "1301704",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_manicore",
+    "name": "Manicoré - AM",
+    "territoryId": "1302702",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_sao_gabriel_da_cachoeira",
+    "name": "São Gabriel da Cachoeira - AM",
+    "territoryId": "1303809",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_labrea",
+    "name": "Lábrea - AM",
+    "territoryId": "1302405",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_autazes",
+    "name": "Autazes - AM",
+    "territoryId": "1300300",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_benjamin_constant",
+    "name": "Benjamin Constant - AM",
+    "territoryId": "1300607",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_boca_do_acre",
+    "name": "Boca do Acre - AM",
+    "territoryId": "1300706",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_eirunepe",
+    "name": "Eirunepé - AM",
+    "territoryId": "1301407",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_borba",
+    "name": "Borba - AM",
+    "territoryId": "1300805",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_sao_paulo_de_olivenca",
+    "name": "São Paulo de Olivença - AM",
+    "territoryId": "1303908",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_barreirinha",
+    "name": "Barreirinha - AM",
+    "territoryId": "1300508",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_careiro",
+    "name": "Careiro - AM",
+    "territoryId": "1301100",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_presidente_figueiredo",
+    "name": "Presidente Figueiredo - AM",
+    "territoryId": "1303536",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_carauari",
+    "name": "Carauari - AM",
+    "territoryId": "1301001",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_santo_antonio_do_ica",
+    "name": "Santo Antônio do Içá - AM",
+    "territoryId": "1303700",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_nova_olinda_do_norte",
+    "name": "Nova Olinda do Norte - AM",
+    "territoryId": "1303106",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  },
+  {
+    "id": "am_fonte_boa",
+    "name": "Fonte Boa - AM",
+    "territoryId": "1301605",
+    "stateCode": "AM",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/aam/",
+          "entityId": "251"
+        }
+      }
+    ]
+  }
+]

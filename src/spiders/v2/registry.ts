@@ -22,6 +22,14 @@ import rrConfigs from "./configs/rr.json";
 import toConfigs from "./configs/to.json";
 import acConfigs from "./configs/ac.json";
 import roConfigs from "./configs/ro.json";
+import msConfigs from "./configs/ms.json";
+import amConfigs from "./configs/am.json";
+import mtConfigs from "./configs/mt.json";
+import goConfigs from "./configs/go.json";
+import scConfigs from "./configs/sc.json";
+import paConfigs from "./configs/pa.json";
+import prConfigs from "./configs/pr.json";
+import rsConfigs from "./configs/rs.json";
 
 /**
  * Registry of all state configuration files
@@ -47,8 +55,14 @@ const STATE_CONFIGS = {
   AC: acConfigs,
   TO: toConfigs,
   RO: roConfigs,
-  // Add more states here as needed:
-  // etc.
+  MS: msConfigs,
+  AM: amConfigs,
+  MT: mtConfigs,
+  GO: goConfigs,
+  SC: scConfigs,
+  PA: paConfigs,
+  PR: prConfigs,
+  RS: rsConfigs,
 } as const;
 
 /**

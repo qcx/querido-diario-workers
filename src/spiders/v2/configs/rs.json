@@ -1,0 +1,215 @@
+[
+  {
+    "id": "rs_porto_alegre",
+    "name": "Porto Alegre - RS",
+    "territoryId": "4314902",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "DOPA em www2.portoalegre.rs.gov.br/dopa/. Busca por data, protocolo ou palavra-chave.",
+    "spiders": [
+      {
+        "spiderType": "prefeituraportoalegre",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraportoalegre",
+          "baseUrl": "https://dopa.portoalegre.rs.gov.br/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_caxias_do_sul",
+    "name": "Caxias do Sul - RS",
+    "territoryId": "4305108",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "DOE em doe.caxias.rs.gov.br. Edições em /site/janela/{id}.",
+    "spiders": [
+      {
+        "spiderType": "prefeituracaxiasdosul",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracaxiasdosul",
+          "baseUrl": "https://doe.caxias.rs.gov.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_canoas",
+    "name": "Canoas - RS",
+    "territoryId": "4304606",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "DOM em sistemas.canoas.rs.gov.br/domc. Calendário e busca por data.",
+    "spiders": [
+      {
+        "spiderType": "prefeituracanoas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracanoas",
+          "baseUrl": "https://sistemas.canoas.rs.gov.br/domc",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_pelotas",
+    "name": "Pelotas - RS",
+    "territoryId": "4314407",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub consolidado.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "108852",
+          "cityName": "Pelotas"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_santa_maria",
+    "name": "Santa Maria - RS",
+    "territoryId": "4316907",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em santamaria.rs.gov.br. Repositório e transparência.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturasantamaria",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasantamaria",
+          "baseUrl": "https://www.santamaria.rs.gov.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_gravatai",
+    "name": "Gravataí - RS",
+    "territoryId": "4309209",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em gravatai.atende.net/diariooficial. Plataforma Atende.net.",
+    "spiders": [
+      {
+        "spiderType": "atende_v2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "atende_v2",
+          "citySubdomain": "gravatai"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_novo_hamburgo",
+    "name": "Novo Hamburgo - RS",
+    "territoryId": "4313409",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub consolidado.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Novo Hamburgo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_viamao",
+    "name": "Viamão - RS",
+    "territoryId": "4314050",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em viamao.rs.gov.br/portal/diario-oficial. Plataforma Instar com API dados abertos.",
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.viamao.rs.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_sao_leopoldo",
+    "name": "São Leopoldo - RS",
+    "territoryId": "4318705",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub consolidado.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "6586",
+          "cityName": "São Leopoldo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_passo_fundo",
+    "name": "Passo Fundo - RS",
+    "territoryId": "4314101",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via grp.pmpf.rs.gov.br. Sistema GRP com acesso externo.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturapassofundo",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapassofundo",
+          "baseUrl": "https://www.pmpf.rs.gov.br",
+          "domUrl": "https://grp.pmpf.rs.gov.br/grp/acessoexterno/programaAcessoExterno.faces?codigo=693795",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  }
+]

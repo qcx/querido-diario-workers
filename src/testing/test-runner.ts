@@ -306,6 +306,14 @@ export class TestRunner {
    * Gets the date range for testing
    */
   private getDateRange(): DateRange {
+    // Use custom date range if provided
+    if (this.config.customDateRange) {
+      return {
+        start: this.config.customDateRange.start,
+        end: this.config.customDateRange.end,
+      };
+    }
+
     const end = new Date();
     const searchDays = this.config.searchDays || 7; // Default to 7 if undefined
     const start = subDays(end, searchDays);

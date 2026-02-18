@@ -1,0 +1,806 @@
+[
+  {
+    "id": "pr_curitiba",
+    "name": "Curitiba - PR",
+    "territoryId": "4106902",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracuritiba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracuritiba",
+          "baseUrl": "https://legisladocexterno.curitiba.pr.gov.br/DiarioConsultaExterna_Pesquisa.aspx"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_londrina",
+    "name": "Londrina - PR",
+    "territoryId": "4113700",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituralondrina",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituralondrina",
+          "baseUrl": "https://portal.londrina.pr.gov.br/busca-jornal"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_maringa",
+    "name": "Maringá - PR",
+    "territoryId": "4115200",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituramaringa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramaringa",
+          "baseUrl": "https://pr.portaldatransparencia.com.br/prefeitura/maringa/?pagina=dop"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_ponta_grossa",
+    "name": "Ponta Grossa - PR",
+    "territoryId": "4119905",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapontagrossa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapontagrossa",
+          "baseUrl": "https://pontagrossa.oxy.elotech.com.br/portaltransparencia/1/diario-oficial",
+          "gedApiUrl": "https://pontagrossa.oxy.elotech.com.br/ged-api/api/file/get-file-content"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_cascavel",
+    "name": "Cascavel - PR",
+    "territoryId": "4104808",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracascavel",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracascavel",
+          "baseUrl": "https://diario.ciasop.pr.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_sao_jose_dos_pinhais",
+    "name": "São José dos Pinhais - PR",
+    "territoryId": "4125506",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasjp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasjp",
+          "baseUrl": "https://diariooficial.sjp.pr.gov.br/servicos/doe/index.php",
+          "entityId": "12526"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_foz_do_iguacu",
+    "name": "Foz do Iguaçu - PR",
+    "territoryId": "4108304",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturafoz",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturafoz",
+          "baseUrl": "https://transparencia.foz.pr.gov.br/portaltransparencia/1/diario-oficial",
+          "gedApiUrl": "https://foz.oxy.elotech.com.br/ged-api/api/file/get-file-content"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_colombo",
+    "name": "Colombo - PR",
+    "territoryId": "4106407",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "colombo",
+          "cityName": "Colombo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_guarapuava",
+    "name": "Guarapuava - PR",
+    "territoryId": "4109401",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraguarapuava",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraguarapuava",
+          "baseUrl": "https://guarapuava.pr.gov.br/boletins-oficiais/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_araucaria",
+    "name": "Araucária - PR",
+    "territoryId": "4101804",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraraucaria",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraraucaria",
+          "baseUrl": "http://aplicacoes.araucaria.pr.gov.br/grp/diario/portal/publicacao.php"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_paranagua",
+    "name": "Paranaguá - PR",
+    "territoryId": "4118204",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "16026",
+          "cityName": "Paranaguá"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_almirante_tamandare",
+    "name": "Almirante Tamandaré - PR",
+    "territoryId": "4100400",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "10741",
+          "cityName": "Almirante Tamandaré"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_piraquara",
+    "name": "Piraquara - PR",
+    "territoryId": "4119509",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "5909",
+          "cityName": "Piraquara"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_sarandi",
+    "name": "Sarandi - PR",
+    "territoryId": "4126256",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "140879",
+          "cityName": "Sarandi"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_campo_mourao",
+    "name": "Campo Mourão - PR",
+    "territoryId": "4104303",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "0",
+          "cityName": "Campo Mourão"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_paranavai",
+    "name": "Paranavaí - PR",
+    "territoryId": "4118402",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "15364",
+          "cityName": "Paranavaí"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_pato_branco",
+    "name": "Pato Branco - PR",
+    "territoryId": "4118501",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "14324",
+          "cityName": "Pato Branco"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_rolandia",
+    "name": "Rolândia - PR",
+    "territoryId": "4122404",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "7284",
+          "cityName": "Rolândia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_irati",
+    "name": "Irati - PR",
+    "territoryId": "4110706",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "15773",
+          "cityName": "Irati"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_uniao_da_vitoria",
+    "name": "União da Vitória - PR",
+    "territoryId": "4128203",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "12286",
+          "cityName": "União da Vitória"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_campina_grande_do_sul",
+    "name": "Campina Grande do Sul - PR",
+    "territoryId": "4104006",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "17604",
+          "cityName": "Campina Grande do Sul"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_paicandu",
+    "name": "Paiçandu - PR",
+    "territoryId": "4117503",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "16729",
+          "cityName": "Paiçandu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_lapa",
+    "name": "Lapa - PR",
+    "territoryId": "4113205",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "10839",
+          "cityName": "Lapa"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_dois_vizinhos",
+    "name": "Dois Vizinhos - PR",
+    "territoryId": "4107207",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "15746",
+          "cityName": "Dois Vizinhos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_guaratuba",
+    "name": "Guaratuba - PR",
+    "territoryId": "4109608",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "0",
+          "cityName": "Guaratuba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_matinhos",
+    "name": "Matinhos - PR",
+    "territoryId": "4115705",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "15516",
+          "cityName": "Matinhos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_rio_branco_do_sul",
+    "name": "Rio Branco do Sul - PR",
+    "territoryId": "4122206",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "9909",
+          "cityName": "Rio Branco do Sul"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_mandaguari",
+    "name": "Mandaguari - PR",
+    "territoryId": "4114203",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "16728",
+          "cityName": "Mandaguari"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_palmeira",
+    "name": "Palmeira - PR",
+    "territoryId": "4117701",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "10871",
+          "cityName": "Palmeira"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_pitanga",
+    "name": "Pitanga - PR",
+    "territoryId": "4119608",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "17680",
+          "cityName": "Pitanga"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_guaira",
+    "name": "Guaíra - PR",
+    "territoryId": "4108809",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "17799",
+          "cityName": "Guaíra"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_rio_negro",
+    "name": "Rio Negro - PR",
+    "territoryId": "4122305",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "8726",
+          "cityName": "Rio Negro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_bandeirantes",
+    "name": "Bandeirantes - PR",
+    "territoryId": "4102406",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "16581",
+          "cityName": "Bandeirantes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_itaperucu",
+    "name": "Itaperuçu - PR",
+    "territoryId": "4111258",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "14223",
+          "cityName": "Itaperuçu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_pontal_do_parana",
+    "name": "Pontal do Paraná - PR",
+    "territoryId": "4119954",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "15475",
+          "cityName": "Pontal do Paraná"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_campo_magro",
+    "name": "Campo Magro - PR",
+    "territoryId": "4104253",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "11398",
+          "cityName": "Campo Magro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_goioere",
+    "name": "Goioerê - PR",
+    "territoryId": "4108601",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "6076",
+          "cityName": "Goioerê"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_mandirituba",
+    "name": "Mandirituba - PR",
+    "territoryId": "4114302",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "18115",
+          "cityName": "Mandirituba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_astorga",
+    "name": "Astorga - PR",
+    "territoryId": "4102109",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "entityId": "16705",
+          "cityName": "Astorga"
+        }
+      }
+    ]
+  }
+]

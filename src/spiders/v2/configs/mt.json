@@ -1,0 +1,626 @@
+[
+  {
+    "id": "mt_cuiaba",
+    "name": "Cuiabá - MT",
+    "territoryId": "5103403",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "gazetamunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "gazetamunicipal",
+          "baseUrl": "https://gazetamunicipal.cuiaba.mt.gov.br"
+        }
+      }
+    ],
+    "notes": "Gazeta Municipal (Sistema de Publicação Oficial - API /api/api/editions). AMM-MT não publica desde 2015."
+  },
+  {
+    "id": "mt_varzea_grande",
+    "name": "Várzea Grande - MT",
+    "territoryId": "5108402",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "gazetamunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "gazetamunicipal",
+          "baseUrl": "https://diario.varzeagrande.mt.gov.br"
+        }
+      }
+    ],
+    "notes": "Diário Oficial Eletrônico (Sistema de Publicação Oficial - API /api/api/editions). AMM-MT não publica desde 2015."
+  },
+  {
+    "id": "mt_rondonopolis",
+    "name": "Rondonópolis - MT",
+    "territoryId": "5107602",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarondonopolis",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarondonopolis",
+          "baseUrl": "https://www.rondonopolis.mt.gov.br"
+        }
+      }
+    ],
+    "notes": "Diário Oficial próprio em rondonopolis.mt.gov.br/diario-oficial/. AMM-MT não publica desde 2015."
+  },
+  {
+    "id": "mt_tangara_da_serra",
+    "name": "Tangará da Serra - MT",
+    "territoryId": "5107958",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "nucleogov",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "nucleogov",
+          "baseUrl": "https://dom.tangaradaserra.mt.gov.br"
+        }
+      }
+    ],
+    "notes": "DOM próprio (NúcleoGov). AMM-MT não publica desde 2015."
+  },
+  {
+    "id": "mt_primavera_do_leste",
+    "name": "Primavera do Leste - MT",
+    "territoryId": "5107040",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraprimaveradoleste",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraprimaveradoleste",
+          "baseUrl": "https://www.primaveradoleste.mt.gov.br",
+          "listPath": "/Publicacoes/Dioprima-71"
+        }
+      }
+    ],
+    "notes": "DIOPRIMA (Diário Oficial de Primavera do Leste). AMM-MT não publica desde 2015."
+  },
+  {
+    "id": "mt_sinop",
+    "name": "Sinop - MT",
+    "territoryId": "5107909",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "entityId": "727",
+          "cityName": "Sinop"
+        }
+      }
+    ],
+    "notes": "Diário via AMM-MT (SIGPUB). Portal consolidado; edições por data em ?dia=DD&mes=MM&ano=YYYY."
+  },
+  {
+    "id": "mt_sorriso",
+    "name": "Sorriso - MT",
+    "territoryId": "5107925",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "cespro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "cespro",
+          "baseUrl": "https://sorriso.cespro.com.br",
+          "cdMunicipio": "4430"
+        }
+      }
+    ],
+    "notes": "Diário Oficial via Cespro (sorriso.cespro.com.br/visualizarDiarioOficial.php?cdMunicipio=4430). AMM-MT não publica desde 2015."
+  },
+  {
+    "id": "mt_lucas_do_rio_verde",
+    "name": "Lucas do Rio Verde - MT",
+    "territoryId": "5105259",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Lucas do Rio Verde"
+        }
+      }
+    ],
+    "notes": "Diário via AMM-MT (SIGPUB). Portal consolidado; edições por data em ?dia=DD&mes=MM&ano=YYYY."
+  },
+  {
+    "id": "mt_caceres",
+    "name": "Cáceres - MT",
+    "territoryId": "5102504",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Cáceres"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal amm.diariomunicipal.org). Edições por data em /edicoes/?dex=YYYY-MM-DD."
+  },
+  {
+    "id": "mt_barra_do_garcas",
+    "name": "Barra do Garças - MT",
+    "territoryId": "5101803",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Barra do Garças"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org - edicoes/?dex=YYYY-MM-DD)."
+  },
+  {
+    "id": "mt_alta_floresta",
+    "name": "Alta Floresta - MT",
+    "territoryId": "5100250",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Alta Floresta"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org). Edições por data em /edicoes/?dex=YYYY-MM-DD."
+  },
+  {
+    "id": "mt_nova_mutum",
+    "name": "Nova Mutum - MT",
+    "territoryId": "5106224",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Nova Mutum"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_pontes_e_lacerda",
+    "name": "Pontes e Lacerda - MT",
+    "territoryId": "5106752",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "cespro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "cespro",
+          "baseUrl": "https://cespro.com.br",
+          "cdMunicipio": "4377"
+        }
+      }
+    ],
+    "notes": "Diário Oficial via CESPRO (visualizarDiarioOficial.php?cdMunicipio=4377). Requer browser."
+  },
+  {
+    "id": "mt_campo_novo_do_parecis",
+    "name": "Campo Novo do Parecis - MT",
+    "territoryId": "5102637",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Campo Novo do Parecis"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_juina",
+    "name": "Juína - MT",
+    "territoryId": "5105150",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Juína"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_campo_verde",
+    "name": "Campo Verde - MT",
+    "territoryId": "5102678",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Campo Verde"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_confresa",
+    "name": "Confresa - MT",
+    "territoryId": "5103353",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Confresa"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_juara",
+    "name": "Juara - MT",
+    "territoryId": "5105101",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Juara"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_peixoto_de_azevedo",
+    "name": "Peixoto de Azevedo - MT",
+    "territoryId": "5106422",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Peixoto de Azevedo"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_colider",
+    "name": "Colíder - MT",
+    "territoryId": "5103205",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Colíder"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_pocone",
+    "name": "Poconé - MT",
+    "territoryId": "5106505",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Poconé"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_guaranta_do_norte",
+    "name": "Guarantã do Norte - MT",
+    "territoryId": "5104104",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialguarantadonorte",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialguarantadonorte",
+          "baseUrl": "https://diariooficial.guarantadonorte.mt.gov.br"
+        }
+      }
+    ],
+    "notes": "Diário Oficial próprio em diariooficial.guarantadonorte.mt.gov.br/edicoes/ (tabela HTML com paginação)."
+  },
+  {
+    "id": "mt_barra_do_bugres",
+    "name": "Barra do Bugres - MT",
+    "territoryId": "5101704",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Barra do Bugres"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_agua_boa",
+    "name": "Água Boa - MT",
+    "territoryId": "5100201",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Água Boa"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_sapezal",
+    "name": "Sapezal - MT",
+    "territoryId": "5107875",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Sapezal"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_jaciara",
+    "name": "Jaciara - MT",
+    "territoryId": "5104807",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Jaciara"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_mirassol_doeste",
+    "name": "Mirassol d'Oeste - MT",
+    "territoryId": "5105622",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Mirassol d'Oeste"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_querencia",
+    "name": "Querência - MT",
+    "territoryId": "5107065",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Querência"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_paranatinga",
+    "name": "Paranatinga - MT",
+    "territoryId": "5106307",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Paranatinga"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_canarana",
+    "name": "Canarana - MT",
+    "territoryId": "5102702",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Canarana"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_colniza",
+    "name": "Colniza - MT",
+    "territoryId": "5103254",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Colniza"
+        }
+      }
+    ],
+    "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  }
+]

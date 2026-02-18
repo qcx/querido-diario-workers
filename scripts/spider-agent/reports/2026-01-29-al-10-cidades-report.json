@@ -1,0 +1,223 @@
+{
+  "timestamp": "2026-01-29T16:00:00Z",
+  "stateCode": "AL",
+  "configFile": "src/spiders/v2/configs/al.json",
+  "summary": {
+    "total": 10,
+    "used_existing_spider": 6,
+    "needs_review": 0,
+    "created_new_spider": 4,
+    "skipped_already_exists": 0
+  },
+  "results": [
+    {
+      "cidade": "Maceió",
+      "url": "https://www.diariomunicipal.com.br/maceio/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2704302",
+      "entityId": "3493",
+      "platform": "SIGPub (Maceió)",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    },
+    {
+      "cidade": "Arapiraca",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2700300",
+      "entityId": "3910",
+      "platform": "SIGPub (AMA)",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    },
+    {
+      "cidade": "Rio Largo",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2707701",
+      "entityId": "2169",
+      "platform": "SIGPub (AMA)",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    },
+    {
+      "cidade": "Palmeira dos Índios",
+      "url": "https://diario.io.org.br/11052",
+      "status": "created_new_spider",
+      "spiderType": "diarioio",
+      "territoryId": "2706307",
+      "clientId": "11052",
+      "platform": "DiarioIO (IMAP)",
+      "filesCreated": [
+        "src/spiders/base/diarioio-spider.ts",
+        "src/types/spider-config.ts (updated)",
+        "src/spiders/base/index.ts (updated)",
+        "src/spiders/registry-manager.ts (updated)",
+        "src/spiders/v2/configs/al.json (updated)"
+      ],
+      "notes": "Spider criado para plataforma diario.io.org.br com browser rendering"
+    },
+    {
+      "cidade": "Marechal Deodoro",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2704708",
+      "entityId": "2997",
+      "platform": "SIGPub (AMA)",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    },
+    {
+      "cidade": "União dos Palmares",
+      "url": "https://www.diariomunicipal-al.com.br/uniao/",
+      "status": "created_new_spider",
+      "spiderType": "diariomunicipalalwordpress",
+      "territoryId": "2709301",
+      "platform": "WordPress Blog",
+      "filesCreated": [
+        "src/spiders/base/diariomunicipalalwordpress-spider.ts",
+        "src/types/spider-config.ts (updated)",
+        "src/spiders/base/index.ts (updated)",
+        "src/spiders/registry-manager.ts (updated)",
+        "src/spiders/v2/configs/al.json (updated)"
+      ],
+      "notes": "Spider criado para portal WordPress com posts paginados"
+    },
+    {
+      "cidade": "Penedo",
+      "url": "https://diario.io.org.br/11064",
+      "status": "created_new_spider",
+      "spiderType": "diarioio",
+      "territoryId": "2706703",
+      "clientId": "11064",
+      "platform": "DiarioIO (IMAP)",
+      "filesCreated": [
+        "src/spiders/base/diarioio-spider.ts (shared)",
+        "src/spiders/v2/configs/al.json (updated)"
+      ],
+      "notes": "Reuso do spider diarioio criado para Palmeira dos Índios"
+    },
+    {
+      "cidade": "São Miguel dos Campos",
+      "url": "https://app.kalana.com.br/?c=12264222000109&r=diariooficial&u=0000",
+      "status": "created_new_spider",
+      "spiderType": "kalana",
+      "territoryId": "2708600",
+      "cnpj": "12264222000109",
+      "platform": "Kalana (React SPA)",
+      "filesCreated": [
+        "src/spiders/base/kalana-spider.ts",
+        "src/types/spider-config.ts (updated)",
+        "src/spiders/base/index.ts (updated)",
+        "src/spiders/registry-manager.ts (updated)",
+        "src/spiders/v2/configs/al.json (updated)"
+      ],
+      "notes": "Spider criado para plataforma Kalana com browser rendering"
+    },
+    {
+      "cidade": "Delmiro Gouveia",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2702405",
+      "entityId": "2097",
+      "platform": "SIGPub (AMA)",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    },
+    {
+      "cidade": "Coruripe",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2702306",
+      "entityId": "2976",
+      "platform": "SIGPub (AMA)",
+      "alternativeUrl": "https://diario.coruripe.al.gov.br/",
+      "notes": "Também tem portal próprio em diario.coruripe.al.gov.br, mas usando AMA/SIGPub",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    }
+  ],
+  "platformsFound": {
+    "sigpub_maceio": {
+      "url": "https://www.diariomunicipal.com.br/maceio/",
+      "cities": ["Maceió"],
+      "status": "implemented"
+    },
+    "sigpub_ama": {
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "cities": [
+        "Arapiraca",
+        "Rio Largo",
+        "Marechal Deodoro",
+        "Delmiro Gouveia",
+        "Coruripe"
+      ],
+      "status": "implemented"
+    },
+    "diarioio": {
+      "url": "https://diario.io.org.br/",
+      "cities": ["Palmeira dos Índios", "Penedo"],
+      "status": "implemented",
+      "spiderType": "diarioio",
+      "requiresClientRendering": true
+    },
+    "diariomunicipal_al_wordpress": {
+      "url": "https://www.diariomunicipal-al.com.br/",
+      "cities": ["União dos Palmares"],
+      "status": "implemented",
+      "spiderType": "diariomunicipalalwordpress"
+    },
+    "kalana": {
+      "url": "https://app.kalana.com.br/",
+      "cities": ["São Miguel dos Campos"],
+      "status": "implemented",
+      "spiderType": "kalana",
+      "requiresClientRendering": true
+    }
+  },
+  "filesCreated": [
+    "src/spiders/base/diarioio-spider.ts (new)",
+    "src/spiders/base/diariomunicipalalwordpress-spider.ts (new)",
+    "src/spiders/base/kalana-spider.ts (new)",
+    "src/types/spider-config.ts (updated - added 3 new spider types and configs)",
+    "src/spiders/base/index.ts (updated - added 3 new spider exports)",
+    "src/spiders/registry-manager.ts (updated - added 3 new spider cases)",
+    "src/spiders/v2/configs/al.json (updated - all 10 cities now active)",
+    "src/spiders/v2/registry.ts (updated - added AL import)"
+  ],
+  "newSpiderTypes": [
+    {
+      "type": "diarioio",
+      "platform": "DiarioIO (IMAP)",
+      "description": "Spider para plataforma diario.io.org.br usada por municípios em Alagoas",
+      "requiresClientRendering": true,
+      "cities": ["Palmeira dos Índios", "Penedo"]
+    },
+    {
+      "type": "diariomunicipalalwordpress",
+      "platform": "DiárioMunicipal-AL WordPress",
+      "description": "Spider para portal WordPress diariomunicipal-al.com.br",
+      "requiresClientRendering": false,
+      "cities": ["União dos Palmares"]
+    },
+    {
+      "type": "kalana",
+      "platform": "Kalana (React SPA)",
+      "description": "Spider para plataforma Kalana usada por municípios brasileiros",
+      "requiresClientRendering": true,
+      "cities": ["São Miguel dos Campos"]
+    }
+  ],
+  "ibgeCodes": {
+    "Maceió": "2704302",
+    "Arapiraca": "2700300",
+    "Rio Largo": "2707701",
+    "Palmeira dos Índios": "2706307",
+    "Marechal Deodoro": "2704708",
+    "União dos Palmares": "2709301",
+    "Penedo": "2706703",
+    "São Miguel dos Campos": "2708600",
+    "Delmiro Gouveia": "2702405",
+    "Coruripe": "2702306"
+  }
+}

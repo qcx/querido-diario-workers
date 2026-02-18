@@ -1,0 +1,10 @@
+{
+  "cidade": "Grajaú",
+  "ibge": "2104800",
+  "urlDiario": "https://www.grajau.ma.gov.br/diario-oficial",
+  "estrutura": "Site é uma Single Page Application (SPA) React. A página /diario-oficial existe e retorna HTTP 200, mas o conteúdo é renderizado via JavaScript. Não foi possível determinar a estrutura exata (tabela, lista, calendário) sem renderização completa do browser. O site também possui uma seção de transparência em /transparencia.",
+  "padraoUrl": "Não identificado - requer análise com browser renderizado para identificar padrão de URLs dos PDFs",
+  "plataforma": "Não identificada - site customizado React, não parece ser uma plataforma conhecida (Gestor Web, Aplus, Assesi, etc)",
+  "requiresClientRendering": true,
+  "notas": "Site requer JavaScript para renderização completa. A aplicação React carrega conteúdo dinamicamente. É necessário usar um browser com JavaScript habilitado para analisar a estrutura completa da página do diário oficial, identificar como os PDFs são organizados, filtros de data disponíveis e padrão de URLs. URLs alternativas testadas: /diariooficial e /transparencia/diario-oficial também retornam 200, mas são rotas da mesma SPA."
+}

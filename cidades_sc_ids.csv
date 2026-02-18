@@ -1,0 +1,296 @@
+﻿Cidade;ID Config;Territory ID (IBGE);Municipio ID (DOM/SC)
+Abdon Batista;sc_abdon_batista;4200051;226
+Abelardo Luz;sc_abelardo_luz;4200101;1
+Agrolândia;sc_agrolandia;4200200;32
+Agronômica;sc_agronomica;4200309;33
+Alfredo Wagner;sc_alfredo_wagner;4200705;140
+Alto Bela Vista;sc_alto_bela_vista;4200754;17
+Anchieta;sc_anchieta;4200804;77
+Angelina;sc_angelina;4200903;141
+Anita Garibaldi;sc_anita_garibaldi;4201000;269
+Anitápolis;sc_anitapolis;4201109;142
+Antônio Carlos;sc_antonio_carlos;4201208;143
+Apiúna;sc_apiuna;4201257;161
+Arabutã;sc_arabuta;4201273;18
+Araquari;sc_araquari;4201307;189
+Araranguá;sc_ararangua;4201406;113
+Armazém;sc_armazem;4201505;243
+Arroio Trinta;sc_arroio_trinta;4201604;60
+Arvoredo;sc_arvoredo;4201653;19
+Ascurra;sc_ascurra;4201703;162
+Atalanta;sc_atalanta;4201802;34
+Aurora;sc_aurora;4201901;35
+Balneário Arroio do Silva;sc_balneario_arroio_do_silva;4201950;114
+Balneário Barra do Sul;sc_balneario_barra_do_sul;4202057;190
+Balneário Camboriú;sc_balneario_camboriu;4202008;128
+Balneário Gaivota;sc_balneario_gaivota;4202073;115
+Balneário Piçarras;sc_balneario_picarras;4212809;137
+Balneário Rincão;sc_balneario_rincao;4220000;294
+Bandeirante;sc_bandeirante;4202081;95
+Barra Bonita;sc_barra_bonita;4202099;96
+Barra Velha;sc_barra_velha;4202107;287
+Bela Vista do Toldo;sc_bela_vista_do_toldo;4202131;261
+Belmonte;sc_belmonte;4202156;97
+Benedito Novo;sc_benedito_novo;4202206;163
+Biguaçu;sc_biguacu;4202305;144
+Blumenau;sc_blumenau;4202404;164
+Bocaina do Sul;sc_bocaina_do_sul;4202438;270
+Bom Jardim da Serra;sc_bom_jardim_da_serra;4202503;271
+Bom Jesus;sc_bom_jesus;4202537;2
+Bom Jesus do Oeste;sc_bom_jesus_do_oeste;4202578;78
+Bom Retiro;sc_bom_retiro;4202602;272
+Bombinhas;sc_bombinhas;4202453;129
+Botuverá;sc_botuvera;4202701;165
+Braço do Norte;sc_braco_do_norte;4202800;244
+Braço do Trombudo;sc_braco_do_trombudo;4202859;36
+Brunópolis;sc_brunopolis;4202875;227
+Brusque;sc_brusque;4202909;166
+Caibi;sc_caibi;4203105;79
+Calmon;sc_calmon;4203154;62
+Camboriú;sc_camboriu;4203204;130
+Campo Alegre;sc_campo_alegre;4203303;191
+Campo Belo do Sul;sc_campo_belo_do_sul;4203402;273
+Campo Erê;sc_campo_ere;4203501;80
+Campos Novos;sc_campos_novos;4203600;228
+Canelinha;sc_canelinha;4203709;145
+Canoinhas;sc_canoinhas;4203808;262
+Capinzal;sc_capinzal;4203907;176
+Capivari de Baixo;sc_capivari_de_baixo;4203956;245
+Capão Alto;sc_capao_alto;4203253;274
+Catanduvas;sc_catanduvas;4204004;177
+Caxambu do Sul;sc_caxambu_do_sul;4204103;204
+Caçador;sc_cacador;4203006;61
+Celso Ramos;sc_celso_ramos;4204152;229
+Cerro Negro;sc_cerro_negro;4204178;275
+Chapadão do Lageado;sc_chapadao_do_lageado;4204194;37
+Chapecó;sc_chapeco;4204202;205
+Cocal do Sul;sc_cocal_do_sul;4204251;233
+Concórdia;sc_concordia;4204301;20
+Cordilheira Alta;sc_cordilheira_alta;4204350;206
+Coronel Freitas;sc_coronel_freitas;4204400;207
+Coronel Martins;sc_coronel_martins;4204459;3
+Correia Pinto;sc_correia_pinto;4204558;276
+Corupá;sc_corupa;4204509;288
+Criciúma;sc_criciuma;4204608;234
+Cunha Porã;sc_cunha_pora;4204707;81
+Cunhataí;sc_cunhatai;4204756;82
+Curitibanos;sc_curitibanos;4204806;63
+Descanso;sc_descanso;4204905;98
+Dionísio Cerqueira;sc_dionisio_cerqueira;4205001;99
+Dona Emma;sc_dona_emma;4205100;38
+Doutor Pedrinho;sc_doutor_pedrinho;4205159;167
+Entre Rios;sc_entre_rios;4205175;4
+Ermo;sc_ermo;4205191;116
+Erval Velho;sc_erval_velho;4205209;178
+Faxinal dos Guedes;sc_faxinal_dos_guedes;4205308;5
+Flor do Sertão;sc_flor_do_sertao;4205357;83
+Florianópolis;sc_florianopolis;4205407;146
+Formosa do Sul;sc_formosa_do_sul;4205431;208
+Forquilhinha;sc_forquilhinha;4205456;235
+Fraiburgo;sc_fraiburgo;4205506;64
+Frei Rogério;sc_frei_rogerio;4205555;65
+Galvão;sc_galvao;4205605;6
+Garopaba;sc_garopaba;4205704;147
+Garuva;sc_garuva;4205803;192
+Gaspar;sc_gaspar;4205902;168
+Governador Celso Ramos;sc_governador_celso_ramos;4206009;148
+Gravatal;sc_gravatal;4206207;247
+Grão-Pará;sc_grao-para;4206108;246
+Guabiruba;sc_guabiruba;4206306;169
+Guaraciaba;sc_guaraciaba;4206405;100
+Guaramirim;sc_guaramirim;4206504;289
+Guarujá do Sul;sc_guaruja_do_sul;4206603;101
+Guatambú;sc_guatambu;4206652;209
+Herval d'Oeste;sc_herval_doeste;4206702;179
+Ibiam;sc_ibiam;4206751;66
+Ibicaré;sc_ibicare;4206801;180
+Ibirama;sc_ibirama;4206900;39
+Ilhota;sc_ilhota;4207106;131
+Imaruí;sc_imarui;4207205;248
+Imbituba;sc_imbituba;4207304;249
+Imbuia;sc_imbuia;4207403;40
+Indaial;sc_indaial;4207502;170
+Iomerê;sc_iomere;4207577;67
+Ipira;sc_ipira;4207601;21
+Iporã do Oeste;sc_ipora_do_oeste;4207650;102
+Ipuaçu;sc_ipuacu;4207684;7
+Ipumirim;sc_ipumirim;4207700;22
+Iraceminha;sc_iraceminha;4207759;84
+Irani;sc_irani;4207809;23
+Irati;sc_irati;4207858;210
+Irineópolis;sc_irineopolis;4207908;263
+Itaiópolis;sc_itaiopolis;4208104;222
+Itajaí;sc_itajai;4208203;132
+Itapema;sc_itapema;4208302;133
+Itapiranga;sc_itapiranga;4208401;103
+Itapoá;sc_itapoa;4208450;197
+Ituporanga;sc_ituporanga;4208500;41
+Itá;sc_ita;4208005;24
+Içara;sc_icara;4207007;236
+Jaborá;sc_jabora;4208609;181
+Jacinto Machado;sc_jacinto_machado;4208708;117
+Jaguaruna;sc_jaguaruna;4208807;250
+Jaraguá do Sul;sc_jaragua_do_sul;4208906;290
+Jardinópolis;sc_jardinopolis;4208955;211
+Joaçaba;sc_joacaba;4209003;182
+Joinville;sc_joinville;4209102;193
+José Boiteux;sc_jose_boiteux;4209151;42
+Jupiá;sc_jupia;4209177;198
+Lacerdópolis;sc_lacerdopolis;4209201;183
+Lages;sc_lages;4209300;277
+Laguna;sc_laguna;4209409;251
+Lajeado Grande;sc_lajeado_grande;4209458;8
+Laurentino;sc_laurentino;4209508;43
+Lauro Müller;sc_lauro_muller;4209607;237
+Lebon Régis;sc_lebon_regis;4209706;264
+Leoberto Leal;sc_leoberto_leal;4209805;149
+Lindóia do Sul;sc_lindoia_do_sul;4209854;25
+Lontras;sc_lontras;4209904;44
+Luiz Alves;sc_luiz_alves;4210001;134
+Luzerna;sc_luzerna;4210035;184
+Macieira;sc_macieira;4210050;68
+Mafra;sc_mafra;4210100;223
+Major Gercino;sc_major_gercino;4210209;150
+Major Vieira;sc_major_vieira;4210308;265
+Maracajá;sc_maracaja;4210407;118
+Maravilha;sc_maravilha;4210506;85
+Marema;sc_marema;4210555;9
+Massaranduba;sc_massaranduba;4210605;291
+Matos Costa;sc_matos_costa;4210704;266
+Meleiro;sc_meleiro;4210803;119
+Mirim Doce;sc_mirim_doce;4210852;45
+Modelo;sc_modelo;4210902;86
+Mondaí;sc_mondai;4211009;104
+Monte Carlo;sc_monte_carlo;4211058;230
+Monte Castelo;sc_monte_castelo;4211108;224
+Morro Grande;sc_morro_grande;4211256;120
+Morro da Fumaça;sc_morro_da_fumaca;4211207;238
+Navegantes;sc_navegantes;4211306;135
+Nova Erechim;sc_nova_erechim;4211405;212
+Nova Itaberaba;sc_nova_itaberaba;4211454;213
+Nova Trento;sc_nova_trento;4211504;151
+Nova Veneza;sc_nova_veneza;4211603;239
+Novo Horizonte;sc_novo_horizonte;4211652;199
+Orleans;sc_orleans;4211702;252
+Otacílio Costa;sc_otacilio_costa;4211751;278
+Ouro;sc_ouro;4211801;185
+Ouro Verde;sc_ouro_verde;4211850;10
+Paial;sc_paial;4211876;26
+Painel;sc_painel;4211892;279
+Palhoça;sc_palhoca;4211900;152
+Palma Sola;sc_palma_sola;4212007;105
+Palmeira;sc_palmeira;4212056;280
+Palmitos;sc_palmitos;4212106;87
+Papanduva;sc_papanduva;4212205;225
+Paraíso;sc_paraiso;4212239;106
+Passo de Torres;sc_passo_de_torres;4212254;121
+Passos Maia;sc_passos_maia;4212270;11
+Paulo Lopes;sc_paulo_lopes;4212304;153
+Pedras Grandes;sc_pedras_grandes;4212403;253
+Penha;sc_penha;4212502;136
+Peritiba;sc_peritiba;4212601;27
+Pescaria Brava;sc_pescaria_brava;4212650;295
+Petrolândia;sc_petrolandia;4212700;46
+Pinhalzinho;sc_pinhalzinho;4212908;214
+Pinheiro Preto;sc_pinheiro_preto;4213005;69
+Piratuba;sc_piratuba;4213104;28
+Planalto Alegre;sc_planalto_alegre;4213153;215
+Pomerode;sc_pomerode;4213203;171
+Ponte Alta;sc_ponte_alta;4213302;281
+Ponte Alta do Norte;sc_ponte_alta_do_norte;4213351;70
+Ponte Serrada;sc_ponte_serrada;4213401;12
+Porto Belo;sc_porto_belo;4213500;138
+Porto União;sc_porto_uniao;4213609;267
+Pouso Redondo;sc_pouso_redondo;4213708;47
+Praia Grande;sc_praia_grande;4213807;122
+Presidente Castello Branco;sc_presidente_castello_branco;4213906;29
+Presidente Getúlio;sc_presidente_getulio;4214003;48
+Presidente Nereu;sc_presidente_nereu;4214102;49
+Princesa;sc_princesa;4214151;107
+Quilombo;sc_quilombo;4214201;216
+Rancho Queimado;sc_rancho_queimado;4214300;154
+Rio Fortuna;sc_rio_fortuna;4214904;254
+Rio Negrinho;sc_rio_negrinho;4215000;194
+Rio Rufino;sc_rio_rufino;4215059;282
+Rio das Antas;sc_rio_das_antas;4214409;71
+Rio do Campo;sc_rio_do_campo;4214508;50
+Rio do Oeste;sc_rio_do_oeste;4214607;51
+Rio do Sul;sc_rio_do_sul;4214805;52
+Rio dos Cedros;sc_rio_dos_cedros;4214706;172
+Riqueza;sc_riqueza;4215075;88
+Rodeio;sc_rodeio;4215109;173
+Romelândia;sc_romelandia;4215208;89
+Salete;sc_salete;4215307;53
+Saltinho;sc_saltinho;4215356;90
+Salto Veloso;sc_salto_veloso;4215406;72
+Sangão;sc_sangao;4215455;255
+Santa Cecília;sc_santa_cecilia;4215505;73
+Santa Helena;sc_santa_helena;4215554;108
+Santa Rosa de Lima;sc_santa_rosa_de_lima;4215604;256
+Santa Rosa do Sul;sc_santa_rosa_do_sul;4215653;123
+Santa Terezinha;sc_santa_terezinha;4215679;54
+Santa Terezinha do Progresso;sc_santa_terezinha_do_progresso;4215687;91
+Santiago do Sul;sc_santiago_do_sul;4215695;217
+Santo Amaro da Imperatriz;sc_santo_amaro_da_imperatriz;4215703;155
+Saudades;sc_saudades;4217303;93
+Schroeder;sc_schroeder;4217402;293
+Seara;sc_seara;4217501;30
+Serra Alta;sc_serra_alta;4217550;219
+Siderópolis;sc_sideropolis;4217600;240
+Sombrio;sc_sombrio;4217709;125
+Sul Brasil;sc_sul_brasil;4217758;220
+São Bento do Sul;sc_sao_bento_do_sul;4215802;195
+São Bernardino;sc_sao_bernardino;4215752;200
+São Bonifácio;sc_sao_bonifacio;4215901;156
+São Carlos;sc_sao_carlos;4216008;218
+São Cristóvão do Sul;sc_sao_cristovao_do_sul;4216057;74
+São Domingos;sc_sao_domingos;4216107;13
+São Francisco do Sul;sc_sao_francisco_do_sul;4216206;196
+São Joaquim;sc_sao_joaquim;4216503;283
+São José;sc_sao_jose;4216602;158
+São José do Cedro;sc_sao_jose_do_cedro;4216701;110
+São José do Cerrito;sc_sao_jose_do_cerrito;4216800;284
+São João Batista;sc_sao_joao_batista;4216305;157
+São João do Itaperiú;sc_sao_joao_do_itaperiu;4216354;292
+São João do Oeste;sc_sao_joao_do_oeste;4216255;109
+São João do Sul;sc_sao_joao_do_sul;4216404;124
+São Lourenço do Oeste;sc_sao_lourenco_do_oeste;4216909;201
+São Ludgero;sc_sao_ludgero;4217006;257
+São Martinho;sc_sao_martinho;4217105;258
+São Miguel da Boa Vista;sc_sao_miguel_da_boa_vista;4217154;92
+São Miguel do Oeste;sc_sao_miguel_do_oeste;4217204;111
+São Pedro de Alcântara;sc_sao_pedro_de_alcantara;4217253;159
+Taió;sc_taio;4217808;55
+Tangará;sc_tangara;4217907;186
+Tigrinhos;sc_tigrinhos;4217956;94
+Tijucas;sc_tijucas;4218004;160
+Timbé do Sul;sc_timbe_do_sul;4218103;126
+Timbó;sc_timbo;4218202;174
+Timbó Grande;sc_timbo_grande;4218251;75
+Treviso;sc_treviso;4218350;241
+Treze Tílias;sc_treze_tilias;4218509;187
+Treze de Maio;sc_treze_de_maio;4218400;259
+Trombudo Central;sc_trombudo_central;4218608;56
+Três Barras;sc_tres_barras;4218301;268
+Tubarão;sc_tubarao;4218707;260
+Tunápolis;sc_tunapolis;4218756;112
+Turvo;sc_turvo;4218806;127
+União do Oeste;sc_uniao_do_oeste;4218855;221
+Urubici;sc_urubici;4218905;285
+Urupema;sc_urupema;4218954;286
+Urussanga;sc_urussanga;4219002;242
+Vargem;sc_vargem;4219150;231
+Vargem Bonita;sc_vargem_bonita;4219176;188
+Vargeão;sc_vargeao;4219101;14
+Vidal Ramos;sc_vidal_ramos;4219200;57
+Videira;sc_videira;4219309;76
+Vitor Meireles;sc_vitor_meireles;4219358;58
+Witmarsum;sc_witmarsum;4219408;59
+Xanxerê;sc_xanxere;4219507;15
+Xavantina;sc_xavantina;4219606;31
+Xaxim;sc_xaxim;4219705;16
+Zortéa;sc_zortea;4219853;232
+Água Doce;sc_agua_doce;4200408;175
+Águas Frias;sc_aguas_frias;4200556;203
+Águas Mornas;sc_aguas_mornas;4200606;139
+Águas de Chapecó;sc_aguas_de_chapeco;4200507;202

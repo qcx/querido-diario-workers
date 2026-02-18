@@ -144,12 +144,15 @@ export class SigpubSpider extends BaseSpider {
         `Fetched HTML (first 500 chars): ${response.substring(0, 500)}`,
       );
 
+      // Normalize HTML entities - pages return &amp; instead of &
+      const normalizedHtml = response.replace(/&amp;/g, "&");
+
       // Extract PDF URLs from the HTML
       // Pattern: https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=XXX&i=publicado_XXX_YYYY-MM-DD_hash.pdf
       const pdfUrlRegex =
         /https:\/\/www-storage\.voxtecnologia\.com\.br\/\?m=sigpub\.publicacao&f=(\d+)&i=publicado_(\d+)_(\d{4}-\d{2}-\d{2})_[a-f0-9]+\.pdf/g;
 
-      const matches = response.matchAll(pdfUrlRegex);
+      const matches = normalizedHtml.matchAll(pdfUrlRegex);
       let matchCount = 0;
       const seenDates = new Set<string>();
 

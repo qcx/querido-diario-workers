@@ -67,8 +67,11 @@ export class DiarioMunicipioSJCSpider extends BaseSpider {
       logger.debug(`Fetching editions for ${dateStr}`);
 
       try {
-        const response = await fetch(url);
-        
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 15000);
+        const response = await fetch(url, { signal: controller.signal });
+        clearTimeout(timeoutId);
+
         if (!response.ok) {
           logger.warn(`Failed to fetch ${url}: ${response.status}`);
           continue;
@@ -103,8 +106,13 @@ export class DiarioMunicipioSJCSpider extends BaseSpider {
 
           gazettes.push(gazette);
         }
-      } catch (error) {
-        logger.error(`Error fetching editions for ${dateStr}: ${error}`);
+      } catch (error: unknown) {
+        const msg = error instanceof Error ? error.message : String(error);
+        if (msg.includes("abort") || (error as { name?: string })?.name === "AbortError") {
+          logger.warn(`Timeout fetching editions for ${dateStr}`);
+        } else {
+          logger.error(`Error fetching editions for ${dateStr}: ${msg}`);
+        }
       }
     }
 

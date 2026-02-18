@@ -129,6 +129,18 @@ export class DrizzleTelemetryService {
     try {
       const db = this.dbClient.getDb();
 
+      // Validate required fields - territoryId must be present and non-empty
+      if (!stepData.territoryId || (typeof stepData.territoryId === 'string' && stepData.territoryId.trim() === '')) {
+        const errorMessage = `TerritoryId is required for telemetry record but was missing or empty. crawlJobId: ${stepData.crawlJobId}, spiderId: ${stepData.spiderId}, step: ${stepData.step}`;
+        logger.error('Cannot record telemetry: territoryId is missing or empty', new Error(errorMessage), {
+          crawlJobId: stepData.crawlJobId,
+          spiderId: stepData.spiderId,
+          step: stepData.step,
+          territoryId: stepData.territoryId
+        });
+        throw new Error(errorMessage);
+      }
+
       const telemetryRecord = {
         id: this.dbClient.generateId(),
         crawlJobId: stepData.crawlJobId,

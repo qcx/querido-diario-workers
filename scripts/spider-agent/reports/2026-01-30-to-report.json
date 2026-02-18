@@ -1,0 +1,174 @@
+{
+  "timestamp": "2026-01-30T12:00:00Z",
+  "csvFile": "manual_input",
+  "stateCode": "TO",
+  "configFile": "src/spiders/v2/configs/to.json",
+  "summary": {
+    "total": 7,
+    "created_new_spider": 5,
+    "used_existing_spider": 0,
+    "skipped_already_exists": 0,
+    "needs_review": 1,
+    "active": 6,
+    "inactive": 1
+  },
+  "spiderTypesCreated": [
+    "diagramacao",
+    "prefeiturapalmas",
+    "prefeituragurupi",
+    "nucleogov",
+    "prefeituraaraguaina"
+  ],
+  "filesCreated": [
+    "src/spiders/base/diagramacao-spider.ts",
+    "src/spiders/base/prefeiturapalmas-spider.ts",
+    "src/spiders/base/prefeituragurupi-spider.ts",
+    "src/spiders/base/nucleogov-spider.ts",
+    "src/spiders/base/prefeituraaraguaina-spider.ts"
+  ],
+  "filesUpdated": [
+    "src/spiders/base/index.ts",
+    "src/spiders/registry.ts",
+    "src/spiders/registry-manager.ts",
+    "src/spiders/v2/registry.ts",
+    "src/spiders/v2/configs/to.json",
+    "src/types/spider-config.ts"
+  ],
+  "results": [
+    {
+      "cidade": "Palmas",
+      "url": "http://diariooficial.palmas.to.gov.br",
+      "status": "created_new_spider",
+      "spiderType": "prefeiturapalmas",
+      "territoryId": "1721000",
+      "matchedPattern": "Lista paginada com edições e links de download",
+      "filesCreated": [
+        "src/spiders/base/prefeiturapalmas-spider.ts",
+        "src/types/spider-config.ts (updated)",
+        "src/spiders/base/index.ts (updated)",
+        "src/spiders/registry.ts (updated)",
+        "src/spiders/registry-manager.ts (updated)",
+        "src/spiders/v2/configs/to.json (updated)"
+      ],
+      "notes": "Capital do Tocantins. Site próprio com lista paginada de diários e download direto de PDFs."
+    },
+    {
+      "cidade": "Araguaína",
+      "url": "https://diariooficial.araguaina.to.gov.br",
+      "status": "created_new_spider",
+      "spiderType": "prefeituraaraguaina",
+      "territoryId": "1702109",
+      "matchedPattern": "Interface moderna com calendário e busca por data",
+      "filesCreated": [
+        "src/spiders/base/prefeituraaraguaina-spider.ts",
+        "src/types/spider-config.ts (updated)",
+        "src/spiders/base/index.ts (updated)",
+        "src/spiders/registry.ts (updated)",
+        "src/spiders/registry-manager.ts (updated)",
+        "src/spiders/v2/configs/to.json (updated)"
+      ],
+      "notes": "Segunda maior cidade do Tocantins. Site moderno com busca por conteúdo, número de edição e intervalo de datas."
+    },
+    {
+      "cidade": "Gurupi",
+      "url": "https://diariooficial.gurupi.to.gov.br",
+      "status": "created_new_spider",
+      "spiderType": "prefeituragurupi",
+      "territoryId": "1709500",
+      "matchedPattern": "Interface moderna com calendário e lista de edições",
+      "filesCreated": [
+        "src/spiders/base/prefeituragurupi-spider.ts",
+        "src/types/spider-config.ts (updated)",
+        "src/spiders/base/index.ts (updated)",
+        "src/spiders/registry.ts (updated)",
+        "src/spiders/registry-manager.ts (updated)",
+        "src/spiders/v2/configs/to.json (updated)"
+      ],
+      "notes": "Terceira maior cidade do Tocantins. Diário oficial eletrônico moderno com calendário de publicações e estatísticas."
+    },
+    {
+      "cidade": "Porto Nacional",
+      "url": "https://diariooficial.portonacional.to.gov.br",
+      "status": "needs_review",
+      "spiderType": "custom",
+      "territoryId": "1718204",
+      "attemptsLog": [
+        "Tentativa 1: Acessar URL diariooficial.portonacional.to.gov.br - redirecionou para SIGPub da AROM (Rondônia)",
+        "Tentativa 2: Verificar se há outra URL - não encontrada",
+        "Tentativa 3: Buscar no Google por diário oficial Porto Nacional TO - resultados apontam para mesma URL problemática"
+      ],
+      "analysis": {
+        "impossibleReason": "URL do diário oficial redireciona incorretamente para sistema de outro estado (Rondônia)",
+        "siteStatus": "Redirecionamento incorreto",
+        "recommendation": "Contatar prefeitura para obter URL correta do diário oficial ou verificar se há publicação em outro portal"
+      },
+      "notes": "A URL oficial redireciona para o SIGPub da Associação Rondoniense de Municípios (AROM), que é de Rondônia, não Tocantins."
+    },
+    {
+      "cidade": "Paraíso do Tocantins",
+      "url": "https://diariooficial.paraiso.to.gov.br",
+      "status": "created_new_spider",
+      "spiderType": "nucleogov",
+      "territoryId": "1716109",
+      "matchedPattern": "Plataforma NúcleoGov com calendário e filtros",
+      "filesCreated": [
+        "src/spiders/base/nucleogov-spider.ts",
+        "src/types/spider-config.ts (updated)",
+        "src/spiders/base/index.ts (updated)",
+        "src/spiders/registry.ts (updated)",
+        "src/spiders/registry-manager.ts (updated)",
+        "src/spiders/v2/configs/to.json (updated)"
+      ],
+      "notes": "Usa plataforma NúcleoGov. Interface com calendário, filtros por órgão e tipo de matéria, verificação de autenticidade."
+    },
+    {
+      "cidade": "Colinas do Tocantins",
+      "url": "https://diario.colinas.to.gov.br",
+      "status": "created_new_spider",
+      "spiderType": "diagramacao",
+      "territoryId": "1705508",
+      "matchedPattern": "Plataforma de Diagramação v3.08",
+      "filesCreated": [
+        "src/spiders/base/diagramacao-spider.ts",
+        "src/types/spider-config.ts (updated)",
+        "src/spiders/base/index.ts (updated)",
+        "src/spiders/registry.ts (updated)",
+        "src/spiders/registry-manager.ts (updated)",
+        "src/spiders/v2/configs/to.json (updated)"
+      ],
+      "notes": "Usa Plataforma de Diagramação v3.08. Lista de edições com calendário, visualização online e download de PDFs assinados digitalmente."
+    },
+    {
+      "cidade": "Araguatins",
+      "url": "https://www.araguatins.to.gov.br/diariooficial",
+      "status": "used_existing_spider",
+      "spiderType": "diagramacao",
+      "territoryId": "1702208",
+      "matchedPattern": "Mesma Plataforma de Diagramação de Colinas",
+      "filesCreated": ["src/spiders/v2/configs/to.json (updated)"],
+      "notes": "Usa mesma Plataforma de Diagramação de Colinas do Tocantins. Reutilizou o spider diagramacao criado para Colinas."
+    }
+  ],
+  "platformsIdentified": {
+    "prefeiturapalmas": {
+      "description": "Site próprio da Prefeitura de Palmas com lista paginada de diários",
+      "cities": ["Palmas"]
+    },
+    "prefeituraaraguaina": {
+      "description": "Site próprio da Prefeitura de Araguaína com interface moderna",
+      "cities": ["Araguaína"]
+    },
+    "prefeituragurupi": {
+      "description": "Site próprio da Prefeitura de Gurupi com calendário moderno",
+      "cities": ["Gurupi"]
+    },
+    "nucleogov": {
+      "description": "Plataforma NúcleoGov com calendário e filtros",
+      "cities": ["Paraíso do Tocantins"]
+    },
+    "diagramacao": {
+      "description": "Plataforma de Diagramação v3.08 usada por múltiplos municípios",
+      "cities": ["Colinas do Tocantins", "Araguatins"]
+    }
+  }
+}

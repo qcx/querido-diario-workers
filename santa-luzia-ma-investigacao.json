@@ -1,0 +1,10 @@
+{
+  "cidade": "Santa Luzia",
+  "ibge": "2110005",
+  "urlDiario": "https://santaluzia.ma.gov.br/diario-oficial",
+  "estrutura": "A página principal (/diario-oficial) exibe apenas a última edição com link direto para o PDF. A página /edicoes mostra uma lista de edições recentes (cerca de 12-15 edições) em formato de cards, cada um com: título 'DIÁRIO OFICIAL ELETRÔNICO', volume/número (ex: 'Vol 6 | Nº 1169/2026'), data (ex: '27/01/2026') e link 'Baixar' direto para o PDF. Não há tabela ou calendário visível. Os PDFs são organizados como links diretos, sem páginas intermediárias.",
+  "padraoUrl": "https://santaluzia.ma.gov.br/upload/diario_oficial/{hash}.pdf - onde {hash} pode ser um hash SHA1 (ex: 0AF234027E3BE2A97AF30C930B3CF6EA5357433C0) ou um número simples (ex: 52485.pdf). Também há casos com formato diario_ofical_YYYY-MM-DD.pdf",
+  "plataforma": "Não identificada claramente. Parece ser um CMS customizado da prefeitura, possivelmente baseado em PHP. Há referências a 'painel' de administração em /painel.",
+  "requiresClientRendering": false,
+  "notas": "A página principal mostra apenas a última edição. Para acessar edições anteriores, há uma página /edicoes que lista as edições recentes. Existe também uma página /edicoes-anteriores que pode conter mais edições históricas, mas não foi possível verificar completamente seu conteúdo. Os PDFs usam diferentes padrões de nomenclatura: alguns usam hash SHA1 (40 caracteres hexadecimais), outros usam números simples, e há casos com formato de data no nome do arquivo. Não foram identificados filtros de data visíveis na interface. A estrutura é simples e o conteúdo básico é renderizado no servidor, não requerendo JavaScript para visualização inicial."
+}
