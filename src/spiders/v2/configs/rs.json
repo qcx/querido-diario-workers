@@ -26,7 +26,7 @@
     "territoryId": "4305108",
     "stateCode": "RS",
     "active": true,
-    "notes": "DOE em doe.caxias.rs.gov.br. Edições em /site/janela/{id}.",
+    "notes": "DOE em doe.caxias.rs.gov.br. Yii GridView com busca por data e download direto /site/download/{id}.",
     "spiders": [
       {
         "spiderType": "prefeituracaxiasdosul",
@@ -36,7 +36,7 @@
         "config": {
           "type": "prefeituracaxiasdosul",
           "baseUrl": "https://doe.caxias.rs.gov.br",
-          "requiresClientRendering": true
+          "requiresClientRendering": false
         }
       }
     ]
@@ -47,7 +47,7 @@
     "territoryId": "4304606",
     "stateCode": "RS",
     "active": true,
-    "notes": "DOM em sistemas.canoas.rs.gov.br/domc. Calendário e busca por data.",
+    "notes": "DOMC em sistemas.canoas.rs.gov.br/domc. API pública Laravel: /api/public/diary-by-day?day=DD/MM/YYYY.",
     "spiders": [
       {
         "spiderType": "prefeituracanoas",
@@ -56,8 +56,7 @@
         "gazetteScope": "city",
         "config": {
           "type": "prefeituracanoas",
-          "baseUrl": "https://sistemas.canoas.rs.gov.br/domc",
-          "requiresClientRendering": true
+          "baseUrl": "https://sistemas.canoas.rs.gov.br/domc"
         }
       }
     ]
@@ -90,7 +89,7 @@
     "territoryId": "4316907",
     "stateCode": "RS",
     "active": true,
-    "notes": "Diário em santamaria.rs.gov.br. Repositório e transparência.",
+    "notes": "Santa Maria não possui DOM consolidado. Atos oficiais (editais) publicados em santamaria.rs.gov.br/editais com PDFs.",
     "spiders": [
       {
         "spiderType": "prefeiturasantamaria",
@@ -100,7 +99,7 @@
         "config": {
           "type": "prefeiturasantamaria",
           "baseUrl": "https://www.santamaria.rs.gov.br",
-          "requiresClientRendering": true
+          "requiresClientRendering": false
         }
       }
     ]
@@ -156,14 +155,14 @@
     "notes": "Diário em viamao.rs.gov.br/portal/diario-oficial. Plataforma Instar com API dados abertos.",
     "spiders": [
       {
-        "spiderType": "instar",
+        "spiderType": "instar_dados_abertos",
         "priority": 1,
         "active": true,
         "gazetteScope": "city",
         "config": {
-          "type": "instar",
-          "url": "https://www.viamao.rs.gov.br/portal/diario-oficial",
-          "requiresClientRendering": true
+          "type": "instar_dados_abertos",
+          "baseUrl": "https://www.viamao.rs.gov.br/portal/diario-oficial",
+          "dadosAbertosUrl": "https://www.viamao.rs.gov.br/portal/dados-abertos/diario-oficial"
         }
       }
     ]
@@ -824,6 +823,1011 @@
           "url": "https://www.diariomunicipal.com.br/famurs/",
           "entityId": "0",
           "cityName": "Capão do Leão"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_cachoeirinha",
+    "name": "Cachoeirinha - RS",
+    "territoryId": "4303103",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em cachoeirinha.atende.net/diariooficial. Plataforma Atende.net com API paginada.",
+    "spiders": [
+      {
+        "spiderType": "atende_v2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "atende_v2",
+          "citySubdomain": "cachoeirinha"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_bento_goncalves",
+    "name": "Bento Gonçalves - RS",
+    "territoryId": "4302105",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em bentogoncalves.oxy.elotech.com.br. Plataforma Elotech OXY com API GED.",
+    "spiders": [
+      {
+        "spiderType": "prefeiturabentogoncalves",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabentogoncalves",
+          "baseUrl": "https://bentogoncalves.oxy.elotech.com.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_bage",
+    "name": "Bagé - RS",
+    "territoryId": "4301602",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via SERPRO DOE (cidadesdoe.serpro.gov.br). OutSystems SPA, requer browser.",
+    "spiders": [
+      {
+        "spiderType": "serpro_doe",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "serpro_doe",
+          "hash": "eQJpm=Qsio5G=7tFAXJlF=hrIsVqGJ92JabaSQgbJFE=",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_uruguaiana",
+    "name": "Uruguaiana - RS",
+    "territoryId": "4322400",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs) ou DOE-RS. Investigar entityId específico.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Uruguaiana"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_lajeado",
+    "name": "Lajeado - RS",
+    "territoryId": "4311403",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs) ou DOE-RS. Investigar entityId específico.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Lajeado"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_ijui",
+    "name": "Ijuí - RS",
+    "territoryId": "4310207",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Status: needs_review. Sem DO municipal próprio identificado. Pode estar em FAMURS ou DOE-RS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Ijuí"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_cachoeira_do_sul",
+    "name": "Cachoeira do Sul - RS",
+    "territoryId": "4303004",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em cachoeiradosul.rs.gov.br/portal/diario-oficial. Plataforma Instar com listagem em HTML.",
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.cachoeiradosul.rs.gov.br/portal/diario-oficial",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_santa_rosa",
+    "name": "Santa Rosa - RS",
+    "territoryId": "4317202",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Status: needs_review. Sem DO eletrônico unificado. Publicações dispersas em categorias.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Santa Rosa"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_sapiranga",
+    "name": "Sapiranga - RS",
+    "territoryId": "4319901",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via CESPRO (cespro.com.br). cdMunicipio=7946.",
+    "spiders": [
+      {
+        "spiderType": "cespro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "cespro",
+          "baseUrl": "https://cespro.com.br",
+          "cdMunicipio": "7946"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_farroupilha",
+    "name": "Farroupilha - RS",
+    "territoryId": "4307906",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em pmfarroupilha.domeletronico.com.br. Plataforma Dom Eletrônico. Última edição: 27/03/2024.",
+    "spiders": [
+      {
+        "spiderType": "domeletronico",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "domeletronico",
+          "baseUrl": "http://pmfarroupilha.domeletronico.com.br",
+          "municipioCode": "4307906",
+          "nomePasta": "dopmfarroupilha"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_montenegro",
+    "name": "Montenegro - RS",
+    "territoryId": "4312401",
+    "stateCode": "RS",
+    "active": false,
+    "notes": "Status: needs_review. Diário via SERPRO cidadesdoe.serpro.gov.br. SPA que requer JS. Sem spider existente para esta plataforma.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Montenegro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_camaqua",
+    "name": "Camaquã - RS",
+    "territoryId": "4303509",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em camaqua.atende.net/diariooficial. Plataforma Atende.net com API paginada.",
+    "spiders": [
+      {
+        "spiderType": "atende_v2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "atende_v2",
+          "citySubdomain": "camaqua"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_carazinho",
+    "name": "Carazinho - RS",
+    "territoryId": "4304705",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em carazinho.rs.gov.br/portal/diario-oficial. Plataforma Instar com API dados abertos.",
+    "spiders": [
+      {
+        "spiderType": "instar_dados_abertos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar_dados_abertos",
+          "baseUrl": "https://www.carazinho.rs.gov.br/portal/diario-oficial",
+          "dadosAbertosUrl": "https://www.carazinho.rs.gov.br/portal/dados-abertos/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_sao_borja",
+    "name": "São Borja - RS",
+    "territoryId": "4318002",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS. Também disponível no site próprio saoborja.rs.gov.br (Joomla).",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "2237051",
+          "cityName": "São Borja"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_cruz_alta",
+    "name": "Cruz Alta - RS",
+    "territoryId": "4306106",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em cruzalta.atende.net/diariooficial. Plataforma Atende.net com API paginada.",
+    "spiders": [
+      {
+        "spiderType": "atende_v2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "atende_v2",
+          "citySubdomain": "cruzalta"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_cangucu",
+    "name": "Canguçu - RS",
+    "territoryId": "4304507",
+    "stateCode": "RS",
+    "active": false,
+    "notes": "Diário em cangucu.rs.gov.br/portal/diario-oficial. Plataforma Instar com API dados abertos. Sem edições publicadas até o momento.",
+    "spiders": [
+      {
+        "spiderType": "instar_dados_abertos",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar_dados_abertos",
+          "baseUrl": "https://www.cangucu.rs.gov.br/portal/diario-oficial",
+          "dadosAbertosUrl": "https://www.cangucu.rs.gov.br/portal/dados-abertos/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_canela",
+    "name": "Canela - RS",
+    "territoryId": "4304408",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via CESPRO (cespro.com.br). cdMunicipio=7337.",
+    "spiders": [
+      {
+        "spiderType": "cespro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "cespro",
+          "baseUrl": "https://cespro.com.br",
+          "cdMunicipio": "7337"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_estancia_velha",
+    "name": "Estância Velha - RS",
+    "territoryId": "4307609",
+    "stateCode": "RS",
+    "active": false,
+    "notes": "Status: needs_review. Página de DO existe em estanciavelha.rs.gov.br/diario-oficial mas sem edições publicadas. Não usa FAMURS nem Atende.net.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Estância Velha"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_marau",
+    "name": "Marau - RS",
+    "territoryId": "4311809",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via DiOE/Imprensa Oficial Municipal (imprensaoficialmunicipal.com.br/marau). Plataforma DOSP.",
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "dosp",
+          "url": "https://www.imprensaoficialmunicipal.com.br/marau"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_panambi",
+    "name": "Panambi - RS",
+    "territoryId": "4313904",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em panambi.atende.net/diariooficial. Plataforma Atende.net com API paginada.",
+    "spiders": [
+      {
+        "spiderType": "atende_v2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "atende_v2",
+          "citySubdomain": "panambi"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_sao_lourenco_do_sul",
+    "name": "São Lourenço do Sul - RS",
+    "territoryId": "4318804",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em saolourencodosul.rs.gov.br/portal/diario-oficial. Plataforma Instar com listagem em HTML.",
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.saolourencodosul.rs.gov.br/portal/diario-oficial",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_torres",
+    "name": "Torres - RS",
+    "territoryId": "4321501",
+    "stateCode": "RS",
+    "active": false,
+    "notes": "Status: needs_review. Sem DO municipal consolidado. Torres publica portarias individuais em torres.rs.gov.br/prefeitura/portarias/ (Ponto Transparente/Betha). Não está em FAMURS, atende.net ou CESPRO.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Torres"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_gramado",
+    "name": "Gramado - RS",
+    "territoryId": "4309100",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em gramado.atende.net/diariooficial. Plataforma Atende.net com API paginada.",
+    "spiders": [
+      {
+        "spiderType": "atende_v2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "atende_v2",
+          "citySubdomain": "gramado"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_dom_pedrito",
+    "name": "Dom Pedrito - RS",
+    "territoryId": "4306601",
+    "stateCode": "RS",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Dom Pedrito"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_rosario_do_sul",
+    "name": "Rosário do Sul - RS",
+    "territoryId": "4316402",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Rosário do Sul"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_charqueadas",
+    "name": "Charqueadas - RS",
+    "territoryId": "4305355",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "1671960",
+          "cityName": "Charqueadas"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_sao_luiz_gonzaga",
+    "name": "São Luiz Gonzaga - RS",
+    "territoryId": "4318903",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "1793094",
+          "cityName": "São Luiz Gonzaga"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_rio_pardo",
+    "name": "Rio Pardo - RS",
+    "territoryId": "4315701",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em riopardo.rs.gov.br/portal/diario-oficial. Plataforma Instar com API dados abertos.",
+    "spiders": [
+      {
+        "spiderType": "instar_dados_abertos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar_dados_abertos",
+          "baseUrl": "https://www.riopardo.rs.gov.br/portal/diario-oficial",
+          "dadosAbertosUrl": "https://www.riopardo.rs.gov.br/portal/dados-abertos/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_garibaldi",
+    "name": "Garibaldi - RS",
+    "territoryId": "4308607",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Garibaldi"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_portao",
+    "name": "Portão - RS",
+    "territoryId": "4314803",
+    "stateCode": "RS",
+    "active": false,
+    "notes": "Status: needs_review. Sem DO municipal consolidado. Site portao.rs.gov.br (Instar) não possui seção de diário oficial. Não está em FAMURS. portao.atende.net indisponível (502). CESPRO sem edições.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Portão"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_palmeira_das_missoes",
+    "name": "Palmeira das Missões - RS",
+    "territoryId": "4313706",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Palmeira das Missões"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_igrejinha",
+    "name": "Igrejinha - RS",
+    "territoryId": "4310108",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via CESPRO (cespro.com.br). cdMunicipio=7565.",
+    "spiders": [
+      {
+        "spiderType": "cespro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "cespro",
+          "baseUrl": "https://cespro.com.br",
+          "cdMunicipio": "7565"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_teutonia",
+    "name": "Teutônia - RS",
+    "territoryId": "4321451",
+    "stateCode": "RS",
+    "active": false,
+    "notes": "Status: needs_review. Site próprio teutonia.rs.gov.br/diario-oficial com PDFs diretos organizados por mês. Plataforma custom (possivelmente WordPress). CESPRO e Atende sem edições. Necessita spider custom para extração de PDFs.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Teutônia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_frederico_westphalen",
+    "name": "Frederico Westphalen - RS",
+    "territoryId": "4308508",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via CESPRO (cespro.com.br). cdMunicipio=7527.",
+    "spiders": [
+      {
+        "spiderType": "cespro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "cespro",
+          "baseUrl": "https://cespro.com.br",
+          "cdMunicipio": "7527"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_cacapava_do_sul",
+    "name": "Caçapava do Sul - RS",
+    "territoryId": "4302808",
+    "stateCode": "RS",
+    "active": false,
+    "notes": "Status: needs_review. Site próprio cacapavadosul.rs.gov.br/diario-oficial com lista de atos oficiais (editais, dispensas) e PDFs diretos. Estrutura similar a prefeiturasantamaria. Necessita spider custom.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Caçapava do Sul"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_estrela",
+    "name": "Estrela - RS",
+    "territoryId": "4307807",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em estrela.atende.net/diariooficial. Plataforma Atende.net com API paginada.",
+    "spiders": [
+      {
+        "spiderType": "atende_v2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "atende_v2",
+          "citySubdomain": "estrela"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_santa_vitoria_do_palmar",
+    "name": "Santa Vitória do Palmar - RS",
+    "territoryId": "4317301",
+    "stateCode": "RS",
+    "active": false,
+    "notes": "Status: needs_review. Usa plataforma 1Doc (santavitoriadopalmar.1doc.com.br). Não existe spider para 1Doc. Atende retorna 502. Não consta em FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Santa Vitória do Palmar"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_carlos_barbosa",
+    "name": "Carlos Barbosa - RS",
+    "territoryId": "4304804",
+    "stateCode": "RS",
+    "active": false,
+    "notes": "Status: needs_review. Site próprio carlosbarbosa.rs.gov.br/arquivos/diario-oficial com lista HTML, filtro por ano e PDFs diretos via CDN (cdn-gw.webdehost.com.br). Necessita spider custom.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Carlos Barbosa"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_soledade",
+    "name": "Soledade - RS",
+    "territoryId": "4320800",
+    "stateCode": "RS",
+    "active": false,
+    "notes": "Status: needs_review. Sem DO municipal consolidado encontrado. Não consta em FAMURS. soledade.rs.gov.br/portal/diario-oficial retorna 404. Atende indisponível. CESPRO sem edições publicadas.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Soledade"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_nova_santa_rita",
+    "name": "Nova Santa Rita - RS",
+    "territoryId": "4313375",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS. entityId=153225.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "153225",
+          "cityName": "Nova Santa Rita"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_candelaria",
+    "name": "Candelária - RS",
+    "territoryId": "4304200",
+    "stateCode": "RS",
+    "active": false,
+    "notes": "Status: source_unavailable. candelaria.atende.net retorna 503 (Service Unavailable). Plataforma Atende.net offline para Candelária. Não consta em FAMURS/SIGPub. CESPRO sem edições (cdMunicipio=4304200 retorna 0 resultados). Site municipal (candelaria.rs.gov.br) apenas linka para Atende. Sem fonte alternativa de DO identificada. Última verificação: 2026-02-19.",
+    "spiders": [
+      {
+        "spiderType": "atende_v2",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "atende_v2",
+          "citySubdomain": "candelaria"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_lagoa_vermelha",
+    "name": "Lagoa Vermelha - RS",
+    "territoryId": "4311304",
+    "stateCode": "RS",
+    "active": false,
+    "notes": "Status: needs_review. Sem DO municipal consolidado encontrado. Não consta em FAMURS. Atende indisponível. Instar retorna 404. CESPRO sem edições. Câmara e leismunicipais.com.br têm publicações mas sem DOM consolidado.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Lagoa Vermelha"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_vera_cruz",
+    "name": "Vera Cruz - RS",
+    "territoryId": "4322707",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário em veracruz.rs.gov.br/portal/diario-oficial. Plataforma Instar com API dados abertos. ~1902 edições.",
+    "spiders": [
+      {
+        "spiderType": "instar_dados_abertos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar_dados_abertos",
+          "baseUrl": "https://www.veracruz.rs.gov.br/portal/diario-oficial",
+          "dadosAbertosUrl": "https://www.veracruz.rs.gov.br/portal/dados-abertos/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_jaguarao",
+    "name": "Jaguarão - RS",
+    "territoryId": "4311007",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Jaguarão"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_nova_prata",
+    "name": "Nova Prata - RS",
+    "territoryId": "4313300",
+    "stateCode": "RS",
+    "active": true,
+    "notes": "Diário via FAMURS (diariomunicipal.com.br/famurs). SIGPub FAMURS. Site próprio novaprata.rs.gov.br/diariooficial tem poucas edições antigas.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Nova Prata"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_sao_jose_do_norte",
+    "name": "São José do Norte - RS",
+    "territoryId": "4318507",
+    "stateCode": "RS",
+    "active": false,
+    "notes": "Status: needs_review. Diário em diario.saojosedonorte.rs.gov.br. Plataforma Dynamika/Yii2 com edições recentes. URLs: /diario-oficial/view/{id} e /diario-oficial/versao-pdf/{id}. Similar a prefeituracaxiasdosul mas com URL patterns diferentes. Necessita spider custom.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "São José do Norte"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_tres_passos",
+    "name": "Três Passos - RS",
+    "territoryId": "4321907",
+    "stateCode": "RS",
+    "active": false,
+    "notes": "Status: needs_review. Sem DO municipal consolidado encontrado. trespassos.rs.gov.br (Betha) não tem seção de diário oficial. Não consta em FAMURS. CESPRO sem edições. imprensaoficialmunicipal.com.br/tres_passos sem edições.",
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "entityId": "0",
+          "cityName": "Três Passos"
         }
       }
     ]

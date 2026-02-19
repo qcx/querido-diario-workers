@@ -1,305 +1,150 @@
-import puppeteer from '@cloudflare/puppeteer';
-import { BaseSpider } from './base-spider';
-import { SpiderConfig, Gazette, DateRange, CesproConfig } from '../../types';
-import { logger } from '../../utils/logger';
+import { BaseSpider } from "./base-spider";
+import { SpiderConfig, Gazette, DateRange, CesproConfig } from "../../types";
+import { fetchWithRetry } from "../../utils/http-client";
+import { logger } from "../../utils/logger";
+import { toISODate } from "../../utils/date-utils";
+
+const CESPRO_API_BASE = "https://cespro.com.br/_data/api.php";
+const PAGE_SIZE = 10;
+
+interface CesproGazetteEntry {
+  cd_diario_oficial: string;
+  nr_diario_oficial: string;
+  cd_municipio: string;
+  dt_diario_oficial: string;
+  nr_paginas: string;
+  nr_visualizacoes: string;
+  tx_url_file: string | null;
+  ds_hora_publicacao: string;
+  dados_diario_oficial_diploma_pesquisa: unknown[];
+}
+
+interface CesproApiResponse {
+  dados_diario_oficial_pesquisa: CesproGazetteEntry[];
+  dados_paginacao: Record<string, string | number>;
+  dados_nr_page: number;
+  nr_diario_oficial: number;
+}
 
 /**
- * CesproSpider implementation for Cloudflare Workers
- * 
- * The CESPRO platform is used by municipalities like Ribeirão Preto and São Sebastião.
- * 
- * Site Structure:
- * - URL: https://cespro.com.br/visualizarDiarioOficial.php?cdMunicipio={code}
- * - Calendar view with month/year selectors
- * - Day links that navigate to gazette list for that day
- * - Download and "Leitura Digital" links for each edition
- * 
- * Requires browser rendering for JavaScript calendar interaction
+ * HTTP-only spider for the CESPRO platform (cespro.com.br).
+ *
+ * Uses the Vue app's JSON API directly — no browser required.
+ * API: POST _data/api.php?cdMunicipio=X&busca=t&dataInicial=...&dataFinal=...&operacao=content-diario-oficial
+ * Body: { "ID": X, "page": N }
  */
 export class CesproSpider extends BaseSpider {
   private cesproConfig: CesproConfig;
-  private browser: Fetcher | null = null;
 
-  constructor(spiderConfig: SpiderConfig, dateRange: DateRange, browser?: Fetcher) {
+  constructor(spiderConfig: SpiderConfig, dateRange: DateRange) {
     super(spiderConfig, dateRange);
     this.cesproConfig = spiderConfig.config as CesproConfig;
-    this.browser = browser || null;
-    
+
     logger.info(`Initializing CesproSpider for ${spiderConfig.name}`, {
-      hasBrowser: !!this.browser,
-      cdMunicipio: this.cesproConfig.cdMunicipio
+      cdMunicipio: this.cesproConfig.cdMunicipio,
     });
   }
 
-  /**
-   * Set browser instance (for queue consumer context)
-   */
-  setBrowser(browser: Fetcher): void {
-    this.browser = browser;
-  }
-
   async crawl(): Promise<Gazette[]> {
-    if (!this.browser) {
-      logger.error(`CesproSpider requires browser binding for ${this.spiderConfig.name}`);
-      return [];
-    }
-
     const gazettes: Gazette[] = [];
-    let browserInstance = null;
-    let page = null;
+    const startStr = toISODate(this.startDate);
+    const endStr = toISODate(this.endDate);
 
-    try {
-      // Launch browser
-      browserInstance = await puppeteer.launch(this.browser);
-      page = await browserInstance.newPage();
-      
-      // Build URL
-      const url = `${this.cesproConfig.baseUrl}/visualizarDiarioOficial.php?cdMunicipio=${this.cesproConfig.cdMunicipio}`;
-      
-      logger.info(`Navigating to CESPRO: ${url}`);
-      await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
-      this.requestCount++;
-      
-      // Wait for calendar to load
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Get date range info
-      const startDate = new Date(this.dateRange.start);
-      const endDate = new Date(this.dateRange.end);
-      
-      logger.info(`Crawling CESPRO from ${startDate.toISOString()} to ${endDate.toISOString()}`);
-      
-      // Iterate through months in the date range
-      const currentMonth = new Date(startDate.getFullYear(), startDate.getMonth(), 1);
-      const endMonth = new Date(endDate.getFullYear(), endDate.getMonth(), 1);
-      
-      while (currentMonth <= endMonth) {
-        const year = currentMonth.getFullYear();
-        const month = currentMonth.getMonth() + 1; // 1-indexed for display
-        
-        logger.debug(`Processing ${month}/${year}`);
-        
-        // Select year and month
-        await this.selectMonthYear(page, year, month);
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        // Extract gazette links for this month
-        const monthGazettes = await this.extractGazettesForMonth(page, year, month);
-        
-        // Add all gazettes from this month (date filtering already done in extractGazettesForMonth)
-        for (const gazette of monthGazettes) {
-          if (gazette) {
-            gazettes.push(gazette);
-          }
-        }
-        
-        logger.debug(`Found ${monthGazettes.length} gazettes for ${month}/${year}`);
-        
-        // Move to next month
-        currentMonth.setMonth(currentMonth.getMonth() + 1);
+    logger.info(
+      `Crawling CESPRO ${this.cesproConfig.cdMunicipio} from ${startStr} to ${endStr}`,
+    );
+
+    let page = 1;
+    let hasMore = true;
+
+    while (hasMore) {
+      const result = await this.fetchPage(page, startStr, endStr);
+      if (!result) break;
+
+      for (const entry of result.entries) {
+        const gazette = await this.entryToGazette(entry);
+        if (gazette) gazettes.push(gazette);
       }
-      
-      logger.info(`Successfully crawled ${gazettes.length} gazettes from CESPRO`);
-      
-    } catch (error) {
-      logger.error(`Error crawling CESPRO:`, error as Error);
-    } finally {
-      if (page) await page.close().catch(() => {});
-      if (browserInstance) await browserInstance.close().catch(() => {});
+
+      hasMore = result.hasNextPage;
+      page++;
+
+      if (page > 100) {
+        logger.warn("CESPRO pagination safety limit reached (100 pages)");
+        break;
+      }
     }
 
+    logger.info(`CESPRO crawl complete: ${gazettes.length} gazettes found`);
     return gazettes;
   }
 
-  /**
-   * Select month and year in the calendar dropdowns
-   */
-  private async selectMonthYear(page: any, year: number, month: number): Promise<void> {
-    try {
-      // Month names in Portuguese
-      const monthNames = [
-        'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
-        'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
-      ];
-      
-      const monthName = monthNames[month - 1];
-      
-      // Select year
-      await page.evaluate((yr: number) => {
-        const yearSelect = document.querySelector('select[name*="ano"], select:has(option[value="2025"])') as unknown as HTMLSelectElement | null;
-        if (yearSelect) {
-          yearSelect.value = yr.toString();
-          yearSelect.dispatchEvent(new Event('change', { bubbles: true }));
-        }
-      }, year);
-      
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
-      // Select month
-      await page.evaluate((mon: string) => {
-        const selects = document.querySelectorAll('select');
-        for (const select of Array.from(selects)) {
-          const options = select.querySelectorAll('option');
-          for (const option of Array.from(options)) {
-            if (option.textContent?.trim() === mon) {
-              (select as HTMLSelectElement).value = option.value;
-              select.dispatchEvent(new Event('change', { bubbles: true }));
-              return;
-            }
-          }
-        }
-      }, monthName);
-      
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-    } catch (error) {
-      logger.warn(`Error selecting month/year: ${error}`);
-    }
-  }
+  private async fetchPage(
+    page: number,
+    startDate: string,
+    endDate: string,
+  ): Promise<{ entries: CesproGazetteEntry[]; hasNextPage: boolean } | null> {
+    const cdMun = this.cesproConfig.cdMunicipio;
+    const qs = new URLSearchParams({
+      cdMunicipio: cdMun,
+      busca: "t",
+      dataInicial: startDate,
+      dataFinal: endDate,
+      operacao: "content-diario-oficial",
+    });
 
-  /**
-   * Extract gazette entries for the current month view
-   */
-  private async extractGazettesForMonth(page: any, year: number, month: number): Promise<Gazette[]> {
-    const gazettes: Gazette[] = [];
-    
+    const url = `${CESPRO_API_BASE}?${qs.toString()}`;
+
     try {
-      // Get all day links in the calendar
-      const dayLinks = await page.evaluate(() => {
-        const links: Array<{day: number, hasGazette: boolean}> = [];
-        
-        // Find calendar table cells with links (days that have gazettes)
-        const cells = document.querySelectorAll('table td');
-        for (const cell of Array.from(cells)) {
-          const link = cell.querySelector('a');
-          const text = cell.textContent?.trim();
-          if (link && text && /^\d{1,2}$/.test(text)) {
-            links.push({
-              day: parseInt(text, 10),
-              hasGazette: true
-            });
-          }
-        }
-        
-        return links;
+      const raw = await fetchWithRetry(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json, text/plain, */*",
+        },
+        body: JSON.stringify({ ID: Number(cdMun), page }),
       });
-      
-      logger.debug(`Found ${dayLinks.length} days with gazettes in ${month}/${year}`);
-      
-      // For each day with a gazette, click and extract
-      for (const dayLink of dayLinks) {
-        try {
-          const day = dayLink.day;
-          const dateStr = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
-          const gazetteDate = new Date(dateStr);
-          
-          // Check date range before clicking
-          if (!this.isInDateRange(gazetteDate)) {
-            continue;
-          }
-          
-          // Click on the day to show gazette(s)
-          await page.evaluate((d: number) => {
-            const cells = document.querySelectorAll('table td');
-            for (const cell of Array.from(cells)) {
-              const link = cell.querySelector('a');
-              const text = cell.textContent?.trim();
-              if (link && text === d.toString()) {
-                link.click();
-                return;
-              }
-            }
-          }, day);
-          
-          await new Promise(resolve => setTimeout(resolve, 1500));
-          
-          // Extract gazette info from the expanded view
-          const gazetteInfo = await page.evaluate(() => {
-            const results: Array<{editionNumber: string, pdfUrl: string | null, isSupplementar: boolean}> = [];
-            
-            // CESPRO shows gazettes in a modal/accordion with Download links
-            // The structure is: div containing edition info + Download/Leitura Digital links
-            
-            // First try to find all download links
-            const allLinks = document.querySelectorAll('a');
-            
-            for (const link of Array.from(allLinks)) {
-              const href = link.getAttribute('href');
-              const linkText = link.textContent?.trim() || '';
-              
-              // Check if this is a Download link
-              if (linkText.toLowerCase() === 'download' && href) {
-                // Try to find edition number in the parent container
-                let container = link.closest('div[class*="row"], div.modal-body, div.panel');
-                if (!container) {
-                  container = link.parentElement?.parentElement || null;
-                }
-                
-                const containerText = container?.textContent || '';
-                
-                // Match edition number patterns like "Edição 12.311" or "Edição nº 12311"
-                const editionMatch = containerText.match(/[Ee]di[çc][ãa]o\s+(?:n[º°]?\s*)?(\d+\.?\d*)(?:-?(SUPLEMENTAR|EXTRA))?/i);
-                const isSupplementar = editionMatch ? 
-                  (editionMatch[2]?.toUpperCase() === 'SUPLEMENTAR' || editionMatch[2]?.toUpperCase() === 'EXTRA') : 
-                  containerText.toUpperCase().includes('SUPLEMENTAR') || containerText.toUpperCase().includes('EXTRA');
-                
-                results.push({
-                  editionNumber: editionMatch ? editionMatch[1].replace('.', '') : 'N/A',
-                  pdfUrl: href,
-                  isSupplementar: isSupplementar,
-                });
-              }
-            }
-            
-            // If no download links found, try to find any PDF links
-            if (results.length === 0) {
-              const pdfLinks = document.querySelectorAll('a[href*=".pdf"]');
-              for (const link of Array.from(pdfLinks)) {
-                const href = link.getAttribute('href');
-                if (href) {
-                  results.push({
-                    editionNumber: 'N/A',
-                    pdfUrl: href,
-                    isSupplementar: false,
-                  });
-                }
-              }
-            }
-            
-            return results;
-          });
-          
-          for (const info of gazetteInfo) {
-            if (info.pdfUrl) {
-              // Construct full URL if relative
-              let pdfUrl = info.pdfUrl;
-              if (!pdfUrl.startsWith('http')) {
-                const baseUrlObj = new URL(this.cesproConfig.baseUrl);
-                pdfUrl = `${baseUrlObj.origin}${pdfUrl.startsWith('/') ? '' : '/'}${pdfUrl}`;
-              }
-              
-              const gazette = await this.createGazette(gazetteDate, pdfUrl, {
-                editionNumber: info.editionNumber,
-                isExtraEdition: info.isSupplementar,
-                power: 'executive',
-              });
-              
-              if (gazette) {
-                gazettes.push(gazette);
-              }
-            }
-          }
-          
-        } catch (error) {
-          logger.warn(`Error processing day ${dayLink.day}: ${error}`);
-        }
-      }
-      
+
+      const text = raw.charCodeAt(0) === 0xfeff ? raw.slice(1) : raw;
+      const data: CesproApiResponse = JSON.parse(text);
+
+      const entries = data.dados_diario_oficial_pesquisa ?? [];
+      this.requestCount++;
+
+      logger.debug(`CESPRO page ${page}: ${entries.length} entries`);
+
+      const paginationKeys = Object.keys(data.dados_paginacao ?? {})
+        .map(Number)
+        .filter((n) => !isNaN(n));
+      const maxPage =
+        paginationKeys.length > 0 ? Math.max(...paginationKeys) : 1;
+      const hasNextPage = entries.length >= PAGE_SIZE && page < maxPage;
+
+      return { entries, hasNextPage };
     } catch (error) {
-      logger.error(`Error extracting gazettes for ${month}/${year}:`, error as Error);
+      logger.error(`Error fetching CESPRO page ${page}:`, error as Error);
+      return null;
     }
-    
-    return gazettes;
+  }
+
+  private async entryToGazette(
+    entry: CesproGazetteEntry,
+  ): Promise<Gazette | null> {
+    if (!entry.tx_url_file) return null;
+
+    const date = new Date(entry.dt_diario_oficial + "T12:00:00");
+    if (!this.isInDateRange(date)) return null;
+
+    let pdfUrl = entry.tx_url_file;
+    if (pdfUrl.includes("dropbox.com") && !pdfUrl.includes("dl=1")) {
+      pdfUrl += (pdfUrl.includes("?") ? "&" : "?") + "dl=1";
+    }
+
+    return this.createGazette(date, pdfUrl, {
+      editionNumber: entry.nr_diario_oficial,
+      isExtraEdition: false,
+      power: "executive",
+      skipUrlResolution: true,
+    });
   }
 }
-

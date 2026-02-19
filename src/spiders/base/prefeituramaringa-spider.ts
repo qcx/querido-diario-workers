@@ -59,8 +59,7 @@ export class PrefeituramaringaSpider extends BaseSpider {
     const monthNameMatch = rawDate.match(/(\d{1,2})\/(\w+)\/(\d{4})/i);
     if (monthNameMatch) {
       const [, day, monthName, year] = monthNameMatch;
-      const month =
-        PrefeituramaringaSpider.MONTH_MAP[monthName.toLowerCase()];
+      const month = PrefeituramaringaSpider.MONTH_MAP[monthName.toLowerCase()];
       if (month) {
         return `${year}-${month}-${day.padStart(2, "0")}`;
       }
@@ -95,7 +94,7 @@ export class PrefeituramaringaSpider extends BaseSpider {
 
     try {
       logger.info(
-        `Crawling Maringá (prefeituramaringa) with browser for ${this.config.name}...`
+        `Crawling Maringá (prefeituramaringa) with browser for ${this.config.name}...`,
       );
 
       browserInstance = await puppeteer.launch(this.browser!);
@@ -122,7 +121,7 @@ export class PrefeituramaringaSpider extends BaseSpider {
         for (let i = 1; i < gazetteBlocks.length; i++) {
           const gazetteHtml = gazetteBlocks[i];
           const dateMatch = gazetteHtml.match(
-            /class="data-caderno[^"]*"[^>]*>([^<]+)</
+            /class="data-caderno[^"]*"[^>]*>([^<]+)</,
           );
           if (!dateMatch) continue;
 
@@ -143,7 +142,7 @@ export class PrefeituramaringaSpider extends BaseSpider {
 
           let fileUrl: string | null = null;
           const buttonHrefMatch = gazetteHtml.match(
-            /<button[^>]*href="([^"]+)"/
+            /<button[^>]*href="([^"]+)"/,
           );
           if (buttonHrefMatch && buttonHrefMatch[1].includes("abreDocumento")) {
             const queryMatch = buttonHrefMatch[1].match(/\?(.+)/);
@@ -153,7 +152,7 @@ export class PrefeituramaringaSpider extends BaseSpider {
           }
           if (!fileUrl) {
             const onClickMatch = gazetteHtml.match(
-              /onClick="[^"]*\?pagina=abreDocumento&arquivo=([^'"]+)/
+              /onClick="[^"]*\?pagina=abreDocumento&arquivo=([^'"]+)/,
             );
             if (onClickMatch) {
               fileUrl = `${baseUrlObj.origin}${baseUrlObj.pathname}?pagina=abreDocumento&arquivo=${onClickMatch[1]}`;
@@ -161,7 +160,7 @@ export class PrefeituramaringaSpider extends BaseSpider {
           }
           if (!fileUrl) {
             const linkMatch = gazetteHtml.match(
-              /<a[^>]*href="([^"]*abreDocumento[^"]*)"/
+              /<a[^>]*href="([^"]*abreDocumento[^"]*)"/,
             );
             if (linkMatch) {
               const href = linkMatch[1];
@@ -192,7 +191,9 @@ export class PrefeituramaringaSpider extends BaseSpider {
 
         const nextPageMatch =
           html.match(/<a[^>]*class="proximo"[^>]*href="([^"]+)"/) ||
-          html.match(/<a[^>]*href="[^"]*\?[^"]*pagina=(\d+)"[^>]*>\s*»\s*<\/a>/);
+          html.match(
+            /<a[^>]*href="[^"]*\?[^"]*pagina=(\d+)"[^>]*>\s*»\s*<\/a>/,
+          );
         hasNextPage = !!nextPageMatch && foundGazettes > 0;
 
         if (hasNextPage) {
@@ -202,7 +203,7 @@ export class PrefeituramaringaSpider extends BaseSpider {
       }
 
       logger.info(
-        `Successfully crawled ${gazettes.length} gazettes from Maringá (prefeituramaringa) with browser`
+        `Successfully crawled ${gazettes.length} gazettes from Maringá (prefeituramaringa) with browser`,
       );
     } catch (error) {
       logger.error(`Error crawling prefeituramaringa with browser: ${error}`);
@@ -219,7 +220,7 @@ export class PrefeituramaringaSpider extends BaseSpider {
   private async crawlWithFetch(): Promise<Gazette[]> {
     const gazettes: Gazette[] = [];
     logger.info(
-      `Crawling Maringá (prefeituramaringa) for ${this.config.name}...`
+      `Crawling Maringá (prefeituramaringa) for ${this.config.name}...`,
     );
 
     try {
@@ -253,7 +254,7 @@ export class PrefeituramaringaSpider extends BaseSpider {
             retries++;
             if (retries < maxRetries) {
               logger.debug(
-                `Retry ${retries}/${maxRetries} for page ${currentPage}, waiting 1000ms...`
+                `Retry ${retries}/${maxRetries} for page ${currentPage}, waiting 1000ms...`,
               );
               await new Promise((resolve) => setTimeout(resolve, 1000));
             }
@@ -262,14 +263,14 @@ export class PrefeituramaringaSpider extends BaseSpider {
 
         if (!response) {
           logger.debug(
-            `Failed to fetch page ${currentPage} after ${maxRetries} retries. Website may not be accessible via HTTP requests.`
+            `Failed to fetch page ${currentPage} after ${maxRetries} retries. Website may not be accessible via HTTP requests.`,
           );
           break;
         }
 
         if (!response.ok) {
           logger.warn(
-            `Failed to fetch page ${currentPage}: ${response.status}`
+            `Failed to fetch page ${currentPage}: ${response.status}`,
           );
           break;
         }
@@ -282,7 +283,7 @@ export class PrefeituramaringaSpider extends BaseSpider {
         for (let i = 1; i < gazetteBlocks.length; i++) {
           const gazetteHtml = gazetteBlocks[i];
           const dateMatch = gazetteHtml.match(
-            /class="data-caderno[^"]*"[^>]*>([^<]+)</
+            /class="data-caderno[^"]*"[^>]*>([^<]+)</,
           );
           if (!dateMatch) continue;
 
@@ -303,7 +304,7 @@ export class PrefeituramaringaSpider extends BaseSpider {
 
           let fileUrl: string | null = null;
           const buttonHrefMatch = gazetteHtml.match(
-            /<button[^>]*href="([^"]+)"/
+            /<button[^>]*href="([^"]+)"/,
           );
           if (buttonHrefMatch && buttonHrefMatch[1].includes("abreDocumento")) {
             const queryMatch = buttonHrefMatch[1].match(/\?(.+)/);
@@ -313,7 +314,7 @@ export class PrefeituramaringaSpider extends BaseSpider {
           }
           if (!fileUrl) {
             const onClickMatch = gazetteHtml.match(
-              /onClick="[^"]*\?pagina=abreDocumento&arquivo=([^'"]+)/
+              /onClick="[^"]*\?pagina=abreDocumento&arquivo=([^'"]+)/,
             );
             if (onClickMatch) {
               fileUrl = `${baseUrlObj.origin}${baseUrlObj.pathname}?pagina=abreDocumento&arquivo=${onClickMatch[1]}`;
@@ -321,7 +322,7 @@ export class PrefeituramaringaSpider extends BaseSpider {
           }
           if (!fileUrl) {
             const linkMatch = gazetteHtml.match(
-              /<a[^>]*href="([^"]*abreDocumento[^"]*)"/
+              /<a[^>]*href="([^"]*abreDocumento[^"]*)"/,
             );
             if (linkMatch) {
               const href = linkMatch[1];
@@ -352,7 +353,9 @@ export class PrefeituramaringaSpider extends BaseSpider {
 
         const nextPageMatch =
           html.match(/<a[^>]*class="proximo"[^>]*href="([^"]+)"/) ||
-          html.match(/<a[^>]*href="[^"]*\?[^"]*pagina=(\d+)"[^>]*>\s*»\s*<\/a>/);
+          html.match(
+            /<a[^>]*href="[^"]*\?[^"]*pagina=(\d+)"[^>]*>\s*»\s*<\/a>/,
+          );
         hasNextPage = !!nextPageMatch && foundGazettes > 0;
 
         if (hasNextPage) {
@@ -362,7 +365,7 @@ export class PrefeituramaringaSpider extends BaseSpider {
       }
 
       logger.info(
-        `Successfully crawled ${gazettes.length} gazettes from Maringá (prefeituramaringa)`
+        `Successfully crawled ${gazettes.length} gazettes from Maringá (prefeituramaringa)`,
       );
     } catch (error) {
       logger.error(`Error crawling prefeituramaringa: ${error}`);

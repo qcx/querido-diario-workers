@@ -4,13 +4,13 @@ import { SpiderConfig } from "../../types/spider-config";
 import { DateRange } from "../../types";
 import { logger } from "../../utils/logger";
 
-interface PrefeiturapontagrossaConfig {
-  type: "prefeiturapontagrossa";
+interface PrefeituracianorteConfig {
+  type: "prefeituracianorte";
   baseUrl: string;
   apiBaseUrl: string;
 }
 
-interface ElotechGazetteItem {
+interface ElotechOxyGazetteItem {
   id: string;
   edition: number;
   editionType: string;
@@ -18,8 +18,8 @@ interface ElotechGazetteItem {
   fileSize: number;
 }
 
-interface ElotechApiResponse {
-  content: ElotechGazetteItem[];
+interface ElotechOxyApiResponse {
+  content: ElotechOxyGazetteItem[];
   number: number;
   size: number;
   totalPages: number;
@@ -27,7 +27,7 @@ interface ElotechApiResponse {
   last: boolean;
 }
 
-export class PrefeiturapontagrossaSpider extends BaseSpider {
+export class PrefeituracianorteSpider extends BaseSpider {
   private baseUrl: string;
   private apiBaseUrl: string;
 
@@ -39,14 +39,14 @@ export class PrefeiturapontagrossaSpider extends BaseSpider {
 
   constructor(config: SpiderConfig, dateRange: DateRange) {
     super(config, dateRange);
-    const platformConfig = config.config as PrefeiturapontagrossaConfig;
+    const platformConfig = config.config as PrefeituracianorteConfig;
     this.baseUrl = platformConfig.baseUrl;
     this.apiBaseUrl = platformConfig.apiBaseUrl;
   }
 
   async crawl(): Promise<Gazette[]> {
     const gazettes: Gazette[] = [];
-    logger.info(`Crawling Ponta Grossa gazette for ${this.config.name}...`);
+    logger.info(`Crawling Cianorte gazette for ${this.config.name}...`);
 
     try {
       let page = 0;
@@ -57,7 +57,7 @@ export class PrefeiturapontagrossaSpider extends BaseSpider {
         logger.info(`Fetching page ${page}: ${apiUrl}`);
 
         const response = await fetch(apiUrl, {
-          headers: PrefeiturapontagrossaSpider.HEADERS,
+          headers: PrefeituracianorteSpider.HEADERS,
         });
 
         if (!response.ok) {
@@ -65,7 +65,7 @@ export class PrefeiturapontagrossaSpider extends BaseSpider {
           break;
         }
 
-        const data = (await response.json()) as ElotechApiResponse;
+        const data = (await response.json()) as ElotechOxyApiResponse;
         const items = data.content;
 
         if (!items || items.length === 0) break;
@@ -101,9 +101,9 @@ export class PrefeiturapontagrossaSpider extends BaseSpider {
         page++;
       }
 
-      logger.info(`Found ${gazettes.length} gazettes for Ponta Grossa`);
+      logger.info(`Found ${gazettes.length} gazettes for Cianorte`);
     } catch (error) {
-      logger.error(`Error crawling Ponta Grossa: ${error}`);
+      logger.error(`Error crawling Cianorte: ${error}`);
     }
 
     return gazettes;
@@ -113,7 +113,7 @@ export class PrefeiturapontagrossaSpider extends BaseSpider {
     try {
       const url = `${this.apiBaseUrl}/api/legislacao/diarios-oficiais/url-download/${gazetteId}`;
       const response = await fetch(url, {
-        headers: PrefeiturapontagrossaSpider.HEADERS,
+        headers: PrefeituracianorteSpider.HEADERS,
       });
 
       if (!response.ok) return null;

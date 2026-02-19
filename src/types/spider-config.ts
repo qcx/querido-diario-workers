@@ -9,6 +9,7 @@ export type SpiderType =
   | "adiarios_v2"
   | "instar"
   | "instar_portal"
+  | "instar_dados_abertos"
   | "diario_parauapebas_pa"
   | "doc_castanhal"
   | "mentor"
@@ -39,6 +40,7 @@ export type SpiderType =
   | "acre"
   | "espirito_santo"
   | "dodf"
+  | "domeletronico"
   | "amunes"
   | "aemerj"
   | "aprece"
@@ -69,6 +71,7 @@ export type SpiderType =
   | "eatos"
   | "prefeiturapiracicaba"
   | "prefeiturabauru"
+  | "prefeiturabentogoncalves"
   | "prefeiturasorocaba"
   | "diariomunicipiosjc"
   | "gazetamunicipal"
@@ -324,6 +327,7 @@ export type SpiderType =
   | "prefeituracaxias"
   | "prefeiturapacodolumiar"
   | "prefeituraportoalegre"
+  | "camaracachoeirinha"
   | "prefeituracaxiasdosul"
   | "prefeituracanoas"
   | "prefeiturapelotas"
@@ -428,6 +432,22 @@ export type SpiderType =
   | "prefeituraguarapuava"
   | "prefeituraraucaria"
   | "prefeituramaringa"
+  | "prefeituratoledo"
+  | "prefeituracambe"
+  | "prefeiturafranciscobeltrao"
+  | "prefeituracianorte"
+  | "prefeituratelemacoborba"
+  | "prefeitureibipora"
+  | "prefeituraprudentopolis"
+  | "dioems"
+  | "prefeiturajacarezinho"
+  | "prefeiturajaguariaiva"
+  | "prefeiturapalotina"
+  | "prefeiturapinhao"
+  | "prefeituraarapoti"
+  | "prefeiturasantahelenapr"
+  | "serpro_doe"
+  | "ingadigital"
   | "custom";
 
 /**
@@ -541,6 +561,7 @@ export type SpiderPlatformConfig =
   | EatosConfig
   | PrefeituraPiracicabaConfig
   | PrefeituraBauruConfig
+  | PrefeiturabentogoncalvesConfig
   | PrefeituraSorocabaConfig
   | DiarioMunicipioSJCConfig
   | GazetaMunicipalConfig
@@ -795,6 +816,7 @@ export type SpiderPlatformConfig =
   | PrefeituramacaurnConfig
   | PrefeituraVilhenaConfig
   | DODFConfig
+  | DomeletronicConfig
   | PrefeiturasantainesConfig
   | PrefeiturapinheiroConfig
   | PrefeiturabarradocordaConfig
@@ -805,6 +827,7 @@ export type SpiderPlatformConfig =
   | PrefeituracaxiasConfig
   | PrefeiturapacodolumiarConfig
   | PrefeituraportoalegreConfig
+  | CamaraCachoerinhaConfig
   | PrefeituracaxiasdosulConfig
   | PrefeituracanoasConfig
   | PrefeiturapelotasConfig
@@ -853,7 +876,47 @@ export type SpiderPlatformConfig =
   | CristalinaGoConfig
   | PrefeituraJataiConfig
   | PrefeituraprimaveradolesteConfig
-  | DomScEdicaoConfig;
+  | DomScEdicaoConfig
+  | PrefeituratoledoConfig
+  | PrefeituracambeConfig
+  | PrefeiturafranciscobeltraoConfig
+  | InstarDadosAbertosConfig
+  | PrefeiturapinhaoConfig
+  | PrefeituraarapotiConfig
+  | PrefeiturasantahelenaprConfig
+  | SerproDoeConfig
+  | IngaDigitalConfig;
+
+/**
+ * Configuration for SERPRO DOE (Documento Oficial Eletrônico) spider
+ * Platform: cidadesdoe.serpro.gov.br (OutSystems SPA)
+ * Used by municipalities that publish via the gov.br DOE platform
+ */
+export interface SerproDoeConfig {
+  type: "serpro_doe";
+  /** Hash identifying the municipality on the SERPRO platform */
+  hash: string;
+  /** Whether the site requires client-side rendering - always true */
+  requiresClientRendering?: boolean;
+}
+
+export interface PrefeiturapinhaoConfig {
+  type: "prefeiturapinhao";
+  baseUrl: string;
+  apiBaseUrl: string;
+  publicacaoId?: number;
+  entidadeId?: number;
+}
+
+export interface PrefeituraarapotiConfig {
+  type: "prefeituraarapoti";
+  baseUrl: string;
+}
+
+export interface PrefeiturasantahelenaprConfig {
+  type: "prefeiturasantahelenapr";
+  baseUrl: string;
+}
 
 /**
  * Configuration for DODF (Diário Oficial do Distrito Federal) spider
@@ -867,6 +930,25 @@ export interface DODFConfig {
 }
 
 /**
+ * Configuration for Dom Eletrônico spider
+ *
+ * Platform: Dom Eletrônico (domeletronico.com.br)
+ * Structure:
+ * - Main page: /views/site/diario.php
+ * - PDF URLs: /views/site/diario_pdf.php?data={base64}&ticket={id}
+ * - Date parameter is base64-encoded YYYY-MM-DD
+ */
+export interface DomeletronicConfig {
+  type: "domeletronico";
+  /** Base URL for the Dom Eletrônico municipality portal (e.g., "https://pmfarroupilha.domeletronico.com.br") */
+  baseUrl: string;
+  /** Optional municipality code for reference */
+  municipioCode?: string;
+  /** Whether the site requires client-side rendering (browser mode) */
+  requiresClientRendering?: boolean;
+}
+
+/**
  * Configuration for Instar platform spiders
  */
 export interface InstarConfig {
@@ -876,6 +958,21 @@ export interface InstarConfig {
   /** Whether the site requires client-side rendering (browser mode) */
   requiresClientRendering?: boolean;
   // Add other Instar-specific configuration properties here if needed
+}
+
+/**
+ * Configuration for Instar municipalities that expose the "dados abertos" JSON API.
+ * Uses HTTP-only mode — no browser required.
+ *
+ * API pattern:  {dadosAbertosUrl}/{year}
+ * HTML pattern: {baseUrl}/{page}/{startDate}/{endDate}/0/0/
+ */
+export interface InstarDadosAbertosConfig {
+  type: "instar_dados_abertos";
+  /** Base URL for the diário oficial listing page (e.g. "https://www.viamao.rs.gov.br/portal/diario-oficial") */
+  baseUrl: string;
+  /** URL for the dados abertos JSON API (e.g. "https://www.viamao.rs.gov.br/portal/dados-abertos/diario-oficial") */
+  dadosAbertosUrl: string;
 }
 
 /**
@@ -1891,6 +1988,26 @@ export interface PrefeituraBauruConfig {
   type: "prefeiturabauru";
   /** Base URL for the Prefeitura Bauru platform (e.g., "https://www2.bauru.sp.gov.br/juridico/diariooficial.aspx") */
   baseUrl: string;
+  /** Whether this spider requires client-side rendering */
+  requiresClientRendering?: boolean;
+}
+
+/**
+ * Configuration for Prefeitura de Bento Gonçalves spider
+ *
+ * Site structure:
+ * - Platform: Elotech OXY
+ * - Page URL: https://bentogoncalves.oxy.elotech.com.br/portaltransparencia/1/diario-oficial
+ * - API: {baseUrl}/portaltransparencia/api/legislacao/diarios-oficiais/publicados
+ *
+ * Supports HTTP-based API access
+ */
+export interface PrefeiturabentogoncalvesConfig {
+  type: "prefeiturabentogoncalves";
+  /** Base URL for the Prefeitura Bento Gonçalves platform (e.g., "https://bentogoncalves.oxy.elotech.com.br") */
+  baseUrl: string;
+  /** Optional GED API URL for file download (defaults to Bento Gonçalves GED) */
+  gedApiUrl?: string;
   /** Whether this spider requires client-side rendering */
   requiresClientRendering?: boolean;
 }
@@ -5644,6 +5761,13 @@ export interface PrefeituraportoalegreConfig {
   requiresClientRendering?: boolean;
 }
 
+/** Config for Câmara Municipal de Cachoeirinha - RS (sistemalegislativo.com.br) */
+export interface CamaraCachoerinhaConfig {
+  type: "camaracachoeirinha";
+  baseUrl: string;
+  listingPath?: string;
+}
+
 /** Config for Prefeitura Caxias do Sul - RS (DOE) */
 export interface PrefeituracaxiasdosulConfig {
   type: "prefeituracaxiasdosul";
@@ -5686,7 +5810,7 @@ export interface PrefeiturasaoleopoldoConfig {
   requiresClientRendering?: boolean;
 }
 
-/** Config for Prefeitura Passo Fundo - RS */
+/** Config for Prefeitura Passo Fundo - RS (GRP system with JSF/RichFaces) */
 export interface PrefeiturapassofundoConfig {
   type: "prefeiturapassofundo";
   baseUrl: string;
@@ -6225,4 +6349,27 @@ export interface PrefeituralaranjaldojariConfig {
   baseUrl: string;
   /** City name for display purposes */
   cityName?: string;
+}
+
+export interface PrefeituratoledoConfig {
+  type: "prefeituratoledo";
+  baseUrl: string;
+}
+
+export interface PrefeituracambeConfig {
+  type: "prefeituracambe";
+  baseUrl: string;
+}
+
+export interface PrefeiturafranciscobeltraoConfig {
+  type: "prefeiturafranciscobeltrao";
+  baseUrl: string;
+}
+
+export interface IngaDigitalConfig {
+  type: "ingadigital";
+  /** Client ID on the Inga Digital platform (id_cliente param) */
+  idCliente: string;
+  /** Session token for ingadigital.com.br (sessao param) */
+  sessao?: string;
 }
