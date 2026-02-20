@@ -1,0 +1,22 @@
+[
+  {
+    "id": "df_brasilia",
+    "name": "Brasília - DF",
+    "territoryId": "5300108",
+    "stateCode": "DF",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dodf",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dodf",
+          "baseUrl": "https://dodf.df.gov.br/dodf/jornal/pastas",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  }
+]

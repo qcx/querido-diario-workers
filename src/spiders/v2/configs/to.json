@@ -1,0 +1,143 @@
+[
+  {
+    "id": "to_palmas",
+    "name": "Palmas - TO",
+    "territoryId": "1721000",
+    "stateCode": "TO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapalmas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapalmas",
+          "baseUrl": "http://diariooficial.palmas.to.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ],
+    "notes": "Capital do Tocantins. Diário oficial próprio em diariooficial.palmas.to.gov.br com lista paginada de edições."
+  },
+  {
+    "id": "to_araguaina",
+    "name": "Araguaína - TO",
+    "territoryId": "1702109",
+    "stateCode": "TO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "barco_digital",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "barco_digital",
+          "baseUrl": "https://api-araguaina.barcodigital.com.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "to_gurupi",
+    "name": "Gurupi - TO",
+    "territoryId": "1709500",
+    "stateCode": "TO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituragurupi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituragurupi",
+          "baseUrl": "https://diariooficial.gurupi.to.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ],
+    "notes": "Terceira maior cidade do Tocantins. Diário oficial moderno em diariooficial.gurupi.to.gov.br com calendário e lista de edições."
+  },
+  {
+    "id": "to_porto_nacional",
+    "name": "Porto Nacional - TO",
+    "territoryId": "1718204",
+    "stateCode": "TO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraportonacional",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraportonacional",
+          "baseUrl": "https://diariooficial.portonacional.to.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "to_paraiso_do_tocantins",
+    "name": "Paraíso do Tocantins - TO",
+    "territoryId": "1716109",
+    "stateCode": "TO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "nucleogov",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "nucleogov",
+          "baseUrl": "https://diariooficial.paraiso.to.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "to_colinas_do_tocantins",
+    "name": "Colinas do Tocantins - TO",
+    "territoryId": "1705508",
+    "stateCode": "TO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diagramacao",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diagramacao",
+          "baseUrl": "https://diario.colinas.to.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "to_araguatins",
+    "name": "Araguatins - TO",
+    "territoryId": "1702208",
+    "stateCode": "TO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diagramacao",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diagramacao",
+          "baseUrl": "https://www.araguatins.to.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  }
+]

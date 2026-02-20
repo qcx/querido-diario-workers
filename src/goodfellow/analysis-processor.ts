@@ -3,9 +3,9 @@
  * Processes analysis queue messages and sends results to webhook queue
  */
 
-import { AnalysisQueueMessage, GazetteAnalysis, AnalysisConfig } from '../types';
+import { AnalysisQueueMessage, GazetteAnalysis } from '../types';
 import type { D1DatabaseEnv } from '../services/database';
-import { AnalysisOrchestrator } from '../services/analysis-orchestrator';
+import { AnalysisOrchestratorV2, AnalysisConfigV2 } from '../analyzers/v2';
 import { logger, shortHash } from '../utils';
 import {
   getDatabase,
@@ -49,7 +49,7 @@ async function processSingleAnalysis(
   
   // Generate config signature for this territory
   const config = getAnalysisConfig(env);
-  const orchestrator = new AnalysisOrchestrator(config);
+  const orchestrator = new AnalysisOrchestratorV2(config);
   const configSignature = await orchestrator.generateConfigSignature(config, territoryId);
   
   // Generate deterministic jobId for this territory
@@ -64,7 +64,7 @@ async function processSingleAnalysis(
 
   // Apply deduplication to findings
   try {
-    const dedupeResult = await deduplicator.deduplicateFindings(analysis, 24);
+    const dedupeResult = await deduplicator.deduplicateFindings(analysis, 24, gazetteId);
     
     if (dedupeResult.duplicates.length > 0) {
       logger.info(`Deduplication removed ${dedupeResult.duplicates.length} duplicate findings`, {
@@ -76,23 +76,80 @@ async function processSingleAnalysis(
       });
 
       // Update analysis with deduplicated findings
+      // Create a Set of unique finding keys for O(1) lookup
+      const uniqueFindingKeys = new Set(
+        dedupeResult.uniqueFindings.map((uf: any) => {
+          // Create deterministic key by sorting object keys
+          const sortedData = JSON.stringify(uf.data, Object.keys(uf.data).sort());
+          return `${uf.type}:${uf.confidence}:${sortedData}`;
+        })
+      );
+      
+      const updatedAnalyses = analysis.analyses.map(a => ({
+        ...a,
+        findings: a.findings.filter((f: any) => {
+          const sortedData = JSON.stringify(f.data, Object.keys(f.data || {}).sort());
+          const key = `${f.type}:${f.confidence}:${sortedData}`;
+          return uniqueFindingKeys.has(key);
+        })
+      }));
+
+      // Recalculate categories from deduplicated findings
+      const recalculatedCategories = new Set<string>();
+      for (const a of updatedAnalyses) {
+        for (const finding of a.findings) {
+          if (!finding.data) continue;
+          
+          if (finding.type.startsWith('keyword:') && finding.data.category) {
+            recalculatedCategories.add(finding.data.category);
+          } else if (finding.type.startsWith('ai:')) {
+            if (finding.data.category) {
+              if (Array.isArray(finding.data.category)) {
+                finding.data.category.forEach((c) => {
+                  if (typeof c === 'string') recalculatedCategories.add(c);
+                });
+              } else {
+                if (typeof finding.data.category === 'string') {
+                  recalculatedCategories.add(finding.data.category);
+                }
+              }
+            }
+            if (finding.data.categories && Array.isArray(finding.data.categories)) {
+              finding.data.categories.forEach((c) => {
+                if (typeof c === 'string') recalculatedCategories.add(c);
+              });
+            }
+          }
+        }
+      }
+
       analysis = {
         ...analysis,
-        analyses: analysis.analyses.map(a => ({
-          ...a,
-          findings: a.findings.filter((f: any) => 
-            dedupeResult.uniqueFindings.some((uf: any) => 
-              uf.type === f.type && 
-              uf.confidence === f.confidence &&
-              JSON.stringify(uf.data) === JSON.stringify(f.data)
-            )
-          )
-        })),
+        analyses: updatedAnalyses,
         summary: {
           ...analysis.summary,
           totalFindings: dedupeResult.uniqueFindings.length,
+          categories: Array.from(recalculatedCategories),
           deduplicationApplied: true,
           duplicatesRemoved: dedupeResult.duplicates.length,
+          
+          // Enhanced deduplication details in processing stats
+          processingStats: {
+            ...(analysis.summary.processingStats || {}),
+            deduplication: {
+              applied: true,
+              originalFindings: analysis.summary.totalFindings,
+              uniqueFindings: dedupeResult.uniqueFindings.length,
+              duplicatesRemoved: dedupeResult.duplicates.length,
+              deduplicationRate: Math.round((dedupeResult.duplicates.length / analysis.summary.totalFindings) * 100),
+              duplicatesByType: dedupeResult.duplicates.reduce((acc: Record<string, number>, dup: any) => {
+                const type = dup.finding?.type || 'unknown';
+                acc[type] = (acc[type] || 0) + 1;
+                return acc;
+              }, {}),
+              similarityThreshold: 0.8, // Default threshold used by deduplicator
+            },
+          } as any, // Type assertion to handle optional fields
         }
       };
     }
@@ -117,7 +174,7 @@ async function processSingleAnalysis(
     }
   }
 
-  // Update analysis metadata with aggregated AI usage
+  // Update analysis metadata and summary with aggregated AI usage
   if (aiUsageData.length > 0) {
     analysis = {
       ...analysis,
@@ -128,6 +185,25 @@ async function processSingleAnalysis(
           analyzers: aiUsageData,
           timestamp: new Date().toISOString(),
         },
+      },
+      summary: {
+        ...analysis.summary,
+        // Add AI usage details to processing stats
+        processingStats: {
+          ...(analysis.summary.processingStats || {}),
+          aiUsage: {
+            totalCost: totalAICost,
+            analyzersUsed: aiUsageData.length,
+            totalTokens: aiUsageData.reduce((sum, usage) => sum + (usage.totalTokens || 0), 0),
+            totalRequests: aiUsageData.reduce((sum, usage) => sum + (usage.requests || 0), 0),
+            analyzerBreakdown: aiUsageData.map(usage => ({
+              analyzer: usage.analyzer,
+              cost: usage.totalCost || 0,
+              tokens: usage.totalTokens || 0,
+              requests: usage.requests || 0,
+            })),
+          },
+        } as any, // Type assertion to handle optional fields
       },
     };
   }
@@ -265,9 +341,9 @@ export interface AnalysisProcessorEnv extends D1DatabaseEnv {
 }
 
 /**
- * Get analysis configuration from environment
+ * Get V2 analysis configuration from environment
  */
-function getAnalysisConfig(env: AnalysisProcessorEnv): AnalysisConfig {
+function getAnalysisConfig(env: AnalysisProcessorEnv): AnalysisConfigV2 {
   return {
     analyzers: {
       keyword: {
@@ -281,25 +357,45 @@ function getAnalysisConfig(env: AnalysisProcessorEnv): AnalysisConfig {
         timeout: 30000,  // Increased from 15s to 30s for state gazettes
       },
       concurso: {
-        enabled: true,
+        enabled: false, // Disable concurso analyzer in V2 for now (only keyword analyzer implemented)
         priority: 1.5,
-        timeout: 40000,  // Increased from 20s to 40s for state gazettes
+        timeout: 180000,
         useAIExtraction: !!env.OPENAI_API_KEY,
         apiKey: env.OPENAI_API_KEY,
         model: 'gpt-4o-mini',
       },
-      concursoValidator: {
+      ai: {
+        enabled: false,
+        priority: 3,
+        timeout: 120000,
+        apiKey: env.OPENAI_API_KEY,
+      },
+    },
+    // V2-specific configuration
+    preprocessor: {
+      removeHeadersFooters: true,
+      parseSections: true,
+      minSectionLength: 50,
+      repetitionThreshold: 3,
+    },
+    analyzersV2: {
+      keyword: {
+        enabled: true,
+        useSectionRelevance: true,
+        contextRadius: 300,
+        includeSectionHierarchy: true,
+      },
+      ambiguousValidator: {
         enabled: !!env.OPENAI_API_KEY,
-        priority: 2,  // Run after keyword analyzer, before general AI
-        timeout: 90000,  // Increased from 45s to 90s for state gazettes
         apiKey: env.OPENAI_API_KEY,
         model: 'gpt-4o-mini',
+        confidenceThreshold: 0.7,
       },
-      ai: {
+      aberturaExtractor: {
         enabled: !!env.OPENAI_API_KEY,
-        priority: 3,
-        timeout: 60000,  // Increased from 30s to 60s for state gazettes
         apiKey: env.OPENAI_API_KEY,
+        model: 'gpt-4o-mini',
+        timeout: 30000,
       },
     },
   };
@@ -317,7 +413,7 @@ export async function processAnalysisBatch(
   // Create analysis configuration
   const config = getAnalysisConfig(env);
 
-  const orchestrator = new AnalysisOrchestrator(config);
+  const orchestrator = new AnalysisOrchestratorV2(config);
   
   // Initialize database services
   const databaseClient = getDatabase(env);
@@ -445,9 +541,10 @@ export async function processAnalysisBatch(
   if (allWebhookMessages.length > 0 && env.WEBHOOK_QUEUE && env.WEBHOOK_SUBSCRIPTIONS) {
     try {
       const { WebhookSenderService } = await import('../services/webhook-sender');
-      const { WebhookRepository, GazetteRepository } = await import('../services/database');
+      const { WebhookRepository, GazetteRepository, OcrRepository } = await import('../services/database');
       const webhookRepo = new WebhookRepository(databaseClient);
       const gazetteRepo = new GazetteRepository(databaseClient);
+      const ocrRepo = new OcrRepository(databaseClient);
       
       const webhookSender = new WebhookSenderService(
         env.WEBHOOK_QUEUE,
@@ -455,7 +552,8 @@ export async function processAnalysisBatch(
         webhookRepo,
         env.R2_PUBLIC_URL,
         gazetteRepo,
-        concursoRepo
+        concursoRepo,
+        ocrRepo
       );
 
       await webhookSender.sendWebhookBatch(allWebhookMessages);
@@ -497,9 +595,10 @@ async function processWebhooksForAnalysis(
   if (env.WEBHOOK_QUEUE && env.WEBHOOK_SUBSCRIPTIONS) {
     try {
       const { WebhookSenderService } = await import('../services/webhook-sender');
-      const { WebhookRepository, GazetteRepository } = await import('../services/database');
+      const { WebhookRepository, GazetteRepository, OcrRepository } = await import('../services/database');
       const webhookRepo = new WebhookRepository(databaseClient);
       const gazetteRepo = new GazetteRepository(databaseClient);
+      const ocrRepo = new OcrRepository(databaseClient);
       
       const webhookSender = new WebhookSenderService(
         env.WEBHOOK_QUEUE,
@@ -507,7 +606,8 @@ async function processWebhooksForAnalysis(
         webhookRepo,
         env.R2_PUBLIC_URL,
         gazetteRepo,
-        concursoRepo
+        concursoRepo,
+        ocrRepo
       );
 
       const webhookMessages = await webhookSender.processAnalysisForWebhooks(
@@ -705,13 +805,13 @@ async function storeConcursoFindings(
  */
 async function processAnalysisMessage(
   message: Message<AnalysisQueueMessage>,
-  orchestrator: AnalysisOrchestrator,
+  orchestrator: AnalysisOrchestratorV2,
   env: AnalysisProcessorEnv,
   telemetry: TelemetryService,
   analysisRepo: AnalysisRepository,
   concursoRepo: ConcursoRepository,
   deduplicator: any,
-  config: AnalysisConfig,
+  config: AnalysisConfigV2,
   databaseClient: ReturnType<typeof getDatabase>
 ): Promise<any[]> {
   const { jobId, ocrJobId, territoryId } = message.body;
@@ -1025,14 +1125,12 @@ async function processAnalysisMessage(
   // Perform analysis with deterministic jobId
   // This enables database-level deduplication via the unique constraint on job_id
   const gazetteScope = message.body.metadata?.gazetteScope;
-  const requestedTerritories = message.body.metadata?.requestedTerritories;
   
   const analysisResult = await orchestrator.analyze(
     ocrResult, 
     territoryId, 
     deterministicJobId,
-    gazetteScope,
-    requestedTerritories
+    gazetteScope
   );
 
   // Handle single or multiple analyses

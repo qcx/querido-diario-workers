@@ -78,15 +78,24 @@ export abstract class BaseSpider {
       isExtraEdition?: boolean;
       power?: 'executive' | 'legislative' | 'executive_legislative';
       sourceText?: string;
+      requiresClientRendering?: boolean;
+      skipUrlResolution?: boolean; // Skip URL resolution for sites with session-based URLs
     } = {}
   ): Promise<Gazette | null> {
     try {
-      // Resolve the URL to its final destination
-      const resolvedUrl = await resolveFinalUrl(fileUrl, {
-        maxRedirects: 10,
-        timeout: 15000,
-        retries: 2
-      });
+      // Resolve the URL to its final destination (unless skipped)
+      let resolvedUrl = fileUrl;
+      
+      if (!options.skipUrlResolution) {
+        resolvedUrl = await resolveFinalUrl(fileUrl, {
+          maxRedirects: 10,
+          timeout: 15000,
+          retries: 2
+        });
+        console.log('🔺 Resolved Gazette URL:', resolvedUrl);
+      } else {
+        console.log('🔺 Skipping URL resolution, using:', resolvedUrl);
+      }
 
       return {
         date: toISODate(date),
@@ -97,6 +106,7 @@ export abstract class BaseSpider {
         isExtraEdition: options.isExtraEdition ?? false,
         power: options.power ?? 'executive_legislative',
         sourceText: options.sourceText,
+        requiresClientRendering: options.requiresClientRendering,
       };
     } catch (error) {
       logger.error('Failed to resolve gazette URL', {

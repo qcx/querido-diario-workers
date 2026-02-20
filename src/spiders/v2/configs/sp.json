@@ -1,0 +1,4638 @@
+[
+  {
+    "id": "sp_cristais_paulista",
+    "name": "Cristais Paulista - SP",
+    "territoryId": "3513207",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "domunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "domunicipal",
+          "baseUrl": "https://domunicipal.com.br",
+          "orgaoId": "3"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_jundia_",
+    "name": "Jundiaí - SP",
+    "territoryId": "3525904",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "JUNDIAÍ",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "imprensaoficialjundiai",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialjundiai",
+          "baseUrl": "https://imprensaoficial.jundiai.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_s_o_jos_do_rio_preto",
+    "name": "São José do Rio Preto - SP",
+    "territoryId": "3549805",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "SÃO JOSÉ DO RIO PRETO",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeiturariopreto",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturariopreto",
+          "baseUrl": "https://www.riopreto.sp.gov.br/DiarioOficial/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_miguel_polis",
+    "name": "Miguelópolis - SP",
+    "territoryId": "3529708",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/miguelopolis"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_mat_o",
+    "name": "Matão - SP",
+    "territoryId": "3529302",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.camaramatao.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itirapu_",
+    "name": "Itirapuã - SP",
+    "territoryId": "3523909",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraitirapua",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraitirapua",
+          "baseUrl": "https://s58.asp.srv.br/diariooficial.pm.itirapua.sp/servlet/com.asp.diariooficial.diariooficialeletronico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_divinol_ndia",
+    "name": "Divinolândia - SP",
+    "territoryId": "3513850",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kingdiario",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "baseUrl": "https://www.divinolandia.sp.gov.br/diario-oficial-eletronico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_caiabu",
+    "name": "Caiabu - SP",
+    "territoryId": "3508900",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/caiabu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_nova_odessa",
+    "name": "Nova Odessa - SP",
+    "territoryId": "3533403",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituranovaodessa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituranovaodessa",
+          "baseUrl": "https://www.novaodessa.sp.gov.br/servicos/diario"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_mogi_das_cruzes",
+    "name": "Mogi das Cruzes - SP",
+    "territoryId": "3530607",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "MOGI DAS CRUZES",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeituramogidascruzes",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramogidascruzes",
+          "baseUrl": "https://diario-oficial.mogidascruzes.sp.gov.br/diarios/publicacoes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_santa_rita_do_passa_quatro",
+    "name": "Santa Rita do Passa Quatro - SP",
+    "territoryId": "3547601",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/santa_rita_do_passa_quatro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_s_o_jo_o_da_boa_vista",
+    "name": "São João da Boa Vista - SP",
+    "territoryId": "3549102",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.saojoao.sp.gov.br/jornal-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_avar_",
+    "name": "Avaré - SP",
+    "territoryId": "3504503",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/avare"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_joan_polis",
+    "name": "Joanópolis - SP",
+    "territoryId": "3525508",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.joanopolis.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_salto",
+    "name": "Salto - SP",
+    "territoryId": "3545209",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/salto"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_am_rico_de_campos",
+    "name": "Américo de Campos - SP",
+    "territoryId": "3501806",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/americo_de_campos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_barbosa",
+    "name": "Barbosa - SP",
+    "territoryId": "3505104",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.barbosa.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_batatais",
+    "name": "Batatais - SP",
+    "territoryId": "3505906",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabatais",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabatais",
+          "baseUrl": "https://www.batatais.sp.gov.br/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_buri",
+    "name": "Buri - SP",
+    "territoryId": "3509007",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kingdiario",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "baseUrl": "https://www.buri.sp.gov.br/diario-oficial-eletronico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_cajamar",
+    "name": "Cajamar - SP",
+    "territoryId": "3509205",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracajamar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracajamar",
+          "baseUrl": "https://cajamar.sp.gov.br/diariooficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_capela_do_alto",
+    "name": "Capela do Alto - SP",
+    "territoryId": "3510302",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/capela_do_alto"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_cosm_polis",
+    "name": "Cosmópolis - SP",
+    "territoryId": "3512803",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracosmopolis",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracosmopolis",
+          "baseUrl": "https://cosmopolis.sp.gov.br/semanario/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_cotia",
+    "name": "Cotia - SP",
+    "territoryId": "3513009",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracotia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracotia",
+          "baseUrl": "https://leismunicipais.com.br/diario-oficial/sp/cotia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_fartura",
+    "name": "Fartura - SP",
+    "territoryId": "3515400",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kingdiario",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "baseUrl": "https://www.fartura.sp.gov.br/diario-oficial-eletronico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_gabriel_monteiro",
+    "name": "Gabriel Monteiro - SP",
+    "territoryId": "3516507",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/gabriel_monteiro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_guarulhos",
+    "name": "Guarulhos - SP",
+    "territoryId": "3518800",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraguarulhos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraguarulhos",
+          "baseUrl": "https://diariooficial.guarulhos.sp.gov.br/index.php"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_ilha_comprida",
+    "name": "Ilha Comprida - SP",
+    "territoryId": "3520103",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "eatos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "eatos",
+          "baseUrl": "https://publicacoesmunicipais.com.br/eatos/ilhacomprida"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_iracem_polis",
+    "name": "Iracemápolis - SP",
+    "territoryId": "3521408",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.iracemapolis.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itaquaquecetuba",
+    "name": "Itaquaquecetuba - SP",
+    "territoryId": "3523107",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraitaquaquecetuba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraitaquaquecetuba",
+          "url": "https://www.itaquaquecetuba.sp.gov.br/diariooficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itarar_",
+    "name": "Itararé - SP",
+    "territoryId": "3523206",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "url": "https://www.imprensaoficialmunicipal.com.br/itarare"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itariri",
+    "name": "Itariri - SP",
+    "territoryId": "3523305",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.itariri.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itatiba",
+    "name": "Itatiba - SP",
+    "territoryId": "3523404",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraitaitiba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraitaitiba",
+          "url": "https://www.itatiba.sp.gov.br/imprensaoficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itobi",
+    "name": "Itobi - SP",
+    "territoryId": "3524006",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.itobi.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_jaboticabal",
+    "name": "Jaboticabal - SP",
+    "territoryId": "3524303",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.jaboticabal.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_jose_bonifacio",
+    "name": "José Bonifácio - SP",
+    "territoryId": "3525706",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "url": "https://imprensaoficialmunicipal.com.br/jose_bonifacio"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_mairipor_",
+    "name": "Mairiporã - SP",
+    "territoryId": "3528809",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "MAIRIPORÃ",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeituramaripora",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramaripora",
+          "url": "https://www.mairipora.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_miracatu",
+    "name": "Miracatu - SP",
+    "territoryId": "3529906",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kingdiario",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "url": "https://www.diario.miracatu.sp.gov.br/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_monte_alegre_do_sul",
+    "name": "Monte Alegre do Sul - SP",
+    "territoryId": "3531209",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/monte_alegre_do_sul"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_monte_apraz_vel",
+    "name": "Monte Aprazível - SP",
+    "territoryId": "3531407",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/monte_aprazivel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_monte_mor",
+    "name": "Monte Mor - SP",
+    "territoryId": "3531803",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.montemor.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_narandiba",
+    "name": "Narandiba - SP",
+    "territoryId": "3532207",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituranarandiba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituranarandiba",
+          "baseUrl": "https://www.donarandiba.com.br/paginas/diario.php"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_paul_nia",
+    "name": "Paulínia - SP",
+    "territoryId": "3536570",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.paulinia.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_pederneiras",
+    "name": "Pederneiras - SP",
+    "territoryId": "3536703",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/pederneiras"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_piraju",
+    "name": "Piraju - SP",
+    "territoryId": "3538808",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapiraju",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapiraju",
+          "baseUrl": "https://diariooficialnovo.jelastic.saveincloud.net/paginas/public/diario_externo.xhtml?idCidade=3"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_pirapora_do_bom_jesus",
+    "name": "Pirapora do Bom Jesus - SP",
+    "territoryId": "3539103",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapiraporadobomjesus",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapiraporadobomjesus",
+          "baseUrl": "https://imprensa.piraporadobomjesus.net.br/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sao_bernardo_do_campo",
+    "name": "São Bernardo do Campo - SP",
+    "territoryId": "3548708",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/sao_bernardo_do_campo",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_santo_andre",
+    "name": "Santo André - SP",
+    "territoryId": "3547809",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://web.santoandre.sp.gov.br/portal/diario-oficial"
+        }
+      },
+      {
+        "spiderType": "prefeiturasantoandre",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasantoandre",
+          "baseUrl": "https://web.santoandre.sp.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sorocaba",
+    "name": "Sorocaba - SP",
+    "territoryId": "3552205",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasorocaba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasorocaba",
+          "baseUrl": "https://noticias.sorocaba.sp.gov.br/jornal/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_piracicaba",
+    "name": "Piracicaba - SP",
+    "territoryId": "3538709",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapiracicaba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapiracicaba",
+          "baseUrl": "https://diariooficial.piracicaba.sp.gov.br/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_bauru",
+    "name": "Bauru - SP",
+    "territoryId": "3506003",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabauru",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabauru",
+          "baseUrl": "https://www2.bauru.sp.gov.br/juridico/diariooficial.aspx",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sao_jose_dos_campos",
+    "name": "São José dos Campos - SP",
+    "territoryId": "3549904",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariomunicipiosjc",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariomunicipiosjc",
+          "baseUrl": "https://diariodomunicipio.sjc.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_praia_grande",
+    "name": "Praia Grande - SP",
+    "territoryId": "3541000",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dioenet",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "dioenet",
+          "baseUrl": "https://plenussistemas.dioenet.com.br/list/praia-grande",
+          "cityId": 36
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_campinas",
+    "name": "Campinas - SP",
+    "territoryId": "3509502",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracampinas",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracampinas",
+          "baseUrl": "https://portal-api.campinas.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_osasco",
+    "name": "Osasco - SP",
+    "territoryId": "3534401",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraosasco",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraosasco",
+          "baseUrl": "https://osasco.sp.gov.br/imprensa-oficial/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_santos",
+    "name": "Santos - SP",
+    "territoryId": "3548500",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasantos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasantos",
+          "baseUrl": "https://diariooficial.santos.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_maua",
+    "name": "Mauá - SP",
+    "territoryId": "3529401",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituramaua",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramaua",
+          "baseUrl": "https://dom.maua.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_diadema",
+    "name": "Diadema - SP",
+    "territoryId": "3513801",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituradiadema",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituradiadema",
+          "baseUrl": "https://diariooficial.diadema.sp.gov.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_carapicuiba",
+    "name": "Carapicuíba - SP",
+    "territoryId": "3510609",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracarapicuiba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracarapicuiba",
+          "baseUrl": "https://diario.carapicuiba.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_taubate",
+    "name": "Taubaté - SP",
+    "territoryId": "3554102",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dioenet",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "dioenet",
+          "baseUrl": "https://plenussistemas.dioenet.com.br/list/taubate",
+          "cityId": 31
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itapevi",
+    "name": "Itapevi - SP",
+    "territoryId": "3522901",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/itapevi"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_aracatuba",
+    "name": "Araçatuba - SP",
+    "territoryId": "3502804",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/aracatuba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sertaozinho",
+    "name": "Sertãozinho - SP",
+    "territoryId": "3551702",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/sertaozinho"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_braganca_paulista",
+    "name": "Bragança Paulista - SP",
+    "territoryId": "3507605",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/bragancapaulista"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_botucatu",
+    "name": "Botucatu - SP",
+    "territoryId": "3507506",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/botucatu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_jandira",
+    "name": "Jandira - SP",
+    "territoryId": "3524709",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/jandira"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_birigui",
+    "name": "Birigui - SP",
+    "territoryId": "3506508",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/birigui"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_guaratingueta",
+    "name": "Guaratinguetá - SP",
+    "territoryId": "3518404",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/guara"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_jaguariuna",
+    "name": "Jaguariúna - SP",
+    "territoryId": "3524501",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/jaguariuna"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_tupa",
+    "name": "Tupã - SP",
+    "territoryId": "3555307",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/tupa"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_mogi_guacu",
+    "name": "Mogi Guaçu - SP",
+    "territoryId": "3530508",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/mogi_guacu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itapira",
+    "name": "Itapira - SP",
+    "territoryId": "3522703",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/itapira"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_catanduva",
+    "name": "Catanduva - SP",
+    "territoryId": "3511102",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/catanduva"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_votuporanga",
+    "name": "Votuporanga - SP",
+    "territoryId": "3557105",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/votuporanga"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_lins",
+    "name": "Lins - SP",
+    "territoryId": "3527108",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/lins"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_mirassol",
+    "name": "Mirassol - SP",
+    "territoryId": "3530300",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/mirassol"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itapeva",
+    "name": "Itapeva - SP",
+    "territoryId": "3522604",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/itapeva"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itupeva",
+    "name": "Itupeva - SP",
+    "territoryId": "3523503",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/itupeva"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_campo_limpo_paulista",
+    "name": "Campo Limpo Paulista - SP",
+    "territoryId": "3509601",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/campo_limpo_paulista"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_amparo",
+    "name": "Amparo - SP",
+    "territoryId": "3501905",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/amparo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sao_paulo",
+    "name": "São Paulo - SP",
+    "territoryId": "3550308",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasaopaulo",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasaopaulo",
+          "baseUrl": "https://diariooficial.prefeitura.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_ribeirao_preto",
+    "name": "Ribeirão Preto - SP",
+    "territoryId": "3543402",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "cespro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "cespro",
+          "baseUrl": "https://cespro.com.br",
+          "cdMunicipio": "9314"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sao_vicente",
+    "name": "São Vicente - SP",
+    "territoryId": "3551009",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasaovicente",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasaovicente",
+          "baseUrl": "https://www.saovicente.sp.gov.br/transparencia/bom"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_franca",
+    "name": "Franca - SP",
+    "territoryId": "3516200",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturafranca",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturafranca",
+          "baseUrl": "https://www.franca.sp.gov.br/pmf-diario/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_guaruja",
+    "name": "Guarujá - SP",
+    "territoryId": "3518701",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraguaruja",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraguaruja",
+          "baseUrl": "https://www.guaruja.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_araraquara",
+    "name": "Araraquara - SP",
+    "territoryId": "3503208",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "onedom",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "onedom",
+          "baseUrl": "https://araraquara.1dom.com.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_pindamonhangaba",
+    "name": "Pindamonhangaba - SP",
+    "territoryId": "3538006",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "onedom",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "onedom",
+          "baseUrl": "https://pindamonhangaba.1dom.com.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_assis",
+    "name": "Assis - SP",
+    "territoryId": "3504008",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "gdoe",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "gdoe",
+          "baseUrl": "https://www.gdoe.com.br/assis",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_artur_nogueira",
+    "name": "Artur Nogueira - SP",
+    "territoryId": "3503802",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "gdoe",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "gdoe",
+          "baseUrl": "https://www.gdoe.com.br/arturnogueira",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_americana",
+    "name": "Americana - SP",
+    "territoryId": "3501608",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraamericana",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraamericana",
+          "baseUrl": "https://diariooficial.americana.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_hortolandia",
+    "name": "Hortolândia - SP",
+    "territoryId": "3519071",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "eatos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "eatos",
+          "baseUrl": "https://publicacoesmunicipais.com.br/eatos/hortolandia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_cachoeira_paulista",
+    "name": "Cachoeira Paulista - SP",
+    "territoryId": "3508504",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "CACHOEIRA PAULISTA",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sao_miguel_arcanjo",
+    "name": "São Miguel Arcanjo - SP",
+    "territoryId": "3550001",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "SÃO MIGUEL ARCANJO",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_presidente_prudente",
+    "name": "Presidente Prudente - SP",
+    "territoryId": "3541406",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapresidenteprudente",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "requiresClientRendering": true,
+        "config": {
+          "type": "prefeiturapresidenteprudente",
+          "baseUrl": "https://diario.presidenteprudente.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_lorena",
+    "name": "Lorena - SP",
+    "territoryId": "3527207",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "LORENA",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_santa_barbara_doeste",
+    "name": "Santa Bárbara d'Oeste - SP",
+    "territoryId": "3545803",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "dosp",
+          "apiUrl": "https://do-api-web-search.doe.sp.gov.br/v2/summary/structured",
+          "journalId": "d65936d7-1ca8-4267-934e-1dea132fa237",
+          "sectionId": "b3477daf-479d-4f3d-7d60-08db6b94d2bf",
+          "territoryFilter": "SANTA BÁRBARA D'OESTE",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_mongagua",
+    "name": "Mongaguá - SP",
+    "territoryId": "3531100",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/mongagua"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_olimpia",
+    "name": "Olímpia - SP",
+    "territoryId": "3533908",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/olimpia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_taquaritinga",
+    "name": "Taquaritinga - SP",
+    "territoryId": "3553708",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/taquaritinga"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sao_jose_do_rio_pardo",
+    "name": "São José do Rio Pardo - SP",
+    "territoryId": "3549706",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/sjriopardo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_louveira",
+    "name": "Louveira - SP",
+    "territoryId": "3527306",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/louveira"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_tremembe",
+    "name": "Tremembé - SP",
+    "territoryId": "3554805",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/tremembe"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_vargem_grande_paulista",
+    "name": "Vargem Grande Paulista - SP",
+    "territoryId": "3556453",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/vargem_grande_paulista"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_mairinque",
+    "name": "Mairinque - SP",
+    "territoryId": "3528403",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/mairinque"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_jales",
+    "name": "Jales - SP",
+    "territoryId": "3524808",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/jales"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sao_joaquim_da_barra",
+    "name": "São Joaquim da Barra - SP",
+    "territoryId": "3549409",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/sao_joaquim_da_barra"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_cabreuva",
+    "name": "Cabreúva - SP",
+    "territoryId": "3508405",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/cabreuva"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_jardinopolis",
+    "name": "Jardinópolis - SP",
+    "territoryId": "3525102",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/jardinopolis"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_rio_grande_da_serra",
+    "name": "Rio Grande da Serra - SP",
+    "territoryId": "3544103",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/riograndedaserra"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_salto_de_pirapora",
+    "name": "Salto de Pirapora - SP",
+    "territoryId": "3545308",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/salto_de_pirapora"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_garca",
+    "name": "Garça - SP",
+    "territoryId": "3516705",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/garca"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_paraguacu_paulista",
+    "name": "Paraguaçu Paulista - SP",
+    "territoryId": "3535507",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/paraguacu_paulista"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_vargem_grande_do_sul",
+    "name": "Vargem Grande do Sul - SP",
+    "territoryId": "3556404",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/vgsul"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_orlandia",
+    "name": "Orlândia - SP",
+    "territoryId": "3534302",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/orlandia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_agudos",
+    "name": "Agudos - SP",
+    "territoryId": "3500709",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/agudos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_pontal",
+    "name": "Pontal - SP",
+    "territoryId": "3540200",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/pontal"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_ituverava",
+    "name": "Ituverava - SP",
+    "territoryId": "3524105",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/ituverava"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_guariba",
+    "name": "Guariba - SP",
+    "territoryId": "3518602",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/guariba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_presidente_venceslau",
+    "name": "Presidente Venceslau - SP",
+    "territoryId": "3541505",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/presidente_venceslau"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_promissao",
+    "name": "Promissão - SP",
+    "territoryId": "3541604",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/promissao"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_santa_fe_do_sul",
+    "name": "Santa Fé do Sul - SP",
+    "territoryId": "3546603",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/santa_fe_do_sul"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_barra_bonita",
+    "name": "Barra Bonita - SP",
+    "territoryId": "3505302",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/barra_bonita"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_pitangueiras",
+    "name": "Pitangueiras - SP",
+    "territoryId": "3539509",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/pitangueiras"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_cravinhos",
+    "name": "Cravinhos - SP",
+    "territoryId": "3513108",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/cravinhos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_ibate",
+    "name": "Ibaté - SP",
+    "territoryId": "3519303",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/ibate"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_aguai",
+    "name": "Aguaí - SP",
+    "territoryId": "3500303",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/aguai"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_bariri",
+    "name": "Bariri - SP",
+    "territoryId": "3505203",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/bariri"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_rio_das_pedras",
+    "name": "Rio das Pedras - SP",
+    "territoryId": "3544004",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/rio_das_pedras"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_guararapes",
+    "name": "Guararapes - SP",
+    "territoryId": "3518206",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/guararapes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_candido_mota",
+    "name": "Cândido Mota - SP",
+    "territoryId": "3510005",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/candido_mota"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_mirandopolis",
+    "name": "Mirandópolis - SP",
+    "territoryId": "3530102",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/mirandopolis"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_morro_agudo",
+    "name": "Morro Agudo - SP",
+    "territoryId": "3531902",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/morro_agudo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_pilar_do_sul",
+    "name": "Pilar do Sul - SP",
+    "territoryId": "3537909",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/pilardosul"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_igarapava",
+    "name": "Igarapava - SP",
+    "territoryId": "3520004",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/igarapava"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_cruzeiro",
+    "name": "Cruzeiro - SP",
+    "territoryId": "3513405",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/cruzeiro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sao_sebastiao",
+    "name": "São Sebastião - SP",
+    "territoryId": "3550704",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasaosebastiao",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasaosebastiao",
+          "baseUrl": "https://www.saosebastiao.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_jacarei",
+    "name": "Jacareí - SP",
+    "territoryId": "3524402",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "geosiap_api",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "geosiap_api",
+          "baseUrl": "https://boletinsoficiais.geosiap.net/pmjacarei/public/publicacoes",
+          "cityPrefix": "pmjacarei"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_aruja",
+    "name": "Arujá - SP",
+    "territoryId": "3503901",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "legislacaodigital",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "legislacaodigital",
+          "baseUrl": "https://www.legislacaodigital.com.br/Aruja-SP/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_araras",
+    "name": "Araras - SP",
+    "territoryId": "3503307",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "assistech",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assistech",
+          "baseUrl": "https://assistechpublicacoes.com.br/app/pmararassp/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_porto_feliz",
+    "name": "Porto Feliz - SP",
+    "territoryId": "3540606",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kingdiario",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "baseUrl": "https://www.prefeitura.kingpage.com.br/diario-oficial-eletronico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_americo_brasiliense",
+    "name": "Américo Brasiliense - SP",
+    "territoryId": "3501707",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kingdiario",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "baseUrl": "http://diarioamericobrasiliense.kingpage5.com.br/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_monte_alto",
+    "name": "Monte Alto - SP",
+    "territoryId": "3531308",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.montealto.instaridc.com.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_santa_cruz_do_rio_pardo",
+    "name": "Santa Cruz do Rio Pardo - SP",
+    "territoryId": "3546405",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapiraju",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapiraju",
+          "baseUrl": "https://diariooficialnovo.jelastic.saveincloud.net/paginas/public/diario_externo.xhtml?idCidade=4"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_santa_cruz_das_palmeiras",
+    "name": "Santa Cruz das Palmeiras - SP",
+    "territoryId": "3546306",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraitirapua",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraitirapua",
+          "baseUrl": "https://s58.asp.srv.br/diariooficial.pm.santacruzdaspalmeiras.sp/servlet/com.asp.diariooficial.diariooficialeletronico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_marilia",
+    "name": "Marília - SP",
+    "territoryId": "3529005",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.marilia.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_rio_claro",
+    "name": "Rio Claro - SP",
+    "territoryId": "3543907",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://imprensaoficialmunicipal.com.br/rio_claro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_votorantim",
+    "name": "Votorantim - SP",
+    "territoryId": "3557006",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.votorantim.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_valinhos",
+    "name": "Valinhos - SP",
+    "territoryId": "3556206",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.valinhos.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_ribeirao_pires",
+    "name": "Ribeirão Pires - SP",
+    "territoryId": "3543303",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.ribeiraopires.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_ourinhos",
+    "name": "Ourinhos - SP",
+    "territoryId": "3534708",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.ourinhos.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_ibitinga",
+    "name": "Ibitinga - SP",
+    "territoryId": "3519600",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.ibitinga.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_andradina",
+    "name": "Andradina - SP",
+    "territoryId": "3502101",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.andradina.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_piedade",
+    "name": "Piedade - SP",
+    "territoryId": "3537800",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.piedade.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_dracena",
+    "name": "Dracena - SP",
+    "territoryId": "3514403",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.dracena.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_presidente_epitacio",
+    "name": "Presidente Epitácio - SP",
+    "territoryId": "3541307",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.presidenteepitacio.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itapolis",
+    "name": "Itápolis - SP",
+    "territoryId": "3522505",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.itapolis.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sao_pedro",
+    "name": "São Pedro - SP",
+    "territoryId": "3550407",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.saopedro.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sao_manuel",
+    "name": "São Manuel - SP",
+    "territoryId": "3550100",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.saomanuel.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_ilhabela",
+    "name": "Ilhabela - SP",
+    "territoryId": "3520400",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.ilhabela.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_aparecida",
+    "name": "Aparecida - SP",
+    "territoryId": "3502507",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.aparecida.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_iguape",
+    "name": "Iguape - SP",
+    "territoryId": "3520301",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.iguape.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_rancharia",
+    "name": "Rancharia - SP",
+    "territoryId": "3542206",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar_portal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar_portal",
+          "url": "https://www.rancharia.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_bady_bassitt",
+    "name": "Bady Bassitt - SP",
+    "territoryId": "3504602",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.badybassitt.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_penapolis",
+    "name": "Penápolis - SP",
+    "territoryId": "3537305",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.penapolis.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sao_roque",
+    "name": "São Roque - SP",
+    "territoryId": "3550605",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.saoroque.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_vinhedo",
+    "name": "Vinhedo - SP",
+    "territoryId": "3556701",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.vinhedo.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_poa",
+    "name": "Poá - SP",
+    "territoryId": "3539806",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://poa.sp.gov.br/diario-oficial/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_boituva",
+    "name": "Boituva - SP",
+    "territoryId": "3507001",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ecrie",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ecrie",
+          "baseUrl": "https://www.boituva.sp.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_porto_ferreira",
+    "name": "Porto Ferreira - SP",
+    "territoryId": "3540705",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ecrie",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ecrie",
+          "baseUrl": "https://portoferreira.sp.gov.br/diariooficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_guararema",
+    "name": "Guararema - SP",
+    "territoryId": "3518305",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ecrie",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ecrie",
+          "baseUrl": "https://guararema.sp.gov.br/diariooficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_jarinu",
+    "name": "Jarinu - SP",
+    "territoryId": "3525201",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ecrie",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ecrie",
+          "baseUrl": "https://jarinu.sp.gov.br/diariooficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_ipero",
+    "name": "Iperó - SP",
+    "territoryId": "3521002",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ipero",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ipero",
+          "baseUrl": "https://www.ipero.sp.gov.br/jornal-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_aracoiaba_da_serra",
+    "name": "Araçoiaba da Serra - SP",
+    "territoryId": "3502903",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ecrie",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ecrie",
+          "baseUrl": "https://aracoiaba.sp.gov.br/diariooficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_embu_guacu",
+    "name": "Embu-Guaçu - SP",
+    "territoryId": "3515103",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ecrie",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ecrie",
+          "baseUrl": "https://www.embuguacu.sp.gov.br/diariooficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_ibiuna",
+    "name": "Ibiúna - SP",
+    "territoryId": "3519709",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraibiuna",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraibiuna",
+          "baseUrl": "https://ibiuna.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_piracaia",
+    "name": "Piracaia - SP",
+    "territoryId": "3538600",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ecrie",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ecrie",
+          "baseUrl": "https://piracaia.sp.gov.br/diariooficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_franco_da_rocha",
+    "name": "Franco da Rocha - SP",
+    "territoryId": "3516408",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturafrancodarocha",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturafrancodarocha",
+          "url": "https://www.francodarocha.sp.gov.br/diariooficial/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_pedreira",
+    "name": "Pedreira - SP",
+    "territoryId": "3537107",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.pedreira.sp.gov.br/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_alvares_machado",
+    "name": "Álvares Machado - SP",
+    "territoryId": "3501301",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituralvaresmachado",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituralvaresmachado",
+          "url": "https://www.alvaresmachado.sp.gov.br/diariooficial",
+          "yearCategories": {
+            "2018": 199,
+            "2019": 238,
+            "2020": 268,
+            "2021": 315,
+            "2022": 390,
+            "2023": 439,
+            "2024": 492,
+            "2025": 538,
+            "2026": 608
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_serrana",
+    "name": "Serrana - SP",
+    "territoryId": "3551504",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraserrana",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraserrana",
+          "baseUrl": "https://www.serrana.sp.gov.br/diario-oficial/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_novo_horizonte",
+    "name": "Novo Horizonte - SP",
+    "territoryId": "3533502",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ecrie",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ecrie",
+          "baseUrl": "https://novohorizonte.sp.gov.br/diariooficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_campos_do_jordao",
+    "name": "Campos do Jordão - SP",
+    "territoryId": "3509700",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracamposdojordao",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracamposdojordao",
+          "baseUrl": "https://camposdojordao.sp.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_capao_bonito",
+    "name": "Capão Bonito - SP",
+    "territoryId": "3510203",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracapaobonito",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracapaobonito",
+          "baseUrl": "https://imprensaoficial.capaobonito.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_jau",
+    "name": "Jaú - SP",
+    "territoryId": "3525300",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraju",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraju",
+          "baseUrl": "https://www.jau.sp.gov.br/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_tatui",
+    "name": "Tatuí - SP",
+    "territoryId": "3554003",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituratatatui",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituratatatui",
+          "baseUrl": "http://tatui.sp.gov.br/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_mogi_mirim",
+    "name": "Mogi Mirim - SP",
+    "territoryId": "3530805",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituramogimirim",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramogimirim",
+          "baseUrl": "https://www.mogimirim.sp.gov.br/jornal"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_leme",
+    "name": "Leme - SP",
+    "territoryId": "3526704",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraleme",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraleme",
+          "baseUrl": "https://www.leme.sp.gov.br/imprensa"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_cacapava",
+    "name": "Caçapava - SP",
+    "territoryId": "3508702",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.cacapava.sp.gov.br/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_caieiras",
+    "name": "Caieiras - SP",
+    "territoryId": "3509304",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracaieiras",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracaieiras",
+          "url": "https://www.caieiras.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_ubatuba",
+    "name": "Ubatuba - SP",
+    "territoryId": "3555406",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraubatuba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraubatuba",
+          "baseUrl": "https://www.ubatuba.sp.gov.br/diario-oficial/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_mococa",
+    "name": "Mococa - SP",
+    "territoryId": "3530807",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kingdiario",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "baseUrl": "https://www.mococa.sp.gov.br/diario-oficial-eletronico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_cerquilho",
+    "name": "Cerquilho - SP",
+    "territoryId": "3511508",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kingdiario",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "baseUrl": "https://www.cerquilho.sp.gov.br/diario-oficial-eletronico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_guaira",
+    "name": "Guaíra - SP",
+    "territoryId": "3517406",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kingdiario",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "baseUrl": "https://www.guaira.sp.gov.br/diario-oficial-eletronico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_espirito_santo_do_pinhal",
+    "name": "Espírito Santo do Pinhal - SP",
+    "territoryId": "3515186",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kingdiario",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "baseUrl": "https://www.pinhal.sp.gov.br/diario-oficial-eletronico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_socorro",
+    "name": "Socorro - SP",
+    "territoryId": "3552106",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasocorro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasocorro",
+          "url": "https://socorro.sp.gov.br/jornal/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_capivari",
+    "name": "Capivari - SP",
+    "territoryId": "3510401",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracapivari",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracapivari",
+          "url": "https://capivari.sp.gov.br/portal/servicos/diario-oficial/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_tiete",
+    "name": "Tietê - SP",
+    "territoryId": "3554508",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituratiete",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituratiete",
+          "url": "https://www.tiete.sp.gov.br/diariooficial.php"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_pirassununga",
+    "name": "Pirassununga - SP",
+    "territoryId": "3539301",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapirassununga",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapirassununga",
+          "url": "https://pirassununga.sp.gov.br/servicos/governamental/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_peruibe",
+    "name": "Peruíbe - SP",
+    "territoryId": "3537602",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraperuibe",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraperuibe",
+          "baseUrl": "https://www.peruibe.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_bertioga",
+    "name": "Bertioga - SP",
+    "territoryId": "3506359",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabertioga",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabertioga",
+          "baseUrl": "https://www.bertioga.sp.gov.br/boletim-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itanhaem",
+    "name": "Itanhaém - SP",
+    "territoryId": "3522109",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraitanhaem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraitanhaem",
+          "baseUrl": "https://www.itanhaem.sp.gov.br",
+          "apiPath": "/wp-json/wp/v2",
+          "postType": "boletim_oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_registro",
+    "name": "Registro - SP",
+    "territoryId": "3542602",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kingdiario",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "baseUrl": "https://diario.registro.sp.gov.br/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_santa_isabel",
+    "name": "Santa Isabel - SP",
+    "territoryId": "3546801",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://site.santaisabel.sp.gov.br/imprensa-oficial/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_serra_negra",
+    "name": "Serra Negra - SP",
+    "territoryId": "3551603",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraserranegra",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraserranegra",
+          "baseUrl": "https://serranegra.sp.gov.br/servicos/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_cajati",
+    "name": "Cajati - SP",
+    "territoryId": "3509254",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kingdiario",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "url": "https://www.cajati.sp.gov.br/diario-oficial-eletronico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_caraguatatuba",
+    "name": "Caraguatatuba - SP",
+    "territoryId": "3510500",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracaraguatatuba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracaraguatatuba",
+          "baseUrl": "https://diariooficial.caraguatatuba.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_cubatao",
+    "name": "Cubatão - SP",
+    "territoryId": "3513504",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracubatao",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracubatao",
+          "baseUrl": "https://diariooficial.cubatao.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sao_caetano_do_sul",
+    "name": "São Caetano do Sul - SP",
+    "territoryId": "3548807",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasaocaetanodosul",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasaocaetanodosul",
+          "baseUrl": "https://diariooficial.saocaetanodosul.sp.gov.br/publico/Default.aspx"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_osvaldo_cruz",
+    "name": "Osvaldo Cruz - SP",
+    "territoryId": "3534609",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "govbrdioenet",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "govbrdioenet",
+          "baseUrl": "https://www.govbrdioenet.com.br/list/osvaldo-cruz",
+          "citySlug": "osvaldo-cruz"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_conchal",
+    "name": "Conchal - SP",
+    "territoryId": "3512209",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "govbrdioenet",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "govbrdioenet",
+          "baseUrl": "https://www.govbrdioenet.com.br/list/conchal",
+          "citySlug": "conchal"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_descalvado",
+    "name": "Descalvado - SP",
+    "territoryId": "3513702",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituradescalvado",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituradescalvado",
+          "baseUrl": "https://www.descalvado.sp.gov.br/novoportal/prefeitura"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_casa_branca",
+    "name": "Casa Branca - SP",
+    "territoryId": "3510807",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kingdiario",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "url": "http://oficial.casabranca.sp.gov.br/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_barueri",
+    "name": "Barueri - SP",
+    "territoryId": "3505708",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabarueri",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarueri",
+          "baseUrl": "https://portal.barueri.sp.gov.br/diario"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_suzano",
+    "name": "Suzano - SP",
+    "territoryId": "3552502",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasuzano",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasuzano",
+          "baseUrl": "https://suzano.sp.gov.br/imprensa-oficial/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_limeira",
+    "name": "Limeira - SP",
+    "territoryId": "3526902",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ecrie",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ecrie",
+          "baseUrl": "https://www.limeira.sp.gov.br/jornaloficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sumare",
+    "name": "Sumaré - SP",
+    "territoryId": "3552403",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasumare",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasumare",
+          "url": "https://www.sumare.sp.gov.br/Diario.Oficial.php?edicao=todas"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_taboao_da_serra",
+    "name": "Taboão da Serra - SP",
+    "territoryId": "3552809",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.ts.sp.gov.br/portal/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_indaiatuba",
+    "name": "Indaiatuba - SP",
+    "territoryId": "3520509",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraindaiatuba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraindaiatuba",
+          "url": "https://www.indaiatuba.sp.gov.br/comunicacao/imprensa-oficial/edicoes/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sao_carlos",
+    "name": "São Carlos - SP",
+    "territoryId": "3548906",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasaocarlos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasaocarlos",
+          "baseUrl": "https://cidadao.saocarlos.sp.gov.br/servicos/jornal"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_embu_das_artes",
+    "name": "Embu das Artes - SP",
+    "territoryId": "3515004",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://cidadeembudasartes.sp.gov.br/imprensa-oficial-digital/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_ferraz_de_vasconcelos",
+    "name": "Ferraz de Vasconcelos - SP",
+    "territoryId": "3515707",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraferrazdevasconcelos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraferrazdevasconcelos",
+          "baseUrl": "https://ferrazdevasconcelos.sp.gov.br/web/home/boletins-oficiais/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_francisco_morato",
+    "name": "Francisco Morato - SP",
+    "territoryId": "3516309",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturafranciscomorato",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturafranciscomorato",
+          "baseUrl": "http://imprensaoficial.franciscomorato.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_atibaia",
+    "name": "Atibaia - SP",
+    "territoryId": "3504107",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraatibaia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraatibaia",
+          "baseUrl": "https://www.prefeituradeatibaia.com.br/imprensa/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itapecerica_da_serra",
+    "name": "Itapecerica da Serra - SP",
+    "territoryId": "3522208",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ecrie",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ecrie",
+          "baseUrl": "https://www.itapecerica.sp.gov.br/imprensa-oficial/2026",
+          "paginationParam": "pagina"
+        }
+      },
+      {
+        "spiderType": "ecrie",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ecrie",
+          "baseUrl": "https://www.itapecerica.sp.gov.br/imprensa-oficial/2025",
+          "paginationParam": "pagina"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itapetininga",
+    "name": "Itapetininga - SP",
+    "territoryId": "3522307",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kingdiario",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kingdiario",
+          "url": "https://www.itapetininga.sp.gov.br/diario-oficial-eletronico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_santana_de_parnaiba",
+    "name": "Santana de Parnaíba - SP",
+    "territoryId": "3547304",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "portalcomunicacao",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcomunicacao",
+          "baseUrl": "https://prefeitura.santanadeparnaiba.sp.gov.br/PortalComunicacao/imprensa-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_barretos",
+    "name": "Barretos - SP",
+    "territoryId": "3505500",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabarretos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarretos",
+          "baseUrl": "http://barretos.sp.gov.br/folha-de-barretos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_varzea_paulista",
+    "name": "Várzea Paulista - SP",
+    "territoryId": "3556503",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituravarzeapaulista",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituravarzeapaulista",
+          "baseUrl": "https://transparencia.varzeapaulista.sp.gov.br/imprensa-oficial/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_bebedouro",
+    "name": "Bebedouro - SP",
+    "territoryId": "3506102",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ptio",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ptio",
+          "baseUrl": "http://sp.portaldatransparencia.com.br/prefeitura/bebedouro/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_biritiba_mirim",
+    "name": "Biritiba Mirim - SP",
+    "territoryId": "3506607",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ecriediariooficial",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ecriediariooficial",
+          "baseUrl": "https://ecriediariooficial.com.br/biritibamirim"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_lencois_paulista",
+    "name": "Lençóis Paulista - SP",
+    "territoryId": "3526803",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "mentor",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "mentor",
+          "baseUrl": "https://lencois.mentor.metaway.com.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_ilha_solteira",
+    "name": "Ilha Solteira - SP",
+    "territoryId": "3520442",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturailhasolteira",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturailhasolteira",
+          "baseUrl": "https://ilhasolteira.sp.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_itu",
+    "name": "Itu - SP",
+    "territoryId": "3523800",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "dosp",
+          "url": "https://imprensaoficialmunicipal.com.br/itu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_laranjal_paulista",
+    "name": "Laranjal Paulista - SP",
+    "territoryId": "3526407",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/laranjal_paulista"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_adamantina",
+    "name": "Adamantina - SP",
+    "territoryId": "3500105",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "dosp",
+          "cityNameSlug": "adamantina"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_barrinha",
+    "name": "Barrinha - SP",
+    "territoryId": "3505609",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "dosp",
+          "cityNameSlug": "barrinha"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_juquitiba",
+    "name": "Juquitiba - SP",
+    "territoryId": "3526209",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "dosp",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "dosp",
+          "cityNameSlug": "juquitiba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_fernandopolis",
+    "name": "Fernandópolis - SP",
+    "territoryId": "3515509",
+    "stateCode": "SP",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "custom",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "custom",
+          "note": "URL do diário oficial não identificada na varredura. Requer investigação manual."
+        }
+      }
+    ]
+  }
+]

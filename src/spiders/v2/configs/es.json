@@ -1,0 +1,538 @@
+[
+  {
+    "id": "es_serra",
+    "name": "Serra - ES",
+    "territoryId": "3205002",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraserra",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraserra",
+          "baseUrl": "https://ioes.dio.es.gov.br/diariodaserra",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_cariacica",
+    "name": "Cariacica - ES",
+    "territoryId": "3201308",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracariacica",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracariacica",
+          "baseUrl": "https://diariooficial.cariacica.es.gov.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_vitoria",
+    "name": "Vitória - ES",
+    "territoryId": "3205309",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituravitoria",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituravitoria",
+          "baseUrl": "https://diariooficial.vitoria.es.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_linhares",
+    "name": "Linhares - ES",
+    "territoryId": "3203205",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_castelo",
+    "name": "Castelo - ES",
+    "territoryId": "3201407",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_guacui",
+    "name": "Guaçuí - ES",
+    "territoryId": "3202306",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_vila_velha",
+    "name": "Vila Velha - ES",
+    "territoryId": "3205200",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituravilavelha",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituravilavelha",
+          "baseUrl": "https://diariooficial.vilavelha.es.gov.br/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_cachoeiro_de_itapemirim",
+    "name": "Cachoeiro de Itapemirim - ES",
+    "territoryId": "3201209",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracachoeiro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracachoeiro",
+          "baseUrl": "https://diario.cachoeiro.es.gov.br/dio/home/diario_oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_guarapari",
+    "name": "Guarapari - ES",
+    "territoryId": "3202405",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_sao_mateus",
+    "name": "São Mateus - ES",
+    "territoryId": "3204906",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_colatina",
+    "name": "Colatina - ES",
+    "territoryId": "3201506",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_aracruz",
+    "name": "Aracruz - ES",
+    "territoryId": "3200607",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_viana",
+    "name": "Viana - ES",
+    "territoryId": "3205101",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_nova_venecia",
+    "name": "Nova Venécia - ES",
+    "territoryId": "3203908",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_barra_de_sao_francisco",
+    "name": "Barra de São Francisco - ES",
+    "territoryId": "3200904",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_marataizes",
+    "name": "Marataízes - ES",
+    "territoryId": "3203320",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituramarataizes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramarataizes",
+          "baseUrl": "https://www.marataizes.es.gov.br/diario_oficial",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_santa_maria_de_jetiba",
+    "name": "Santa Maria de Jetibá - ES",
+    "territoryId": "3204559",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_itapemirim",
+    "name": "Itapemirim - ES",
+    "territoryId": "3202801",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "espirito_santo",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "espirito_santo",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_domingos_martins",
+    "name": "Domingos Martins - ES",
+    "territoryId": "3201902",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_afonso_claudio",
+    "name": "Afonso Cláudio - ES",
+    "territoryId": "3200102",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_baixo_guandu",
+    "name": "Baixo Guandu - ES",
+    "territoryId": "3200805",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_anchieta",
+    "name": "Anchieta - ES",
+    "territoryId": "3200409",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_alegre",
+    "name": "Alegre - ES",
+    "territoryId": "3200201",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_jaguare",
+    "name": "Jaguaré - ES",
+    "territoryId": "3203056",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_iuna",
+    "name": "Iúna - ES",
+    "territoryId": "3203007",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_conceicao_da_barra",
+    "name": "Conceição da Barra - ES",
+    "territoryId": "3201605",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_sooretama",
+    "name": "Sooretama - ES",
+    "territoryId": "3205010",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_ibatiba",
+    "name": "Ibatiba - ES",
+    "territoryId": "3202454",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  }
+]

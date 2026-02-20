@@ -16,7 +16,6 @@ import {
   AIAnalyzer,
   EntityExtractor,
   ConcursoAnalyzer,
-  ConcursoValidator,
 } from '../analyzers';
 import { logger, sha256Hash } from '../utils';
 import { TerritoryService } from './territory-service';
@@ -73,25 +72,14 @@ export class AnalysisOrchestrator {
       );
     }
 
-    // Concurso Analyzer
-    if (this.config.analyzers.concurso?.enabled) {
+    // Concurso Analyzer - Unified analyzer that handles keyword detection, validation, and data extraction
+    if (this.config.analyzers.concurso?.enabled && this.config.analyzers.concurso.apiKey) {
       this.analyzers.push(
         new ConcursoAnalyzer({
           ...this.config.analyzers.concurso,
           useAIExtraction: this.config.analyzers.concurso.useAIExtraction,
           apiKey: this.config.analyzers.concurso.apiKey,
           model: this.config.analyzers.concurso.model,
-        })
-      );
-    }
-
-    // Concurso Validator (for ambiguous keywords)
-    if (this.config.analyzers.concursoValidator?.enabled && this.config.analyzers.concursoValidator.apiKey) {
-      this.analyzers.push(
-        new ConcursoValidator({
-          ...this.config.analyzers.concursoValidator,
-          apiKey: this.config.analyzers.concursoValidator.apiKey,
-          model: this.config.analyzers.concursoValidator.model,
         })
       );
     }
@@ -270,6 +258,7 @@ export class AnalysisOrchestrator {
 
   /**
    * Create summary from analysis results
+   * Enhanced to include all findings made during the analysis process
    */
   private createSummary(analyses: AnalysisResult[]): GazetteAnalysis['summary'] {
     const findingsByType: Record<string, number> = {};
@@ -277,12 +266,54 @@ export class AnalysisOrchestrator {
     const keywords = new Set<string>();
     let totalFindings = 0;
     let highConfidenceFindings = 0;
+    let totalProcessingTime = 0;
+    let totalConfidenceSum = 0;
+    let totalTextLength = 0;
+    let entityCount = 0;
+
+    // Processing statistics
+    const totalAnalyzers = analyses.length;
+    const successfulAnalyzers = analyses.filter(a => a.status === 'success').length;
+    const failedAnalyzers = analyses.filter(a => a.status === 'error').length;
+    const skippedAnalyzers: string[] = [];
+    const warnings: string[] = [];
+    const analyzerFindings: Record<string, number> = {};
+
+    // Collect analyzer-specific metadata
+    const analyzerMetadata: Record<string, any> = {};
 
     for (const analysis of analyses) {
+      // Track processing time
+      if (analysis.processingTimeMs) {
+        totalProcessingTime += analysis.processingTimeMs;
+      }
+
+      // Track analyzer-specific findings count
+      analyzerFindings[analysis.analyzerId] = analysis.findings.length;
+
+      // Collect analyzer metadata
+      if (analysis.metadata) {
+        analyzerMetadata[analysis.analyzerId] = {
+          processingTime: analysis.processingTimeMs,
+          status: analysis.status,
+          metadata: analysis.metadata,
+        };
+      }
+
+      // Track skipped analyzers and warnings
+      if (analysis.status === 'skipped') {
+        skippedAnalyzers.push(analysis.analyzerId);
+      }
+      if (analysis.status === 'error' && analysis.error) {
+        warnings.push(`${analysis.analyzerId}: ${analysis.error}`);
+      }
+
+      // Only process findings from successful analyses
       if (analysis.status !== 'success') continue;
 
       for (const finding of analysis.findings) {
         totalFindings++;
+        totalConfidenceSum += finding.confidence;
 
         // Count by type
         findingsByType[finding.type] = (findingsByType[finding.type] || 0) + 1;
@@ -292,7 +323,12 @@ export class AnalysisOrchestrator {
           highConfidenceFindings++;
         }
 
-        // Extract categories
+        // Track entities for density calculation
+        if (finding.type.startsWith('entity:')) {
+          entityCount++;
+        }
+
+        // Extract categories and keywords
         if (finding.type.startsWith('keyword:')) {
           const category = finding.data.category as string;
           if (category) categories.add(category);
@@ -310,9 +346,36 @@ export class AnalysisOrchestrator {
           if (finding.data.categories && Array.isArray(finding.data.categories)) {
             finding.data.categories.forEach((c: string) => categories.add(c));
           }
+          if (finding.data.keywords && Array.isArray(finding.data.keywords)) {
+            finding.data.keywords.forEach((k: string) => keywords.add(k));
+          }
+        } else if (finding.type === 'concurso') {
+          // Extract concurso-specific keywords and categories
+          if (finding.data.documentType) {
+            categories.add(`concurso_${finding.data.documentType}`);
+          }
+          if (finding.data.keywords && Array.isArray(finding.data.keywords)) {
+            finding.data.keywords.forEach((kw: any) => {
+              if (typeof kw === 'string') {
+                keywords.add(kw);
+              } else if (kw.keyword) {
+                keywords.add(kw.keyword);
+              }
+            });
+          }
+        }
+
+        // Extract text length for coverage calculation
+        if (finding.context) {
+          totalTextLength += finding.context.length;
         }
       }
     }
+
+    // Calculate quality indicators
+    const averageConfidence = totalFindings > 0 ? totalConfidenceSum / totalFindings : 0;
+    const textCoverage = totalTextLength > 0 ? Math.min((totalTextLength / 10000) * 100, 100) : 0; // Rough estimate
+    const entityDensity = totalTextLength > 0 ? (entityCount / (totalTextLength / 1000)) : 0;
 
     return {
       totalFindings,
@@ -320,6 +383,25 @@ export class AnalysisOrchestrator {
       highConfidenceFindings,
       categories: Array.from(categories),
       keywords: Array.from(keywords).slice(0, 20), // Top 20 keywords
+      
+      // Processing statistics
+      processingStats: {
+        totalAnalyzers,
+        successfulAnalyzers,
+        failedAnalyzers,
+        totalProcessingTime,
+        analyzerFindings,
+        skippedAnalyzers,
+        warnings: warnings.slice(0, 10), // Limit warnings to prevent bloat
+        analyzerMetadata,
+      },
+      
+      // Quality indicators
+      qualityIndicators: {
+        averageConfidence: Math.round(averageConfidence * 1000) / 1000, // Round to 3 decimal places
+        textCoverage: Math.round(textCoverage * 100) / 100, // Round to 2 decimal places
+        entityDensity: Math.round(entityDensity * 100) / 100, // Round to 2 decimal places
+      },
     };
   }
 

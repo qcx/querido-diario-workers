@@ -1,0 +1,10 @@
+{
+  "cidade": "Barreirinhas",
+  "ibge": "2101707",
+  "urlDiario": "https://www.transparencia.barreirinhas.ma.gov.br/engine.php?class=diario_home",
+  "estrutura": "Página com sistema de abas (tabs) usando Adianti Framework. A página principal exibe a edição atual em um iframe com o PDF. Há abas para: Edição Atual, Edições Anteriores, Busca, Quem Somos, Legislação, Expediente, Edições anteriores - Publicação não eletrônica, e Ajuda. O conteúdo das abas 'Edições Anteriores' e 'Busca' é carregado dinamicamente via JavaScript usando __adianti_load_page(). A edição atual mostra informações como volume, número, data de publicação, tipo de publicação e código de autenticidade.",
+  "padraoUrl": "https://transparencia.webservicesistemas.com.br/app/output/barreirinhas/diario/{codigo_autenticidade}.pdf",
+  "plataforma": "WebService Sistemas (transparencia.webservicesistemas.com.br)",
+  "requiresClientRendering": true,
+  "notas": "A plataforma usa Adianti Framework e requer JavaScript para carregar o conteúdo das listas de edições anteriores e busca. Os PDFs são hospedados em um subdomínio diferente (transparencia.webservicesistemas.com.br) e usam um código de autenticidade SHA-1 (40 caracteres hexadecimais) como identificador único. A edição atual é exibida diretamente em um iframe na página principal. Para acessar edições anteriores, é necessário interagir com a aba correspondente que carrega dinamicamente o conteúdo via AJAX. A página também oferece funcionalidade de busca de publicações."
+}

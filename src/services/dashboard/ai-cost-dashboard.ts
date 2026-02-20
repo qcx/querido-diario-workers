@@ -255,15 +255,21 @@ export class AICostDashboard {
     const startDate = new Date();
     startDate.setDate(startDate.getDate() - days);
 
+    // Extract date from ISO 8601 timestamp using SQLite's strftime
+    // Since analyzed_at is stored as TEXT with ISO format, we extract the date part
+    // For ISO format like "2025-01-15T10:30:00Z", we can use SUBSTR or DATE function
+    // Using SUBSTR is more reliable with SQLite and avoids quoting issues
+    const dateExpr = sql<string>`SUBSTR(${schema.analysisResults.analyzedAt}, 1, 10)`;
+    
     const results = await db.select({
-      date: sql<string>`DATE(${schema.analysisResults.analyzedAt})`,
+      date: dateExpr,
       count: sql<number>`COUNT(*)`,
       metadata: sql<string>`GROUP_CONCAT(${schema.analysisResults.metadata})`,
     })
       .from(schema.analysisResults)
       .where(gte(schema.analysisResults.analyzedAt, startDate.toISOString().split('T')[0]))
-      .groupBy(sql`DATE(${schema.analysisResults.analyzedAt})`)
-      .orderBy(sql`DATE(${schema.analysisResults.analyzedAt})`);
+      .groupBy(dateExpr)
+      .orderBy(dateExpr);
 
     return results.map(row => {
       let cost = 0;

@@ -1,0 +1,147 @@
+{
+  "timestamp": "2026-01-22T20:23:00Z",
+  "csvFile": "cidades_ba_solicitadas_pelo_usuario_parte2",
+  "stateCode": "BA",
+  "configFile": "src/spiders/v2/configs/ba.json",
+  "summary": {
+    "total": 10,
+    "created_new_spider": 0,
+    "used_existing_spider": 8,
+    "skipped_already_exists": 0,
+    "needs_review": 2
+  },
+  "results": [
+    {
+      "cidade": "Caetité",
+      "url": "https://doem.org.br/ba/caetite",
+      "status": "used_existing_spider",
+      "spiderType": "doem",
+      "territoryId": "2905206",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site DOEM funcionando corretamente - Edição 3.692 (Ano 18) visualizada"
+    },
+    {
+      "cidade": "Barra",
+      "url": "https://barra.ba.gov.br/acessorapido/diario-oficial/",
+      "status": "needs_review",
+      "spiderType": null,
+      "territoryId": "2902708",
+      "filesCreated": [],
+      "platformConfirmed": false,
+      "notes": "Cidade não encontrada no DOEM, SAI, AMURC ou AMURB. Site próprio da prefeitura tem página de diário oficial mas sem conteúdo visível. Plataforma desconhecida."
+    },
+    {
+      "cidade": "Tucano",
+      "url": "https://doem.org.br/ba/tucano",
+      "status": "used_existing_spider",
+      "spiderType": "doem",
+      "territoryId": "2931905",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site DOEM funcionando corretamente - Edições 3.542 e 3.543 (Ano 14) visualizadas"
+    },
+    {
+      "cidade": "Araci",
+      "url": "https://sai.io.org.br/ba/araci/site/diariooficial",
+      "status": "used_existing_spider",
+      "spiderType": "diof",
+      "territoryId": "2902104",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site SAI.IO (DIOF) funcionando - prefeitura usa plataforma sai.io.org.br"
+    },
+    {
+      "cidade": "Poções",
+      "url": "https://sai.io.org.br/ba/pocoes/site/diariooficial",
+      "status": "used_existing_spider",
+      "spiderType": "diof",
+      "territoryId": "2925105",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site SAI.IO (DIOF) funcionando - prefeitura usa plataforma sai.io.org.br"
+    },
+    {
+      "cidade": "Catu",
+      "url": "https://doem.org.br/ba/catu",
+      "status": "used_existing_spider",
+      "spiderType": "doem",
+      "territoryId": "2907509",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site DOEM funcionando corretamente - Edição 1.864 (Ano 9) visualizada"
+    },
+    {
+      "cidade": "Monte Santo",
+      "url": "https://doem.org.br/ba/montesanto",
+      "status": "used_existing_spider",
+      "spiderType": "doem",
+      "territoryId": "2921500",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site DOEM funcionando corretamente - Edição 3.380 (Ano 16) visualizada"
+    },
+    {
+      "cidade": "Seabra",
+      "url": "https://sai.io.org.br/ba/seabra/site/diariooficial",
+      "status": "used_existing_spider",
+      "spiderType": "diof",
+      "territoryId": "2929909",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site SAI.IO (DIOF) funcionando - prefeitura usa plataforma sai.io.org.br"
+    },
+    {
+      "cidade": "Jaguaquara",
+      "url": "https://doem.org.br/ba/jaguaquara",
+      "status": "used_existing_spider",
+      "spiderType": "doem",
+      "territoryId": "2917607",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site DOEM funcionando corretamente"
+    },
+    {
+      "cidade": "Xique-Xique",
+      "url": "https://xiquexique.ba.gov.br",
+      "status": "needs_review",
+      "spiderType": null,
+      "territoryId": "2933604",
+      "filesCreated": [],
+      "platformConfirmed": false,
+      "notes": "Cidade não encontrada no DOEM ou SAI. Site próprio da prefeitura menciona plataforma GEDDOEM/IBDM que não está suportada. Necessário criar spider personalizado."
+    }
+  ],
+  "platformAnalysis": {
+    "DOEM": {
+      "count": 5,
+      "cities": [
+        "Caetité",
+        "Tucano",
+        "Catu",
+        "Monte Santo",
+        "Jaguaquara"
+      ],
+      "baseUrl": "https://doem.org.br/ba/{cidade}",
+      "spiderType": "doem"
+    },
+    "DIOF": {
+      "count": 3,
+      "cities": [
+        "Araci",
+        "Poções",
+        "Seabra"
+      ],
+      "baseUrl": "https://sai.io.org.br/ba/{cidade}/site/diariooficial",
+      "spiderType": "diof"
+    },
+    "needs_review": {
+      "count": 2,
+      "cities": [
+        "Barra",
+        "Xique-Xique"
+      ],
+      "notes": "Estas cidades precisam de investigação adicional - plataformas desconhecidas ou personalizadas"
+    }
+  }
+}

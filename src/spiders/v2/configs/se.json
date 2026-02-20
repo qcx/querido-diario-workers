@@ -1,0 +1,376 @@
+[
+  {
+    "id": "se_aracaju",
+    "name": "Aracaju - SE",
+    "territoryId": "2800308",
+    "stateCode": "SE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituaraaracaju",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "1990-01-01",
+        "config": {
+          "type": "prefeituaraaracaju",
+          "baseUrl": "http://sga.aracaju.se.gov.br:5011/legislacao/faces/diario_form_pesq.jsp",
+          "cityName": "Aracaju",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_nossa_senhora_do_socorro",
+    "name": "Nossa Senhora do Socorro - SE",
+    "territoryId": "2804805",
+    "stateCode": "SE",
+    "active": true,
+    "notes": "Usa plataforma DOEM (doem.org.br/se/nossasenhoradosocorro). Município da região metropolitana de Aracaju.",
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2022-11-07",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "se/nossasenhoradosocorro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_itabaiana",
+    "name": "Itabaiana - SE",
+    "territoryId": "2802908",
+    "stateCode": "SE",
+    "active": true,
+    "notes": "Usa plataforma MunicípioOnline (municipioonline.com.br). Terceira maior cidade de Sergipe.",
+    "spiders": [
+      {
+        "spiderType": "municipio_online",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2023-01-02",
+        "config": {
+          "type": "municipio_online",
+          "urlUf": "se",
+          "urlCity": "itabaiana"
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_lagarto",
+    "name": "Lagarto - SE",
+    "territoryId": "2803500",
+    "stateCode": "SE",
+    "active": true,
+    "notes": "Usa plataforma MunicípioOnline/3Tecnos (municipioonline.com.br/se/prefeitura/lagarto). Diário Oficial Eletrônico criado pela Lei nº 1.214/2025.",
+    "spiders": [
+      {
+        "spiderType": "municipio_online",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2025-06-27",
+        "config": {
+          "type": "municipio_online",
+          "urlUf": "se",
+          "urlCity": "lagarto"
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_sao_cristovao",
+    "name": "São Cristóvão - SE",
+    "territoryId": "2806701",
+    "stateCode": "SE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "iose",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2017-01-01",
+        "config": {
+          "type": "iose",
+          "entitySlug": "prefeitura-sao-cristovao",
+          "cityName": "São Cristóvão",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_estancia",
+    "name": "Estância - SE",
+    "territoryId": "2802106",
+    "stateCode": "SE",
+    "active": true,
+    "notes": "Usa plataforma DIOF (diario.estancia.se.gov.br). Município histórico do litoral sul de Sergipe.",
+    "spiders": [
+      {
+        "spiderType": "diof",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2016-04-28",
+        "config": {
+          "type": "diof",
+          "website": "https://diario.estancia.se.gov.br",
+          "power": "executive"
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_tobias_barreto",
+    "name": "Tobias Barreto - SE",
+    "territoryId": "2807402",
+    "stateCode": "SE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub_se",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2009-01-01",
+        "config": {
+          "type": "sigpub_se",
+          "url": "https://www.diariomunicipal.com.br/sergipe/",
+          "entityId": "tobiasbarreto",
+          "cityName": "Tobias Barreto"
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_simao_dias",
+    "name": "Simão Dias - SE",
+    "territoryId": "2807105",
+    "stateCode": "SE",
+    "active": true,
+    "notes": "Usa plataforma MunicípioOnline (municipioonline.com.br) e também está no SIGPub.",
+    "spiders": [
+      {
+        "spiderType": "municipio_online",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2021-01-04",
+        "config": {
+          "type": "municipio_online",
+          "urlUf": "se",
+          "urlCity": "simaodias"
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_barra_dos_coqueiros",
+    "name": "Barra dos Coqueiros - SE",
+    "territoryId": "2800605",
+    "stateCode": "SE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "municipio_online",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2022-09-30",
+        "config": {
+          "type": "municipio_online",
+          "urlUf": "se",
+          "urlCity": "barradoscoqueiros"
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_nossa_senhora_da_gloria",
+    "name": "Nossa Senhora da Glória - SE",
+    "territoryId": "2804508",
+    "stateCode": "SE",
+    "active": true,
+    "notes": "Usa plataforma MunicípioOnline (municipioonline.com.br/se/prefeitura/nossasenhoradagloria).",
+    "spiders": [
+      {
+        "spiderType": "municipio_online",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2017-01-01",
+        "config": {
+          "type": "municipio_online",
+          "urlUf": "se",
+          "urlCity": "nossasenhoradagloria"
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_itabaianinha",
+    "name": "Itabaianinha - SE",
+    "territoryId": "2803005",
+    "stateCode": "SE",
+    "active": true,
+    "notes": "Usa plataforma MunicípioOnline/3Tecnos (municipioonline.com.br/se/prefeitura/itabaianinha). PDFs armazenados no Google Drive. Spider funciona com HTTP fallback quando browser não está disponível.",
+    "spiders": [
+      {
+        "spiderType": "3tecnos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2022-03-01",
+        "config": {
+          "type": "3tecnos",
+          "urlUf": "se",
+          "urlCity": "itabaianinha",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_itaporanga_dajuda",
+    "name": "Itaporanga d'Ajuda - SE",
+    "territoryId": "2803203",
+    "stateCode": "SE",
+    "active": true,
+    "notes": "Usa plataforma MunicípioOnline/3Tecnos (municipioonline.com.br/se/prefeitura/itaporangadajuda). Município da região metropolitana de Aracaju.",
+    "spiders": [
+      {
+        "spiderType": "3tecnos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2025-09-01",
+        "config": {
+          "type": "3tecnos",
+          "urlUf": "se",
+          "urlCity": "itaporangadajuda",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_poco_redondo",
+    "name": "Poço Redondo - SE",
+    "territoryId": "2805406",
+    "stateCode": "SE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "eatos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2020-01-01",
+        "config": {
+          "type": "eatos",
+          "baseUrl": "https://publicacoesmunicipais.com.br/eatos/pocoredondo",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_capela",
+    "name": "Capela - SE",
+    "territoryId": "2801306",
+    "stateCode": "SE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "3tecnos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2021-11-30",
+        "config": {
+          "type": "3tecnos",
+          "urlUf": "se",
+          "urlCity": "capela",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_caninde_de_sao_francisco",
+    "name": "Canindé de São Francisco - SE",
+    "territoryId": "2801207",
+    "stateCode": "SE",
+    "active": true,
+    "notes": "Usa plataforma MunicípioOnline/3Tecnos (municipioonline.com.br/se/prefeitura/canindedesaofrancisco). Município do sertão, próximo aos Canyons do Xingó.",
+    "spiders": [
+      {
+        "spiderType": "3tecnos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2020-01-01",
+        "config": {
+          "type": "3tecnos",
+          "urlUf": "se",
+          "urlCity": "canindedesaofrancisco",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_propria",
+    "name": "Propriá - SE",
+    "territoryId": "2805703",
+    "stateCode": "SE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "3tecnos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2020-01-01",
+        "config": {
+          "type": "3tecnos",
+          "urlUf": "se",
+          "urlCity": "propria",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "se_porto_da_folha",
+    "name": "Porto da Folha - SE",
+    "territoryId": "2805604",
+    "stateCode": "SE",
+    "active": true,
+    "notes": "Usa plataforma Ágape Sistemas (agportal.agapesistemas.com.br/DiarioOficial/?alias=pmportofolha). Município do alto sertão sergipano, às margens do Rio São Francisco.",
+    "spiders": [
+      {
+        "spiderType": "agape",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "startDate": "2020-01-01",
+        "config": {
+          "type": "agape",
+          "alias": "pmportofolha",
+          "cityName": "Porto da Folha"
+        }
+      }
+    ]
+  }
+]

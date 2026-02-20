@@ -1,0 +1,204 @@
+{
+  "timestamp": "2026-01-02T13:58:00Z",
+  "csvFile": "diarios_oficiais_cidades_especificas.csv",
+  "summary": {
+    "total": 15,
+    "created_new_spider": 2,
+    "used_existing_spider": 6,
+    "skipped_already_exists": 1,
+    "needs_review": 6
+  },
+  "results": [
+    {
+      "cidade": "Adamantina",
+      "url": "https://dosp.com.br/",
+      "status": "needs_review",
+      "reason": "URL redireciona para página genérica do DiOE (dosp.com.br) - não há página específica para a cidade",
+      "attemptsLog": [
+        "Tentativa 1: Acessar https://www.imprensaoficialmunicipal.com.br/adamantina - redireciona para dosp.com.br genérica",
+        "Tentativa 2: Verificar doe.sp.gov.br - cidade não encontrada na listagem de municípios"
+      ],
+      "analysis": {
+        "siteStatus": "redireciona",
+        "recommendation": "Verificar se a cidade publica em outra plataforma ou DOE estadual"
+      }
+    },
+    {
+      "cidade": "Americana",
+      "url": "https://diariooficial.americana.sp.gov.br/",
+      "status": "created_new_spider",
+      "spiderType": "prefeituraamericana",
+      "territoryId": "3501608",
+      "matchedPattern": "calendar-based (similar to prefeiturabauru)",
+      "filesCreated": [
+        "src/types/spider-config.ts (updated)",
+        "src/spiders/base/prefeituraamericana-spider.ts (created)",
+        "src/spiders/base/index.ts (updated)",
+        "src/spiders/registry-manager.ts (updated)",
+        "src/spiders/v2/configs/sp.json (updated)"
+      ]
+    },
+    {
+      "cidade": "Barrinha",
+      "url": "https://dosp.com.br/barrinha",
+      "status": "needs_review",
+      "reason": "URL redireciona para dosp.com.br genérica - página vazia",
+      "attemptsLog": [
+        "Tentativa 1: Acessar URL direta - retorna página vazia",
+        "Tentativa 2: Verificar imprensaoficialmunicipal.com.br/barrinha - redireciona para dosp.com.br"
+      ],
+      "analysis": {
+        "siteStatus": "redireciona",
+        "recommendation": "Cidade pode não ter diário oficial eletrônico próprio"
+      }
+    },
+    {
+      "cidade": "Bebedouro",
+      "url": "http://sp.portaldatransparencia.com.br/prefeitura/bebedouro/",
+      "status": "needs_review",
+      "reason": "Plataforma ATM (Associação Transparência Municipal) diferente - requer spider específico",
+      "attemptsLog": [
+        "Tentativa 1: Analisar estrutura do site - plataforma própria da ATM",
+        "Tentativa 2: Verificar compatibilidade com spiders existentes - não compatível"
+      ],
+      "analysis": {
+        "siteStatus": "online",
+        "platform": "portaldatransparencia.com.br (ATM)",
+        "recommendation": "Criar spider específico para plataforma ATM"
+      }
+    },
+    {
+      "cidade": "Cachoeira Paulista",
+      "url": "https://doe.sp.gov.br/municipios/cachoeira-paulista",
+      "status": "used_existing_spider",
+      "spiderType": "dosp",
+      "territoryId": "3508504",
+      "filesCreated": [
+        "src/spiders/v2/configs/sp.json (updated)"
+      ]
+    },
+    {
+      "cidade": "Fernandópolis",
+      "url": "URL não encontrada na varredura",
+      "status": "needs_review",
+      "reason": "URL não fornecida no CSV",
+      "attemptsLog": [
+        "Nenhuma URL disponível para análise"
+      ],
+      "analysis": {
+        "siteStatus": "desconhecido",
+        "recommendation": "Pesquisar manualmente por 'diário oficial Fernandópolis'"
+      }
+    },
+    {
+      "cidade": "Hortolândia",
+      "url": "https://diariooficial.hortolandia.sp.gov.br/",
+      "status": "used_existing_spider",
+      "spiderType": "eatos",
+      "territoryId": "3519071",
+      "matchedPattern": "EATOS via iframe (publicacoesmunicipais.com.br/eatos/hortolandia)",
+      "filesCreated": [
+        "src/spiders/v2/configs/sp.json (updated)"
+      ]
+    },
+    {
+      "cidade": "Itu",
+      "url": "URL não encontrada na varredura",
+      "status": "needs_review",
+      "reason": "URL não fornecida no CSV",
+      "attemptsLog": [
+        "Nenhuma URL disponível para análise"
+      ],
+      "analysis": {
+        "siteStatus": "desconhecido",
+        "recommendation": "Pesquisar manualmente por 'diário oficial Itu'"
+      }
+    },
+    {
+      "cidade": "Juquitiba",
+      "url": "https://dosp.com.br/pesquisar.php",
+      "status": "needs_review",
+      "reason": "URL é página de pesquisa genérica do DiOE - não específica para a cidade",
+      "attemptsLog": [
+        "Tentativa 1: Acessar URL - página de pesquisa genérica",
+        "Tentativa 2: Verificar imprensaoficialmunicipal.com.br/juquitiba - redireciona para página genérica"
+      ],
+      "analysis": {
+        "siteStatus": "genérico",
+        "recommendation": "Verificar se a cidade publica em outra plataforma"
+      }
+    },
+    {
+      "cidade": "Laranjal Paulista",
+      "url": "https://www.imprensaoficialmunicipal.com.br/laranjal_paulista",
+      "status": "skipped_already_exists",
+      "existingSpider": "imprensaoficialmunicipal",
+      "existingId": "sp_laranja_paulista"
+    },
+    {
+      "cidade": "Lençóis Paulista",
+      "url": "https://lencois.mentor.metaway.com.br/diario/#/diarios",
+      "status": "needs_review",
+      "reason": "SPA Angular (Ionic) complexo requer análise mais detalhada",
+      "attemptsLog": [
+        "Tentativa 1: Analisar estrutura - aplicativo Ionic/Angular com client-side rendering",
+        "Tentativa 2: Verificar APIs disponíveis - não identificadas facilmente"
+      ],
+      "analysis": {
+        "siteStatus": "online",
+        "platform": "Mentor Metaway (SPA)",
+        "recommendation": "Criar spider com puppeteer para SPA ou identificar APIs"
+      }
+    },
+    {
+      "cidade": "Lorena",
+      "url": "https://www.imprensaoficial.com.br/DO/BuscaDO2001_11_2.aspx",
+      "status": "used_existing_spider",
+      "spiderType": "dosp",
+      "territoryId": "3527207",
+      "note": "Cidade publica no DOE SP estadual (doe.sp.gov.br/municipios/lorena)",
+      "filesCreated": [
+        "src/spiders/v2/configs/sp.json (updated)"
+      ]
+    },
+    {
+      "cidade": "Presidente Prudente",
+      "url": "https://diario.presidenteprudente.sp.gov.br/",
+      "status": "created_new_spider",
+      "spiderType": "prefeiturapresidenteprudente",
+      "territoryId": "3541406",
+      "matchedPattern": "Yii2 framework with list/search interface",
+      "filesCreated": [
+        "src/types/spider-config.ts (updated)",
+        "src/spiders/base/prefeiturapresidenteprudente-spider.ts (created)",
+        "src/spiders/base/index.ts (updated)",
+        "src/spiders/registry-manager.ts (updated)",
+        "src/spiders/v2/configs/sp.json (updated)"
+      ]
+    },
+    {
+      "cidade": "Santa Bárbara d'Oeste",
+      "url": "https://www.imprensaoficial.com.br/DO/BuscaDO2001Resultado_11_3.aspx",
+      "status": "used_existing_spider",
+      "spiderType": "dosp",
+      "territoryId": "3545803",
+      "note": "Cidade publica no DOE SP estadual (doe.sp.gov.br/municipios/santa-barbara-doeste)",
+      "filesCreated": [
+        "src/spiders/v2/configs/sp.json (updated)"
+      ]
+    },
+    {
+      "cidade": "São Miguel Arcanjo",
+      "url": "https://www.doe.sp.gov.br/municipios/sao-miguel-arcanjo",
+      "status": "used_existing_spider",
+      "spiderType": "dosp",
+      "territoryId": "3550001",
+      "filesCreated": [
+        "src/spiders/v2/configs/sp.json (updated)"
+      ]
+    }
+  ]
+}
+
+
+

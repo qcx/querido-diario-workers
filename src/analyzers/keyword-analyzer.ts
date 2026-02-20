@@ -19,10 +19,28 @@ export class KeywordAnalyzer extends BaseAnalyzer {
     const findings: Finding[] = [];
     const text = ocrResult.extractedText || '';
 
+    // Phase 1: Detect if "concurso público" context exists
+    const hasConcursoContext = this.hasConcursoPublicoContext(text);
+
+    // Phase 2: Process patterns conditionally
     for (const pattern of this.patterns) {
+      // Skip concurso sub-category patterns if no concurso context found
+      if (this.isConcursoSubCategory(pattern.category) && !hasConcursoContext) {
+        continue;
+      }
+
       const matches = this.findMatches(text, pattern);
       findings.push(...matches);
     }
+
+    console.log('🔵 Keyword Analyzer Findings:', findings.map((f) => (
+      {
+        type: f.type,
+        context: f.context || 'No context',
+        data: f.data,
+        location: f.location
+      }
+    )));
 
     return findings;
   }
@@ -88,6 +106,30 @@ export class KeywordAnalyzer extends BaseAnalyzer {
   }
 
   /**
+   * Detect if text contains "concurso público" or "concurso publico"
+   */
+  private hasConcursoPublicoContext(text: string): boolean {
+    const lowerText = text.toLowerCase();
+    return lowerText.includes('concurso público') || lowerText.includes('concurso publico');
+  }
+
+  /**
+   * Check if a category is a concurso sub-category (requires context)
+   */
+  private isConcursoSubCategory(category: string): boolean {
+    const concursoSubCategories = [
+      'concurso_publico_abertura',
+      'concurso_publico_convocacao',
+      'concurso_publico_homologacao',
+      'concurso_publico_retificacao',
+      'concurso_publico_prorrogacao',
+      'concurso_publico_cancelamento',
+      'concurso_publico_resultado',
+    ];
+    return concursoSubCategories.includes(category);
+  }
+
+  /**
    * Get metadata with category breakdown
    */
   protected getMetadata(findings: Finding[]): Record<string, any> {
@@ -106,9 +148,9 @@ export class KeywordAnalyzer extends BaseAnalyzer {
   }
 
   /**
-   * Default keyword patterns for Brazilian gazettes
+   * Get concurso público patterns (require context to be applied)
    */
-  private getDefaultPatterns(): KeywordPattern[] {
+  private getConcursoPatterns(): KeywordPattern[] {
     return [
       // Concursos Públicos - Direct match (high confidence)
       {
@@ -131,6 +173,8 @@ export class KeywordAnalyzer extends BaseAnalyzer {
           'processo seletivo',
           'seleção simplificada',
           'processo seletivo simplificado',
+          'processo de escolha',
+          'processo de seleção',
         ],
         caseSensitive: false,
         wholeWord: false,
@@ -159,17 +203,17 @@ export class KeywordAnalyzer extends BaseAnalyzer {
       {
         category: 'concurso_publico_convocacao',
         keywords: [
-      //    'convocação',
-     //     'convoca',
+          'convocação',
+          'convoca',
           'candidatos aprovados',
           'candidatos convocados',
           'candidatos selecionados',
           'candidatos reprovados',
           'cadastro reserva',
           'chamada',
-        //  'apresentação',
-      //    'posse',
-       //   'nomeação',
+          'apresentação',
+          'posse',
+          'nomeação',
         ],
         caseSensitive: false,
         wholeWord: false,
@@ -255,7 +299,14 @@ export class KeywordAnalyzer extends BaseAnalyzer {
         wholeWord: false,
         weight: 0.85,
       },
-      
+    ];
+  }
+
+  /**
+   * Get general patterns (always active, no context required)
+   */
+  private getGeneralPatterns(): KeywordPattern[] {
+    return [
       // Licitações
       {
         category: 'licitacao',
@@ -353,6 +404,17 @@ export class KeywordAnalyzer extends BaseAnalyzer {
         wholeWord: false,
         weight: 0.6,
       },
+    ];
+  }
+
+  /**
+   * Default keyword patterns for Brazilian gazettes
+   * Combines concurso patterns and general patterns
+   */
+  private getDefaultPatterns(): KeywordPattern[] {
+    return [
+      ...this.getConcursoPatterns(),
+      ...this.getGeneralPatterns(),
     ];
   }
 

@@ -15,11 +15,46 @@ import {
   AnalysisQueueMessage,
   WebhookQueueMessage,
 } from './types';
+
+/**
+ * Request for processing PDFs directly
+ */
+interface ProcessPdfsRequest {
+  gazettes: PdfGazetteInput[];
+}
+
+/**
+ * Input for a single gazette PDF to process
+ */
+interface PdfGazetteInput {
+  pdf_url: string;
+  territory_id?: string;
+  gazette_scope?: 'city' | 'state';
+  publication_date?: string; // YYYY-MM-DD format
+  edition_number?: string;
+  power?: 'executive' | 'legislative' | 'executive_legislative';
+  is_extra_edition?: boolean;
+}
+
+/**
+ * Response from PDF processing endpoint
+ */
+interface ProcessPdfsResponse {
+  success: boolean;
+  tasksEnqueued: number;
+  crawlJobId: string;
+  gazettesProcessed: number;
+  gazettesFound: number;
+  gazettesMissing: number;
+  missingGazettes?: string[];
+  failedCount?: number;
+  error?: string;
+}
 import type { D1DatabaseEnv } from './services/database';
 import { spiderRegistry } from './spiders/registry';
 import { logger } from './utils/logger';
 import { toISODate } from './utils/date-utils';
-import { getDatabase, TelemetryService } from './services/database';
+import { getDatabase, TelemetryService, GazetteRepository } from './services/database';
 import { AICostDashboard } from './services/dashboard';
 
 // Import queue processors
@@ -136,6 +171,16 @@ app.get('/', (c) => {
     description: 'Unified gazette processing pipeline',
     spidersRegistered: spiderRegistry.getCount(),
     handlers: ['http', 'crawl-queue', 'ocr-queue', 'analysis-queue', 'webhook-queue'],
+    endpoints: [
+      '/crawl',
+      '/crawl/today-yesterday',
+      '/crawl/cities',
+      '/crawl/pdfs',
+      '/spiders',
+      '/stats',
+      '/health/queue',
+      '/dashboard',
+    ],
     authEnabled: !!c.env.API_KEY,
     dashboard: '/dashboard',
   });
@@ -247,20 +292,36 @@ app.post('/crawl', async (c) => {
 
     const dateRange = getDateRange(request.startDate, request.endDate);
 
-    let configs =
-      request.cities === 'all'
-        ? spiderRegistry.getAllConfigs()
-        : request.cities
-            .map((id) => spiderRegistry.getConfig(id))
-            .filter((config): config is NonNullable<typeof config> => config !== undefined);
+    // Use new registry manager to resolve spider IDs based on version
+    const resolution = spiderRegistry.resolveSpiderIds(
+      request.cities, 
+      request.version, 
+      request.executionStrategy
+    );
+    
+    let configs = resolution.configs;
+
+    // Filter for active spiders only
+    const originalConfigCount = configs.length;
+    configs = configs.filter(config => config.active);
+
+    logger.info(`Using spider system version ${resolution.version}`, {
+      originalCount: originalConfigCount,
+      activeCount: configs.length,
+      executionStrategy: resolution.executionStrategy
+    });
 
     if (configs.length === 0) {
+      const errorMessage = originalConfigCount > 0 
+        ? `No active spider configurations found. ${originalConfigCount} spiders exist but are inactive.`
+        : 'No valid spider configurations found';
+      
       return c.json<DispatchResponse>(
         {
           success: false,
           tasksEnqueued: 0,
           cities: [],
-          error: 'No valid spider configurations found',
+          error: errorMessage,
         },
         400
       );
@@ -379,6 +440,25 @@ app.post('/crawl/today-yesterday', async (c) => {
     let configs = platform
       ? allConfigs.filter((config) => config.spiderType === platform)
       : allConfigs;
+
+    // Filter for active spiders only
+    const originalConfigCount = configs.length;
+    configs = configs.filter(config => config.active);
+
+    if (configs.length === 0) {
+      const errorMessage = originalConfigCount > 0 
+        ? `No active spider configurations found. ${originalConfigCount} spiders exist but are inactive.`
+        : 'No valid spider configurations found';
+      
+      return c.json(
+        {
+          success: false,
+          tasksEnqueued: 0,
+          error: errorMessage,
+        },
+        400
+      );
+    }
 
     // Apply scope filtering at endpoint level
     const originalCount = configs.length;
@@ -499,11 +579,19 @@ app.post('/crawl/cities', async (c) => {
       .map((id) => spiderRegistry.getConfig(id))
       .filter((config): config is NonNullable<typeof config> => config !== undefined);
 
+    // Filter for active spiders only
+    const originalConfigCount = configs.length;
+    configs = configs.filter(config => config.active);
+
     if (configs.length === 0) {
+      const errorMessage = originalConfigCount > 0 
+        ? `No active spider configurations found for provided cities. ${originalConfigCount} spiders exist but are inactive.`
+        : 'No valid spider configurations found for provided cities';
+      
       return c.json(
         {
           success: false,
-          error: 'No valid spider configurations found for provided cities',
+          error: errorMessage,
         },
         400
       );
@@ -601,6 +689,283 @@ app.post('/crawl/cities', async (c) => {
 });
 
 /**
+ * Process PDFs directly - send gazette PDFs directly to OCR queue
+ * Only processes PDFs that exist in gazette registry
+ */
+app.post('/crawl/pdfs', async (c) => {
+  try {
+    const request = await c.req.json<ProcessPdfsRequest>();
+
+    logger.info('Received PDF processing request', {
+      gazetteCount: request.gazettes?.length || 0,
+    });
+
+    if (!request.gazettes || !Array.isArray(request.gazettes) || request.gazettes.length === 0) {
+      return c.json<ProcessPdfsResponse>(
+        {
+          success: false,
+          tasksEnqueued: 0,
+          crawlJobId: '',
+          gazettesProcessed: 0,
+          gazettesFound: 0,
+          gazettesMissing: 0,
+          error: 'Gazettes array is required and must not be empty',
+        },
+        400
+      );
+    }
+
+    // Validate that all gazettes have pdf_url
+    const invalidGazettes = request.gazettes.filter(g => !g.pdf_url);
+    if (invalidGazettes.length > 0) {
+      return c.json<ProcessPdfsResponse>(
+        {
+          success: false,
+          tasksEnqueued: 0,
+          crawlJobId: '',
+          gazettesProcessed: 0,
+          gazettesFound: 0,
+          gazettesMissing: 0,
+          error: `${invalidGazettes.length} gazette(s) missing required pdf_url field`,
+        },
+        400
+      );
+    }
+
+    const db = getDatabase(c.env);
+    const telemetry = new TelemetryService(db);
+    const gazetteRepo = new GazetteRepository(db);
+
+    // Create crawl job for tracking
+    const crawlJobId = await telemetry.createCrawlJob({
+      jobType: 'manual',
+      totalCities: request.gazettes.length,
+      startDate: toISODate(new Date()),
+      endDate: toISODate(new Date()),
+      metadata: {
+        requestType: 'manual-pdf',
+        gazetteCount: request.gazettes.length,
+        userAgent: c.req.header('user-agent'),
+      },
+    });
+
+    await telemetry.trackCrawlJobStart(crawlJobId, 'manual');
+
+    logger.info('Created crawl job for PDF processing', {
+      crawlJobId,
+      gazetteCount: request.gazettes.length,
+    });
+
+    // Validate gazette registry and create gazette crawls
+    const validGazettes: Array<{
+      input: PdfGazetteInput;
+      gazetteId: string;
+      gazetteCrawlId: string;
+      existingGazette: any;
+    }> = [];
+    const missingGazettes: string[] = [];
+    let gazettesFound = 0;
+    let gazettesMissing = 0;
+
+    for (const gazette of request.gazettes) {
+      try {
+        // 1. Look up existing gazette by PDF URL
+        const existingGazette = await gazetteRepo.getGazetteByPdfUrl(gazette.pdf_url);
+        
+        if (!existingGazette) {
+          logger.warn('Gazette not found in registry', {
+            pdfUrl: gazette.pdf_url,
+            crawlJobId,
+          });
+          missingGazettes.push(gazette.pdf_url);
+          gazettesMissing++;
+          continue;
+        }
+
+        gazettesFound++;
+        logger.info('Found existing gazette in registry', {
+          gazetteId: existingGazette.id,
+          pdfUrl: gazette.pdf_url,
+          status: existingGazette.status,
+        });
+
+        // 2. Create gazette crawl record
+        const gazetteCrawlId = await gazetteRepo.createGazetteCrawl({
+          gazetteId: existingGazette.id,
+          jobId: `manual-pdf-${Date.now()}-${Math.random().toString(36).substring(2, 8)}`,
+          territoryId: gazette.territory_id || '0000000',
+          spiderId: 'manual-pdf-submission',
+          status: 'created',
+          scrapedAt: new Date().toISOString(),
+        });
+
+        logger.info('Created gazette crawl record', {
+          gazetteCrawlId,
+          gazetteId: existingGazette.id,
+          crawlJobId,
+        });
+
+        validGazettes.push({
+          input: gazette,
+          gazetteId: existingGazette.id,
+          gazetteCrawlId,
+          existingGazette,
+        });
+
+      } catch (gazetteError) {
+        logger.error('Failed to process gazette', gazetteError as Error, {
+          pdfUrl: gazette.pdf_url,
+          crawlJobId,
+        });
+        missingGazettes.push(gazette.pdf_url);
+        gazettesMissing++;
+      }
+    }
+
+    // If no valid gazettes found, return early
+    if (validGazettes.length === 0) {
+      await telemetry.updateCrawlJob(crawlJobId, {
+        status: 'failed',
+      });
+
+      return c.json<ProcessPdfsResponse>(
+        {
+          success: false,
+          tasksEnqueued: 0,
+          crawlJobId,
+          gazettesProcessed: 0,
+          gazettesFound,
+          gazettesMissing,
+          missingGazettes,
+          error: 'No valid gazettes found in registry',
+        },
+        400
+      );
+    }
+
+    // Generate OcrQueueMessage for each valid gazette
+    const ocrMessages: OcrQueueMessage[] = validGazettes.map(({ input, gazetteId, gazetteCrawlId, existingGazette }) => {
+      const now = new Date().toISOString();
+      const publicationDate = input.publication_date || existingGazette.publicationDate || toISODate(new Date());
+      
+      // Generate a unique jobId based on pdf_url and timestamp
+      const jobId = `manual-${Buffer.from(input.pdf_url).toString('base64').substring(0, 20)}-${Date.now()}`;
+
+      return {
+        jobId,
+        pdfUrl: input.pdf_url,
+        territoryId: input.territory_id || '0000000',
+        publicationDate,
+        editionNumber: input.edition_number || existingGazette.editionNumber,
+        spiderId: 'manual-pdf-submission',
+        queuedAt: now,
+        metadata: {
+          power: input.power || existingGazette.power || 'executive',
+          isExtraEdition: input.is_extra_edition ?? existingGazette.isExtraEdition ?? false,
+          crawlJobId,
+          gazetteScope: input.gazette_scope || 'city',
+          spiderType: 'manual',
+          gazetteCrawlId, // ✅ Critical for analysis
+          gazetteId,      // ✅ Required for analysis
+        },
+      };
+    });
+
+    // Send to OCR queue in batches
+    const BATCH_SIZE = 100;
+    let enqueuedCount = 0;
+    let failedCount = 0;
+
+    logger.info(
+      `Starting to enqueue ${ocrMessages.length} OCR messages in ${Math.ceil(
+        ocrMessages.length / BATCH_SIZE
+      )} batches`
+    );
+
+    for (let i = 0; i < ocrMessages.length; i += BATCH_SIZE) {
+      const batch = ocrMessages.slice(i, i + BATCH_SIZE);
+      const batchNumber = Math.ceil((i + 1) / BATCH_SIZE);
+      const totalBatches = Math.ceil(ocrMessages.length / BATCH_SIZE);
+
+      try {
+        const wrappedBatch = batch.map((msg) => ({ body: msg }));
+        await c.env.OCR_QUEUE.sendBatch(wrappedBatch);
+        enqueuedCount += batch.length;
+
+        logger.info(`Enqueued OCR batch ${batchNumber}/${totalBatches}`, {
+          batchSize: batch.length,
+          totalEnqueued: enqueuedCount,
+          progress: `${enqueuedCount}/${ocrMessages.length}`,
+          percentage: Math.round((enqueuedCount / ocrMessages.length) * 100),
+        });
+      } catch (error) {
+        logger.error(
+          `Failed to enqueue OCR batch ${batchNumber}/${totalBatches}`,
+          error as Error,
+          {
+            batchStart: i,
+            batchSize: batch.length,
+          }
+        );
+
+        // Try individual sends
+        for (const message of batch) {
+          try {
+            await c.env.OCR_QUEUE.send(message);
+            enqueuedCount++;
+          } catch (individualError) {
+            failedCount++;
+            logger.error(`Failed to enqueue individual OCR message`, individualError as Error, {
+              pdfUrl: message.pdfUrl,
+              territoryId: message.territoryId,
+            });
+          }
+        }
+      }
+    }
+
+    await telemetry.updateCrawlJob(crawlJobId, {
+      status: failedCount === 0 ? 'running' : 'failed',
+    });
+
+    const success = failedCount === 0 && gazettesMissing === 0;
+    const status = success ? 200 : enqueuedCount > 0 ? 207 : 500;
+
+    return c.json<ProcessPdfsResponse>(
+      {
+        success,
+        tasksEnqueued: enqueuedCount,
+        crawlJobId,
+        gazettesProcessed: enqueuedCount,
+        gazettesFound,
+        gazettesMissing,
+        ...(missingGazettes.length > 0 && { missingGazettes }),
+        ...(failedCount > 0 && {
+          failedCount,
+          error: `${failedCount} tasks failed to enqueue`,
+        }),
+      },
+      status
+    );
+  } catch (error) {
+    logger.error('Error processing PDF request', error as Error);
+
+    return c.json<ProcessPdfsResponse>(
+      {
+        success: false,
+        tasksEnqueued: 0,
+        crawlJobId: '',
+        gazettesProcessed: 0,
+        gazettesFound: 0,
+        gazettesMissing: 0,
+        error: (error as Error).message,
+      },
+      500
+    );
+  }
+});
+
+/**
  * List available spiders
  */
 app.get('/spiders', (c) => {
@@ -612,12 +977,15 @@ app.get('/spiders', (c) => {
 
   return c.json({
     total: configs.length,
+    active: configs.filter(config => config.active).length,
+    inactive: configs.filter(config => !config.active).length,
     spiders: configs.map((config) => ({
       id: config.id,
       name: config.name,
       territoryId: config.territoryId,
       type: config.spiderType,
       startDate: config.startDate,
+      active: config.active,
     })),
   });
 });

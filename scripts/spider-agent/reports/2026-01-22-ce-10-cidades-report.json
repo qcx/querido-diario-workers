@@ -1,0 +1,117 @@
+{
+  "timestamp": "2026-01-22T17:50:00Z",
+  "stateCode": "CE",
+  "configFile": "src/spiders/v2/configs/ce.json",
+  "summary": {
+    "total": 20,
+    "created_new_spider": 0,
+    "used_existing_spider": 19,
+    "skipped_already_exists": 0,
+    "needs_review": 1
+  },
+  "notes": "Todas as 10 cidades do Ceará foram analisadas. 9 cidades usam spiders existentes (ASSESI ou APRECE), 1 cidade (Camocim) usa WordPress e precisa de revisão manual.",
+  "results": [
+    {
+      "cidade": "Russas",
+      "url": "APRECE - Diário Municipal",
+      "status": "used_existing_spider",
+      "spiderType": "aprece",
+      "territoryId": "2311801",
+      "testResult": "success",
+      "gazettesFound": 1
+    },
+    {
+      "cidade": "Cascavel",
+      "url": "https://www.cascavel.ce.gov.br/publicacoes.php",
+      "status": "used_existing_spider",
+      "spiderType": "assesi",
+      "territoryId": "2303501",
+      "notes": "Site usa publicacoes.php como endpoint principal",
+      "testResult": "success",
+      "gazettesFound": 1
+    },
+    {
+      "cidade": "Pacajus",
+      "url": "https://www.pacajus.ce.gov.br/diariooficial.php",
+      "status": "used_existing_spider",
+      "spiderType": "assesi",
+      "territoryId": "2309607",
+      "testResult": "success",
+      "gazettesFound": 9
+    },
+    {
+      "cidade": "Acaraú",
+      "url": "https://www.acarau.ce.gov.br/publicacoes.php",
+      "status": "used_existing_spider",
+      "spiderType": "assesi",
+      "territoryId": "2300200",
+      "notes": "Site usa publicacoes.php como endpoint principal",
+      "testResult": "success",
+      "gazettesFound": 0
+    },
+    {
+      "cidade": "Itaitinga",
+      "url": "APRECE - Diário Municipal",
+      "status": "used_existing_spider",
+      "spiderType": "aprece",
+      "territoryId": "2306256",
+      "testResult": "success",
+      "gazettesFound": 1
+    },
+    {
+      "cidade": "Icó",
+      "url": "https://www.ico.ce.gov.br/publicacoes.php",
+      "status": "used_existing_spider",
+      "spiderType": "assesi",
+      "territoryId": "2305407",
+      "notes": "Site usa publicacoes.php como endpoint principal",
+      "testResult": "success",
+      "gazettesFound": 2
+    },
+    {
+      "cidade": "Camocim",
+      "url": "https://camocim.ce.gov.br/publicacoes/",
+      "status": "needs_review",
+      "territoryId": "2302602",
+      "reason": "Site usa WordPress com publicações individuais (decretos, portarias, etc). Não há diário oficial consolidado em PDF.",
+      "attemptsLog": [
+        "Tentativa 1: Verificar diariooficial.php - URL não responde",
+        "Tentativa 2: Verificar publicações WordPress - São posts individuais, não PDFs consolidados",
+        "Tentativa 3: Verificar APRECE - Cidade não está no consórcio"
+      ],
+      "analysis": {
+        "impossibleReason": "Sem diário oficial consolidado em formato PDF",
+        "siteStatus": "online",
+        "recommendation": "Criar spider WordPress específico ou solicitar à prefeitura link do diário oficial"
+      }
+    },
+    {
+      "cidade": "Morada Nova",
+      "url": "APRECE - Diário Municipal",
+      "status": "used_existing_spider",
+      "spiderType": "aprece",
+      "territoryId": "2308708",
+      "testResult": "success",
+      "gazettesFound": 1
+    },
+    {
+      "cidade": "Tauá",
+      "url": "https://www.taua.ce.gov.br/diariooficial.php",
+      "status": "used_existing_spider",
+      "spiderType": "assesi",
+      "territoryId": "2313302",
+      "testResult": "success",
+      "gazettesFound": 1
+    },
+    {
+      "cidade": "Viçosa do Ceará",
+      "url": "https://vicosa.ce.gov.br/diariooficial.php",
+      "status": "used_existing_spider",
+      "spiderType": "assesi",
+      "territoryId": "2314102",
+      "notes": "URL sem 'do Ceará': vicosa.ce.gov.br",
+      "testResult": "success",
+      "gazettesFound": 1
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "cidade": "Serra",
+    "url": "https://www.serra.es.gov.br/diario-oficial/",
+    "territoryId": "3205002",
+    "status": "pending"
+  },
+  {
+    "cidade": "Vila Velha",
+    "url": "https://www.vilavelha.es.gov.br/diario-oficial/",
+    "territoryId": "3205200",
+    "status": "pending"
+  },
+  {
+    "cidade": "Cariacica",
+    "url": "https://www.cariacica.es.gov.br/diario-oficial/",
+    "territoryId": "3201308",
+    "status": "pending"
+  },
+  {
+    "cidade": "Vitória",
+    "url": "https://www.vitoria.es.gov.br/diariooficial/",
+    "territoryId": "3205309",
+    "status": "pending"
+  },
+  {
+    "cidade": "Cachoeiro de Itapemirim",
+    "url": "https://www.cachoeiro.es.gov.br/diario-oficial/",
+    "territoryId": "3201209",
+    "status": "pending"
+  },
+  {
+    "cidade": "Linhares",
+    "url": "https://www.linhares.es.gov.br/diario-oficial/",
+    "territoryId": "3203205",
+    "status": "pending"
+  },
+  {
+    "cidade": "Guarapari",
+    "url": "https://www.guarapari.es.gov.br/diario-oficial/",
+    "territoryId": "3202405",
+    "status": "pending"
+  },
+  {
+    "cidade": "São Mateus",
+    "url": "https://www.saomateus.es.gov.br/diario-oficial/",
+    "territoryId": "3204906",
+    "status": "pending"
+  },
+  {
+    "cidade": "Colatina",
+    "url": "https://www.colatina.es.gov.br/diario-oficial/",
+    "territoryId": "3201506",
+    "status": "pending"
+  },
+  {
+    "cidade": "Aracruz",
+    "url": "https://www.aracruz.es.gov.br/diario-oficial/",
+    "territoryId": "3200607",
+    "status": "pending"
+  },
+  {
+    "cidade": "Viana",
+    "url": "https://www.viana.es.gov.br/diario-oficial/",
+    "territoryId": "3205101",
+    "status": "pending"
+  },
+  {
+    "cidade": "Nova Venécia",
+    "url": "https://www.novavenecia.es.gov.br/diario-oficial/",
+    "territoryId": "3203908",
+    "status": "pending"
+  },
+  {
+    "cidade": "Barra de São Francisco",
+    "url": "https://www.pmbsf.es.gov.br/diario-oficial/",
+    "territoryId": "3200904",
+    "status": "pending"
+  },
+  {
+    "cidade": "Marataízes",
+    "url": "https://www.marataizes.es.gov.br/diario-oficial/",
+    "territoryId": "3203320",
+    "status": "pending"
+  },
+  {
+    "cidade": "Santa Maria de Jetibá",
+    "url": "https://www.pmsmj.es.gov.br/diario-oficial/",
+    "territoryId": "3204559",
+    "status": "pending"
+  },
+  {
+    "cidade": "Itapemirim",
+    "url": "https://www.itapemirim.es.gov.br/diario-oficial/",
+    "territoryId": "3202801",
+    "status": "pending"
+  },
+  {
+    "cidade": "Castelo",
+    "url": "https://www.castelo.es.gov.br/diario-oficial/",
+    "territoryId": "3201407",
+    "status": "pending"
+  },
+  {
+    "cidade": "Domingos Martins",
+    "url": "https://www.domingosmartins.es.gov.br/diario-oficial/",
+    "territoryId": "3201902",
+    "status": "pending"
+  },
+  {
+    "cidade": "Afonso Cláudio",
+    "url": "https://www.afonsoclaudio.es.gov.br/diario-oficial/",
+    "territoryId": "3200102",
+    "status": "pending"
+  },
+  {
+    "cidade": "Baixo Guandu",
+    "url": "https://www.baixoguandu.es.gov.br/diario-oficial/",
+    "territoryId": "3200805",
+    "status": "pending"
+  },
+  {
+    "cidade": "Anchieta",
+    "url": "https://www.anchieta.es.gov.br/diario-oficial/",
+    "territoryId": "3200409",
+    "status": "pending"
+  },
+  {
+    "cidade": "Guaçuí",
+    "url": "https://www.guacui.es.gov.br/diario-oficial/",
+    "territoryId": "3202306",
+    "status": "pending"
+  },
+  {
+    "cidade": "Alegre",
+    "url": "https://www.alegre.es.gov.br/diario-oficial/",
+    "territoryId": "3200201",
+    "status": "pending"
+  },
+  {
+    "cidade": "Jaguaré",
+    "url": "https://www.jaguare.es.gov.br/diario-oficial/",
+    "territoryId": "3203056",
+    "status": "pending"
+  },
+  {
+    "cidade": "Iúna",
+    "url": "https://www.iuna.es.gov.br/diario-oficial/",
+    "territoryId": "3203007",
+    "status": "pending"
+  },
+  {
+    "cidade": "Conceição da Barra",
+    "url": "https://www.conceicaodabarra.es.gov.br/diario-oficial/",
+    "territoryId": "3201605",
+    "status": "pending"
+  },
+  {
+    "cidade": "Sooretama",
+    "url": "https://www.sooretama.es.gov.br/diario-oficial/",
+    "territoryId": "3205010",
+    "status": "pending"
+  },
+  {
+    "cidade": "Ibatiba",
+    "url": "https://www.ibatiba.es.gov.br/diario-oficial/",
+    "territoryId": "3202454",
+    "status": "pending"
+  }
+]

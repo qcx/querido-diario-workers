@@ -1,0 +1,141 @@
+{
+  "timestamp": "2026-01-22T20:16:00Z",
+  "csvFile": "cidades_ba_solicitadas_pelo_usuario",
+  "stateCode": "BA",
+  "configFile": "src/spiders/v2/configs/ba.json",
+  "summary": {
+    "total": 10,
+    "created_new_spider": 0,
+    "used_existing_spider": 10,
+    "skipped_already_exists": 0,
+    "needs_review": 0
+  },
+  "results": [
+    {
+      "cidade": "Itapetinga",
+      "url": "https://doem.org.br/ba/itapetinga",
+      "status": "used_existing_spider",
+      "spiderType": "doem",
+      "territoryId": "2916401",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site DOEM funcionando corretamente"
+    },
+    {
+      "cidade": "Bom Jesus da Lapa",
+      "url": "https://sai.io.org.br/ba/bomjesusdalapa/site/diariooficial",
+      "status": "used_existing_spider",
+      "spiderType": "diof",
+      "territoryId": "2903904",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site SAI.IO (DIOF) funcionando - prefeitura usa plataforma io.org.br"
+    },
+    {
+      "cidade": "Itaberaba",
+      "url": "https://doem.org.br/ba/itaberaba",
+      "status": "used_existing_spider",
+      "spiderType": "doem",
+      "territoryId": "2914703",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site DOEM funcionando corretamente - Edição 2.184 visualizada"
+    },
+    {
+      "cidade": "Euclides da Cunha",
+      "url": "https://sai.io.org.br/ba/euclidesdacunha/site/diariooficial",
+      "status": "used_existing_spider",
+      "spiderType": "diof",
+      "territoryId": "2910701",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site SAI.IO (DIOF) funcionando - prefeitura usa plataforma io.org.br"
+    },
+    {
+      "cidade": "Cruz das Almas",
+      "url": "https://doem.org.br/ba/cruzdasalmas",
+      "status": "used_existing_spider",
+      "spiderType": "doem",
+      "territoryId": "2909802",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site DOEM funcionando corretamente - Edições 3.329 e 3.330 visualizadas"
+    },
+    {
+      "cidade": "Itamaraju",
+      "url": "https://doem.org.br/ba/itamaraju",
+      "status": "used_existing_spider",
+      "spiderType": "doem",
+      "territoryId": "2915601",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site DOEM funcionando corretamente - Edições 4.455 e 4.456 visualizadas"
+    },
+    {
+      "cidade": "Ipirá",
+      "url": "https://sai.io.org.br/ba/ipira/site/diariooficial",
+      "status": "used_existing_spider",
+      "spiderType": "diof",
+      "territoryId": "2914000",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site SAI.IO (DIOF) funcionando - site próprio da prefeitura com erro 500, mas plataforma io.org.br disponível"
+    },
+    {
+      "cidade": "Santo Amaro",
+      "url": "https://doem.org.br/ba/santoamaro",
+      "status": "used_existing_spider",
+      "spiderType": "doem",
+      "territoryId": "2928604",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site DOEM funcionando corretamente - Edição 1.820 visualizada"
+    },
+    {
+      "cidade": "Ribeira do Pombal",
+      "url": "https://doem.org.br/ba/ribeiradopombal",
+      "status": "used_existing_spider",
+      "spiderType": "doem",
+      "territoryId": "2926608",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site DOEM funcionando corretamente - Edição 1.514 visualizada"
+    },
+    {
+      "cidade": "Santo Estêvão",
+      "url": "https://doem.org.br/ba/santoestevao",
+      "status": "used_existing_spider",
+      "spiderType": "doem",
+      "territoryId": "2928802",
+      "filesCreated": ["src/spiders/v2/configs/ba.json (updated)"],
+      "platformConfirmed": true,
+      "notes": "Site DOEM funcionando corretamente - Edição 2.874 visualizada"
+    }
+  ],
+  "platformAnalysis": {
+    "DOEM": {
+      "count": 7,
+      "cities": [
+        "Itapetinga",
+        "Itaberaba",
+        "Cruz das Almas",
+        "Itamaraju",
+        "Santo Amaro",
+        "Ribeira do Pombal",
+        "Santo Estêvão"
+      ],
+      "baseUrl": "https://doem.org.br/ba/{cidade}",
+      "spiderType": "doem"
+    },
+    "DIOF": {
+      "count": 3,
+      "cities": [
+        "Bom Jesus da Lapa",
+        "Euclides da Cunha",
+        "Ipirá"
+      ],
+      "baseUrl": "https://sai.io.org.br/ba/{cidade}/site/diariooficial",
+      "spiderType": "diof"
+    }
+  }
+}

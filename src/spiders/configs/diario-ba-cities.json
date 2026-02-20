@@ -11,7 +11,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ABAIRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2900207",
@@ -23,7 +24,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ABARE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2900306",
@@ -35,7 +37,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ACAJUTIBA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2900355",
@@ -47,7 +50,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ADUSTINA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2900405",
@@ -59,7 +63,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "AGUAFRIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2900603",
@@ -71,7 +76,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "AIQUARA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2900702",
@@ -83,7 +89,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ALAGOINHAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2900801",
@@ -95,7 +102,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ALCOBACA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2900900",
@@ -107,7 +115,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ALMADINA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2901007",
@@ -119,7 +128,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "AMARGOSA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2901106",
@@ -131,7 +141,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "AMELIARODRIGUES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2901155",
@@ -143,7 +154,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "AMERICADOURADA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2901205",
@@ -155,7 +167,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ANAGE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2901304",
@@ -167,7 +180,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ANDARAI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2901353",
@@ -179,7 +193,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ANDORINHA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2901403",
@@ -191,7 +206,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ANGICAL"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2901502",
@@ -203,7 +219,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ANGUERA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2901601",
@@ -215,7 +232,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ANTAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2901700",
@@ -227,7 +245,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ANTONIOCARDOSO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2901809",
@@ -239,7 +258,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ANTONIOGONCALVES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2901908",
@@ -251,7 +271,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "APORA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2901957",
@@ -263,7 +284,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "APUAREMA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2902054",
@@ -275,7 +297,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ARACAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2902005",
@@ -287,7 +310,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ARACATU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2902104",
@@ -299,7 +323,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ARACI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2902203",
@@ -311,7 +336,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ARAMARI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2902252",
@@ -323,7 +349,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ARATACA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2902302",
@@ -335,7 +362,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ARATUIPE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2902401",
@@ -347,7 +375,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "AURELINO LEAL"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2902500",
@@ -359,7 +388,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BAIANOPOLIS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2902609",
@@ -371,7 +401,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BAIXAGRANDE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2902658",
@@ -383,7 +414,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BANZAE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2902708",
@@ -395,7 +427,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BARRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2902807",
@@ -407,7 +440,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BARRADAESTIVA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2902906",
@@ -419,7 +453,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BARRADOCHOCA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2903003",
@@ -431,7 +466,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BARRADOMENDES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2903102",
@@ -443,7 +479,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BARRADOROCHA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2903201",
@@ -455,7 +492,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BARREIRAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2903276",
@@ -467,7 +505,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BARROCAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2903409",
@@ -479,7 +518,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BELMONTE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2903508",
@@ -491,7 +531,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BELO CAMPO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2903607",
@@ -503,7 +544,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BIRITINGA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2903706",
@@ -515,7 +557,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BOANOVA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2903805",
@@ -527,7 +570,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BOAVISTA DO TUPIM"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2903904",
@@ -539,7 +583,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BOMJESUSDALAPA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2903953",
@@ -551,7 +596,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BOMJESUSDASERRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2904001",
@@ -563,7 +609,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BONINAL"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2904050",
@@ -575,7 +622,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BONITO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2904100",
@@ -587,7 +635,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BOQUIRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2904209",
@@ -599,7 +648,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BOTUPORA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2904308",
@@ -611,7 +661,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BREJOES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2904407",
@@ -623,7 +674,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BREJOLANDIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2904506",
@@ -635,7 +687,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BROTAS DE MACAUBAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2904605",
@@ -647,7 +700,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BRUMADO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2904704",
@@ -659,7 +713,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BUERAREMA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2904753",
@@ -671,7 +726,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "BURITIRAMA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2904803",
@@ -683,7 +739,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CAATIBA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2904852",
@@ -695,7 +752,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CABACEIRAS DO PARAGUACU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2904902",
@@ -707,7 +765,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CACHOEIRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2905008",
@@ -719,7 +778,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CACULE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2905107",
@@ -731,7 +791,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CAEM"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2905156",
@@ -743,7 +804,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CAETANOS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2905206",
@@ -755,7 +817,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CAETITE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2905305",
@@ -767,7 +830,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CAFARNAUM"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2905404",
@@ -779,7 +843,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CAIRU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2905503",
@@ -791,7 +856,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CALDEIRAO GRANDE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2905602",
@@ -803,7 +869,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CAMACAN"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2905701",
@@ -815,7 +882,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CAMACARI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2905800",
@@ -827,7 +895,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CAMAMU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2905909",
@@ -839,7 +908,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CAMPOALEGREDELO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2906006",
@@ -851,7 +921,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CAMPOFORMOSO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2906105",
@@ -863,7 +934,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CANAPOLIS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2906204",
@@ -875,7 +947,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CANARANA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2906303",
@@ -887,7 +960,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CANAVIEIRAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2906402",
@@ -899,7 +973,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CANDEAL"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2906501",
@@ -911,7 +986,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CANDEIAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2906600",
@@ -923,7 +999,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CANDIBA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2906709",
@@ -935,7 +1012,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CANDIDO SALES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2906808",
@@ -947,7 +1025,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CANSANCAO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2906824",
@@ -959,7 +1038,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CANUDOS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2906857",
@@ -971,7 +1051,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CAPELA DO ALTO ALEGRE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2906873",
@@ -983,7 +1064,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CAPIM GROSSO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2906899",
@@ -995,7 +1077,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CARAIBAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2906907",
@@ -1007,7 +1090,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CARAVELAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2907004",
@@ -1019,7 +1103,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CARDEAL DA SILVA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2907103",
@@ -1031,7 +1116,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CARINHANHA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2907202",
@@ -1043,7 +1129,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CASA NOVA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2907301",
@@ -1055,7 +1142,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CASTRO ALVES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2907400",
@@ -1067,7 +1155,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CATOLANDIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2907509",
@@ -1079,7 +1168,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CATU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2907558",
@@ -1091,7 +1181,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CATURAMA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2907608",
@@ -1103,7 +1194,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CENTRAL"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2907707",
@@ -1115,7 +1207,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CHORROCHO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2907806",
@@ -1127,7 +1220,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CICERO DANTAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2907905",
@@ -1139,7 +1233,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CIPO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2908002",
@@ -1151,7 +1246,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "COARACI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2908101",
@@ -1163,7 +1259,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "COCOS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2908309",
@@ -1175,7 +1272,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CONCEICAODOALMEIDA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2908408",
@@ -1187,7 +1285,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CONCEICAO DO COITE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2908507",
@@ -1199,7 +1298,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CONCEICAODOJACUIPE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2908606",
@@ -1211,7 +1311,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CONDE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2908705",
@@ -1223,7 +1324,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CONDEUBA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2908804",
@@ -1235,7 +1337,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CONTENDAS DO SINCORA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2908903",
@@ -1247,7 +1350,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CORACAO DE MARIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2909000",
@@ -1259,7 +1363,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CORDEIROS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2909109",
@@ -1271,7 +1376,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CORIBE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2909208",
@@ -1283,7 +1389,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CORONEL JOAO SA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2909307",
@@ -1295,7 +1402,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CORRENTINA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2909406",
@@ -1307,7 +1415,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "COTEGIPE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2909505",
@@ -1319,7 +1428,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CRAVOLANDIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2909604",
@@ -1331,7 +1441,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CRISOPOLIS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2909703",
@@ -1343,7 +1454,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CRISTOPOLIS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2909802",
@@ -1355,7 +1467,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CRUZ DAS ALMAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2909901",
@@ -1367,7 +1480,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "CURACA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2910057",
@@ -1379,7 +1493,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "DIASDAVILA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2910107",
@@ -1391,7 +1506,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "DOMBASILIO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2910206",
@@ -1403,7 +1519,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "DOMMACEDOCOSTA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2910404",
@@ -1415,7 +1532,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ENCRUZILHADA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2910503",
@@ -1427,7 +1545,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ENTRE RIOS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2910602",
@@ -1439,7 +1558,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ESPLANADA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2910701",
@@ -1451,7 +1571,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "EUCLIDES DA CUNHA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2910727",
@@ -1463,7 +1584,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "EUNAPOLIS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2910750",
@@ -1475,7 +1597,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "FATIMA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2910800",
@@ -1487,7 +1610,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "FEIRASANTANA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2910800",
@@ -1499,7 +1623,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "FEIRADEANTANA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2910859",
@@ -1511,7 +1636,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "FILADELFIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2910909",
@@ -1523,7 +1649,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "FIRMINO ALVES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2911006",
@@ -1535,7 +1662,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "FLORESTA AZUL"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2911105",
@@ -1547,7 +1675,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "FORMOSADORIOPRETO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2911204",
@@ -1559,7 +1688,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "GANDU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2911253",
@@ -1571,7 +1701,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "GAVIAO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2911303",
@@ -1583,7 +1714,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "GENTIO DO OURO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2911402",
@@ -1595,7 +1727,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "GLORIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2911501",
@@ -1607,7 +1740,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "GONGOGI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2911600",
@@ -1619,7 +1753,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "GOVERNADOR MANGABEIRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2911659",
@@ -1631,7 +1766,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "GUAJERU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2911709",
@@ -1643,7 +1779,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "GUANAMBI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2911808",
@@ -1655,7 +1792,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "GUARATINGA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2911857",
@@ -1667,7 +1805,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "HELIOPOLIS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2911907",
@@ -1679,7 +1818,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IACU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2912004",
@@ -1691,7 +1831,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IBIASSUCE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2912103",
@@ -1703,7 +1844,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IBICARAI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2912202",
@@ -1715,7 +1857,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IBICOARA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2912301",
@@ -1727,7 +1870,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IBICUI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2912400",
@@ -1739,7 +1883,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IBIPEBA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2912509",
@@ -1751,7 +1896,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IBIPITANGA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2912608",
@@ -1763,7 +1909,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IBIQUERA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2912707",
@@ -1775,7 +1922,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IBIRAPITANGA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2912806",
@@ -1787,7 +1935,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IBIRAPUA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2912905",
@@ -1799,7 +1948,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IBIRATAIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2913002",
@@ -1811,7 +1961,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IBITIARA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2913101",
@@ -1823,7 +1974,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IBITITA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2913200",
@@ -1835,7 +1987,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IBOTIRAMA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2913309",
@@ -1847,7 +2000,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ICHU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2913408",
@@ -1859,7 +2013,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IGAPORA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2913457",
@@ -1871,7 +2026,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IGRAPIUNA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2913507",
@@ -1883,7 +2039,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IGUAI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2913606",
@@ -1895,7 +2052,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ILHEUS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2913705",
@@ -1907,7 +2065,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "INHAMBUPE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2913804",
@@ -1919,7 +2078,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IPECAETA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2913903",
@@ -1931,7 +2091,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IPIAU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2914000",
@@ -1943,7 +2104,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IPIRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2914109",
@@ -1955,7 +2117,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IPUPIARA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2914208",
@@ -1967,7 +2130,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IRAJUBA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2914307",
@@ -1979,7 +2143,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IRAMAIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2914406",
@@ -1991,7 +2156,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IRAQUARA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2914505",
@@ -2003,7 +2169,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IRARA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2914604",
@@ -2015,7 +2182,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IRECE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2914653",
@@ -2027,7 +2195,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITABELA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2914703",
@@ -2039,7 +2208,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITABERABA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2914802",
@@ -2051,7 +2221,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITABUNA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2914901",
@@ -2063,7 +2234,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITACARE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2915007",
@@ -2075,7 +2247,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAETE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2915106",
@@ -2087,7 +2260,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAGI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2915205",
@@ -2099,7 +2273,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAGIBA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2915304",
@@ -2111,7 +2286,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAGIMIRIM"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2915353",
@@ -2123,7 +2299,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAGUACU DA BAHIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2915403",
@@ -2135,7 +2312,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAJU DO COLONIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2915502",
@@ -2147,7 +2325,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAJUIPE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2915601",
@@ -2159,7 +2338,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAMARAJU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2915700",
@@ -2171,7 +2351,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAMARI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2915809",
@@ -2183,7 +2364,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAMBE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2915908",
@@ -2195,7 +2377,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITANAGRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2916005",
@@ -2207,7 +2390,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITANHEM"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2916104",
@@ -2219,7 +2403,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAPARICA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2916203",
@@ -2231,7 +2416,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAPE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2916302",
@@ -2243,7 +2429,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAPEBI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2916401",
@@ -2255,7 +2442,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAPETINGA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2916500",
@@ -2267,7 +2455,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAPICURU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2916609",
@@ -2279,7 +2468,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAPITANGA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2916708",
@@ -2291,7 +2481,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITAQUARA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2916807",
@@ -2303,7 +2494,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITARANTIM"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2916856",
@@ -2315,7 +2507,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITATIM"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2916906",
@@ -2327,7 +2520,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITIRUCU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2917003",
@@ -2339,7 +2533,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITIUBA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2917102",
@@ -2351,7 +2546,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITORORO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2917201",
@@ -2363,7 +2559,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITUACU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2917300",
@@ -2375,7 +2572,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "ITUBERA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2917334",
@@ -2387,7 +2585,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "IUIU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2917359",
@@ -2399,7 +2598,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JABORANDI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2917409",
@@ -2411,7 +2611,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JACARACI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2917508",
@@ -2423,7 +2624,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JACOBINA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2917607",
@@ -2435,7 +2637,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JAGUAQUARA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2917706",
@@ -2447,7 +2650,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JAGUARARI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2917805",
@@ -2459,7 +2663,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JAGUARIPE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2917904",
@@ -2471,7 +2676,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JANDAIRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2918001",
@@ -2483,7 +2689,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JEQUIE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2918100",
@@ -2495,7 +2702,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JEREMOABO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2918209",
@@ -2507,7 +2715,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JIQUIRICA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2918308",
@@ -2519,7 +2728,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JITAUNA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2918357",
@@ -2531,7 +2741,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JOAO DOURADO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2918407",
@@ -2543,7 +2754,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JUAZEIRO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2918456",
@@ -2555,7 +2767,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JUCURUCU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2918506",
@@ -2567,7 +2780,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JUSSARA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2918555",
@@ -2579,7 +2793,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JUSSARI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2918605",
@@ -2591,7 +2806,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "JUSSIAPE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2918704",
@@ -2603,7 +2819,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "LAFAIETE COUTINHO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2918753",
@@ -2615,7 +2832,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "LAGOA REAL"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2918803",
@@ -2627,7 +2845,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "LAJE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2918902",
@@ -2639,7 +2858,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "LAJEDAO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919009",
@@ -2651,7 +2871,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "LAJEDINHO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919058",
@@ -2663,7 +2884,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "LAJEDO DO TABOCAL"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919108",
@@ -2675,7 +2897,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "LAMARAO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919157",
@@ -2687,7 +2910,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "LAPAO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919207",
@@ -2699,7 +2923,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "LAURO DE FREITAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919306",
@@ -2711,7 +2936,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "LENCOIS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919405",
@@ -2723,7 +2949,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "LICINIO DE ALMEIDA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919504",
@@ -2735,7 +2962,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "LIVRAMENTO DE NOSSA SENHORA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919553",
@@ -2747,7 +2975,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "LUIS EDUARDO MAGALHAES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919603",
@@ -2759,7 +2988,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MACAJUBA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919702",
@@ -2771,7 +3001,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MACARANI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919801",
@@ -2783,7 +3014,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MACAUBAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919900",
@@ -2795,7 +3027,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MACURURE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919926",
@@ -2807,7 +3040,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MADRE DE DEUS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2919959",
@@ -2819,7 +3053,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MAETINGA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2920007",
@@ -2831,7 +3066,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MAIQUINIQUE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2920106",
@@ -2843,7 +3079,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MAIRI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2920205",
@@ -2855,7 +3092,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MALHADA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2920304",
@@ -2867,7 +3105,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MALHADADEPED"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2920403",
@@ -2879,7 +3118,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MANOEL VITORINO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2920452",
@@ -2891,7 +3131,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MANSIDAO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2920502",
@@ -2903,7 +3144,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MARACAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2920601",
@@ -2915,7 +3157,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MARAGOGIPE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2920700",
@@ -2927,7 +3170,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MARAU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2920809",
@@ -2939,7 +3183,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MARCIONILIO SOUZA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2920908",
@@ -2951,7 +3196,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MASCOTE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2921005",
@@ -2963,7 +3209,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MATA DE SAO JOAO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2921054",
@@ -2975,7 +3222,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MATINA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2921104",
@@ -2987,7 +3235,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MEDEIROS NETO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2921203",
@@ -2999,7 +3248,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MIGUEL CALMON"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2921302",
@@ -3011,7 +3261,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MILAGRES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2921401",
@@ -3023,7 +3274,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MIRANGABA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2921450",
@@ -3035,7 +3287,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MIRANTE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2921500",
@@ -3047,7 +3300,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MONTE SANTO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2921609",
@@ -3059,7 +3313,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MORPARA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2921708",
@@ -3071,7 +3326,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MORRO DO CHAPEU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2921807",
@@ -3083,7 +3339,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MORTUGABA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2921906",
@@ -3095,7 +3352,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MUCUGE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922003",
@@ -3107,7 +3365,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MUCURI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922052",
@@ -3119,7 +3378,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MULUNGU DO MORRO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922102",
@@ -3131,7 +3391,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MUNDO NOVO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922201",
@@ -3143,7 +3404,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MUNIZ FERREIRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922250",
@@ -3155,7 +3417,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MUQUEM DO SAO FRANCISCO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922300",
@@ -3167,7 +3430,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MURITIBA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922409",
@@ -3179,7 +3443,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "MUTUIPE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922508",
@@ -3191,7 +3456,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "NAZARE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922607",
@@ -3203,7 +3469,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "NILO PECANHA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922656",
@@ -3215,7 +3482,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "NORDESTINA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922706",
@@ -3227,7 +3495,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "NOVA CANAA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922730",
@@ -3239,7 +3508,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "NOVA FATIMA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922755",
@@ -3251,7 +3521,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "NOVA IBIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922805",
@@ -3263,7 +3534,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "NOVA ITARANA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922854",
@@ -3275,7 +3547,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "NOVA REDENCAO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2922904",
@@ -3287,7 +3560,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "NOVA SOURE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2923001",
@@ -3299,7 +3573,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "NOVA VICOSA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2923035",
@@ -3311,7 +3586,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "NOVO HORIZONTE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2923050",
@@ -3323,7 +3599,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "NOVO TRIUNFO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2923100",
@@ -3335,7 +3612,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "OLINDINA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2923209",
@@ -3347,7 +3625,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "OLIVEIRA DOS BREJINHOS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2923308",
@@ -3359,7 +3638,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "OURICANGAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2923357",
@@ -3371,7 +3651,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "OUROLÂNDIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2923407",
@@ -3383,7 +3664,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PALMAS DE MONTE ALTO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2923506",
@@ -3395,7 +3677,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PALMEIRAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2923605",
@@ -3407,7 +3690,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PARAMIRIM"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2923704",
@@ -3419,7 +3703,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PARATINGA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2923803",
@@ -3431,7 +3716,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PARIPIRANGA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2923902",
@@ -3443,7 +3729,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PAU BRASIL"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2924009",
@@ -3455,7 +3742,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PAULO AFONSO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2924058",
@@ -3467,7 +3755,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PE DE SERRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2924108",
@@ -3479,7 +3768,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PEDRAO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2924207",
@@ -3491,7 +3781,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PEDRO ALEXANDRE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2924306",
@@ -3503,7 +3794,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PIATA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2924405",
@@ -3515,7 +3807,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PILAO ARCADO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2924504",
@@ -3527,7 +3820,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PINDAI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2924603",
@@ -3539,7 +3833,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PINDOBACU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2924652",
@@ -3551,7 +3846,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PINTADAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2924801",
@@ -3563,7 +3859,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PIRITIBA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2924900",
@@ -3575,7 +3872,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PLANALTINO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2925006",
@@ -3587,7 +3885,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PLANALTO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2925105",
@@ -3599,7 +3898,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "POCOES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2925204",
@@ -3611,7 +3911,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "POJUCA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2925253",
@@ -3623,7 +3924,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PONTO NOVO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2925303",
@@ -3635,7 +3937,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PORTO SEGURO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2925402",
@@ -3647,7 +3950,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "POTIRAGUÁ"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2925501",
@@ -3659,7 +3963,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PRADO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2925600",
@@ -3671,7 +3976,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PRESIDENTE DUTRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2925709",
@@ -3683,7 +3989,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PRESIDENTE JANIO QUADROS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2925758",
@@ -3695,7 +4002,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "PRESIDENTE TANCREDO NEVES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2925808",
@@ -3707,7 +4015,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "QUEIMADAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2925907",
@@ -3719,7 +4028,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "QUIJINGUE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2925931",
@@ -3731,7 +4041,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "QUIXABEIRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2925956",
@@ -3743,7 +4054,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "RAFAEL JAMBEIRO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2926004",
@@ -3755,7 +4067,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "REMANSO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2926103",
@@ -3767,7 +4080,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "RETIROLANDIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2926202",
@@ -3779,7 +4093,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "RIACHAO DAS NEVES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2926301",
@@ -3791,7 +4106,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "RIACHAO DO JACUIPE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2926400",
@@ -3803,7 +4119,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "RIACHO DE SANTANA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2926509",
@@ -3815,7 +4132,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "RIBEIRA DO AMPARO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2926608",
@@ -3827,7 +4145,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "RIBEIRA DO POMBAL"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2926657",
@@ -3839,7 +4158,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "RIBEIRÃO DO LARGO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2926707",
@@ -3851,7 +4171,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "RIO DE CONTAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2926806",
@@ -3863,7 +4184,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "RIO DO ANTONIO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2926905",
@@ -3875,7 +4197,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "RIO DO PIRES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2927002",
@@ -3887,7 +4210,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "RIO REAL"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2927101",
@@ -3899,7 +4223,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "RODELAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2927200",
@@ -3911,7 +4236,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "RUY BARBOSA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2927309",
@@ -3923,7 +4249,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SALINAS DA MARGARIDA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2927408",
@@ -3935,7 +4262,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SALVADOR"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2927507",
@@ -3947,7 +4275,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SANTA BARBARA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2927606",
@@ -3959,7 +4288,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SANTA BRIGIDA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2927705",
@@ -3971,7 +4301,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SANTA CRUZ CABRALIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2927804",
@@ -3983,7 +4314,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SANTA CRUZ DA VITORIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2927903",
@@ -3995,7 +4327,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SANTA INES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2928059",
@@ -4007,7 +4340,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SANTA LUZIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2928109",
@@ -4019,7 +4353,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SANTA MARIA DA VITORIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2928406",
@@ -4031,7 +4366,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SANTA RITA DE CASSIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2928000",
@@ -4043,7 +4379,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SANTALUZ"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2928208",
@@ -4055,7 +4392,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SANTANA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2928307",
@@ -4067,7 +4405,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SANTANOPOLIS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2928604",
@@ -4079,7 +4418,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SANTO AMARO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2928703",
@@ -4091,7 +4431,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SANTO ANTONIO DE JESUS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2928802",
@@ -4103,7 +4444,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SANTO ESTEVAO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2928901",
@@ -4115,7 +4457,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAO DESIDERIO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2928950",
@@ -4127,7 +4470,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAO DOMINGOS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929107",
@@ -4139,7 +4483,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAO FELIPE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929008",
@@ -4151,7 +4496,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAO FELIX"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929057",
@@ -4163,7 +4509,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAO FELIX DO CORIBE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929206",
@@ -4175,7 +4522,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAO FRANCISCO DO CONDE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929255",
@@ -4187,7 +4535,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAO GABRIEL"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929305",
@@ -4199,7 +4548,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAO GONCALO DOS CAMPOS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929354",
@@ -4211,7 +4561,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAO JOSE DA VITORIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929370",
@@ -4223,7 +4574,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAO JOSE DO JACUIPE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929404",
@@ -4235,7 +4587,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAO MIGUEL DAS MATAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929503",
@@ -4247,7 +4600,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAO SEBASTIAO DO PASSE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929602",
@@ -4259,7 +4613,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAPEACU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929701",
@@ -4271,7 +4626,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SATIRO DIAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929750",
@@ -4283,7 +4639,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAUBARA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929800",
@@ -4295,7 +4652,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SAUDE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2929909",
@@ -4307,7 +4665,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SEABRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2930006",
@@ -4319,7 +4678,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SEBASTIAO LARANJEIRAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2930105",
@@ -4331,7 +4691,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SENHOR DO BONFIM"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2930204",
@@ -4343,7 +4704,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SENTO SE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2930154",
@@ -4355,7 +4717,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SERRA DO RAMALHO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2930303",
@@ -4367,7 +4730,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SERRA DOURADA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2930402",
@@ -4379,7 +4743,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SERRA PRETA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2930501",
@@ -4391,7 +4756,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SERRINHA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2930600",
@@ -4403,7 +4769,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SERROLANDIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2930709",
@@ -4415,7 +4782,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SIMOES FILHO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2930758",
@@ -4427,7 +4795,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SITIO DO MATO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2930766",
@@ -4439,7 +4808,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SITIO DO QUINTO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2930774",
@@ -4451,7 +4821,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SOBRADINHO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2930808",
@@ -4463,7 +4834,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "SOUTO SOARES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2930907",
@@ -4475,7 +4847,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "TABOCAS DO BREJO VELHO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2931004",
@@ -4487,7 +4860,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "TANHACU"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2931053",
@@ -4499,7 +4873,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "TANQUE NOVO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2931103",
@@ -4511,7 +4886,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "TANQUINHO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2931202",
@@ -4523,7 +4899,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "TAPEROA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2931301",
@@ -4535,7 +4912,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "TAPIRAMUTA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2931350",
@@ -4547,7 +4925,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "TEIXEIRA DE FREITAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2931400",
@@ -4559,7 +4938,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "TEODORO SAMPAIO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2931509",
@@ -4571,7 +4951,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "TEOFILANDIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2931608",
@@ -4583,7 +4964,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "TEOLANDIA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2931707",
@@ -4595,7 +4977,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "TERRA NOVA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2931806",
@@ -4607,7 +4990,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "TREMEDAL"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2931905",
@@ -4619,7 +5003,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "TUCANO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2932002",
@@ -4631,7 +5016,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "UAUA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2932101",
@@ -4643,7 +5029,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "UBAIRA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2932200",
@@ -4655,7 +5042,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "UBAITABA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2932309",
@@ -4667,7 +5055,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "UBATA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2932408",
@@ -4679,7 +5068,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "UIBAI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2932457",
@@ -4691,7 +5081,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "UMBURANAS"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2932507",
@@ -4703,7 +5094,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "UNA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2932606",
@@ -4715,7 +5107,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "URANDI"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2932705",
@@ -4727,7 +5120,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "URUCUCA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2932804",
@@ -4739,7 +5133,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "UTINGA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2932903",
@@ -4751,7 +5146,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "VALENCA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2933000",
@@ -4763,7 +5159,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "VALENTE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2933059",
@@ -4775,7 +5172,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "VARZEA DA ROCA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2933109",
@@ -4787,7 +5185,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "VARZEA DO POCO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2933158",
@@ -4799,7 +5198,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "VARZEA NOVA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2933174",
@@ -4811,7 +5211,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "VARZEDO"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2933208",
@@ -4823,7 +5224,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "VERA CRUZ"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2933257",
@@ -4835,7 +5237,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "VEREDA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2933307",
@@ -4847,7 +5250,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "VITORIA DA CONQUISTA"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2933406",
@@ -4859,7 +5263,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "WAGNER"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2933455",
@@ -4871,7 +5276,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "WANDERLEY"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2933505",
@@ -4883,7 +5289,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "WENCESLAU GUIMARAES"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     },
     {
       "id": "ba_2933604",
@@ -4895,7 +5302,8 @@
         "url": "https://www.diariooficialba.com.br/",
         "cityName": "XIQUE-XIQUE"
       },
-      "gazetteScope": "city"
+      "gazetteScope": "city",
+      "active": false
     }
   ]
 }

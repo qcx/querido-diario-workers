@@ -1,0 +1,279 @@
+{
+  "timestamp": "2026-01-13T15:25:00Z",
+  "csvFile": "diarios_oficiais_es_consolidado.csv",
+  "stateCode": "ES",
+  "configFile": "src/spiders/v2/configs/es.json",
+  "summary": {
+    "total": 28,
+    "created_new_spider": 0,
+    "used_existing_spider": 28,
+    "skipped_already_exists": 0,
+    "needs_review": 0
+  },
+  "results": [
+    {
+      "cidade": "Serra",
+      "url": "https://www.serra.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3205002",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Vila Velha",
+      "url": "https://www.vilavelha.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3205200",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Cariacica",
+      "url": "https://www.cariacica.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3201308",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Vitória",
+      "url": "https://www.vitoria.es.gov.br/diariooficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3205309",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Cachoeiro de Itapemirim",
+      "url": "https://www.cachoeiro.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3201209",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Linhares",
+      "url": "https://www.linhares.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3203205",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Guarapari",
+      "url": "https://www.guarapari.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3202405",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "São Mateus",
+      "url": "https://www.saomateus.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3204906",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Colatina",
+      "url": "https://www.colatina.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3201506",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Aracruz",
+      "url": "https://www.aracruz.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3200607",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Viana",
+      "url": "https://www.viana.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3205101",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Nova Venécia",
+      "url": "https://www.novavenecia.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3203908",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Barra de São Francisco",
+      "url": "https://www.pmbsf.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3200904",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Marataízes",
+      "url": "https://www.marataizes.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3203320",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Santa Maria de Jetibá",
+      "url": "https://www.pmsmj.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3204559",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Itapemirim",
+      "url": "https://www.itapemirim.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3202801",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Castelo",
+      "url": "https://www.castelo.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3201407",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Domingos Martins",
+      "url": "https://www.domingosmartins.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3201902",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Afonso Cláudio",
+      "url": "https://www.afonsoclaudio.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3200102",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Baixo Guandu",
+      "url": "https://www.baixoguandu.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3200805",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Anchieta",
+      "url": "https://www.anchieta.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3200409",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Guaçuí",
+      "url": "https://www.guacui.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3202306",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Alegre",
+      "url": "https://www.alegre.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3200201",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Jaguaré",
+      "url": "https://www.jaguare.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3203056",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Iúna",
+      "url": "https://www.iuna.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3203007",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Conceição da Barra",
+      "url": "https://www.conceicaodabarra.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3201605",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Sooretama",
+      "url": "https://www.sooretama.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3205010",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    },
+    {
+      "cidade": "Ibatiba",
+      "url": "https://www.ibatiba.es.gov.br/diario-oficial/",
+      "status": "used_existing_spider",
+      "spiderType": "espirito_santo",
+      "territoryId": "3202454",
+      "filesCreated": ["src/spiders/v2/configs/es.json (updated)"],
+      "note": "Usa plataforma centralizada ioes.dio.es.gov.br (DOM - AMUNES)"
+    }
+  ],
+  "platformInfo": {
+    "platform": "ioes.dio.es.gov.br",
+    "platformName": "DOM - AMUNES (Diário Oficial dos Municípios - Associação dos Municípios do Espírito Santo)",
+    "spiderType": "espirito_santo",
+    "apiEndpoint": "https://ioes.dio.es.gov.br/apifront/portal/edicoes/edicoes_from_data/{date}.json?&subtheme=dom",
+    "downloadEndpoint": "https://ioes.dio.es.gov.br/portal/edicoes/download/{id}",
+    "note": "Todas as cidades do ES usam a mesma plataforma centralizada. O spider espirito_santo já existia e foi reutilizado para todas as 28 cidades."
+  },
+  "filesModified": [
+    "src/spiders/v2/configs/es.json (created with 28 cities)",
+    "src/spiders/v2/registry.ts (updated to include ES)"
+  ]
+}

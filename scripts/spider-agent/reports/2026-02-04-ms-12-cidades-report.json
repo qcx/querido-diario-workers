@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-02-04",
+  "csvFile": null,
+  "stateCode": "MS",
+  "configFile": "src/spiders/v2/configs/ms.json",
+  "summary": {
+    "total": 12,
+    "created_new_spider": 0,
+    "used_existing_spider": 12,
+    "skipped_already_exists": 0,
+    "needs_review": 0
+  },
+  "results": [
+    { "cidade": "Maracaju", "status": "used_existing_spider", "spiderType": "instar", "territoryId": "5005400", "configId": "ms_maracaju" },
+    { "cidade": "Paranaíba", "status": "used_existing_spider", "spiderType": "diariooficialms", "territoryId": "5006309", "configId": "ms_paranaiba" },
+    { "cidade": "Amambai", "status": "used_existing_spider", "spiderType": "diariooficialms", "territoryId": "5000609", "configId": "ms_amambai" },
+    { "cidade": "Rio Brilhante", "status": "used_existing_spider", "spiderType": "imprensaoficialmunicipal", "territoryId": "5007208", "configId": "ms_rio_brilhante" },
+    { "cidade": "Coxim", "status": "used_existing_spider", "spiderType": "diariooficialms", "territoryId": "5003306", "configId": "ms_coxim" },
+    { "cidade": "Chapadão do Sul", "status": "used_existing_spider", "spiderType": "imprensaoficialmunicipal", "territoryId": "5002951", "configId": "ms_chapadao_do_sul" },
+    { "cidade": "Caarapó", "status": "used_existing_spider", "spiderType": "diariooficialms", "territoryId": "5002407", "configId": "ms_caarapo" },
+    { "cidade": "São Gabriel do Oeste", "status": "used_existing_spider", "spiderType": "diariooficialms", "territoryId": "5007695", "configId": "ms_sao_gabriel_do_oeste" },
+    { "cidade": "Ivinhema", "status": "used_existing_spider", "spiderType": "diariooficialms", "territoryId": "5004700", "configId": "ms_ivinhema" },
+    { "cidade": "Aparecida do Taboado", "status": "used_existing_spider", "spiderType": "diariooficialms", "territoryId": "5001003", "configId": "ms_aparecida_do_taboado" },
+    { "cidade": "Costa Rica", "status": "used_existing_spider", "spiderType": "instar", "territoryId": "5003256", "configId": "ms_costa_rica" },
+    { "cidade": "Miranda", "status": "used_existing_spider", "spiderType": "diariooficialms", "territoryId": "5005608", "configId": "ms_miranda" }
+  ]
+}

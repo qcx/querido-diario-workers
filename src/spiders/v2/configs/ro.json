@@ -1,0 +1,305 @@
+[
+  {
+    "id": "ro_porto_velho",
+    "name": "Porto Velho - RO",
+    "territoryId": "1100205",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/arom/",
+          "entityId": 24707,
+          "cityName": "Porto Velho"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ro_ji_parana",
+    "name": "Ji-Paraná - RO",
+    "territoryId": "1100122",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/arom/",
+          "entityId": 22346,
+          "cityName": "Ji-Paraná"
+        }
+      }
+    ],
+    "notes": "Segunda maior cidade de Rondônia. Publicado na AROM (diariomunicipal.com.br/arom). Também possui site próprio em diariooficialjp.com.br."
+  },
+  {
+    "id": "ro_ariquemes",
+    "name": "Ariquemes - RO",
+    "territoryId": "1100023",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/arom/",
+          "entityId": 1211,
+          "cityName": "Ariquemes"
+        }
+      }
+    ],
+    "notes": "Terceira maior cidade de Rondônia. Publicado na AROM (diariomunicipal.com.br/arom)."
+  },
+  {
+    "id": "ro_vilhena",
+    "name": "Vilhena - RO",
+    "territoryId": "1100304",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituravilhena",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituravilhena",
+          "baseUrl": "https://vilhena.xyz/diario-oficial"
+        }
+      }
+    ],
+    "notes": "Quarta maior cidade de Rondônia. Diário oficial NÃO é AROM; publicado no site próprio vilhena.xyz/diario-oficial (DOV)."
+  },
+  {
+    "id": "ro_cacoal",
+    "name": "Cacoal - RO",
+    "territoryId": "1100049",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/arom/",
+          "entityId": 2350,
+          "cityName": "Cacoal"
+        }
+      }
+    ],
+    "notes": "Quinta maior cidade de Rondônia. Publicado na AROM (diariomunicipal.com.br/arom)."
+  },
+  {
+    "id": "ro_rolim_de_moura",
+    "name": "Rolim de Moura - RO",
+    "territoryId": "1100288",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/arom/",
+          "entityId": 422,
+          "cityName": "Rolim de Moura"
+        }
+      }
+    ],
+    "notes": "Publicado na AROM (diariomunicipal.com.br/arom)."
+  },
+  {
+    "id": "ro_jaru",
+    "name": "Jaru - RO",
+    "territoryId": "1100114",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "domweb",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "domweb",
+          "baseUrl": "https://doe.jaru.ro.gov.br",
+          "cityName": "Jaru",
+          "requiresClientRendering": false
+        }
+      }
+    ],
+    "notes": "Diário oficial próprio em doe.jaru.ro.gov.br (não utiliza AROM)."
+  },
+  {
+    "id": "ro_guajara_mirim",
+    "name": "Guajará-Mirim - RO",
+    "territoryId": "1100106",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/arom/",
+          "entityId": 404,
+          "cityName": "Guajará-Mirim"
+        }
+      }
+    ],
+    "notes": "Cidade fronteiriça com a Bolívia. Publicado na AROM (diariomunicipal.com.br/arom)."
+  },
+  {
+    "id": "ro_pimenta_bueno",
+    "name": "Pimenta Bueno - RO",
+    "territoryId": "1100189",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "rondonia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Pimenta Bueno",
+          "power": "executive_legislative"
+        }
+      }
+    ],
+    "notes": "Não publicado na AROM. Diário extraído do Diário Oficial do Estado (diof.ro.gov.br), que consolida publicações municipais. Também possui página própria em pimentabueno.ro.gov.br/pagina/182_Diario-Oficial.html."
+  },
+  {
+    "id": "ro_ouro_preto_do_oeste",
+    "name": "Ouro Preto do Oeste - RO",
+    "territoryId": "1100155",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/arom/",
+          "entityId": 1217,
+          "cityName": "Ouro Preto do Oeste"
+        }
+      }
+    ],
+    "notes": "Publicado na AROM (diariomunicipal.com.br/arom)."
+  },
+  {
+    "id": "ro_machadinho_do_oeste",
+    "name": "Machadinho D'Oeste - RO",
+    "territoryId": "1100130",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/arom/",
+          "entityId": 332,
+          "cityName": "Machadinho D'Oeste"
+        }
+      }
+    ],
+    "notes": "Publicado na AROM (diariomunicipal.com.br/arom)."
+  },
+  {
+    "id": "ro_espigao_do_oeste",
+    "name": "Espigão D'Oeste - RO",
+    "territoryId": "1100098",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "rondonia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "rondonia",
+          "cityName": "Espigão D'Oeste",
+          "power": "executive_legislative"
+        }
+      }
+    ],
+    "notes": "NÃO publicado na AROM. Diário extraído do Diário Oficial dos Municípios - CINDERONDÔNIA (dom.ro.gov.br) via DOE estadual diof.ro.gov.br."
+  },
+  {
+    "id": "ro_buritis",
+    "name": "Buritis - RO",
+    "territoryId": "1100452",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/arom/",
+          "entityId": 271,
+          "cityName": "Buritis"
+        }
+      }
+    ],
+    "notes": "Publicado na AROM (diariomunicipal.com.br/arom)."
+  },
+  {
+    "id": "ro_nova_mamore",
+    "name": "Nova Mamoré - RO",
+    "territoryId": "1100338",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/arom/",
+          "entityId": 316,
+          "cityName": "Nova Mamoré"
+        }
+      }
+    ],
+    "notes": "Publicado na AROM (diariomunicipal.com.br/arom)."
+  }
+]

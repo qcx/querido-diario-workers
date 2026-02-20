@@ -9,7 +9,8 @@
       "type": "barco_digital",
       "baseUrl": "https://api-pmaparecida.barcodigital.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_araguaina",
@@ -21,7 +22,8 @@
       "type": "barco_digital",
       "baseUrl": "https://api-araguaina.barcodigital.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_centenario",
@@ -33,7 +35,8 @@
       "type": "barco_digital",
       "baseUrl": "https://api-centenario.barcodigital.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_divinopolis_do_tocantins",
@@ -45,7 +48,8 @@
       "type": "barco_digital",
       "baseUrl": "https://api-divinopolis.barcodigital.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_lagoa_da_confusao",
@@ -57,7 +61,8 @@
       "type": "barco_digital",
       "baseUrl": "https://api-lagoadac.barcodigital.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_ponte_alta_do_tocantins",
@@ -69,7 +74,8 @@
       "type": "barco_digital",
       "baseUrl": "https://api-ponte.barcodigital.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "to_pugmil",
@@ -81,6 +87,7 @@
       "type": "barco_digital",
       "baseUrl": "https://api-pugmil.barcodigital.com.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   }
 ]

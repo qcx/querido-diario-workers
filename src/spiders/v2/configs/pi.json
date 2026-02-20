@@ -1,0 +1,441 @@
+[
+  {
+    "id": "pi_teresina",
+    "name": "Teresina - PI",
+    "territoryId": "2211001",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturateresina",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturateresina",
+          "baseUrl": "https://dom.pmt.pi.gov.br/lista_diario.php",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_parnaiba",
+    "name": "Parnaíba - PI",
+    "territoryId": "2207702",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapnarnaiba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapnarnaiba",
+          "baseUrl": "https://dom.parnaiba.pi.gov.br/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_picos",
+    "name": "Picos - PI",
+    "territoryId": "2208007",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioficialdosmunicipiosappm",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioficialdosmunicipiosappm",
+          "baseUrl": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php",
+          "cityName": "Picos",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_piripiri",
+    "name": "Piripiri - PI",
+    "territoryId": "2208403",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialdasprefeituras",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialdasprefeituras",
+          "baseUrl": "https://diariooficialdasprefeituras.org/piaui/buscas",
+          "cityName": "Piripiri",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_floriano",
+    "name": "Floriano - PI",
+    "territoryId": "2203909",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialdasprefeituras",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialdasprefeituras",
+          "baseUrl": "https://diariooficialdasprefeituras.org/piaui/buscas",
+          "cityName": "Floriano",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_barras",
+    "name": "Barras - PI",
+    "territoryId": "2201200",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioficialdosmunicipiosappm",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioficialdosmunicipiosappm",
+          "baseUrl": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php",
+          "cityName": "Barras",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_altos",
+    "name": "Altos - PI",
+    "territoryId": "2200400",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialdasprefeituras",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialdasprefeituras",
+          "baseUrl": "https://diariooficialdasprefeituras.org/piaui/buscas",
+          "cityName": "Altos",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_uniao",
+    "name": "União - PI",
+    "territoryId": "2211100",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialdasprefeituras",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialdasprefeituras",
+          "baseUrl": "https://diariooficialdasprefeituras.org/piaui/buscas",
+          "cityName": "União",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_campo_maior",
+    "name": "Campo Maior - PI",
+    "territoryId": "2202208",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialdasprefeituras",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialdasprefeituras",
+          "baseUrl": "https://diariooficialdasprefeituras.org/piaui/buscas",
+          "cityName": "Campo Maior",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_jose_de_freitas",
+    "name": "José de Freitas - PI",
+    "territoryId": "2205508",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialdasprefeituras",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialdasprefeituras",
+          "baseUrl": "https://diariooficialdasprefeituras.org/piaui/buscas",
+          "cityName": "José de Freitas",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_esperantina",
+    "name": "Esperantina - PI",
+    "territoryId": "2203701",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioficialdosmunicipiosappm",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioficialdosmunicipiosappm",
+          "baseUrl": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php",
+          "cityName": "Esperantina",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_sao_raimundo_nonato",
+    "name": "São Raimundo Nonato - PI",
+    "territoryId": "2210607",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioficialdosmunicipiosappm",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioficialdosmunicipiosappm",
+          "baseUrl": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php",
+          "cityName": "Sao Raimundo Nonato",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_oeiras",
+    "name": "Oeiras - PI",
+    "territoryId": "2207009",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioficialdosmunicipiosappm",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioficialdosmunicipiosappm",
+          "baseUrl": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php",
+          "cityName": "Oeiras",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_pedro_ii",
+    "name": "Pedro II - PI",
+    "territoryId": "2207900",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioficialdosmunicipiosappm",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioficialdosmunicipiosappm",
+          "baseUrl": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php",
+          "cityName": "Pedro II",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_miguel_alves",
+    "name": "Miguel Alves - PI",
+    "territoryId": "2206209",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioficialdosmunicipiosappm",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioficialdosmunicipiosappm",
+          "baseUrl": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php",
+          "cityName": "Miguel Alves",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_luis_correia",
+    "name": "Luís Correia - PI",
+    "territoryId": "2205706",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioficialdosmunicipiosappm",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioficialdosmunicipiosappm",
+          "baseUrl": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php",
+          "cityName": "Luis Correia",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_piracuruca",
+    "name": "Piracuruca - PI",
+    "territoryId": "2208304",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioficialdosmunicipiosappm",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioficialdosmunicipiosappm",
+          "baseUrl": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php",
+          "cityName": "Piracuruca",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_bom_jesus",
+    "name": "Bom Jesus - PI",
+    "territoryId": "2201903",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioficialdosmunicipiosappm",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioficialdosmunicipiosappm",
+          "baseUrl": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php",
+          "cityName": "Bom Jesus",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_cocal",
+    "name": "Cocal - PI",
+    "territoryId": "2202703",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioficialdosmunicipiosappm",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioficialdosmunicipiosappm",
+          "baseUrl": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php",
+          "cityName": "Cocal",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_corrente",
+    "name": "Corrente - PI",
+    "territoryId": "2202901",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioficialdosmunicipiosappm",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioficialdosmunicipiosappm",
+          "baseUrl": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php",
+          "cityName": "Corrente",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_batalha",
+    "name": "Batalha - PI",
+    "territoryId": "2201507",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diarioficialdosmunicipiosappm",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diarioficialdosmunicipiosappm",
+          "baseUrl": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php",
+          "cityName": "Batalha",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,137 @@
+{
+  "timestamp": "2026-01-27T15:55:00Z",
+  "stateCode": "PE",
+  "configFile": "src/spiders/v2/configs/pe.json",
+  "summary": {
+    "total": 10,
+    "used_existing_spider": 7,
+    "needs_review": 3,
+    "skipped_already_exists": 0,
+    "created_new_spider": 0
+  },
+  "platformsIdentified": {
+    "sigpub_amupe": 6,
+    "doem": 1,
+    "site_proprio": 3
+  },
+  "results": [
+    {
+      "cidade": "Recife",
+      "territoryId": "2611606",
+      "url": "https://dome.recife.pe.gov.br/dome/",
+      "status": "needs_review",
+      "spiderType": "sigpub",
+      "platform": "DOME (site próprio) + AMUPE",
+      "analysis": {
+        "siteOwnUrl": "dome.recife.pe.gov.br/dome/",
+        "amupe": true,
+        "pdfPattern": "https://dome.recife.pe.gov.br/upload_dome/DO__XXX_DD.MM.YY-assinado.pdf",
+        "hasDateFilter": true,
+        "recommendation": "Usar AMUPE (sigpub) ou criar spider específico para DOME"
+      }
+    },
+    {
+      "cidade": "Jaboatão dos Guararapes",
+      "territoryId": "2607901",
+      "url": "https://diariooficial.jaboatao.pe.gov.br/",
+      "status": "needs_review",
+      "spiderType": "sigpub",
+      "platform": "WordPress + AMUPE",
+      "analysis": {
+        "siteOwnUrl": "diariooficial.jaboatao.pe.gov.br",
+        "amupe": true,
+        "urlPattern": "/YYYY/MM/DD/titulo-publicacao/",
+        "hasPagination": true,
+        "recommendation": "Usar AMUPE (sigpub) ou criar spider WordPress específico"
+      }
+    },
+    {
+      "cidade": "Petrolina",
+      "territoryId": "2611101",
+      "url": "https://doem.org.br/pe/petrolina",
+      "status": "used_existing_spider",
+      "spiderType": "doem",
+      "platform": "DOEM",
+      "config": {
+        "type": "doem",
+        "stateCityUrlPart": "pe/petrolina"
+      }
+    },
+    {
+      "cidade": "Caruaru",
+      "territoryId": "2604106",
+      "url": "https://diariooficial.caruaru.pe.gov.br/",
+      "status": "needs_review",
+      "spiderType": "sigpub",
+      "platform": "Site próprio + AMUPE",
+      "analysis": {
+        "siteOwnUrl": "diariooficial.caruaru.pe.gov.br",
+        "amupe": true,
+        "hasCalendar": true,
+        "hasDateSearch": true,
+        "recommendation": "Usar AMUPE (sigpub) ou criar spider específico"
+      }
+    },
+    {
+      "cidade": "Olinda",
+      "territoryId": "2609600",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "platform": "AMUPE"
+    },
+    {
+      "cidade": "Paulista",
+      "territoryId": "2610707",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "platform": "AMUPE"
+    },
+    {
+      "cidade": "Cabo de Santo Agostinho",
+      "territoryId": "2602902",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "platform": "AMUPE"
+    },
+    {
+      "cidade": "Camaragibe",
+      "territoryId": "2603454",
+      "url": "https://diariooficial.camaragibe.pe.gov.br/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "platform": "Site próprio + AMUPE",
+      "analysis": {
+        "siteOwnUrl": "diariooficial.camaragibe.pe.gov.br",
+        "amupe": true,
+        "pdfPattern": "/storage/edicao/edicaoYYYY-MM-DD.pdf"
+      }
+    },
+    {
+      "cidade": "Garanhuns",
+      "territoryId": "2606002",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "platform": "AMUPE"
+    },
+    {
+      "cidade": "Vitória de Santo Antão",
+      "territoryId": "2616407",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "platform": "AMUPE"
+    }
+  ],
+  "notes": [
+    "Todas as 10 cidades de PE publicam diários oficiais na AMUPE (Associação Municipalista de Pernambuco)",
+    "O spider sigpub pode ser usado para todas as cidades",
+    "Recife, Jaboatão e Caruaru possuem portais próprios mais completos",
+    "Petrolina usa a plataforma DOEM (doem.org.br) separadamente",
+    "Camaragibe possui portal próprio mas também publica na AMUPE",
+    "As cidades com portais próprios foram marcadas com active=false para revisão manual do melhor spider"
+  ]
+}

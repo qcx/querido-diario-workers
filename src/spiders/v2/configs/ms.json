@@ -1,0 +1,430 @@
+[
+  {
+    "id": "ms_campo_grande",
+    "name": "Campo Grande - MS",
+    "territoryId": "5002704",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracampogrande",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracampogrande",
+          "baseUrl": "https://diogrande.campogrande.ms.gov.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_dourados",
+    "name": "Dourados - MS",
+    "territoryId": "5003702",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituradourados",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituradourados",
+          "baseUrl": "https://do.dourados.ms.gov.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_tres_lagoas",
+    "name": "Três Lagoas - MS",
+    "territoryId": "5008305",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "Três Lagoas",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_corumba",
+    "name": "Corumbá - MS",
+    "territoryId": "5003207",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariomunicipiosjc",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariomunicipiosjc",
+          "baseUrl": "https://do.corumba.ms.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_ponta_pora",
+    "name": "Ponta Porã - MS",
+    "territoryId": "5006606",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapontapora",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapontapora",
+          "baseUrl": "https://diariooficial.pontapora.ms.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_navirai",
+    "name": "Naviraí - MS",
+    "territoryId": "5005707",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "Naviraí",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_nova_andradina",
+    "name": "Nova Andradina - MS",
+    "territoryId": "5006200",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituranovaandradina",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituranovaandradina",
+          "baseUrl": "https://publicacoesmunicipais.inf.br/transparencia/nova-andradina/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_sidrolandia",
+    "name": "Sidrolândia - MS",
+    "territoryId": "5007901",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "Sidrolândia",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_aquidauana",
+    "name": "Aquidauana - MS",
+    "territoryId": "5001102",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraaquidauana",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraaquidauana",
+          "baseUrl": "https://legado.aquidauana.ms.gov.br/edoem",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_maracaju",
+    "name": "Maracaju - MS",
+    "territoryId": "5005400",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.maracaju.ms.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_paranaiba",
+    "name": "Paranaíba - MS",
+    "territoryId": "5006309",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "Paranaíba",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_amambai",
+    "name": "Amambai - MS",
+    "territoryId": "5000609",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "Amambai",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_rio_brilhante",
+    "name": "Rio Brilhante - MS",
+    "territoryId": "5007208",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/rio_brilhante"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_coxim",
+    "name": "Coxim - MS",
+    "territoryId": "5003306",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "Coxim",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_chapadao_do_sul",
+    "name": "Chapadão do Sul - MS",
+    "territoryId": "5002951",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialchapdosul.com.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_caarapo",
+    "name": "Caarapó - MS",
+    "territoryId": "5002407",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "Caarapó",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_sao_gabriel_do_oeste",
+    "name": "São Gabriel do Oeste - MS",
+    "territoryId": "5007695",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "São Gabriel do Oeste",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_ivinhema",
+    "name": "Ivinhema - MS",
+    "territoryId": "5004700",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/ivinhema",
+          "cityName": "Ivinhema",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_aparecida_do_taboado",
+    "name": "Aparecida do Taboado - MS",
+    "territoryId": "5001003",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "Aparecida do Taboado",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_costa_rica",
+    "name": "Costa Rica - MS",
+    "territoryId": "5003256",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.costarica.ms.gov.br/portal/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_miranda",
+    "name": "Miranda - MS",
+    "territoryId": "5005608",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/miranda",
+          "cityName": "Miranda",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  }
+]

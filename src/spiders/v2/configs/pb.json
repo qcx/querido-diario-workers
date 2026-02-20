@@ -1,0 +1,474 @@
+[
+  {
+    "id": "pb_joao_pessoa",
+    "name": "João Pessoa - PB",
+    "territoryId": "2507507",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturajoaopessoa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturajoaopessoa",
+          "baseUrl": "https://www.joaopessoa.pb.gov.br/doe-jp/",
+          "requiresClientRendering": false
+        }
+      }
+    ],
+    "notes": "Capital do estado. Portal WordPress com DOE-JP. 1234+ edições desde 2019. Paginação em /doe-jp/page/{n}/."
+  },
+  {
+    "id": "pb_campina_grande",
+    "name": "Campina Grande - PB",
+    "territoryId": "2504009",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sogotecnologia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sogotecnologia",
+          "baseUrl": "https://campinagrande.pb.gov.br/semanario-oficial/",
+          "startYear": 2017,
+          "requiresClientRendering": false,
+          "yearUrlPattern": "{baseUrl}semanario-oficial-{year}/",
+          "usesDetailPages": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pb_santa_rita",
+    "name": "Santa Rita - PB",
+    "territoryId": "2513703",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sogotecnologia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sogotecnologia",
+          "baseUrl": "https://santarita.pb.gov.br/diario-oficial/",
+          "startYear": 2013,
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "pb_patos",
+    "name": "Patos - PB",
+    "territoryId": "2510808",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famup/",
+          "entityId": "334",
+          "cityName": "Patos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pb_bayeux",
+    "name": "Bayeux - PB",
+    "territoryId": "2501807",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabayeux",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabayeux",
+          "baseUrl": "https://bayeux.pb.gov.br/diario-oficial/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "pb_sousa",
+    "name": "Sousa - PB",
+    "territoryId": "2516201",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasousa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasousa",
+          "baseUrl": "https://www.sousa.pb.gov.br/jornais-oficiais.php",
+          "requiresClientRendering": false
+        }
+      }
+    ],
+    "notes": "Portal WordPress com Jornal Oficial do Município. 1576+ edições. Paginação via ?pagina=N. PDF em iframe na página de detalhes (g.php?id=XXX)."
+  },
+  {
+    "id": "pb_cabedelo",
+    "name": "Cabedelo - PB",
+    "territoryId": "2503209",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sogotecnologia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sogotecnologia",
+          "baseUrl": "https://cabedelo.pb.gov.br/category/diario-oficial/",
+          "startYear": 2020,
+          "requiresClientRendering": false,
+          "yearUrlPattern": "{baseUrl}diario-oficial-{year}/",
+          "usesDetailPages": true
+        }
+      }
+    ],
+    "notes": "Portal WordPress com Diário Oficial por ano. Páginas de detalhe com PDFs. URL: /category/diario-oficial/diario-oficial-YYYY/. Paginação em /page/N/."
+  },
+  {
+    "id": "pb_cajazeiras",
+    "name": "Cajazeiras - PB",
+    "territoryId": "2503704",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracajazeiras",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracajazeiras",
+          "baseUrl": "https://www.cajazeiras.pb.gov.br/diariooficial.php",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "pb_guarabira",
+    "name": "Guarabira - PB",
+    "territoryId": "2506301",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraguarabirapb",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraguarabirapb",
+          "baseUrl": "https://guarabira.online/diariooficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pb_sape",
+    "name": "Sapé - PB",
+    "territoryId": "2515302",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famup/",
+          "entityId": "1341",
+          "cityName": "Sapé"
+        }
+      }
+    ],
+    "notes": "Publica no Diário Oficial dos Municípios da FAMUP. EntityId 1341. PDF consolidado contendo todas as cidades da federação."
+  },
+  {
+    "id": "pb_queimadas",
+    "name": "Queimadas - PB",
+    "territoryId": "2512507",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraqueimadaspb",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraqueimadaspb",
+          "baseUrl": "https://www.queimadas.pb.gov.br/publicacoes/mensario-oficial-do-municipio",
+          "requiresClientRendering": false
+        }
+      }
+    ],
+    "notes": "Portal Laravel com Mensário Oficial do Município. 44+ páginas de edições. Paginação via ?page=N. PDFs em /storage/content/publicacoes/."
+  },
+  {
+    "id": "pb_mamanguape",
+    "name": "Mamanguape - PB",
+    "territoryId": "2508901",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sogotecnologia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sogotecnologia",
+          "baseUrl": "https://www.mamanguape.pb.gov.br/",
+          "startYear": 2017,
+          "requiresClientRendering": false,
+          "yearUrlPattern": "{baseUrl}diario-oficial/diario-oficial-{year}/"
+        }
+      }
+    ],
+    "notes": "Portal WordPress Alfa Group. URL por ano: /diario-oficial/diario-oficial-YYYY/. Documentos individuais (leis, decretos, portarias) com PDFs em wp-content/uploads/YYYY/MM/. Paginação em /page/N/."
+  },
+  {
+    "id": "pb_pombal",
+    "name": "Pombal - PB",
+    "territoryId": "2512101",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famup/",
+          "entityId": "396",
+          "cityName": "Pombal"
+        }
+      }
+    ],
+    "notes": "Publica no Diário Oficial da FAMUP (Federação das Associações de Municípios da Paraíba). EntityId 396."
+  },
+  {
+    "id": "pb_monteiro",
+    "name": "Monteiro - PB",
+    "territoryId": "2509701",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famup/",
+          "entityId": "13668",
+          "cityName": "Monteiro"
+        }
+      }
+    ],
+    "notes": "Publica no Diário Oficial dos Municípios da FAMUP (Federação das Associações de Municípios da Paraíba). EntityId: 13668. Portal Sogo Tecnologia do município redireciona para FAMUP."
+  },
+  {
+    "id": "pb_sao_bento",
+    "name": "São Bento - PB",
+    "territoryId": "2513901",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasaobentopb",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasaobentopb",
+          "baseUrl": "https://transparencia.saobento.pb.gov.br/diario-oficial",
+          "requiresClientRendering": false
+        }
+      }
+    ],
+    "notes": "Portal Laravel/Inertia.js com Diário Oficial. Filtros por ano e mês. PDFs servidos diretamente via /diario-oficial/YYYY-MM-DD. Desde 2017."
+  },
+  {
+    "id": "pb_esperanca",
+    "name": "Esperança - PB",
+    "territoryId": "2506004",
+    "stateCode": "PB",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "custom",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "custom",
+          "baseUrl": "https://esperanca.pb.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ],
+    "notes": "NEEDS_SPIDER: Portal customizado. Lista carregada via JavaScript/AJAX. Filtros: data início/fim, palavra-chave, edição. Requer browser rendering para identificar estrutura da API ou DOM carregado. Também tem Quinzenário Oficial como publicação alternativa."
+  },
+  {
+    "id": "pb_catole_do_rocha",
+    "name": "Catolé do Rocha - PB",
+    "territoryId": "2504306",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "easywebportal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "easywebportal",
+          "baseUrl": "https://catoledorocha.pb.gov.br/jornal-oficial/p16_sectionid/39",
+          "sectionId": "39",
+          "requiresClientRendering": false
+        }
+      }
+    ],
+    "notes": "Portal Easyweb com Jornal Oficial. 4000+ edições desde 2017. PDFs em /images/arquivos/documentos/. Organizado por anos (DOM 2017, DOM 2018, etc.)."
+  },
+  {
+    "id": "pb_pedras_de_fogo",
+    "name": "Pedras de Fogo - PB",
+    "territoryId": "2511004",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapedrasdefogo",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapedrasdefogo",
+          "baseUrl": "https://pedrasdefogo.pb.gov.br/transparencia-inicio/semanario",
+          "requiresClientRendering": false
+        }
+      }
+    ],
+    "notes": "Portal customizado com Semanário Oficial. 459+ edições em 39 páginas. PDFs diretos no storage. Paginação via ?page=N."
+  },
+  {
+    "id": "pb_lagoa_seca",
+    "name": "Lagoa Seca - PB",
+    "territoryId": "2508307",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituralagoaseca",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituralagoaseca",
+          "baseUrl": "https://lagoaseca.pb.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ],
+    "notes": "Portal WordPress com WPDM (Download Manager). Boletim Oficial em /boletim-oficial/. Paginação via ?cp=N. 125+ páginas de edições desde 2017. PDFs diretos via data-downloadurl."
+  },
+  {
+    "id": "pb_conde",
+    "name": "Conde - PB",
+    "territoryId": "2504603",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sogotecnologia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sogotecnologia",
+          "baseUrl": "https://conde.pb.gov.br/",
+          "startYear": 2006,
+          "requiresClientRendering": false,
+          "yearUrlPattern": "{baseUrl}diario-oficial/diarios-oficiais-{year}/"
+        }
+      }
+    ],
+    "notes": "Portal Sogo Tecnologia (sogothemecs) com Diário Oficial. URL: /diario-oficial/diarios-oficiais-YYYY/. Paginação em /page/N/. PDFs diretos em wp-content/uploads/YYYY/MM/. Desde 2006."
+  },
+  {
+    "id": "pb_solanea",
+    "name": "Solânea - PB",
+    "territoryId": "2516102",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "mssolucoes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "mssolucoes",
+          "baseUrl": "https://www.solanea.pb.gov.br/diariooficial.php",
+          "requiresClientRendering": false
+        }
+      }
+    ],
+    "notes": "Portal Ms Soluções com Diário Oficial. 592+ edições. Paginação via ?pagina=N. PDF via arquivos_download.php."
+  },
+  {
+    "id": "pb_alagoa_grande",
+    "name": "Alagoa Grande - PB",
+    "territoryId": "2500403",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "mssolucoes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "mssolucoes",
+          "baseUrl": "https://www.alagoagrande.pb.gov.br/diariooficial.php",
+          "requiresClientRendering": false
+        }
+      }
+    ],
+    "notes": "Portal Ms Soluções com Diário Oficial. 283+ edições. Paginação via ?pagina=N. PDF via arquivos_download.php."
+  }
+]

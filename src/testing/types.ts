@@ -59,6 +59,12 @@ export interface TestConfig {
   
   /** Output directory for reports */
   outputDir?: string;
+  
+  /** Custom date range (overrides searchDays if provided) */
+  customDateRange?: {
+    start: string;
+    end: string;
+  };
 }
 
 /**

@@ -10,7 +10,8 @@
       "entityName": "Prefeitura Municipal de Abdon Batista",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4200101",
@@ -23,7 +24,8 @@
       "entityName": "Prefeitura Municipal de Abelardo Luz",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4200200",
@@ -36,7 +38,8 @@
       "entityName": "Prefeitura Municipal de Agrolândia",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4200309",
@@ -49,7 +52,8 @@
       "entityName": "Prefeitura Municipal de Agronômica",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4200705",
@@ -62,7 +66,8 @@
       "entityName": "Prefeitura Municipal de Alfredo Wagner",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4200754",
@@ -75,7 +80,8 @@
       "entityName": "Prefeitura Municipal de Alto Bela Vista",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4200804",
@@ -88,7 +94,8 @@
       "entityName": "Prefeitura Municipal de Anchieta",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4200903",
@@ -101,7 +108,8 @@
       "entityName": "Prefeitura Municipal de Angelina",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4201000",
@@ -114,7 +122,8 @@
       "entityName": "Prefeitura Municipal de Anita Garibaldi",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4201109",
@@ -127,7 +136,8 @@
       "entityName": "Prefeitura Municipal de Anitápolis",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4201208",
@@ -140,7 +150,8 @@
       "entityName": "Prefeitura Municipal de Antônio Carlos",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4201257",
@@ -153,7 +164,8 @@
       "entityName": "Prefeitura Municipal de Apiúna",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4201273",
@@ -166,7 +178,8 @@
       "entityName": "Prefeitura Municipal de Arabutã",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4201307",
@@ -179,7 +192,8 @@
       "entityName": "Prefeitura Municipal de Araquari",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4201406",
@@ -192,7 +206,8 @@
       "entityName": "Prefeitura Municipal de Araranguá",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4201505",
@@ -205,7 +220,8 @@
       "entityName": "Prefeitura Municipal de Armazém",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4201604",
@@ -218,7 +234,8 @@
       "entityName": "Prefeitura Municipal de Arroio Trinta",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4201653",
@@ -231,7 +248,8 @@
       "entityName": "Prefeitura Municipal de Arvoredo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4201703",
@@ -244,7 +262,8 @@
       "entityName": "Prefeitura Municipal de Ascurra",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4201802",
@@ -257,7 +276,8 @@
       "entityName": "Prefeitura Municipal de Atalanta",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4201901",
@@ -270,7 +290,8 @@
       "entityName": "Prefeitura Municipal de Aurora",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4201950",
@@ -283,7 +304,8 @@
       "entityName": "Prefeitura Municipal de Balneário Arroio do Silva",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202057",
@@ -296,7 +318,8 @@
       "entityName": "Prefeitura Municipal de Balneário Barra do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202008",
@@ -309,7 +332,8 @@
       "entityName": "Prefeitura Municipal de Balneário Camboriú",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202073",
@@ -322,7 +346,8 @@
       "entityName": "Prefeitura Municipal de Balneário Gaivota",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212809",
@@ -335,7 +360,8 @@
       "entityName": "Prefeitura Municipal de Balneário Piçarras",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4220000",
@@ -348,7 +374,8 @@
       "entityName": "Prefeitura Municipal de Balneário Rincão",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202081",
@@ -361,7 +388,8 @@
       "entityName": "Prefeitura Municipal de Bandeirante",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202099",
@@ -374,7 +402,8 @@
       "entityName": "Prefeitura Municipal de Barra Bonita",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202107",
@@ -387,7 +416,8 @@
       "entityName": "Prefeitura Municipal de Barra Velha",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202131",
@@ -400,7 +430,8 @@
       "entityName": "Prefeitura Municipal de Bela Vista do Toldo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202156",
@@ -413,7 +444,8 @@
       "entityName": "Prefeitura Municipal de Belmonte",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202206",
@@ -426,7 +458,8 @@
       "entityName": "Prefeitura Municipal de Benedito Novo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202305",
@@ -439,7 +472,8 @@
       "entityName": "Prefeitura Municipal de Biguaçu",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202404",
@@ -452,7 +486,8 @@
       "entityName": "Prefeitura Municipal de Blumenau",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202438",
@@ -465,7 +500,8 @@
       "entityName": "Prefeitura Municipal de Bocaina do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202503",
@@ -478,7 +514,8 @@
       "entityName": "Prefeitura Municipal de Bom Jardim da Serra",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202537",
@@ -491,7 +528,8 @@
       "entityName": "Prefeitura Municipal de Bom Jesus",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202578",
@@ -504,7 +542,8 @@
       "entityName": "Prefeitura Municipal de Bom Jesus do Oeste",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202602",
@@ -517,7 +556,8 @@
       "entityName": "Prefeitura Municipal de Bom Retiro",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202453",
@@ -530,7 +570,8 @@
       "entityName": "Prefeitura Municipal de Bombinhas",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202701",
@@ -543,7 +584,8 @@
       "entityName": "Prefeitura Municipal de Botuverá",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202800",
@@ -556,7 +598,8 @@
       "entityName": "Prefeitura Municipal de Braço do Norte",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202859",
@@ -569,7 +612,8 @@
       "entityName": "Prefeitura Municipal de Braço do Trombudo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202875",
@@ -582,7 +626,8 @@
       "entityName": "Prefeitura Municipal de Brunópolis",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4202909",
@@ -595,7 +640,8 @@
       "entityName": "Prefeitura Municipal de Brusque",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4203105",
@@ -608,7 +654,8 @@
       "entityName": "Prefeitura Municipal de Caibi",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4203154",
@@ -621,7 +668,8 @@
       "entityName": "Prefeitura Municipal de Calmon",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4203204",
@@ -634,7 +682,8 @@
       "entityName": "Prefeitura Municipal de Camboriú",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4203303",
@@ -647,7 +696,8 @@
       "entityName": "Prefeitura Municipal de Campo Alegre",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4203402",
@@ -660,7 +710,8 @@
       "entityName": "Prefeitura Municipal de Campo Belo do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4203501",
@@ -673,7 +724,8 @@
       "entityName": "Prefeitura Municipal de Campo Erê",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4203600",
@@ -686,7 +738,8 @@
       "entityName": "Prefeitura Municipal de Campos Novos",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4203709",
@@ -699,7 +752,8 @@
       "entityName": "Prefeitura Municipal de Canelinha",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4203808",
@@ -712,7 +766,8 @@
       "entityName": "Prefeitura Municipal de Canoinhas",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4203907",
@@ -725,7 +780,8 @@
       "entityName": "Prefeitura Municipal de Capinzal",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4203956",
@@ -738,7 +794,8 @@
       "entityName": "Prefeitura Municipal de Capivari de Baixo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4203253",
@@ -751,7 +808,8 @@
       "entityName": "Prefeitura Municipal de Capão Alto",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204004",
@@ -764,7 +822,8 @@
       "entityName": "Prefeitura Municipal de Catanduvas",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204103",
@@ -777,7 +836,8 @@
       "entityName": "Prefeitura Municipal de Caxambu do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4203006",
@@ -790,7 +850,8 @@
       "entityName": "Prefeitura Municipal de Caçador",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204152",
@@ -803,7 +864,8 @@
       "entityName": "Prefeitura Municipal de Celso Ramos",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204178",
@@ -816,7 +878,8 @@
       "entityName": "Prefeitura Municipal de Cerro Negro",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204194",
@@ -829,7 +892,8 @@
       "entityName": "Prefeitura Municipal de Chapadão do Lageado",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204202",
@@ -842,7 +906,8 @@
       "entityName": "Prefeitura Municipal de Chapecó",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204251",
@@ -855,7 +920,8 @@
       "entityName": "Prefeitura Municipal de Cocal do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204301",
@@ -868,7 +934,8 @@
       "entityName": "Prefeitura Municipal de Concórdia",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204350",
@@ -881,7 +948,8 @@
       "entityName": "Prefeitura Municipal de Cordilheira Alta",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204400",
@@ -894,7 +962,8 @@
       "entityName": "Prefeitura Municipal de Coronel Freitas",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204459",
@@ -907,7 +976,8 @@
       "entityName": "Prefeitura Municipal de Coronel Martins",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204558",
@@ -920,7 +990,8 @@
       "entityName": "Prefeitura Municipal de Correia Pinto",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204509",
@@ -933,7 +1004,8 @@
       "entityName": "Prefeitura Municipal de Corupá",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204608",
@@ -946,7 +1018,8 @@
       "entityName": "Prefeitura Municipal de Criciúma",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204707",
@@ -959,7 +1032,8 @@
       "entityName": "Prefeitura Municipal de Cunha Porã",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204756",
@@ -972,7 +1046,8 @@
       "entityName": "Prefeitura Municipal de Cunhataí",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204806",
@@ -985,7 +1060,8 @@
       "entityName": "Prefeitura Municipal de Curitibanos",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4204905",
@@ -998,7 +1074,8 @@
       "entityName": "Prefeitura Municipal de Descanso",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205001",
@@ -1011,7 +1088,8 @@
       "entityName": "Prefeitura Municipal de Dionísio Cerqueira",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205100",
@@ -1024,7 +1102,8 @@
       "entityName": "Prefeitura Municipal de Dona Emma",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205159",
@@ -1037,7 +1116,8 @@
       "entityName": "Prefeitura Municipal de Doutor Pedrinho",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205175",
@@ -1050,7 +1130,8 @@
       "entityName": "Prefeitura Municipal de Entre Rios",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205191",
@@ -1063,7 +1144,8 @@
       "entityName": "Prefeitura Municipal de Ermo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205209",
@@ -1076,7 +1158,8 @@
       "entityName": "Prefeitura Municipal de Erval Velho",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205308",
@@ -1089,7 +1172,8 @@
       "entityName": "Prefeitura Municipal de Faxinal dos Guedes",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205357",
@@ -1102,7 +1186,8 @@
       "entityName": "Prefeitura Municipal de Flor do Sertão",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205407",
@@ -1115,7 +1200,8 @@
       "entityName": "Prefeitura Municipal de Florianópolis",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205431",
@@ -1128,7 +1214,8 @@
       "entityName": "Prefeitura Municipal de Formosa do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205456",
@@ -1141,7 +1228,8 @@
       "entityName": "Prefeitura Municipal de Forquilhinha",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205506",
@@ -1154,7 +1242,8 @@
       "entityName": "Prefeitura Municipal de Fraiburgo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205555",
@@ -1167,7 +1256,8 @@
       "entityName": "Prefeitura Municipal de Frei Rogério",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205605",
@@ -1180,7 +1270,8 @@
       "entityName": "Prefeitura Municipal de Galvão",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205704",
@@ -1193,7 +1284,8 @@
       "entityName": "Prefeitura Municipal de Garopaba",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205803",
@@ -1206,7 +1298,8 @@
       "entityName": "Prefeitura Municipal de Garuva",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4205902",
@@ -1219,7 +1312,8 @@
       "entityName": "Prefeitura Municipal de Gaspar",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4206009",
@@ -1232,7 +1326,8 @@
       "entityName": "Prefeitura Municipal de Governador Celso Ramos",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4206207",
@@ -1245,7 +1340,8 @@
       "entityName": "Prefeitura Municipal de Gravatal",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4206108",
@@ -1258,7 +1354,8 @@
       "entityName": "Prefeitura Municipal de Grão Pará",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4206306",
@@ -1271,7 +1368,8 @@
       "entityName": "Prefeitura Municipal de Guabiruba",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4206405",
@@ -1284,7 +1382,8 @@
       "entityName": "Prefeitura Municipal de Guaraciaba",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4206504",
@@ -1297,7 +1396,8 @@
       "entityName": "Prefeitura Municipal de Guaramirim",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4206603",
@@ -1310,7 +1410,8 @@
       "entityName": "Prefeitura Municipal de Guarujá do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4206652",
@@ -1323,7 +1424,8 @@
       "entityName": "Prefeitura Municipal de Guatambú",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4206702",
@@ -1336,7 +1438,8 @@
       "entityName": "Prefeitura Municipal de Herval d'Oeste",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4206751",
@@ -1349,7 +1452,8 @@
       "entityName": "Prefeitura Municipal de Ibiam",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4206801",
@@ -1362,7 +1466,8 @@
       "entityName": "Prefeitura Municipal de Ibicaré",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4206900",
@@ -1375,7 +1480,8 @@
       "entityName": "Prefeitura Municipal de Ibirama",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207106",
@@ -1388,7 +1494,8 @@
       "entityName": "Prefeitura Municipal de Ilhota",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207205",
@@ -1401,7 +1508,8 @@
       "entityName": "Prefeitura Municipal de Imaruí",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207304",
@@ -1414,7 +1522,8 @@
       "entityName": "Prefeitura Municipal de Imbituba",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207403",
@@ -1427,7 +1536,8 @@
       "entityName": "Prefeitura Municipal de Imbuia",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207502",
@@ -1440,7 +1550,8 @@
       "entityName": "Prefeitura Municipal de Indaial",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207577",
@@ -1453,7 +1564,8 @@
       "entityName": "Prefeitura Municipal de Iomerê",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207601",
@@ -1466,7 +1578,8 @@
       "entityName": "Prefeitura Municipal de Ipira",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207650",
@@ -1479,7 +1592,8 @@
       "entityName": "Prefeitura Municipal de Iporã do Oeste",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207684",
@@ -1492,7 +1606,8 @@
       "entityName": "Prefeitura Municipal de Ipuaçu",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207700",
@@ -1505,7 +1620,8 @@
       "entityName": "Prefeitura Municipal de Ipumirim",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207759",
@@ -1518,7 +1634,8 @@
       "entityName": "Prefeitura Municipal de Iraceminha",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207809",
@@ -1531,7 +1648,8 @@
       "entityName": "Prefeitura Municipal de Irani",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207858",
@@ -1544,7 +1662,8 @@
       "entityName": "Prefeitura Municipal de Irati",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207908",
@@ -1557,7 +1676,8 @@
       "entityName": "Prefeitura Municipal de Irineópolis",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4208104",
@@ -1570,7 +1690,8 @@
       "entityName": "Prefeitura Municipal de Itaiópolis",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4208203",
@@ -1583,7 +1704,8 @@
       "entityName": "Prefeitura Municipal de Itajaí",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4208302",
@@ -1596,7 +1718,8 @@
       "entityName": "Prefeitura Municipal de Itapema",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4208401",
@@ -1609,7 +1732,8 @@
       "entityName": "Prefeitura Municipal de Itapiranga",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4208450",
@@ -1622,7 +1746,8 @@
       "entityName": "Prefeitura Municipal de Itapoá",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4208500",
@@ -1635,7 +1760,8 @@
       "entityName": "Prefeitura Municipal de Ituporanga",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4208005",
@@ -1648,7 +1774,8 @@
       "entityName": "Prefeitura Municipal de Itá",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4207007",
@@ -1661,7 +1788,8 @@
       "entityName": "Prefeitura Municipal de Içara",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4208609",
@@ -1674,7 +1802,8 @@
       "entityName": "Prefeitura Municipal de Jaborá",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4208708",
@@ -1687,7 +1816,8 @@
       "entityName": "Prefeitura Municipal de Jacinto Machado",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4208807",
@@ -1700,7 +1830,8 @@
       "entityName": "Prefeitura Municipal de Jaguaruna",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4208906",
@@ -1713,7 +1844,8 @@
       "entityName": "Prefeitura Municipal de Jaraguá do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4208955",
@@ -1726,7 +1858,8 @@
       "entityName": "Prefeitura Municipal de Jardinópolis",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4209003",
@@ -1739,7 +1872,8 @@
       "entityName": "Prefeitura Municipal de Joaçaba",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4209102",
@@ -1752,7 +1886,8 @@
       "entityName": "Prefeitura Municipal de Joinville",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4209151",
@@ -1765,7 +1900,8 @@
       "entityName": "Prefeitura Municipal de José Boiteux",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4209177",
@@ -1778,7 +1914,8 @@
       "entityName": "Prefeitura Municipal de Jupiá",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4209201",
@@ -1791,7 +1928,8 @@
       "entityName": "Prefeitura Municipal de Lacerdópolis",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4209300",
@@ -1804,7 +1942,8 @@
       "entityName": "Prefeitura Municipal de Lages",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4209409",
@@ -1817,7 +1956,8 @@
       "entityName": "Prefeitura Municipal de Laguna",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4209458",
@@ -1830,7 +1970,8 @@
       "entityName": "Prefeitura Municipal de Lajeado Grande",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4209508",
@@ -1843,7 +1984,8 @@
       "entityName": "Prefeitura Municipal de Laurentino",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4209607",
@@ -1856,7 +1998,8 @@
       "entityName": "Prefeitura Municipal de Lauro Muller",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4209706",
@@ -1869,7 +2012,8 @@
       "entityName": "Prefeitura Municipal de Lebon Régis",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4209805",
@@ -1882,7 +2026,8 @@
       "entityName": "Prefeitura Municipal de Leoberto Leal",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4209854",
@@ -1895,7 +2040,8 @@
       "entityName": "Prefeitura Municipal de Lindóia do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4209904",
@@ -1908,7 +2054,8 @@
       "entityName": "Prefeitura Municipal de Lontras",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4210001",
@@ -1921,7 +2068,8 @@
       "entityName": "Prefeitura Municipal de Luiz Alves",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4210035",
@@ -1934,7 +2082,8 @@
       "entityName": "Prefeitura Municipal de Luzerna",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4210050",
@@ -1947,7 +2096,8 @@
       "entityName": "Prefeitura Municipal de Macieira",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4210100",
@@ -1960,7 +2110,8 @@
       "entityName": "Prefeitura Municipal de Mafra",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4210209",
@@ -1973,7 +2124,8 @@
       "entityName": "Prefeitura Municipal de Major Gercino",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4210308",
@@ -1986,7 +2138,8 @@
       "entityName": "Prefeitura Municipal de Major Vieira",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4210407",
@@ -1999,7 +2152,8 @@
       "entityName": "Prefeitura Municipal de Maracajá",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4210506",
@@ -2012,7 +2166,8 @@
       "entityName": "Prefeitura Municipal de Maravilha",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4210555",
@@ -2025,7 +2180,8 @@
       "entityName": "Prefeitura Municipal de Marema",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4210605",
@@ -2038,7 +2194,8 @@
       "entityName": "Prefeitura Municipal de Massaranduba",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4210704",
@@ -2051,7 +2208,8 @@
       "entityName": "Prefeitura Municipal de Matos Costa",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4210803",
@@ -2064,7 +2222,8 @@
       "entityName": "Prefeitura Municipal de Meleiro",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4210852",
@@ -2077,7 +2236,8 @@
       "entityName": "Prefeitura Municipal de Mirim Doce",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4210902",
@@ -2090,7 +2250,8 @@
       "entityName": "Prefeitura Municipal de Modelo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211009",
@@ -2103,7 +2264,8 @@
       "entityName": "Prefeitura Municipal de Mondaí",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211058",
@@ -2116,7 +2278,8 @@
       "entityName": "Prefeitura Municipal de Monte Carlo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211108",
@@ -2129,7 +2292,8 @@
       "entityName": "Prefeitura Municipal de Monte Castelo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211256",
@@ -2142,7 +2306,8 @@
       "entityName": "Prefeitura Municipal de Morro Grande",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211207",
@@ -2155,7 +2320,8 @@
       "entityName": "Prefeitura Municipal de Morro da Fumaça",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211306",
@@ -2168,7 +2334,8 @@
       "entityName": "Prefeitura Municipal de Navegantes",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211405",
@@ -2181,7 +2348,8 @@
       "entityName": "Prefeitura Municipal de Nova Erechim",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211454",
@@ -2194,7 +2362,8 @@
       "entityName": "Prefeitura Municipal de Nova Itaberaba",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211504",
@@ -2207,7 +2376,8 @@
       "entityName": "Prefeitura Municipal de Nova Trento",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211603",
@@ -2220,7 +2390,8 @@
       "entityName": "Prefeitura Municipal de Nova Veneza",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211652",
@@ -2233,7 +2404,8 @@
       "entityName": "Prefeitura Municipal de Novo Horizonte",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211702",
@@ -2246,7 +2418,8 @@
       "entityName": "Prefeitura Municipal de Orleans",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211751",
@@ -2259,7 +2432,8 @@
       "entityName": "Prefeitura Municipal de Otacílio Costa",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211801",
@@ -2272,7 +2446,8 @@
       "entityName": "Prefeitura Municipal de Ouro",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211850",
@@ -2285,7 +2460,8 @@
       "entityName": "Prefeitura Municipal de Ouro Verde",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211876",
@@ -2298,7 +2474,8 @@
       "entityName": "Prefeitura Municipal de Paial",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211892",
@@ -2311,7 +2488,8 @@
       "entityName": "Prefeitura Municipal de Painel",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4211900",
@@ -2324,7 +2502,8 @@
       "entityName": "Prefeitura Municipal de Palhoça",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212007",
@@ -2337,7 +2516,8 @@
       "entityName": "Prefeitura Municipal de Palma Sola",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212056",
@@ -2350,7 +2530,8 @@
       "entityName": "Prefeitura Municipal de Palmeira",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212106",
@@ -2363,7 +2544,8 @@
       "entityName": "Prefeitura Municipal de Palmitos",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212205",
@@ -2376,7 +2558,8 @@
       "entityName": "Prefeitura Municipal de Papanduva",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212239",
@@ -2389,7 +2572,8 @@
       "entityName": "Prefeitura Municipal de Paraíso",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212254",
@@ -2402,7 +2586,8 @@
       "entityName": "Prefeitura Municipal de Passo de Torres",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212270",
@@ -2415,7 +2600,8 @@
       "entityName": "Prefeitura Municipal de Passos Maia",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212304",
@@ -2428,7 +2614,8 @@
       "entityName": "Prefeitura Municipal de Paulo Lopes",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212403",
@@ -2441,7 +2628,8 @@
       "entityName": "Prefeitura Municipal de Pedras Grandes",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212502",
@@ -2454,7 +2642,8 @@
       "entityName": "Prefeitura Municipal de Penha",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212601",
@@ -2467,7 +2656,8 @@
       "entityName": "Prefeitura Municipal de Peritiba",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212650",
@@ -2480,7 +2670,8 @@
       "entityName": "Prefeitura Municipal de Pescaria Brava",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212700",
@@ -2493,7 +2684,8 @@
       "entityName": "Prefeitura Municipal de Petrolândia",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4212908",
@@ -2506,7 +2698,8 @@
       "entityName": "Prefeitura Municipal de Pinhalzinho",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4213005",
@@ -2519,7 +2712,8 @@
       "entityName": "Prefeitura Municipal de Pinheiro Preto",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4213104",
@@ -2532,7 +2726,8 @@
       "entityName": "Prefeitura Municipal de Piratuba",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4213153",
@@ -2545,7 +2740,8 @@
       "entityName": "Prefeitura Municipal de Planalto Alegre",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4213203",
@@ -2558,7 +2754,8 @@
       "entityName": "Prefeitura Municipal de Pomerode",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4213302",
@@ -2571,7 +2768,8 @@
       "entityName": "Prefeitura Municipal de Ponte Alta",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4213351",
@@ -2584,7 +2782,8 @@
       "entityName": "Prefeitura Municipal de Ponte Alta do Norte",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4213401",
@@ -2597,7 +2796,8 @@
       "entityName": "Prefeitura Municipal de Ponte Serrada",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4213500",
@@ -2610,7 +2810,8 @@
       "entityName": "Prefeitura Municipal de Porto Belo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4213609",
@@ -2623,7 +2824,8 @@
       "entityName": "Prefeitura Municipal de Porto União",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4213708",
@@ -2636,7 +2838,8 @@
       "entityName": "Prefeitura Municipal de Pouso Redondo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4213807",
@@ -2649,7 +2852,8 @@
       "entityName": "Prefeitura Municipal de Praia Grande",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4213906",
@@ -2662,7 +2866,8 @@
       "entityName": "Prefeitura Municipal de Presidente Castello Branco",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4214003",
@@ -2675,7 +2880,8 @@
       "entityName": "Prefeitura Municipal de Presidente Getúlio",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4214102",
@@ -2688,7 +2894,8 @@
       "entityName": "Prefeitura Municipal de Presidente Nereu",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4214151",
@@ -2701,7 +2908,8 @@
       "entityName": "Prefeitura Municipal de Princesa",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4214201",
@@ -2714,7 +2922,8 @@
       "entityName": "Prefeitura Municipal de Quilombo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4214300",
@@ -2727,7 +2936,8 @@
       "entityName": "Prefeitura Municipal de Rancho Queimado",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4214904",
@@ -2740,7 +2950,8 @@
       "entityName": "Prefeitura Municipal de Rio Fortuna",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215000",
@@ -2753,7 +2964,8 @@
       "entityName": "Prefeitura Municipal de Rio Negrinho",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215059",
@@ -2766,7 +2978,8 @@
       "entityName": "Prefeitura Municipal de Rio Rufino",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4214409",
@@ -2779,7 +2992,8 @@
       "entityName": "Prefeitura Municipal de Rio das Antas",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4214508",
@@ -2792,7 +3006,8 @@
       "entityName": "Prefeitura Municipal de Rio do Campo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4214607",
@@ -2805,7 +3020,8 @@
       "entityName": "Prefeitura Municipal de Rio do Oeste",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4214805",
@@ -2818,7 +3034,8 @@
       "entityName": "Prefeitura Municipal de Rio do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4214706",
@@ -2831,7 +3048,8 @@
       "entityName": "Prefeitura Municipal de Rio dos Cedros",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215075",
@@ -2844,7 +3062,8 @@
       "entityName": "Prefeitura Municipal de Riqueza",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215109",
@@ -2857,7 +3076,8 @@
       "entityName": "Prefeitura Municipal de Rodeio",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215208",
@@ -2870,7 +3090,8 @@
       "entityName": "Prefeitura Municipal de Romelândia",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215307",
@@ -2883,7 +3104,8 @@
       "entityName": "Prefeitura Municipal de Salete",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215356",
@@ -2896,7 +3118,8 @@
       "entityName": "Prefeitura Municipal de Saltinho",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215406",
@@ -2909,7 +3132,8 @@
       "entityName": "Prefeitura Municipal de Salto Veloso",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215455",
@@ -2922,7 +3146,8 @@
       "entityName": "Prefeitura Municipal de Sangão",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215505",
@@ -2935,7 +3160,8 @@
       "entityName": "Prefeitura Municipal de Santa Cecília",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215554",
@@ -2948,7 +3174,8 @@
       "entityName": "Prefeitura Municipal de Santa Helena",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215604",
@@ -2961,7 +3188,8 @@
       "entityName": "Prefeitura Municipal de Santa Rosa de Lima",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215653",
@@ -2974,7 +3202,8 @@
       "entityName": "Prefeitura Municipal de Santa Rosa do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215679",
@@ -2987,7 +3216,8 @@
       "entityName": "Prefeitura Municipal de Santa Terezinha",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215687",
@@ -3000,7 +3230,8 @@
       "entityName": "Prefeitura Municipal de Santa Terezinha do Progresso",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215695",
@@ -3013,7 +3244,8 @@
       "entityName": "Prefeitura Municipal de Santiago do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215703",
@@ -3026,7 +3258,8 @@
       "entityName": "Prefeitura Municipal de Santo Amaro da Imperatriz",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217303",
@@ -3039,7 +3272,8 @@
       "entityName": "Prefeitura Municipal de Saudades",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217402",
@@ -3052,7 +3286,8 @@
       "entityName": "Prefeitura Municipal de Schroeder",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217501",
@@ -3065,7 +3300,8 @@
       "entityName": "Prefeitura Municipal de Seara",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217550",
@@ -3078,7 +3314,8 @@
       "entityName": "Prefeitura Municipal de Serra Alta",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217600",
@@ -3091,7 +3328,8 @@
       "entityName": "Prefeitura Municipal de Siderópolis",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217709",
@@ -3104,7 +3342,8 @@
       "entityName": "Prefeitura Municipal de Sombrio",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217758",
@@ -3117,7 +3356,8 @@
       "entityName": "Prefeitura Municipal de Sul Brasil",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215802",
@@ -3130,7 +3370,8 @@
       "entityName": "Prefeitura Municipal de São Bento do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215752",
@@ -3143,7 +3384,8 @@
       "entityName": "Prefeitura Municipal de São Bernardino",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4215901",
@@ -3156,7 +3398,8 @@
       "entityName": "Prefeitura Municipal de São Bonifácio",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4216008",
@@ -3169,7 +3412,8 @@
       "entityName": "Prefeitura Municipal de São Carlos",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4216057",
@@ -3182,7 +3426,8 @@
       "entityName": "Prefeitura Municipal de São Cristovão do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4216107",
@@ -3195,7 +3440,8 @@
       "entityName": "Prefeitura Municipal de São Domingos",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4216206",
@@ -3208,7 +3454,8 @@
       "entityName": "Prefeitura Municipal de São Francisco do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4216503",
@@ -3221,7 +3468,8 @@
       "entityName": "Prefeitura Municipal de São Joaquim",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4216602",
@@ -3234,7 +3482,8 @@
       "entityName": "Prefeitura Municipal de São José",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4216701",
@@ -3247,7 +3496,8 @@
       "entityName": "Prefeitura Municipal de São José do Cedro",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4216800",
@@ -3260,7 +3510,8 @@
       "entityName": "Prefeitura Municipal de São José do Cerrito",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4216305",
@@ -3273,7 +3524,8 @@
       "entityName": "Prefeitura Municipal de São João Batista",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4216354",
@@ -3286,7 +3538,8 @@
       "entityName": "Prefeitura Municipal de São João do Itaperiú",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4216255",
@@ -3299,7 +3552,8 @@
       "entityName": "Prefeitura Municipal de São João do Oeste",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4216404",
@@ -3312,7 +3566,8 @@
       "entityName": "Prefeitura Municipal de São João do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4216909",
@@ -3325,7 +3580,8 @@
       "entityName": "Prefeitura Municipal de São Lourenço do Oeste",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217006",
@@ -3338,7 +3594,8 @@
       "entityName": "Prefeitura Municipal de São Ludgero",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217105",
@@ -3351,7 +3608,8 @@
       "entityName": "Prefeitura Municipal de São Martinho",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217154",
@@ -3364,7 +3622,8 @@
       "entityName": "Prefeitura Municipal de São Miguel da Boa Vista",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217204",
@@ -3377,7 +3636,8 @@
       "entityName": "Prefeitura Municipal de São Miguel do Oeste",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217253",
@@ -3390,7 +3650,8 @@
       "entityName": "Prefeitura Municipal de São Pedro de Alcântara",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217808",
@@ -3403,7 +3664,8 @@
       "entityName": "Prefeitura Municipal de Taió",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217907",
@@ -3416,7 +3678,8 @@
       "entityName": "Prefeitura Municipal de Tangará",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4217956",
@@ -3429,7 +3692,8 @@
       "entityName": "Prefeitura Municipal de Tigrinhos",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218004",
@@ -3442,7 +3706,8 @@
       "entityName": "Prefeitura Municipal de Tijucas",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218103",
@@ -3455,7 +3720,8 @@
       "entityName": "Prefeitura Municipal de Timbé do Sul",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218202",
@@ -3468,7 +3734,8 @@
       "entityName": "Prefeitura Municipal de Timbó",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218251",
@@ -3481,7 +3748,8 @@
       "entityName": "Prefeitura Municipal de Timbó Grande",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218350",
@@ -3494,7 +3762,8 @@
       "entityName": "Prefeitura Municipal de Treviso",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218509",
@@ -3507,7 +3776,8 @@
       "entityName": "Prefeitura Municipal de Treze Tílias",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218400",
@@ -3520,7 +3790,8 @@
       "entityName": "Prefeitura Municipal de Treze de Maio",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218608",
@@ -3533,7 +3804,8 @@
       "entityName": "Prefeitura Municipal de Trombudo Central",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218301",
@@ -3546,7 +3818,8 @@
       "entityName": "Prefeitura Municipal de Três Barras",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218707",
@@ -3559,7 +3832,8 @@
       "entityName": "Prefeitura Municipal de Tubarão",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218756",
@@ -3572,7 +3846,8 @@
       "entityName": "Prefeitura Municipal de Tunápolis",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218806",
@@ -3585,7 +3860,8 @@
       "entityName": "Prefeitura Municipal de Turvo",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218855",
@@ -3598,7 +3874,8 @@
       "entityName": "Prefeitura Municipal de União do Oeste",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218905",
@@ -3611,7 +3888,8 @@
       "entityName": "Prefeitura Municipal de Urubici",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4218954",
@@ -3624,7 +3902,8 @@
       "entityName": "Prefeitura Municipal de Urupema",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4219002",
@@ -3637,7 +3916,8 @@
       "entityName": "Prefeitura Municipal de Urussanga",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4219150",
@@ -3650,7 +3930,8 @@
       "entityName": "Prefeitura Municipal de Vargem",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4219176",
@@ -3663,7 +3944,8 @@
       "entityName": "Prefeitura Municipal de Vargem Bonita",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4219101",
@@ -3676,7 +3958,8 @@
       "entityName": "Prefeitura Municipal de Vargeão",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4219200",
@@ -3689,7 +3972,8 @@
       "entityName": "Prefeitura Municipal de Vidal Ramos",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4219309",
@@ -3702,7 +3986,8 @@
       "entityName": "Prefeitura Municipal de Videira",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4219358",
@@ -3715,7 +4000,8 @@
       "entityName": "Prefeitura Municipal de Vitor Meireles",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4219408",
@@ -3728,7 +4014,8 @@
       "entityName": "Prefeitura Municipal de Witmarsum",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4219507",
@@ -3741,7 +4028,8 @@
       "entityName": "Prefeitura Municipal de Xanxerê",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4219606",
@@ -3754,7 +4042,8 @@
       "entityName": "Prefeitura Municipal de Xavantina",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4219705",
@@ -3767,7 +4056,8 @@
       "entityName": "Prefeitura Municipal de Xaxim",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4219853",
@@ -3780,7 +4070,8 @@
       "entityName": "Prefeitura Municipal de Zortéa",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4200408",
@@ -3793,7 +4084,8 @@
       "entityName": "Prefeitura Municipal de Água Doce",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4200556",
@@ -3806,7 +4098,8 @@
       "entityName": "Prefeitura Municipal de Águas Frias",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4200606",
@@ -3819,7 +4112,8 @@
       "entityName": "Prefeitura Municipal de Águas Mornas",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "sc_4200507",
@@ -3832,6 +4126,7 @@
       "entityName": "Prefeitura Municipal de Águas de Chapecó",
       "type": "dom_sc"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   }
 ]

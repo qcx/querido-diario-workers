@@ -1,0 +1,1784 @@
+[
+  {
+    "id": "pa_belem",
+    "name": "Belém - PA",
+    "territoryId": "1501402",
+    "stateCode": "PA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabeelem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabeelem",
+          "baseUrl": "https://pgm.belem.pa.gov.br/diario-oficial-do-municipio/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_ananindeua",
+    "name": "Ananindeua - PA",
+    "territoryId": "1500800",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Lista com PDFs e Data da Publicação em ananindeua.pa.gov.br/diario_oficial. Paginação .asp?num_rows=...&pag=N.",
+    "spiders": [
+      {
+        "spiderType": "prefeituraananindeua",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraananindeua",
+          "baseUrl": "https://www.ananindeua.pa.gov.br/diario_oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_santarem",
+    "name": "Santarém - PA",
+    "territoryId": "1506805",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep) ou TCM (tcm.ioepa.com.br/diarios). Requer spider FAMEP com entityId da Prefeitura Municipal de Santarém.",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "santarem"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_parauapebas",
+    "name": "Parauapebas - PA",
+    "territoryId": "1505536",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário em diario.parauapebas.pa.gov.br (MudBlazor). Spider específico diario_parauapebas_pa.",
+    "spiders": [
+      {
+        "spiderType": "diario_parauapebas_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diario_parauapebas_pa",
+          "url": "https://diario.parauapebas.pa.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_maraba",
+    "name": "Marabá - PA",
+    "territoryId": "1504208",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Prefeitura Municipal de Marabá publica no FAMEP (diariomunicipal.com.br/famep). Requer spider FAMEP com entityId.",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "maraba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_castanhal",
+    "name": "Castanhal - PA",
+    "territoryId": "1502400",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário Oficial em Google Sites: sites.google.com/castanhal.pa.gov.br/doc-diario-oficial-castanhal/inicio",
+    "spiders": [
+      {
+        "spiderType": "doc_castanhal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doc_castanhal",
+          "url": "https://sites.google.com/castanhal.pa.gov.br/doc-diario-oficial-castanhal/inicio"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_abaetetuba",
+    "name": "Abaetetuba - PA",
+    "territoryId": "1500107",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Prefeitura Municipal de Abaetetuba no FAMEP (diariomunicipal.com.br/famep). Requer spider FAMEP com entityId.",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "abaetetuba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_cameta",
+    "name": "Cametá - PA",
+    "territoryId": "1502103",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "WordPress com links diretos para PDF em prefeituradecameta.pa.gov.br/diario-oficial-do-municipio/.",
+    "spiders": [
+      {
+        "spiderType": "prefeituracameta",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracameta",
+          "baseUrl": "https://prefeituradecameta.pa.gov.br/diario-oficial-do-municipio"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_barcarena",
+    "name": "Barcarena - PA",
+    "territoryId": "1501303",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "DOM em dom.barcarena.pa.gov.br (Órbita Tecnologia - Next.js). Spider dom_orbitap com extração via browser.",
+    "spiders": [
+      {
+        "spiderType": "dom_orbitap",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "dom_orbitap",
+          "baseUrl": "https://dom.barcarena.pa.gov.br/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_altamira",
+    "name": "Altamira - PA",
+    "territoryId": "1500602",
+    "stateCode": "PA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraaltamira",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraaltamira",
+          "baseUrl": "https://altamira.pa.gov.br/diario-oficial/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_itaituba",
+    "name": "Itaituba - PA",
+    "territoryId": "1503606",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "itaituba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_braganca",
+    "name": "Bragança - PA",
+    "territoryId": "1501709",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "braganca"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_marituba",
+    "name": "Marituba - PA",
+    "territoryId": "1504422",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "marituba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_breves",
+    "name": "Breves - PA",
+    "territoryId": "1501808",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "breves"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_paragominas",
+    "name": "Paragominas - PA",
+    "territoryId": "1505502",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "paragominas"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_tucurui",
+    "name": "Tucuruí - PA",
+    "territoryId": "1508100",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "tucurui"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_moju",
+    "name": "Moju - PA",
+    "territoryId": "1504703",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "moju"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_canaa-dos-carajas",
+    "name": "Canaã dos Carajás - PA",
+    "territoryId": "1502152",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "canaa-dos-carajas"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_capanema",
+    "name": "Capanema - PA",
+    "territoryId": "1502202",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "capanema"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_oriximina",
+    "name": "Oriximiná - PA",
+    "territoryId": "1505304",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "oriximina"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_tome-acu",
+    "name": "Tomé-Açu - PA",
+    "territoryId": "1508001",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "tome-acu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_sao-felix-do-xingu",
+    "name": "São Félix do Xingu - PA",
+    "territoryId": "1507300",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "sao-felix-do-xingu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_igarape-miri",
+    "name": "Igarapé-Miri - PA",
+    "territoryId": "1503309",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "igarape-miri"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_benevides",
+    "name": "Benevides - PA",
+    "territoryId": "1501501",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "benevides"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_novo-repartimento",
+    "name": "Novo Repartimento - PA",
+    "territoryId": "1505064",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "novo-repartimento"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_monte-alegre",
+    "name": "Monte Alegre - PA",
+    "territoryId": "1504802",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "monte-alegre"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_dom-eliseu",
+    "name": "Dom Eliseu - PA",
+    "territoryId": "1502939",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "dom-eliseu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_capitao-poco",
+    "name": "Capitão Poço - PA",
+    "territoryId": "1502301",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "capitao-poco"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_rondon-do-para",
+    "name": "Rondon do Pará - PA",
+    "territoryId": "1506187",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "rondon-do-para"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_sao-miguel-do-guama",
+    "name": "São Miguel do Guamá - PA",
+    "territoryId": "1507607",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "sao-miguel-do-guama"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_xinguara",
+    "name": "Xinguara - PA",
+    "territoryId": "1508407",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "xinguara"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_obidos",
+    "name": "Óbidos - PA",
+    "territoryId": "1505106",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "obidos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_itupiranga",
+    "name": "Itupiranga - PA",
+    "territoryId": "1503705",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "itupiranga"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_breu-branco",
+    "name": "Breu Branco - PA",
+    "territoryId": "1501782",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "breu-branco"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_conceicao-do-araguaia",
+    "name": "Conceição do Araguaia - PA",
+    "territoryId": "1502707",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "conceicao-do-araguaia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_uruara",
+    "name": "Uruará - PA",
+    "territoryId": "1508159",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "uruara"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_tucuma",
+    "name": "Tucumã - PA",
+    "territoryId": "1508084",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "tucuma"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_jacunda",
+    "name": "Jacundá - PA",
+    "territoryId": "1503804",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "jacunda"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_ruropolis",
+    "name": "Rurópolis - PA",
+    "territoryId": "1506195",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "ruropolis"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_mae-do-rio",
+    "name": "Mãe do Rio - PA",
+    "territoryId": "1504059",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "mae-do-rio"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_novo-progresso",
+    "name": "Novo Progresso - PA",
+    "territoryId": "1505031",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "novo-progresso"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_anapu",
+    "name": "Anapu - PA",
+    "territoryId": "1500859",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "anapu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_tracuateua",
+    "name": "Tracuateua - PA",
+    "territoryId": "1508035",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "tracuateua"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_eldorado-dos-carajas",
+    "name": "Eldorado do Carajás - PA",
+    "territoryId": "1502954",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "eldorado-dos-carajas"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_anajas",
+    "name": "Anajás - PA",
+    "territoryId": "1500701",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "anajas"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_mocajuba",
+    "name": "Mocajuba - PA",
+    "territoryId": "1504604",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "mocajuba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_redencao",
+    "name": "Redenção - PA",
+    "territoryId": "1506138",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Legislações (Leis, Decretos, Portarias, Resoluções) em redencao.pa.gov.br/publicacoes/legislacoes. Spider instar para navegação; DO pode exigir spider específico.",
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://redencao.pa.gov.br/publicacoes/legislacoes",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_santa-izabel-do-para",
+    "name": "Santa Izabel do Pará - PA",
+    "territoryId": "1506500",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Site prefeitura; DO a confirmar em navegação (não sigpub).",
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.santaizabeldopara.pa.gov.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_tailandia",
+    "name": "Tailândia - PA",
+    "territoryId": "1507953",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos e Concursos no portalcr2.com.br/leis-e-atos/leis-tailandia; site prefeitura tailandia.pa.gov.br (instar).",
+    "spiders": [
+      {
+        "spiderType": "portalcr2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2",
+          "leisEAtosUrl": "https://www.portalcr2.com.br/leis-e-atos/leis-tailandia",
+          "concursosUrl": "https://www.portalcr2.com.br/concurso-processo-seletivo/concursos-e-pss-tailandia",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_alenquer",
+    "name": "Alenquer - PA",
+    "territoryId": "1500404",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Site CR2; DO a confirmar em navegação (não sigpub).",
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://alenquer.pa.gov.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_portel",
+    "name": "Portel - PA",
+    "territoryId": "1505809",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos e Concursos/Processos Seletivos no portalcr2.com.br (requer browser).",
+    "spiders": [
+      {
+        "spiderType": "portalcr2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2",
+          "leisEAtosUrl": "https://www.portalcr2.com.br/leis-e-atos/leis-portel",
+          "concursosUrl": "https://www.portalcr2.com.br/concurso-processo-seletivo/concursos-e-pss-portel",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_acara",
+    "name": "Acará - PA",
+    "territoryId": "1500206",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "DO a confirmar em navegação (não sigpub).",
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://acara.pa.gov.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_viseu",
+    "name": "Viseu - PA",
+    "territoryId": "1508308",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário via FAMEP (diariomunicipal.com.br/famep).",
+    "spiders": [
+      {
+        "spiderType": "sigpub_pa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub_pa",
+          "url": "https://www.diariomunicipal.com.br/famep/",
+          "entityId": "viseu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_baiao",
+    "name": "Baião - PA",
+    "territoryId": "1501204",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Portal CR2: apenas Leis e Atos e Concursos públicos.",
+    "spiders": [
+      {
+        "spiderType": "portalcr2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2",
+          "leisEAtosUrl": "https://www.portalcr2.com.br/leis-e-atos/leis-baiao",
+          "concursosUrl": "https://www.portalcr2.com.br/concurso-processo-seletivo/concursos-e-pss-baiao",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_juruti",
+    "name": "Juruti - PA",
+    "territoryId": "1503903",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Portal CR2: apenas Leis e Atos e Concursos públicos.",
+    "spiders": [
+      {
+        "spiderType": "portalcr2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2",
+          "leisEAtosUrl": "https://www.portalcr2.com.br/leis-e-atos/leis-juruti",
+          "concursosUrl": "https://www.portalcr2.com.br/concurso-processo-seletivo/concursos-e-pss-juruti",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_muana",
+    "name": "Muaná - PA",
+    "territoryId": "1504909",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos e Concursos no portalcr2.com.br (Muaná).",
+    "spiders": [
+      {
+        "spiderType": "portalcr2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2",
+          "leisEAtosUrl": "https://www.portalcr2.com.br/leis-e-atos/leis-muana",
+          "concursosUrl": "https://www.portalcr2.com.br/concurso-processo-seletivo/concursos-e-pss-muana",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_salinopolis",
+    "name": "Salinópolis - PA",
+    "territoryId": "1506203",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos e Concursos no portalcr2.com.br.",
+    "spiders": [
+      {
+        "spiderType": "portalcr2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2",
+          "leisEAtosUrl": "https://www.portalcr2.com.br/leis-e-atos/leis-salinopolis",
+          "concursosUrl": "https://www.portalcr2.com.br/concurso-processo-seletivo/concursos-e-pss-salinopolis",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_augusto_correa",
+    "name": "Augusto Corrêa - PA",
+    "territoryId": "1500909",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Publicações oficiais em augustocorrea.pa.gov.br/c/publicacoes/ (WordPress).",
+    "spiders": [
+      {
+        "spiderType": "prefeituravigia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituravigia",
+          "baseUrl": "https://augustocorrea.pa.gov.br",
+          "listPath": "c/publicacoes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_curuca",
+    "name": "Curuçá - PA",
+    "territoryId": "1502905",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos e Concursos no portalcr2.com.br (entidade curuca).",
+    "spiders": [
+      {
+        "spiderType": "portalcr2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2",
+          "leisEAtosUrl": "https://www.portalcr2.com.br/leis-e-atos/leis-curuca",
+          "concursosUrl": "https://www.portalcr2.com.br/concurso-processo-seletivo/concursos-e-pss-curuca",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_pacaja",
+    "name": "Pacajá - PA",
+    "territoryId": "1505054",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Publicações oficiais em pacaja.pa.gov.br/c/publicacoes/ (WordPress).",
+    "spiders": [
+      {
+        "spiderType": "prefeiturapacaja",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapacaja",
+          "baseUrl": "https://pacaja.pa.gov.br",
+          "listPath": "c/publicacoes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_porto_de_moz",
+    "name": "Porto de Moz - PA",
+    "territoryId": "1505551",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Publicações oficiais em portodemoz.pa.gov.br/c/publicacoes/ (WordPress).",
+    "spiders": [
+      {
+        "spiderType": "prefeituraportodemoz",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraportodemoz",
+          "baseUrl": "https://portodemoz.pa.gov.br",
+          "listPath": "c/publicacoes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_ulianopolis",
+    "name": "Ulianópolis - PA",
+    "territoryId": "1508159",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário Oficial em ulianopolis.pa.gov.br/diariooficial.php; PDF em arquivos_download.php?id=N&pg=diariooficial.",
+    "spiders": [
+      {
+        "spiderType": "prefeituraulianopolis",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraulianopolis",
+          "baseUrl": "https://www.ulianopolis.pa.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_afua",
+    "name": "Afuá - PA",
+    "territoryId": "1500305",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos Normativos em portal.cr2.co (entidade afua).",
+    "spiders": [
+      {
+        "spiderType": "portalcr2co",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2co",
+          "diariosUrl": "https://portal.cr2.co/informacao_institucional/informa%C3%A7%C3%B5es-institucionais-19?entidade=afua&modulo=Leis%20e%20Atos%20Normativos",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_igarape_acu",
+    "name": "Igarapé-Açu - PA",
+    "territoryId": "1503200",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Publicações oficiais em prefeituradeigarapeacu.pa.gov.br/c/publicacoes/ (WordPress).",
+    "spiders": [
+      {
+        "spiderType": "prefeituraigarapeacu",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraigarapeacu",
+          "baseUrl": "https://prefeituradeigarapeacu.pa.gov.br",
+          "listPath": "c/publicacoes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_prainha",
+    "name": "Prainha - PA",
+    "territoryId": "1505403",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos e Concursos no portalcr2.com.br.",
+    "spiders": [
+      {
+        "spiderType": "portalcr2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2",
+          "leisEAtosUrl": "https://www.portalcr2.com.br/leis-e-atos/leis-prainha",
+          "concursosUrl": "https://www.portalcr2.com.br/concurso-processo-seletivo/concursos-e-pss-prainha",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_vigia",
+    "name": "Vigia - PA",
+    "territoryId": "1508209",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diários oficiais em portal.cr2.co (Leis e Atos Normativos). Publicações em vigia.pa.gov.br/c/publicacoes/.",
+    "spiders": [
+      {
+        "spiderType": "portalcr2co",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2co",
+          "diariosUrl": "https://portal.cr2.co/informacao_institucional/informa%C3%A7%C3%B5es-institucionais-955?entidade=vigia&modulo=Leis%20e%20Atos%20Normativos",
+          "requiresClientRendering": true
+        }
+      },
+      {
+        "spiderType": "prefeituravigia",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituravigia",
+          "baseUrl": "https://vigia.pa.gov.br",
+          "listPath": "c/publicacoes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_almeirim",
+    "name": "Almeirim - PA",
+    "territoryId": "1500503",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos Normativos em portal.cr2.co (entidade almeirim).",
+    "spiders": [
+      {
+        "spiderType": "portalcr2co",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2co",
+          "diariosUrl": "https://portal.cr2.co/informacao_institucional/informa%C3%A7%C3%B5es-institucionais?entidade=almeirim&modulo=Leis%20e%20Atos%20Normativos",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_curralinho",
+    "name": "Curralinho - PA",
+    "territoryId": "1502806",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Publicações oficiais em pmcurralinho.pa.gov.br/c/publicacoes/demais (WordPress).",
+    "spiders": [
+      {
+        "spiderType": "prefeituracurralinho",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracurralinho",
+          "baseUrl": "https://pmcurralinho.pa.gov.br",
+          "listPath": "c/publicacoes/demais"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_oeiras_do_para",
+    "name": "Oeiras do Pará - PA",
+    "territoryId": "1505205",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Publicações em oeirasdopara.pa.gov.br. WordPress com notícias e editais em /novo/category/editais. Pode exigir verificação.",
+    "spiders": [
+      {
+        "spiderType": "prefeituraoeirasdopara",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraoeirasdopara",
+          "baseUrl": "https://oeirasdopara.pa.gov.br",
+          "listPath": "c/publicacoes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_ourilandia_do_norte",
+    "name": "Ourilândia do Norte - PA",
+    "territoryId": "1505437",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Publicações oficiais em ourilandia.pa.gov.br/c/publicacoes/ (WordPress).",
+    "spiders": [
+      {
+        "spiderType": "prefeituraourilandianorte",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraourilandianorte",
+          "baseUrl": "https://ourilandia.pa.gov.br",
+          "listPath": "c/publicacoes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_santana_do_araguaia",
+    "name": "Santana do Araguaia - PA",
+    "territoryId": "1506708",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário Oficial em diariooficial.pmsaraguaia.pa.gov.br com PDFs DOMSA-DDMMYYYY-EN-NNN.pdf.",
+    "spiders": [
+      {
+        "spiderType": "prefeituasantanaaraguaia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituasantanaaraguaia",
+          "baseUrl": "https://diariooficial.pmsaraguaia.pa.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_bagre",
+    "name": "Bagre - PA",
+    "territoryId": "1501105",
+    "stateCode": "PA",
+    "active": false,
+    "notes": "Site bagre.pa.gov.br não possui seção de Diário Oficial ou Publicações Oficiais identificada. needs_review.",
+    "spiders": []
+  },
+  {
+    "id": "pa_gurupa",
+    "name": "Gurupá - PA",
+    "territoryId": "1503101",
+    "stateCode": "PA",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "portalcr2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2",
+          "leisEAtosUrl": "https://www.portalcr2.com.br/leis-e-atos/leis-gurupa",
+          "concursosUrl": "https://www.portalcr2.com.br/concurso-processo-seletivo/concursos-e-pss-gurupa",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_irituia",
+    "name": "Irituia - PA",
+    "territoryId": "1503507",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos e Concursos no portalcr2.com.br (leis-irituia). Requer browser.",
+    "spiders": [
+      {
+        "spiderType": "portalcr2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2",
+          "leisEAtosUrl": "https://www.portalcr2.com.br/leis-e-atos/leis-irituia",
+          "concursosUrl": "https://www.portalcr2.com.br/concurso-processo-seletivo/concursos-e-pss-irituia",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_sao_domingos_do_capim",
+    "name": "São Domingos do Capim - PA",
+    "territoryId": "1507201",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis, Decretos, Portarias e Diárias em saodomingosdocapim.pa.gov.br (leis.php, decretos.php, portaria.php, diariaslista.php).",
+    "spiders": [
+      {
+        "spiderType": "prefeiturasaodomingosdocapim",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasaodomingosdocapim",
+          "baseUrl": "https://saodomingosdocapim.pa.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_ipixuna_do_para",
+    "name": "Ipixuna do Pará - PA",
+    "territoryId": "1503457",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos e Concursos em portal.cr2.co (entidade ipixuna).",
+    "spiders": [
+      {
+        "spiderType": "portalcr2co",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2co",
+          "diariosUrl": "https://portal.cr2.co/informacao_institucional/informa%C3%A7%C3%B5es-institucionais?entidade=ipixuna&modulo=Leis%20e%20Atos%20Normativos",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_limoeiro_do_ajuru",
+    "name": "Limoeiro do Ajuru - PA",
+    "territoryId": "1504000",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos e Concursos em portal.cr2.co (entidade limoeirodoajuru).",
+    "spiders": [
+      {
+        "spiderType": "portalcr2co",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2co",
+          "diariosUrl": "https://portal.cr2.co/informacao_institucional/informa%C3%A7%C3%B5es-institucionais?entidade=limoeirodoajuru&modulo=Leis%20e%20Atos%20Normativos",
+          "concursosUrl": "https://portal.cr2.co/informacao_institucional/informa%C3%A7%C3%B5es-institucionais?entidade=limoeirodoajuru&modulo=Concursos%20e%20Processos%20Seletivos",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_melgaco",
+    "name": "Melgaço - PA",
+    "territoryId": "1504505",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Publicações em melgaco.pa.gov.br com leis.php, decretos.php, portaria.php, diariaslista.php.",
+    "spiders": [
+      {
+        "spiderType": "prefeituramelgaco",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramelgaco",
+          "baseUrl": "https://www.melgaco.pa.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_santo_antonio_do_taua",
+    "name": "Santo Antônio do Tauá - PA",
+    "territoryId": "1507003",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos no portalcr2.com.br (leis-santo-antonio-do-taua). Requer browser.",
+    "spiders": [
+      {
+        "spiderType": "portalcr2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2",
+          "leisEAtosUrl": "https://www.portalcr2.com.br/leis-e-atos/leis-santo-antonio-do-taua",
+          "concursosUrl": "https://www.portalcr2.com.br/concurso-processo-seletivo/concursos-e-pss-santo-antonio-do-taua",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_medicilandia",
+    "name": "Medicilândia - PA",
+    "territoryId": "1504455",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Publicações oficiais em medicilandia.pa.gov.br/c/publicacoes/ (WordPress).",
+    "spiders": [
+      {
+        "spiderType": "prefeituramedicilandia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramedicilandia",
+          "baseUrl": "https://medicilandia.pa.gov.br",
+          "listPath": "c/publicacoes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_concordia_do_para",
+    "name": "Concórdia do Pará - PA",
+    "territoryId": "1502756",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos e Concursos no portalcr2.com.br.",
+    "spiders": [
+      {
+        "spiderType": "portalcr2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2",
+          "leisEAtosUrl": "https://www.portalcr2.com.br/leis-e-atos/leis-concordia-do-para",
+          "concursosUrl": "https://www.portalcr2.com.br/concurso-processo-seletivo/concursos-e-pss-concordia-do-para"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_marapanim",
+    "name": "Marapanim - PA",
+    "territoryId": "1504406",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Diário Oficial Eletrônico em imprensaoficialmunicipal.com.br/marapoama (DiOE).",
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/marapoama"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_goianesia_do_para",
+    "name": "Goianésia do Pará - PA",
+    "territoryId": "1503093",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Publicações oficiais em goianesia.pa.gov.br/c/publicacoes/ (WordPress).",
+    "spiders": [
+      {
+        "spiderType": "prefeituragoianesiadopara",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituragoianesiadopara",
+          "baseUrl": "https://goianesia.pa.gov.br",
+          "listPath": "c/publicacoes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_maracana",
+    "name": "Maracanã - PA",
+    "territoryId": "1504307",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos e Concursos no portalcr2.com.br.",
+    "spiders": [
+      {
+        "spiderType": "portalcr2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2",
+          "leisEAtosUrl": "https://www.portalcr2.com.br/leis-e-atos/leis-maracana",
+          "concursosUrl": "https://www.portalcr2.com.br/concurso-processo-seletivo/concursos-e-pss-maracana"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pa_sao_sebastiao_da_boa_vista",
+    "name": "São Sebastião da Boa Vista - PA",
+    "territoryId": "1507706",
+    "stateCode": "PA",
+    "active": true,
+    "notes": "Leis e Atos e Concursos no portalcr2.com.br.",
+    "spiders": [
+      {
+        "spiderType": "portalcr2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "portalcr2",
+          "leisEAtosUrl": "https://www.portalcr2.com.br/leis-e-atos/leis-sao-sebastiao-da-boa-vista",
+          "concursosUrl": "https://www.portalcr2.com.br/concurso-processo-seletivo/concursos-e-pss-sao-sebastiao-da-boa-vista"
+        }
+      }
+    ]
+  }
+]

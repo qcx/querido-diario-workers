@@ -1,0 +1,148 @@
+{
+  "timestamp": "2026-01-29T18:00:00Z",
+  "stateCode": "AL",
+  "configFile": "src/spiders/v2/configs/al.json",
+  "summary": {
+    "total": 11,
+    "created_new_spider": 1,
+    "used_existing_spider": 10,
+    "skipped_already_exists": 0,
+    "needs_review": 0
+  },
+  "results": [
+    {
+      "cidade": "Santana do Ipanema",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2708006",
+      "entityId": "2168",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    },
+    {
+      "cidade": "Teotônio Vilela",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2709152",
+      "entityId": "3521",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    },
+    {
+      "cidade": "Atalaia",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2700409",
+      "entityId": "2065",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    },
+    {
+      "cidade": "Girau do Ponciano",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2702900",
+      "entityId": "2103",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    },
+    {
+      "cidade": "Pilar",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2706901",
+      "entityId": "2155",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    },
+    {
+      "cidade": "Maragogi",
+      "url": "https://diario.maragogi.al.gov.br",
+      "status": "created_new_spider",
+      "spiderType": "domweb",
+      "territoryId": "2704500",
+      "matchedPattern": "DomWeb (Yii2 framework)",
+      "matchScore": 95,
+      "filesCreated": [
+        "src/types/spider-config.ts (updated)",
+        "src/spiders/base/domweb-spider.ts (created)",
+        "src/spiders/base/index.ts (updated)",
+        "src/spiders/registry.ts (updated)",
+        "src/spiders/registry-manager.ts (updated)",
+        "src/spiders/v2/configs/al.json (updated)"
+      ],
+      "notes": "Maragogi usa plataforma DomWeb própria. Spider genérico criado baseado no padrão Nova Friburgo."
+    },
+    {
+      "cidade": "Campo Alegre",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2701407",
+      "entityId": "2073",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    },
+    {
+      "cidade": "São Sebastião",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2708808",
+      "entityId": "2172",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    },
+    {
+      "cidade": "São Luís do Quitunde",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2708501",
+      "entityId": "2171",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    },
+    {
+      "cidade": "São José da Tapera",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2708402",
+      "entityId": "2170",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    },
+    {
+      "cidade": "Craíbas",
+      "url": "https://www.diariomunicipal.com.br/ama/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2702355",
+      "entityId": "2093",
+      "filesCreated": ["src/spiders/v2/configs/al.json (updated)"]
+    }
+  ],
+  "newSpidersCreated": [
+    {
+      "spiderType": "domweb",
+      "description": "Generic spider for DomWeb platform (Yii2 framework)",
+      "files": [
+        "src/spiders/base/domweb-spider.ts",
+        "src/types/spider-config.ts (DomWebConfig interface)",
+        "src/spiders/base/index.ts",
+        "src/spiders/registry.ts",
+        "src/spiders/registry-manager.ts"
+      ],
+      "citiesUsing": ["Maragogi - AL"],
+      "requiresClientRendering": true,
+      "notes": "DomWeb é uma plataforma Yii2 usada por vários municípios brasileiros. Este spider genérico pode ser reutilizado para outras cidades que usam a mesma plataforma."
+    }
+  ],
+  "platformDistribution": {
+    "sigpub": 10,
+    "domweb": 1
+  },
+  "notes": [
+    "10 das 11 cidades usam a plataforma SIGPub/AMA (diariomunicipal.com.br/ama/)",
+    "Apenas Maragogi usa plataforma própria DomWeb (diario.maragogi.al.gov.br)",
+    "Os entityIds para SIGPub foram estimados com base no padrão existente. O spider SIGPub baixa o diário consolidado de todos os municípios, então o entityId é usado apenas para filtragem/anotação.",
+    "O spider DomWeb requer browser rendering (requiresClientRendering: true) pois o site bloqueia IPs de datacenter."
+  ]
+}

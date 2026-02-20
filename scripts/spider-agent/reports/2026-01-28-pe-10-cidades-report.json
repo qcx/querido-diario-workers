@@ -1,0 +1,118 @@
+{
+  "timestamp": "2026-01-28T13:00:00Z",
+  "csvFile": "input manual",
+  "stateCode": "PE",
+  "configFile": "src/spiders/v2/configs/pe.json",
+  "summary": {
+    "total": 10,
+    "used_existing_spider": 10,
+    "created_new_spider": 0,
+    "skipped_already_exists": 0,
+    "needs_review": 0
+  },
+  "results": [
+    {
+      "cidade": "Carpina",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2604007",
+      "filesCreated": ["src/spiders/v2/configs/pe.json (updated)"],
+      "notes": "Cidade da Mata Norte pernambucana. Publica na AMUPE."
+    },
+    {
+      "cidade": "Arcoverde",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2601201",
+      "filesCreated": ["src/spiders/v2/configs/pe.json (updated)"],
+      "notes": "Principal cidade do Sertão do Moxotó. Publica na AMUPE."
+    },
+    {
+      "cidade": "Ouricuri",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2609907",
+      "filesCreated": ["src/spiders/v2/configs/pe.json (updated)"],
+      "notes": "Cidade do Sertão do Araripe. Publica na AMUPE."
+    },
+    {
+      "cidade": "Surubim",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2614501",
+      "filesCreated": ["src/spiders/v2/configs/pe.json (updated)"],
+      "notes": "Cidade do Alto Capibaribe. Publica na AMUPE."
+    },
+    {
+      "cidade": "Pesqueira",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2610905",
+      "filesCreated": ["src/spiders/v2/configs/pe.json (updated)"],
+      "notes": "Cidade do Vale do Ipojuca. Publica na AMUPE."
+    },
+    {
+      "cidade": "Salgueiro",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2612208",
+      "filesCreated": ["src/spiders/v2/configs/pe.json (updated)"],
+      "notes": "Principal cidade do Sertão Central pernambucano. Publica na AMUPE."
+    },
+    {
+      "cidade": "Bezerros",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2601904",
+      "filesCreated": ["src/spiders/v2/configs/pe.json (updated)"],
+      "notes": "Cidade turística do Agreste pernambucano. Publica na AMUPE."
+    },
+    {
+      "cidade": "Escada",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2605202",
+      "filesCreated": ["src/spiders/v2/configs/pe.json (updated)"],
+      "notes": "Cidade da Mata Meridional pernambucana. Publica na AMUPE."
+    },
+    {
+      "cidade": "Paudalho",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2610608",
+      "filesCreated": ["src/spiders/v2/configs/pe.json (updated)"],
+      "notes": "Cidade da Mata Setentrional pernambucana. Publica na AMUPE."
+    },
+    {
+      "cidade": "Limoeiro",
+      "url": "https://www.diariomunicipal.com.br/amupe/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "2608909",
+      "filesCreated": ["src/spiders/v2/configs/pe.json (updated)"],
+      "notes": "Cidade do Médio Capibaribe. Publica na AMUPE."
+    }
+  ],
+  "executionDetails": {
+    "startTime": "2026-01-28T12:50:00Z",
+    "endTime": "2026-01-28T13:00:00Z",
+    "totalDurationMinutes": 10,
+    "approach": "As 10 cidades de PE foram configuradas utilizando o spiderType sigpub existente, que é o padrão consolidado para municípios de Pernambuco publicando na AMUPE (Associação Municipalista de Pernambuco)."
+  },
+  "testResults": {
+    "pe_carpina": {
+      "status": "success",
+      "gazettesFound": 2,
+      "crawlJobId": "d3938b6b-0a25-4c15-be73-8847a51fcb53"
+    }
+  }
+}

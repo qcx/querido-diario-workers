@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-01-30T17:30:00Z",
+  "stateCode": "AP",
+  "configFile": "src/spiders/v2/configs/ap.json",
+  "summary": {
+    "total": 4,
+    "created_new_spider": 3,
+    "used_existing_spider": 0,
+    "skipped_already_exists": 0,
+    "needs_review": 1
+  },
+  "results": [
+    {
+      "cidade": "Macapá",
+      "url": "https://macapa.ap.gov.br/diarios-oficiais/",
+      "status": "created_new_spider",
+      "spiderType": "prefeituramacapa",
+      "territoryId": "1600303",
+      "matchedPattern": "WordPress table with direct PDF links",
+      "filesCreated": [
+        "src/types/spider-config.ts (updated - added PrefeituramacapaConfig)",
+        "src/spiders/base/prefeituramacapa-spider.ts (created)",
+        "src/spiders/base/index.ts (updated)",
+        "src/spiders/registry.ts (updated)",
+        "src/spiders/registry-manager.ts (updated)",
+        "src/spiders/v2/configs/ap.json (created)"
+      ],
+      "analysis": {
+        "siteStructure": "WordPress-based portal with HTML table listing gazettes",
+        "pdfPattern": "https://macapa.ap.gov.br/portal/wp-content/uploads/{year}/{month}/Diario-Oficial-{number}-{date}.pdf",
+        "dateRange": "2016-2026",
+        "filterOptions": "Month/Year selection, search by number and date range"
+      }
+    },
+    {
+      "cidade": "Santana",
+      "url": "https://santana.ap.gov.br/diario-oficial/",
+      "status": "created_new_spider",
+      "spiderType": "prefeiturasantanaap",
+      "territoryId": "1600600",
+      "matchedPattern": "DataTables with JSON API endpoint",
+      "filesCreated": [
+        "src/types/spider-config.ts (updated - added PrefeiturasantanaapConfig)",
+        "src/spiders/base/prefeiturasantanaap-spider.ts (created)",
+        "src/spiders/base/index.ts (updated)",
+        "src/spiders/registry.ts (updated)",
+        "src/spiders/registry-manager.ts (updated)",
+        "src/spiders/v2/configs/ap.json (updated)"
+      ],
+      "analysis": {
+        "siteStructure": "WordPress with DataTables plugin",
+        "apiEndpoint": "/wp-admin/admin-ajax.php?action=datatables_endpoint",
+        "pdfPattern": "https://santana.ap.gov.br/wp-content/uploads/{year}/{month}/DOM-{number}.pdf",
+        "responseFormat": "JSON with data array containing gazette objects",
+        "dateRange": "Multiple years available"
+      }
+    },
+    {
+      "cidade": "Laranjal do Jari",
+      "url": "https://laranjaldojari.ap.gov.br/diario-oficial/",
+      "status": "created_new_spider",
+      "spiderType": "prefeituralaranjaldojari",
+      "territoryId": "1600279",
+      "matchedPattern": "Calendar-based WordPress listing",
+      "filesCreated": [
+        "src/types/spider-config.ts (updated - added PrefeituralaranjaldojariConfig)",
+        "src/spiders/base/prefeituralaranjaldojari-spider.ts (created)",
+        "src/spiders/base/index.ts (updated)",
+        "src/spiders/registry.ts (updated)",
+        "src/spiders/registry-manager.ts (updated)",
+        "src/spiders/v2/configs/ap.json (updated)"
+      ],
+      "analysis": {
+        "siteStructure": "WordPress with custom calendar view",
+        "pdfPattern": "/diario-oficial/wp-content/uploads/{year}/{month}/No{number}-{date}-DIARIO-OFICIAL.pdf",
+        "navigation": "Year/Month filter via query params (?ano=YYYY&mes=MM)",
+        "dateRange": "2024-2026 confirmed"
+      }
+    },
+    {
+      "cidade": "Oiapoque",
+      "url": "http://ap.portaldatransparencia.com.br/prefeitura/oiapoque/?pagina=dop",
+      "status": "needs_review",
+      "territoryId": "1600501",
+      "reason": "Portal de transparência desatualizado - última edição de 2018",
+      "attemptsLog": [
+        "Tentativa 1: Buscar site oficial da prefeitura - oiapoque.ap.gov.br não encontrado",
+        "Tentativa 2: Verificar portal de transparência - http://ap.portaldatransparencia.com.br/prefeitura/oiapoque/ - última edição Janeiro/2018",
+        "Tentativa 3: Verificar Câmara Municipal - https://www.oiapoque.ap.leg.br/transparencia/diario-oficial-cvmo - apenas diário legislativo com poucas edições"
+      ],
+      "analysis": {
+        "impossibleReason": "Não há diário oficial municipal atualizado disponível publicamente",
+        "siteStatus": "Portal de transparência desatualizado (2018)",
+        "recommendation": "Contatar prefeitura para verificar se há novo portal de diário oficial ou se publicam em outro local"
+      }
+    }
+  ]
+}

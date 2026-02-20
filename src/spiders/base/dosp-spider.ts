@@ -74,6 +74,8 @@ export class DospSpider extends BaseSpider {
       const apiUrl = `${baseApiUrl}?Date=${dateStr}&JournalId=${journalId}&SectionId=${sectionId}`;
       
       logger.info(`Fetching DOE SP API data for ${dateStr}: ${apiUrl}`);
+
+      console.log('🔴 Fetching DOE SP API data for', apiUrl);
       
       try {
         const apiResponse = await this.fetch(apiUrl);
@@ -206,9 +208,12 @@ export class DospSpider extends BaseSpider {
       const baseUrl = 'https://www.doe.sp.gov.br/';
       const publicationUrl = `${baseUrl}${publication.slug}`;
 
+      console.log('🔺 Publication URL:', publicationUrl);
+
       return await this.createGazette(date, publicationUrl, {
         power: 'executive',
         sourceText: `Municipality: ${municipalityName} | Title: ${publication.title} | ID: ${publication.id}`,
+        requiresClientRendering: this.dospConfig.requiresClientRendering,
       });
 
     } catch (error) {

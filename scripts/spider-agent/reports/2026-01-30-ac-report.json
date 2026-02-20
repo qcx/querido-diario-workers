@@ -1,0 +1,112 @@
+{
+  "timestamp": "2026-01-30T17:15:00Z",
+  "stateCode": "AC",
+  "configFile": "src/spiders/v2/configs/ac.json",
+  "summary": {
+    "total": 6,
+    "used_existing_spider": 6,
+    "created_new_spider": 0,
+    "skipped_already_exists": 0,
+    "needs_review": 0
+  },
+  "notes": "All Acre municipalities use the centralized state gazette at diario.ac.gov.br. The existing 'acre' spiderType handles all cities by searching the state gazette by city name.",
+  "results": [
+    {
+      "cidade": "Rio Branco",
+      "url": "https://diario.ac.gov.br/",
+      "status": "used_existing_spider",
+      "spiderType": "acre",
+      "territoryId": "1200401",
+      "filesCreated": ["src/spiders/v2/configs/ac.json (created)"],
+      "analysis": {
+        "siteType": "state_gazette",
+        "platform": "diario.ac.gov.br",
+        "notes": "Capital do Acre. Publica no Diário Oficial do Estado. Site próprio (riobranco.ac.gov.br) redireciona para o diário estadual."
+      }
+    },
+    {
+      "cidade": "Cruzeiro do Sul",
+      "url": "https://diario.ac.gov.br/",
+      "status": "used_existing_spider",
+      "spiderType": "acre",
+      "territoryId": "1200203",
+      "filesCreated": ["src/spiders/v2/configs/ac.json (updated)"],
+      "analysis": {
+        "siteType": "state_gazette",
+        "platform": "diario.ac.gov.br",
+        "notes": "Segunda maior cidade do Acre. Publica no Diário Oficial do Estado. Site próprio (cruzeirodosul.ac.gov.br) não possui diário próprio."
+      }
+    },
+    {
+      "cidade": "Tarauacá",
+      "url": "https://diario.ac.gov.br/",
+      "status": "used_existing_spider",
+      "spiderType": "acre",
+      "territoryId": "1200609",
+      "filesCreated": ["src/spiders/v2/configs/ac.json (updated)"],
+      "analysis": {
+        "siteType": "state_gazette",
+        "platform": "diario.ac.gov.br",
+        "notes": "Publica no Diário Oficial do Estado. Site próprio (tarauaca.ac.gov.br) possui portal de transparência mas não diário próprio."
+      }
+    },
+    {
+      "cidade": "Sena Madureira",
+      "url": "https://diario.ac.gov.br/",
+      "status": "used_existing_spider",
+      "spiderType": "acre",
+      "territoryId": "1200500",
+      "filesCreated": ["src/spiders/v2/configs/ac.json (updated)"],
+      "analysis": {
+        "siteType": "state_gazette",
+        "platform": "diario.ac.gov.br",
+        "notes": "Publica no Diário Oficial do Estado. Site próprio (senamadureira.ac.gov.br) possui seção de publicações mas redireciona para o diário estadual."
+      }
+    },
+    {
+      "cidade": "Feijó",
+      "url": "https://diario.ac.gov.br/",
+      "status": "used_existing_spider",
+      "spiderType": "acre",
+      "territoryId": "1200302",
+      "filesCreated": ["src/spiders/v2/configs/ac.json (updated)"],
+      "analysis": {
+        "siteType": "state_gazette",
+        "platform": "diario.ac.gov.br",
+        "notes": "Conhecida como 'Terra do Açaí'. Publica no Diário Oficial do Estado. Site próprio (feijo.ac.gov.br) possui portal de transparência."
+      }
+    },
+    {
+      "cidade": "Brasiléia",
+      "url": "https://diario.ac.gov.br/",
+      "status": "used_existing_spider",
+      "spiderType": "acre",
+      "territoryId": "1200104",
+      "filesCreated": ["src/spiders/v2/configs/ac.json (updated)"],
+      "analysis": {
+        "siteType": "state_gazette",
+        "platform": "diario.ac.gov.br",
+        "notes": "Cidade na fronteira com a Bolívia. Publica no Diário Oficial do Estado."
+      }
+    }
+  ],
+  "spiderTypeUsed": {
+    "acre": {
+      "description": "Spider para o Diário Oficial do Estado do Acre (DOE/AC)",
+      "baseUrl": "https://diario.ac.gov.br/",
+      "searchUrl": "https://diario.ac.gov.br/busca.php",
+      "characteristics": [
+        "Sistema centralizado estadual",
+        "Todas as 22 cidades do Acre publicam no mesmo diário",
+        "Busca por palavra-chave permite filtrar por município",
+        "Documentos em formato PDF"
+      ],
+      "files": [
+        "src/spiders/base/acre-spider.ts",
+        "src/types/spider-config.ts (AcreConfig interface)",
+        "src/spiders/registry.ts (case 'acre')",
+        "src/spiders/registry-manager.ts (case 'acre')"
+      ]
+    }
+  }
+}

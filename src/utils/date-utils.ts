@@ -1,4 +1,4 @@
-import { format, parse, eachMonthOfInterval, isWithinInterval, parseISO } from 'date-fns';
+import { format, parse, eachMonthOfInterval, eachDayOfInterval, isWithinInterval, parseISO } from 'date-fns';
 
 /**
  * Generates a sequence of month/year strings between two dates
@@ -81,11 +81,16 @@ export function isDateInRange(date: Date, startDate: Date, endDate: Date): boole
 
 /**
  * Converts a date to ISO string (YYYY-MM-DD)
+ * Uses UTC to avoid timezone issues when dates are created with Date.UTC()
  * @param date Date object
  * @returns ISO date string
  */
 export function toISODate(date: Date): string {
-  return format(date, 'yyyy-MM-dd');
+  // Use UTC methods to get consistent results regardless of local timezone
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(date.getUTCDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 }
 
 /**
@@ -133,4 +138,14 @@ export function formatBrazilianDate(date: Date): string {
  */
 export function getMonthlySequence(startDate: Date, endDate: Date): Date[] {
   return eachMonthOfInterval({ start: startDate, end: endDate });
+}
+
+/**
+ * Gets the sequence of days between two dates
+ * @param startDate Start date
+ * @param endDate End date
+ * @returns Array of Date objects (each day in the range)
+ */
+export function getDailySequence(startDate: Date, endDate: Date): Date[] {
+  return eachDayOfInterval({ start: startDate, end: endDate });
 }

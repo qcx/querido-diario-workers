@@ -1,0 +1,451 @@
+[
+  {
+    "id": "rn_natal",
+    "name": "Natal - RN",
+    "territoryId": "2408102",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituranatal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituranatal",
+          "baseUrl": "https://www2.natal.rn.gov.br/dom/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_mossoro",
+    "name": "Mossoró - RN",
+    "territoryId": "2408003",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituramossoro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramossoro",
+          "baseUrl": "https://dom.mossoro.rn.gov.br/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_parnamirim",
+    "name": "Parnamirim - RN",
+    "territoryId": "2403251",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraparnamirim",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraparnamirim",
+          "baseUrl": "https://diariooficial.parnamirim.rn.gov.br/",
+          "apiUrl": "https://sgidom.parnamirim.rn.gov.br/rest/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_sao_goncalo_do_amarante",
+    "name": "São Gonçalo do Amarante - RN",
+    "territoryId": "2412005",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasaogoncalorn",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasaogoncalorn",
+          "baseUrl": "https://www.saogoncalo.rn.gov.br/diariooficial",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_macaiba",
+    "name": "Macaíba - RN",
+    "territoryId": "2407104",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituramacaiba",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramacaiba",
+          "baseUrl": "https://macaiba.rn.gov.br/servicos/diario-oficial/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_ceara_mirim",
+    "name": "Ceará-Mirim - RN",
+    "territoryId": "2402600",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/femurn/",
+          "entityId": "2402600",
+          "cityName": "Ceará-Mirim"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_extremoz",
+    "name": "Extremoz - RN",
+    "territoryId": "2403608",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/femurn/",
+          "entityId": "2403608",
+          "cityName": "Extremoz"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_caico",
+    "name": "Caicó - RN",
+    "territoryId": "2402006",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/femurn/",
+          "entityId": "2402006",
+          "cityName": "Caicó"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_assu",
+    "name": "Açu - RN",
+    "territoryId": "2400208",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraassu",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraassu",
+          "baseUrl": "https://assu.rn.gov.br/diario_oficial/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_sao_jose_de_mipibu",
+    "name": "São José de Mipibu - RN",
+    "territoryId": "2412203",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/femurn/",
+          "entityId": "2412203",
+          "cityName": "São José de Mipibu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_currais_novos",
+    "name": "Currais Novos - RN",
+    "territoryId": "2403103",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/femurn/",
+          "entityId": "2403103",
+          "cityName": "Currais Novos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_santa_cruz",
+    "name": "Santa Cruz - RN",
+    "territoryId": "2411205",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://santacruz.rn.gov.br/diariooficial.php",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_apodi",
+    "name": "Apodi - RN",
+    "territoryId": "2401008",
+    "stateCode": "RN",
+    "active": false,
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://apodi.rn.gov.br/diariooficial.php",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_nova_cruz",
+    "name": "Nova Cruz - RN",
+    "territoryId": "2408300",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://novacruz.rn.gov.br/diariooficial.php",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_joao_camara",
+    "name": "João Câmara - RN",
+    "territoryId": "2405801",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sogotecnologia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sogotecnologia",
+          "baseUrl": "https://joaocamara.rn.gov.br/diario-oficial/",
+          "startYear": 2018,
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_touros",
+    "name": "Touros - RN",
+    "territoryId": "2414407",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/femurn/",
+          "entityId": "2414407",
+          "cityName": "Touros"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_nisia_floresta",
+    "name": "Nísia Floresta - RN",
+    "territoryId": "2408201",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/femurn/",
+          "entityId": "2408201",
+          "cityName": "Nísia Floresta"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_pau_dos_ferros",
+    "name": "Pau dos Ferros - RN",
+    "territoryId": "2409407",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://paudosferros.rn.gov.br/diariooficial.php",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_canguaretama",
+    "name": "Canguaretama - RN",
+    "territoryId": "2402204",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ptio",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ptio",
+          "baseUrl": "http://rn.portaldatransparencia.com.br/prefeitura/canguaretama/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_macau",
+    "name": "Macau - RN",
+    "territoryId": "2407203",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituramacaurn",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramacaurn",
+          "baseUrl": "https://macau.rn.gov.br/diario/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_barauna",
+    "name": "Baraúna - RN",
+    "territoryId": "2401453",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/femurn/",
+          "entityId": "2401453",
+          "cityName": "Baraúna"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rn_goianinha",
+    "name": "Goianinha - RN",
+    "territoryId": "2404200",
+    "stateCode": "RN",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/femurn/",
+          "entityId": "2404200",
+          "cityName": "Goianinha"
+        }
+      }
+    ]
+  }
+]

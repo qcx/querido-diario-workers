@@ -9,7 +9,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/acajutiba"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_alagoinhas",
@@ -21,7 +22,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/alagoinhas"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_alcobaca",
@@ -33,7 +35,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/alcobaca"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_angical",
@@ -45,7 +48,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/angical"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_banzae",
@@ -57,7 +61,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/banzae"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_barrocas_2017",
@@ -69,7 +74,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/barrocas"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_brotas_de_macaubas",
@@ -81,7 +87,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/brotasdemacaubas"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_cachoeira_2017",
@@ -93,7 +100,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/cachoeira"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_cacule_2014",
@@ -105,7 +113,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/cacule"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_caetite",
@@ -117,7 +126,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/caetite"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_camamu_2017",
@@ -129,7 +139,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/camamu"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_campo_alegre_de_lourdes",
@@ -141,7 +152,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/campoalegredelourdes"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_campo_formoso",
@@ -153,7 +165,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/campoformoso"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_canudos",
@@ -165,7 +178,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/canudos"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_catolandia_2015",
@@ -177,7 +191,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/catolandia"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_catu_2014",
@@ -189,7 +204,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/catu"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_cicero_dantas",
@@ -201,7 +217,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/cicerodantas"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_cipo",
@@ -213,7 +230,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/cipo"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_correntina_2025",
@@ -225,7 +243,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/correntina"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_cotegipe",
@@ -237,7 +256,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/cotegipe"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_cristopolis",
@@ -249,7 +269,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/cristopolis"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_cruz_das_almas",
@@ -261,7 +282,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/cruzdasalmas"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_esplanada",
@@ -273,7 +295,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/esplanada"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_formosa_do_rio_preto",
@@ -285,7 +308,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/formosadoriopreto"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_inhambupe",
@@ -297,7 +321,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/inhambupe"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_ipiau",
@@ -309,7 +334,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/ipiau"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_irara",
@@ -321,7 +347,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/irara"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_itaberaba",
@@ -333,7 +360,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/itaberaba"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_itamaraju",
@@ -345,7 +373,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/itamaraju"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_itapetinga",
@@ -357,7 +386,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/itapetinga"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_itapicuru",
@@ -369,7 +399,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/itapicuru"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_ituacu",
@@ -381,7 +412,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/ituacu"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_jaguaquara",
@@ -393,7 +425,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/jaguaquara"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_juazeiro",
@@ -405,7 +438,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/juazeiro"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_laje",
@@ -417,7 +451,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/laje"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_lajedao",
@@ -429,7 +464,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/lajedao"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_macajuba",
@@ -441,7 +477,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/macajuba"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_mascote",
@@ -453,7 +490,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/mascote"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_monte_santo",
@@ -465,7 +503,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/montesanto"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_morro_do_chapeu",
@@ -477,7 +516,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/morrodochapeu"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_mucuri",
@@ -489,7 +529,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/mucuri"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_prado",
@@ -501,7 +542,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/prado"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_santa_cruz_cabralia",
@@ -513,7 +555,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/santacruzcabralia"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_santa_luzia_2021",
@@ -525,7 +568,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/santaluzia"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_santa_rita_de_cassia",
@@ -537,7 +581,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/santaritadecassia"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_santo_estevao",
@@ -549,7 +594,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/santoestevao"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_satiro_dias",
@@ -561,7 +607,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/satirodias"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_senhor_do_bonfim",
@@ -573,7 +620,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/senhordobonfim"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_sento_se",
@@ -585,7 +633,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/sentose"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_tapiramuta",
@@ -597,7 +646,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/tapiramuta"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_teolandia",
@@ -609,7 +659,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/teolandia"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ba_tucano",
@@ -621,7 +672,8 @@
       "type": "doem",
       "stateCityUrlPart": "ba/tucano"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "pe_petrolina",
@@ -633,7 +685,8 @@
       "type": "doem",
       "stateCityUrlPart": "pe/petrolina"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "pr_ipiranga",
@@ -645,7 +698,8 @@
       "type": "doem",
       "stateCityUrlPart": "pr/ipiranga"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "pr_tamboara",
@@ -657,7 +711,8 @@
       "type": "doem",
       "stateCityUrlPart": "pr/tamboara"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "se_nossa_senhora_do_socorro",
@@ -669,6 +724,7 @@
       "type": "doem",
       "stateCityUrlPart": "se/nossasenhoradosocorro"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   }
 ]

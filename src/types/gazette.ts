@@ -30,6 +30,9 @@ export interface Gazette {
   
   /** Source text or additional metadata */
   sourceText?: string;
+  
+  /** Whether this gazette requires client-side rendering (browser) for extraction */
+  requiresClientRendering?: boolean;
 }
 
 export type GazettePower = 'executive' | 'legislative' | 'executive_legislative';

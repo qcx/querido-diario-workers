@@ -9,7 +9,8 @@
       "type": "siganet",
       "baseUrl": "https://transparencia.afonsocunha.ma.gov.br/acessoInformacao/diario/diario"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ma_axixa",
@@ -21,7 +22,8 @@
       "type": "siganet",
       "baseUrl": "https://transparencia.axixa.ma.gov.br/acessoInformacao/diario/diario"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ma_bacuri",
@@ -33,7 +35,8 @@
       "type": "siganet",
       "baseUrl": "https://bacuri.ma.gov.br/diario/diario"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ma_boa_vista_do_gurupi",
@@ -45,7 +48,8 @@
       "type": "siganet",
       "baseUrl": "https://transparencia.boavistadogurupi.ma.gov.br/acessoInformacao/diario/diario"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ma_coroata",
@@ -57,7 +61,8 @@
       "type": "siganet",
       "baseUrl": "https://coroata.ma.gov.br/diario/diario"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ma_duque_bacelar",
@@ -69,7 +74,8 @@
       "type": "siganet",
       "baseUrl": "https://transparencia.duquebacelar.ma.gov.br/acessoInformacao/diario/diario"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ma_nina_rodrigues",
@@ -81,7 +87,8 @@
       "type": "siganet",
       "baseUrl": "https://transparencia.ninarodrigues.ma.gov.br/acessoInformacao/diario/diario"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ma_sao_vicente_ferrer",
@@ -93,7 +100,8 @@
       "type": "siganet",
       "baseUrl": "https://saovicenteferrer.ma.gov.br/diario/diario"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "ma_viana",
@@ -105,11 +113,13 @@
       "type": "siganet",
       "baseUrl": "https://transparencia.viana.ma.gov.br/acessoInformacao/diario/diario"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": true,
+    "notes": "Também disponível em administracaopublica.com.br com token 40c86c40b280ad723c77e753387d5e9ce9a15599. Lei Municipal nº 446 de 20/04/2017. ISSN 2764-7293."
   },
   {
     "id": "ma_ze_doca",
-    "name": "Ze Doca - MA",
+    "name": "Zé Doca - MA",
     "territoryId": "2114007",
     "startDate": "2018-06-04",
     "spiderType": "siganet",
@@ -117,6 +127,8 @@
       "type": "siganet",
       "baseUrl": "https://transparencia.zedoca.ma.gov.br/acessoInformacao/diario/diario"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": true,
+    "notes": "Portal Siganet. Diário oficial disponível em zedoca.ma.gov.br/diario/diario/ e também em transparencia.zedoca.ma.gov.br."
   }
 ]

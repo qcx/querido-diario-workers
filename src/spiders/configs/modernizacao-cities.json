@@ -10,7 +10,8 @@
       "domain": "portal.transparencia.itaguai.rj.gov.br",
       "power": "executive_legislative"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "rj_mesquita",
@@ -24,7 +25,8 @@
       "verSubpath": "ver20240713",
       "power": "executive"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "rj_miguel_pereira",
@@ -36,7 +38,8 @@
       "type": "modernizacao",
       "domain": "transparencia.miguelpereira.rj.gov.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "rj_quatis",
@@ -48,7 +51,8 @@
       "type": "modernizacao",
       "domain": "transparencia.quatis.rj.gov.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "rj_queimados",
@@ -60,7 +64,8 @@
       "type": "modernizacao",
       "domain": "transparencia.queimados.rj.gov.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "rj_sao_joao_de_meriti",
@@ -72,7 +77,8 @@
       "type": "modernizacao",
       "domain": "transparencia.meriti.rj.gov.br"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   },
   {
     "id": "rj_sao_pedro_da_aldeia",
@@ -85,6 +91,7 @@
       "domain": "transparencia.pmspa.rj.gov.br",
       "verSubpath": "ver20240713"
     },
-    "gazetteScope": "city"
+    "gazetteScope": "city",
+    "active": false
   }
 ]

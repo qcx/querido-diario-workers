@@ -1,0 +1,1573 @@
+[
+  {
+    "id": "ce_fortaleza",
+    "name": "Fortaleza - CE",
+    "territoryId": "2304400",
+    "stateCode": "CE",
+    "active": false,
+    "notes": "needs_review - Site usa CAPTCHA que impede extração automatizada. URL: https://diariooficial.fortaleza.ce.gov.br/",
+    "spiders": []
+  },
+  {
+    "id": "ce_caucaia",
+    "name": "Caucaia - CE",
+    "territoryId": "2303709",
+    "stateCode": "CE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.caucaia.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_juazeiro_do_norte",
+    "name": "Juazeiro do Norte - CE",
+    "territoryId": "2307304",
+    "stateCode": "CE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturajuazeirodonorte",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturajuazeirodonorte",
+          "baseUrl": "https://www.juazeirodonorte.ce.gov.br/diariolista.php",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_maracanau",
+    "name": "Maracanaú - CE",
+    "territoryId": "2307650",
+    "stateCode": "CE",
+    "active": false,
+    "notes": "needs_review - Site usa WordPress e não foi possível identificar página de diário oficial. Verificar manualmente em https://www.maracanau.ce.gov.br",
+    "spiders": []
+  },
+  {
+    "id": "ce_sobral",
+    "name": "Sobral - CE",
+    "territoryId": "2312908",
+    "stateCode": "CE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasobral",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasobral",
+          "baseUrl": "https://www.sobral.ce.gov.br/diario/pesquisa",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_itapipoca",
+    "name": "Itapipoca - CE",
+    "territoryId": "2306405",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Site não possui diário oficial consolidado. Extrai decretos publicados em /decretos.php",
+    "spiders": [
+      {
+        "spiderType": "prefeituraitapipoca",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraitapipoca",
+          "baseUrl": "https://www.itapipoca.ce.gov.br/decretos.php",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_crato",
+    "name": "Crato - CE",
+    "territoryId": "2304202",
+    "stateCode": "CE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracrato",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracrato",
+          "baseUrl": "https://mail.crato.ce.gov.br/diariooficial/?p=",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_maranguape",
+    "name": "Maranguape - CE",
+    "territoryId": "2307700",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. Busca em todos os slugs (leis, decretos, publicacoes, etc).",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.maranguape.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_iguatu",
+    "name": "Iguatu - CE",
+    "territoryId": "2305506",
+    "stateCode": "CE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "aprece",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "aprece",
+          "power": "executive_legislative",
+          "entityName": "Prefeitura Municipal de Iguatu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_quixada",
+    "name": "Quixadá - CE",
+    "territoryId": "2311306",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. Busca em todos os slugs (leis, decretos, publicacoes, etc).",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.quixada.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_quixeramobim",
+    "name": "Quixeramobim - CE",
+    "territoryId": "2311405",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. Busca em todos os slugs (leis, decretos, publicacoes, etc).",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.quixeramobim.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_pacatuba",
+    "name": "Pacatuba - CE",
+    "territoryId": "2309706",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. Busca em todos os slugs (leis, decretos, publicacoes, etc).",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.pacatuba.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_tiangua",
+    "name": "Tianguá - CE",
+    "territoryId": "2313401",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. Busca em todos os slugs.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.tiangua.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_aquiraz",
+    "name": "Aquiraz - CE",
+    "territoryId": "2301000",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. Busca em todos os slugs (leis, decretos, publicacoes, etc).",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.aquiraz.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_crateus",
+    "name": "Crateús - CE",
+    "territoryId": "2304103",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. Busca em todos os slugs.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.crateus.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_aracati",
+    "name": "Aracati - CE",
+    "territoryId": "2301109",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. Busca em todos os slugs (leis, decretos, publicacoes, etc).",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.aracati.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_barbalha",
+    "name": "Barbalha - CE",
+    "territoryId": "2301901",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. Busca em todos os slugs (leis, decretos, publicacoes, etc).",
+    "spiders": [
+      {
+        "spiderType": "aprece",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "aprece",
+          "power": "executive_legislative",
+          "entityName": "Prefeitura Municipal de Iguatu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_horizonte",
+    "name": "Horizonte - CE",
+    "territoryId": "2305233",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. Busca em todos os slugs.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.horizonte.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_caninde",
+    "name": "Canindé - CE",
+    "territoryId": "2302800",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. Busca em todos os slugs.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.caninde.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_eusebio",
+    "name": "Eusébio - CE",
+    "territoryId": "2304285",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. Busca em todos os slugs (leis, decretos, publicacoes, etc).",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.eusebio.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_russas",
+    "name": "Russas - CE",
+    "territoryId": "2311801",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Usa sistema APRECE - Diário Oficial Municipal do Ceará",
+    "spiders": [
+      {
+        "spiderType": "aprece",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "aprece",
+          "power": "executive_legislative",
+          "entityName": "Prefeitura Municipal de Russas"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_cascavel",
+    "name": "Cascavel - CE",
+    "territoryId": "2303501",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema ASSESI. Usa publicacoes.php como endpoint principal.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.cascavel.ce.gov.br/publicacoes.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_pacajus",
+    "name": "Pacajus - CE",
+    "territoryId": "2309607",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. Busca em todos os slugs.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.pacajus.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_acarau",
+    "name": "Acaraú - CE",
+    "territoryId": "2300200",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema ASSESI. Usa publicacoes.php como endpoint principal.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.acarau.ce.gov.br/publicacoes.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_itaitinga",
+    "name": "Itaitinga - CE",
+    "territoryId": "2306256",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI com diário oficial em /diariooficial.php",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.itaitinga.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_ico",
+    "name": "Icó - CE",
+    "territoryId": "2305407",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema ASSESI. Usa publicacoes.php como endpoint principal.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.ico.ce.gov.br/publicacoes.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_camocim",
+    "name": "Camocim - CE",
+    "territoryId": "2302602",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Site WordPress com custom post type 'publicacoes'. Usa API REST para listar publicações e buscar PDFs anexados.",
+    "spiders": [
+      {
+        "spiderType": "wordpress_publicacoes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "wordpress_publicacoes",
+          "baseUrl": "https://camocim.ce.gov.br",
+          "postType": "publicacoes",
+          "perPage": 100
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_morada_nova",
+    "name": "Morada Nova - CE",
+    "territoryId": "2308708",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Usa sistema APRECE - Diário Oficial Municipal do Ceará",
+    "spiders": [
+      {
+        "spiderType": "aprece",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "aprece",
+          "power": "executive_legislative",
+          "entityName": "Prefeitura Municipal de Morada Nova"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_taua",
+    "name": "Tauá - CE",
+    "territoryId": "2313302",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. Busca em todos os slugs.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.taua.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_vicosa_do_ceara",
+    "name": "Viçosa do Ceará - CE",
+    "territoryId": "2314102",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema de Caucaia. URL sem 'do Ceará': vicosa.ce.gov.br",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://vicosa.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_limoeiro_do_norte",
+    "name": "Limoeiro do Norte - CE",
+    "territoryId": "2307601",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema ASSESI. Usa diariooficial.php como endpoint principal.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.limoeirodonorte.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_trairi",
+    "name": "Trairi - CE",
+    "territoryId": "2313500",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema ASSESI. Usa diariooficial.php como endpoint principal.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.trairi.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_sao_goncalo_do_amarante",
+    "name": "São Gonçalo do Amarante - CE",
+    "territoryId": "2312403",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema ASSESI. Usa publicacoes.php como endpoint principal.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.saogoncalodoamarante.ce.gov.br/publicacoes.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_granja",
+    "name": "Granja - CE",
+    "territoryId": "2304707",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema ASSESI. Usa publicacoes.php como endpoint principal.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.granja.ce.gov.br/publicacoes.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_beberibe",
+    "name": "Beberibe - CE",
+    "territoryId": "2302206",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema ASSESI. Usa publicacoes.php como endpoint principal.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.beberibe.ce.gov.br/publicacoes.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_brejo_santo",
+    "name": "Brejo Santo - CE",
+    "territoryId": "2302503",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Usa sistema APRECE - Diário Oficial Municipal do Ceará",
+    "spiders": [
+      {
+        "spiderType": "aprece",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "aprece",
+          "power": "executive_legislative",
+          "entityName": "Prefeitura Municipal de Brejo Santo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_boa_viagem",
+    "name": "Boa Viagem - CE",
+    "territoryId": "2302404",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Usa sistema APRECE - Diário Oficial Municipal do Ceará",
+    "spiders": [
+      {
+        "spiderType": "aprece",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "aprece",
+          "power": "executive_legislative",
+          "entityName": "Prefeitura Municipal de Boa Viagem"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_sao_benedito",
+    "name": "São Benedito - CE",
+    "territoryId": "2312304",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Usa sistema ASSESSI - Diário Oficial Municipal do Ceará",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.saobenedito.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_itapaje",
+    "name": "Itapajé - CE",
+    "territoryId": "2306306",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Mesmo sistema ASSESI. Usa publicacoes.php como endpoint principal.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.itapaje.ce.gov.br/publicacoes.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_mauriti",
+    "name": "Mauriti - CE",
+    "territoryId": "2308104",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Usa sistema APRECE - Diário Oficial Municipal do Ceará",
+    "spiders": [
+      {
+        "spiderType": "aprece",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "aprece",
+          "power": "executive_legislative",
+          "entityName": "Prefeitura Municipal de Mauriti"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_acopiara",
+    "name": "Acopiara - CE",
+    "territoryId": "2300309",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.acopiara.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_itarema",
+    "name": "Itarema - CE",
+    "territoryId": "2306553",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.itarema.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_amontada",
+    "name": "Amontada - CE",
+    "territoryId": "2300754",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.amontada.ce.gov.br/publicacoes.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_guaraciaba_do_norte",
+    "name": "Guaraciaba do Norte - CE",
+    "territoryId": "2305001",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.guaraciabadonorte.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_ipu",
+    "name": "Ipu - CE",
+    "territoryId": "2305803",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.ipu.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_pedra_branca",
+    "name": "Pedra Branca - CE",
+    "territoryId": "2310506",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.pedrabranca.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_santa_quiteria",
+    "name": "Santa Quitéria - CE",
+    "territoryId": "2312205",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.santaquiteria.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_varzea_alegre",
+    "name": "Várzea Alegre - CE",
+    "territoryId": "2314003",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.varzeaalegre.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_paracuru",
+    "name": "Paracuru - CE",
+    "territoryId": "2310209",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.paracuru.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_pentecoste",
+    "name": "Pentecoste - CE",
+    "territoryId": "2310704",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.pentecoste.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_mombaca",
+    "name": "Mombaça - CE",
+    "territoryId": "2308500",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.mombaca.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_massape",
+    "name": "Massapê - CE",
+    "territoryId": "2308005",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.massape.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_missao_velha",
+    "name": "Missão Velha - CE",
+    "territoryId": "2308401",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Usa sistema APRECE - Diário Oficial Municipal do Ceará",
+    "spiders": [
+      {
+        "spiderType": "aprece",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "aprece",
+          "power": "executive_legislative",
+          "entityName": "Prefeitura Municipal de Missão Velha"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_ipueiras",
+    "name": "Ipueiras - CE",
+    "territoryId": "2305902",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.ipueiras.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_baturite",
+    "name": "Baturité - CE",
+    "territoryId": "2302107",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.baturite.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_jaguaribe",
+    "name": "Jaguaribe - CE",
+    "territoryId": "2306900",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.jaguaribe.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_bela_cruz",
+    "name": "Bela Cruz - CE",
+    "territoryId": "2302305",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.belacruz.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_ubajara",
+    "name": "Ubajara - CE",
+    "territoryId": "2313609",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.ubajara.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_paraipaba",
+    "name": "Paraipaba - CE",
+    "territoryId": "2310258",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.paraipaba.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_jaguaruana",
+    "name": "Jaguaruana - CE",
+    "territoryId": "2307007",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.jaguaruana.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_parambu",
+    "name": "Parambu - CE",
+    "territoryId": "2310308",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Site Joomla com componente EDocman para publicação de diários oficiais.",
+    "spiders": [
+      {
+        "spiderType": "edocman",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "edocman",
+          "baseUrl": "https://parambu.ce.gov.br/transparencia-2/transparencia/diario-oficial",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_lavras_da_mangabeira",
+    "name": "Lavras da Mangabeira - CE",
+    "territoryId": "2307502",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.lavrasdamangabeira.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_nova_russas",
+    "name": "Nova Russas - CE",
+    "territoryId": "2309300",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.novarussas.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_tabuleiro_do_norte",
+    "name": "Tabuleiro do Norte - CE",
+    "territoryId": "2313104",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.tabuleirodonorte.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_santana_do_acarau",
+    "name": "Santana do Acaraú - CE",
+    "territoryId": "2312007",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.santanadoacarau.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_cruz",
+    "name": "Cruz - CE",
+    "territoryId": "2304251",
+    "stateCode": "CE",
+    "active": false,
+    "notes": "Site customizado sem ASSESI. needs_review.",
+    "spiders": []
+  },
+  {
+    "id": "ce_novo_oriente",
+    "name": "Novo Oriente - CE",
+    "territoryId": "2309409",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.novooriente.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_jardim",
+    "name": "Jardim - CE",
+    "territoryId": "2307106",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.jardim.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_redencao",
+    "name": "Redenção - CE",
+    "territoryId": "2311603",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.redencao.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_caririacu",
+    "name": "Caririaçu - CE",
+    "territoryId": "2303204",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.caririacu.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_milagres",
+    "name": "Milagres - CE",
+    "territoryId": "2308302",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.milagres.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_marco",
+    "name": "Marco - CE",
+    "territoryId": "2307809",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.marco.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_jijoca_de_jericoacoara",
+    "name": "Jijoca de Jericoacoara - CE",
+    "territoryId": "2307254",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.jijocadejericoacoara.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_aracoiaba",
+    "name": "Aracoiaba - CE",
+    "territoryId": "2301208",
+    "stateCode": "CE",
+    "active": true,
+    "notes": "Sistema ASSESI. diariooficial.php funciona.",
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.aracoiaba.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,112 @@
+{
+  "timestamp": "2026-02-09T00:00:00Z",
+  "stateCode": "GO",
+  "configFile": "src/spiders/v2/configs/go.json",
+  "summary": {
+    "total": 10,
+    "used_existing_spider_sigpub": 6,
+    "used_existing_spider_nucleogov": 1,
+    "needs_review": 3
+  },
+  "results": [
+    {
+      "cidade": "Iporá",
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "5210208",
+      "configId": "go_ipora",
+      "notes": "Diário via AGM (sigpub). Conforme solicitado, apenas este grupo usa sigpub/AGM."
+    },
+    {
+      "cidade": "Goiatuba",
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "5209101",
+      "configId": "go_goiatuba",
+      "notes": "Diário via AGM (sigpub)."
+    },
+    {
+      "cidade": "Padre Bernardo",
+      "url": "https://acessoainformacao.padrebernardo.go.gov.br/",
+      "status": "needs_review",
+      "territoryId": "5215603",
+      "reason": "Portal NúcleoGov (transparência) sem Diário Oficial unificado. Existem Leis, Decretos, Portarias e Resoluções em seções separadas; não há subdomínio dom.* nem API /api/diarios. Verificado: dom.padrebernardo.go.gov.br (timeout/indisponível); API listada em acesso_automatizado não inclui diários.",
+      "attemptsLog": [
+        "Tentativa 1: acessoainformacao.padrebernardo.go.gov.br - portal de transparência com legislação por tipo (mgleis, mgdecretos, mgportarias, resolucoes), sem seção DO",
+        "Tentativa 2: dom.padrebernardo.go.gov.br - timeout ao acessar",
+        "Tentativa 3: acessoainformacao.../api/diarios - erro ao acessar (não disponível)"
+      ]
+    },
+    {
+      "cidade": "Niquelândia",
+      "url": "https://dom.niquelandia.go.gov.br/",
+      "status": "used_existing_spider",
+      "spiderType": "nucleogov",
+      "territoryId": "5214606",
+      "configId": "go_niquelandia",
+      "notes": "Diário Oficial dedicado em dom.niquelandia.go.gov.br. Sistema NúcleoGov com calendário e API /api/diarios retornando PDFs (S3). Config adicionada com baseUrl https://dom.niquelandia.go.gov.br."
+    },
+    {
+      "cidade": "Posse",
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "5218300",
+      "configId": "go_posse",
+      "notes": "Diário via AGM (sigpub)."
+    },
+    {
+      "cidade": "Bela Vista de Goiás",
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "5203302",
+      "configId": "go_bela_vista_de_goias",
+      "notes": "Diário via AGM (sigpub)."
+    },
+    {
+      "cidade": "São Luís de Montes Belos",
+      "url": "https://portal.saoluisdemontesbelos.go.gov.br/",
+      "status": "needs_review",
+      "territoryId": "5220108",
+      "reason": "Site da prefeitura não possui Diário Oficial em edições. Documentos disponíveis em páginas separadas: Decretos (saoluisdemontesbelos.go.gov.br/decretos), Portarias (/portal/portarias), Leis (/portal/leis), Resoluções (/portal/resolucoes). Legislação também em leismunicipais.com.br. Não há página única de DO com edições por data.",
+      "attemptsLog": [
+        "Tentativa 1: portal.saoluisdemontesbelos.go.gov.br - mapa do site sem link para DO",
+        "Tentativa 2: saoluisdemontesbelos.go.gov.br/decretos - lista de decretos por data, não edições de DO",
+        "Tentativa 3: Busca por 'diário oficial' no site - sem seção dedicada"
+      ]
+    },
+    {
+      "cidade": "Pires do Rio",
+      "url": "https://piresdorio.go.gov.br/",
+      "status": "needs_review",
+      "territoryId": "5217401",
+      "reason": "Prefeitura e acessoainformacao.piresdorio.go.gov.br não possuem seção específica de Diário Oficial. Atos normativos disponíveis por tipo: Decretos, Leis, Portarias, Resoluções, Editais (acessoainformacao.../cidadao/legislacao/). Nenhuma URL de DO unificado encontrada.",
+      "attemptsLog": [
+        "Tentativa 1: piresdorio.go.gov.br - menu sem link para Diário Oficial",
+        "Tentativa 2: acessoainformacao.piresdorio.go.gov.br - legislação por tipo (decretos, leis, portarias, resolucoes)",
+        "Tentativa 3: Busca por 'diário oficial' no site - sem seção dedicada"
+      ]
+    },
+    {
+      "cidade": "Nerópolis",
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "5214507",
+      "configId": "go_neropolis",
+      "notes": "Diário via AGM (sigpub)."
+    },
+    {
+      "cidade": "Palmeiras de Goiás",
+      "url": "https://www.diariomunicipal.com.br/agm/",
+      "status": "used_existing_spider",
+      "spiderType": "sigpub",
+      "territoryId": "5215702",
+      "configId": "go_palmeiras_de_goias",
+      "notes": "Diário via AGM (sigpub)."
+    }
+  ]
+}

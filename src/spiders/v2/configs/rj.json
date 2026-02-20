@@ -1,0 +1,1182 @@
+[
+  {
+    "id": "rj_riodejaneiro",
+    "name": "Rio de Janeiro - RJ",
+    "territoryId": "3304557",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturariodejaneiro",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturariodejaneiro",
+          "baseUrl": "https://doweb.rio.rj.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_saogoncalo",
+    "name": "São Gonçalo - RJ",
+    "territoryId": "3304904",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasaogoncalo",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasaogoncalo",
+          "url": "https://do.pmsg.rj.gov.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_duquedecaxias",
+    "name": "Duque de Caxias - RJ",
+    "territoryId": "3301702",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraduquedecaxias",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraduquedecaxias",
+          "baseUrl": "https://transparencia.duquedecaxias.rj.gov.br/diario_oficial_busca.php",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_novaiguacu",
+    "name": "Nova Iguaçu - RJ",
+    "territoryId": "3303500",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://doweb.novaiguacu.rj.gov.br/portal/diario-oficial",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_camposdosgoytacazes",
+    "name": "Campos dos Goytacazes - RJ",
+    "territoryId": "3301009",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracamposdosgoytacazes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracamposdosgoytacazes",
+          "baseUrl": "https://www.campos.rj.gov.br/diario-oficial.php",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_belfordroxo",
+    "name": "Belford Roxo - RJ",
+    "territoryId": "3300456",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "instar",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "instar",
+          "url": "https://www.belfordr.instartecnologia.com.br/portal/diario-oficial",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_niteroi",
+    "name": "Niterói - RJ",
+    "territoryId": "3303302",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraniiteroi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraniiteroi",
+          "baseUrl": "https://diariooficial.niteroi.rj.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_saojoaodemeriti",
+    "name": "São João de Meriti - RJ",
+    "territoryId": "3305109",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraduquedecaxias",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraduquedecaxias",
+          "baseUrl": "https://transparencia.meriti.rj.gov.br/diario_oficial_busca.php",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_petropolis",
+    "name": "Petrópolis - RJ",
+    "territoryId": "3303906",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeitrapetropolis",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeitrapetropolis",
+          "url": "https://www.petropolis.rj.gov.br/pmp/index.php/servicos-cidadao/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_voltaredonda",
+    "name": "Volta Redonda - RJ",
+    "territoryId": "3306305",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituravoltaredonda",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituravoltaredonda",
+          "url": "https://www.voltaredonda.rj.gov.br/vrdestaque/index.php",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_macae",
+    "name": "Macaé - RJ",
+    "territoryId": "3302403",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituramacae",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramacae",
+          "baseUrl": "https://do.macae.rj.gov.br/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_mage",
+    "name": "Magé - RJ",
+    "territoryId": "3302502",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituramage",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramage",
+          "baseUrl": "https://www.mage.rj.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_itaborai",
+    "name": "Itaboraí - RJ",
+    "territoryId": "3301900",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraitaborai",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraitaborai",
+          "baseUrl": "https://site.ib.itaborai.rj.gov.br/diario-oficial/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_cabofrio",
+    "name": "Cabo Frio - RJ",
+    "territoryId": "3300704",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracabofrio",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracabofrio",
+          "baseUrl": "https://transparencia.cabofrio.rj.gov.br/diariooficial.php",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_marica",
+    "name": "Maricá - RJ",
+    "territoryId": "3302700",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituramarica",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituramarica",
+          "baseUrl": "https://www.marica.rj.gov.br/jornal-oficial-marica/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_novafriburgo",
+    "name": "Nova Friburgo - RJ",
+    "territoryId": "3303401",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturapresidenteprudente",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturapresidenteprudente",
+          "baseUrl": "https://diario.novafriburgo.rj.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_barramansa",
+    "name": "Barra Mansa - RJ",
+    "territoryId": "3300407",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabarramansa",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabarramansa",
+          "baseUrl": "https://portaltransparencia.barramansa.rj.gov.br/boletim-oficial/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_angradosreis",
+    "name": "Angra dos Reis - RJ",
+    "territoryId": "3300100",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraangradosreis",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraangradosreis",
+          "baseUrl": "https://www.angra.rj.gov.br/boletim-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_mesquita",
+    "name": "Mesquita - RJ",
+    "territoryId": "3302858",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraduquedecaxias",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraduquedecaxias",
+          "baseUrl": "https://transparencia.mesquita.rj.gov.br/diario_oficial_busca.php",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_teresopolis",
+    "name": "Teresópolis - RJ",
+    "territoryId": "3305802",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "mentor",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "mentor",
+          "baseUrl": "https://atos.teresopolis.rj.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_riodasostras",
+    "name": "Rio das Ostras - RJ",
+    "territoryId": "3304524",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjodasostras",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjodasostras",
+          "baseUrl": "https://www.riodasostras.rj.gov.br/jornal-oficial/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_nilopolis",
+    "name": "Nilópolis - RJ",
+    "territoryId": "3303203",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituranilopolis",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituranilopolis",
+          "baseUrl": "https://nilopolis.rj.gov.br/diario-oficial/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_queimados",
+    "name": "Queimados - RJ",
+    "territoryId": "3304144",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraduquedecaxias",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraduquedecaxias",
+          "baseUrl": "https://transparencia.queimados.rj.gov.br/diario_oficial_busca.php",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_araruama",
+    "name": "Araruama - RJ",
+    "territoryId": "3300209",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjararuama",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjararuama",
+          "baseUrl": "https://www.araruama.rj.gov.br/public/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_resende",
+    "name": "Resende - RJ",
+    "territoryId": "3304201",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjresende",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjresende",
+          "baseUrl": "https://resende.rj.gov.br/blogtransparencia/page/boletim_oficial.asp",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_itaguai",
+    "name": "Itaguaí - RJ",
+    "territoryId": "3302007",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraduquedecaxias",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraduquedecaxias",
+          "baseUrl": "https://portal.transparencia.itaguai.rj.gov.br/diario_oficial_busca.php",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_saopedrodaaldeia",
+    "name": "São Pedro da Aldeia - RJ",
+    "territoryId": "3305208",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraduquedecaxias",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraduquedecaxias",
+          "baseUrl": "https://transparencia.pmspa.rj.gov.br/diario_oficial_busca.php",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_itaperuna",
+    "name": "Itaperuna - RJ",
+    "territoryId": "3302205",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjitaperuna",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjitaperuna",
+          "baseUrl": "https://itaperuna.rj.gov.br/pmi/jornal-oficial-2022",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_japeri",
+    "name": "Japeri - RJ",
+    "territoryId": "3302270",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "geosiap_portal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "geosiap_portal",
+          "baseUrl": "https://japeri.geosiap.net.br/portal-transparencia/siapegov.japeri.rj.gov.br/portal-transparencia/publicacoes?id_publicacao_tipo=7",
+          "entityId": 10,
+          "publicationTypeId": 7
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_barradopirai",
+    "name": "Barra do Piraí - RJ",
+    "territoryId": "3300308",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjbarradopirai",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjbarradopirai",
+          "baseUrl": "https://transparencia.portalbarradopirai.com.br/index.php/pt/links/15-boletim",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_saquarema",
+    "name": "Saquarema - RJ",
+    "territoryId": "3305505",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjsaquarema",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjsaquarema",
+          "baseUrl": "https://www.saquarema.rj.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_seropedica",
+    "name": "Seropédica - RJ",
+    "territoryId": "3305554",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjseropedica",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjseropedica",
+          "baseUrl": "https://portaltransparencia.seropedica.rj.gov.br",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_tresrios",
+    "name": "Três Rios - RJ",
+    "territoryId": "3306008",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjtresrios",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjtresrios",
+          "baseUrl": "https://tresrios.rj.gov.br/bio/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_valenca",
+    "name": "Valença - RJ",
+    "territoryId": "3306107",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjvalenca",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjvalenca",
+          "baseUrl": "https://valenca.rj.gov.br/boletins-oficiais/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_cachoeirasdemacacu",
+    "name": "Cachoeiras de Macacu - RJ",
+    "territoryId": "3300803",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjcachoeirasdemacacu",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjcachoeirasdemacacu",
+          "baseUrl": "https://www.cachoeirasdemacacu.rj.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_riobonito",
+    "name": "Rio Bonito - RJ",
+    "territoryId": "3304300",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjriobonito",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjriobonito",
+          "baseUrl": "https://diario-oficial.riobonito.rj.gov.br/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_guapimirim",
+    "name": "Guapimirim - RJ",
+    "territoryId": "3301850",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjguapimirim",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjguapimirim",
+          "baseUrl": "https://guapimirim.rj.gov.br",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_casimirodeabreu",
+    "name": "Casimiro de Abreu - RJ",
+    "territoryId": "3301306",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "npibrasil",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "npibrasil",
+          "baseUrl": "https://transparencia.casimirodeabreu.rj.gov.br/jornal.php",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_paraty",
+    "name": "Paraty - RJ",
+    "territoryId": "3303807",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjparaty",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjparaty",
+          "baseUrl": "https://www.paraty.rj.gov.br/multimidia/documentos",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_saofranciscodeitabapoana",
+    "name": "São Francisco de Itabapoana - RJ",
+    "territoryId": "3304755",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "phocadownload",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "phocadownload",
+          "baseUrl": "https://www.pmsfi.rj.gov.br/diariooficial",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_paraibadosul",
+    "name": "Paraíba do Sul - RJ",
+    "territoryId": "3303708",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjparaibadosulv2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjparaibadosulv2",
+          "baseUrl": "https://paraibadosul.rj.gov.br/page/3e364d6c-e018-47c3-aa46-db0c771424f6/diario-oficial",
+          "googleDriveFolderId": "1qF6YNZLr9SL_fFcsWdhCku7gEp2IJOvr",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_paracambi",
+    "name": "Paracambi - RJ",
+    "territoryId": "3303609",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjparacambiv2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjparacambiv2",
+          "baseUrl": "https://paracambi.rj.gov.br/diario-oficial-eletronico-2026/",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_santoantoniopadua",
+    "name": "Santo Antônio de Pádua - RJ",
+    "territoryId": "3304706",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjsantoantoniopadua",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjsantoantoniopadua",
+          "baseUrl": "https://www.santoantoniopadua.rj.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_mangaratiba",
+    "name": "Mangaratiba - RJ",
+    "territoryId": "3302601",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjmangaratibav2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjmangaratibav2",
+          "baseUrl": "https://mangaratiba.rj.gov.br/novoportal/publicacoes"
+        }
+      },
+      {
+        "spiderType": "prefeiturarjmangaratiba",
+        "priority": 2,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjmangaratiba",
+          "baseUrl": "https://www.mangaratiba.rj.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_armacaodosbuzios",
+    "name": "Armação dos Búzios - RJ",
+    "territoryId": "3300233",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "npibrasil",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "npibrasil",
+          "baseUrl": "https://portal.buzios.rj.gov.br/jornal",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_saofidelis",
+    "name": "São Fidélis - RJ",
+    "territoryId": "3304805",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjsaofidelisv2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjsaofidelisv2",
+          "baseUrl": "https://saofidelis.rj.gov.br/diariooficial",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_saojoaodabarra",
+    "name": "São João da Barra - RJ",
+    "territoryId": "3305000",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjsaojoaodabarrav2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjsaojoaodabarrav2",
+          "baseUrl": "https://www.sjb.rj.gov.br/site/diarios_oficiais",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_bomjesusdoitabapoana",
+    "name": "Bom Jesus do Itabapoana - RJ",
+    "territoryId": "3300605",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjbomjesusdoitabapoana",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjbomjesusdoitabapoana",
+          "baseUrl": "https://www.bomjesus.rj.gov.br/site/diarios_oficiais",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_vassouras",
+    "name": "Vassouras - RJ",
+    "territoryId": "3306206",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "aemerj",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "aemerj",
+          "power": "executive_legislative",
+          "entityName": "Prefeitura Municipal de Vassouras"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_tangua",
+    "name": "Tanguá - RJ",
+    "territoryId": "3305752",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "supernova",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "supernova",
+          "baseUrl": "https://webtangua.supernova.com.br:8443/contaspublicas/pages/publicacao_demais_relatorio.xhtml?faces-redirect=true&idTipoRelatorio=1",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_arraialdocabo",
+    "name": "Arraial do Cabo - RJ",
+    "territoryId": "3300258",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjarraialdocabov2",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjarraialdocabov2",
+          "baseUrl": "https://www.arraial.rj.gov.br/diariooficial",
+          "requiresClientRendering": false
+        }
+      },
+      {
+        "spiderType": "prefeiturarjarraialdocabo",
+        "priority": 2,
+        "active": false,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjarraialdocabo",
+          "baseUrl": "https://www.arraial.rj.gov.br/diarios-oficiais",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_itatiaia",
+    "name": "Itatiaia - RJ",
+    "territoryId": "3302254",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjitatiaia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjitatiaia",
+          "baseUrl": "https://itatiaia.rj.gov.br/boletim-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_patydoalferes",
+    "name": "Paty do Alferes - RJ",
+    "territoryId": "3303856",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjpatydoalferes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjpatydoalferes",
+          "baseUrl": "https://patydoalferes.rj.gov.br/diario-oficial/",
+          "requiresClientRendering": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_bomjardim",
+    "name": "Bom Jardim - RJ",
+    "territoryId": "3300506",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diario_oficial_online",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diario_oficial_online",
+          "baseUrl": "https://diario-oficial.online/publicacoes/todas/1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_iguabagrande",
+    "name": "Iguaba Grande - RJ",
+    "territoryId": "3301876",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjiguabagrande",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjiguabagrande",
+          "baseUrl": "https://www.iguabagrande.rj.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_miracema",
+    "name": "Miracema - RJ",
+    "territoryId": "3303005",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "plugtecnologia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "plugtecnologia",
+          "baseUrl": "https://miracema.plugtecnologia.com.br/transparencia/exibir/20/0/1/boletim-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_miguelpereira",
+    "name": "Miguel Pereira - RJ",
+    "territoryId": "3302908",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraduquedecaxias",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraduquedecaxias",
+          "baseUrl": "https://transparencia.miguelpereira.rj.gov.br/diario_oficial_busca.php",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "rj_pirai",
+    "name": "Piraí - RJ",
+    "territoryId": "3304003",
+    "stateCode": "RJ",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarjpirai",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarjpirai",
+          "baseUrl": "https://pirai.rj.gov.br/diario-oficial",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  }
+]

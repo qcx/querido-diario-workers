@@ -1,0 +1,1653 @@
+[
+  {
+    "id": "pe_recife",
+    "name": "Recife - PE",
+    "territoryId": "2611606",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturarecife",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturarecife",
+          "baseUrl": "https://dome.recife.pe.gov.br/dome/"
+        }
+      }
+    ],
+    "notes": "Capital do estado. Portal DOME próprio (dome.recife.pe.gov.br/dome/) com acervo desde 30/04/2015."
+  },
+  {
+    "id": "pe_jaboatao_dos_guararapes",
+    "name": "Jaboatão dos Guararapes - PE",
+    "territoryId": "2607901",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturajaboatao",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturajaboatao",
+          "baseUrl": "https://diariooficial.jaboatao.pe.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pe_petrolina",
+    "name": "Petrolina - PE",
+    "territoryId": "2611101",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "doem",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "doem",
+          "stateCityUrlPart": "pe/petrolina",
+          "requiresClientRendering": false
+        }
+      }
+    ],
+    "notes": "Usa plataforma DOEM (doem.org.br/pe/petrolina). Edições diárias com múltiplos atos por edição."
+  },
+  {
+    "id": "pe_caruaru",
+    "name": "Caruaru - PE",
+    "territoryId": "2604106",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracaruaru",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracaruaru",
+          "baseUrl": "https://diariooficial.caruaru.pe.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pe_olinda",
+    "name": "Olinda - PE",
+    "territoryId": "2609600",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "4231",
+          "cityName": "Olinda"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade histórica da região metropolitana do Recife."
+  },
+  {
+    "id": "pe_paulista",
+    "name": "Paulista - PE",
+    "territoryId": "2610707",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "11921",
+          "cityName": "Paulista"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal de transparência disponível em transparencia.paulista.pe.gov.br."
+  },
+  {
+    "id": "pe_cabo_de_santo_agostinho",
+    "name": "Cabo de Santo Agostinho - PE",
+    "territoryId": "2602902",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "4602",
+          "cityName": "Cabo de Santo Agostinho"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal de transparência disponível em transparencia.cabo.pe.gov.br."
+  },
+  {
+    "id": "pe_camaragibe",
+    "name": "Camaragibe - PE",
+    "territoryId": "2603454",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracamaragibe",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracamaragibe",
+          "baseUrl": "https://diariooficial.camaragibe.pe.gov.br"
+        }
+      },
+      {
+        "spiderType": "sigpub",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "8729",
+          "cityName": "Camaragibe"
+        }
+      }
+    ],
+    "notes": "Portal próprio (diariooficial.camaragibe.pe.gov.br) com PDFs por data. Também publicado na AMUPE. Formato PDF: /storage/edicao/edicaoYYYY-MM-DD.pdf"
+  },
+  {
+    "id": "pe_garanhuns",
+    "name": "Garanhuns - PE",
+    "territoryId": "2606002",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "9197",
+          "cityName": "Garanhuns"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal de transparência disponível via garanhuns.pe.gov.br."
+  },
+  {
+    "id": "pe_vitoria_de_santo_antao",
+    "name": "Vitória de Santo Antão - PE",
+    "territoryId": "2616407",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "46229",
+          "cityName": "Vitória de Santo Antão"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal de transparência disponível em transparencia.prefeituradavitoria.pe.gov.br."
+  },
+  {
+    "id": "pe_igarassu",
+    "name": "Igarassu - PE",
+    "territoryId": "2606804",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "12392",
+          "cityName": "Igarassu"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Município histórico da região metropolitana do Recife."
+  },
+  {
+    "id": "pe_sao_lourenco_da_mata",
+    "name": "São Lourenço da Mata - PE",
+    "territoryId": "2613701",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "591",
+          "cityName": "São Lourenço da Mata"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal de transparência disponível em transparencia.saolourencodamata.pe.gov.br."
+  },
+  {
+    "id": "pe_ipojuca",
+    "name": "Ipojuca - PE",
+    "territoryId": "2607208",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "2727429",
+          "cityName": "Ipojuca"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Município turístico com Porto de Galinhas."
+  },
+  {
+    "id": "pe_abreu_e_lima",
+    "name": "Abreu e Lima - PE",
+    "territoryId": "2600054",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "9276",
+          "cityName": "Abreu e Lima"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Região metropolitana do Recife."
+  },
+  {
+    "id": "pe_santa_cruz_do_capibaribe",
+    "name": "Santa Cruz do Capibaribe - PE",
+    "territoryId": "2612505",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturasantacruzdocapibaribe",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturasantacruzdocapibaribe",
+          "baseUrl": "https://www.santacruzdocapibaribe.pe.gov.br"
+        }
+      }
+    ],
+    "notes": "Portal próprio da prefeitura (santacruzdocapibaribe.pe.gov.br/artigos/diariooficial). Polo do Agreste Setentrional, capital da moda pernambucana."
+  },
+  {
+    "id": "pe_serra_talhada",
+    "name": "Serra Talhada - PE",
+    "territoryId": "2613909",
+    "stateCode": "PE",
+    "active": false,
+    "spiders": [],
+    "notes": "ATENÇÃO: Serra Talhada NÃO está na AMUPE. Precisa encontrar fonte alternativa para diários oficiais. Principal cidade do Sertão do Pajeú."
+  },
+  {
+    "id": "pe_gravata",
+    "name": "Gravatá - PE",
+    "territoryId": "2606408",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "785759",
+          "cityName": "Gravatá"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade turística do Agreste Pernambucano."
+  },
+  {
+    "id": "pe_araripina",
+    "name": "Araripina - PE",
+    "territoryId": "2601102",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituraaraipina",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituraaraipina",
+          "baseUrl": "https://www.araripina.pe.gov.br/diario-oficial"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pe_goiana",
+    "name": "Goiana - PE",
+    "territoryId": "2606200",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "1280884",
+          "cityName": "Goiana"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Polo industrial e histórico da Zona da Mata Norte."
+  },
+  {
+    "id": "pe_belo_jardim",
+    "name": "Belo Jardim - PE",
+    "territoryId": "2601706",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "54584",
+          "cityName": "Belo Jardim"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade do Agreste Pernambucano."
+  },
+  {
+    "id": "pe_carpina",
+    "name": "Carpina - PE",
+    "territoryId": "2604007",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "20541",
+          "cityName": "Carpina"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade da Mata Norte pernambucana."
+  },
+  {
+    "id": "pe_arcoverde",
+    "name": "Arcoverde - PE",
+    "territoryId": "2601201",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "44432",
+          "cityName": "Arcoverde"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Principal cidade do Sertão do Moxotó."
+  },
+  {
+    "id": "pe_ouricuri",
+    "name": "Ouricuri - PE",
+    "territoryId": "2609907",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "16370",
+          "cityName": "Ouricuri"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade do Sertão do Araripe."
+  },
+  {
+    "id": "pe_surubim",
+    "name": "Surubim - PE",
+    "territoryId": "2614501",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "42298",
+          "cityName": "Surubim"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade do Alto Capibaribe."
+  },
+  {
+    "id": "pe_pesqueira",
+    "name": "Pesqueira - PE",
+    "territoryId": "2610905",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "5896",
+          "cityName": "Pesqueira"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe) com entityId 5896. Cidade do Vale do Ipojuca."
+  },
+  {
+    "id": "pe_salgueiro",
+    "name": "Salgueiro - PE",
+    "territoryId": "2612208",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "434",
+          "cityName": "Salgueiro"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Principal cidade do Sertão Central pernambucano."
+  },
+  {
+    "id": "pe_bezerros",
+    "name": "Bezerros - PE",
+    "territoryId": "2601904",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeiturabezerros",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeiturabezerros",
+          "baseUrl": "https://bezerros.pe.gov.br/diario-oficial"
+        }
+      },
+      {
+        "spiderType": "sigpub",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "22088",
+          "cityName": "Bezerros"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pe_escada",
+    "name": "Escada - PE",
+    "territoryId": "2605202",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "452",
+          "cityName": "Escada"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade da Mata Meridional pernambucana."
+  },
+  {
+    "id": "pe_paudalho",
+    "name": "Paudalho - PE",
+    "territoryId": "2610608",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "8935",
+          "cityName": "Paudalho"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade da Mata Setentrional pernambucana."
+  },
+  {
+    "id": "pe_limoeiro",
+    "name": "Limoeiro - PE",
+    "territoryId": "2608909",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "41186",
+          "cityName": "Limoeiro"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade do Médio Capibaribe."
+  },
+  {
+    "id": "pe_moreno",
+    "name": "Moreno - PE",
+    "territoryId": "2609402",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "11183",
+          "cityName": "Moreno"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pe_palmares",
+    "name": "Palmares - PE",
+    "territoryId": "2610004",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "3616",
+          "cityName": "Palmares"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade da Mata Meridional pernambucana."
+  },
+  {
+    "id": "pe_buique",
+    "name": "Buíque - PE",
+    "territoryId": "2602803",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "68154",
+          "cityName": "Buíque"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Sede do Parque Nacional do Catimbau no Vale do Ipojuca."
+  },
+  {
+    "id": "pe_sao_bento_do_una",
+    "name": "São Bento do Una - PE",
+    "territoryId": "2613008",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "14032",
+          "cityName": "São Bento do Una"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Capital do Ovo - maior produtor de ovos do Nordeste."
+  },
+  {
+    "id": "pe_brejo_da_madre_de_deus",
+    "name": "Brejo da Madre de Deus - PE",
+    "territoryId": "2602605",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "12157",
+          "cityName": "Brejo da Madre de Deus"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Sede do Teatro de Nova Jerusalém e da Paixão de Cristo."
+  },
+  {
+    "id": "pe_timbauba",
+    "name": "Timbaúba - PE",
+    "territoryId": "2615300",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "130199",
+          "cityName": "Timbaúba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pe_bom_conselho",
+    "name": "Bom Conselho - PE",
+    "territoryId": "2602100",
+    "stateCode": "PE",
+    "active": false,
+    "spiders": [],
+    "notes": "ATENÇÃO: Bom Conselho NÃO está na AMUPE. Precisa encontrar fonte alternativa para diários oficiais."
+  },
+  {
+    "id": "pe_aguas_belas",
+    "name": "Águas Belas - PE",
+    "territoryId": "2600500",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "9207",
+          "cityName": "Águas Belas"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade do Agreste Meridional pernambucano."
+  },
+  {
+    "id": "pe_toritama",
+    "name": "Toritama - PE",
+    "territoryId": "2615206",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "62165",
+          "cityName": "Toritama"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Capital do Jeans - produz 15% do jeans brasileiro."
+  },
+  {
+    "id": "pe_santa_maria_da_boa_vista",
+    "name": "Santa Maria da Boa Vista - PE",
+    "territoryId": "2612604",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "softagon",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "softagon",
+          "baseUrl": "https://santamariadaboavista.pe.gov.br/diario-oficial"
+        }
+      },
+      {
+        "spiderType": "sigpub",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "41591",
+          "cityName": "Santa Maria da Boa Vista"
+        }
+      }
+    ],
+    "notes": "Portal próprio em santamariadaboavista.pe.gov.br/diario-oficial (plataforma Softagon). Também publicado na AMUPE como fallback. Cidade do Sertão do São Francisco."
+  },
+  {
+    "id": "pe_afogados_da_ingazeira",
+    "name": "Afogados da Ingazeira - PE",
+    "territoryId": "2600104",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "7873",
+          "cityName": "Afogados da Ingazeira"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Sede da Região Geográfica Intermediária de Afogados da Ingazeira no Sertão do Pajeú."
+  },
+  {
+    "id": "pe_barreiros",
+    "name": "Barreiros - PE",
+    "territoryId": "2601409",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "54592",
+          "cityName": "Barreiros"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pe_lajedo",
+    "name": "Lajedo - PE",
+    "territoryId": "2608800",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "550",
+          "cityName": "Lajedo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pe_custodia",
+    "name": "Custódia - PE",
+    "territoryId": "2605103",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "4318",
+          "cityName": "Custódia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pe_bom_jardim",
+    "name": "Bom Jardim - PE",
+    "territoryId": "2602209",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "9087",
+          "cityName": "Bom Jardim"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal oficial disponível em bomjardim.pe.gov.br. Cidade do Agreste Setentrional pernambucano."
+  },
+  {
+    "id": "pe_sirinhaem",
+    "name": "Sirinhaém - PE",
+    "territoryId": "2614204",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "252372",
+          "cityName": "Sirinhaém"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal oficial disponível em sirinhaem.pe.gov.br. Cidade da Mata Meridional pernambucana."
+  },
+  {
+    "id": "pe_bonito",
+    "name": "Bonito - PE",
+    "territoryId": "2602308",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "4608",
+          "cityName": "Bonito"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal oficial disponível em bonito.pe.gov.br. Cidade do Agreste Meridional pernambucano, conhecida por suas cachoeiras."
+  },
+  {
+    "id": "pe_sao_caetano",
+    "name": "São Caetano - PE",
+    "territoryId": "2613107",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "498",
+          "cityName": "São Caetano"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal oficial disponível em saocaetano.pe.gov.br. Cidade do Agreste Meridional pernambucano."
+  },
+  {
+    "id": "pe_alianca",
+    "name": "Aliança - PE",
+    "territoryId": "2600708",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "53281",
+          "cityName": "Aliança"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal oficial disponível em alianca.pe.gov.br. Cidade da Mata Setentrional pernambucana."
+  },
+  {
+    "id": "pe_itambe",
+    "name": "Itambé - PE",
+    "territoryId": "2607653",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "2175511",
+          "cityName": "Itambé"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal oficial disponível em itambe.pe.gov.br. Cidade da Mata Setentrional pernambucana."
+  },
+  {
+    "id": "pe_sao_jose_do_belmonte",
+    "name": "São José do Belmonte - PE",
+    "territoryId": "2613503",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "37998",
+          "cityName": "São José do Belmonte"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal oficial disponível em saojosedobelmonte.pe.gov.br. Cidade do Sertão do Pajeú."
+  },
+  {
+    "id": "pe_bodoco",
+    "name": "Bodocó - PE",
+    "territoryId": "2602001",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "directus_portal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "directus_portal",
+          "apiBase": "https://app.bodoco.pe.gov.br/",
+          "apiToken": "M7lTc3sv0zIb6Lc78G_JwapGKKcQRWif",
+          "cityId": "5",
+          "collection": "edicao",
+          "portalBaseUrl": "https://bodoco.pe.gov.br/diario-oficial"
+        }
+      }
+    ],
+    "notes": "Portal próprio em bodoco.pe.gov.br/diario-oficial usando plataforma Directus. API em app.bodoco.pe.gov.br. Cidade do Sertão do Araripe."
+  },
+  {
+    "id": "pe_petrolandia",
+    "name": "Petrolândia - PE",
+    "territoryId": "2611002",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "739343",
+          "cityName": "Petrolândia"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal oficial disponível em petrolandia.pe.gov.br. Cidade do São Francisco Pernambucano."
+  },
+  {
+    "id": "pe_ribeirao",
+    "name": "Ribeirão - PE",
+    "territoryId": "2611804",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "10265",
+          "cityName": "Ribeirão"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal oficial disponível em ribeirao.pe.gov.br. Cidade da Mata Meridional Pernambucana."
+  },
+  {
+    "id": "pe_sertania",
+    "name": "Sertânia - PE",
+    "territoryId": "2614105",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "11968",
+          "cityName": "Sertânia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pe_itaiba",
+    "name": "Itaíba - PE",
+    "territoryId": "2607505",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "20259",
+          "cityName": "Itaíba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pe_catende",
+    "name": "Catende - PE",
+    "territoryId": "2604205",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "14030",
+          "cityName": "Catende"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal oficial disponível em catende.pe.gov.br. Cidade da Mata Meridional Pernambucana."
+  },
+  {
+    "id": "pe_exu",
+    "name": "Exu - PE",
+    "territoryId": "2605301",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "4924",
+          "cityName": "Exu"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal oficial disponível em exu.pe.gov.br. Terra do Gonzagão, cidade do Sertão do Araripe."
+  },
+  {
+    "id": "pe_sao_jose_do_egito",
+    "name": "São José do Egito - PE",
+    "territoryId": "2613602",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "511",
+          "cityName": "São José do Egito"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Portal oficial disponível em saojosedoegito.pe.gov.br. Cidade do Sertão do Pajeú, terra da poesia."
+  },
+  {
+    "id": "pe_nazare_da_mata",
+    "name": "Nazaré da Mata - PE",
+    "territoryId": "2609501",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "66678",
+          "cityName": "Nazaré da Mata"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade da Mata Setentrional Pernambucana, conhecida pelo maracatu."
+  },
+  {
+    "id": "pe_trindade",
+    "name": "Trindade - PE",
+    "territoryId": "2615607",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sogotecnologia",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sogotecnologia",
+          "baseUrl": "https://trindade.pe.gov.br/diario-oficial/",
+          "startYear": 2019
+        }
+      }
+    ]
+  },
+  {
+    "id": "pe_cabrobo",
+    "name": "Cabrobó - PE",
+    "territoryId": "2603009",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://www.imprensaoficialmunicipal.com.br/cabrobo"
+        }
+      }
+    ],
+    "notes": "Portal próprio em imprensaoficialmunicipal.com.br/cabrobo (DiOE). Cidade do Sertão do São Francisco."
+  },
+  {
+    "id": "pe_floresta",
+    "name": "Floresta - PE",
+    "territoryId": "2605707",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "365",
+          "cityName": "Floresta"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade do Sertão de Itaparica."
+  },
+  {
+    "id": "pe_gloria_do_goita",
+    "name": "Glória do Goitá - PE",
+    "territoryId": "2606101",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "365",
+          "cityName": "Glória do Goitá"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade da Mata Setentrional Pernambucana."
+  },
+  {
+    "id": "pe_ipubi",
+    "name": "Ipubi - PE",
+    "territoryId": "2607307",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "ptio",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "ptio",
+          "baseUrl": "http://pe.portaldatransparencia.com.br/prefeitura/ipubi/"
+        },
+        "description": "Diário Oficial Eletrônico de Ipubi via Portal da Transparência PE"
+      }
+    ],
+    "notes": "Publicado no Portal da Transparência PE (pe.portaldatransparencia.com.br). Cidade do Sertão do Araripe."
+  },
+  {
+    "id": "pe_caetes",
+    "name": "Caetés - PE",
+    "territoryId": "2603108",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "365",
+          "cityName": "Caetés"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade do Agreste Meridional Pernambucano."
+  },
+  {
+    "id": "pe_passira",
+    "name": "Passira - PE",
+    "territoryId": "2610509",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "365",
+          "cityName": "Passira"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade do Agreste Setentrional Pernambucano."
+  },
+  {
+    "id": "pe_itapissuma",
+    "name": "Itapissuma - PE",
+    "territoryId": "2607752",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "305454",
+          "cityName": "Itapissuma"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade da Região Metropolitana do Recife."
+  },
+  {
+    "id": "pe_joao_alfredo",
+    "name": "João Alfredo - PE",
+    "territoryId": "2607802",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "365",
+          "cityName": "João Alfredo"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade do Alto Capibaribe."
+  },
+  {
+    "id": "pe_tabira",
+    "name": "Tabira - PE",
+    "territoryId": "2614600",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "365",
+          "cityName": "Tabira"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade do Sertão do Pajeú."
+  },
+  {
+    "id": "pe_pombos",
+    "name": "Pombos - PE",
+    "territoryId": "2611309",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "530",
+          "cityName": "Pombos"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade da Mata Setentrional Pernambucana, conhecida pela Festa do Pé de Serra."
+  },
+  {
+    "id": "pe_tupanatinga",
+    "name": "Tupanatinga - PE",
+    "territoryId": "2615805",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "365",
+          "cityName": "Tupanatinga"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade do Vale do Ipojuca, região do Agreste Meridional."
+  },
+  {
+    "id": "pe_ibimirim",
+    "name": "Ibimirim - PE",
+    "territoryId": "2606606",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "365",
+          "cityName": "Ibimirim"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade do Sertão do Moxotó."
+  },
+  {
+    "id": "pe_agua_preta",
+    "name": "Água Preta - PE",
+    "territoryId": "2600401",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "365",
+          "cityName": "Água Preta"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade da Mata Meridional Pernambucana."
+  },
+  {
+    "id": "pe_vicencia",
+    "name": "Vicência - PE",
+    "territoryId": "2616308",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "365",
+          "cityName": "Vicência"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade da Mata Setentrional Pernambucana, terra do maracatu e engenhos históricos."
+  },
+  {
+    "id": "pe_inaja",
+    "name": "Inajá - PE",
+    "territoryId": "2607000",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "entityId": "365",
+          "cityName": "Inajá"
+        }
+      }
+    ],
+    "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade do Sertão do Moxotó."
+  }
+]

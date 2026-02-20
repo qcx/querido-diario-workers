@@ -1,0 +1,10 @@
+{
+  "cidade": "Buriticupu",
+  "ibge": "2102325",
+  "urlDiario": "https://buriticupu.ma.gov.br/diariooficial.php",
+  "estrutura": "Página principal lista edições anteriores em formato de tabela com paginação. Cada edição possui link para página de detalhes no formato diariooficial.php?id=XXXX. Na página de detalhes, há dois links de download: um para PDF e outro para ZIP com carimbo do tempo. A página exibe o conteúdo completo do diário em HTML com busca interna por palavra-chave.",
+  "padraoUrl": "PDF: https://buriticupu.ma.gov.br/arquivos_download.php?id={ID}&pg=diariooficial | ZIP: https://buriticupu.ma.gov.br/arquivos_download.php?id={ID}&pg=diariooficial&file=zip | Página detalhes: https://buriticupu.ma.gov.br/diariooficial.php?id={ID}",
+  "plataforma": "Sistema customizado da prefeitura (não identificável como plataforma comercial conhecida)",
+  "requiresClientRendering": false,
+  "notas": "A página possui filtros de pesquisa por palavra-chave, número, período e esfera (EXECUTIVO/LEGISLATIVO/TERCEIRO). As edições são numeradas e possuem volume. Há 2.634 edições disponíveis no acervo. O diário possui ISSN 30856833. Publicação diária exceto sábados, domingos e feriados. Cada edição possui contador de visualizações. O conteúdo completo do diário é exibido em HTML na página de detalhes, não apenas o PDF."
+}

@@ -128,6 +128,7 @@ export interface OcrProcessorEnv extends D1DatabaseEnv {
   OCR_RESULTS?: KVNamespace;
   GAZETTE_PDFS?: R2Bucket;
   R2_PUBLIC_URL?: string;
+  BROWSER?: Fetcher;
 }
 
 /**
@@ -143,6 +144,7 @@ export async function processOcrBatch(
   const successfulResults: { ocrMessage: OcrQueueMessage; result: OcrResult }[] = [];
 
   for (const message of batch.messages) {
+
     const startTime = Date.now();
     const ocrMessage = message.body;
     const crawlJobId = ocrMessage.metadata?.crawlJobId || 'unknown';
@@ -160,28 +162,74 @@ export async function processOcrBatch(
       r2Bucket: env.GAZETTE_PDFS,
       r2PublicUrl: env.R2_PUBLIC_URL,
       databaseClient: databaseClient,
+      browser: env.BROWSER,
     });
+
+    console.log('🟠 OCR Processor Message:', { pdfUrl: ocrMessage.pdfUrl, editionNumber: ocrMessage.editionNumber });
+
+    // Get territoryId - try from message first, then fallback to gazette lookup
+    let territoryId = ocrMessage?.territoryId;
+    if (!territoryId || territoryId.trim() === '') {
+      try {
+        // Try to get territoryId from gazette in database
+        const gazetteResult = await db.select()
+          .from(schema.gazetteRegistry)
+          .where(eq(schema.gazetteRegistry.pdfUrl, ocrMessage.pdfUrl))
+          .limit(1);
+        
+        if (gazetteResult.length > 0) {
+          // Try to get territoryId from gazette_crawls
+          const crawlResult = await db.select()
+            .from(schema.gazetteCrawls)
+            .where(eq(schema.gazetteCrawls.gazetteId, gazetteResult[0].id))
+            .limit(1);
+          
+          if (crawlResult.length > 0) {
+            territoryId = crawlResult[0].territoryId;
+            logger.info('Retrieved territoryId from database', {
+              jobId: ocrMessage.jobId,
+              territoryId,
+              pdfUrl: ocrMessage.pdfUrl
+            });
+          }
+        }
+      } catch (lookupError) {
+        logger.warn('Failed to lookup territoryId from database', lookupError as Error, {
+          jobId: ocrMessage.jobId,
+          pdfUrl: ocrMessage.pdfUrl
+        });
+      }
+    }
 
     try {
       logger.info(`Processing OCR job ${ocrMessage.jobId}`, {
         jobId: ocrMessage.jobId,
         pdfUrl: ocrMessage.pdfUrl,
-        territoryId: ocrMessage.territoryId,
+        territoryId: territoryId || 'NOT_FOUND',
+        originalTerritoryId: ocrMessage.territoryId || 'NOT_IN_MESSAGE',
         crawlJobId,
       });
 
-      // Track OCR start
-      await telemetry.trackCityStep(
-        crawlJobId,
-        ocrMessage.territoryId,
-        ocrMessage.spiderId,
-        'ocr_start',
-        'started',
-        undefined,
-        undefined,
-        undefined,
-        ocrMessage.metadata?.spiderType
-      );
+      // Track OCR start - only if we have a valid territoryId
+      if (territoryId && territoryId.trim() !== '') {
+        await telemetry.trackCityStep(
+          crawlJobId,
+          territoryId,
+          ocrMessage.spiderId || 'unknown',
+          'ocr_start',
+          'started',
+          undefined,
+          undefined,
+          undefined,
+          ocrMessage.metadata?.spiderType
+        );
+      } else {
+        logger.warn('Skipping ocr_start telemetry: territoryId not available', {
+          jobId: ocrMessage.jobId,
+          pdfUrl: ocrMessage.pdfUrl,
+          crawlJobId
+        });
+      }
 
       let result: OcrResult;
       let isReusedResult = false; // Track if result was reused vs freshly processed
@@ -227,8 +275,11 @@ export async function processOcrBatch(
               isReusedResult = true; // Mark as reused
               result = existingResult;
               
-              // Check if gazette is missing R2 key and retry upload
-              if (!gazette.pdfR2Key && env.GAZETTE_PDFS) {
+              // Check if gazette is missing R2 key and retry upload (only for PDF extractions)
+              const cachedExtractionMethod = existingResult.metadata?.extractionMethod || 'mistral';
+              const isCachedHtml = cachedExtractionMethod === 'html';
+              
+              if (!gazette.pdfR2Key && env.GAZETTE_PDFS && !isCachedHtml) {
                 logger.info('Cached OCR result found but missing R2 key, attempting upload', {
                   gazetteId: gazette.id,
                   jobId: ocrMessage.jobId,
@@ -267,6 +318,12 @@ export async function processOcrBatch(
                     error: uploadResult.error.message
                   });
                 }
+              } else if (isCachedHtml) {
+                logger.info('Skipping R2 upload for cached HTML extraction', {
+                  gazetteId: gazette.id,
+                  jobId: ocrMessage.jobId,
+                  extractionMethod: cachedExtractionMethod
+                });
               }
             } else {
             // Status says success but no OCR result - data inconsistency!
@@ -484,8 +541,11 @@ export async function processOcrBatch(
                   isReusedResult = true; // Mark as reused
                   result = existingResult;
                   
-                  // Check if gazette is missing R2 key and retry upload
-                  if (!gazette.pdfR2Key && env.GAZETTE_PDFS) {
+                  // Check if gazette is missing R2 key and retry upload (only for PDF extractions)
+                  const cachedExtractionMethod = existingResult.metadata?.extractionMethod || 'mistral';
+                  const isCachedHtml = cachedExtractionMethod === 'html';
+                  
+                  if (!gazette.pdfR2Key && env.GAZETTE_PDFS && !isCachedHtml) {
                     logger.info('Cached OCR result found but missing R2 key, attempting upload', {
                       gazetteId: gazette.id,
                       jobId: ocrMessage.jobId,
@@ -524,6 +584,12 @@ export async function processOcrBatch(
                         error: uploadResult.error.message
                       });
                     }
+                  } else if (isCachedHtml) {
+                    logger.info('Skipping R2 upload for cached HTML extraction (after claim failure)', {
+                      gazetteId: gazette.id,
+                      jobId: ocrMessage.jobId,
+                      extractionMethod: cachedExtractionMethod
+                    });
                   }
                 } else {
                   logger.error('Gazette marked success but no OCR found after claim failure', {
@@ -616,6 +682,20 @@ export async function processOcrBatch(
       }
 
       // Store in database with retry logic
+      console.log(`🔸 OCR Result for ${ocrMessage.pdfUrl}:`, result?.extractedText?.substring(0, 100) || 'No text');
+      
+      // Check extraction method to determine storage strategy
+      const extractionMethod = result.metadata?.extractionMethod || 'mistral';
+      const isHtmlExtraction = extractionMethod === 'html';
+      
+      if (isHtmlExtraction) {
+        logger.info('HTML-based extraction detected, skipping R2 storage', {
+          jobId: ocrMessage.jobId,
+          pdfUrl: ocrMessage.pdfUrl,
+          extractionMethod,
+        });
+      }
+      
       let storageSucceeded = false;
 
       if (result.status === 'success' && result.extractedText) {
@@ -641,10 +721,11 @@ export async function processOcrBatch(
           logger.info(`OCR result stored in database`, {
             jobId: ocrMessage.jobId,
             textLength: result.extractedText.length,
+            extractionMethod,
           });
           
-          // Update gazette with R2 key if available
-          if (result.pdfR2Key && gazette) {
+          // Update gazette with R2 key if available (only for PDF/Mistral extractions)
+          if (result.pdfR2Key && gazette && !isHtmlExtraction) {
             try {
               await gazetteRepo.updateR2Key(gazette.id, result.pdfR2Key);
               logger.info(`Updated gazette with R2 key`, {
@@ -730,8 +811,8 @@ export async function processOcrBatch(
         }
       }
 
-      // Store in KV cache (always cache results, even if reused)
-      if (env.OCR_RESULTS) {
+      // Store in KV cache (only for PDF/Mistral extractions, skip for HTML)
+      if (env.OCR_RESULTS && !isHtmlExtraction) {
         const cacheKey = generateOcrCacheKey(ocrMessage.pdfUrl);
         await env.OCR_RESULTS.put(
           cacheKey,
@@ -744,7 +825,14 @@ export async function processOcrBatch(
           cacheKey,
           jobId: ocrMessage.jobId,
           pdfUrl: ocrMessage.pdfUrl,
-          isReused: isReusedResult
+          isReused: isReusedResult,
+          extractionMethod,
+        });
+      } else if (isHtmlExtraction) {
+        logger.info('Skipped KV cache storage for HTML extraction', {
+          jobId: ocrMessage.jobId,
+          pdfUrl: ocrMessage.pdfUrl,
+          extractionMethod,
         });
       }
 
@@ -820,18 +908,26 @@ export async function processOcrBatch(
         });
       }
 
-      // Track OCR completion
-      await telemetry.trackCityStep(
-        crawlJobId,
-        ocrMessage.territoryId,
-        ocrMessage.spiderId,
-        'ocr_end',
-        result.status === 'success' ? 'completed' : 'failed',
-        undefined,
-        executionTimeMs,
-        result.error?.message,
-        ocrMessage.metadata?.spiderType
-      );
+      // Track OCR completion - only if we have a valid territoryId
+      if (territoryId && territoryId.trim() !== '') {
+        await telemetry.trackCityStep(
+          crawlJobId,
+          territoryId,
+          ocrMessage.spiderId || 'unknown',
+          'ocr_end',
+          result.status === 'success' ? 'completed' : 'failed',
+          undefined,
+          executionTimeMs,
+          result.error?.message,
+          ocrMessage.metadata?.spiderType
+        );
+      } else {
+        logger.warn('Skipping ocr_end telemetry: territoryId not available', {
+          jobId: ocrMessage.jobId,
+          pdfUrl: ocrMessage.pdfUrl,
+          crawlJobId
+        });
+      }
 
       // Handle failure results (OCR service returns failure, doesn't throw)
       if (result.status === 'failure') {
@@ -939,17 +1035,52 @@ export async function processOcrBatch(
       }
 
       // Track OCR failure
-      await telemetry.trackCityStep(
-        crawlJobId,
-        ocrMessage.territoryId,
-        ocrMessage.spiderId,
-        'ocr_end',
-        'failed',
-        undefined,
-        executionTimeMs,
-        errorMessage,
-        ocrMessage.metadata?.spiderType
-      );
+      // Get territoryId - try from message first, then fallback to gazette lookup
+      let territoryId = ocrMessage?.territoryId;
+      if (!territoryId || territoryId.trim() === '') {
+        try {
+          // Try to get territoryId from gazette in database
+          const gazetteResult = await db.select()
+            .from(schema.gazetteRegistry)
+            .where(eq(schema.gazetteRegistry.pdfUrl, ocrMessage.pdfUrl))
+            .limit(1);
+          
+          if (gazetteResult.length > 0) {
+            // Try to get territoryId from gazette_crawls
+            const crawlResult = await db.select()
+              .from(schema.gazetteCrawls)
+              .where(eq(schema.gazetteCrawls.gazetteId, gazetteResult[0].id))
+              .limit(1);
+            
+            if (crawlResult.length > 0) {
+              territoryId = crawlResult[0].territoryId;
+            }
+          }
+        } catch (lookupError) {
+          logger.warn('Failed to lookup territoryId from database', lookupError as Error);
+        }
+      }
+
+      // Only track telemetry if we have a valid territoryId
+      if (territoryId && territoryId.trim() !== '') {
+        await telemetry.trackCityStep(
+          crawlJobId,
+          territoryId,
+          ocrMessage.spiderId || 'unknown',
+          'ocr_end',
+          'failed',
+          undefined,
+          executionTimeMs,
+          errorMessage,
+          ocrMessage.metadata?.spiderType
+        );
+      } else {
+        logger.warn('Skipping telemetry record: territoryId not available', {
+          jobId: ocrMessage.jobId,
+          pdfUrl: ocrMessage.pdfUrl,
+          crawlJobId
+        });
+      }
 
       // Track the OCR error directly in database
       logger.info('🔥 ABOUT TO INSERT ERROR INTO DATABASE', {
@@ -1067,6 +1198,8 @@ export async function processOcrBatch(
       logger.error('Failed to send to analysis queue', error);
     }
   }
+
+  console.log('🔸 OCR Processor: Successful Results:', successfulResults.map((r) => ({pdfUrl: r.ocrMessage.pdfUrl, text: r.result?.extractedText?.substring(0, 100) || 'No text'})));
 
   logger.info(`OCR Processor: Batch processing completed`, {
     total: batch.messages.length,
