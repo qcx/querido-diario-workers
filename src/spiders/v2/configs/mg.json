@@ -218,7 +218,7 @@
       }
     ]
   },
-  { 
+  {
     "id": "mg_ribeirao_das_neves",
     "name": "Ribeirão das Neves - MG",
     "territoryId": "3154606",
@@ -929,7 +929,7 @@
     "name": "Poços de Caldas - MG",
     "territoryId": "3151800",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sigpub",
@@ -948,7 +948,7 @@
     "name": "Sabará - MG",
     "territoryId": "3156700",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "folhadesabara",
@@ -1114,7 +1114,7 @@
     "name": "Lavras - MG",
     "territoryId": "3138203",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituralavras",
@@ -1134,7 +1134,7 @@
     "name": "Nova Lima - MG",
     "territoryId": "3144805",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituranolalima",
@@ -1234,7 +1234,7 @@
     "name": "Itajubá - MG",
     "territoryId": "3132404",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituraitajuba",
@@ -1274,7 +1274,7 @@
     "name": "São João del-Rei - MG",
     "territoryId": "3162500",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturasaojoaodelrei",
@@ -1294,7 +1294,7 @@
     "name": "Patrocínio - MG",
     "territoryId": "3148103",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturapatrocinio",
@@ -1334,7 +1334,7 @@
     "name": "Unaí - MG",
     "territoryId": "3170404",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituraunai",
@@ -1373,7 +1373,7 @@
     "name": "Timóteo - MG",
     "territoryId": "3168705",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituratimoteo",
@@ -1393,7 +1393,7 @@
     "name": "Alfenas - MG",
     "territoryId": "3101607",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituraalfenas",
@@ -1464,7 +1464,7 @@
     "name": "Janaúba - MG",
     "territoryId": "3135100",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturajanauba",
@@ -1535,7 +1535,7 @@
     "name": "Cataguases - MG",
     "territoryId": "3115300",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituracataguases",
@@ -1555,7 +1555,7 @@
     "name": "Pedro Leopoldo - MG",
     "territoryId": "3149309",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sigpub",
@@ -1652,7 +1652,7 @@
     "name": "Congonhas - MG",
     "territoryId": "3118007",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituracongonhas",
@@ -1712,7 +1712,7 @@
     "name": "João Pinheiro - MG",
     "territoryId": "3136306",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturabomdespacho",
@@ -1792,7 +1792,7 @@
     "name": "Santa Rita do Sapucaí - MG",
     "territoryId": "3159605",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "instar",
@@ -1812,7 +1812,7 @@
     "name": "Andradas - MG",
     "territoryId": "3102605",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "instar",
@@ -1891,7 +1891,7 @@
     "name": "Capelinha - MG",
     "territoryId": "3112307",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "needs_review",
@@ -1910,7 +1910,7 @@
     "name": "Oliveira - MG",
     "territoryId": "3145604",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "instar",
@@ -1970,7 +1970,7 @@
     "name": "Caeté - MG",
     "territoryId": "3110004",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "needs_review",
@@ -2067,7 +2067,7 @@
     "name": "Sacramento - MG",
     "territoryId": "3156908",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "plenus_dioenet",
@@ -2126,7 +2126,7 @@
     "name": "Jacutinga - MG",
     "territoryId": "3134905",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diario_oficial_link",
@@ -2425,7 +2425,7 @@
     "name": "Mantena - MG",
     "territoryId": "3139607",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sigpub",
@@ -2562,7 +2562,7 @@
     "name": "Porteirinha - MG",
     "territoryId": "3152204",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "instar",
@@ -2582,7 +2582,7 @@
     "name": "Nanuque - MG",
     "territoryId": "3144300",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "instar",
@@ -2622,7 +2622,7 @@
     "name": "Guanhães - MG",
     "territoryId": "3128006",
     "stateCode": "MG",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituraguanhaes",
@@ -2733,6 +2733,246 @@
         "config": {
           "type": "needs_review",
           "reason": "Não foi possível localizar URL específica para diário oficial no site da prefeitura."
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_capitolio",
+    "name": "Capitólio - MG",
+    "territoryId": "3112802",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "cityName": "Capitólio"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_carmo_do_rio_claro",
+    "name": "Carmo do Rio Claro - MG",
+    "territoryId": "3114402",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "cityName": "Carmo do Rio Claro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_conquista",
+    "name": "Conquista - MG",
+    "territoryId": "3118205",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "cityName": "Conquista"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_delfinopolis",
+    "name": "Delfinópolis - MG",
+    "territoryId": "3121209",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "cityName": "Delfinópolis"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_estrela_dalva",
+    "name": "Estrela Dalva - MG",
+    "territoryId": "3124609",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "cityName": "Estrela Dalva"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_itabirinha",
+    "name": "Itabirinha - MG",
+    "territoryId": "3131802",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "cityName": "Itabirinha"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_jacui",
+    "name": "Jacuí - MG",
+    "territoryId": "3134806",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "cityName": "Jacuí"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_manga",
+    "name": "Manga - MG",
+    "territoryId": "3139300",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "cityName": "Manga"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_miradouro",
+    "name": "Miradouro - MG",
+    "territoryId": "3142106",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "cityName": "Miradouro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_perdigao",
+    "name": "Perdigão - MG",
+    "territoryId": "3149705",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "cityName": "Perdigão"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_rio_pomba",
+    "name": "Rio Pomba - MG",
+    "territoryId": "3155801",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "cityName": "Rio Pomba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mg_rodeiro",
+    "name": "Rodeiro - MG",
+    "territoryId": "3156304",
+    "stateCode": "MG",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amm-mg/",
+          "cityName": "Rodeiro"
         }
       }
     ]

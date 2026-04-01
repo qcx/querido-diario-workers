@@ -124,5 +124,47 @@
         }
       }
     ]
+  },
+  {
+    "id": "ac_senador_guiomard",
+    "name": "Senador Guiomard - AC",
+    "territoryId": "1200450",
+    "stateCode": "AC",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "acre",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "acre",
+          "cityName": "Senador Guiomard",
+          "power": "executive_legislative",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ac_xapuri",
+    "name": "Xapuri - AC",
+    "territoryId": "1200708",
+    "stateCode": "AC",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "acre",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "acre",
+          "cityName": "Xapuri",
+          "power": "executive_legislative",
+          "requiresClientRendering": true
+        }
+      }
+    ]
   }
 ]

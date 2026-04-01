@@ -24,7 +24,7 @@
     "name": "Jaboatão dos Guararapes - PE",
     "territoryId": "2607901",
     "stateCode": "PE",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturajaboatao",
@@ -364,7 +364,7 @@
     "name": "Araripina - PE",
     "territoryId": "2601102",
     "stateCode": "PE",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituraaraipina",
@@ -515,7 +515,7 @@
     "name": "Pesqueira - PE",
     "territoryId": "2610905",
     "stateCode": "PE",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sigpub",
@@ -765,7 +765,7 @@
     "name": "Timbaúba - PE",
     "territoryId": "2615300",
     "stateCode": "PE",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sigpub",
@@ -893,7 +893,7 @@
     "name": "Barreiros - PE",
     "territoryId": "2601409",
     "stateCode": "PE",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sigpub",
@@ -914,7 +914,7 @@
     "name": "Lajedo - PE",
     "territoryId": "2608800",
     "stateCode": "PE",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sigpub",
@@ -935,7 +935,7 @@
     "name": "Custódia - PE",
     "territoryId": "2605103",
     "stateCode": "PE",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sigpub",
@@ -1178,7 +1178,7 @@
     "name": "Sertânia - PE",
     "territoryId": "2614105",
     "stateCode": "PE",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sigpub",
@@ -1220,7 +1220,7 @@
     "name": "Catende - PE",
     "territoryId": "2604205",
     "stateCode": "PE",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sigpub",
@@ -1633,7 +1633,7 @@
     "name": "Inajá - PE",
     "territoryId": "2607000",
     "stateCode": "PE",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sigpub",
@@ -1649,5 +1649,25 @@
       }
     ],
     "notes": "Publicado na AMUPE (diariomunicipal.com.br/amupe). Cidade do Sertão do Moxotó."
+  },
+  {
+    "id": "pe_cumaru",
+    "name": "Cumaru - PE",
+    "territoryId": "2604908",
+    "stateCode": "PE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amupe/",
+          "cityName": "Cumaru"
+        }
+      }
+    ]
   }
 ]

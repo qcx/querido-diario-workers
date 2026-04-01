@@ -4,7 +4,7 @@
     "name": "Manaus - AM",
     "territoryId": "1302603",
     "stateCode": "AM",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "dommanaus",

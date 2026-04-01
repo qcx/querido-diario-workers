@@ -147,7 +147,7 @@
     "name": "Lucas do Rio Verde - MT",
     "territoryId": "5105259",
     "stateCode": "MT",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "amm-mt",
@@ -207,7 +207,7 @@
     "name": "Alta Floresta - MT",
     "territoryId": "5100250",
     "stateCode": "MT",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "amm-mt",
@@ -622,5 +622,62 @@
       }
     ],
     "notes": "Jornal Oficial AMM-MT (portal diariomunicipal.org)."
+  },
+  {
+    "id": "mt_araputanga",
+    "name": "Araputanga - MT",
+    "territoryId": "5101258",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Araputanga"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mt_castanheira",
+    "name": "Castanheira - MT",
+    "territoryId": "5102850",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Castanheira"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mt_nobres",
+    "name": "Nobres - MT",
+    "territoryId": "5105903",
+    "stateCode": "MT",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amm-mt",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "url": "https://amm.diariomunicipal.org/",
+          "cityName": "Nobres"
+        }
+      }
+    ]
   }
 ]

@@ -44,7 +44,7 @@
     "name": "Picos - PI",
     "territoryId": "2208007",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioficialdosmunicipiosappm",
@@ -65,7 +65,7 @@
     "name": "Piripiri - PI",
     "territoryId": "2208403",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diariooficialdasprefeituras",
@@ -86,7 +86,7 @@
     "name": "Floriano - PI",
     "territoryId": "2203909",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diariooficialdasprefeituras",
@@ -107,7 +107,7 @@
     "name": "Barras - PI",
     "territoryId": "2201200",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioficialdosmunicipiosappm",
@@ -128,7 +128,7 @@
     "name": "Altos - PI",
     "territoryId": "2200400",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diariooficialdasprefeituras",
@@ -149,7 +149,7 @@
     "name": "União - PI",
     "territoryId": "2211100",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diariooficialdasprefeituras",
@@ -170,7 +170,7 @@
     "name": "Campo Maior - PI",
     "territoryId": "2202208",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diariooficialdasprefeituras",
@@ -191,7 +191,7 @@
     "name": "José de Freitas - PI",
     "territoryId": "2205508",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diariooficialdasprefeituras",
@@ -212,7 +212,7 @@
     "name": "Esperantina - PI",
     "territoryId": "2203701",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioficialdosmunicipiosappm",
@@ -233,7 +233,7 @@
     "name": "São Raimundo Nonato - PI",
     "territoryId": "2210607",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioficialdosmunicipiosappm",
@@ -254,7 +254,7 @@
     "name": "Oeiras - PI",
     "territoryId": "2207009",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioficialdosmunicipiosappm",
@@ -275,7 +275,7 @@
     "name": "Pedro II - PI",
     "territoryId": "2207900",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioficialdosmunicipiosappm",
@@ -296,7 +296,7 @@
     "name": "Miguel Alves - PI",
     "territoryId": "2206209",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioficialdosmunicipiosappm",
@@ -317,7 +317,7 @@
     "name": "Luís Correia - PI",
     "territoryId": "2205706",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioficialdosmunicipiosappm",
@@ -338,7 +338,7 @@
     "name": "Piracuruca - PI",
     "territoryId": "2208304",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioficialdosmunicipiosappm",
@@ -359,7 +359,7 @@
     "name": "Bom Jesus - PI",
     "territoryId": "2201903",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioficialdosmunicipiosappm",
@@ -380,7 +380,7 @@
     "name": "Cocal - PI",
     "territoryId": "2202703",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioficialdosmunicipiosappm",
@@ -401,7 +401,7 @@
     "name": "Corrente - PI",
     "territoryId": "2202901",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioficialdosmunicipiosappm",
@@ -422,7 +422,7 @@
     "name": "Batalha - PI",
     "territoryId": "2201507",
     "stateCode": "PI",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioficialdosmunicipiosappm",
@@ -433,6 +433,48 @@
           "type": "diarioficialdosmunicipiosappm",
           "baseUrl": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php",
           "cityName": "Batalha",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_queimada_nova",
+    "name": "Queimada Nova - PI",
+    "territoryId": "2208650",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialdasprefeituras",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialdasprefeituras",
+          "baseUrl": "https://diariooficialdasprefeituras.org/piaui/buscas",
+          "cityName": "Queimada Nova",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "pi_sao_pedro_do_piaui",
+    "name": "São Pedro do Piauí - PI",
+    "territoryId": "2210508",
+    "stateCode": "PI",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialdasprefeituras",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialdasprefeituras",
+          "baseUrl": "https://diariooficialdasprefeituras.org/piaui/buscas",
+          "cityName": "São Pedro do Piauí",
           "requiresClientRendering": true
         }
       }

@@ -91,7 +91,7 @@
     "name": "São Cristóvão - SE",
     "territoryId": "2806701",
     "stateCode": "SE",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "iose",
@@ -222,7 +222,7 @@
     "name": "Itabaianinha - SE",
     "territoryId": "2803005",
     "stateCode": "SE",
-    "active": true,
+    "active": false,
     "notes": "Usa plataforma MunicípioOnline/3Tecnos (municipioonline.com.br/se/prefeitura/itabaianinha). PDFs armazenados no Google Drive. Spider funciona com HTTP fallback quando browser não está disponível.",
     "spiders": [
       {
@@ -245,7 +245,7 @@
     "name": "Itaporanga d'Ajuda - SE",
     "territoryId": "2803203",
     "stateCode": "SE",
-    "active": true,
+    "active": false,
     "notes": "Usa plataforma MunicípioOnline/3Tecnos (municipioonline.com.br/se/prefeitura/itaporangadajuda). Município da região metropolitana de Aracaju.",
     "spiders": [
       {
@@ -289,7 +289,7 @@
     "name": "Capela - SE",
     "territoryId": "2801306",
     "stateCode": "SE",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "3tecnos",
@@ -311,7 +311,7 @@
     "name": "Canindé de São Francisco - SE",
     "territoryId": "2801207",
     "stateCode": "SE",
-    "active": true,
+    "active": false,
     "notes": "Usa plataforma MunicípioOnline/3Tecnos (municipioonline.com.br/se/prefeitura/canindedesaofrancisco). Município do sertão, próximo aos Canyons do Xingó.",
     "spiders": [
       {
@@ -334,7 +334,7 @@
     "name": "Propriá - SE",
     "territoryId": "2805703",
     "stateCode": "SE",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "3tecnos",
@@ -356,7 +356,7 @@
     "name": "Porto da Folha - SE",
     "territoryId": "2805604",
     "stateCode": "SE",
-    "active": true,
+    "active": false,
     "notes": "Usa plataforma Ágape Sistemas (agportal.agapesistemas.com.br/DiarioOficial/?alias=pmportofolha). Município do alto sertão sergipano, às margens do Rio São Francisco.",
     "spiders": [
       {

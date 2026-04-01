@@ -465,7 +465,7 @@
     "name": "Cotia - SP",
     "territoryId": "3513009",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituracotia",
@@ -712,7 +712,7 @@
     "name": "Mairiporã - SP",
     "territoryId": "3528809",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "dosp",
@@ -1675,7 +1675,7 @@
     "name": "Araraquara - SP",
     "territoryId": "3503208",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "onedom",
@@ -1695,7 +1695,7 @@
     "name": "Pindamonhangaba - SP",
     "territoryId": "3538006",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "onedom",
@@ -1755,7 +1755,7 @@
     "name": "Americana - SP",
     "territoryId": "3501608",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituraamericana",
@@ -1793,7 +1793,7 @@
     "name": "Cachoeira Paulista - SP",
     "territoryId": "3508504",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "dosp",
@@ -1816,7 +1816,7 @@
     "name": "São Miguel Arcanjo - SP",
     "territoryId": "3550001",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "dosp",
@@ -1839,7 +1839,7 @@
     "name": "Presidente Prudente - SP",
     "territoryId": "3541406",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturapresidenteprudente",
@@ -1859,7 +1859,7 @@
     "name": "Lorena - SP",
     "territoryId": "3527207",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "dosp",
@@ -1882,7 +1882,7 @@
     "name": "Santa Bárbara d'Oeste - SP",
     "territoryId": "3545803",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "dosp",
@@ -2418,7 +2418,7 @@
     "name": "Cravinhos - SP",
     "territoryId": "3513108",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "imprensaoficialmunicipal",
@@ -2627,7 +2627,7 @@
     "name": "Cruzeiro - SP",
     "territoryId": "3513405",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "imprensaoficialmunicipal",
@@ -2665,7 +2665,7 @@
     "name": "Jacareí - SP",
     "territoryId": "3524402",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "geosiap_api",
@@ -2685,7 +2685,7 @@
     "name": "Arujá - SP",
     "territoryId": "3503901",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "legislacaodigital",
@@ -2704,7 +2704,7 @@
     "name": "Araras - SP",
     "territoryId": "3503307",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "assistech",
@@ -2799,7 +2799,7 @@
     "name": "Santa Cruz das Palmeiras - SP",
     "territoryId": "3546306",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituraitirapua",
@@ -3236,7 +3236,7 @@
     "name": "Poá - SP",
     "territoryId": "3539806",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "instar",
@@ -3335,7 +3335,7 @@
     "name": "Iperó - SP",
     "territoryId": "3521002",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "ipero",
@@ -3596,7 +3596,7 @@
     "name": "Tatuí - SP",
     "territoryId": "3554003",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituratatatui",
@@ -3615,7 +3615,7 @@
     "name": "Mogi Mirim - SP",
     "territoryId": "3530805",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituramogimirim",
@@ -3805,7 +3805,7 @@
     "name": "Capivari - SP",
     "territoryId": "3510401",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituracapivari",
@@ -3941,7 +3941,7 @@
     "name": "Santa Isabel - SP",
     "territoryId": "3546801",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "instar",
@@ -4153,7 +4153,7 @@
     "name": "Suzano - SP",
     "territoryId": "3552502",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturasuzano",
@@ -4267,7 +4267,7 @@
     "name": "Embu das Artes - SP",
     "territoryId": "3515004",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "instar",
@@ -4393,7 +4393,7 @@
     "name": "Santana de Parnaíba - SP",
     "territoryId": "3547304",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "portalcomunicacao",
@@ -4564,7 +4564,7 @@
     "name": "Adamantina - SP",
     "territoryId": "3500105",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "dosp",
@@ -4583,7 +4583,7 @@
     "name": "Barrinha - SP",
     "territoryId": "3505609",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "dosp",
@@ -4602,7 +4602,7 @@
     "name": "Juquitiba - SP",
     "territoryId": "3526209",
     "stateCode": "SP",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "dosp",
@@ -4631,6 +4631,104 @@
         "config": {
           "type": "custom",
           "note": "URL do diário oficial não identificada na varredura. Requer investigação manual."
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_altinopolis",
+    "name": "Altinópolis - SP",
+    "territoryId": "3501004",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/altinopolis"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_analandia",
+    "name": "Analândia - SP",
+    "territoryId": "3502002",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "imprensaoficialmunicipal",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "imprensaoficialmunicipal",
+          "baseUrl": "https://imprensaoficialmunicipal.com.br/analandia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_bilac",
+    "name": "Bilac - SP",
+    "territoryId": "3506409",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "govbrdioenet",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "govbrdioenet",
+          "baseUrl": "https://www.govbrdioenet.com.br/list/bilac",
+          "citySlug": "bilac"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_campos_novos_paulista",
+    "name": "Campos Novos Paulista - SP",
+    "territoryId": "3509809",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "govbrdioenet",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "govbrdioenet",
+          "baseUrl": "https://www.govbrdioenet.com.br/list/campos-novos-paulista",
+          "citySlug": "campos-novos-paulista"
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_piratininga",
+    "name": "Piratininga - SP",
+    "territoryId": "3539400",
+    "stateCode": "SP",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "govbrdioenet",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "govbrdioenet",
+          "baseUrl": "https://www.govbrdioenet.com.br/list/piratininga",
+          "citySlug": "piratininga"
         }
       }
     ]
