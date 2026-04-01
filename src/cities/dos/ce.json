@@ -1,0 +1,741 @@
+{
+  "name": "Ceará",
+  "cities": [
+    {
+      "name": "Abaiara",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aprece/"
+    },
+    {
+      "name": "Acarape",
+      "official_gazette_url": "https://www.acarape.ce.gov.br/404"
+    },
+    {
+      "name": "Acaraú",
+      "official_gazette_url": "https://www.acarau.ce.gov.br/404"
+    },
+    {
+      "name": "Acopiara",
+      "official_gazette_url": "https://www.acopiara.ce.gov.br/404"
+    },
+    {
+      "name": "Aiuaba",
+      "official_gazette_url": "https://www.aiuaba.ce.gov.br/404"
+    },
+    {
+      "name": "Alcântaras",
+      "official_gazette_url": "https://diario.alcantaras.ce.gov.br/"
+    },
+    {
+      "name": "Altaneira",
+      "official_gazette_url": "https://www.altaneira.ce.gov.br/404"
+    },
+    {
+      "name": "Alto Santo",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aprece/"
+    },
+    {
+      "name": "Amontada",
+      "official_gazette_url": "https://www.amontada.ce.gov.br/404"
+    },
+    {
+      "name": "Antonina do Norte",
+      "official_gazette_url": "https://antoninadonorte.ce.gov.br/wp-content/uploads/2022/04/DIARIO-OFICIAL.pdf"
+    },
+    {
+      "name": "Apuiarés",
+      "official_gazette_url": "https://www.apuiares.ce.gov.br/404"
+    },
+    {
+      "name": "Aquiraz",
+      "official_gazette_url": "https://www.aquiraz.ce.gov.br/404"
+    },
+    {
+      "name": "Aracati",
+      "official_gazette_url": "https://aracati.ce.gov.br/404"
+    },
+    {
+      "name": "Aracoiaba",
+      "official_gazette_url": "https://www.aracoiaba.ce.gov.br/404"
+    },
+    {
+      "name": "Ararendá",
+      "official_gazette_url": "https://www.ararenda.ce.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Araripe",
+      "official_gazette_url": "https://araripe.ce.gov.br/transparencia/"
+    },
+    {
+      "name": "Aratuba",
+      "official_gazette_url": "https://www.aratuba.ce.gov.br/404"
+    },
+    {
+      "name": "Arneiroz",
+      "official_gazette_url": "https://www.arneiroz.ce.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Assaré",
+      "official_gazette_url": "https://www.assare.ce.gov.br/404"
+    },
+    {
+      "name": "Aurora",
+      "official_gazette_url": "https://www.aurora.ce.gov.br"
+    },
+    {
+      "name": "Baixio",
+      "official_gazette_url": "https://www.baixio.ce.gov.br/404"
+    },
+    {
+      "name": "Banabuiú",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Barbalha",
+      "official_gazette_url": "https://www.barbalha.ce.gov.br/404"
+    },
+    {
+      "name": "Barreira",
+      "official_gazette_url": "https://www.barreira.ce.gov.br/404"
+    },
+    {
+      "name": "Barro",
+      "official_gazette_url": "https://www.barro.ce.gov.br/404"
+    },
+    {
+      "name": "Barroquinha",
+      "official_gazette_url": "https://barroquinha.ce.gov.br/publicacoes/"
+    },
+    {
+      "name": "Baturité",
+      "official_gazette_url": "https://www.baturite.ce.gov.br/404"
+    },
+    {
+      "name": "Beberibe",
+      "official_gazette_url": "https://www.beberibe.ce.gov.br/404"
+    },
+    {
+      "name": "Bela Cruz",
+      "official_gazette_url": "https://www.belacruz.ce.gov.br/404"
+    },
+    {
+      "name": "Boa Viagem",
+      "official_gazette_url": "https://www.boaviagem.ce.gov.br/404"
+    },
+    {
+      "name": "Brejo Santo",
+      "official_gazette_url": "https://www.brejosanto.ce.gov.br/transparencia/"
+    },
+    {
+      "name": "Camocim",
+      "official_gazette_url": "https://camocim.ce.gov.br/publicacoes/"
+    },
+    {
+      "name": "Campos Sales",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aprece/pesquisar"
+    },
+    {
+      "name": "Canindé",
+      "official_gazette_url": "https://www.caninde.ce.gov.br"
+    },
+    {
+      "name": "Capistrano",
+      "official_gazette_url": "https://www.capistrano.ce.gov.br/404"
+    },
+    {
+      "name": "Caridade",
+      "official_gazette_url": "https://www.caridade.ce.gov.br/404"
+    },
+    {
+      "name": "Cariré",
+      "official_gazette_url": "https://www.carire.ce.gov.br/404"
+    },
+    {
+      "name": "Caririaçu",
+      "official_gazette_url": "https://www.caririacu.ce.gov.br"
+    },
+    {
+      "name": "Cariús",
+      "official_gazette_url": "https://carius.ce.gov.br/"
+    },
+    {
+      "name": "Carnaubal",
+      "official_gazette_url": "https://www.carnaubal.ce.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Cascavel",
+      "official_gazette_url": "https://www.cascavel.ce.gov.br/404"
+    },
+    {
+      "name": "Catarina",
+      "official_gazette_url": "https://www.catarina.ce.gov.br/404"
+    },
+    {
+      "name": "Catunda",
+      "official_gazette_url": "https://www.catunda.ce.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Caucaia",
+      "official_gazette_url": "https://www.caucaia.ce.gov.br"
+    },
+    {
+      "name": "Cedro",
+      "official_gazette_url": "https://www.cedro.ce.gov.br"
+    },
+    {
+      "name": "Chaval",
+      "official_gazette_url": "https://chaval.ce.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Choró",
+      "official_gazette_url": "https://www.choro.ce.gov.br/404"
+    },
+    {
+      "name": "Chorozinho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Coreaú",
+      "official_gazette_url": "https://www.coreau.ce.gov.br/404"
+    },
+    {
+      "name": "Crateús",
+      "official_gazette_url": "https://www.crateus.ce.gov.br"
+    },
+    {
+      "name": "Crato",
+      "official_gazette_url": "https://diariooficial.crato.ce.gov.br/"
+    },
+    {
+      "name": "Croatá",
+      "official_gazette_url": "https://www.croata.ce.gov.br/"
+    },
+    {
+      "name": "Cruz",
+      "official_gazette_url": "https://prefeitura.cruz.ce.gov.br/transparencia-municipal/publicacoes-oficiais/"
+    },
+    {
+      "name": "Deputado Irapuan Pinheiro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ererê",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aprece/pesquisar"
+    },
+    {
+      "name": "Eusébio",
+      "official_gazette_url": "https://www.eusebio.ce.gov.br/404"
+    },
+    {
+      "name": "Farias Brito",
+      "official_gazette_url": "https://www.fariasbrito.ce.gov.br/publicacoes/"
+    },
+    {
+      "name": "Forquilha",
+      "official_gazette_url": "https://www.forquilha.ce.gov.br/404"
+    },
+    {
+      "name": "Fortaleza",
+      "official_gazette_url": "https://www.fortaleza.ce.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Fortim",
+      "official_gazette_url": "https://www.fortim.ce.gov.br/404"
+    },
+    {
+      "name": "Frecheirinha",
+      "official_gazette_url": "https://www.frecheirinha.ce.gov.br/diariooficial.php"
+    },
+    {
+      "name": "General Sampaio",
+      "official_gazette_url": "https://www.generalsampaio.ce.gov.br"
+    },
+    {
+      "name": "Graça",
+      "official_gazette_url": "https://www.graca.ce.gov.br/404"
+    },
+    {
+      "name": "Granja",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aprece/"
+    },
+    {
+      "name": "Granjeiro",
+      "official_gazette_url": "https://www.granjeiro.ce.gov.br/404"
+    },
+    {
+      "name": "Groaíras",
+      "official_gazette_url": "https://www.groairas.ce.gov.br/404"
+    },
+    {
+      "name": "Guaiúba",
+      "official_gazette_url": "https://www.guaiuba.ce.gov.br/404"
+    },
+    {
+      "name": "Guaraciaba do Norte",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aprece/pesquisar?busca_avancada%5Bpage%5D=1&busca_avancada%5BentidadeUsuaria%5D=896&busca_avancada%5Bnome_orgao%5D=&busca_avancada%5Btitulo%5D=&busca_avancada%5Btexto%5D=&busca_avancada%5BdataInicio%5D=10/02/2025&busca_avancada%5BdataFim%5D=10/02/2025&busca_avancada%5BEnviar%5D=&busca_avancada%5B_token%5D=6f4a327d4.SB87Rq6-3DxCriNRJyb1BZ0dzwA6xB8BvImsh5pxch8.AnQMFdfrk3gS_nIDcE-0WvN2p3Vg9i1R5OXpzu8EImwvZW0ewfm2BRPmGw"
+    },
+    {
+      "name": "Guaramiranga",
+      "official_gazette_url": "https://www.guaramiranga.ce.gov.br/404"
+    },
+    {
+      "name": "Hidrolândia",
+      "official_gazette_url": "https://www.hidrolandia.ce.gov.br"
+    },
+    {
+      "name": "Horizonte",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/horizonte"
+    },
+    {
+      "name": "Ibaretama",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ibiapina",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aprece/pesquisar?entidadeUsuaria=Prefeitura+Municipal+de+Ibiapina&titulo=&nome_orgao=&dataInicio=01%2F01%2F2017&dataFim=31%2F12%2F2020&Enviar=&_token=tGtGq-U3Hnufbl5CZAoXV0MwcSfoKkJUVVqv6aSM43w"
+    },
+    {
+      "name": "Ibicuitinga",
+      "official_gazette_url": "https://www.ibicuitinga.ce.gov.br/404"
+    },
+    {
+      "name": "Icapuí",
+      "official_gazette_url": "https://www.icapui.ce.gov.br/404"
+    },
+    {
+      "name": "Icó",
+      "official_gazette_url": "https://www.ico.ce.gov.br/404"
+    },
+    {
+      "name": "Iguatu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Independência",
+      "official_gazette_url": "https://www.independencia.ce.gov.br/404"
+    },
+    {
+      "name": "Ipaporanga",
+      "official_gazette_url": "https://www.ipaporanga.ce.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Ipaumirim",
+      "official_gazette_url": "https://www.ipaumirim.ce.gov.br/404"
+    },
+    {
+      "name": "Ipu",
+      "official_gazette_url": "https://www.ipu.ce.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Ipueiras",
+      "official_gazette_url": "https://www.ipueiras.ce.gov.br/404"
+    },
+    {
+      "name": "Iracema",
+      "official_gazette_url": "https://www.iracema.ce.gov.br/404"
+    },
+    {
+      "name": "Irauçuba",
+      "official_gazette_url": "https://www.iraucuba.ce.gov.br/404"
+    },
+    {
+      "name": "Itaiçaba",
+      "official_gazette_url": "https://www.itaicaba.ce.gov.br/404"
+    },
+    {
+      "name": "Itaitinga",
+      "official_gazette_url": "https://www.itaitinga.ce.gov.br"
+    },
+    {
+      "name": "Itapajé",
+      "official_gazette_url": "https://www.itapaje.ce.gov.br/404"
+    },
+    {
+      "name": "Itapipoca",
+      "official_gazette_url": "https://www.itapipoca.ce.gov.br/404"
+    },
+    {
+      "name": "Itapiúna",
+      "official_gazette_url": "https://www.itapiuna.ce.gov.br/404"
+    },
+    {
+      "name": "Itarema",
+      "official_gazette_url": "https://www.itarema.ce.gov.br/404"
+    },
+    {
+      "name": "Itatira",
+      "official_gazette_url": "https://www.itatira.ce.gov.br/404"
+    },
+    {
+      "name": "Jaguaretama",
+      "official_gazette_url": "https://www.jaguaretama.ce.gov.br/404"
+    },
+    {
+      "name": "Jaguaribara",
+      "official_gazette_url": "https://www.jaguaribara.ce.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Jaguaribe",
+      "official_gazette_url": "https://www.jaguaribe.ce.gov.br"
+    },
+    {
+      "name": "Jaguaruana",
+      "official_gazette_url": "https://www.jaguaruana.ce.gov.br/404"
+    },
+    {
+      "name": "Jardim",
+      "official_gazette_url": "https://www.jardim.ce.gov.br/404"
+    },
+    {
+      "name": "Jati",
+      "official_gazette_url": "https://jati.ce.gov.br/transparencia/"
+    },
+    {
+      "name": "Jijoca de Jericoaroara",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Juazeiro do Norte",
+      "official_gazette_url": "https://www.juazeirodonorte.ce.gov.br"
+    },
+    {
+      "name": "Jucás",
+      "official_gazette_url": "https://jucas.ce.gov.br/wp-content/uploads/2026/03/PUBLICACOES.pdf"
+    },
+    {
+      "name": "Lavras da Mangabeira",
+      "official_gazette_url": "https://www.lavrasdamangabeira.ce.gov.br/404"
+    },
+    {
+      "name": "Limoeiro do Norte",
+      "official_gazette_url": "https://www.limoeirodonorte.ce.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Madalena",
+      "official_gazette_url": "https://www.madalena.ce.gov.br/404"
+    },
+    {
+      "name": "Maracanaú",
+      "official_gazette_url": "https://www.maracanau.ce.gov.br/download/diario-oficial-do-estado-30-05-2020/"
+    },
+    {
+      "name": "Maranguape",
+      "official_gazette_url": "https://www.maranguape.ce.gov.br/404"
+    },
+    {
+      "name": "Marco",
+      "official_gazette_url": "https://www.marco.ce.gov.br/404"
+    },
+    {
+      "name": "Martinópole",
+      "official_gazette_url": "https://www.martinopole.ce.gov.br/404"
+    },
+    {
+      "name": "Massapê",
+      "official_gazette_url": "https://www.massape.ce.gov.br/404"
+    },
+    {
+      "name": "Mauriti",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aprece/"
+    },
+    {
+      "name": "Meruoca",
+      "official_gazette_url": "https://www.meruoca.ce.gov.br/404"
+    },
+    {
+      "name": "Milagres",
+      "official_gazette_url": "https://www.milagres.ce.gov.br/diario.php"
+    },
+    {
+      "name": "Milhã",
+      "official_gazette_url": "https://www.milha.ce.gov.br/404"
+    },
+    {
+      "name": "Miraíma",
+      "official_gazette_url": "https://www.miraima.ce.gov.br/404"
+    },
+    {
+      "name": "Missão Velha",
+      "official_gazette_url": "https://missaovelha.ce.gov.br/transparencia/"
+    },
+    {
+      "name": "Mombaça",
+      "official_gazette_url": "https://www.mombaca.ce.gov.br/404"
+    },
+    {
+      "name": "Monsenhor Tabosa",
+      "official_gazette_url": "https://www.monsenhortabosa.ce.gov.br/404"
+    },
+    {
+      "name": "Morada Nova",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aprece/"
+    },
+    {
+      "name": "Moraújo",
+      "official_gazette_url": "https://www.moraujo.ce.gov.br/publicacoes"
+    },
+    {
+      "name": "Morrinhos",
+      "official_gazette_url": "https://www.morrinhos.ce.gov.br/404"
+    },
+    {
+      "name": "Mucambo",
+      "official_gazette_url": "https://mucambo.ce.gov.br/publicacoes/"
+    },
+    {
+      "name": "Mulungu",
+      "official_gazette_url": "https://www.mulungu.ce.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Nova Olinda",
+      "official_gazette_url": "https://novaolinda.ce.gov.br/transparencia/"
+    },
+    {
+      "name": "Nova Russas",
+      "official_gazette_url": "https://www.novarussas.ce.gov.br/404"
+    },
+    {
+      "name": "Novo Oriente",
+      "official_gazette_url": "https://www.novooriente.ce.gov.br/404"
+    },
+    {
+      "name": "Ocara",
+      "official_gazette_url": "https://www.ocara.ce.gov.br/404"
+    },
+    {
+      "name": "Orós",
+      "official_gazette_url": "https://www.oros.ce.gov.br/404"
+    },
+    {
+      "name": "Pacajus",
+      "official_gazette_url": "https://www.pacajus.ce.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Pacatuba",
+      "official_gazette_url": "https://www.pacatuba.ce.gov.br/404"
+    },
+    {
+      "name": "Pacoti",
+      "official_gazette_url": "https://www.pacoti.ce.gov.br/404"
+    },
+    {
+      "name": "Pacujá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Palhano",
+      "official_gazette_url": "https://www.palhano.ce.gov.br/404"
+    },
+    {
+      "name": "Palmácia",
+      "official_gazette_url": "https://www.palmacia.ce.gov.br/404"
+    },
+    {
+      "name": "Paracuru",
+      "official_gazette_url": "https://www.paracuru.ce.gov.br/404"
+    },
+    {
+      "name": "Paraipaba",
+      "official_gazette_url": "https://www.paraipaba.ce.gov.br/404"
+    },
+    {
+      "name": "Parambu",
+      "official_gazette_url": "https://www.parambu.ce.gov.br/transparencia-2/transparencia/diario-oficial"
+    },
+    {
+      "name": "Paramoti",
+      "official_gazette_url": "https://www.paramoti.ce.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Pedra Branca",
+      "official_gazette_url": "https://www.pedrabranca.ce.gov.br/404"
+    },
+    {
+      "name": "Penaforte",
+      "official_gazette_url": "https://penaforte.ce.gov.br/publicacoes/"
+    },
+    {
+      "name": "Pentecoste",
+      "official_gazette_url": "https://www.pentecoste.ce.gov.br/404"
+    },
+    {
+      "name": "Pereiro",
+      "official_gazette_url": "https://www.pereiro.ce.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Pindoretama",
+      "official_gazette_url": "https://www.pindoretama.ce.gov.br/404"
+    },
+    {
+      "name": "Piquet Carneiro",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aprece/"
+    },
+    {
+      "name": "Pires Ferreira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Poranga",
+      "official_gazette_url": "https://www.poranga.ce.gov.br/404"
+    },
+    {
+      "name": "Porteiras",
+      "official_gazette_url": "https://porteiras.ce.gov.br/transparencia-prefeitura/"
+    },
+    {
+      "name": "Potengi",
+      "official_gazette_url": "https://www.potengi.ce.gov.br/404"
+    },
+    {
+      "name": "Potiretama",
+      "official_gazette_url": "https://www.potiretama.ce.gov.br/404"
+    },
+    {
+      "name": "Quiterianópolis",
+      "official_gazette_url": "https://www.quiterianopolis.ce.gov.br/404"
+    },
+    {
+      "name": "Quixadá",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aprece/pesquisar"
+    },
+    {
+      "name": "Quixelô",
+      "official_gazette_url": "https://www.quixelo.ce.gov.br/404"
+    },
+    {
+      "name": "Quixeramobim",
+      "official_gazette_url": "https://www.quixeramobim.ce.gov.br/404"
+    },
+    {
+      "name": "Quixeré",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aprece/"
+    },
+    {
+      "name": "Redenção",
+      "official_gazette_url": "https://www.redencao.ce.gov.br/404"
+    },
+    {
+      "name": "Reriutaba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Russas",
+      "official_gazette_url": "https://www.russas.ce.gov.br/404"
+    },
+    {
+      "name": "Saboeiro",
+      "official_gazette_url": "https://www.saboeiro.ce.gov.br/404"
+    },
+    {
+      "name": "Salitre",
+      "official_gazette_url": "https://www.salitre.ce.gov.br/404"
+    },
+    {
+      "name": "Santa Quitéria",
+      "official_gazette_url": "https://diario.santaquiteria.ce.gov.br/"
+    },
+    {
+      "name": "Santana do Acaraú",
+      "official_gazette_url": "https://www.santanadoacarau.ce.gov.br/404"
+    },
+    {
+      "name": "Santana do Cariri",
+      "official_gazette_url": "https://www.santanadocariri.ce.gov.br/404"
+    },
+    {
+      "name": "São Benedito",
+      "official_gazette_url": "https://www.saobenedito.ce.gov.br/diariooficial.php"
+    },
+    {
+      "name": "São Gonçalo do Amarante",
+      "official_gazette_url": "https://www.saogoncalodoamarante.ce.gov.br/404"
+    },
+    {
+      "name": "São João do Jaguaribe",
+      "official_gazette_url": "https://www.saojoaodojaguaribe.ce.gov.br/404"
+    },
+    {
+      "name": "São Luís do Curu",
+      "official_gazette_url": "https://www.saoluisdocuru.ce.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Senador Pompeu",
+      "official_gazette_url": "https://www.senadorpompeu.ce.gov.br/404"
+    },
+    {
+      "name": "Senador Sá",
+      "official_gazette_url": "https://www.senadorsa.ce.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Sobral",
+      "official_gazette_url": "https://www.sobral.ce.gov.br/diario/pesquisa/index"
+    },
+    {
+      "name": "Solonópole",
+      "official_gazette_url": "https://www.solonopole.ce.gov.br/404"
+    },
+    {
+      "name": "Tabuleiro do Norte",
+      "official_gazette_url": "https://www.tabuleirodonorte.ce.gov.br/404"
+    },
+    {
+      "name": "Tamboril",
+      "official_gazette_url": "https://www.tamboril.ce.gov.br/404"
+    },
+    {
+      "name": "Tarrafas",
+      "official_gazette_url": "https://www.tarrafas.ce.gov.br/publicacoes"
+    },
+    {
+      "name": "Tauá",
+      "official_gazette_url": "https://www.taua.ce.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Tejuçuoca",
+      "official_gazette_url": "https://www.tejucuoca.ce.gov.br/404"
+    },
+    {
+      "name": "Tianguá",
+      "official_gazette_url": "https://www.tiangua.ce.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Trairi",
+      "official_gazette_url": "https://www.trairi.ce.gov.br/404"
+    },
+    {
+      "name": "Tururu",
+      "official_gazette_url": "https://www.tururu.ce.gov.br/404"
+    },
+    {
+      "name": "Ubajara",
+      "official_gazette_url": "https://www.ubajara.ce.gov.br/404"
+    },
+    {
+      "name": "Umari",
+      "official_gazette_url": "https://www.umari.ce.gov.br/404"
+    },
+    {
+      "name": "Umirim",
+      "official_gazette_url": "https://www.umirim.ce.gov.br/publicacoes"
+    },
+    {
+      "name": "Uruburetama",
+      "official_gazette_url": "https://www.uruburetama.ce.gov.br/404"
+    },
+    {
+      "name": "Uruoca",
+      "official_gazette_url": "https://www.uruoca.ce.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Varjota",
+      "official_gazette_url": "https://www.varjota.ce.gov.br/404"
+    },
+    {
+      "name": "Várzea Alegre",
+      "official_gazette_url": "https://www.varzeaalegre.ce.gov.br/404"
+    },
+    {
+      "name": "Viçosa do Ceará",
+      "official_gazette_url": null
+    }
+  ]
+}

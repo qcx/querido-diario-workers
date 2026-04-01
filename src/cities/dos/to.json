@@ -1,0 +1,561 @@
+{
+  "name": "Tocantins",
+  "cities": [
+    {
+      "name": "Abreulândia",
+      "official_gazette_url": "https://www.abreulandia.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Aguiarnópolis",
+      "official_gazette_url": "https://diariooficial.aguiarnopolis.to.gov.br/"
+    },
+    {
+      "name": "Aliança do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Almas",
+      "official_gazette_url": "https://www.almas.to.gov.br/transparencia"
+    },
+    {
+      "name": "Alvorada",
+      "official_gazette_url": "https://alvorada.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Ananás",
+      "official_gazette_url": "https://www.ananas.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Angico",
+      "official_gazette_url": "https://www.angico.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Aparecida do Rio Negro",
+      "official_gazette_url": "https://api-pmaparecida.barcodigital.com.br"
+    },
+    {
+      "name": "Aragominas",
+      "official_gazette_url": "https://diariooficial.aragominas.to.gov.br/"
+    },
+    {
+      "name": "Araguacema",
+      "official_gazette_url": "https://www.araguacema.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Araguaçu",
+      "official_gazette_url": "https://araguacu.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Araguaína",
+      "official_gazette_url": "https://api-araguaina.barcodigital.com.br"
+    },
+    {
+      "name": "Araguanã",
+      "official_gazette_url": "https://www.araguana.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Araguatins",
+      "official_gazette_url": "https://www.araguatins.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Arapoema",
+      "official_gazette_url": "https://arapoema.to.gov.br/transparencia/documentos-covid-19/"
+    },
+    {
+      "name": "Arraias",
+      "official_gazette_url": "https://arraias.to.gov.br/carta-de-servicos/diario-oficial-do-municipio/"
+    },
+    {
+      "name": "Augustinópolis",
+      "official_gazette_url": "https://diario.augustinopolis.to.gov.br/"
+    },
+    {
+      "name": "Aurora do Tocantins",
+      "official_gazette_url": "https://www.auroradotocantins.to.gov.br/transparencia"
+    },
+    {
+      "name": "Axixá do Tocantins",
+      "official_gazette_url": "https://www.axixa.to.gov.br"
+    },
+    {
+      "name": "Babaçulândia",
+      "official_gazette_url": "https://www.babaculandia.to.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Bandeirantes do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Barra do Ouro",
+      "official_gazette_url": "https://www.barradoouro.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Barrolândia",
+      "official_gazette_url": "https://www.barrolandia.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Bernardo Sayão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Jesus do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Brasilândia do Tocantins",
+      "official_gazette_url": "https://www.brasilandiadotocantins.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Brejinho de Nazaré",
+      "official_gazette_url": "https://brejinhodenazare.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Buriti do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cachoeirinha",
+      "official_gazette_url": "https://www.cachoeirinha.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Campos Lindos",
+      "official_gazette_url": "https://camposlindos.diariooficialbr.com.br/"
+    },
+    {
+      "name": "Cariri do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Carmolândia",
+      "official_gazette_url": "https://www.carmolandia.to.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Carrasco Bonito",
+      "official_gazette_url": "https://www.carrascobonito.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Caseara",
+      "official_gazette_url": "https://caseara.diariooficialbr.com.br/"
+    },
+    {
+      "name": "Centenário",
+      "official_gazette_url": "https://api-centenario.barcodigital.com.br"
+    },
+    {
+      "name": "Chapada da Natividade",
+      "official_gazette_url": "https://chapadadanatividade.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Chapada de Areia",
+      "official_gazette_url": "https://www.chapadadeareia.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Colinas do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Colméia",
+      "official_gazette_url": "https://www.colmeia.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Combinado",
+      "official_gazette_url": "https://combinado.to.gov.br/transparencia/informacoes-institucionais/atos-normativos-proprios-diario-oficial-eletronico"
+    },
+    {
+      "name": "Conceição do Tocantins",
+      "official_gazette_url": "https://conceicaodotocantins.to.gov.br/carta-de-servicos/diario-oficial-do-municipio/"
+    },
+    {
+      "name": "Couto Magalhães",
+      "official_gazette_url": "https://www.coutomagalhaes.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Cristalândia",
+      "official_gazette_url": "https://diario.cristalandia.to.gov.br/"
+    },
+    {
+      "name": "Crixás do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Darcinópolis",
+      "official_gazette_url": "https://www.darcinopolis.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Dianópolis",
+      "official_gazette_url": "https://www.dianopolis.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Divinópolis do Tocantins",
+      "official_gazette_url": "https://api-divinopolis.barcodigital.com.br"
+    },
+    {
+      "name": "Dois Irmãos do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Dueré",
+      "official_gazette_url": "https://www.duere.to.gov.br/servico/diario-oficial/"
+    },
+    {
+      "name": "Esperantina",
+      "official_gazette_url": "https://www.esperantina.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Fátima",
+      "official_gazette_url": "https://www.fatima.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Figueirópolis",
+      "official_gazette_url": "https://figueiropolis.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Filadélfia",
+      "official_gazette_url": "https://www.filadelfia.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Formoso do Araguaia",
+      "official_gazette_url": "https://formosodoaraguaia.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Fortaleza do Tabocão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Goianorte",
+      "official_gazette_url": "https://www.goianorte.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Goiatins",
+      "official_gazette_url": "https://goiatins.diariooficialbr.com.br/"
+    },
+    {
+      "name": "Guaraí",
+      "official_gazette_url": "https://guarai.to.gov.br/portal/diario-oficial/"
+    },
+    {
+      "name": "Gurupi",
+      "official_gazette_url": "https://diariooficial.gurupi.to.gov.br"
+    },
+    {
+      "name": "Ipueiras",
+      "official_gazette_url": "https://ipueiras.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Itacajá",
+      "official_gazette_url": "https://itacaja.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Itaguatins",
+      "official_gazette_url": "https://www.itaguatins.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Itapiratins",
+      "official_gazette_url": "https://itapiratins.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Itaporã do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jaú do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Juarina",
+      "official_gazette_url": "https://juarina.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Lagoa da Confusão",
+      "official_gazette_url": "https://api-lagoadac.barcodigital.com.br"
+    },
+    {
+      "name": "Lagoa do Tocantins",
+      "official_gazette_url": "https://api-lagoadotocantins.barcodigital.com.br"
+    },
+    {
+      "name": "Lajeado",
+      "official_gazette_url": "https://www.lajeado.to.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Lavandeira",
+      "official_gazette_url": "https://www.lavandeira.to.gov.br/diario-oficial-eletronico-da-prefeitura-municipal-de-lavandeira"
+    },
+    {
+      "name": "Lizarda",
+      "official_gazette_url": "https://www.lizarda.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Luzinópolis",
+      "official_gazette_url": "https://www.luzinopolis.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Marianópolis do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mateiros",
+      "official_gazette_url": "https://www.mateiros.to.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Maurilândia do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Miracema do Tocantins",
+      "official_gazette_url": "https://miracema.diariooficialbr.com.br/"
+    },
+    {
+      "name": "Miranorte",
+      "official_gazette_url": "https://www.miranorte.to.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Monte do Carmo",
+      "official_gazette_url": "https://www.montedocarmo.to.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Monte Santo do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Muricilândia",
+      "official_gazette_url": "https://muricilandia.diariooficialbr.com.br/"
+    },
+    {
+      "name": "Natividade",
+      "official_gazette_url": "https://www.natividade.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Nazaré",
+      "official_gazette_url": "https://api-nazare.barcodigital.com.br"
+    },
+    {
+      "name": "Nova Olinda",
+      "official_gazette_url": "https://www.novaolinda.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Nova Rosalândia",
+      "official_gazette_url": "https://novarosalandia.to.gov.br/download-category/diario-oficial/"
+    },
+    {
+      "name": "Novo Acordo",
+      "official_gazette_url": "https://www.novoacordo.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Novo Alegre",
+      "official_gazette_url": "https://www.novoalegre.to.gov.br/transparencia"
+    },
+    {
+      "name": "Novo Jardim",
+      "official_gazette_url": "https://www.novojardim.to.gov.br/transparencia"
+    },
+    {
+      "name": "Oliveira de Fátima",
+      "official_gazette_url": "https://oliveiradefatima.to.gov.br/transparencia-covid-19/"
+    },
+    {
+      "name": "Palmas",
+      "official_gazette_url": "https://diariooficial.palmas.to.gov.br/"
+    },
+    {
+      "name": "Palmeirante",
+      "official_gazette_url": "https://www.palmeirante.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Palmeiras do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Palmeirópolis",
+      "official_gazette_url": "https://palmeiropolis.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Paraíso do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paranã",
+      "official_gazette_url": "https://parana.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Pau d'Arco",
+      "official_gazette_url": "https://paudarco.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Pedro Afonso",
+      "official_gazette_url": "https://www.pedroafonso.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Peixe",
+      "official_gazette_url": "https://peixe.diariooficialbr.com.br/"
+    },
+    {
+      "name": "Pequizeiro",
+      "official_gazette_url": "https://www.pequizeiro.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Pindorama do Tocantins",
+      "official_gazette_url": "https://pindoramadotocantins.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Piraquê",
+      "official_gazette_url": "https://diario.piraque.to.gov.br/cgi-sys/suspendedpage.cgi"
+    },
+    {
+      "name": "Pium",
+      "official_gazette_url": "https://diario.pium.to.gov.br/"
+    },
+    {
+      "name": "Ponte Alta do Bom Jesus",
+      "official_gazette_url": "https://www.pontealtadobomjesus.to.gov.br/transparencia"
+    },
+    {
+      "name": "Ponte Alta do Tocantins",
+      "official_gazette_url": "https://api-ponte.barcodigital.com.br"
+    },
+    {
+      "name": "Porto Alegre do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Porto Nacional",
+      "official_gazette_url": "https://portonacional.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Praia Norte",
+      "official_gazette_url": "https://www.praianorte.to.gov.br/transparencia"
+    },
+    {
+      "name": "Presidente Kennedy",
+      "official_gazette_url": "https://www.presidentekennedy.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Pugmil",
+      "official_gazette_url": "https://api-pugmil.barcodigital.com.br"
+    },
+    {
+      "name": "Recursolândia",
+      "official_gazette_url": "https://api-recursolandia.barcodigital.com.br"
+    },
+    {
+      "name": "Riachinho",
+      "official_gazette_url": "https://www.riachinho.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Rio da Conceição",
+      "official_gazette_url": "https://www.riodaconceicao.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Rio dos Bois",
+      "official_gazette_url": "https://www.riodosbois.to.gov.br/diariooficial"
+    },
+    {
+      "name": "Rio Sono",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sampaio",
+      "official_gazette_url": "https://diariooficial.sampaio.to.gov.br/pesquisar"
+    },
+    {
+      "name": "Sandolândia",
+      "official_gazette_url": "https://sandolandia.to.gov.br/publicacoes/"
+    },
+    {
+      "name": "Santa Fé do Araguaia",
+      "official_gazette_url": "https://santafedoaraguaia.diariooficialbr.com.br/"
+    },
+    {
+      "name": "Santa Maria do Tocantins",
+      "official_gazette_url": "https://santamariadotocantins.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Santa Rita do Tocantins",
+      "official_gazette_url": "https://santaritadotocantins.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Santa Rosa do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Tereza do Tocantins",
+      "official_gazette_url": "https://www.santaterezadotocantins.to.gov.br/diario-oficial"
+    },
+    {
+      "name": "Santa Terezinha do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Bento do Tocantins",
+      "official_gazette_url": "https://www.saobentodotocantins.to.gov.br/transparencia"
+    },
+    {
+      "name": "São Félix do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Miguel do Tocantins",
+      "official_gazette_url": "https://saomigueldotocantins.to.gov.br/transparencia/"
+    },
+    {
+      "name": "São Salvador do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Sebastião do Tocantins",
+      "official_gazette_url": "https://www.saosebastiaodotocantins.to.gov.br/transparencia"
+    },
+    {
+      "name": "São Valério",
+      "official_gazette_url": "https://saovalerio.to.gov.br/publicacoes/"
+    },
+    {
+      "name": "Silvanópolis",
+      "official_gazette_url": "https://www.silvanopolis.to.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Sítio Novo do Tocantins",
+      "official_gazette_url": "https://www.sitionovodotocantins.to.gov.br/transparencia"
+    },
+    {
+      "name": "Sucupira",
+      "official_gazette_url": "https://www.sucupira.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Taguatinga",
+      "official_gazette_url": "https://taguatinga.to.gov.br/transparencia/informacoes-institucionais/atos-normativos-proprios-diario-oficial-eletronico"
+    },
+    {
+      "name": "Taipas do Tocantins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Talismã",
+      "official_gazette_url": "https://talisma.diariooficialbr.com.br/"
+    },
+    {
+      "name": "Tocantínia",
+      "official_gazette_url": "https://tocantinia.diariooficialbr.com.br/"
+    },
+    {
+      "name": "Tocantinópolis",
+      "official_gazette_url": "https://api-tocantinopolis.barcodigital.com.br"
+    },
+    {
+      "name": "Tupirama",
+      "official_gazette_url": "https://api-tupirama.barcodigital.com.br"
+    },
+    {
+      "name": "Tupiratins",
+      "official_gazette_url": "https://tupiratins.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Wanderlândia",
+      "official_gazette_url": "https://wanderlandia.to.gov.br/transparencia/"
+    },
+    {
+      "name": "Xambioá",
+      "official_gazette_url": "https://diariooficial.xambioa.to.gov.br/"
+    }
+  ]
+}

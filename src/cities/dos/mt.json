@@ -1,0 +1,561 @@
+{
+  "name": "Mato Grosso",
+  "cities": [
+    {
+      "name": "Acorizal",
+      "official_gazette_url": "https://www.acorizal.mt.gov.br/publicacoes"
+    },
+    {
+      "name": "Água Boa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alta Floresta",
+      "official_gazette_url": "https://www.altafloresta.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Alto Araguaia",
+      "official_gazette_url": "https://altoaraguaia.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Alto Boa Vista",
+      "official_gazette_url": "https://www.altoboavista.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Alto Garças",
+      "official_gazette_url": "https://www.altogarcas.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Alto Paraguai",
+      "official_gazette_url": "https://www.altoparaguai.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Alto Taquari",
+      "official_gazette_url": "https://www.altotaquari.mt.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Apiacás",
+      "official_gazette_url": "https://www.apiacas.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Araguaiana",
+      "official_gazette_url": "https://amm.diariomunicipal.org/"
+    },
+    {
+      "name": "Araguainha",
+      "official_gazette_url": "https://araguainha.mt.gov.br/"
+    },
+    {
+      "name": "Araputanga",
+      "official_gazette_url": "https://araputanga.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Arenápolis",
+      "official_gazette_url": "https://www.arenapolis.mt.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Aripuanã",
+      "official_gazette_url": "https://www.aripuana.mt.gov.br/"
+    },
+    {
+      "name": "Barão de Melgaço",
+      "official_gazette_url": "https://www.baraodemelgaco.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Barra do Bugres",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Barra do Garças",
+      "official_gazette_url": "https://www.barradogarcas.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Bom Jesus do Araguaia",
+      "official_gazette_url": "https://www.bomjesusdoaraguaia.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Brasnorte",
+      "official_gazette_url": "https://www.brasnorte.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Cáceres",
+      "official_gazette_url": "https://www.caceres.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Campinápolis",
+      "official_gazette_url": "https://www.campinapolis.mt.gov.br/"
+    },
+    {
+      "name": "Campo Novo do Parecis",
+      "official_gazette_url": "https://www.camponovodoparecis.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Campo Verde",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campos de Júlio",
+      "official_gazette_url": "https://www.camposdejulio.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Canabrava do Norte",
+      "official_gazette_url": "https://www.canabravadonorte.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Canarana",
+      "official_gazette_url": "https://www.canarana.mt.gov.br/"
+    },
+    {
+      "name": "Carlinda",
+      "official_gazette_url": "https://www.carlinda.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Castanheira",
+      "official_gazette_url": "https://www.castanheira.mt.gov.br/servicos/diario-oficial"
+    },
+    {
+      "name": "Chapada dos Guimarães",
+      "official_gazette_url": "https://www.chapadadosguimaraes.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Cláudia",
+      "official_gazette_url": "https://www.claudia.mt.gov.br/publicacoes/"
+    },
+    {
+      "name": "Cocalinho",
+      "official_gazette_url": "https://www.cocalinho.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Colíder",
+      "official_gazette_url": "https://www.colider.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Colniza",
+      "official_gazette_url": "https://www.colniza.mt.gov.br/"
+    },
+    {
+      "name": "Comodoro",
+      "official_gazette_url": "https://www.comodoro.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Confresa",
+      "official_gazette_url": "https://www.confresa.mt.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Conquista d'Oeste",
+      "official_gazette_url": "https://www.conquistadoeste.mt.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Cotriguaçu",
+      "official_gazette_url": "https://www.cotriguacu.mt.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Curvelândia",
+      "official_gazette_url": "https://www.curvelandia.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Cuiabá",
+      "official_gazette_url": "https://www.cuiaba.mt.gov.br/diario-oficial"
+    },
+    {
+      "name": "Denise",
+      "official_gazette_url": "https://www.denise.mt.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Diamantino",
+      "official_gazette_url": "https://www.diamantino.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Dom Aquino",
+      "official_gazette_url": "https://www.domaquino.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Feliz Natal",
+      "official_gazette_url": "https://www.feliznatal.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Figueirópolis d'Oeste",
+      "official_gazette_url": "https://figueiropolisdoeste.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Gaúcha do Norte",
+      "official_gazette_url": "https://www.gauchadonorte.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "General Carneiro",
+      "official_gazette_url": "https://www.generalcarneiro.mt.gov.br/publicacoes"
+    },
+    {
+      "name": "Glória d'Oeste",
+      "official_gazette_url": "https://www.gloriadoeste.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Guarantã do Norte",
+      "official_gazette_url": "https://www.guarantadonorte.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Guiratinga",
+      "official_gazette_url": "https://www.guiratinga.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Indiavaí",
+      "official_gazette_url": "https://www.indiavai.mt.gov.br/publicacoes"
+    },
+    {
+      "name": "Itaúba",
+      "official_gazette_url": "https://www.itauba.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Itiquira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jaciara",
+      "official_gazette_url": "https://www.jaciara.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Jangada",
+      "official_gazette_url": "https://www.jangada.mt.gov.br/publicacoes"
+    },
+    {
+      "name": "Jauru",
+      "official_gazette_url": "https://www.jauru.mt.gov.br/"
+    },
+    {
+      "name": "Juara",
+      "official_gazette_url": "https://www.juara.mt.gov.br/"
+    },
+    {
+      "name": "Juína",
+      "official_gazette_url": "https://www.juina.mt.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Juruena",
+      "official_gazette_url": "https://www.juruena.mt.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Juscimeira",
+      "official_gazette_url": "https://www.juscimeira.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Lambari d'Oeste",
+      "official_gazette_url": "https://www.lambaridoeste.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Lucas do Rio Verde",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Luciára",
+      "official_gazette_url": "https://www.luciara.mt.gov.br/"
+    },
+    {
+      "name": "Marcelândia",
+      "official_gazette_url": "https://www.marcelandia.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Matupá",
+      "official_gazette_url": "https://www.matupa.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Mirassol d'Oeste",
+      "official_gazette_url": "https://www.mirassoldoeste.mt.gov.br/transparencia"
+    },
+    {
+      "name": "Nobres",
+      "official_gazette_url": "https://www.nobres.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nortelândia",
+      "official_gazette_url": "https://www.nortelandia.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nossa Senhora do Livramento",
+      "official_gazette_url": "https://www.nossasenhoradolivramento.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Bandeirantes",
+      "official_gazette_url": "https://www.novabandeirantes.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Brasilândia",
+      "official_gazette_url": "https://www.novabrasilandia.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Canãa do Norte",
+      "official_gazette_url": "https://www.novacanaadonorte.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Guarita",
+      "official_gazette_url": "https://www.novaguarita.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Lacerda",
+      "official_gazette_url": "https://www.novalacerda.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Marilândia",
+      "official_gazette_url": "https://www.novamarilandia.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Maringá",
+      "official_gazette_url": "https://www.novamaringa.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Monte Verde",
+      "official_gazette_url": "https://www.novamonteverde.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Mutum",
+      "official_gazette_url": "https://www.novamutum.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Nazaré",
+      "official_gazette_url": "https://www.novanazare.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Olímpia",
+      "official_gazette_url": "https://www.novaolimpia.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Santa Helena",
+      "official_gazette_url": "https://www.novasantahelena.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Ubiratã",
+      "official_gazette_url": "https://www.novaubirata.mt.gov.br/publicacoes"
+    },
+    {
+      "name": "Nova Xavantina",
+      "official_gazette_url": "https://www.novaxavantina.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Novo Horizonte do Norte",
+      "official_gazette_url": "https://www.novohorizontedonorte.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Novo Mundo",
+      "official_gazette_url": "https://www.novomundo.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Novo Santo Antônio",
+      "official_gazette_url": "https://www.novosantoantonio.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Novo São Joaquim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paranaíta",
+      "official_gazette_url": "https://www.paranaita.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Paranatinga",
+      "official_gazette_url": "https://www.paranatinga.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Pedra Preta",
+      "official_gazette_url": "https://www.pedrapreta.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Peixoto de Azevedo",
+      "official_gazette_url": "https://www.peixotodeazevedo.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Planalto da Serra",
+      "official_gazette_url": "https://www.planaltodaserra.mt.gov.br/publicacoes"
+    },
+    {
+      "name": "Poconé",
+      "official_gazette_url": "https://www.pocone.mt.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Pontal do Araguaia",
+      "official_gazette_url": "https://www.pontaldoaraguaia.mt.gov.br/transparencia/"
+    },
+    {
+      "name": "Ponte Branca",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pontes e Lacerda",
+      "official_gazette_url": "https://www.ponteselacerda.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Porto Alegre do Norte",
+      "official_gazette_url": "https://www.portoalegredonorte.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Porto dos Gaúchos",
+      "official_gazette_url": "https://www.portodosgauchos.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Porto Esperidião",
+      "official_gazette_url": "https://www.portoesperidiao.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Porto Estrela",
+      "official_gazette_url": "https://portoestrela.mt.gov.br/publicacoes/"
+    },
+    {
+      "name": "Poxoréo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Primavera do Leste",
+      "official_gazette_url": "https://www.primaveradoleste.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Querência",
+      "official_gazette_url": "https://www.querencia.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Reserva do Cabaçal",
+      "official_gazette_url": "https://www.reservadocabacal.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Ribeirão Cascalheira",
+      "official_gazette_url": "https://www.ribeiraocascalheira.mt.gov.br/publicacoes"
+    },
+    {
+      "name": "Ribeirãozinho",
+      "official_gazette_url": "https://www.ribeiraozinho.mt.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Rio Branco",
+      "official_gazette_url": "https://www.riobranco.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Rondolândia",
+      "official_gazette_url": "https://www.rondolandia.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Rondonópolis",
+      "official_gazette_url": "https://www.rondonopolis.mt.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Rosário Oeste",
+      "official_gazette_url": "https://www.rosariooeste.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Salto do Céu",
+      "official_gazette_url": "https://www.saltodoceu.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santa Carmem",
+      "official_gazette_url": "https://www.santacarmem.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santa Cruz do Xingu",
+      "official_gazette_url": "https://www.santacruzdoxingu.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santa Rita do Trivelato",
+      "official_gazette_url": "https://www.santaritadotrivelato.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santa Terezinha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Afonso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio do Leste",
+      "official_gazette_url": "https://www.santoantoniodoleste.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santo Antônio do Leverger",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Félix do Araguaia",
+      "official_gazette_url": "https://saofelixdoaraguaia.mt.gov.br/publicacoes-cisa/"
+    },
+    {
+      "name": "São José do Povo",
+      "official_gazette_url": "https://www.saojosedopovo.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São José do Rio Claro",
+      "official_gazette_url": "https://www.saojosedorioclaro.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São José do Xingu",
+      "official_gazette_url": "https://www.saojosedoxingu.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São José dos Quatro Marcos",
+      "official_gazette_url": "https://saojosedosquatromarcos.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São Pedro da Cipa",
+      "official_gazette_url": "https://www.saopedrodacipa.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Sapezal",
+      "official_gazette_url": "https://www.sapezal.mt.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Serra Nova Dourada",
+      "official_gazette_url": "https://www.serranovadourada.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Sinop",
+      "official_gazette_url": "https://www.sinop.mt.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Sorriso",
+      "official_gazette_url": "https://site.sorriso.mt.gov.br"
+    },
+    {
+      "name": "Tabaporã",
+      "official_gazette_url": "https://www.tabapora.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Tangará da Serra",
+      "official_gazette_url": "https://tangaradaserra.mt.gov.br/servico/diario-oficial/"
+    },
+    {
+      "name": "Tapurah",
+      "official_gazette_url": "https://www.tapurah.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Terra Nova do Norte",
+      "official_gazette_url": "https://www.terranovadonorte.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Tesouro",
+      "official_gazette_url": "https://www.tesouro.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Torixoréu",
+      "official_gazette_url": "https://www.torixoreu.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "União do Sul",
+      "official_gazette_url": "https://www.uniaodosul.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Vale de São Domingos",
+      "official_gazette_url": "https://www.valedesaodomingos.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Várzea Grande",
+      "official_gazette_url": "https://www.varzeagrande.mt.gov.br/diario-oficial"
+    },
+    {
+      "name": "Vera",
+      "official_gazette_url": "https://www.vera.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Vila Bela da Santíssima Trindade",
+      "official_gazette_url": "https://www.vilabeladasantissimatrindade.mt.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Vila Rica",
+      "official_gazette_url": "https://www.vilarica.mt.gov.br/publicacoes/diario-oficial"
+    }
+  ]
+}

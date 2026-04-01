@@ -1,0 +1,1673 @@
+{
+  "name": "Bahia",
+  "cities": [
+    {
+      "name": "Abaíra",
+      "official_gazette_url": "https://diario.abaira.ba.gov.br"
+    },
+    {
+      "name": "Abaré",
+      "official_gazette_url": "https://sai.io.org.br/ba/abare/site/diariooficial"
+    },
+    {
+      "name": "Acajutiba",
+      "official_gazette_url": "https://doem.org.br/ba/acajutiba"
+    },
+    {
+      "name": "Adustina",
+      "official_gazette_url": "https://diario.adustina.ba.gov.br"
+    },
+    {
+      "name": "Água Fria",
+      "official_gazette_url": "https://aguafria.ba.gov.br/atos-oficiais/"
+    },
+    {
+      "name": "Aiquara",
+      "official_gazette_url": "https://diario.aiquara.ba.gov.br"
+    },
+    {
+      "name": "Alagoinhas",
+      "official_gazette_url": "https://doem.org.br/ba/alagoinhas"
+    },
+    {
+      "name": "Alcobaça",
+      "official_gazette_url": "https://doem.org.br/ba/alcobaca"
+    },
+    {
+      "name": "Almadina",
+      "official_gazette_url": "https://diario.almadina.ba.gov.br"
+    },
+    {
+      "name": "Amargosa",
+      "official_gazette_url": "https://www.amargosa.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Amélia Rodrigues",
+      "official_gazette_url": null
+    },
+    {
+      "name": "América Dourada",
+      "official_gazette_url": "https://www.americadourada.ba.gov.br/erro/404"
+    },
+    {
+      "name": "Anagé",
+      "official_gazette_url": "https://doem.org.br/ba/anage"
+    },
+    {
+      "name": "Andaraí",
+      "official_gazette_url": "https://pmandarai.transparenciaoficialba.com/diariooficial/"
+    },
+    {
+      "name": "Andorinha",
+      "official_gazette_url": "https://sai.io.org.br/ba/andorinha/site/diariooficial"
+    },
+    {
+      "name": "Angical",
+      "official_gazette_url": "https://doem.org.br/ba/angical"
+    },
+    {
+      "name": "Anguera",
+      "official_gazette_url": "https://pmanguera.transparenciaoficialba.com/diariooficial/"
+    },
+    {
+      "name": "Antas",
+      "official_gazette_url": "https://doem.org.br/ba/antas"
+    },
+    {
+      "name": "Antônio Cardoso",
+      "official_gazette_url": "https://www.antoniocardoso.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Antônio Gonçalves",
+      "official_gazette_url": "https://www.antoniogoncalves.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Aporá",
+      "official_gazette_url": "https://www.apora.ba.gov.br/"
+    },
+    {
+      "name": "Apuarema",
+      "official_gazette_url": "https://diario.apuarema.ba.gov.br"
+    },
+    {
+      "name": "Araças",
+      "official_gazette_url": "https://diario.aracas.ba.gov.br"
+    },
+    {
+      "name": "Aracatu",
+      "official_gazette_url": "https://www.aracatu.ba.gov.br/diariooficial/"
+    },
+    {
+      "name": "Araci",
+      "official_gazette_url": "https://www.araci.ba.gov.br/site/paginadinamica/paginadinamica-250120231032181535-Di-rio-Oficial"
+    },
+    {
+      "name": "Aramari",
+      "official_gazette_url": "https://doem.org.br/ba/aramari"
+    },
+    {
+      "name": "Arataca",
+      "official_gazette_url": "https://diario.arataca.ba.gov.br"
+    },
+    {
+      "name": "Aratuípe",
+      "official_gazette_url": "https://diario.aratuipe.ba.gov.br"
+    },
+    {
+      "name": "Aurelino Leal",
+      "official_gazette_url": "https://www.aurelinoleal.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Baianópolis",
+      "official_gazette_url": "https://portaldatransparencia.baianopolis.ba.gov.br/atos-oficiais/"
+    },
+    {
+      "name": "Baixa Grande",
+      "official_gazette_url": "https://www.baixagrande.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Banzaê",
+      "official_gazette_url": "https://doem.org.br/ba/banzae"
+    },
+    {
+      "name": "Barra",
+      "official_gazette_url": "https://barra.ba.gov.br/acessorapido/diario-oficial/"
+    },
+    {
+      "name": "Barra da Estiva",
+      "official_gazette_url": "https://www.barradaestiva.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Barra do Choça",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Barra do Mendes",
+      "official_gazette_url": "https://www.barradomendes.ba.gov.br/erro/404"
+    },
+    {
+      "name": "Barra do Rocha",
+      "official_gazette_url": "https://www.barradorocha.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Barreiras",
+      "official_gazette_url": "https://barreiras.ba.gov.br/diario-oficial"
+    },
+    {
+      "name": "Barro Alto",
+      "official_gazette_url": "https://barroalto.ba.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Barrocas",
+      "official_gazette_url": "https://doem.org.br/ba/barrocas"
+    },
+    {
+      "name": "Barro Preto",
+      "official_gazette_url": "https://www.barropreto.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Belmonte",
+      "official_gazette_url": "https://belmonte.ba.gov.br#diario-oficial"
+    },
+    {
+      "name": "Belo Campo",
+      "official_gazette_url": "https://www.belocampo.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Biritinga",
+      "official_gazette_url": "https://www.biritinga.ba.gov.br/"
+    },
+    {
+      "name": "Boa Nova",
+      "official_gazette_url": "https://www.boanova.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Boa Vista do Tupim",
+      "official_gazette_url": "https://www.boavistadotupim.ba.gov.br/erro/404"
+    },
+    {
+      "name": "Bom Jesus da Lapa",
+      "official_gazette_url": "https://www.bomjesusdalapa.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Bom Jesus da Serra",
+      "official_gazette_url": "https://www.bomjesusdaserra.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Boninal",
+      "official_gazette_url": "https://diario.boninal.ba.gov.br"
+    },
+    {
+      "name": "Bonito",
+      "official_gazette_url": "https://bonito.ba.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Boquira",
+      "official_gazette_url": "https://diario.boquira.ba.gov.br"
+    },
+    {
+      "name": "Botuporã",
+      "official_gazette_url": "https://www.botupora.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Brejões",
+      "official_gazette_url": "https://diario.brejoes.ba.gov.br"
+    },
+    {
+      "name": "Brejolândia",
+      "official_gazette_url": "https://www.brejolandia.ba.gov.br/diario"
+    },
+    {
+      "name": "Brotas de Macaúbas",
+      "official_gazette_url": "https://doem.org.br/ba/brotasdemacaubas"
+    },
+    {
+      "name": "Brumado",
+      "official_gazette_url": "https://www.brumado.ba.gov.br/governo/diario-oficial"
+    },
+    {
+      "name": "Buerarema",
+      "official_gazette_url": "http://www.buerarema.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Buritirama",
+      "official_gazette_url": "https://www.buritirama.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Caatiba",
+      "official_gazette_url": "http://www.caatiba.ba.gov.br/diario"
+    },
+    {
+      "name": "Cabaceiras do Paraguaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cachoeira",
+      "official_gazette_url": "https://doem.org.br/ba/cachoeira"
+    },
+    {
+      "name": "Caculé",
+      "official_gazette_url": "https://doem.org.br/ba/cacule"
+    },
+    {
+      "name": "Caém",
+      "official_gazette_url": "https://www.caem.ba.gov.br/diario.html"
+    },
+    {
+      "name": "Caetanos",
+      "official_gazette_url": "https://diario.caetanos.ba.gov.br"
+    },
+    {
+      "name": "Caetité",
+      "official_gazette_url": "https://doem.org.br/ba/caetite"
+    },
+    {
+      "name": "Cafarnaum",
+      "official_gazette_url": "https://indap.org.br"
+    },
+    {
+      "name": "Cairu",
+      "official_gazette_url": "https://www.cairu.ba.gov.br/diariooficial"
+    },
+    {
+      "name": "Caldeirão Grande",
+      "official_gazette_url": "https://www.caldeiraogrande.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Camacan",
+      "official_gazette_url": "https://camacan.ba.gov.br#diario-oficial"
+    },
+    {
+      "name": "Camaçari",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Camamu",
+      "official_gazette_url": "https://doem.org.br/ba/camamu"
+    },
+    {
+      "name": "Campo Alegre de Lourdes",
+      "official_gazette_url": "https://doem.org.br/ba/campoalegredelourdes"
+    },
+    {
+      "name": "Campo Formoso",
+      "official_gazette_url": "https://doem.org.br/ba/campoformoso"
+    },
+    {
+      "name": "Canápolis",
+      "official_gazette_url": "https://canapolis.ba.gov.br/diario-oficial-acervo-de-publicacoes-antigas/"
+    },
+    {
+      "name": "Canarana",
+      "official_gazette_url": "https://canarana.ba.gov.br/atos-oficiais/"
+    },
+    {
+      "name": "Canavieiras",
+      "official_gazette_url": "https://diario.canavieiras.ba.gov.br"
+    },
+    {
+      "name": "Candeal",
+      "official_gazette_url": "https://www.candeal.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Candeias",
+      "official_gazette_url": "https://sai.io.org.br/ba/candeias/Site/DiarioOficial"
+    },
+    {
+      "name": "Candiba",
+      "official_gazette_url": "https://www.candiba.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Cândido Sales",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cansanção",
+      "official_gazette_url": "https://www.cansancao.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Canudos",
+      "official_gazette_url": "https://doem.org.br/ba/canudos"
+    },
+    {
+      "name": "Capela do Alto Alegre",
+      "official_gazette_url": "https://www.capeladoaltoalegre.ba.gov.br/portal-da-transparencia"
+    },
+    {
+      "name": "Capim Grosso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Caraíbas",
+      "official_gazette_url": "https://diario.caraibas.ba.gov.br"
+    },
+    {
+      "name": "Caravelas",
+      "official_gazette_url": "https://sai.io.org.br/ba/caravelas/Site/DiarioOficial"
+    },
+    {
+      "name": "Cardeal da Silva",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Carinhanha",
+      "official_gazette_url": "https://www.carinhanha.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Casa Nova",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Castro Alves",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Catolândia",
+      "official_gazette_url": "https://doem.org.br/ba/catolandia"
+    },
+    {
+      "name": "Catu",
+      "official_gazette_url": "https://doem.org.br/ba/catu"
+    },
+    {
+      "name": "Caturama",
+      "official_gazette_url": "https://www.caturama.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Central",
+      "official_gazette_url": "https://www.central.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Chorrochó",
+      "official_gazette_url": "https://sai.io.org.br/ba/chorrocho/Site/DiarioOficial"
+    },
+    {
+      "name": "Cícero Dantas",
+      "official_gazette_url": "https://doem.org.br/ba/cicerodantas"
+    },
+    {
+      "name": "Cipó",
+      "official_gazette_url": "https://doem.org.br/ba/cipo"
+    },
+    {
+      "name": "Coaraci",
+      "official_gazette_url": "https://acessoainformacao.coaraci.ba.gov.br#diario-oficial"
+    },
+    {
+      "name": "Cocos",
+      "official_gazette_url": "https://www.cocos.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Conceição da Feira",
+      "official_gazette_url": "https://conceicaodafeira.ba.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Conceição do Almeida",
+      "official_gazette_url": "https://conceicaodoalmeida.ba.gov.br#diario-oficial"
+    },
+    {
+      "name": "Conceição do Coité",
+      "official_gazette_url": "https://www.conceicaodocoite.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Conceição do Jacuípe",
+      "official_gazette_url": "https://www.conceicaodojacuipe.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Conde",
+      "official_gazette_url": "https://diario.conde.ba.gov.br"
+    },
+    {
+      "name": "Condeúba",
+      "official_gazette_url": "https://condeuba.ba.gov.br/"
+    },
+    {
+      "name": "Contendas do Sincorá",
+      "official_gazette_url": "https://contendasdosincora.ba.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Coração de Maria",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cordeiros",
+      "official_gazette_url": "https://www.cordeiros.ba.gov.br/diariooficial"
+    },
+    {
+      "name": "Coribe",
+      "official_gazette_url": "https://diario.coribe.ba.gov.br"
+    },
+    {
+      "name": "Coronel João Sá",
+      "official_gazette_url": "https://www.coroneljoaosa.ba.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Correntina",
+      "official_gazette_url": "https://doem.org.br/ba/correntina"
+    },
+    {
+      "name": "Cotegipe",
+      "official_gazette_url": "https://doem.org.br/ba/cotegipe"
+    },
+    {
+      "name": "Cravolândia",
+      "official_gazette_url": "https://diario.cravolandia.ba.gov.br"
+    },
+    {
+      "name": "Crisópolis",
+      "official_gazette_url": "https://crisopolis.ba.gov.br/diario-oficial-do-municipio/"
+    },
+    {
+      "name": "Cristópolis",
+      "official_gazette_url": "https://doem.org.br/ba/cristopolis"
+    },
+    {
+      "name": "Cruz das Almas",
+      "official_gazette_url": "https://doem.org.br/ba/cruzdasalmas"
+    },
+    {
+      "name": "Curaçá",
+      "official_gazette_url": "https://curaca.ba.gov.br/"
+    },
+    {
+      "name": "Dário Meira",
+      "official_gazette_url": "https://www.dariomeira.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Dias d'Ávila",
+      "official_gazette_url": "https://diasdavila.ba.gov.br/aviso/diario-oficial-atual/"
+    },
+    {
+      "name": "Dom Basílio",
+      "official_gazette_url": "https://www.dombasilio.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Dom Macedo Costa",
+      "official_gazette_url": "https://www.dommacedocosta.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Elísio Medrado",
+      "official_gazette_url": "https://www.elisiomedrado.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Encruzilhada",
+      "official_gazette_url": "https://diario.encruzilhada.ba.gov.br/homepage"
+    },
+    {
+      "name": "Entre Rios",
+      "official_gazette_url": "https://entrerios.ba.gov.br#diario-oficial"
+    },
+    {
+      "name": "Érico Cardoso",
+      "official_gazette_url": "https://www.ericocardoso.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Esplanada",
+      "official_gazette_url": "https://doem.org.br/ba/esplanada"
+    },
+    {
+      "name": "Euclides da Cunha",
+      "official_gazette_url": "https://transparencia.euclidesdacunha.ba.gov.br"
+    },
+    {
+      "name": "Eunápolis",
+      "official_gazette_url": "https://diario.eunapolis.ba.gov.br"
+    },
+    {
+      "name": "Fátima",
+      "official_gazette_url": "https://diario.fatima.ba.gov.br"
+    },
+    {
+      "name": "Feira da Mata",
+      "official_gazette_url": "https://www.feiradamata.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Feira de Santana",
+      "official_gazette_url": "https://www.diariooficial.feiradesantana.ba.gov.br"
+    },
+    {
+      "name": "Filadélfia",
+      "official_gazette_url": "https://www.filadelfia.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Firmino Alves",
+      "official_gazette_url": "https://www.firminoalves.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Floresta Azul",
+      "official_gazette_url": "https://www.florestaazul.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Formosa do Rio Preto",
+      "official_gazette_url": "https://doem.org.br/ba/formosadoriopreto"
+    },
+    {
+      "name": "Gandu",
+      "official_gazette_url": "https://diariooficial.gandu.ba.gov.br/"
+    },
+    {
+      "name": "Gavião",
+      "official_gazette_url": "https://www.gaviao.ba.gov.br/"
+    },
+    {
+      "name": "Gentio do Ouro",
+      "official_gazette_url": "https://www.gentiodoouro.ba.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Glória",
+      "official_gazette_url": "https://pmgloria.transparenciaoficialba.com/diariooficial/"
+    },
+    {
+      "name": "Gongogi",
+      "official_gazette_url": "https://diario.gongogi.ba.gov.br"
+    },
+    {
+      "name": "Governador Mangabeira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Guajeru",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Guanambi",
+      "official_gazette_url": "https://www.guanambi.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Guaratinga",
+      "official_gazette_url": "https://diario.guaratinga.ba.gov.br"
+    },
+    {
+      "name": "Heliópolis",
+      "official_gazette_url": "https://diario.heliopolis.ba.gov.br"
+    },
+    {
+      "name": "Iaçu",
+      "official_gazette_url": "https://diario.iacu.ba.gov.br"
+    },
+    {
+      "name": "Ibiassucê",
+      "official_gazette_url": "https://ibiassuce.ba.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Ibicaraí",
+      "official_gazette_url": "https://diario.ibicarai.ba.gov.br"
+    },
+    {
+      "name": "Ibicoara",
+      "official_gazette_url": "https://diario.ibicoara.ba.gov.br"
+    },
+    {
+      "name": "Ibicuí",
+      "official_gazette_url": "https://diario.ibicui.ba.gov.br"
+    },
+    {
+      "name": "Ibipeba",
+      "official_gazette_url": "https://diario.ibipeba.ba.gov.br"
+    },
+    {
+      "name": "Ibipitanga",
+      "official_gazette_url": "https://diario.ibipitanga.ba.gov.br"
+    },
+    {
+      "name": "Ibiquera",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ibirapitanga",
+      "official_gazette_url": "https://pmibirapitanga.transparenciaoficialba.com/diariooficial/"
+    },
+    {
+      "name": "Ibirapuã",
+      "official_gazette_url": "https://diario.ibirapua.ba.gov.br"
+    },
+    {
+      "name": "Ibirataia",
+      "official_gazette_url": "https://www.ibirataia.ba.gov.br/diario"
+    },
+    {
+      "name": "Ibitiara",
+      "official_gazette_url": "https://diariooficial.ibitiara.ba.gov.br/homepage"
+    },
+    {
+      "name": "Ibititá",
+      "official_gazette_url": "https://ibitita.ba.gov.br/servico/diario-oficial/"
+    },
+    {
+      "name": "Ibotirama",
+      "official_gazette_url": "https://diario.ibotirama.ba.gov.br"
+    },
+    {
+      "name": "Ichu",
+      "official_gazette_url": "https://diario.ichu.ba.gov.br"
+    },
+    {
+      "name": "Igaporã",
+      "official_gazette_url": "https://www.igapora.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Igrapiúna",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Iguaí",
+      "official_gazette_url": "https://diario.iguai.ba.gov.br"
+    },
+    {
+      "name": "Ilhéus",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Inhambupe",
+      "official_gazette_url": "https://doem.org.br/ba/inhambupe"
+    },
+    {
+      "name": "Ipecaetá",
+      "official_gazette_url": "https://pmipecaeta.transparenciaoficialba.com/diariooficial/"
+    },
+    {
+      "name": "Ipiaú",
+      "official_gazette_url": "https://doem.org.br/ba/ipiau"
+    },
+    {
+      "name": "Ipirá",
+      "official_gazette_url": "https://diario.ipira.ba.gov.br/"
+    },
+    {
+      "name": "Ipupiara",
+      "official_gazette_url": "https://ipupiara.ba.gov.br#diario-oficial"
+    },
+    {
+      "name": "Irajuba",
+      "official_gazette_url": "https://diario.irajuba.ba.gov.br/homepage"
+    },
+    {
+      "name": "Iramaia",
+      "official_gazette_url": "https://diario.iramaia.ba.gov.br"
+    },
+    {
+      "name": "Iraquara",
+      "official_gazette_url": "https://www.iraquara.ba.gov.br/erro/404"
+    },
+    {
+      "name": "Irará",
+      "official_gazette_url": "https://doem.org.br/ba/irara"
+    },
+    {
+      "name": "Irecê",
+      "official_gazette_url": "https://www.irece.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Itabela",
+      "official_gazette_url": "https://sai.io.org.br/ba/itabela/site/diariooficial"
+    },
+    {
+      "name": "Itaberaba",
+      "official_gazette_url": "https://doem.org.br/ba/itaberaba"
+    },
+    {
+      "name": "Itabuna",
+      "official_gazette_url": "https://itabuna.ba.gov.br/2025/01/02/diario-oficial-eletronico-de-itabuna-publica-decretos-de-nomeacao-de-secretarios-presidentes-de-fundacoes-e-ordenadores-de-despesa/"
+    },
+    {
+      "name": "Itacaré",
+      "official_gazette_url": "https://itacare.ba.gov.br/wp-content/uploads/2018/05/diario-oficial.jpg"
+    },
+    {
+      "name": "Itaeté",
+      "official_gazette_url": "https://prefeituraitaete.ba.portaliop.org.br/atos-oficiais/decretos/"
+    },
+    {
+      "name": "Itagi",
+      "official_gazette_url": "https://itagi.ba.gov.br/diario-oficial"
+    },
+    {
+      "name": "Itagibá",
+      "official_gazette_url": "https://diario.itagiba.ba.gov.br"
+    },
+    {
+      "name": "Itagimirim",
+      "official_gazette_url": "https://sai.io.org.br/ba/itagimirim/Site/DiarioOficial"
+    },
+    {
+      "name": "Itaguaçu da Bahia",
+      "official_gazette_url": "https://www.itaguacudabahia.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Itaju do Colônia",
+      "official_gazette_url": "https://www.itajudocolonia.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Itajuípe",
+      "official_gazette_url": "https://diario.itajuipe.ba.gov.br"
+    },
+    {
+      "name": "Itamaraju",
+      "official_gazette_url": "https://doem.org.br/ba/itamaraju"
+    },
+    {
+      "name": "Itamari",
+      "official_gazette_url": "https://itamari.ba.gov.br/2021/10/07/dose-de-reforco-contra-o-covid-19/"
+    },
+    {
+      "name": "Itambé",
+      "official_gazette_url": "https://www.itambe.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Itanagra",
+      "official_gazette_url": "https://pmitanagra.transparenciaoficialba.com/diariooficial/"
+    },
+    {
+      "name": "Itanhém",
+      "official_gazette_url": "https://www.itanhem.ba.gov.br/mo.php?https://www.municipioonline.com.br/ba/prefeitura/itanhem/cidadao/diariooficial"
+    },
+    {
+      "name": "Itaparica",
+      "official_gazette_url": "https://itaparica.ba.gov.br/"
+    },
+    {
+      "name": "Itapé",
+      "official_gazette_url": "https://diario.itape.ba.gov.br"
+    },
+    {
+      "name": "Itapebi",
+      "official_gazette_url": "https://diario.itapebi.ba.gov.br"
+    },
+    {
+      "name": "Itapetinga",
+      "official_gazette_url": "https://doem.org.br/ba/itapetinga"
+    },
+    {
+      "name": "Itapicuru",
+      "official_gazette_url": "https://doem.org.br/ba/itapicuru"
+    },
+    {
+      "name": "Itapitanga",
+      "official_gazette_url": "https://diario.itapitanga.ba.gov.br"
+    },
+    {
+      "name": "Itaquara",
+      "official_gazette_url": "https://www.itaquara.ba.gov.br/"
+    },
+    {
+      "name": "Itarantim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itatim",
+      "official_gazette_url": "http://diario.itatim.ba.gov.br"
+    },
+    {
+      "name": "Itiruçu",
+      "official_gazette_url": "https://diario.itirucu.ba.gov.br"
+    },
+    {
+      "name": "Itiúba",
+      "official_gazette_url": "https://www.itiuba.ba.gov.br/"
+    },
+    {
+      "name": "Itororó",
+      "official_gazette_url": "https://diario.itororo.ba.gov.br"
+    },
+    {
+      "name": "Ituaçu",
+      "official_gazette_url": "https://doem.org.br/ba/ituacu"
+    },
+    {
+      "name": "Ituberá",
+      "official_gazette_url": "https://diario.itubera.ba.gov.br"
+    },
+    {
+      "name": "Iuiú",
+      "official_gazette_url": "https://www.iuiu.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Jaborandi",
+      "official_gazette_url": "https://sai.io.org.br/ba/jaborandi/site/diariooficial"
+    },
+    {
+      "name": "Jacaraci",
+      "official_gazette_url": "https://www.jacaraci.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Jacobina",
+      "official_gazette_url": "https://jacobina.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Jaguaquara",
+      "official_gazette_url": "https://doem.org.br/ba/jaguaquara"
+    },
+    {
+      "name": "Jaguarari",
+      "official_gazette_url": "https://www.jaguarari.ba.gov.br/"
+    },
+    {
+      "name": "Jaguaripe",
+      "official_gazette_url": "https://diario.jaguaripe.ba.gov.br"
+    },
+    {
+      "name": "Jandaíra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jequié",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jeremoabo",
+      "official_gazette_url": "https://doem.org.br/ba/jeremoabo"
+    },
+    {
+      "name": "Jiquiriçá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jitaúna",
+      "official_gazette_url": "https://diario.jitauna.ba.gov.br"
+    },
+    {
+      "name": "João Dourado",
+      "official_gazette_url": "https://www.joaodourado.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Juazeiro",
+      "official_gazette_url": "https://doem.org.br/ba/juazeiro"
+    },
+    {
+      "name": "Jucuruçu",
+      "official_gazette_url": "https://diario.jucurucu.ba.gov.br"
+    },
+    {
+      "name": "Jussara",
+      "official_gazette_url": "https://www.jussara.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Jussari",
+      "official_gazette_url": "https://diario.jussari.ba.gov.br"
+    },
+    {
+      "name": "Jussiape",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lafaiete Coutinho",
+      "official_gazette_url": "https://www.lafaietecoutinho.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Lagoa Real",
+      "official_gazette_url": "https://lagoareal.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Laje",
+      "official_gazette_url": "https://doem.org.br/ba/laje"
+    },
+    {
+      "name": "Lajedão",
+      "official_gazette_url": "https://doem.org.br/ba/lajedao"
+    },
+    {
+      "name": "Lajedinho",
+      "official_gazette_url": "https://diario.lajedinho.ba.gov.br"
+    },
+    {
+      "name": "Lajedo do Tabocal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lamarão",
+      "official_gazette_url": "https://pmlamarao.transparenciaoficialba.com/diariooficial/"
+    },
+    {
+      "name": "Lapão",
+      "official_gazette_url": "https://www.lapao.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Lauro de Freitas",
+      "official_gazette_url": "https://sai.io.org.br/ba/laurodefreitas/site/diariooficial"
+    },
+    {
+      "name": "Lençóis",
+      "official_gazette_url": "https://diario.lencois.ba.gov.br"
+    },
+    {
+      "name": "Licínio de Almeida",
+      "official_gazette_url": "https://www.liciniodealmeida.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Livramento de Nossa Senhora",
+      "official_gazette_url": "https://www.livramentodenossasenhora.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Luís Eduardo Magalhães",
+      "official_gazette_url": "https://sai.io.org.br/ba/luiseduardomagalhaes/site/diariooficial"
+    },
+    {
+      "name": "Macajuba",
+      "official_gazette_url": "https://doem.org.br/ba/macajuba"
+    },
+    {
+      "name": "Macarani",
+      "official_gazette_url": "https://www.macarani.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Macaúbas",
+      "official_gazette_url": "https://www.macaubas.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Macururé",
+      "official_gazette_url": "https://diario.macurure.ba.gov.br"
+    },
+    {
+      "name": "Madre de Deus",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Maetinga",
+      "official_gazette_url": "https://maetinga.ba.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Maiquinique",
+      "official_gazette_url": "https://www.maiquinique.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Mairi",
+      "official_gazette_url": "https://mairi.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Malhada",
+      "official_gazette_url": "https://www.malhada.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Malhada de Pedras",
+      "official_gazette_url": "https://www.malhadadepedras.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Manoel Vitorino",
+      "official_gazette_url": "https://www.manoelvitorino.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Mansidão",
+      "official_gazette_url": "https://diario.mansidao.ba.gov.br"
+    },
+    {
+      "name": "Maracás",
+      "official_gazette_url": "https://diario.maracas.ba.gov.br"
+    },
+    {
+      "name": "Maragogipe",
+      "official_gazette_url": "https://sai.io.org.br/ba/maragojipe/site/diariooficial"
+    },
+    {
+      "name": "Maraú",
+      "official_gazette_url": "https://diario.marau.ba.gov.br"
+    },
+    {
+      "name": "Marcionílio Souza",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mascote",
+      "official_gazette_url": "https://doem.org.br/ba/mascote"
+    },
+    {
+      "name": "Mata de São João",
+      "official_gazette_url": "https://www.matadesaojoao.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Matina",
+      "official_gazette_url": "https://www.matina.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Medeiros Neto",
+      "official_gazette_url": "https://www.medeirosneto.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Miguel Calmon",
+      "official_gazette_url": "https://miguelcalmon.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Milagres",
+      "official_gazette_url": "https://diario.milagres.ba.gov.br"
+    },
+    {
+      "name": "Mirangaba",
+      "official_gazette_url": "https://diario.mirangaba.ba.gov.br"
+    },
+    {
+      "name": "Mirante",
+      "official_gazette_url": "https://diario.mirante.ba.gov.br"
+    },
+    {
+      "name": "Monte Santo",
+      "official_gazette_url": "https://doem.org.br/ba/montesanto"
+    },
+    {
+      "name": "Morpará",
+      "official_gazette_url": "https://diario.morpara.ba.gov.br"
+    },
+    {
+      "name": "Morro do Chapéu",
+      "official_gazette_url": "https://doem.org.br/ba/morrodochapeu"
+    },
+    {
+      "name": "Mortugaba",
+      "official_gazette_url": "https://diario.mortugaba.ba.gov.br"
+    },
+    {
+      "name": "Mucugê",
+      "official_gazette_url": "https://pmmucuge.transparenciaoficialba.com/diariooficial/"
+    },
+    {
+      "name": "Mucuri",
+      "official_gazette_url": "https://doem.org.br/ba/mucuri"
+    },
+    {
+      "name": "Mulungu do Morro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mundo Novo",
+      "official_gazette_url": "https://www.mundonovo.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Muniz Ferreira",
+      "official_gazette_url": "https://www.munizferreira.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Muquém de São Francisco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Muritiba",
+      "official_gazette_url": "https://pmmuritiba.transparenciaoficialba.com/diariooficial/"
+    },
+    {
+      "name": "Mutuípe",
+      "official_gazette_url": "https://diario.mutuipe.ba.gov.br"
+    },
+    {
+      "name": "Nazaré",
+      "official_gazette_url": "https://nazare.ba.gov.br/diariooficial"
+    },
+    {
+      "name": "Nilo Peçanha",
+      "official_gazette_url": "https://www.nilopecanha.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Nordestina",
+      "official_gazette_url": "https://diario.nordestina.ba.gov.br"
+    },
+    {
+      "name": "Nova Canaã",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Fátima",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Ibiá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Itarana",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Redenção",
+      "official_gazette_url": "https://www.novaredencao.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Soure",
+      "official_gazette_url": "https://www.novasoure.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Nova Viçosa",
+      "official_gazette_url": "https://www.novavicosa.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Novo Horizonte",
+      "official_gazette_url": "https://www.novohorizonte.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Novo Triunfo",
+      "official_gazette_url": "https://www.novotriunfo.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Olindina",
+      "official_gazette_url": "https://www.olindina.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Oliveira dos Brejinhos",
+      "official_gazette_url": "https://www.oliveiradosbrejinhos.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Ouriçangas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ourolândia",
+      "official_gazette_url": "https://www.ourolandia.ba.gov.br/diariooficial"
+    },
+    {
+      "name": "Palmas de Monte Alto",
+      "official_gazette_url": "https://www.palmasdemontealto.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Palmeiras",
+      "official_gazette_url": "https://diario.palmeiras.ba.gov.br"
+    },
+    {
+      "name": "Paramirim",
+      "official_gazette_url": "https://www.paramirim.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Paratinga",
+      "official_gazette_url": "https://www.paratinga.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Paripiranga",
+      "official_gazette_url": "https://diario.paripiranga.ba.gov.br"
+    },
+    {
+      "name": "Pau Brasil",
+      "official_gazette_url": "https://www.paubrasil.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Paulo Afonso",
+      "official_gazette_url": "https://pauloafonso.ba.gov.br/wp-content/uploads/2021/06/diario-oficial.jpg"
+    },
+    {
+      "name": "Pé de Serra",
+      "official_gazette_url": "https://www.pedeserra.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Pedrão",
+      "official_gazette_url": "https://diariooficial.pedrao.ba.gov.br/"
+    },
+    {
+      "name": "Pedro Alexandre",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Piatã",
+      "official_gazette_url": "https://diario.piata.ba.gov.br"
+    },
+    {
+      "name": "Pilão Arcado",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pindaí",
+      "official_gazette_url": "https://www.pindai.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Pindobaçu",
+      "official_gazette_url": "https://diariooficial.pindobacu.ba.gov.br/"
+    },
+    {
+      "name": "Pintadas",
+      "official_gazette_url": "https://diariooficial.pintadas.ba.gov.br/"
+    },
+    {
+      "name": "Piraí do Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Piripá",
+      "official_gazette_url": "https://diario.piripa.ba.gov.br"
+    },
+    {
+      "name": "Piritiba",
+      "official_gazette_url": "https://piritiba.ba.gov.br/transparencia-municipal/"
+    },
+    {
+      "name": "Planaltino",
+      "official_gazette_url": "https://diario.planaltino.ba.gov.br"
+    },
+    {
+      "name": "Planalto",
+      "official_gazette_url": "https://diario.planalto.ba.gov.br"
+    },
+    {
+      "name": "Poções",
+      "official_gazette_url": "https://diariooficial.pocoes.ba.gov.br/"
+    },
+    {
+      "name": "Pojuca",
+      "official_gazette_url": "https://diariooficial.pojuca.ba.gov.br/"
+    },
+    {
+      "name": "Ponto Novo",
+      "official_gazette_url": "https://www.pontonovo.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Porto Seguro",
+      "official_gazette_url": "https://www.portoseguro.ba.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Potiraguá",
+      "official_gazette_url": "http://www.potiragua.ba.gov.br/diario"
+    },
+    {
+      "name": "Prado",
+      "official_gazette_url": "https://doem.org.br/ba/prado"
+    },
+    {
+      "name": "Presidente Dutra",
+      "official_gazette_url": "https://www.presidentedutra.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Presidente Jânio Quadros",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Presidente Tancredo Neves",
+      "official_gazette_url": "http://www.presidentetancredoneves.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Queimadas",
+      "official_gazette_url": "https://indap.org.br"
+    },
+    {
+      "name": "Quijingue",
+      "official_gazette_url": "https://diario.quijingue.ba.gov.br"
+    },
+    {
+      "name": "Quixabeira",
+      "official_gazette_url": "https://diario.quixabeira.ba.gov.br"
+    },
+    {
+      "name": "Rafael Jambeiro",
+      "official_gazette_url": "https://www.rafaeljambeiro.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Remanso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Retirolândia",
+      "official_gazette_url": "https://retirolandia.ba.gov.br/"
+    },
+    {
+      "name": "Riachão das Neves",
+      "official_gazette_url": "https://sai.io.org.br/ba/riachaodasneves/site/diariooficial"
+    },
+    {
+      "name": "Riachão do Jacuípe",
+      "official_gazette_url": "https://www.riachaodojacuipe.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Riacho de Santana",
+      "official_gazette_url": "https://www.riachodesantana.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Ribeira do Amparo",
+      "official_gazette_url": "https://www.ribeiradoamparo.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Ribeira do Pombal",
+      "official_gazette_url": "https://ribeiradopombal.ba.gov.br/diario-oficial-apos-marco-de-2021/"
+    },
+    {
+      "name": "Ribeirão do Largo",
+      "official_gazette_url": "https://www.ribeiraodolargo.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Rio de Contas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio do Antônio",
+      "official_gazette_url": "https://www.riodoantonio.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Rio do Pires",
+      "official_gazette_url": "https://riodopires.ba.gov.br/publicacoes"
+    },
+    {
+      "name": "Rio Real",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rodelas",
+      "official_gazette_url": "https://diario.rodelas.ba.gov.br"
+    },
+    {
+      "name": "Ruy Barbosa",
+      "official_gazette_url": "http://www.ruybarbosa.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Salinas da Margarida",
+      "official_gazette_url": "https://www.salinasdamargarida.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Salvador",
+      "official_gazette_url": "http://www.dom.salvador.ba.gov.br/index.php"
+    },
+    {
+      "name": "Santa Bárbara",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Brígida",
+      "official_gazette_url": "https://www.santabrigida.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Santa Cruz Cabrália",
+      "official_gazette_url": "https://doem.org.br/ba/santacruzcabralia"
+    },
+    {
+      "name": "Santa Cruz da Vitória",
+      "official_gazette_url": "https://www.santacruzdavitoria.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Santa Inês",
+      "official_gazette_url": "https://www.santaines.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Santa Luzia",
+      "official_gazette_url": "https://diario.santaluzia.ba.gov.br"
+    },
+    {
+      "name": "Santa Maria da Vitória",
+      "official_gazette_url": "https://www.santamariadavitoria.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Santa Rita de Cássia",
+      "official_gazette_url": "https://doem.org.br/ba/santaritadecassia"
+    },
+    {
+      "name": "Santa Teresinha",
+      "official_gazette_url": "https://santateresinha.ba.gov.br/publicacoes"
+    },
+    {
+      "name": "Santaluz",
+      "official_gazette_url": "https://diario.indap.org.br/?estado_id=5&cidade_id=2169&cidade=Santaluz&estado=BA&orgao=Prefeitura"
+    },
+    {
+      "name": "Santana",
+      "official_gazette_url": "https://www.santana.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santanópolis",
+      "official_gazette_url": "https://www.santanopolis.ba.gov.br/"
+    },
+    {
+      "name": "Santo Amaro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio de Jesus",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Estêvão",
+      "official_gazette_url": "https://doem.org.br/ba/santoestevao"
+    },
+    {
+      "name": "São Desidério",
+      "official_gazette_url": "https://saodesiderio.ba.gov.br/servicos/diario-oficial/"
+    },
+    {
+      "name": "São Domingos",
+      "official_gazette_url": "https://saodomingos.ba.gov.br/legislacao/"
+    },
+    {
+      "name": "São Felipe",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Félix",
+      "official_gazette_url": "https://saofelix.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "São Félix do Coribe",
+      "official_gazette_url": "https://www.saofelixdocoribe.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São Francisco do Conde",
+      "official_gazette_url": "https://www.acessoinformacao.com.br/site/#diario-oficial"
+    },
+    {
+      "name": "São Gabriel",
+      "official_gazette_url": "https://saogabriel.ba.gov.br#diario-oficial"
+    },
+    {
+      "name": "São Gonçalo dos Campos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José da Vitória",
+      "official_gazette_url": "https://www.saojosedavitoria.ba.gov.br/transparencia"
+    },
+    {
+      "name": "São José do Jacuípe",
+      "official_gazette_url": "http://www.saojosedojacuipe.ba.gov.br/transparencia"
+    },
+    {
+      "name": "São Miguel das Matas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Sebastião do Passé",
+      "official_gazette_url": "https://www.saosebastiaodopasse.ba.gov.br/publicacoes/"
+    },
+    {
+      "name": "Sapeaçu",
+      "official_gazette_url": "https://sapeacu.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Sátiro Dias",
+      "official_gazette_url": "https://doem.org.br/ba/satirodias"
+    },
+    {
+      "name": "Saubara",
+      "official_gazette_url": "https://diario.saubara.ba.gov.br"
+    },
+    {
+      "name": "Saúde",
+      "official_gazette_url": "https://www.saude.ba.gov.br/atencao-a-saude/comofuncionaosus/centros-de-referencia/publicacoes/"
+    },
+    {
+      "name": "Seabra",
+      "official_gazette_url": "https://seabra.ba.gov.br#diario-oficial"
+    },
+    {
+      "name": "Sebastião Laranjeiras",
+      "official_gazette_url": "https://www.sebastiaolaranjeiras.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Senhor do Bonfim",
+      "official_gazette_url": "https://doem.org.br/ba/senhordobonfim"
+    },
+    {
+      "name": "Sento Sé",
+      "official_gazette_url": "https://doem.org.br/ba/sentose"
+    },
+    {
+      "name": "Serra do Ramalho",
+      "official_gazette_url": "https://www.serradoramalho.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Serra Dourada",
+      "official_gazette_url": "https://www.serradourada.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Serra Preta",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Serrinha",
+      "official_gazette_url": "https://www.serrinha.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Serrolândia",
+      "official_gazette_url": "https://diario.serrolandia.ba.gov.br"
+    },
+    {
+      "name": "Simões Filho",
+      "official_gazette_url": "https://simoesfilho.ba.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Sítio do Mato",
+      "official_gazette_url": "https://www.sitiodomato.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Sítio do Quinto",
+      "official_gazette_url": "https://www.sitiodoquinto.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Sobradinho",
+      "official_gazette_url": "https://www.sobradinho.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Souto Soares",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tabocas do Brejo Velho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tanhaçu",
+      "official_gazette_url": "https://diario.tanhacu.ba.gov.br"
+    },
+    {
+      "name": "Tanque Novo",
+      "official_gazette_url": "https://tanquenovo.ba.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Tanquinho",
+      "official_gazette_url": "https://www.tanquinho.ba.gov.br/diariooficial"
+    },
+    {
+      "name": "Taperoá",
+      "official_gazette_url": "https://diario.taperoa.ba.gov.br"
+    },
+    {
+      "name": "Tapiramutá",
+      "official_gazette_url": "https://doem.org.br/ba/tapiramuta"
+    },
+    {
+      "name": "Teixeira de Freitas",
+      "official_gazette_url": "https://www.teixeiradefreitas.ba.gov.br/transparencia-audiencia-publica-discute-a-gestao-de-recursos-publicos-em-teixeira-de-freitas-confira/"
+    },
+    {
+      "name": "Teodoro Sampaio",
+      "official_gazette_url": "https://teodorosampaio.ba.gov.br/diario-oficial-ate-dia-08-de-agosto-de-2025/"
+    },
+    {
+      "name": "Teofilândia",
+      "official_gazette_url": "https://diario.teofilandia.ba.gov.br"
+    },
+    {
+      "name": "Teolândia",
+      "official_gazette_url": "https://doem.org.br/ba/teolandia"
+    },
+    {
+      "name": "Terra Nova",
+      "official_gazette_url": "http://www.terranova.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Tremedal",
+      "official_gazette_url": "https://tremedal.ba.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Tucano",
+      "official_gazette_url": "https://doem.org.br/ba/tucano"
+    },
+    {
+      "name": "Uauá",
+      "official_gazette_url": "https://www.uaua.ba.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ubaíra",
+      "official_gazette_url": "https://diario.ubaira.ba.gov.br"
+    },
+    {
+      "name": "Ubaitaba",
+      "official_gazette_url": "https://diario.ubaitaba.ba.gov.br"
+    },
+    {
+      "name": "Ubatã",
+      "official_gazette_url": "https://diario.ubata.ba.gov.br"
+    },
+    {
+      "name": "Uibaí",
+      "official_gazette_url": "https://uibai.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Umburanas",
+      "official_gazette_url": "https://diariooficial.umburanas.ba.gov.br/"
+    },
+    {
+      "name": "Una",
+      "official_gazette_url": "https://diario.una.ba.gov.br"
+    },
+    {
+      "name": "Urandi",
+      "official_gazette_url": "https://www.urandi.ba.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Uruçuca",
+      "official_gazette_url": "https://sai.io.org.br/ba/urucuca/Site/DiarioOficial"
+    },
+    {
+      "name": "Utinga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Valença",
+      "official_gazette_url": "https://diario.valenca.ba.gov.br"
+    },
+    {
+      "name": "Valente",
+      "official_gazette_url": "https://www.valente.ba.gov.br/transparencia/"
+    },
+    {
+      "name": "Várzea da Roça",
+      "official_gazette_url": "https://www.varzeadaroca.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Várzea do Poço",
+      "official_gazette_url": "https://www.varzeadopoco.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Várzea Nova",
+      "official_gazette_url": "https://www.varzeanova.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Varzedo",
+      "official_gazette_url": "https://diariooficial.varzedo.ba.gov.br/"
+    },
+    {
+      "name": "Vera Cruz",
+      "official_gazette_url": "https://veracruz.ba.gov.br#diario-oficial"
+    },
+    {
+      "name": "Vereda",
+      "official_gazette_url": "https://sai.io.org.br/ba/vereda/site/diariooficial"
+    },
+    {
+      "name": "Vitória da Conquista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Wagner",
+      "official_gazette_url": "https://wagner.ba.gov.br/wp-content/uploads/2017/02/diarioOficial.png"
+    },
+    {
+      "name": "Wanderley",
+      "official_gazette_url": "https://wanderley.ba.gov.br/2020/05/04/diario-oficial/"
+    },
+    {
+      "name": "Wenceslau Guimarães",
+      "official_gazette_url": "https://www.wenceslauguimaraes.ba.gov.br/transparencia"
+    },
+    {
+      "name": "Xique-Xique",
+      "official_gazette_url": "https://xiquexique.ba.gov.br#diario-oficial"
+    }
+  ]
+}

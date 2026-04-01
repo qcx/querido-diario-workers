@@ -1,0 +1,305 @@
+{
+  "name": "Sergipe",
+  "cities": [
+    {
+      "name": "Amparo de São Francisco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Aquidabã",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/aquidaba/cidadao/diariooficial"
+    },
+    {
+      "name": "Aracaju",
+      "official_gazette_url": "https://www.aracaju.se.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Arauá",
+      "official_gazette_url": "https://araua.se.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Areia Branca",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/areiabranca/cidadao/diariooficial"
+    },
+    {
+      "name": "Barra dos Coqueiros",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/barradoscoqueiros/cidadao/diariooficial"
+    },
+    {
+      "name": "Boquim",
+      "official_gazette_url": "https://agportal.agapesistemas.com.br/DiarioOficial/?alias=pmboquim"
+    },
+    {
+      "name": "Brejo Grande",
+      "official_gazette_url": "https://brejogrande.se.gov.br/transparencia/"
+    },
+    {
+      "name": "Campo do Brito",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/campodobrito/cidadao/diariooficial"
+    },
+    {
+      "name": "Canhoba",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/canhoba/cidadao/diariooficial"
+    },
+    {
+      "name": "Canindé de São Francisco",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/canindedesaofrancisco/cidadao/diariooficial"
+    },
+    {
+      "name": "Capela",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/capela/cidadao/diariooficial"
+    },
+    {
+      "name": "Carira",
+      "official_gazette_url": "https://agportal.agapesistemas.com.br/DiarioOficial/?alias=pmcarira"
+    },
+    {
+      "name": "Carmópolis",
+      "official_gazette_url": "https://carmopolis.se.gov.br/site"
+    },
+    {
+      "name": "Cedro de São João",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cristinápolis",
+      "official_gazette_url": "https://www.cristinapolis.se.gov.br/diariooficial"
+    },
+    {
+      "name": "Cumbe",
+      "official_gazette_url": "https://cumbe.se.gov.br/site"
+    },
+    {
+      "name": "Divina Pastora",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/divinapastora/cidadao/diariooficial"
+    },
+    {
+      "name": "Estância",
+      "official_gazette_url": "https://diario.estancia.se.gov.br"
+    },
+    {
+      "name": "Feira Nova",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Frei Paulo",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/freipaulo/cidadao/diariooficial"
+    },
+    {
+      "name": "Gararu",
+      "official_gazette_url": "https://agportal.agapesistemas.com.br/DiarioOficial/?alias=pmgararu"
+    },
+    {
+      "name": "General Maynard",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Gracho Cardoso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ilha das Flores",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/ilhadasflores/cidadao/diariooficial"
+    },
+    {
+      "name": "Indiaroba",
+      "official_gazette_url": "https://indiaroba.se.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Itabaiana",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/itabaiana/cidadao/diariooficial"
+    },
+    {
+      "name": "Itabaianinha",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/itabaianinha/cidadao/diariooficial"
+    },
+    {
+      "name": "Itabi",
+      "official_gazette_url": "https://agportal.agapesistemas.com.br/DiarioOficial/?alias=pmitabi"
+    },
+    {
+      "name": "Itaporanga d'Ajuda",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Japaratuba",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/japaratuba/cidadao/diariooficial"
+    },
+    {
+      "name": "Japoatã",
+      "official_gazette_url": "https://agportal.agapesistemas.com.br/DiarioOficial/?alias=pmjapoata"
+    },
+    {
+      "name": "Lagarto",
+      "official_gazette_url": "https://www.lagarto.se.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Laranjeiras",
+      "official_gazette_url": "https://agportal.agapesistemas.com.br/DiarioOficial/?alias=pmlaranjeiras"
+    },
+    {
+      "name": "Macambira",
+      "official_gazette_url": "https://www.macambira.se.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Malhada dos Bois",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Malhador",
+      "official_gazette_url": "https://malhador.se.gov.br/texto/diario-oficial/17"
+    },
+    {
+      "name": "Maruim",
+      "official_gazette_url": "https://www.maruim.se.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Moita Bonita",
+      "official_gazette_url": "http://www.municipioonline.com.br/se/prefeitura/moitabonita/cidadao/diariooficial"
+    },
+    {
+      "name": "Monte Alegre de Sergipe",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Muribeca",
+      "official_gazette_url": "http://www.municipioonline.com.br/se/prefeitura/muribeca/cidadao/diariooficial"
+    },
+    {
+      "name": "Neópolis",
+      "official_gazette_url": "https://www.neopolis.se.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Nossa Senhora Aparecida",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nossa Senhora da Glória",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nossa Senhora das Dores",
+      "official_gazette_url": "http://www.municipioonline.com.br/se/prefeitura/nossasenhoradasdores/cidadao/diariooficial"
+    },
+    {
+      "name": "Nossa Senhora de Lourdes",
+      "official_gazette_url": "http://www.municipioonline.com.br/se/prefeitura/nossasenhoradelourdes/cidadao/diariooficial"
+    },
+    {
+      "name": "Nossa Senhora do Socorro",
+      "official_gazette_url": "https://doem.org.br/se/nossasenhoradosocorro"
+    },
+    {
+      "name": "Pacatuba",
+      "official_gazette_url": "https://www.pacatuba.se.gov.br/diario-oficial"
+    },
+    {
+      "name": "Pedra Mole",
+      "official_gazette_url": "http://www.municipioonline.com.br/se/prefeitura/pedramole/cidadao/diariooficial"
+    },
+    {
+      "name": "Pedrinhas",
+      "official_gazette_url": "https://www.pedrinhas.se.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Pinhão",
+      "official_gazette_url": "https://pinhao.se.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Pirambu",
+      "official_gazette_url": "http://www.municipioonline.com.br/se/prefeitura/pirambu/cidadao/diariooficial"
+    },
+    {
+      "name": "Poço Redondo",
+      "official_gazette_url": "https://pocoredondo.se.gov.br/transparencia/"
+    },
+    {
+      "name": "Poço Verde",
+      "official_gazette_url": "http://www.municipioonline.com.br/se/prefeitura/pocoverde/cidadao/diariooficial"
+    },
+    {
+      "name": "Porto da Folha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Propriá",
+      "official_gazette_url": "https://www.propria.se.gov.br/diario-oficial"
+    },
+    {
+      "name": "Riachão do Dantas",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/riachaododantas/cidadao/diariooficial"
+    },
+    {
+      "name": "Riachuelo",
+      "official_gazette_url": "https://www.riachuelo.se.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Ribeirópolis",
+      "official_gazette_url": "https://www.ribeiropolis.se.gov.br/diariooficial"
+    },
+    {
+      "name": "Rosário do Catete",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/rosariodocatete/cidadao/diariooficial"
+    },
+    {
+      "name": "Salgado",
+      "official_gazette_url": "https://www.salgado.se.gov.br/diario-oficial"
+    },
+    {
+      "name": "Santa Luzia do Itanhy",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Rosa de Lima",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santana do São Francisco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Amaro das Brotas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Cristóvão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Domingos",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/saodomingos/cidadao/diariooficial"
+    },
+    {
+      "name": "São Francisco",
+      "official_gazette_url": "https://www.saofrancisco.se.gov.br/transparencia"
+    },
+    {
+      "name": "São Miguel do Aleixo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Simão Dias",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/simaodias/cidadao/diariooficial"
+    },
+    {
+      "name": "Siriri",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/siriri/cidadao/diariooficial"
+    },
+    {
+      "name": "Telha",
+      "official_gazette_url": "https://www.municipioonline.com.br/se/prefeitura/telha/cidadao/diariooficial"
+    },
+    {
+      "name": "Tobias Barreto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tomar do Geru",
+      "official_gazette_url": "https://www.tomardogeru.se.gov.br/transparencia"
+    },
+    {
+      "name": "Umbaúba",
+      "official_gazette_url": "https://www.umbauba.se.gov.br/noticias/diario-oficial"
+    }
+  ]
+}

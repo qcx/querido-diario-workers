@@ -1,0 +1,1177 @@
+{
+  "name": "Santa Catarina",
+  "cities": [
+    {
+      "name": "Abdon Batista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Abelardo Luz",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Agrolândia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Agronômica",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Água Doce",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Águas de Chapecó",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Águas Frias",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Águas Mornas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alfredo Wagner",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alto Bela Vista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Anchieta",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Angelina",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Anita Garibaldi",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Anitápolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Antônio Carlos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Apiúna",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Arabutã",
+      "official_gazette_url": "https://arabuta.sc.gov.br/transparencia"
+    },
+    {
+      "name": "Araquari",
+      "official_gazette_url": "https://portal.araquari.sc.gov.br/diario-oficial"
+    },
+    {
+      "name": "Araranguá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Armazém",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Arroio Trinta",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Arvoredo",
+      "official_gazette_url": "https://arvoredo.sc.gov.br/transparencia"
+    },
+    {
+      "name": "Ascurra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Atalanta",
+      "official_gazette_url": "https://www.atalanta.sc.gov.br/diario-oficial"
+    },
+    {
+      "name": "Aurora",
+      "official_gazette_url": "https://aurora.sc.gov.br/transparencia"
+    },
+    {
+      "name": "Balneário Arroio do Silva",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Balneário Barra do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Balneário Camboriú",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Balneário Gaivota",
+      "official_gazette_url": "https://balneariogaivota.sc.gov.br/"
+    },
+    {
+      "name": "Bandeirante",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Barra Bonita",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Barra Velha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bela Vista do Toldo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Belmonte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Benedito Novo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Biguaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Blumenau",
+      "official_gazette_url": "https://www.blumenau.sc.gov.br/diario-oficial"
+    },
+    {
+      "name": "Bocaina do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Jardim da Serra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Jesus",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Jesus do Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Retiro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bombinhas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Botuverá",
+      "official_gazette_url": "https://www.botuvera.sc.gov.br/"
+    },
+    {
+      "name": "Braço do Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Braço do Trombudo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Brunópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Brusque",
+      "official_gazette_url": "https://www.brusque.sc.gov.br/diariooficial"
+    },
+    {
+      "name": "Caçador",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Caibi",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Calmon",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Camboriú",
+      "official_gazette_url": "https://camboriu.sc.gov.br"
+    },
+    {
+      "name": "Campo Alegre",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campo Belo do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campo Erê",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campos Novos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Canelinha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Canoinhas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Capão Alto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Capinzal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Capivari de Baixo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Catanduvas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Caxambu do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Celso Ramos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cerro Negro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Chapadão do Lageado",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Chapecó",
+      "official_gazette_url": "https://www.chapeco.sc.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Cocal do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Concórdia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cordilheira Alta",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Coronel Freitas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Coronel Martins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Correia Pinto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Corupá",
+      "official_gazette_url": "https://diariomunicipal.sc.gov.br/?r=site%2Fportal&codigoEntidade=78&dataInicial=01%2F01%2F1990"
+    },
+    {
+      "name": "Criciúma",
+      "official_gazette_url": "https://transparencia.criciuma.sc.gov.br/estruturaCriciuma?act=DiretoriaAtosOficiaisGestaoPessoas"
+    },
+    {
+      "name": "Cunha Porã",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cunhataí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Curitibanos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Descanso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Dionísio Cerqueira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Dona Emma",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Doutor Pedrinho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Entre Rios",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ermo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Erval Velho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Faxinal dos Guedes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Flor do Sertão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Florianópolis",
+      "official_gazette_url": "https://edicao.dom.sc.gov.br/?"
+    },
+    {
+      "name": "Formosa do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Forquilhinha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Fraiburgo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Frei Rogério",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Galvão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Garopaba",
+      "official_gazette_url": "https://diariomunicipal.sc.gov.br/?r=site/portal&q=&id=&categoria=&dataInicial=&dataFinal=&excluiTermos=&codigoEntidade=98"
+    },
+    {
+      "name": "Garuva",
+      "official_gazette_url": "https://www.garuva.sc.gov.br/diariooficial"
+    },
+    {
+      "name": "Gaspar",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Governador Celso Ramos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Grão Pará",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Gravatal",
+      "official_gazette_url": "https://www.gravatal.sc.gov.br/diariooficial"
+    },
+    {
+      "name": "Guabiruba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Guaraciaba",
+      "official_gazette_url": "https://guaraciaba.sc.gov.br/transparencia"
+    },
+    {
+      "name": "Guaramirim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Guarujá do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Guatambú",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Herval d'Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ibiam",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ibicaré",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ibirama",
+      "official_gazette_url": "https://www.ibirama.sc.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Içara",
+      "official_gazette_url": "https://www.icara.sc.gov.br/"
+    },
+    {
+      "name": "Ilhota",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Imaruí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Imbituba",
+      "official_gazette_url": "https://imbituba.atende.net/diariooficial"
+    },
+    {
+      "name": "Imbuia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Indaial",
+      "official_gazette_url": "https://indaial.sc.gov.br/transparencia"
+    },
+    {
+      "name": "Iomerê",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ipira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Iporã do Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ipuaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ipumirim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Iraceminha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Irani",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Irati",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Irineópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itá",
+      "official_gazette_url": "https://diariomunicipal.sc.gov.br/?r=site/portal&q=cod_entidade%3A447&id=&categoria=&dataInicial=&dataFinal=&excluiTermos=&codigoEntidade=447"
+    },
+    {
+      "name": "Itaiópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itajaí",
+      "official_gazette_url": "https://www.itajai.sc.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Itapema",
+      "official_gazette_url": "https://itapema.1doc.com.br/b.php?s=itapema&pg=o/login&nocache"
+    },
+    {
+      "name": "Itapiranga",
+      "official_gazette_url": "https://diariomunicipal.sc.gov.br/site/?q=itapiranga"
+    },
+    {
+      "name": "Itapoá",
+      "official_gazette_url": "https://itapoa.sc.gov.br/transparencia"
+    },
+    {
+      "name": "Ituporanga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jaborá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jacinto Machado",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jaguaruna",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jaraguá do Sul",
+      "official_gazette_url": "https://www.jaraguadosul.sc.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Jardinópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Joaçaba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Joinville",
+      "official_gazette_url": "https://www.joinville.sc.gov.br/jornal/index/page/1"
+    },
+    {
+      "name": "José Boiteux",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jupiá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lacerdópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lages",
+      "official_gazette_url": "https://www.lages.sc.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Laguna",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lajeado Grande",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Laurentino",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lauro Muller",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lebon Régis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Leoberto Leal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lindóia do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lontras",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Luiz Alves",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Luzerna",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Macieira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mafra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Major Gercino",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Major Vieira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Maracajá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Maravilha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Marema",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Massaranduba",
+      "official_gazette_url": "https://massaranduba.sc.gov.br/transparencia"
+    },
+    {
+      "name": "Matos Costa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Meleiro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mirim Doce",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Modelo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mondaí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Monte Carlo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Monte Castelo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Morro da Fumaça",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Morro Grande",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Navegantes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Erechim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Itaberaba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Trento",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Veneza",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Novo Horizonte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Orleans",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Otacílio Costa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ouro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ouro Verde",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paial",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Painel",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Palhoça",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Palma Sola",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Palmeira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Palmitos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Papanduva",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paraíso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Passo de Torres",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Passos Maia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paulo Lopes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pedras Grandes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Penha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Peritiba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Petrolândia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Piçarras",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pinhalzinho",
+      "official_gazette_url": "https://www.pinhalzinho.sc.gov.br/diariooficial"
+    },
+    {
+      "name": "Pinheiro Preto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Piratuba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Planalto Alegre",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pomerode",
+      "official_gazette_url": "https://www.pomerode.sc.gov.br/diariooficial"
+    },
+    {
+      "name": "Ponte Alta",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ponte Alta do Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ponte Serrada",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Porto Belo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Porto União",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pouso Redondo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Praia Grande",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Presidente Castelo Branco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Presidente Getúlio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Presidente Nereu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Princesa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Quilombo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rancho Queimado",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio das Antas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio do Campo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio do Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio do Sul",
+      "official_gazette_url": "https://www.riodosul.sc.gov.br/transparencia"
+    },
+    {
+      "name": "Rio dos Cedros",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio Fortuna",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio Negrinho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio Rufino",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Riqueza",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rodeio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Romelândia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Salete",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Saltinho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Salto Veloso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sangão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Cecília",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Helena",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Rosa de Lima",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Rosa do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Terezinha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Terezinha do Progresso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santiago do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Amaro da Imperatriz",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Bento do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Bernardino",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Bonifácio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Carlos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Cristovão do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Domingos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Francisco do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João Batista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João do Itaperiú",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João do Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Joaquim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José",
+      "official_gazette_url": "https://diariomunicipal.sc.gov.br/"
+    },
+    {
+      "name": "São José do Cedro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José do Cerrito",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Lourenço do Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Ludgero",
+      "official_gazette_url": "https://www.saoludgero.sc.gov.br/transparencia/"
+    },
+    {
+      "name": "São Martinho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Miguel da Boa Vista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Miguel do Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Pedro de Alcântara",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Saudades",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Schroeder",
+      "official_gazette_url": "https://prefeitura.schroeder.sc.gov.br/diario-oficial"
+    },
+    {
+      "name": "Seara",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Serra Alta",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Siderópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sombrio",
+      "official_gazette_url": "https://diariomunicipal.sc.gov.br/"
+    },
+    {
+      "name": "Sul Brasil",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Taió",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tangará",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tigrinhos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tijucas",
+      "official_gazette_url": "https://www.tijucas.sc.gov.br/transparencia"
+    },
+    {
+      "name": "Timbé do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Timbó",
+      "official_gazette_url": "https://diariomunicipal.sc.gov.br/site/"
+    },
+    {
+      "name": "Timbó Grande",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Três Barras",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Treviso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Treze de Maio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Treze Tílias",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Trombudo Central",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tubarão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tunápolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Turvo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "União do Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Urubici",
+      "official_gazette_url": "https://www.urubici.sc.gov.br/diario-oficial"
+    },
+    {
+      "name": "Urupema",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Urussanga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Vargeão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Vargem",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Vargem Bonita",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Vidal Ramos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Videira",
+      "official_gazette_url": "https://videira.sc.gov.br/transparencia"
+    },
+    {
+      "name": "Vitor Meireles",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Witmarsum",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Xanxerê",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Xavantina",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Xaxim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Zortéa",
+      "official_gazette_url": "https://zortea.sc.gov.br/transparencia"
+    }
+  ]
+}

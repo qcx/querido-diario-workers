@@ -1,0 +1,745 @@
+{
+  "name": "Pernambuco",
+  "cities": [
+    {
+      "name": "Abreu e Lima",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Afogados da Ingazeira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Afrânio",
+      "official_gazette_url": "https://afranio.pe.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Agrestina",
+      "official_gazette_url": "https://agrestina.pe.gov.br/transparencia-e-compromisso-com-a-populacao-marcam-audiencia-publica-de-prestacao-de-contas-em-agrestina/"
+    },
+    {
+      "name": "Água Preta",
+      "official_gazette_url": "https://aguapreta.pe.gov.br/noticia/transparencia-2025-festejos-juninos/"
+    },
+    {
+      "name": "Águas Belas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alagoinha",
+      "official_gazette_url": "https://www.alagoinha.pe.gov.br/"
+    },
+    {
+      "name": "Aliança",
+      "official_gazette_url": "https://transparencia.alianca.pe.gov.br/app/pe/alianca/1/atos-oficiais-item-suspenso?do_search=1&tipo_ato_oficial=33"
+    },
+    {
+      "name": "Altinho",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Amaraji",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Angelim",
+      "official_gazette_url": "http://162.214.186.142:16444/transparencia/angelim/prefeitura/outrosatos.faces"
+    },
+    {
+      "name": "Araçoiaba",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/aracoiaba"
+    },
+    {
+      "name": "Araripina",
+      "official_gazette_url": "https://www.araripina.pe.gov.br/diario-oficial"
+    },
+    {
+      "name": "Arcoverde",
+      "official_gazette_url": "https://www.arcoverde.pe.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Barra de Guabiraba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Barreiros",
+      "official_gazette_url": "https://barreiros.pe.gov.br/legislacao-lgpd/"
+    },
+    {
+      "name": "Belém de Maria",
+      "official_gazette_url": "https://belemdemaria.pe.gov.br/publicacoes-oficiais/"
+    },
+    {
+      "name": "Belém de São Francisco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Belo Jardim",
+      "official_gazette_url": "https://belojardim.pe.gov.br/belojardim-prev-anuncia-acordo-para-pagamento-dos-salarios-atrasados-de-dezembro-dos-aposentados-e-pensionistas/"
+    },
+    {
+      "name": "Betânia",
+      "official_gazette_url": "https://www.betania.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Bezerros",
+      "official_gazette_url": "https://bezerros.pe.gov.br/diario-oficial/diario-oficial-2026/"
+    },
+    {
+      "name": "Bodocó",
+      "official_gazette_url": "https://bodoco.pe.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Bom Conselho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Jardim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bonito",
+      "official_gazette_url": "https://cloud.tenosoft.com.br/portal/p_index_entidades/p_index_entidades.php?municipio=91&represent=2"
+    },
+    {
+      "name": "Brejão",
+      "official_gazette_url": "https://www.brejao.pe.gov.br/"
+    },
+    {
+      "name": "Brejinho",
+      "official_gazette_url": "https://www.brejinho.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Brejo da Madre de Deus",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Buenos Aires",
+      "official_gazette_url": "https://www.buenosaires.pe.gov.br/publicacoes/"
+    },
+    {
+      "name": "Buíque",
+      "official_gazette_url": "https://buique.pe.gov.br/"
+    },
+    {
+      "name": "Cabo de Santo Agostinho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cabrobó",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/cabrobo"
+    },
+    {
+      "name": "Cachoeirinha",
+      "official_gazette_url": "https://portal.cepe.com.br/diario-oficial"
+    },
+    {
+      "name": "Caetés",
+      "official_gazette_url": "https://caetes.pe.gov.br/transparencia/diario-oficial/"
+    },
+    {
+      "name": "Calçado",
+      "official_gazette_url": "https://www.calcado.pe.gov.br/transparencia"
+    },
+    {
+      "name": "Calumbi",
+      "official_gazette_url": "https://www.calumbi.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Camaragibe",
+      "official_gazette_url": "https://transparencia.camaragibe.pe.gov.br/app/pe/camaragibe/1/atos-oficiais-item-suspenso?do_search=1&tipo_ato_oficial=135"
+    },
+    {
+      "name": "Camocim de São Félix",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Camutanga",
+      "official_gazette_url": "https://camutanga.pe.gov.br/legislacao-municipal/"
+    },
+    {
+      "name": "Canhotinho",
+      "official_gazette_url": "https://www.canhotinho.pe.gov.br/"
+    },
+    {
+      "name": "Capoeiras",
+      "official_gazette_url": "https://www.capoeiras.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Carnaíba",
+      "official_gazette_url": "https://www.carnaiba.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Carnaubeira da Penha",
+      "official_gazette_url": "https://www.carnaubeiradapenha.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Carpina",
+      "official_gazette_url": "https://transparencia.carpina.pe.gov.br/app/pe/carpina/1/atos-oficiais"
+    },
+    {
+      "name": "Caruaru",
+      "official_gazette_url": "https://diariooficial.caruaru.pe.gov.br/"
+    },
+    {
+      "name": "Casinhas",
+      "official_gazette_url": "https://casinhas.pe.gov.br/diariooficial/"
+    },
+    {
+      "name": "Catende",
+      "official_gazette_url": "https://www.catende.pe.gov.br/pages/error.php"
+    },
+    {
+      "name": "Cedro",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar?busca_avancada%5B__paper%5D=1&busca_avancada%5BentidadeUsuaria%5D=2055&busca_avancada%5Bnome_orgao%5D=&busca_avancada%5Btitulo%5D=&busca_avancada%5Btexto%5D=&busca_avancada%5BdataInicio%5D=21%2F01%2F2022&busca_avancada%5BdataFim%5D=21%2F01%2F2022&g-recaptcha-response=03AGdBq24bSTGpCdeI2O0IPZdJ4mN4zZbJJ9Mg70Ec-S0uH-RzfLOaLzufxYQE_yvDRedPX7wd2cvtMI_Fo-6DBqRohlyu_YJPtIJjoe2FSIE7rSEyHJ3wfokrwEl-kaUpr0HzKQwg1RzHyo3lR-cg6AQBlcayzdeSdkWI7feDCIJFoijlU3GxeTrF-fExuar2j6t8eTA27SmVIEbEVXn4UUyHlA4zRIlhPglCNcuK_WkkocckkFQ69YaoC5TH2HAnsJ1TNNGYYfzHHZnG4QgWZZxGgJkk-EJJikHDJypL8UJakB2Svy0xIh4vT3ssQ2h_Xb2JWl_M7UrCW9dgyVp5iPIx88Qpicm8UyjDm_in5Q-kOCJf-Q836Tn_RHpgAlor4y_neMOfOkCCOB70_QGhDT4RIvJTujAdmYx2HkxxMre0tZ76ES6RPpoqC-6CmVjWkkgBCrwUPZej1pYc8UTcpLbyS9r242ee0Q&busca_avancada%5B_token%5D=3yKnDNbXQGSyCCnCacHVl1qJgYIrM6MmDA9mNV8VY0A"
+    },
+    {
+      "name": "Chã de Alegria",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Chã Grande",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Condado",
+      "official_gazette_url": "https://transparencia.condado.pe.gov.br/app/pe/condado/1/atos-oficiais"
+    },
+    {
+      "name": "Correntes",
+      "official_gazette_url": "https://www.correntes.pe.gov.br/"
+    },
+    {
+      "name": "Cortês",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Cumaru",
+      "official_gazette_url": "https://www.cumaru.pe.gov.br/publicacoes-oficiais/"
+    },
+    {
+      "name": "Cupira",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Custódia",
+      "official_gazette_url": "https://custodia.pe.gov.br/legislacao-lgpd/"
+    },
+    {
+      "name": "Dormentes",
+      "official_gazette_url": "https://www.dormentes.pe.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Escada",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Exu",
+      "official_gazette_url": "https://www.exu.pe.gov.br/legislacao-lgpd/"
+    },
+    {
+      "name": "Feira Nova",
+      "official_gazette_url": "https://feiranova.pe.gov.br/transparencia/"
+    },
+    {
+      "name": "Fernando de Noronha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ferreiros",
+      "official_gazette_url": "https://ferreiros.pe.gov.br/legislacao-municipal/"
+    },
+    {
+      "name": "Flores",
+      "official_gazette_url": "https://www.flores.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Floresta",
+      "official_gazette_url": "https://www.floresta.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Frei Miguelinho",
+      "official_gazette_url": "https://freimiguelinho.pe.gov.br/noticia/transparencia-e-uso-responsavel-do-dinheiro-publico/"
+    },
+    {
+      "name": "Gameleira",
+      "official_gazette_url": "https://transparencia.gameleira.pe.gov.br/app/pe/gameleira/1/atos-oficiais-item-suspenso?do_search=1&tipo_ato_oficial=186"
+    },
+    {
+      "name": "Garanhuns",
+      "official_gazette_url": "https://garanhuns.pe.gov.br/legislacao-ambiental-e-apresentada-a-setores-variados-de-garanhuns/"
+    },
+    {
+      "name": "Glória do Goitá",
+      "official_gazette_url": "https://transparencia.gloriadogoita.pe.gov.br/app/pe/gloria-do-goita/1/atos-oficiais"
+    },
+    {
+      "name": "Goiana",
+      "official_gazette_url": "https://goiana.pe.gov.br/diario-oficial/diario-oficial/"
+    },
+    {
+      "name": "Granito",
+      "official_gazette_url": "https://www.granito.pe.gov.br/transparencia"
+    },
+    {
+      "name": "Gravatá",
+      "official_gazette_url": "https://gravata.pe.gov.br/noticia/transparencia-secretaria-de-financas-de-gravata-apresenta-prestacao-de-contas-do-setor-em-2025/"
+    },
+    {
+      "name": "Iati",
+      "official_gazette_url": "https://iati.pe.gov.br/"
+    },
+    {
+      "name": "Ibimirim",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Ibirajuba",
+      "official_gazette_url": "https://ibirajuba.pe.gov.br/transparencia-em-acao/"
+    },
+    {
+      "name": "Igarassu",
+      "official_gazette_url": "https://igarassu.pe.gov.br/domingo-com-atividades-esportivas-e-de-lazer-gratuitas-em-igarassu/"
+    },
+    {
+      "name": "Iguaraci",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Inajá",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Ingazeira",
+      "official_gazette_url": "https://www.ingazeira.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Ipojuca",
+      "official_gazette_url": "https://ipojuca.pe.gov.br/douglas-silva-leva-o-nome-de-ipojuca-ao-podio-mundial-do-surfe/"
+    },
+    {
+      "name": "Ipubi",
+      "official_gazette_url": "https://www.ipubi.pe.gov.br/2026/"
+    },
+    {
+      "name": "Itacuruba",
+      "official_gazette_url": "https://www.itacuruba.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Itaíba",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Itamaracá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itambé",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/"
+    },
+    {
+      "name": "Itapetim",
+      "official_gazette_url": "https://www.itapetim.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Itapissuma",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Itaquitinga",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/"
+    },
+    {
+      "name": "Jaboatão dos Guararapes",
+      "official_gazette_url": "https://diariooficial.jaboatao.pe.gov.br/"
+    },
+    {
+      "name": "Jaqueira",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Jataúba",
+      "official_gazette_url": "https://jatauba.pe.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Jatobá",
+      "official_gazette_url": "https://www.jatoba.pe.gov.br/"
+    },
+    {
+      "name": "João Alfredo",
+      "official_gazette_url": "https://joaoalfredo.pe.gov.br/legislacao-municipal/"
+    },
+    {
+      "name": "Joaquim Nabuco",
+      "official_gazette_url": "https://joaquimnabuco.pe.gov.br/transparencia-atricon/"
+    },
+    {
+      "name": "Jucati",
+      "official_gazette_url": "https://www.jucati.pe.gov.br/transparencia/"
+    },
+    {
+      "name": "Jupi",
+      "official_gazette_url": "https://www.jupi.pe.gov.br/"
+    },
+    {
+      "name": "Jurema",
+      "official_gazette_url": "https://transparencia.jurema.pe.gov.br/app/pe/jurema/1/atos-oficiais-externo"
+    },
+    {
+      "name": "Lagoa do Carro",
+      "official_gazette_url": "https://www.lagoadocarro.pe.gov.br/transparencia"
+    },
+    {
+      "name": "Lagoa do Itaenga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lagoa do Ouro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lagoa dos Gatos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lagoa Grande",
+      "official_gazette_url": "https://lagoagrande.pe.gov.br/_adicionar-atalhos/transparencia-covid-19/"
+    },
+    {
+      "name": "Lajedo",
+      "official_gazette_url": "https://cloud.tenosoft.com.br/portal/pt_conexao/pt_conexao.php?appURL=p_index&entidade=18"
+    },
+    {
+      "name": "Limoeiro",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/"
+    },
+    {
+      "name": "Macaparana",
+      "official_gazette_url": "https://macaparana.pe.gov.br/"
+    },
+    {
+      "name": "Machados",
+      "official_gazette_url": "https://www.machados.pe.gov.br/transparencia/"
+    },
+    {
+      "name": "Manari",
+      "official_gazette_url": "https://w3d.app.br/manari/"
+    },
+    {
+      "name": "Maraial",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Mirandiba",
+      "official_gazette_url": "https://www.mirandiba.pe.gov.br/cgi-sys/suspendedpage.cgi"
+    },
+    {
+      "name": "Moreilândia",
+      "official_gazette_url": "https://www.moreilandia.pe.gov.br"
+    },
+    {
+      "name": "Moreno",
+      "official_gazette_url": "https://www.moreno.pe.gov.br/diario-oficial"
+    },
+    {
+      "name": "Nazaré da Mata",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Olinda",
+      "official_gazette_url": "https://www.olinda.pe.gov.br/doacao-de-sangue-do-hemope-alcanca-de-175-bolsas-em-olinda/"
+    },
+    {
+      "name": "Orobó",
+      "official_gazette_url": "https://orobo.pe.gov.br/diariooficial/"
+    },
+    {
+      "name": "Orocó",
+      "official_gazette_url": "https://www.oroco.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Ouricuri",
+      "official_gazette_url": "https://www.ouricuri.pe.gov.br/diario-oficial"
+    },
+    {
+      "name": "Palmares",
+      "official_gazette_url": "https://www.palmares.pe.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Palmeirina",
+      "official_gazette_url": "https://www.palmeirina.pe.gov.br/"
+    },
+    {
+      "name": "Panelas",
+      "official_gazette_url": "https://cloud.tenosoft.com.br/portal/p_index_entidades/p_index_entidades.php?municipio=173&represent=1"
+    },
+    {
+      "name": "Paranatama",
+      "official_gazette_url": "https://www.paranatama.pe.gov.br/"
+    },
+    {
+      "name": "Parnamirim",
+      "official_gazette_url": "https://parnamirim.pe.gov.br/_acesso-rapido/diario-oficial/"
+    },
+    {
+      "name": "Passira",
+      "official_gazette_url": "https://www.passira.pe.gov.br/"
+    },
+    {
+      "name": "Paudalho",
+      "official_gazette_url": "https://www.paudalho.pe.gov.br/transparencia/"
+    },
+    {
+      "name": "Paulista",
+      "official_gazette_url": "https://paulista.pe.gov.br/do-lixo-ao-luxo-bloco-da-limpeza-estreia-fazendo-o-trajeto-pos-bacalhau-na-vara/"
+    },
+    {
+      "name": "Pedra",
+      "official_gazette_url": "https://pedra.pe.gov.br/domingo-de-pascoa/"
+    },
+    {
+      "name": "Pesqueira",
+      "official_gazette_url": "https://pesqueira.pe.gov.br/transparencia-e-responsabilidade-gestao-municipal-apresenta-metas-fiscais-em-audiencia-publica/"
+    },
+    {
+      "name": "Petrolândia",
+      "official_gazette_url": "https://www.petrolandia.pe.gov.br/"
+    },
+    {
+      "name": "Petrolina",
+      "official_gazette_url": "https://doem.org.br/pe/petrolina"
+    },
+    {
+      "name": "Poção",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/"
+    },
+    {
+      "name": "Pombos",
+      "official_gazette_url": "https://pombos.pe.transparenciamunicipal.online/app/pe/pombos/1/atos-oficiais-item-suspenso?do_search=1&tipo_ato_oficial=32"
+    },
+    {
+      "name": "Primavera",
+      "official_gazette_url": "https://transparencia.primavera.pe.gov.br/app/pe/primavera/1/atos-oficiais"
+    },
+    {
+      "name": "Quipapá",
+      "official_gazette_url": "https://quipapa.pe.gov.br/v2/"
+    },
+    {
+      "name": "Quixaba",
+      "official_gazette_url": "https://www.quixaba.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Recife",
+      "official_gazette_url": "https://dome.recife.pe.gov.br/dome"
+    },
+    {
+      "name": "Riacho das Almas",
+      "official_gazette_url": "https://cloud.tenosoft.com.br/portal/p_index_entidades/p_index_entidades.php?municipio=45&represent=2"
+    },
+    {
+      "name": "Ribeirão",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Rio Formoso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sairé",
+      "official_gazette_url": "https://saire.pe.gov.br/legislacao-lgpd/"
+    },
+    {
+      "name": "Salgadinho",
+      "official_gazette_url": "https://www.salgadinho.pe.gov.br/"
+    },
+    {
+      "name": "Salgueiro",
+      "official_gazette_url": "https://www.salgueiro.pe.gov.br/transparencia/"
+    },
+    {
+      "name": "Saloá",
+      "official_gazette_url": "https://www.saloa.pe.gov.br/transparencia/"
+    },
+    {
+      "name": "Sanharó",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Santa Cruz",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Cruz da Baixa Verde",
+      "official_gazette_url": "https://www.santacruzdabaixaverde.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Santa Cruz do Capibaribe",
+      "official_gazette_url": "https://www.santacruzdocapibaribe.pe.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santa Filomena",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Maria da Boa Vista",
+      "official_gazette_url": "https://santamariadaboavista.pe.gov.br/diario-oficial"
+    },
+    {
+      "name": "Santa Maria do Cambucá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Terezinha",
+      "official_gazette_url": "https://www.santaterezinha.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "São Benedito do Sul",
+      "official_gazette_url": "https://cloud.tenosoft.com.br/portal/p_index_entidades/p_index_entidades.php?municipio=3&represent=1"
+    },
+    {
+      "name": "São Bento do Una",
+      "official_gazette_url": "https://www.saobentodouna.pe.gov.br/legislacao/"
+    },
+    {
+      "name": "São Caitano",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Joaquim do Monte",
+      "official_gazette_url": "https://saojoaquimdomonte.pe.gov.br/_acesso-rapido/transparencia-covid-19/"
+    },
+    {
+      "name": "São José da Coroa Grande",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José do Belmonte",
+      "official_gazette_url": "https://www.saojosedobelmonte.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "São José do Egito",
+      "official_gazette_url": "https://saojosedoegito.pe.gov.br/diario-oficial/"
+    },
+    {
+      "name": "São Lourenço da Mata",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Vicente Ferrer",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Serra Talhada",
+      "official_gazette_url": "https://www.serratalhada.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Serrita",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar?busca_avancada%5B__paper%5D=1&busca_avancada%5BentidadeUsuaria%5D=4257&busca_avancada%5Bnome_orgao%5D=3920&busca_avancada%5Btitulo%5D=&busca_avancada%5Btexto%5D=&busca_avancada%5BdataInicio%5D=21%2F01%2F2022&busca_avancada%5BdataFim%5D=21%2F01%2F2022&g-recaptcha-response=03AGdBq24Dh4jo8XNPDjDUmNd2W7XLHutGMmCccylbmNyFpjJ_PZKVWGh-6eYROHXi21BRu5y9rRHFeifAY67dX1y3HIf6w-_iTSCtQVEzih36jW80-d2M7s09qS3L7k2hIa3wkZG-orv9JFQFgnewWjdgG7vA4u6pMnVzq2SIkvT1Nvzqf4rEVWN9cFajtuPxEClwDibkne6kB0v4zVyPGyfIyE-06dm9eQ3zg0-NmMoXdbIGoVDu_hGGFdOyQeCdFUghGK5cPyZ3-eg7kvjrjMQVOBjcql2TMAaORTBeNxKJMVqUTxdsd-CGAyciYM6K-kMO0f0biPHJcv4AqXC2IuoGQPS0nDyHKwW_p_dWRgOEqcljm0m0bZAJHuyDT7RI4kTahbMJHQOj0aPHJtu3Cst2FlcD6KZsAYqDLv3PmksEDQwT7HsEQkMGzvEO7aNVRGqyq3sTTIfe_3NRMv1nY6Sh5jBuqG6qMA&busca_avancada%5B_token%5D=3yKnDNbXQGSyCCnCacHVl1qJgYIrM6MmDA9mNV8VY0A"
+    },
+    {
+      "name": "Sertânia",
+      "official_gazette_url": "https://www.sertania.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Sirinhaém",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Solidão",
+      "official_gazette_url": "https://www.solidao.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Surubim",
+      "official_gazette_url": "https://surubim.pe.gov.br/site/wp-content/uploads/2023/08/Diario-Oficial.png"
+    },
+    {
+      "name": "Tabira",
+      "official_gazette_url": "https://www.tabira.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Tacaimbó",
+      "official_gazette_url": "https://transparencia.tacaimbo.pe.gov.br/app/pe/tacaimbo/1/atos-oficiais"
+    },
+    {
+      "name": "Tacaratu",
+      "official_gazette_url": "https://www.tacaratu.pe.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Tamandaré",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Taquaritinga do Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Terezinha",
+      "official_gazette_url": "https://www.terezinha.pe.gov.br/"
+    },
+    {
+      "name": "Terra Nova",
+      "official_gazette_url": "https://www.terranova.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Timbaúba",
+      "official_gazette_url": "https://timbauba.pe.gov.br/"
+    },
+    {
+      "name": "Toritama",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tracunhaém",
+      "official_gazette_url": "https://tracunhaem.pe.gov.br/"
+    },
+    {
+      "name": "Trindade",
+      "official_gazette_url": "https://trindade.pe.gov.br/diario-oficial/diario-oficial-2026/"
+    },
+    {
+      "name": "Triunfo",
+      "official_gazette_url": "https://www.triunfo.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Tupanatinga",
+      "official_gazette_url": "https://www.tupanatinga.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Tuparetama",
+      "official_gazette_url": "https://tuparetama.pe.gov.br/"
+    },
+    {
+      "name": "Venturosa",
+      "official_gazette_url": "https://www.venturosa.pe.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Verdejante",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar?busca_avancada%5Bpage%5D=&busca_avancada%5BentidadeUsuaria%5D=48932&busca_avancada%5Bnome_orgao%5D=13873&busca_avancada%5Btitulo%5D=&busca_avancada%5Btexto%5D=&busca_avancada%5BdataInicio%5D=01%2F01%2F2025&busca_avancada%5BdataFim%5D=21%2F05%2F2025&busca_avancada%5BEnviar%5D=&busca_avancada%5B_token%5D=a617.Y18969-EvGND6DX4krBqsoKW6HPaY8qVta4znzCwXv8.DWlvooDDjDkR22ad1Icni8Hy0SyrBKzZxehXx2bIZ4sUMHXapuHUUQqQcA"
+    },
+    {
+      "name": "Vertente do Lério",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Vertentes",
+      "official_gazette_url": "https://transparencia.vertentes.pe.gov.br/app/pe/vertentes/1/atos-oficiais-item-suspenso?do_search=1&tipo_ato_oficial=78"
+    },
+    {
+      "name": "Vicência",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/"
+    },
+    {
+      "name": "Vitória de Santo Antão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Xexéu",
+      "official_gazette_url": "http://site.xexeu.pe.gov.br/"
+    }
+  ]
+}

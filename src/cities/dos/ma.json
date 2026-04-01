@@ -1,0 +1,873 @@
+{
+  "name": "Maranhão",
+  "cities": [
+    {
+      "name": "Açailândia",
+      "official_gazette_url": "https://www.acailandia.ma.gov.br/diariooficial"
+    },
+    {
+      "name": "Afonso Cunha",
+      "official_gazette_url": "https://transparencia.afonsocunha.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    {
+      "name": "Água Doce do Maranhão",
+      "official_gazette_url": "https://aguadocedomaranhao.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Alcântara",
+      "official_gazette_url": "https://www.alcantara.ma.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Aldeias Altas",
+      "official_gazette_url": "https://aldeiasaltas.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Altamira do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alto Alegre do Maranhão",
+      "official_gazette_url": "https://www.altoalegredomaranhao.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Alto Alegre do Pindaré",
+      "official_gazette_url": "https://www.altoalegredopindare.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Alto Parnaíba",
+      "official_gazette_url": "https://altoparnaiba.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Amapá do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Amarante do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Anajatuba",
+      "official_gazette_url": "https://www.anajatuba.ma.gov.br"
+    },
+    {
+      "name": "Anapurus",
+      "official_gazette_url": "https://anapurus.ma.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Apicum-Açu",
+      "official_gazette_url": "https://www.apicumacu.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Araguanã",
+      "official_gazette_url": "https://transparencia.araguana.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    {
+      "name": "Araioses",
+      "official_gazette_url": "https://dom.araioses.ma.gov.br/"
+    },
+    {
+      "name": "Arame",
+      "official_gazette_url": "https://www.arame.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Arari",
+      "official_gazette_url": "https://www.arari.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Axixá",
+      "official_gazette_url": "https://transparencia.axixa.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    {
+      "name": "Bacabal",
+      "official_gazette_url": "https://www.bacabal.ma.gov.br/diario"
+    },
+    {
+      "name": "Bacabeira",
+      "official_gazette_url": "https://www.bacabeira.ma.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Bacuri",
+      "official_gazette_url": "https://bacuri.ma.gov.br/diario/diario"
+    },
+    {
+      "name": "Bacurituba",
+      "official_gazette_url": "https://transparencia.bacurituba.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    {
+      "name": "Balsas",
+      "official_gazette_url": "https://www.balsas.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Barão de Grajaú",
+      "official_gazette_url": "https://www.baraodegrajau.ma.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Barra do Corda",
+      "official_gazette_url": "https://www.barradocorda.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Barreirinhas",
+      "official_gazette_url": "https://www.barreirinhas.ma.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Bela Vista do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Belágua",
+      "official_gazette_url": "https://www.belagua.ma.gov.br/"
+    },
+    {
+      "name": "Benedito Leite",
+      "official_gazette_url": "https://www.beneditoleite.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Bequimão",
+      "official_gazette_url": "https://www.bequimao.ma.gov.br/Cidadao/Diario/diario"
+    },
+    {
+      "name": "Bernardo do Mearim",
+      "official_gazette_url": "https://www.bernardodomearim.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Boa Vista do Gurupi",
+      "official_gazette_url": "https://transparencia.boavistadogurupi.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    {
+      "name": "Bom Jardim",
+      "official_gazette_url": "https://www.bomjardim.ma.gov.br"
+    },
+    {
+      "name": "Bom Jesus das Selvas",
+      "official_gazette_url": "https://bomjesusdasselvas.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Bom Lugar",
+      "official_gazette_url": "https://www.bomlugar.ma.gov.br"
+    },
+    {
+      "name": "Brejo",
+      "official_gazette_url": "https://transparencia.brejo.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    {
+      "name": "Brejo de Areia",
+      "official_gazette_url": "https://brejodeareia.ma.gov.br/publicacoes"
+    },
+    {
+      "name": "Buriti",
+      "official_gazette_url": "https://www.buriti.ma.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Buriti Bravo",
+      "official_gazette_url": "https://www.buritibravo.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Buriticupu",
+      "official_gazette_url": "https://www.buriticupu.ma.gov.br"
+    },
+    {
+      "name": "Buritirana",
+      "official_gazette_url": "https://www.buritirana.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cachoeira Grande",
+      "official_gazette_url": "https://www.cachoeiragrande.ma.gov.br/publicacoes"
+    },
+    {
+      "name": "Cajapió",
+      "official_gazette_url": "https://transparencia.cajapio.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    {
+      "name": "Cajari",
+      "official_gazette_url": "https://transparencia.cajari.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    {
+      "name": "Campestre do Maranhão",
+      "official_gazette_url": "https://www.campestredomaranhao.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cândido Mendes",
+      "official_gazette_url": "https://www.candidomendes.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Cantanhede",
+      "official_gazette_url": "https://www.cantanhede.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Capinzal do Norte",
+      "official_gazette_url": "https://www.capinzaldonorte.ma.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Carolina",
+      "official_gazette_url": "https://diariooficial.famem.org.br/dom/dom/todasEdicoes/"
+    },
+    {
+      "name": "Carutapera",
+      "official_gazette_url": "https://www.carutapera.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Caxias",
+      "official_gazette_url": "https://dom.caxias.ma.gov.br/diario"
+    },
+    {
+      "name": "Cedral",
+      "official_gazette_url": "https://www.cedral.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Central do Maranhão",
+      "official_gazette_url": "https://www.centraldomaranhao.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Centro do Guilherme",
+      "official_gazette_url": "https://centrodoguilherme.ma.gov.br/diariooficial"
+    },
+    {
+      "name": "Centro Novo do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Chapadinha",
+      "official_gazette_url": "https://www.chapadinha.ma.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Cidelândia",
+      "official_gazette_url": "https://www.cidelandia.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Codó",
+      "official_gazette_url": "https://www.codo.ma.gov.br/diario"
+    },
+    {
+      "name": "Coelho Neto",
+      "official_gazette_url": "https://coelhoneto.ma.gov.br/linksrapidos/diario-oficial/"
+    },
+    {
+      "name": "Colinas",
+      "official_gazette_url": "https://www.colinas.ma.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Conceição do Lago-Açu",
+      "official_gazette_url": "https://www.conceicaodolagoacu.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Coroatá",
+      "official_gazette_url": "https://coroata.ma.gov.br/diario/"
+    },
+    {
+      "name": "Cururupu",
+      "official_gazette_url": "https://www.cururupu.ma.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Davinópolis",
+      "official_gazette_url": "https://www.davinopolis.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Dom Pedro",
+      "official_gazette_url": "https://www.dompedro.ma.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Duque Bacelar",
+      "official_gazette_url": "https://transparencia.duquebacelar.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    {
+      "name": "Esperantinópolis",
+      "official_gazette_url": "https://www.esperantinopolis.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Estreito",
+      "official_gazette_url": "https://www.estreito.ma.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Feira Nova do Maranhão",
+      "official_gazette_url": "https://www.feiranovadomaranhao.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Fernando Falcão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Formosa da Serra Negra",
+      "official_gazette_url": "https://www.formosadaserranegra.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Fortaleza dos Nogueiras",
+      "official_gazette_url": "https://www.fortalezadosnogueiras.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Fortuna",
+      "official_gazette_url": "https://fortuna.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Godofredo Viana",
+      "official_gazette_url": "https://www.godofredoviana.ma.gov.br/404"
+    },
+    {
+      "name": "Gonçalves Dias",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Governador Archer",
+      "official_gazette_url": "https://www.governadorarcher.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Governador Edison Lobão",
+      "official_gazette_url": "https://www.governadoredisonlobao.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Governador Eugênio Barros",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Governador Luiz Rocha",
+      "official_gazette_url": "https://www.governadorluizrocha.ma.gov.br/transparencia/institucional"
+    },
+    {
+      "name": "Governador Newton Bello",
+      "official_gazette_url": "https://www.governadornewtonbello.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Governador Nunes Freire",
+      "official_gazette_url": "https://www.governadornunesfreire.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Graça Aranha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Grajaú",
+      "official_gazette_url": "https://www.grajau.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Guimarães",
+      "official_gazette_url": "https://guimaraes.diariomunicipal.net.br/"
+    },
+    {
+      "name": "Humberto de Campos",
+      "official_gazette_url": "https://www.humbertodecampos.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Icatu",
+      "official_gazette_url": "https://www.icatu.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Igarapé do Meio",
+      "official_gazette_url": "https://www.igarapedomeio.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Igarapé Grande",
+      "official_gazette_url": "https://www.igarapegrande.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Imperatriz",
+      "official_gazette_url": "https://diariooficial.imperatriz.ma.gov.br/"
+    },
+    {
+      "name": "Itaipava do Grajaú",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itapecuru Mirim",
+      "official_gazette_url": "https://www.itapecurumirim.ma.gov.br"
+    },
+    {
+      "name": "Itinga do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jatobá",
+      "official_gazette_url": "https://jatoba.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Jenipapo dos Vieiras",
+      "official_gazette_url": "https://www.jenipapodosvieiras.ma.gov.br/transparencia"
+    },
+    {
+      "name": "João Lisboa",
+      "official_gazette_url": "https://www.joaolisboa.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Joselândia",
+      "official_gazette_url": "https://joselandia.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Junco do Maranhão",
+      "official_gazette_url": "https://www.juncodomaranhao.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Lago da Pedra",
+      "official_gazette_url": "https://www.lagodapedra.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Lago do Junco",
+      "official_gazette_url": "https://www.lagodojunco.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Lago dos Rodrigues",
+      "official_gazette_url": "https://www.lagodosrodrigues.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Lago Verde",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lagoa do Mato",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lagoa Grande do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lajeado Novo",
+      "official_gazette_url": "https://www.lajeadonovo.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Lima Campos",
+      "official_gazette_url": "https://www.limacampos.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Loreto",
+      "official_gazette_url": "https://transparencia.loreto.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    {
+      "name": "Luís Domingues",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Magalhães de Almeida",
+      "official_gazette_url": "https://dom.magalhaesdealmeida.ma.gov.br/"
+    },
+    {
+      "name": "Maracaçumé",
+      "official_gazette_url": "https://www.maracacume.ma.gov.br"
+    },
+    {
+      "name": "Marajá do Sena",
+      "official_gazette_url": "https://www.marajadosena.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Maranhãozinho",
+      "official_gazette_url": "https://maranhaozinho.ma.gov.br/diariooficial"
+    },
+    {
+      "name": "Mata Roma",
+      "official_gazette_url": "https://www.mataroma.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Matinha",
+      "official_gazette_url": "https://www.matinha.ma.gov.br/diariooficial"
+    },
+    {
+      "name": "Matões",
+      "official_gazette_url": "https://www.matoes.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Matões do Norte",
+      "official_gazette_url": "https://www.matoesdonorte.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Milagres do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mirador",
+      "official_gazette_url": "https://www.mirador.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Miranda do Norte",
+      "official_gazette_url": "https://www.mirandadonorte.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Mirinzal",
+      "official_gazette_url": "https://www.mirinzal.ma.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Monção",
+      "official_gazette_url": "https://www.moncao.ma.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Montes Altos",
+      "official_gazette_url": "https://www.montesaltos.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Morros",
+      "official_gazette_url": "https://www.morros.ma.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Nina Rodrigues",
+      "official_gazette_url": "https://transparencia.ninarodrigues.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    {
+      "name": "Nova Colinas",
+      "official_gazette_url": "https://www.novacolinas.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Nova Iorque",
+      "official_gazette_url": "https://www.administracaopublica.com.br/diario-oficial?token=4f1cf16edf5d73feaad4fec2a03c7c9e1cf536aa"
+    },
+    {
+      "name": "Nova Olinda do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Olho d'Água das Cunhãs",
+      "official_gazette_url": "https://www.olhodaguadascunhas.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Olinda Nova do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paço do Lumiar",
+      "official_gazette_url": "https://pacodolumiar.ma.gov.br/publicacoes"
+    },
+    {
+      "name": "Palmeirândia",
+      "official_gazette_url": "https://www.palmeirandia.ma.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Paraibano",
+      "official_gazette_url": "https://paraibano.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Parnarama",
+      "official_gazette_url": "https://parnarama.diariooficialmunicipal.com/"
+    },
+    {
+      "name": "Passagem Franca",
+      "official_gazette_url": "https://www.passagemfranca.ma.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Pastos Bons",
+      "official_gazette_url": "https://www.pastosbons.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Paulino Neves",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paulo Ramos",
+      "official_gazette_url": "https://www.pauloramos.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Pedreiras",
+      "official_gazette_url": "https://www.pedreiras.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Pedro do Rosário",
+      "official_gazette_url": "https://www.pedrodorosario.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Penalva",
+      "official_gazette_url": "https://transparencia.penalva.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    {
+      "name": "Peri Mirim",
+      "official_gazette_url": "https://perimirim.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Peritoró",
+      "official_gazette_url": "https://www.administracaopublica.com.br/diario-oficial?token=9de645b503b922df799865ffcb07a6ec7b9cb53e"
+    },
+    {
+      "name": "Pindaré Mirim",
+      "official_gazette_url": "https://www.pindaremirim.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Pinheiro",
+      "official_gazette_url": "https://www.pinheiro.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Pio XII",
+      "official_gazette_url": "https://www.pioxii.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Pirapemas",
+      "official_gazette_url": "https://pirapemas.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Poção de Pedras",
+      "official_gazette_url": "https://www.pocaodepedras.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Porto Franco",
+      "official_gazette_url": "https://www.portofranco.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Porto Rico do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Presidente Dutra",
+      "official_gazette_url": "https://www.presidentedutra.ma.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Presidente Juscelino",
+      "official_gazette_url": "https://presidentejuscelino.ma.gov.br/publicacoes"
+    },
+    {
+      "name": "Presidente Médici",
+      "official_gazette_url": "https://www.presidentemedici.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Presidente Sarney",
+      "official_gazette_url": "https://www.presidentesarney.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Presidente Vargas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Primeira Cruz",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Raposa",
+      "official_gazette_url": "https://www.raposa.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Riachão",
+      "official_gazette_url": "https://www.riachao.ma.gov.br/diario_oficial/"
+    },
+    {
+      "name": "Ribamar Fiquene",
+      "official_gazette_url": "https://www.ribamarfiquene.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Rosário",
+      "official_gazette_url": "https://www.rosario.ma.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Sambaíba",
+      "official_gazette_url": "https://www.sambaiba.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Santa Filomena do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Helena",
+      "official_gazette_url": "https://santahelena.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santa Inês",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Luzia",
+      "official_gazette_url": "https://www.santaluzia.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Santa Luzia do Paruá",
+      "official_gazette_url": "https://www.santaluziadoparua.ma.gov.br/diariolista.php"
+    },
+    {
+      "name": "Santa Quitéria do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Rita",
+      "official_gazette_url": "https://www.santarita.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Santana do Maranhão",
+      "official_gazette_url": "https://dom.santanadomaranhao.ma.gov.br/"
+    },
+    {
+      "name": "Santo Amaro do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio dos Lopes",
+      "official_gazette_url": "https://www.stoantoniodoslopes.ma.gov.br/diario"
+    },
+    {
+      "name": "São Benedito do Rio Preto",
+      "official_gazette_url": "https://www.saobeneditodoriopreto.ma.gov.br/transparencia"
+    },
+    {
+      "name": "São Bento",
+      "official_gazette_url": "https://www.saobento.ma.gov.br/transparencia"
+    },
+    {
+      "name": "São Bernardo",
+      "official_gazette_url": "https://dom.saobernardo.ma.gov.br/"
+    },
+    {
+      "name": "São Domingos do Azeitão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Domingos do Maranhão",
+      "official_gazette_url": "https://www.saodomingosdomaranhao.ma.gov.br/transparencia"
+    },
+    {
+      "name": "São Félix de Balsas",
+      "official_gazette_url": "https://www.saofelixdebalsas.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São Francisco do Brejão",
+      "official_gazette_url": "https://www.saofranciscodobrejao.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "São Francisco do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João Batista",
+      "official_gazette_url": "https://saojoaobatista.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São João do Carú",
+      "official_gazette_url": "https://saojoaodocaru.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São João do Paraíso",
+      "official_gazette_url": "https://www.saojoaodoparaiso.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "São João do Soter",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João dos Patos",
+      "official_gazette_url": "https://saojoaodospatos.ma.gov.br/transparencia/diario-oficial-do-municipio/"
+    },
+    {
+      "name": "São José de Ribamar",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "São José dos Basílios",
+      "official_gazette_url": "https://www.saojosedosbasilios.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "São Luís",
+      "official_gazette_url": "https://diariooficial.saoluis.ma.gov.br/"
+    },
+    {
+      "name": "São Luís Gonzaga do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Mateus do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Pedro da Água Branca",
+      "official_gazette_url": "https://www.saopedrodaaguabranca.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "São Pedro dos Crentes",
+      "official_gazette_url": "https://www.saopedrodoscrentes.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "São Raimundo das Mangabeiras",
+      "official_gazette_url": "https://saoraimundodasmangabeiras.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São Raimundo do Doca Bezerra",
+      "official_gazette_url": "https://www.saoraimundododocabezerra.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "São Roberto",
+      "official_gazette_url": "https://saoroberto.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São Vicente Ferrer",
+      "official_gazette_url": "https://saovicenteferrer.ma.gov.br/diario/diario"
+    },
+    {
+      "name": "Satubinha",
+      "official_gazette_url": "https://www.satubinha.ma.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Senador Alexandre Costa",
+      "official_gazette_url": "https://senadoralexandrecosta.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Senador La Rocque",
+      "official_gazette_url": "https://www.senadorlarocque.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Serrano do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sítio Novo",
+      "official_gazette_url": "https://www.sitionovo.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Sucupira do Norte",
+      "official_gazette_url": "https://sucupiradonorte.ma.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Sucupira do Riachão",
+      "official_gazette_url": "https://sucupiradoriachao.ma.gov.br/transparencia/diario-oficial-do-municipio/"
+    },
+    {
+      "name": "Tasso Fragoso",
+      "official_gazette_url": "https://www.tassofragoso.ma.gov.br/diario-oficial"
+    },
+    {
+      "name": "Timbiras",
+      "official_gazette_url": "https://transparencia.timbiras.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    {
+      "name": "Timon",
+      "official_gazette_url": "https://www.timon.ma.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Trizidela do Vale",
+      "official_gazette_url": "https://www.trizideladovale.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Tufilândia",
+      "official_gazette_url": "https://www.tufilandia.ma.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Tuntum",
+      "official_gazette_url": "https://www.tuntum.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Turiaçu",
+      "official_gazette_url": "https://www.turiacu.ma.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Turilândia",
+      "official_gazette_url": "https://www.administracaopublica.com.br/diario-oficial?token=9664abfc624b73571a05e874f98fd6d114834924"
+    },
+    {
+      "name": "Tutóia",
+      "official_gazette_url": "https://tutoia.ma.gov.br/diariooficial"
+    },
+    {
+      "name": "Urbano Santos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Vargem Grande",
+      "official_gazette_url": "https://www.vargemgrande.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Viana",
+      "official_gazette_url": "https://transparencia.viana.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    {
+      "name": "Vila Nova dos Martírios",
+      "official_gazette_url": "https://www.vilanovadosmartirios.ma.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Vitória do Mearim",
+      "official_gazette_url": "https://www.vitoriadomearim.ma.gov.br/publicacoes"
+    },
+    {
+      "name": "Vitorino Freire",
+      "official_gazette_url": "https://www.vitorinofreire.ma.gov.br/transparencia"
+    },
+    {
+      "name": "Zé Doca",
+      "official_gazette_url": "https://transparencia.zedoca.ma.gov.br/acessoInformacao/diario/diario"
+    }
+  ]
+}
