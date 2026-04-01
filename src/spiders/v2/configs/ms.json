@@ -166,7 +166,7 @@
     "name": "Aquidauana - MS",
     "territoryId": "5001102",
     "stateCode": "MS",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituraaquidauana",
@@ -288,7 +288,7 @@
     "name": "Chapadão do Sul - MS",
     "territoryId": "5002951",
     "stateCode": "MS",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "imprensaoficialmunicipal",
@@ -411,7 +411,7 @@
     "name": "Miranda - MS",
     "territoryId": "5005608",
     "stateCode": "MS",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diariooficialms",
@@ -422,6 +422,132 @@
           "type": "diariooficialms",
           "baseUrl": "https://www.diariooficialms.com.br/miranda",
           "cityName": "Miranda",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_alcinopolis",
+    "name": "Alcinópolis - MS",
+    "territoryId": "5000252",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "Alcinópolis",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_bataypora",
+    "name": "Batayporã - MS",
+    "territoryId": "5002001",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "Batayporã",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_guia_lopes_da_laguna",
+    "name": "Guia Lopes da Laguna - MS",
+    "territoryId": "5004106",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "Guia Lopes da Laguna",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_laguna_carapa",
+    "name": "Laguna Carapã - MS",
+    "territoryId": "5005251",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "Laguna Carapã",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_pedro_gomes",
+    "name": "Pedro Gomes - MS",
+    "territoryId": "5006408",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "Pedro Gomes",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ms_taquarussu",
+    "name": "Taquarussu - MS",
+    "territoryId": "5007976",
+    "stateCode": "MS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "diariooficialms",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "diariooficialms",
+          "baseUrl": "https://www.diariooficialms.com.br/assomasul",
+          "cityName": "Taquarussu",
           "requiresClientRendering": true
         }
       }

@@ -69,7 +69,7 @@
     "name": "Vilhena - RO",
     "territoryId": "1100304",
     "stateCode": "RO",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituravilhena",
@@ -133,7 +133,7 @@
     "name": "Jaru - RO",
     "territoryId": "1100114",
     "stateCode": "RO",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "domweb",
@@ -177,7 +177,7 @@
     "name": "Pimenta Bueno - RO",
     "territoryId": "1100189",
     "stateCode": "RO",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "rondonia",
@@ -242,7 +242,7 @@
     "name": "Espigão D'Oeste - RO",
     "territoryId": "1100098",
     "stateCode": "RO",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "rondonia",
@@ -301,5 +301,45 @@
       }
     ],
     "notes": "Publicado na AROM (diariomunicipal.com.br/arom)."
+  },
+  {
+    "id": "ro_alta_floresta_doeste",
+    "name": "Alta Floresta D'Oeste - RO",
+    "territoryId": "1100015",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/arom/",
+          "cityName": "Alta Floresta D'Oeste"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ro_theobroma",
+    "name": "Theobroma - RO",
+    "territoryId": "1101609",
+    "stateCode": "RO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/arom/",
+          "cityName": "Theobroma"
+        }
+      }
+    ]
   }
 ]

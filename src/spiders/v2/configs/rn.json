@@ -44,7 +44,7 @@
     "name": "Parnamirim - RN",
     "territoryId": "2403251",
     "stateCode": "RN",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituraparnamirim",
@@ -126,7 +126,7 @@
     "name": "Extremoz - RN",
     "territoryId": "2403608",
     "stateCode": "RN",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sigpub",

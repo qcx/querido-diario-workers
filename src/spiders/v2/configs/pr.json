@@ -4,7 +4,7 @@
     "name": "Curitiba - PR",
     "territoryId": "4106902",
     "stateCode": "PR",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituracuritiba",
@@ -42,7 +42,7 @@
     "name": "Maringá - PR",
     "territoryId": "4115200",
     "stateCode": "PR",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituramaringa",
@@ -120,7 +120,7 @@
     "name": "Foz do Iguaçu - PR",
     "territoryId": "4108304",
     "stateCode": "PR",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturafoz",
@@ -180,7 +180,7 @@
     "name": "Araucária - PR",
     "territoryId": "4101804",
     "stateCode": "PR",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituraraucaria",
@@ -922,7 +922,7 @@
     "name": "Umuarama - PR",
     "territoryId": "4128104",
     "stateCode": "PR",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturapontagrossa",
@@ -961,7 +961,7 @@
     "name": "Francisco Beltrão - PR",
     "territoryId": "4108403",
     "stateCode": "PR",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturafranciscobeltrao",
@@ -1076,7 +1076,7 @@
     "name": "Ibiporã - PR",
     "territoryId": "4109807",
     "stateCode": "PR",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeitureibipora",
@@ -1413,7 +1413,7 @@
     "name": "Arapoti - PR",
     "territoryId": "4101606",
     "stateCode": "PR",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituraarapoti",
@@ -1432,7 +1432,7 @@
     "name": "Santa Helena - PR",
     "territoryId": "4123501",
     "stateCode": "PR",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturasantahelenapr",
@@ -1442,6 +1442,106 @@
         "config": {
           "type": "prefeiturasantahelenapr",
           "baseUrl": "https://diario.santahelena.pr.gov.br"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_andira",
+    "name": "Andirá - PR",
+    "territoryId": "4101101",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "cityName": "Andirá"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_chopinzinho",
+    "name": "Chopinzinho - PR",
+    "territoryId": "4105409",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "cityName": "Chopinzinho"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_doutor_ulysses",
+    "name": "Doutor Ulysses - PR",
+    "territoryId": "4128633",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "cityName": "Doutor Ulysses"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_sao_jeronimo_da_serra",
+    "name": "São Jerônimo da Serra - PR",
+    "territoryId": "4124707",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "cityName": "São Jerônimo da Serra"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pr_sao_joao_do_caiua",
+    "name": "São João do Caiuá - PR",
+    "territoryId": "4124905",
+    "stateCode": "PR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amp",
+          "cityName": "São João do Caiuá"
         }
       }
     ]

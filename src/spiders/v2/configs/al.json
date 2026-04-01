@@ -67,7 +67,7 @@
     "name": "Palmeira dos Índios - AL",
     "territoryId": "2706307",
     "stateCode": "AL",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioio",
@@ -129,7 +129,7 @@
     "name": "Penedo - AL",
     "territoryId": "2706703",
     "stateCode": "AL",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioio",
@@ -193,7 +193,7 @@
     "name": "Coruripe - AL",
     "territoryId": "2702306",
     "stateCode": "AL",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituracoruripe",
@@ -276,7 +276,7 @@
     "name": "Girau do Ponciano - AL",
     "territoryId": "2702900",
     "stateCode": "AL",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sigpub",

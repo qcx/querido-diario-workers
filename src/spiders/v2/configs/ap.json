@@ -64,7 +64,7 @@
     "name": "Oiapoque - AP",
     "territoryId": "1600501",
     "stateCode": "AP",
-    "active": true,
+    "active": false,
     "notes": "Portal de transparência desatualizado desde Janeiro/2018. Contém 337 edições históricas (2016-2018). A cidade pode estar publicando no Diário Oficial do Estado do Amapá (DIOFE) atualmente.",
     "spiders": [
       {

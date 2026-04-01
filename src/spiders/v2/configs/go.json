@@ -261,7 +261,7 @@
     "name": "Jataí - GO",
     "territoryId": "5211909",
     "stateCode": "GO",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturajatai",
@@ -281,7 +281,7 @@
     "name": "Planaltina - GO",
     "territoryId": "5217609",
     "stateCode": "GO",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "planaltina_go",
@@ -321,7 +321,7 @@
     "name": "Caldas Novas - GO",
     "territoryId": "5204508",
     "stateCode": "GO",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diariooficialcaldasnovas",
@@ -361,7 +361,7 @@
     "name": "Goianésia - GO",
     "territoryId": "5208608",
     "stateCode": "GO",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "goianesia",
@@ -371,7 +371,10 @@
         "config": {
           "type": "goianesia",
           "baseUrl": "https://www.goianesia.go.gov.br",
-          "listPaths": ["editais-e-publicacoes", "editais-e-publicacoes2"]
+          "listPaths": [
+            "editais-e-publicacoes",
+            "editais-e-publicacoes2"
+          ]
         }
       }
     ],
@@ -489,7 +492,7 @@
     "name": "Morrinhos - GO",
     "territoryId": "5213806",
     "stateCode": "GO",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "morrinhos_go",
@@ -764,7 +767,7 @@
     "name": "São Luís de Montes Belos - GO",
     "territoryId": "5220108",
     "stateCode": "GO",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sao_luis_montes_belos_go",
@@ -783,7 +786,7 @@
     "name": "Pires do Rio - GO",
     "territoryId": "5217401",
     "stateCode": "GO",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "pires_do_rio_go",
@@ -869,7 +872,7 @@
     "name": "Minaçu - GO",
     "territoryId": "5213087",
     "stateCode": "GO",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "nucleogov",
@@ -931,7 +934,7 @@
     "name": "Itapuranga - GO",
     "territoryId": "5211206",
     "stateCode": "GO",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "nucleogov",
@@ -966,5 +969,65 @@
       }
     ],
     "notes": "Diário via AGM (diariomunicipal.com.br/agm/). Portal: acessoainformacao.ipameri.go.gov.br; publicações também em ipmbrasil.org.br."
+  },
+  {
+    "id": "go_portelandia",
+    "name": "Portelândia - GO",
+    "territoryId": "5218102",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "cityName": "Portelândia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "go_turvelandia",
+    "name": "Turvelândia - GO",
+    "territoryId": "5221551",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "cityName": "Turvelândia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "go_vila_boa",
+    "name": "Vila Boa - GO",
+    "territoryId": "5222203",
+    "stateCode": "GO",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/agm/",
+          "cityName": "Vila Boa"
+        }
+      }
+    ]
   }
 ]

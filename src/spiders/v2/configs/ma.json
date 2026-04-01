@@ -128,7 +128,7 @@
     "name": "Codó - MA",
     "territoryId": "2103307",
     "stateCode": "MA",
-    "active": true,
+    "active": false,
     "notes": "Plataforma AgenciaPlus em dom.codo.ma.gov.br. Listagem de edições com Ver Detalhes e paginação.",
     "spiders": [
       {
@@ -316,7 +316,7 @@
     "name": "Barreirinhas - MA",
     "territoryId": "2101707",
     "stateCode": "MA",
-    "active": true,
+    "active": false,
     "notes": "WebService Sistemas (Adianti Framework) em transparencia.barreirinhas.ma.gov.br. Edições com código de autenticidade SHA-1. PDFs em transparencia.webservicesistemas.com.br.",
     "spiders": [
       {
@@ -525,7 +525,7 @@
     "name": "São Bento - MA",
     "territoryId": "2110500",
     "stateCode": "MA",
-    "active": true,
+    "active": false,
     "notes": "Portal de Transparência em transparencia.saobento.ma.gov.br. Plataforma Adianti Framework (WebService Sistemas) com diário oficial eletrônico. Edições diárias (seg-sex). Vol. 6 - Nº 1356/2026 publicado em 27/01/2026.",
     "spiders": [
       {
@@ -604,7 +604,7 @@
     "name": "Colinas - MA",
     "territoryId": "2103505",
     "stateCode": "MA",
-    "active": true,
+    "active": false,
     "notes": "Colinas publica no Diário Oficial da FAMEM (Federação dos Municípios do Estado do Maranhão). O município aderiu oficialmente ao diário eletrônico da FAMEM. O site diariooficial.famem.org.br usa plataforma Siganet e disponibiliza busca por publicações com filtro por palavra-chave (nome do município).",
     "spiders": [
       {
@@ -668,7 +668,7 @@
     "name": "Rosário - MA",
     "territoryId": "2109601",
     "stateCode": "MA",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturabarreirinhas",
@@ -687,7 +687,7 @@
     "name": "Turiaçu - MA",
     "territoryId": "2112407",
     "stateCode": "MA",
-    "active": true,
+    "active": false,
     "notes": "WebService Sistemas (Adianti Framework). Usa endpoint DomDiarioList para listagem via HTTP puro (sem Puppeteer).",
     "spiders": [
       {
@@ -750,7 +750,7 @@
     "name": "Santa Rita - MA",
     "territoryId": "2110203",
     "stateCode": "MA",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturabarreirinhas",
@@ -811,7 +811,7 @@
     "name": "São Domingos do Maranhão - MA",
     "territoryId": "2110708",
     "stateCode": "MA",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "famem",
@@ -999,7 +999,7 @@
     "name": "Parnarama - MA",
     "territoryId": "2107803",
     "stateCode": "MA",
-    "active": true,
+    "active": false,
     "notes": "Plataforma DiarioOficialMunicipal em parnarama.diariooficialmunicipal.com. API Laravel com paginação. ISSN: 3086-0512. 2240+ edições disponíveis.",
     "spiders": [
       {
@@ -1179,7 +1179,7 @@
     "name": "Timbiras - MA",
     "territoryId": "2112100",
     "stateCode": "MA",
-    "active": true,
+    "active": false,
     "notes": "Timbiras publica diários no portal de transparência próprio usando plataforma Siganet. API: transparencia.timbiras.ma.gov.br/acessoInformacao/diario/diario/listarDiario",
     "spiders": [
       {
