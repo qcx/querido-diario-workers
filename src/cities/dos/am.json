@@ -1,0 +1,253 @@
+{
+  "name": "Amazonas",
+  "cities": [
+    {
+      "name": "Alvarães",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Amaturá",
+      "official_gazette_url": "https://amatura.am.gov.br/wp-content/uploads/2025/04/diario-oficial.png"
+    },
+    {
+      "name": "Anamã",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aam/"
+    },
+    {
+      "name": "Anori",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Apuí",
+      "official_gazette_url": "https://apui.am.gov.br/publicacoes-oficiais/"
+    },
+    {
+      "name": "Atalaia do Norte",
+      "official_gazette_url": "https://atalaiadonorte.am.gov.br/transparencia/"
+    },
+    {
+      "name": "Autazes",
+      "official_gazette_url": "https://autazes.am.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Barcelos",
+      "official_gazette_url": "https://www.barcelos.am.gov.br/"
+    },
+    {
+      "name": "Barreirinha",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aam/"
+    },
+    {
+      "name": "Benjamin Constant",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Beruri",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Boa Vista do Ramos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Boca do Acre",
+      "official_gazette_url": "https://bocadoacre.am.gov.br/transparencia/"
+    },
+    {
+      "name": "Borba",
+      "official_gazette_url": "https://borba.am.gov.br/transparencia/"
+    },
+    {
+      "name": "Caapiranga",
+      "official_gazette_url": "https://caapiranga.am.gov.br/"
+    },
+    {
+      "name": "Canutama",
+      "official_gazette_url": "https://www.canutama.am.gov.br/"
+    },
+    {
+      "name": "Carauari",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aam/"
+    },
+    {
+      "name": "Careiro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Careiro da Várzea",
+      "official_gazette_url": "https://careirodavarzea.am.gov.br/transparencia/"
+    },
+    {
+      "name": "Coari",
+      "official_gazette_url": "https://coari.am.gov.br/"
+    },
+    {
+      "name": "Codajás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Eirunepé",
+      "official_gazette_url": "https://www.eirunepe.am.gov.br/"
+    },
+    {
+      "name": "Envira",
+      "official_gazette_url": "https://envira.am.gov.br/"
+    },
+    {
+      "name": "Fonte Boa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Guajará",
+      "official_gazette_url": "https://guajara.am.gov.br/transparencia/"
+    },
+    {
+      "name": "Humaitá",
+      "official_gazette_url": "https://www.humaita.am.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Ipixuna",
+      "official_gazette_url": "https://ipixuna.am.gov.br/"
+    },
+    {
+      "name": "Iranduba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itacoatiara",
+      "official_gazette_url": "https://itacoatiara.am.gov.br/diario-oficial-2/"
+    },
+    {
+      "name": "Itamarati",
+      "official_gazette_url": "https://itamarati.am.gov.br/transparencia/"
+    },
+    {
+      "name": "Itapiranga",
+      "official_gazette_url": "https://itapiranga.am.gov.br/transparencia/"
+    },
+    {
+      "name": "Japurá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Juruá",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aam/"
+    },
+    {
+      "name": "Jutaí",
+      "official_gazette_url": "https://jutai.am.gov.br/transparencia/"
+    },
+    {
+      "name": "Lábrea",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Manacapuru",
+      "official_gazette_url": "https://www.manacapuru.am.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Manaquiri",
+      "official_gazette_url": "https://www.manaquiri.am.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Manaus",
+      "official_gazette_url": "https://www.manaus.am.gov.br/semcom/diario-oficial/"
+    },
+    {
+      "name": "Manicoré",
+      "official_gazette_url": "https://manicore.am.gov.br/atos-oficiais/"
+    },
+    {
+      "name": "Maraã",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Maués",
+      "official_gazette_url": "https://diario.imprensaoficial.am.gov.br/"
+    },
+    {
+      "name": "Nhamundá",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aam/"
+    },
+    {
+      "name": "Nova Olinda do Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Novo Airão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Novo Aripuanã",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Parintins",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aam/"
+    },
+    {
+      "name": "Pauini",
+      "official_gazette_url": "https://www.pauini.am.gov.br/"
+    },
+    {
+      "name": "Presidente Figueiredo",
+      "official_gazette_url": "https://www.presidentefigueiredo.am.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Rio Preto da Eva",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Isabel do Rio Negro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio do Içá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Gabriel da Cachoeira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Paulo de Olivença",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Sebastião do Uatumã",
+      "official_gazette_url": "https://saosebastiaodouatuma.am.gov.br/transparencia/"
+    },
+    {
+      "name": "Silves",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aam/"
+    },
+    {
+      "name": "Tabatinga",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aam/"
+    },
+    {
+      "name": "Tapauá",
+      "official_gazette_url": "https://www.tapaua.am.gov.br/"
+    },
+    {
+      "name": "Tefé",
+      "official_gazette_url": "https://tefe.am.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Tonantins",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aam/"
+    },
+    {
+      "name": "Uarini",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aam/"
+    },
+    {
+      "name": "Urucará",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aam/"
+    },
+    {
+      "name": "Urucurituba",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aam/"
+    }
+  ]
+}

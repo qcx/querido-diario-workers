@@ -1,7 +1,7 @@
 import { SpiderConfig, DateRange, Gazette } from '../../types';
 import { ExecutionStrategy } from './types';
 import { SpiderRegistryV2 } from './registry';
-import { spiderRegistry as v1Registry } from '../registry';
+import { spiderRegistry } from '../registry';
 import { logger } from '../../utils/logger';
 
 /**
@@ -110,7 +110,7 @@ export class TerritoryExecutor {
       try {
         logger.info(`Executing spider ${config.id} (${config.spiderType})`);
         
-        const spider = v1Registry.createSpider(config, dateRange, env.BROWSER);
+        const spider = spiderRegistry.createSpider(config, dateRange, env.BROWSER);
         const gazettes = await spider.crawl();
         const executionTime = Date.now() - startTime;
         
@@ -171,7 +171,7 @@ export class TerritoryExecutor {
       try {
         logger.info(`Starting parallel execution of spider ${config.id} (${config.spiderType})`);
         
-        const spider = v1Registry.createSpider(config, dateRange, env.BROWSER);
+        const spider = spiderRegistry.createSpider(config, dateRange, env.BROWSER);
         const gazettes = await spider.crawl();
         const executionTime = Date.now() - startTime;
         

@@ -1,0 +1,897 @@
+{
+  "name": "Paraíba",
+  "cities": [
+    {
+      "name": "Água Branca",
+      "official_gazette_url": "https://aguabranca.pb.gov.br/atos-oficiais/"
+    },
+    {
+      "name": "Aguiar",
+      "official_gazette_url": "https://aguiar.pb.gov.br/acesso-a-informacao/publicacoes"
+    },
+    {
+      "name": "Alagoa Grande",
+      "official_gazette_url": "https://www.alagoagrande.pb.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Alagoa Nova",
+      "official_gazette_url": "https://www.alagoanova.pb.gov.br/404"
+    },
+    {
+      "name": "Alagoinha",
+      "official_gazette_url": "https://alagoinha.pb.gov.br/legislacao/diario-oficial/"
+    },
+    {
+      "name": "Alcantil",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amupe/pesquisar"
+    },
+    {
+      "name": "Algodão de Jandaíra",
+      "official_gazette_url": "https://algodaodejandaira.pb.gov.br/transparencia/"
+    },
+    {
+      "name": "Alhandra",
+      "official_gazette_url": "https://www.alhandra.pb.gov.br/diariooficial"
+    },
+    {
+      "name": "Amparo",
+      "official_gazette_url": "https://www.amparo.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Aparecida",
+      "official_gazette_url": "https://www.aparecida.pb.gov.br/"
+    },
+    {
+      "name": "Araçagi",
+      "official_gazette_url": "https://www.aracagi.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Arara",
+      "official_gazette_url": "https://www.arara.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Araruna",
+      "official_gazette_url": "https://www.araruna.pb.gov.br/diario-oficial"
+    },
+    {
+      "name": "Areia",
+      "official_gazette_url": "https://areia.pb.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Areia de Baraúnas",
+      "official_gazette_url": "https://areiadebaraunas.pb.gov.br/"
+    },
+    {
+      "name": "Areial",
+      "official_gazette_url": "https://www.areial.pb.gov.br/404"
+    },
+    {
+      "name": "Aroeiras",
+      "official_gazette_url": "https://www.aroeiras.pb.gov.br/diariooficial"
+    },
+    {
+      "name": "Assunção",
+      "official_gazette_url": "https://www.assuncao.pb.gov.br/publicacoes/boletim-oficial"
+    },
+    {
+      "name": "Baía da Traição",
+      "official_gazette_url": "https://www.baiadatraicao.pb.gov.br/error/404"
+    },
+    {
+      "name": "Bananeiras",
+      "official_gazette_url": "https://www.bananeiras.pb.gov.br/diario-oficial/diario-oficial-2026/"
+    },
+    {
+      "name": "Baraúna",
+      "official_gazette_url": "https://barauna.pb.gov.br/acesso-rapido/diario-oficial/"
+    },
+    {
+      "name": "Barra de Santa Rosa",
+      "official_gazette_url": "https://www.barradesantarosa.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Barra de Santana",
+      "official_gazette_url": "https://barradesantana.pb.gov.br/publicacoes/"
+    },
+    {
+      "name": "Barra de São Miguel",
+      "official_gazette_url": "https://www.barradesaomiguel.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Bayeux",
+      "official_gazette_url": "https://bayeux.pb.gov.br/diariooficial/diario-oficial-24-03-2025/"
+    },
+    {
+      "name": "Belém",
+      "official_gazette_url": "https://www.belem.pb.gov.br/legislacao/decretos"
+    },
+    {
+      "name": "Belém do Brejo do Cruz",
+      "official_gazette_url": "https://www.belemdobrejodocruz.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Bernardino Batista",
+      "official_gazette_url": "https://www.bernardinobatista.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Boa Ventura",
+      "official_gazette_url": "https://boaventura.pb.gov.br/"
+    },
+    {
+      "name": "Boa Vista",
+      "official_gazette_url": "https://boavista.pb.gov.br/diario-oficial"
+    },
+    {
+      "name": "Bom Jesus",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Sucesso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bonito de Santa Fé",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/famup/pesquisar?busca_avancada%5B__paper%5D=1&busca_avancada%5BentidadeUsuaria%5D=553&busca_avancada%5Bnome_orgao%5D=&busca_avancada%5Btitulo%5D=&busca_avancada%5Btexto%5D=&busca_avancada%5BdataInicio%5D=01%2F01%2F2023&busca_avancada%5BdataFim%5D=31%2F12%2F2023&g-recaptcha-response=03ADUVZwBLGRD7AOHq2VJaZNkWnYQYKP5Jsg10TbXWD8gzxgckXdLR9OJMY1_fzcPteeZ_YyeL5LjVwbgBio2PGOeQg9cA3uQpOjBSdgyZgDCHHn_W2MbTlYSXDSswN2XEr715EQ8aWykvM8pdGwvsyhzNu3lt6BrTsRVE38DTPf7lBN0HV84MWMVZQrsXIz6P8P-575akbdMf-3I4W3laa0rka_STqDTP1YfIdToBOHbDoLyAI_ey75c7kOJLdkxXTmppxpw7aasF_iSooOlUvmkflglSy7V7GDRKmVk0gPmjaML-MCU27OyJqZzy6hVSVVk0jyI8QyfObSo-HWINRdUSrDUa-fI69cXLGAKw5Nwe06FBF0IRVJgwV-DI-FAYJ08Yqu_QC078tc_Hq-p_CRoKJCBTVEA7t0D8likC12f4jdV8NRqCZgt_XSPXx_iXAHi-eeIKDkke5V2W-v3CZRnJrl336VUeYsQz25iYT1F1HxF2Q4F3pFOIM5qlb-vlP5wAruBJ-W8PjccPOKYvPnKW22uK_u59ooLwn2s3xV1ZNJg-nyUAQluFViVMDymHjnoZIZ8NsWMZ4vhvLrLnejW7sCY7mNFsquyBNSCDuIn9sSEtyPkYQuLgmevMLrJ8YkLo2F0zr1y2&busca_avancada%5B_token%5D=NMLV9tL1-7Cg_PprlAoTlsLIrlOiZ-fPsTlCkjvyQ-s"
+    },
+    {
+      "name": "Boqueirão",
+      "official_gazette_url": "https://www.boqueirao.pb.gov.br/error/404"
+    },
+    {
+      "name": "Borborema",
+      "official_gazette_url": "https://www.borborema.pb.gov.br/404"
+    },
+    {
+      "name": "Brejo do Cruz",
+      "official_gazette_url": "https://brejodocruz.pb.gov.br/diario-oficial/diario-oficial-2026/"
+    },
+    {
+      "name": "Brejo dos Santos",
+      "official_gazette_url": "https://www.brejodossantos.pb.gov.br/transparencia/"
+    },
+    {
+      "name": "Caaporã",
+      "official_gazette_url": "https://www.caapora.pb.gov.br/downloads/tipo/diario-oficial"
+    },
+    {
+      "name": "Cabaceiras",
+      "official_gazette_url": "https://www.cabaceiras.pb.gov.br/404"
+    },
+    {
+      "name": "Cabedelo",
+      "official_gazette_url": "https://cabedelo.pb.gov.br/diario-oficial/diario-oficial-2026/"
+    },
+    {
+      "name": "Cachoeira dos Índios",
+      "official_gazette_url": "https://www.cachoeiradosindios.pb.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Cacimba de Areia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cacimba de Dentro",
+      "official_gazette_url": "https://www.cacimbadedentro.pb.gov.br/404"
+    },
+    {
+      "name": "Cacimbas",
+      "official_gazette_url": "https://www.cacimbas.pb.gov.br/"
+    },
+    {
+      "name": "Caiçara",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/famup/pesquisar?busca_avancada%5B__paper%5D=1&busca_avancada%5BentidadeUsuaria%5D=41127&busca_avancada%5Bnome_orgao%5D=&busca_avancada%5Btitulo%5D=&busca_avancada%5Btexto%5D=&busca_avancada%5BdataInicio%5D=01%2F01%2F2019&busca_avancada%5BdataFim%5D=00%2F00%2F2019&g-recaptcha-response=03AOLTBLS2YibNlSjDwWv0t4chMURdEnsue25aF8nEFlPC_8-4FmHYTBk4o14FpcFjJzRIc21mi9Ll8ssk69I-vuao4fnj7KhmsL4z-LSeexy-Aju7L-w1d45XbcDaON8vgJ_BBouQ4Jwpx3fpiCo-NEW4L3sW4W4y95I1auc_75Uk5R5_2d1ucuwIFsfS12Il_1o8iyjB82gC78OZyzhYcTU3NYxt5hgrYLpn0cnsc5w73ErKBmWgLDmhys8hmAf24w5MWX0I6p534xBH7g1lsANBbmmpd1_ICGW0fkfJOrdabieCplRiuXDvbhKKck3zj6zD6_oO6PBasxug2atewRu3U6e6reONKQ&busca_avancada%5B_token%5D=wQjVRpXJb1WABPti5LgQ1Bj9ij3I1v6_-i0XYh_mvpk"
+    },
+    {
+      "name": "Cajazeiras",
+      "official_gazette_url": "https://www.cajazeiras.pb.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Cajazeirinhas",
+      "official_gazette_url": "https://www.cajazeirinhas.pb.gov.br/404"
+    },
+    {
+      "name": "Caldas Brandão",
+      "official_gazette_url": "https://www.caldasbrandao.pb.gov.br/publicacoes"
+    },
+    {
+      "name": "Camalaú",
+      "official_gazette_url": "https://camalau.pb.gov.br/"
+    },
+    {
+      "name": "Campina Grande",
+      "official_gazette_url": "https://campinagrande.pb.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Campo de Santana",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Capim",
+      "official_gazette_url": "https://www.capim.pb.gov.br/diariolista.php"
+    },
+    {
+      "name": "Caraúbas",
+      "official_gazette_url": "https://www.caraubas.pb.gov.br/diariooficial"
+    },
+    {
+      "name": "Carrapateira",
+      "official_gazette_url": "https://carrapateira.pb.gov.br/diario-oficial-2020/"
+    },
+    {
+      "name": "Casserengue",
+      "official_gazette_url": "https://www.casserengue.pb.gov.br/legislacao/diario-oficial"
+    },
+    {
+      "name": "Catingueira",
+      "official_gazette_url": "https://catingueira.pb.gov.br/"
+    },
+    {
+      "name": "Catolé do Rocha",
+      "official_gazette_url": "https://catoledorocha.pb.gov.br/"
+    },
+    {
+      "name": "Caturité",
+      "official_gazette_url": "https://caturite.pb.gov.br/"
+    },
+    {
+      "name": "Conceição",
+      "official_gazette_url": "https://conceicao.pb.gov.br/"
+    },
+    {
+      "name": "Condado",
+      "official_gazette_url": "https://condado.pb.gov.br/"
+    },
+    {
+      "name": "Conde",
+      "official_gazette_url": "https://conde.pb.gov.br/diario-oficial/diarios-oficiais-2026/"
+    },
+    {
+      "name": "Congo",
+      "official_gazette_url": "https://www.congo.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Coremas",
+      "official_gazette_url": "https://www.coremas.pb.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Coxixola",
+      "official_gazette_url": "https://www.coxixola.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Cruz do Espírito Santo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cubati",
+      "official_gazette_url": "https://www.cubati.pb.gov.br/404"
+    },
+    {
+      "name": "Cuité",
+      "official_gazette_url": "https://cuite.pb.gov.br/diario-oficial-216-2018/"
+    },
+    {
+      "name": "Cuité de Mamanguape",
+      "official_gazette_url": "https://www.cuitedemamanguape.pb.gov.br/404"
+    },
+    {
+      "name": "Cuitegi",
+      "official_gazette_url": "https://www.cuitegi.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Curral de Cima",
+      "official_gazette_url": "https://www.curraldecima.pb.gov.br/publicacoes"
+    },
+    {
+      "name": "Curral Velho",
+      "official_gazette_url": "http://curralvelho.pb.gov.br/"
+    },
+    {
+      "name": "Damião",
+      "official_gazette_url": "https://www.damiao.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Desterro",
+      "official_gazette_url": "https://www.desterro.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Diamante",
+      "official_gazette_url": "https://diamante.pb.gov.br/"
+    },
+    {
+      "name": "Dona Inês",
+      "official_gazette_url": "https://pmdonaines.pb.gov.br/wp-content/uploads/2018/03/diario-oficial.png"
+    },
+    {
+      "name": "Duas Estradas",
+      "official_gazette_url": "https://duasestradas.pb.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Emas",
+      "official_gazette_url": "https://emas.pb.gov.br/"
+    },
+    {
+      "name": "Esperança",
+      "official_gazette_url": "https://www.esperanca.pb.gov.br/error/404"
+    },
+    {
+      "name": "Fagundes",
+      "official_gazette_url": "https://www.fagundes.pb.gov.br/diario-oficial"
+    },
+    {
+      "name": "Frei Martinho",
+      "official_gazette_url": "https://www.freimartinho.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Gado Bravo",
+      "official_gazette_url": "https://www.gadobravo.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Guarabira",
+      "official_gazette_url": "https://guarabira.online/diariooficial"
+    },
+    {
+      "name": "Gurinhém",
+      "official_gazette_url": "https://www.gurinhem.pb.gov.br/"
+    },
+    {
+      "name": "Gurjão",
+      "official_gazette_url": "https://www.gurjao.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Ibiara",
+      "official_gazette_url": "https://ibiara.pb.gov.br/"
+    },
+    {
+      "name": "Igaracy",
+      "official_gazette_url": "https://www.igaracy.pb.gov.br/"
+    },
+    {
+      "name": "Imaculada",
+      "official_gazette_url": "https://imaculada.pb.gov.br/"
+    },
+    {
+      "name": "Ingá",
+      "official_gazette_url": "https://inga.pb.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Itabaiana",
+      "official_gazette_url": "https://portal.itabaiana.pb.gov.br/2024/12/03/diario-oficial-01-12-2024/"
+    },
+    {
+      "name": "Itaporanga",
+      "official_gazette_url": "https://itaporanga.pb.gov.br/"
+    },
+    {
+      "name": "Itapororoca",
+      "official_gazette_url": "https://www.itapororoca.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Itatuba",
+      "official_gazette_url": "https://itatuba.pb.gov.br/diario-oficial"
+    },
+    {
+      "name": "Jacaraú",
+      "official_gazette_url": "https://www.jacarau.pb.gov.br"
+    },
+    {
+      "name": "Jericó",
+      "official_gazette_url": "https://www.jerico.pb.gov.br"
+    },
+    {
+      "name": "João Pessoa",
+      "official_gazette_url": "https://www.joaopessoa.pb.gov.br/doe-jp"
+    },
+    {
+      "name": "Juarez Távora",
+      "official_gazette_url": "https://www.juareztavora.pb.gov.br/publicacoes"
+    },
+    {
+      "name": "Juazeirinho",
+      "official_gazette_url": "https://juazeirinho.pb.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Junco do Seridó",
+      "official_gazette_url": "https://juncodoserido.pb.gov.br/"
+    },
+    {
+      "name": "Juripiranga",
+      "official_gazette_url": "https://www.juripiranga.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Juru",
+      "official_gazette_url": "https://juru.pb.gov.br/"
+    },
+    {
+      "name": "Lagoa",
+      "official_gazette_url": "https://www.lagoa.pb.gov.br/"
+    },
+    {
+      "name": "Lagoa de Dentro",
+      "official_gazette_url": "https://www.lagoadedentro.pb.gov.br/legislacao/diario-oficial/"
+    },
+    {
+      "name": "Lagoa Seca",
+      "official_gazette_url": "https://lagoaseca.pb.gov.br/transparencia-fiscal/"
+    },
+    {
+      "name": "Lastro",
+      "official_gazette_url": "https://www.lastro.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Livramento",
+      "official_gazette_url": "https://livramento.pb.gov.br/legislacao"
+    },
+    {
+      "name": "Logradouro",
+      "official_gazette_url": "https://www.logradouro.pb.gov.br/diariooficial"
+    },
+    {
+      "name": "Lucena",
+      "official_gazette_url": "https://www.lucena.pb.gov.br/publicacoes"
+    },
+    {
+      "name": "Mãe d'Água",
+      "official_gazette_url": "https://maedagua.pb.gov.br/"
+    },
+    {
+      "name": "Malta",
+      "official_gazette_url": "https://malta.pb.gov.br/"
+    },
+    {
+      "name": "Mamanguape",
+      "official_gazette_url": "https://www.mamanguape.pb.gov.br/diario-oficial/diario-oficial-2026/"
+    },
+    {
+      "name": "Manaíra",
+      "official_gazette_url": "https://manaira.pb.gov.br/"
+    },
+    {
+      "name": "Marcação",
+      "official_gazette_url": "https://marcacao.pb.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Mari",
+      "official_gazette_url": "https://mari.pb.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Marizópolis",
+      "official_gazette_url": "https://www.marizopolis.pb.gov.br"
+    },
+    {
+      "name": "Massaranduba",
+      "official_gazette_url": "https://massaranduba.pb.gov.br/diario-oficial"
+    },
+    {
+      "name": "Mataraca",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/famup/pesquisar?busca_avancada%5Bpage%5D=1&busca_avancada%5BentidadeUsuaria%5D=3473&busca_avancada%5Bnome_orgao%5D=&busca_avancada%5Btitulo%5D=&busca_avancada%5Btexto%5D=&busca_avancada%5BdataInicio%5D=16%2F01%2F2025&busca_avancada%5BdataFim%5D=18%2F01%2F2025&busca_avancada%5BEnviar%5D=&busca_avancada%5B_token%5D=ab724cc7096.CmUOZmNENTHznfWfNORdlF_o3gwtY4bn1Aw1qUmxvws.bidPPiURBwWk9pzOA4tozTzfpD1qUMezu1hUxjvy5yZrBnlVFRVRc8X_wQ"
+    },
+    {
+      "name": "Matinhas",
+      "official_gazette_url": "https://www.matinhas.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Mato Grosso",
+      "official_gazette_url": "https://www.matogrosso.pb.gov.br/publicacoes/"
+    },
+    {
+      "name": "Maturéia",
+      "official_gazette_url": "https://matureia.pb.gov.br/acesso-a-informacao/publicacoes"
+    },
+    {
+      "name": "Mogeiro",
+      "official_gazette_url": "https://mogeiro.pb.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Montadas",
+      "official_gazette_url": "https://www.montadas.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Monte Horebe",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/famup/pesquisar?busca_avancada%5B__paper%5D=1&busca_avancada%5BentidadeUsuaria%5D=7194&busca_avancada%5Bnome_orgao%5D=&busca_avancada%5Btitulo%5D=&busca_avancada%5Btexto%5D=&busca_avancada%5BdataInicio%5D=01%2F10%2F2023&busca_avancada%5BdataFim%5D=01%2F10%2F2023&g-recaptcha-response=03AFcWeA6yA-tGF-uExA5hO5nAfVh1VT2GpCEBe0MSpbCbH_oSOjIk7HZFa__FDD8Gc0QMdPmP-34DG_Bmz7E_Tp0cp8eClqy-VbE-jsKfsnlPOFmshpX1Mmru1GrsSeQqHTeXa95Mf6C1q7EmGXh-y6bHqk5SBEWheshBU6hkNfxEdQv94nW6638T6Aj2J9jgdlhgrlP6y-54mBi80aJSW_4YPZOH_NPxZZFaiPrUmA6-xaAbAA49KWnL8WklRY0Z2_lHdTNoCGRcRHkULoTVKuZU8-vZy5DppNwlnjgT4Cg7YZCghqwTitbeLROAZCXqGfmOutBK3DyHZ9LnhuZLiGEFrI0RT8ACFSYZ4z-GIqZqmj2rojfq97a6WquRf3UvlnyCtOfFgVcgHX_cCylJa8jgQJHSm9iERSH5asqUrmwUcLzCgu8UJXv5e3r_3nlqbgPbQiyULb6bi3a-BfwZGoBsVBIPC8Y6kVQoCDGXxy0LocL1eFB0rWzYzkP83-s2vJz4I0d4kAPn11qTqunx4GtDcu5k_k_4gv1rLbN6T3-RPi5FLH40o-7s_ZIyBACfdcR6VnnAbhmLjn5JgNK9JeXiE-tbdy6f2hZbPqqwV_n4qVN8bmBVVuaba2Kq1WfyrTPEb4CD3p4L&busca_avancada%5B_token%5D=f1CWV25klXcxuNlwA2CIa-RJ41RTdVkMTskvO4TuLEk"
+    },
+    {
+      "name": "Monteiro",
+      "official_gazette_url": "https://www.monteiro.pb.gov.br/diariooficial/diario-oficial/"
+    },
+    {
+      "name": "Mulungu",
+      "official_gazette_url": "https://www.mulungu.pb.gov.br/diariooficial/"
+    },
+    {
+      "name": "Natuba",
+      "official_gazette_url": "https://www.natuba.pb.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Nazarezinho",
+      "official_gazette_url": "https://www.nazarezinho.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Floresta",
+      "official_gazette_url": "https://www.novafloresta.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Olinda",
+      "official_gazette_url": "http://novaolinda.pb.gov.br/"
+    },
+    {
+      "name": "Nova Palmeira",
+      "official_gazette_url": "https://novapalmeira.pb.gov.br/publicacoes/diario-oficial-cmdca/"
+    },
+    {
+      "name": "Olho d'Água",
+      "official_gazette_url": "https://www.olhodagua.pb.gov.br/transparencia"
+    },
+    {
+      "name": "Olivedos",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/famup/pesquisar"
+    },
+    {
+      "name": "Ouro Velho",
+      "official_gazette_url": "https://ourovelho.pb.gov.br/publicacoes-excepcionais/"
+    },
+    {
+      "name": "Parari",
+      "official_gazette_url": "https://www.parari.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Passagem",
+      "official_gazette_url": "https://passagem.pb.gov.br/"
+    },
+    {
+      "name": "Patos",
+      "official_gazette_url": "https://patos.pb.gov.br/servicos/diario-oficial/p16_sectionid/336"
+    },
+    {
+      "name": "Paulista",
+      "official_gazette_url": "https://www.paulista.pb.gov.br/404"
+    },
+    {
+      "name": "Pedra Branca",
+      "official_gazette_url": "https://pedrabranca.pb.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Pedra Lavrada",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pedras de Fogo",
+      "official_gazette_url": "https://www.pedrasdefogo.pb.gov.br/legislacao"
+    },
+    {
+      "name": "Pedro Régis",
+      "official_gazette_url": "https://www.pedroregis.pb.gov.br/diariooficial.php"
+    },
+    {
+      "name": "Piancó",
+      "official_gazette_url": "http://pianco.pb.gov.br/"
+    },
+    {
+      "name": "Picuí",
+      "official_gazette_url": "https://www.picui.pb.gov.br/error/404"
+    },
+    {
+      "name": "Pilar",
+      "official_gazette_url": "https://pilar.pb.gov.br/publicacoes-oficiais-2/diario-oficial/"
+    },
+    {
+      "name": "Pilões",
+      "official_gazette_url": "https://www.piloes.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Pilõezinhos",
+      "official_gazette_url": "https://www.piloezinhos.pb.gov.br"
+    },
+    {
+      "name": "Pirpirituba",
+      "official_gazette_url": "https://www.pirpirituba.pb.gov.br/legislacao/diario-oficial"
+    },
+    {
+      "name": "Pitimbu",
+      "official_gazette_url": "https://www.pitimbu.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Pocinhos",
+      "official_gazette_url": "https://www.pocinhos.pb.gov.br/transparencia/"
+    },
+    {
+      "name": "Poço Dantas",
+      "official_gazette_url": "https://www.pocodantas.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Poço de José de Moura",
+      "official_gazette_url": "https://pocodejosedemoura.pb.gov.br/transparencia/"
+    },
+    {
+      "name": "Pombal",
+      "official_gazette_url": "https://www.pombal.pb.gov.br/"
+    },
+    {
+      "name": "Prata",
+      "official_gazette_url": "https://prata.pb.gov.br/pasta-diario-oficial-do-municipio/"
+    },
+    {
+      "name": "Princesa Isabel",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Puxinanã",
+      "official_gazette_url": "https://www.puxinana.pb.gov.br/error/404"
+    },
+    {
+      "name": "Queimadas",
+      "official_gazette_url": "https://www.queimadas.pb.gov.br/error/404"
+    },
+    {
+      "name": "Quixabá",
+      "official_gazette_url": "https://quixaba.pb.gov.br/"
+    },
+    {
+      "name": "Remígio",
+      "official_gazette_url": "https://www.remigio.pb.gov.br/cat_doc/diario-oficial/"
+    },
+    {
+      "name": "Riachão",
+      "official_gazette_url": "https://www.riachao.pb.gov.br"
+    },
+    {
+      "name": "Riachão do Bacamarte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Riachão do Poço",
+      "official_gazette_url": "https://www.riachaodopoco.pb.gov.br/diario-oficial-04-01-2021"
+    },
+    {
+      "name": "Riacho de Santo Antônio",
+      "official_gazette_url": "https://www.riachodesantoantonio.pb.gov.br/legislacao/diario-oficial/"
+    },
+    {
+      "name": "Riacho dos Cavalos",
+      "official_gazette_url": "https://riachodoscavalos.pb.gov.br/"
+    },
+    {
+      "name": "Rio Tinto",
+      "official_gazette_url": "https://www.riotinto.pb.gov.br/404"
+    },
+    {
+      "name": "Salgadinho",
+      "official_gazette_url": "https://salgadinho.pb.gov.br/"
+    },
+    {
+      "name": "Salgado de São Félix",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Cecília",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Cruz",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Helena",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Inês",
+      "official_gazette_url": "https://santaines.pb.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Santa Luzia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Rita",
+      "official_gazette_url": "https://santarita.pb.gov.br/diario-oficial/diario-oficial-2026/"
+    },
+    {
+      "name": "Santa Teresinha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santana de Mangueira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santana dos Garrotes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santarém",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo André",
+      "official_gazette_url": "https://santoandre.pb.gov.br/acesso-rapido/diario-oficial/"
+    },
+    {
+      "name": "São Bentinho",
+      "official_gazette_url": "https://www.saobentinho.pb.gov.br/governo/publicacoes"
+    },
+    {
+      "name": "São Bento",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Domingos de Pombal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Domingos do Cariri",
+      "official_gazette_url": "https://www.saodomingosdocariri.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São Francisco",
+      "official_gazette_url": "https://www.saofrancisco.pb.gov.br/404"
+    },
+    {
+      "name": "São João do Cariri",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João do Rio do Peixe",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João do Tigre",
+      "official_gazette_url": "https://www.saojoaodotigre.pb.gov.br/404"
+    },
+    {
+      "name": "São José da Lagoa Tapada",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José de Caiana",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José de Espinharas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José de Piranhas",
+      "official_gazette_url": "https://www.saojosedepiranhas.pb.gov.br/diariooficial.php"
+    },
+    {
+      "name": "São José de Princesa",
+      "official_gazette_url": "https://www.saojosedeprincesa.pb.gov.br/publicacoes"
+    },
+    {
+      "name": "São José do Bonfim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José do Brejo do Cruz",
+      "official_gazette_url": "https://www.saojosedobrejodocruz.pb.gov.br/publicacoes/"
+    },
+    {
+      "name": "São José do Sabugi",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José dos Cordeiros",
+      "official_gazette_url": "https://www.saojosedoscordeiros.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São José dos Ramos",
+      "official_gazette_url": "https://www.saojosedosramos.pb.gov.br"
+    },
+    {
+      "name": "São Mamede",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Miguel de Taipu",
+      "official_gazette_url": "https://www.saomigueldetaipu.pb.gov.br/error/404"
+    },
+    {
+      "name": "São Sebastião de Lagoa de Roça",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Sebastião do Umbuzeiro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sapé",
+      "official_gazette_url": "https://sape.pb.gov.br/diario-oficial/diario-oficial-2026/"
+    },
+    {
+      "name": "Seridó",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Serra Branca",
+      "official_gazette_url": "https://serrabranca.pb.gov.br/acesso-rapido/diario-oficial/"
+    },
+    {
+      "name": "Serra da Raiz",
+      "official_gazette_url": "https://www.serradaraiz.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Serra Grande",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/famup/pesquisar"
+    },
+    {
+      "name": "Serra Redonda",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Serraria",
+      "official_gazette_url": "https://www.serraria.pb.gov.br"
+    },
+    {
+      "name": "Sertãozinho",
+      "official_gazette_url": "https://www.sertaozinho.pb.gov.br"
+    },
+    {
+      "name": "Sobrado",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Solânea",
+      "official_gazette_url": "https://www.solanea.pb.gov.br/404"
+    },
+    {
+      "name": "Soledade",
+      "official_gazette_url": "https://www.soledade.pb.gov.br/404"
+    },
+    {
+      "name": "Sossêgo",
+      "official_gazette_url": "https://www.sossego.pb.gov.br/error/404"
+    },
+    {
+      "name": "Sousa",
+      "official_gazette_url": "https://www.sousa.pb.gov.br/"
+    },
+    {
+      "name": "Sumé",
+      "official_gazette_url": "https://www.sume.pb.gov.br/portal-da-transparencia/boletins-oficiais/"
+    },
+    {
+      "name": "Taperoá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tavares",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Teixeira",
+      "official_gazette_url": "https://www.teixeira.pb.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Tenório",
+      "official_gazette_url": "http://tenorio.pb.gov.br/"
+    },
+    {
+      "name": "Triunfo",
+      "official_gazette_url": "https://www.triunfo.pb.gov.br/diario-oficial-30-03-2021/"
+    },
+    {
+      "name": "Uiraúna",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/famup/pesquisar"
+    },
+    {
+      "name": "Umbuzeiro",
+      "official_gazette_url": "https://www.umbuzeiro.pb.gov.br/transparencia"
+    },
+    {
+      "name": "Várzea",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Vieirópolis",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/famup/pesquisar?busca_avancada%5B__paper%5D=1&busca_avancada%5BentidadeUsuaria%5D=15021&busca_avancada%5Bnome_orgao%5D=&busca_avancada%5Btitulo%5D=&busca_avancada%5Btexto%5D=&busca_avancada%5BdataInicio%5D=28%2F07%2F2021&busca_avancada%5BdataFim%5D=28%2F07%2F2021&g-recaptcha-response=03AGdBq25LGim6H39dwgvYnlsf0uHmmiZAVK1MDvbJoONAuqtq9lR56vAd6jWRTpE9Hl7GYM7Xjy_uJMQySszYVgHdn9sweZ1Rif-zNbxtlSOf-cHzpAE9NlJ37gKkZIN8zu4TRriZhE3LSMi6pb0c-hiRPuEnVhGEXaOi2-L6fJkcJl0vKyI7vfkk458cr1ZhVIgz-gY5AuZI9tkW86V_oUN0XGixQVVe8befeU_heyk9X-gWvnjOMga-3NuOEz8_TVKD7WWeTIoO7ol9XgU4xs2bepy9Tr6BUzaxYetyuOACu2Ig_Og0g_f6T7tTzL6ZIHmWMYTJzz5iEgnu0RbLyR4d_HTZNtwGNYKX63mAXfkqSu-lgAZcV66C9RWNTJgEOtlOC6lyQq76eESXILCe3vstEaVvg_m9FjTLtKgiQV5n8U3-MU1MKi52B5Kf5G2HU5gUuEODlpKHYB1sWDIo0TBYNquX0xCG0sRj4Rsyw0YlN7koIGvYvbg&busca_avancada%5B_token%5D=AWQP_glRsIPS2xLncwTcU1dB0P0m6lNhvjtHdKWt_VY"
+    },
+    {
+      "name": "Vista Serrana",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Zabelê",
+      "official_gazette_url": "https://www.zabele.pb.gov.br/diariooficial"
+    }
+  ]
+}

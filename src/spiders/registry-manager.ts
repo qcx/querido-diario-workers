@@ -4,6 +4,9 @@ import { SpiderRegistryV2 } from "./v2/registry";
 import { ExecutionStrategy } from "./v2/types";
 import { logger } from "../utils/logger";
 
+// V2 spider classes
+import { AcreSpider as V2AcreSpider } from "./v2/base/acre-spider";
+
 // Import the original v1 registry class
 import doemCitiesConfig from "./configs/doem-cities.json";
 import diarioBaCitiesConfig from "./configs/diario-ba-cities.json";
@@ -781,13 +784,40 @@ export class SpiderRegistryManager {
   }
 
   /**
-   * Create spider instance from configuration (V1 compatibility)
+   * Try to create a v2 spider class for the given config.
+   * Returns null if no v2 implementation exists for the spider type.
+   */
+  private tryCreateV2Spider(
+    config: SpiderConfig,
+    dateRange: DateRange,
+    browser?: Fetcher,
+  ): BaseSpider | null {
+    switch (config.spiderType) {
+      case "acre": {
+        const spider = new V2AcreSpider(config, dateRange, browser);
+        if (browser) spider.setBrowser(browser);
+        return spider as unknown as BaseSpider;
+      }
+      default:
+        return null;
+    }
+  }
+
+  /**
+   * Create spider instance from configuration.
+   * Prefers v2 spider classes when available, falls back to v1.
    */
   createSpider(
     config: SpiderConfig,
     dateRange: DateRange,
     browser?: Fetcher,
   ): BaseSpider {
+    const v2Spider = this.tryCreateV2Spider(config, dateRange, browser);
+    if (v2Spider) {
+      logger.info(`Using v2 spider class for ${config.spiderType} (${config.id})`);
+      return v2Spider;
+    }
+
     switch (config.spiderType) {
       case "agape":
         return new AgapeSpider(config, dateRange);

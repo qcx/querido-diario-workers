@@ -1,0 +1,673 @@
+{
+  "name": "Rio Grande do Norte",
+  "cities": [
+    {
+      "name": "Acari",
+      "official_gazette_url": "https://www.acari.rn.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Açu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Afonso Bezerra",
+      "official_gazette_url": "https://www.afonsobezerra.rn.gov.br/transparencia"
+    },
+    {
+      "name": "Água Nova",
+      "official_gazette_url": "https://www.aguanova.rn.gov.br/diario-oficial"
+    },
+    {
+      "name": "Alexandria",
+      "official_gazette_url": "https://www.alexandria.rn.gov.br/publicacoes/"
+    },
+    {
+      "name": "Almino Afonso",
+      "official_gazette_url": "https://www.alminoafonso.rn.gov.br/404"
+    },
+    {
+      "name": "Alto do Rodrigues",
+      "official_gazette_url": "https://www.altodorodrigues.rn.gov.br/diario-oficial"
+    },
+    {
+      "name": "Angicos",
+      "official_gazette_url": "https://www.angicos.rn.gov.br/transparencia"
+    },
+    {
+      "name": "Antônio Martins",
+      "official_gazette_url": "https://www.antoniomartins.rn.gov.br/publicacoes/"
+    },
+    {
+      "name": "Apodi",
+      "official_gazette_url": "https://www.apodi.rn.gov.br/404"
+    },
+    {
+      "name": "Areia Branca",
+      "official_gazette_url": "https://areiabranca.rn.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Arês",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Augusto Severo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Baía Formosa",
+      "official_gazette_url": "https://www.baiaformosa.rn.gov.br/transparencia"
+    },
+    {
+      "name": "Baraúna",
+      "official_gazette_url": "https://www.barauna.rn.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Barcelona",
+      "official_gazette_url": "https://www.barcelona.rn.gov.br/"
+    },
+    {
+      "name": "Bento Fernandes",
+      "official_gazette_url": "https://www.bentofernandes.rn.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Bodó",
+      "official_gazette_url": "https://bodo.rn.gov.br/transparencia/"
+    },
+    {
+      "name": "Bom Jesus",
+      "official_gazette_url": "https://www.bomjesus.rn.gov.br/transparencia/"
+    },
+    {
+      "name": "Brejinho",
+      "official_gazette_url": "https://www.brejinho.rn.gov.br/404"
+    },
+    {
+      "name": "Caiçara do Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Caiçara do Rio do Vento",
+      "official_gazette_url": "https://www.caicaradoriodovento.rn.gov.br/404"
+    },
+    {
+      "name": "Caicó",
+      "official_gazette_url": "https://www.caico.rn.gov.br/404"
+    },
+    {
+      "name": "Campo Redondo",
+      "official_gazette_url": "https://www.camporedondo.rn.gov.br/404"
+    },
+    {
+      "name": "Canguaretama",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/pesquisar"
+    },
+    {
+      "name": "Caraúbas",
+      "official_gazette_url": "https://www.caraubas.rn.gov.br/transparencia-covid-19-2/"
+    },
+    {
+      "name": "Carnaúba dos Dantas",
+      "official_gazette_url": "https://www.carnaubadosdantas.rn.gov.br/noticias/transparencia-covid-19/"
+    },
+    {
+      "name": "Carnaubais",
+      "official_gazette_url": "https://www.carnaubais.rn.gov.br/404"
+    },
+    {
+      "name": "Ceará-Mirim",
+      "official_gazette_url": "https://cearamirim.rn.gov.br/2023/11/14/transparencia-ceara-mirim-recebe-nota-maxima-do-ministerio-publico/"
+    },
+    {
+      "name": "Cerro Corá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Coronel Ezequiel",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/"
+    },
+    {
+      "name": "Coronel João Pessoa",
+      "official_gazette_url": "https://www.coroneljoaopessoa.rn.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Cruzeta",
+      "official_gazette_url": "https://cruzeta.rn.gov.br/legislacao/"
+    },
+    {
+      "name": "Currais Novos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Doutor Severiano",
+      "official_gazette_url": "https://www.doutorseveriano.rn.gov.br/404"
+    },
+    {
+      "name": "Encanto",
+      "official_gazette_url": "https://www.encanto.rn.gov.br/diario-oficial"
+    },
+    {
+      "name": "Equador",
+      "official_gazette_url": "https://www.equador.rn.gov.br/404"
+    },
+    {
+      "name": "Espírito Santo",
+      "official_gazette_url": "https://pmespiritosantorn.transparencia.topsolutionsrn.com.br/arquivos/legisla%C3%A7%C3%A3o"
+    },
+    {
+      "name": "Extremoz",
+      "official_gazette_url": "https://extremoz.rn.gov.br/diario-oficial/diario-oficial-2026/"
+    },
+    {
+      "name": "Felipe Guerra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Fernando Pedroza",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Florânia",
+      "official_gazette_url": "https://www.florania.rn.gov.br/diario_oficial"
+    },
+    {
+      "name": "Francisco Dantas",
+      "official_gazette_url": "https://www.franciscodantas.rn.gov.br/404"
+    },
+    {
+      "name": "Frutuoso Gomes",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/"
+    },
+    {
+      "name": "Galinhos",
+      "official_gazette_url": "https://www.galinhos.rn.gov.br/documentacao-do-caminhao-do-lixo-fica-pronta/"
+    },
+    {
+      "name": "Goianinha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Governador Dix-Sept Rosado",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Grossos",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/"
+    },
+    {
+      "name": "Guamaré",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/"
+    },
+    {
+      "name": "Ielmo Marinho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ipanguaçu",
+      "official_gazette_url": "https://www.ipanguacu.rn.gov.br/transparencia"
+    },
+    {
+      "name": "Ipueira",
+      "official_gazette_url": "https://www.ipueira.rn.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Itajá",
+      "official_gazette_url": "https://itaja.rn.gov.br/guia-de-servicos/diario-oficial/"
+    },
+    {
+      "name": "Itaú",
+      "official_gazette_url": "https://www.itau.rn.gov.br/diariolista.php"
+    },
+    {
+      "name": "Jaçanã",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/pesquisar"
+    },
+    {
+      "name": "Jandaíra",
+      "official_gazette_url": "https://www.jandaira.rn.gov.br/404"
+    },
+    {
+      "name": "Janduís",
+      "official_gazette_url": "https://www.janduis.rn.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Januário Cicco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Japi",
+      "official_gazette_url": "https://www.japi.rn.gov.br/"
+    },
+    {
+      "name": "Jardim de Angicos",
+      "official_gazette_url": "https://www.jardimdeangicos.rn.gov.br/404"
+    },
+    {
+      "name": "Jardim de Piranhas",
+      "official_gazette_url": "https://www.jardimdepiranhas.rn.gov.br/404"
+    },
+    {
+      "name": "Jardim do Seridó",
+      "official_gazette_url": null
+    },
+    {
+      "name": "João Câmara",
+      "official_gazette_url": "https://joaocamara.rn.gov.br/diario-oficial/diario-oficial-2026/"
+    },
+    {
+      "name": "João Dias",
+      "official_gazette_url": "https://www.joaodias.rn.gov.br/diariooficial.php"
+    },
+    {
+      "name": "José da Penha",
+      "official_gazette_url": "https://www.josedapenha.rn.gov.br/404"
+    },
+    {
+      "name": "Jucurutu",
+      "official_gazette_url": "https://www.jucurutu.rn.gov.br/publicacoes-processo-seletivo-secretaria-de-assistencia-social/"
+    },
+    {
+      "name": "Jundiá",
+      "official_gazette_url": "https://jundia.rn.gov.br/transparencia/"
+    },
+    {
+      "name": "Lagoa d'Anta",
+      "official_gazette_url": "https://www.lagoadanta.rn.gov.br/404"
+    },
+    {
+      "name": "Lagoa de Pedras",
+      "official_gazette_url": "https://lagoadepedras.rn.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Lagoa de Velhos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lagoa Nova",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/pesquisar"
+    },
+    {
+      "name": "Lagoa Salgada",
+      "official_gazette_url": "https://lagoasalgada.rn.gov.br/carta-de-servico/diario-oficial/"
+    },
+    {
+      "name": "Lajes",
+      "official_gazette_url": "https://lajes.rn.gov.br/transparencia/"
+    },
+    {
+      "name": "Lajes Pintadas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lucrécia",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/pesquisar?entidadeUsuaria=lucr%C3%A9cia"
+    },
+    {
+      "name": "Luís Gomes",
+      "official_gazette_url": "https://www.luisgomes.rn.gov.br/diariolista.php"
+    },
+    {
+      "name": "Macaíba",
+      "official_gazette_url": "https://macaiba.rn.gov.br/servicos/diario-oficial/"
+    },
+    {
+      "name": "Macau",
+      "official_gazette_url": "https://macau.rn.gov.br/wp-content/uploads/2016/06/diario-oficial.jpg"
+    },
+    {
+      "name": "Major Sales",
+      "official_gazette_url": "https://www.majorsales.rn.gov.br/diariolista.php"
+    },
+    {
+      "name": "Marcelino Vieira",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/"
+    },
+    {
+      "name": "Martins",
+      "official_gazette_url": "https://www.martins.rn.gov.br/diario-oficial"
+    },
+    {
+      "name": "Maxaranguape",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/pesquisar"
+    },
+    {
+      "name": "Messias Targino",
+      "official_gazette_url": "https://www.messiastargino.rn.gov.br/transparencia"
+    },
+    {
+      "name": "Montanhas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Monte Alegre",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/"
+    },
+    {
+      "name": "Monte das Gameleiras",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mossoró",
+      "official_gazette_url": "https://dom.mossoro.rn.gov.br/dom/edicoes"
+    },
+    {
+      "name": "Natal",
+      "official_gazette_url": "https://www.natal.rn.gov.br/dom/"
+    },
+    {
+      "name": "Nísia Floresta",
+      "official_gazette_url": "https://nisiafloresta.rn.gov.br/transparencia/"
+    },
+    {
+      "name": "Nova Cruz",
+      "official_gazette_url": "https://www.novacruz.rn.gov.br/diariolista.php"
+    },
+    {
+      "name": "Olho-d'Água do Borges",
+      "official_gazette_url": "https://www.olhodaguadoborges.rn.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ouro Branco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paraná",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/"
+    },
+    {
+      "name": "Paraú",
+      "official_gazette_url": "https://parau.rn.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Parazinho",
+      "official_gazette_url": "https://parazinho.rn.gov.br/carta-de-servico/diario-oficial/"
+    },
+    {
+      "name": "Parelhas",
+      "official_gazette_url": "https://www.parelhas.rn.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Parnamirim",
+      "official_gazette_url": "https://www.parnamirim.rn.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Passa e Fica",
+      "official_gazette_url": "https://www.passaefica.rn.gov.br/404"
+    },
+    {
+      "name": "Passagem",
+      "official_gazette_url": "https://passagem.rn.gov.br/"
+    },
+    {
+      "name": "Patu",
+      "official_gazette_url": "https://www.patu.rn.gov.br/?pagina=404"
+    },
+    {
+      "name": "Pau dos Ferros",
+      "official_gazette_url": "https://www.paudosferros.rn.gov.br"
+    },
+    {
+      "name": "Pedra Grande",
+      "official_gazette_url": "http://site.pedragrande.rn.gov.br/"
+    },
+    {
+      "name": "Pedra Preta",
+      "official_gazette_url": "https://pedrapreta.rn.gov.br/guia-de-servicos/diario-oficial/"
+    },
+    {
+      "name": "Pedro Avelino",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pedro Velho",
+      "official_gazette_url": "https://pedrovelho.rn.gov.br/transparencia/"
+    },
+    {
+      "name": "Pendências",
+      "official_gazette_url": "https://pendencias.rn.gov.br/carta-de-servico/diario-oficial/"
+    },
+    {
+      "name": "Pilões",
+      "official_gazette_url": "https://www.piloes.rn.gov.br/404"
+    },
+    {
+      "name": "Poço Branco",
+      "official_gazette_url": "https://pocobranco.rn.gov.br/transparencia/"
+    },
+    {
+      "name": "Portalegre",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/pesquisar"
+    },
+    {
+      "name": "Porto do Mangue",
+      "official_gazette_url": "https://www.portodomangue.rn.gov.br/diario-oficial"
+    },
+    {
+      "name": "Presidente Juscelino",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pureza",
+      "official_gazette_url": "https://pureza.rn.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Rafael Fernandes",
+      "official_gazette_url": "https://www.rafaelfernandes.rn.gov.br/diario-oficial"
+    },
+    {
+      "name": "Rafael Godeiro",
+      "official_gazette_url": "https://www.rafaelgodeiro.rn.gov.br/404"
+    },
+    {
+      "name": "Riacho da Cruz",
+      "official_gazette_url": "https://www.riachodacruz.rn.gov.br/diario-oficial"
+    },
+    {
+      "name": "Riacho de Santana",
+      "official_gazette_url": "https://www.riachodesantana.rn.gov.br/diario-oficial"
+    },
+    {
+      "name": "Riachuelo",
+      "official_gazette_url": "https://www.riachuelo.rn.gov.br/404"
+    },
+    {
+      "name": "Rio do Fogo",
+      "official_gazette_url": "https://riodofogo.rn.gov.br/diario-oficial-do-municipio/"
+    },
+    {
+      "name": "Rodolfo Fernandes",
+      "official_gazette_url": "https://www.rodolfofernandes.rn.gov.br/diariolista.php"
+    },
+    {
+      "name": "Ruy Barbosa",
+      "official_gazette_url": "https://ruybarbosa.rn.gov.br/transparencia/"
+    },
+    {
+      "name": "Santa Cruz",
+      "official_gazette_url": "https://www.santacruz.rn.gov.br"
+    },
+    {
+      "name": "Santa Maria",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santana do Matos",
+      "official_gazette_url": "https://www.santanadomatos.rn.gov.br/transparencia"
+    },
+    {
+      "name": "Santana do Seridó",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Bento do Norte",
+      "official_gazette_url": "https://saobentodonorte.rn.gov.br/transparencia/"
+    },
+    {
+      "name": "São Bento do Trairí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Fernando",
+      "official_gazette_url": "https://www.saofernando.rn.gov.br/404"
+    },
+    {
+      "name": "São Francisco do Oeste",
+      "official_gazette_url": "https://www.saofranciscodooeste.rn.gov.br"
+    },
+    {
+      "name": "São Gonçalo do Amarante",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João do Sabugi",
+      "official_gazette_url": "https://www.saojoaodosabugi.rn.gov.br/404"
+    },
+    {
+      "name": "São José de Mipibu",
+      "official_gazette_url": "https://saojosedemipibu.rn.gov.br/diario-oficial/"
+    },
+    {
+      "name": "São José do Campestre",
+      "official_gazette_url": "https://saojosedocampestre.rn.gov.br/transparencia-municipal/"
+    },
+    {
+      "name": "São José do Seridó",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/"
+    },
+    {
+      "name": "São Miguel",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/"
+    },
+    {
+      "name": "São Miguel de Touros",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Paulo do Potengi",
+      "official_gazette_url": "https://www.saopaulodopotengi.rn.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São Pedro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Rafael",
+      "official_gazette_url": "https://saorafael.rn.gov.br/carta-de-servico/diario-oficial/"
+    },
+    {
+      "name": "São Tomé",
+      "official_gazette_url": "https://saotome.rn.gov.br/transparencia/"
+    },
+    {
+      "name": "São Vicente",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Senador Elói de Souza",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Senador Georgino Avelino",
+      "official_gazette_url": "https://www.senadorgeorginoavelino.rn.gov.br/legislacao/"
+    },
+    {
+      "name": "Serra de São Bento",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Serra do Mel",
+      "official_gazette_url": "https://serradomel.rn.gov.br/legislacao/"
+    },
+    {
+      "name": "Serra Negra do Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Serrinha",
+      "official_gazette_url": "https://www.serrinha.rn.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Serrinha dos Pintos",
+      "official_gazette_url": "https://www.serrinhadospintos.rn.gov.br/diario-oficial"
+    },
+    {
+      "name": "Severiano Melo",
+      "official_gazette_url": "https://www.severianomelo.rn.gov.br/404"
+    },
+    {
+      "name": "Sítio Novo",
+      "official_gazette_url": "https://www.sitionovo.rn.gov.br/404"
+    },
+    {
+      "name": "Taboleiro Grande",
+      "official_gazette_url": "https://www.taboleirogrande.rn.gov.br"
+    },
+    {
+      "name": "Taipu",
+      "official_gazette_url": "https://www.taipu.rn.gov.br/"
+    },
+    {
+      "name": "Tangará",
+      "official_gazette_url": "https://www.tangara.rn.gov.br/"
+    },
+    {
+      "name": "Tenente Ananias",
+      "official_gazette_url": "https://www.tenenteananias.rn.gov.br/publicacoes/"
+    },
+    {
+      "name": "Tenente Laurentino Cruz",
+      "official_gazette_url": "https://www.tenentelaurentinocruz.rn.gov.br/404"
+    },
+    {
+      "name": "Tibau",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/femurn/"
+    },
+    {
+      "name": "Tibau do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Timbaúba dos Batistas",
+      "official_gazette_url": "https://timbaubadosbatistas.rn.gov.br/"
+    },
+    {
+      "name": "Touros",
+      "official_gazette_url": "https://touros.rn.gov.br/itens-portal-transpa/diario-oficial/"
+    },
+    {
+      "name": "Triunfo Potiguar",
+      "official_gazette_url": "https://triunfopotiguar.rn.gov.br/transparencia/"
+    },
+    {
+      "name": "Umarizal",
+      "official_gazette_url": "https://www.umarizal.rn.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Upanema",
+      "official_gazette_url": "https://www.upanema.rn.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Várzea",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Venha-Ver",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Vera Cruz",
+      "official_gazette_url": "https://veracruz.rn.gov.br/transparencia/"
+    },
+    {
+      "name": "Viçosa",
+      "official_gazette_url": "https://www.vicosa.rn.gov.br/diario-oficial"
+    },
+    {
+      "name": "Vila Flor",
+      "official_gazette_url": "https://vilaflor.rn.gov.br/transparencia/"
+    }
+  ]
+}

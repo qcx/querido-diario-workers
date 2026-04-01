@@ -1,0 +1,577 @@
+{
+  "name": "Pará",
+  "cities": [
+    {
+      "name": "Abaetetuba",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/famep/"
+    },
+    {
+      "name": "Abel Figueiredo",
+      "official_gazette_url": "https://abelfigueiredo.pa.gov.br/site/"
+    },
+    {
+      "name": "Acará",
+      "official_gazette_url": "https://acara.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Afuá",
+      "official_gazette_url": "https://afua.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-do-municipio/"
+    },
+    {
+      "name": "Água Azul do Norte",
+      "official_gazette_url": "https://aguaazuldonorte.pa.gov.br/transparencia/diario-oficial/"
+    },
+    {
+      "name": "Alenquer",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Almeirim",
+      "official_gazette_url": "https://diario.almeirim.pa.gov.br/"
+    },
+    {
+      "name": "Altamira",
+      "official_gazette_url": "https://altamira.pa.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Anajás",
+      "official_gazette_url": "https://anajas.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-do-municipio/"
+    },
+    {
+      "name": "Ananindeua",
+      "official_gazette_url": "https://www.ananindeua.pa.gov.br/servicos/diario-oficial"
+    },
+    {
+      "name": "Anapu",
+      "official_gazette_url": "https://anapu.pa.gov.br/dispensa-de-licitacao-no-002-2020-04-fms-contratacao-de-empresa-especializada-no-fornecimento-de-medicamentos-essencias/publicacoes/"
+    },
+    {
+      "name": "Augusto Corrêa",
+      "official_gazette_url": "https://augustocorrea.pa.gov.br/dispensa-de-licitacao-no-030102-2023/publicacoes/"
+    },
+    {
+      "name": "Aurora do Pará",
+      "official_gazette_url": "https://auroradopara.pa.gov.br/tomada-de-preco-no-004-2018-contratacao-de-empresa-especializada-para-execucao-de-obra-e-revitalizacao-da-praca-juscelino-kubitschek-de-aurora-do-para/publicacoes/"
+    },
+    {
+      "name": "Aveiro",
+      "official_gazette_url": "https://aveiro.pa.gov.br/tomada-de-precos-no-002-2023/publicacoes/"
+    },
+    {
+      "name": "Bagre",
+      "official_gazette_url": "https://bagre.pa.gov.br/"
+    },
+    {
+      "name": "Baião",
+      "official_gazette_url": "https://baiao.pa.gov.br/diario-oficial-no-35-998-16-10-2024/"
+    },
+    {
+      "name": "Bannach",
+      "official_gazette_url": "https://bannach.pa.gov.br/transparencia/diario-oficial/"
+    },
+    {
+      "name": "Barcarena",
+      "official_gazette_url": "https://barcarena.pa.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Belém",
+      "official_gazette_url": "https://dom.belem.pa.gov.br/"
+    },
+    {
+      "name": "Belterra",
+      "official_gazette_url": "https://www.belterra.pa.gov.br/"
+    },
+    {
+      "name": "Benevides",
+      "official_gazette_url": "https://www.in.gov.br/servicos/diario-oficial-da-uniao"
+    },
+    {
+      "name": "Bom Jesus do Tocantins",
+      "official_gazette_url": "https://bomjesusdotocantins.pa.gov.br/pregao-eletronico-no2-9-202003-srp/publicacoes/"
+    },
+    {
+      "name": "Bonito",
+      "official_gazette_url": "https://bonito.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Bragança",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Brasil Novo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Brejo Grande do Araguaia",
+      "official_gazette_url": "https://brejograndedoaraguaia.pa.gov.br/pregao-eletronico-no-9-2023-12-pmbga/publicacoes/"
+    },
+    {
+      "name": "Breu Branco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Breves",
+      "official_gazette_url": "https://breves.pa.gov.br/wp-content/uploads/2023/09/Publicacoes.pdf"
+    },
+    {
+      "name": "Bujaru",
+      "official_gazette_url": "https://bujaru.pa.gov.br/publicacoes-do-plano-de-vacinacao-da-covid-19-1o-semestre-de-2021/"
+    },
+    {
+      "name": "Cachoeira do Arari",
+      "official_gazette_url": "https://cachoeiradoarari.pa.gov.br/portal-da-transparencia/estrutura-organizacional/secretaria-municipal-de-promocao-e-assistencia-social/publicacoes-oficiais-secretaria-municipal-de-trabalho-promocao-e-assistencia-social/"
+    },
+    {
+      "name": "Cachoeira do Piriá",
+      "official_gazette_url": "https://cachoeiradopiria.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Cametá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Canaã dos Carajás",
+      "official_gazette_url": "https://www.canaadoscarajas.pa.gov.br/cgi-sys/suspendedpage.cgi"
+    },
+    {
+      "name": "Capanema",
+      "official_gazette_url": "https://www.capanema.pa.gov.br/404"
+    },
+    {
+      "name": "Capitão Poço",
+      "official_gazette_url": "https://www.capitaopoco.pa.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Castanhal",
+      "official_gazette_url": "https://sites.google.com/castanhal.pa.gov.br/doc-diario-oficial-castanhal/inicio"
+    },
+    {
+      "name": "Chaves",
+      "official_gazette_url": "https://chaves.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Colares",
+      "official_gazette_url": "https://colares.pa.gov.br/transparencia-publica/"
+    },
+    {
+      "name": "Conceição do Araguaia",
+      "official_gazette_url": "https://conceicaodoaraguaia.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-do-municipio/"
+    },
+    {
+      "name": "Concórdia do Pará",
+      "official_gazette_url": "https://concordiadopara.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Cumaru do Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Curionópolis",
+      "official_gazette_url": "http://www.governotransparente.com.br/transparencia/44249488/leismunicipais?datainfo=MTIwMjEwODA0MTU0M1BQUA==&clean=false"
+    },
+    {
+      "name": "Curralinho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Curuá",
+      "official_gazette_url": "https://curua.pa.gov.br/publicacoes/"
+    },
+    {
+      "name": "Curuçá",
+      "official_gazette_url": "https://curuca.pa.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Dom Eliseu",
+      "official_gazette_url": "https://domeliseu.pa.gov.br/concorrencia-no-001-2019/publicacoes/"
+    },
+    {
+      "name": "Eldorado dos Carajás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Faro",
+      "official_gazette_url": "https://faro.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Floresta do Araguaia",
+      "official_gazette_url": "https://florestadoaraguaia.pa.gov.br/carona-no-a-2023-001/publicacoes/"
+    },
+    {
+      "name": "Garrafão do Norte",
+      "official_gazette_url": "https://www.garrafaodonorte.pa.gov.br"
+    },
+    {
+      "name": "Goianésia do Pará",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Gurupá",
+      "official_gazette_url": "https://gurupa.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Igarapé-Açu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Igarapé-Miri",
+      "official_gazette_url": "https://igarapemiri.pa.gov.br/tomada-de-precos-no-001-2022-cpl-semsa/publicacoes/"
+    },
+    {
+      "name": "Inhangapi",
+      "official_gazette_url": "https://inhangapi.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Ipixuna do Pará",
+      "official_gazette_url": "https://ipixunadopara.pa.gov.br/diario-oficial-do-municipio-de-ipixuna-do-para-extrato-de-acordo-de-cooperacao-tecnica-e-operacional/"
+    },
+    {
+      "name": "Irituia",
+      "official_gazette_url": "https://irituia.pa.gov.br/"
+    },
+    {
+      "name": "Itaituba",
+      "official_gazette_url": "https://www.itaituba.pa.gov.br/diario-oficial"
+    },
+    {
+      "name": "Itupiranga",
+      "official_gazette_url": "https://itupiranga.pa.gov.br/tomada-de-precos-no-2-2021-tp-007-contratacao-de-empresa-especializada-em-servico-de-engenharia-para-recuperacao-de-327-km-de-estradas-e-vicinais/publicacoes/"
+    },
+    {
+      "name": "Jacareacanga",
+      "official_gazette_url": "https://jacareacanga.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Jacundá",
+      "official_gazette_url": "https://jacunda.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Juruti",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/famep/"
+    },
+    {
+      "name": "Limoeiro do Ajuru",
+      "official_gazette_url": "https://limoeirodoajuru.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Mãe do Rio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Magalhães Barata",
+      "official_gazette_url": "https://magalhaesbarata.pa.gov.br/?attachment_id=8747"
+    },
+    {
+      "name": "Marabá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Maracanã",
+      "official_gazette_url": "https://maracana.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Marapanim",
+      "official_gazette_url": "https://marapanim.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Marituba",
+      "official_gazette_url": "https://www.marituba.pa.gov.br/transparencia/"
+    },
+    {
+      "name": "Medicilândia",
+      "official_gazette_url": "https://medicilandia.pa.gov.br/adesao-a-ata-de-registro-de-precos-no-002-2021-semad-carona-fornecimento-de-material-hospitalar-para-manutencao-do-teto-municipal-da-media-e-alta-complexidade-ambulatorial/publicacoes/"
+    },
+    {
+      "name": "Melgaço",
+      "official_gazette_url": "https://www.melgaco.pa.gov.br/404"
+    },
+    {
+      "name": "Mocajuba",
+      "official_gazette_url": "https://mocajuba.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Moju",
+      "official_gazette_url": "https://moju.pa.gov.br/concorrencia-no-32017-00001/publicacoes/"
+    },
+    {
+      "name": "Monte Alegre",
+      "official_gazette_url": "https://www.montealegre.pa.gov.br/404"
+    },
+    {
+      "name": "Muaná",
+      "official_gazette_url": "https://muana.pa.gov.br/pregao-eletronico-no-015-2022-srp/publicacoes/"
+    },
+    {
+      "name": "Nova Esperança do Piriá",
+      "official_gazette_url": "https://www.novaesperancadopiria.pa.gov.br/404"
+    },
+    {
+      "name": "Nova Ipixuna",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Timboteua",
+      "official_gazette_url": "https://novatimboteua.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Novo Progresso",
+      "official_gazette_url": "https://novoprogresso.pa.gov.br/dispensa-no-005-2018/publicacoes/"
+    },
+    {
+      "name": "Novo Repartimento",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Óbidos",
+      "official_gazette_url": "https://obidos.pa.gov.br/dispensa-de-licitacao-no-002-2021-semsa-pmo-contratacao-de-empresa-especializada-para-prestar-servicos-funerarios-incluindo-a-preparacao-do-corpo-translado-e-fornecimento-de-urnas-para-suprir-as-n/publicacoes/"
+    },
+    {
+      "name": "Oeiras do Pará",
+      "official_gazette_url": "https://oeirasdopara.pa.gov.br/novo/"
+    },
+    {
+      "name": "Oriximiná",
+      "official_gazette_url": "https://www.oriximina.pa.gov.br#diario-oficial"
+    },
+    {
+      "name": "Ourém",
+      "official_gazette_url": "https://www.ourem.pa.gov.br/404"
+    },
+    {
+      "name": "Ourilândia do Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pacajá",
+      "official_gazette_url": "https://pacaja.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Palestina do Pará",
+      "official_gazette_url": "https://palestinadopara.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Paragominas",
+      "official_gazette_url": "https://paragominas.pa.gov.br/"
+    },
+    {
+      "name": "Parauapebas",
+      "official_gazette_url": "https://parauapebas.pa.gov.br/cartas-de-servicos/diario-oficial-eletronico-do-municipio-segov/"
+    },
+    {
+      "name": "Pau d'Arco",
+      "official_gazette_url": "https://paudarco.pa.gov.br/portal-da-transparencia/programas-e-acoes/publicacoes-ate-2023-programas-e-acoes/"
+    },
+    {
+      "name": "Peixe-Boi",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Piçarra",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/famep/"
+    },
+    {
+      "name": "Placas",
+      "official_gazette_url": "https://www.placas.pa.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ponta de Pedras",
+      "official_gazette_url": "https://pontadepedras.pa.gov.br/publicacoes-oficiais/"
+    },
+    {
+      "name": "Portel",
+      "official_gazette_url": "https://portel.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Porto de Moz",
+      "official_gazette_url": "https://portodemoz.pa.gov.br/pregao-presencial-no-4003-1-2021-pmpm-srp-registro-de-precos-para-fornecimento-de-material-de-consumo-generos-alimenticios-material-de-limpeza-e-descartaveis/publicacoes/"
+    },
+    {
+      "name": "Prainha",
+      "official_gazette_url": "https://prainha.pa.gov.br/documentos-e-informacoes-sigilosas/"
+    },
+    {
+      "name": "Primavera",
+      "official_gazette_url": "https://primavera.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Quatipuru",
+      "official_gazette_url": "https://quatipuru.pa.gov.br/publicacoes-oficiais/"
+    },
+    {
+      "name": "Redenção",
+      "official_gazette_url": "https://redencao.pa.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Rio Maria",
+      "official_gazette_url": "https://riomaria.pa.gov.br/transparencia/diario-oficial/"
+    },
+    {
+      "name": "Rondon do Pará",
+      "official_gazette_url": "https://rondondopara.pa.gov.br/inexigibilidade-no-6-2021-021-contratacao-de-empresa-especializada-em-prestacao-de-servicos-de-hospedagem-manutencao-e-suporte-tecnico-de-software-de-programas-de-gestao-escolar-da-secretaria-munici/publicacoes/"
+    },
+    {
+      "name": "Rurópolis",
+      "official_gazette_url": "https://ruropolis.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Salinópolis",
+      "official_gazette_url": "https://salinopolis.pa.gov.br/publicacoes-oficiais/"
+    },
+    {
+      "name": "Salvaterra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Bárbara do Pará",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Cruz do Arari",
+      "official_gazette_url": "https://santacruzdoarari.pa.gov.br/publicacoes-oficiais/"
+    },
+    {
+      "name": "Santa Isabel do Pará",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Luzia do Pará",
+      "official_gazette_url": "https://www.santaluziadopara.pa.gov.br/404"
+    },
+    {
+      "name": "Santa Maria das Barreiras",
+      "official_gazette_url": "https://www.santamariadasbarreiras.pa.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santa Maria do Pará",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santana do Araguaia",
+      "official_gazette_url": "https://diariooficial.pmsaraguaia.pa.gov.br"
+    },
+    {
+      "name": "Santarém",
+      "official_gazette_url": "https://santarem.pa.gov.br/"
+    },
+    {
+      "name": "Santarém Novo",
+      "official_gazette_url": "https://santaremnovo.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Santo Antônio do Tauá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Caetano de Odivela",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Domingos do Araguaia",
+      "official_gazette_url": "https://saodomingosdoaraguaia.pa.gov.br/transparencia/"
+    },
+    {
+      "name": "São Domingos do Capim",
+      "official_gazette_url": "https://www.saodomingosdocapim.pa.gov.br/404"
+    },
+    {
+      "name": "São Félix do Xingu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Francisco do Pará",
+      "official_gazette_url": "https://saofranciscodopara.pa.gov.br/publicacoes/"
+    },
+    {
+      "name": "São Geraldo do Araguaia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João da Ponta",
+      "official_gazette_url": "https://saojoaodaponta.pa.gov.br/diario-oficial-do-municipio/"
+    },
+    {
+      "name": "São João de Pirabas",
+      "official_gazette_url": "https://saojoaodepirabas.pa.gov.br/publicacoes-processo-acs-2024/"
+    },
+    {
+      "name": "São João do Araguaia",
+      "official_gazette_url": "https://saojoaodoaraguaia.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "São Miguel do Guamá",
+      "official_gazette_url": "https://saomigueldoguama.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "São Sebastião da Boa Vista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sapucaia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Senador José Porfírio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Soure",
+      "official_gazette_url": "https://soure.pa.gov.br/pregao-presencial-no-92018-00002-srppms/publicacoes/"
+    },
+    {
+      "name": "Tailândia",
+      "official_gazette_url": "https://tailandia.pa.gov.br/legislacao-de-pessoal/"
+    },
+    {
+      "name": "Terra Alta",
+      "official_gazette_url": "https://terraalta.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-municipio/"
+    },
+    {
+      "name": "Terra Santa",
+      "official_gazette_url": "https://terrasanta.pa.gov.br/transparencia-cfem/"
+    },
+    {
+      "name": "Tomé-Açu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tracuateua",
+      "official_gazette_url": "https://tracuateua.pa.gov.br/legislacao-da-educacao/"
+    },
+    {
+      "name": "Trairão",
+      "official_gazette_url": "https://trairao.pa.gov.br/portal-da-transparencia/transparencia-saude/"
+    },
+    {
+      "name": "Tucumã",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tucuruí",
+      "official_gazette_url": "https://tucurui.pa.gov.br/"
+    },
+    {
+      "name": "Ulianópolis",
+      "official_gazette_url": "https://ulianopolis.pa.gov.br/publicacoes/"
+    },
+    {
+      "name": "Uruará",
+      "official_gazette_url": "https://www.governotransparente.com.br/transparencia/45949488/leismunicipais?datainfo=MTIwMjUwMTI4MTg1MlBQUA==&clean=false"
+    },
+    {
+      "name": "Vigia",
+      "official_gazette_url": "https://vigia.pa.gov.br/portal-da-transparencia/legislacao-de-pessoal-do-municipio/"
+    },
+    {
+      "name": "Viseu",
+      "official_gazette_url": "https://www.viseu.pa.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Vitória do Xingu",
+      "official_gazette_url": "https://vitoriadoxingu.pa.gov.br/diario-oficial-do-municipio-de-vitoria-do-xingu/"
+    },
+    {
+      "name": "Xinguara",
+      "official_gazette_url": "https://xinguara.pa.gov.br/transparencia/diario-oficial/"
+    }
+  ]
+}

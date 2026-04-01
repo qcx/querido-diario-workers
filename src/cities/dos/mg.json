@@ -1,0 +1,3417 @@
+{
+  "name": "Minas Gerais",
+  "cities": [
+    {
+      "name": "Abadia dos Dourados",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Abaeté",
+      "official_gazette_url": "https://abaete.mg.gov.br/legislacao-covid-19/"
+    },
+    {
+      "name": "Abre Campo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Acaiaca",
+      "official_gazette_url": "https://acaiaca.mg.gov.br/index.php/2018/09/16/doem-diario-oficial-eletronico-municipal/"
+    },
+    {
+      "name": "Açucena",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Água Boa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Água Comprida",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Aguanil",
+      "official_gazette_url": "https://www.aguanil.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Águas Formosas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Águas Vermelhas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Aimorés",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Aiuruoca",
+      "official_gazette_url": "https://www.aiuruoca.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Alagoa",
+      "official_gazette_url": "https://alagoa.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Albertina",
+      "official_gazette_url": "https://www.albertina.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Além Paraíba",
+      "official_gazette_url": "https://www.alemparaiba.mg.gov.br/"
+    },
+    {
+      "name": "Alfenas",
+      "official_gazette_url": "https://www.alfenas.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Alfredo Vasconcelos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Almenara",
+      "official_gazette_url": "https://www.almenara.mg.gov.br/diario"
+    },
+    {
+      "name": "Alpercata",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Alpinópolis",
+      "official_gazette_url": "https://alpinopolis.mg.gov.br/legislacao-e-resolucoes/"
+    },
+    {
+      "name": "Alterosa",
+      "official_gazette_url": "https://www.alterosa.mg.gov.br/transparencia"
+    },
+    {
+      "name": "Alto Caparaó",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alto Jequitibá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alto Rio Doce",
+      "official_gazette_url": "https://www.altoriodoce.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Alvarenga",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Alvinópolis",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Alvorada de Minas",
+      "official_gazette_url": "https://www.alvoradademinas.mg.gov.br/publicacoes"
+    },
+    {
+      "name": "Amparo do Serra",
+      "official_gazette_url": "https://www.amparodoserra.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Andradas",
+      "official_gazette_url": "https://www.andradas.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Andrelândia",
+      "official_gazette_url": "https://diario.andrelandia.mg.gov.br/"
+    },
+    {
+      "name": "Angelândia",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Antônio Carlos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Antônio Dias",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Antônio Prado de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Araçaí",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Aracitaba",
+      "official_gazette_url": "https://aracitaba.mg.gov.br/"
+    },
+    {
+      "name": "Araçuaí",
+      "official_gazette_url": "https://www.aracuai.mg.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Araguari",
+      "official_gazette_url": "https://www.araguari.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Arantina",
+      "official_gazette_url": "https://www.arantina.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Araponga",
+      "official_gazette_url": "https://araponga.mg.gov.br/publicacoes-em-geral/"
+    },
+    {
+      "name": "Araporã",
+      "official_gazette_url": "https://www.arapora.mg.gov.br/diario-oficial-eletronico"
+    },
+    {
+      "name": "Arapuá",
+      "official_gazette_url": "https://www.arapua.mg.gov.br/"
+    },
+    {
+      "name": "Araújos",
+      "official_gazette_url": "https://www.araujos.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Araxá",
+      "official_gazette_url": "https://www.araxa.mg.gov.br/oops/404"
+    },
+    {
+      "name": "Arceburgo",
+      "official_gazette_url": "https://www.arceburgo.mg.gov.br/doacao-de-mascaras-pela-prefeitura/"
+    },
+    {
+      "name": "Arcos",
+      "official_gazette_url": "https://www.arcos.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Areado",
+      "official_gazette_url": "https://www.areado.mg.gov.br/"
+    },
+    {
+      "name": "Argirita",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Aricanduva",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Arinos",
+      "official_gazette_url": "https://www.arinos.mg.gov.br/"
+    },
+    {
+      "name": "Astolfo Dutra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ataléia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Augusto de Lima",
+      "official_gazette_url": "https://www.augustodelima.mg.gov.br/arquivo/diario-oficial-ano-2026-no-01/"
+    },
+    {
+      "name": "Baependi",
+      "official_gazette_url": "https://www.baependi.mg.gov.br/diario_oficial/app_Login/"
+    },
+    {
+      "name": "Baldim",
+      "official_gazette_url": "https://baldim.mg.gov.br/wsite/"
+    },
+    {
+      "name": "Bambuí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bandeira",
+      "official_gazette_url": "https://www.bandeira.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Bandeira do Sul",
+      "official_gazette_url": "https://www.bandeiradosul.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Barão de Cocais",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Barão de Monte Alto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Barbacena",
+      "official_gazette_url": "https://www.barbacena.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Barra Longa",
+      "official_gazette_url": "https://www.barralonga.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Barroso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bela Vista de Minas",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Belmiro Braga",
+      "official_gazette_url": "https://www.belmirobraga.mg.gov.br/legislacao/"
+    },
+    {
+      "name": "Belo Horizonte",
+      "official_gazette_url": "https://dom.pbh.gov.br/"
+    },
+    {
+      "name": "Belo Oriente",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Belo Vale",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Berilo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Berizal",
+      "official_gazette_url": "https://www.berizal.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Bertópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Betim",
+      "official_gazette_url": "https://www.betim.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Bias Fortes",
+      "official_gazette_url": "https://www.biasfortes.mg.gov.br/transparencia-covid-19/"
+    },
+    {
+      "name": "Bicas",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Biquinhas",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Boa Esperança",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bocaina de Minas",
+      "official_gazette_url": "https://www.bocainademinas.mg.gov.br/publicacoes-2018/"
+    },
+    {
+      "name": "Bocaiúva",
+      "official_gazette_url": "https://www.bocaiuva.mg.gov.br/diario_oficial"
+    },
+    {
+      "name": "Bom Despacho",
+      "official_gazette_url": "https://bomdespacho.atende.net/?pg=transparencia#!/"
+    },
+    {
+      "name": "Bom Jardim de Minas",
+      "official_gazette_url": "https://www.bomjardimdeminas.mg.gov.br/pmunicipais/"
+    },
+    {
+      "name": "Bom Jesus da Penha",
+      "official_gazette_url": "https://www.bomjesusdapenha.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Bom Jesus do Amparo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Jesus do Galho",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Bom Repouso",
+      "official_gazette_url": "https://bomrepouso.mg.gov.br/legislacao-municipal/"
+    },
+    {
+      "name": "Bom Sucesso",
+      "official_gazette_url": "https://www.bomsucesso.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Bonfim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bonfinópolis de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bonito de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Borda da Mata",
+      "official_gazette_url": "https://www.bordadamata.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Botelhos",
+      "official_gazette_url": "https://www.botelhos.mg.gov.br/index.php"
+    },
+    {
+      "name": "Botumirim",
+      "official_gazette_url": "https://www.botumirim.mg.gov.br/?pagina=404"
+    },
+    {
+      "name": "Brás Pires",
+      "official_gazette_url": "https://braspires.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Brasilândia de Minas",
+      "official_gazette_url": "https://www.brasilandiademinas.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Brasília de Minas",
+      "official_gazette_url": "https://brasiliademinas.mg.gov.br/governo/publicacoes/"
+    },
+    {
+      "name": "Brasópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Braúnas",
+      "official_gazette_url": "https://www.braunas.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Brumadinho",
+      "official_gazette_url": "https://novo.brumadinho.mg.gov.br/"
+    },
+    {
+      "name": "Bueno Brandão",
+      "official_gazette_url": "https://www.buenobrandao.mg.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Buenópolis",
+      "official_gazette_url": "https://www.buenopolis.mg.gov.br/legislacao-3/"
+    },
+    {
+      "name": "Bugre",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Buritis",
+      "official_gazette_url": "https://www.buritis.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Buritizeiro",
+      "official_gazette_url": "https://www.buritizeiro.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Cabeceira Grande",
+      "official_gazette_url": "https://www.cabeceiragrande.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Cabo Verde",
+      "official_gazette_url": "https://www.caboverde.mg.gov.br/pagina-nao-encontrada"
+    },
+    {
+      "name": "Cachoeira da Prata",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Cachoeira de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cachoeira de Pajeú",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cachoeira Dourada",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Caetanópolis",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Caeté",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Caiana",
+      "official_gazette_url": "https://www.caiana.mg.gov.br/legislacao/diario-oficial"
+    },
+    {
+      "name": "Cajuri",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Caldas",
+      "official_gazette_url": "https://caldas.mg.gov.br/legislacao/"
+    },
+    {
+      "name": "Camacho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Camanducaia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cambuí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cambuquira",
+      "official_gazette_url": "https://www.cambuquira.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Campanário",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campanha",
+      "official_gazette_url": "https://www.campanha.mg.gov.br/index.php/transparencia"
+    },
+    {
+      "name": "Campestre",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campina Verde",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campo Azul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campo Belo",
+      "official_gazette_url": "https://www.campobelo.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Campo do Meio",
+      "official_gazette_url": "https://www.campodomeio.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Campo Florido",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campos Altos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campos Gerais",
+      "official_gazette_url": "https://www.camposgerais.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Cana Verde",
+      "official_gazette_url": "https://canaverde.mg.gov.br/diario-oficial-eletronico/"
+    },
+    {
+      "name": "Canaã",
+      "official_gazette_url": "https://www.canaa.mg.gov.br/"
+    },
+    {
+      "name": "Canápolis",
+      "official_gazette_url": "https://www.canapolis.mg.gov.br/"
+    },
+    {
+      "name": "Candeias",
+      "official_gazette_url": "https://www.candeias.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Cantagalo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Caparaó",
+      "official_gazette_url": "https://www.caparao.mg.gov.br/transparencia"
+    },
+    {
+      "name": "Capela Nova",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Capelinha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Capetinga",
+      "official_gazette_url": "https://www.capetinga.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Capim Branco",
+      "official_gazette_url": "https://www.capimbranco.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Capinópolis",
+      "official_gazette_url": "https://www.capinopolis.mg.gov.br/diariooficial/"
+    },
+    {
+      "name": "Capitão Andrade",
+      "official_gazette_url": "https://www.capitaoandrade.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Capitão Enéas",
+      "official_gazette_url": "https://capitaoeneas.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Capitólio",
+      "official_gazette_url": "https://www.capitolio.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Caputira",
+      "official_gazette_url": "https://www.caputira.mg.gov.br/"
+    },
+    {
+      "name": "Caraí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Caranaíba",
+      "official_gazette_url": "https://www.caranaiba.mg.gov.br/"
+    },
+    {
+      "name": "Carandaí",
+      "official_gazette_url": "https://carandai.mg.gov.br/diario_oficial/"
+    },
+    {
+      "name": "Carangola",
+      "official_gazette_url": "https://www.carangola.mg.gov.br/legislacao/diario-oficial"
+    },
+    {
+      "name": "Caratinga",
+      "official_gazette_url": "https://caratinga.mg.gov.br/servicos/diario-oficial/"
+    },
+    {
+      "name": "Carbonita",
+      "official_gazette_url": "https://www.carbonita.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Careaçu",
+      "official_gazette_url": "https://careacu.mg.gov.br/legislacao/"
+    },
+    {
+      "name": "Carlos Chagas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Carmésia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Carmo da Cachoeira",
+      "official_gazette_url": "https://www.carmodacachoeira.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Carmo da Mata",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Carmo de Minas",
+      "official_gazette_url": "https://www.carmodeminas.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Carmo do Cajuru",
+      "official_gazette_url": "https://www.carmodocajuru.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Carmo do Paranaíba",
+      "official_gazette_url": "https://carmodoparanaiba.mg.gov.br/legislacao-da-nllc/"
+    },
+    {
+      "name": "Carmo do Rio Claro",
+      "official_gazette_url": "https://www.carmodorioclaro.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Carmópolis de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Carneirinho",
+      "official_gazette_url": "https://www.carneirinho.mg.gov.br/diariooficial/"
+    },
+    {
+      "name": "Carrancas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Carvalhópolis",
+      "official_gazette_url": "https://carvalhopolis.mg.gov.br/2021/10/domingo-feliz-para-as-criancas-de-carvalhopolis/"
+    },
+    {
+      "name": "Carvalhos",
+      "official_gazette_url": "https://www.carvalhos.mg.gov.br/cgi-sys/suspendedpage.cgi"
+    },
+    {
+      "name": "Casa Grande",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cascalho Rico",
+      "official_gazette_url": "https://www.cascalhorico.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Cássia",
+      "official_gazette_url": "https://www.cassia.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Cataguases",
+      "official_gazette_url": "https://www.cataguases.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Catas Altas",
+      "official_gazette_url": "https://www.catasaltas.mg.gov.br/legislacao/"
+    },
+    {
+      "name": "Catas Altas da Noruega",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Catuji",
+      "official_gazette_url": "https://www.catuji.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Catuti",
+      "official_gazette_url": "https://www.catuti.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Caxambu",
+      "official_gazette_url": "https://www.caxambu.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cedro do Abaeté",
+      "official_gazette_url": "https://www.cedrodoabaete.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Central de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Centralina",
+      "official_gazette_url": "https://www.centralina.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Chácara",
+      "official_gazette_url": "https://www.chacara.mg.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Chalé",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Chapada do Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Chapada Gaúcha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Chiador",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Cipotânea",
+      "official_gazette_url": "https://cipotanea.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Claraval",
+      "official_gazette_url": "https://www.claraval.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Claro dos Poções",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cláudio",
+      "official_gazette_url": "https://www.claudio.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Coimbra",
+      "official_gazette_url": "https://www.coimbra.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Coluna",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Comendador Gomes",
+      "official_gazette_url": "https://www.comendadorgomes.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Comercinho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Conceição da Aparecida",
+      "official_gazette_url": "https://conceicaodaaparecida.mg.gov.br/transparencia-na-educacao/"
+    },
+    {
+      "name": "Conceição da Barra de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Conceição das Alagoas",
+      "official_gazette_url": "https://www.conceicaodasalagoas.mg.gov.br/atos-oficiais/"
+    },
+    {
+      "name": "Conceição das Pedras",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Conceição de Ipanema",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Conceição do Mato Dentro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Conceição do Pará",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Conceição do Rio Verde",
+      "official_gazette_url": "https://www.conceicaodorioverde.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Conceição dos Ouros",
+      "official_gazette_url": "https://conceicaodosouros.mg.gov.br/documentos/publicacoes-de-midia-regional-divulgando-trabalhos-da-secretaria-de-esportes/"
+    },
+    {
+      "name": "Cônego Marinho",
+      "official_gazette_url": "https://www.conegomarinho.mg.gov.br/atos-oficiais/"
+    },
+    {
+      "name": "Confins",
+      "official_gazette_url": "https://www.confins.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Congonhal",
+      "official_gazette_url": "https://congonhal.mg.gov.br/"
+    },
+    {
+      "name": "Congonhas",
+      "official_gazette_url": "https://dom.congonhas.mg.gov.br/login"
+    },
+    {
+      "name": "Congonhas do Norte",
+      "official_gazette_url": "http://www.congonhasdonorte.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Conquista",
+      "official_gazette_url": "https://www.conquista.mg.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Conselheiro Lafaiete",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Conselheiro Pena",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Consolação",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Contagem",
+      "official_gazette_url": "https://portal.contagem.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Coqueiral",
+      "official_gazette_url": "https://www.coqueiral.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Coração de Jesus",
+      "official_gazette_url": "https://www.coracaodejesus.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Cordisburgo",
+      "official_gazette_url": "https://cordisburgo.mg.gov.br/app/publicacoes/"
+    },
+    {
+      "name": "Cordislândia",
+      "official_gazette_url": "https://www.cordislandia.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Corinto",
+      "official_gazette_url": "https://corinto.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Coroaci",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Coromandel",
+      "official_gazette_url": "https://www.coromandel.mg.gov.br/"
+    },
+    {
+      "name": "Coronel Fabriciano",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Coronel Murta",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Coronel Pacheco",
+      "official_gazette_url": "https://www.coronelpacheco.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Coronel Xavier Chaves",
+      "official_gazette_url": "https://www.coronelxavierchaves.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Córrego Danta",
+      "official_gazette_url": "http://example.com"
+    },
+    {
+      "name": "Córrego do Bom Jesus",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Córrego Fundo",
+      "official_gazette_url": "https://corregofundo.mg.gov.br/2014/05/12/publicacoes-oficiais_2014/"
+    },
+    {
+      "name": "Córrego Novo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Couto de Magalhães de Minas",
+      "official_gazette_url": "https://coutodemagalhaesdeminas.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Crisólita",
+      "official_gazette_url": "https://www.crisolita.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Cristais",
+      "official_gazette_url": "https://www.cristais.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Cristália",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cristiano Otoni",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cristina",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Crucilândia",
+      "official_gazette_url": "http://www.prefeituradecrucilandia.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Cruzeiro da Fortaleza",
+      "official_gazette_url": "https://www.cruzeirodafortaleza.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cruzília",
+      "official_gazette_url": "https://cruzilia.mg.gov.br/legislacao/"
+    },
+    {
+      "name": "Cuparaque",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Curral de Dentro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Curvelo",
+      "official_gazette_url": "https://curvelo.mg.gov.br/"
+    },
+    {
+      "name": "Datas",
+      "official_gazette_url": "https://datas.mg.gov.br/site/"
+    },
+    {
+      "name": "Delfim Moreira",
+      "official_gazette_url": "https://www.delfimmoreira.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Delfinópolis",
+      "official_gazette_url": "https://delfinopolis.mg.gov.br/doacao-de-um-onibus-escolar-caminho-da-escola/"
+    },
+    {
+      "name": "Delta",
+      "official_gazette_url": "https://www.delta.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Descoberto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Desterro de Entre Rios",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Desterro do Melo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Diamantina",
+      "official_gazette_url": "https://www.diamantina.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Diogo de Vasconcelos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Dionísio",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Divinésia",
+      "official_gazette_url": "https://www.divinesia.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Divino",
+      "official_gazette_url": "https://www.divino.mg.gov.br/"
+    },
+    {
+      "name": "Divino das Laranjeiras",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Divinolândia de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Divinópolis",
+      "official_gazette_url": "https://www.divinopolis.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Divisa Alegre",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Divisa Nova",
+      "official_gazette_url": "https://divisanova.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Divisópolis",
+      "official_gazette_url": "https://www.divisopolis.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Dom Bosco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Dom Cavati",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Dom Joaquim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Dom Silvério",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Dom Viçoso",
+      "official_gazette_url": "https://www.domvicoso.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Dona Euzébia",
+      "official_gazette_url": "https://www.donaeuzebia.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Dores de Campos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Dores de Guanhães",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Dores do Indaiá",
+      "official_gazette_url": "https://www.doresdoindaia.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Dores do Turvo",
+      "official_gazette_url": "https://www.doresdoturvo.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Doresópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Douradoquara",
+      "official_gazette_url": "https://www.douradoquara.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Durandé",
+      "official_gazette_url": "https://durande.mg.gov.br/diario_oficial/"
+    },
+    {
+      "name": "Elói Mendes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Engenheiro Caldas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Engenheiro Navarro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Entre Folhas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Entre Rios de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ervália",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Esmeraldas",
+      "official_gazette_url": "https://www.esmeraldas.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Espera Feliz",
+      "official_gazette_url": "https://www.esperafeliz.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Espinosa",
+      "official_gazette_url": "https://espinosa.mg.gov.br/category/diario-oficial-espinosa-mg/"
+    },
+    {
+      "name": "Espírito Santo do Dourado",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Estiva",
+      "official_gazette_url": "https://estiva.mg.gov.br/"
+    },
+    {
+      "name": "Estrela Dalva",
+      "official_gazette_url": "https://estreladalva.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Estrela do Indaiá",
+      "official_gazette_url": "https://www.estreladoindaia.mg.gov.br/transparencia"
+    },
+    {
+      "name": "Estrela do Sul",
+      "official_gazette_url": "https://www.estreladosul.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Eugenópolis",
+      "official_gazette_url": "https://www.eugenopolis.mg.gov.br/"
+    },
+    {
+      "name": "Ewbank da Câmara",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Extrema",
+      "official_gazette_url": "https://www.extrema.mg.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Fama",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Faria Lemos",
+      "official_gazette_url": "https://www.farialemos.mg.gov.br/legislacao"
+    },
+    {
+      "name": "Felício dos Santos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Felisburgo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Felixlândia",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Fernandes Tourinho",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Ferros",
+      "official_gazette_url": "https://www.ferros.mg.gov.br/index.php/legislacao-municipal/diario-oficial"
+    },
+    {
+      "name": "Fervedouro",
+      "official_gazette_url": "https://www.fervedouro.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Florestal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Formiga",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amm-mg/"
+    },
+    {
+      "name": "Formoso",
+      "official_gazette_url": "https://www.formoso.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Fortaleza de Minas",
+      "official_gazette_url": "https://www.fortalezademinas.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Fortuna de Minas",
+      "official_gazette_url": "https://fortunademinas.mg.gov.br/transparencia-e-rastreabilidade-de-emendas/"
+    },
+    {
+      "name": "Francisco Badaró",
+      "official_gazette_url": "https://franciscobadaro.mg.gov.br/wp-content/uploads/2017/07/20170725183833.png"
+    },
+    {
+      "name": "Francisco Dumont",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Francisco Sá",
+      "official_gazette_url": "https://www.franciscosa.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Franciscópolis",
+      "official_gazette_url": "https://www.franciscopolis.mg.gov.br/"
+    },
+    {
+      "name": "Frei Gaspar",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Frei Inocêncio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Frei Lagonegro",
+      "official_gazette_url": "https://freilagonegro.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Fronteira",
+      "official_gazette_url": "https://www.fronteira.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Fronteira dos Vales",
+      "official_gazette_url": "https://www.fronteiradosvales.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Fruta de Leite",
+      "official_gazette_url": "https://frutadeleite.mg.gov.br#diario-oficial"
+    },
+    {
+      "name": "Frutal",
+      "official_gazette_url": "https://www.frutal.mg.gov.br/diariooficial/"
+    },
+    {
+      "name": "Funilândia",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Galiléia",
+      "official_gazette_url": "https://www.galileia.mg.gov.br/wp-content/uploads/2021/12/Diario-oficial.pdf"
+    },
+    {
+      "name": "Gameleiras",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Glaucilândia",
+      "official_gazette_url": "https://www.glaucilandia.mg.gov.br/login"
+    },
+    {
+      "name": "Goiabeira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Goianá",
+      "official_gazette_url": "https://www.goiana.mg.gov.br/legislacao_municipal/"
+    },
+    {
+      "name": "Gonçalves",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Gonzaga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Gouveia",
+      "official_gazette_url": "https://www.gouveia.mg.gov.br/"
+    },
+    {
+      "name": "Governador Valadares",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Grão Mogol",
+      "official_gazette_url": "https://graomogol.mg.gov.br/publicacoes-diversas/"
+    },
+    {
+      "name": "Grupiara",
+      "official_gazette_url": "https://www.grupiara.mg.gov.br/"
+    },
+    {
+      "name": "Guanhães",
+      "official_gazette_url": "https://www.guanhaes.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Guapé",
+      "official_gazette_url": "https://www.guape.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Guaraciaba",
+      "official_gazette_url": "https://www.guaraciaba.mg.gov.br/"
+    },
+    {
+      "name": "Guaraciama",
+      "official_gazette_url": "https://www.guaraciama.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Guaranésia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Guarani",
+      "official_gazette_url": "https://guarani.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Guarará",
+      "official_gazette_url": "https://www.guarara.mg.gov.br/"
+    },
+    {
+      "name": "Guarda-Mor",
+      "official_gazette_url": "https://www.guardamor.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Guaxupé",
+      "official_gazette_url": "https://www.guaxupe.mg.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Guidoval",
+      "official_gazette_url": "http://guidoval.mg.gov.br/portal/"
+    },
+    {
+      "name": "Guimarânia",
+      "official_gazette_url": "https://www.guimarania.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Guiricema",
+      "official_gazette_url": "https://www.guiricema.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Gurinhatã",
+      "official_gazette_url": "https://gurinhata.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Heliodora",
+      "official_gazette_url": "https://www.heliodora.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Iapu",
+      "official_gazette_url": "https://iapu.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Ibertioga",
+      "official_gazette_url": "https://www.ibertioga.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ibiá",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amm-mg/"
+    },
+    {
+      "name": "Ibiaí",
+      "official_gazette_url": "https://www.ibiai.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ibiracatu",
+      "official_gazette_url": "https://ibiracatu.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Ibiraci",
+      "official_gazette_url": "https://www.ibiraci.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Ibirité",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Ibitiúra de Minas",
+      "official_gazette_url": "https://www.ibitiurademinas.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ibituruna",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Icaraí de Minas",
+      "official_gazette_url": "https://icaraideminas.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Igarapé",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Igaratinga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Iguatama",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ijaci",
+      "official_gazette_url": "https://www.ijaci.mg.gov.br/diario-oficial-eletronico/"
+    },
+    {
+      "name": "Ilicínea",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Imbé de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Inconfidentes",
+      "official_gazette_url": "https://www.inconfidentes.mg.gov.br/?pagina=404"
+    },
+    {
+      "name": "Indaiabira",
+      "official_gazette_url": "http://indaiabira.mg.gov.br/portal/diarioOficial.php"
+    },
+    {
+      "name": "Indianópolis",
+      "official_gazette_url": "https://indianopolis.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Ingaí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Inhapim",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Inhaúma",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Inimutaba",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amm-mg/"
+    },
+    {
+      "name": "Ipaba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ipanema",
+      "official_gazette_url": "https://ipanema.mg.gov.br/"
+    },
+    {
+      "name": "Ipatinga",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Ipiaçu",
+      "official_gazette_url": "https://www.ipiacu.mg.gov.br/"
+    },
+    {
+      "name": "Ipuiúna",
+      "official_gazette_url": "https://ipuiuna.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Iraí de Minas",
+      "official_gazette_url": "https://www.iraideminas.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Itabira",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Itabirinha de Mantena",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itabirito",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itacambira",
+      "official_gazette_url": "https://www.itacambira.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Itacarambi",
+      "official_gazette_url": "https://www.itacarambi.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Itaguara",
+      "official_gazette_url": "https://www.itaguara.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Itaipé",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itajubá",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/itajuba"
+    },
+    {
+      "name": "Itamarandiba",
+      "official_gazette_url": "https://www.itamarandiba.mg.gov.br/transparencia"
+    },
+    {
+      "name": "Itamarati de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itambacuri",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itambé do Mato Dentro",
+      "official_gazette_url": "https://www.itambedomatodentro.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Itamogi",
+      "official_gazette_url": "https://itamogi.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Itamonte",
+      "official_gazette_url": "https://www.itamonte.mg.gov.br/"
+    },
+    {
+      "name": "Itanhandu",
+      "official_gazette_url": "https://www.itanhandu.mg.gov.br/"
+    },
+    {
+      "name": "Itanhomi",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itaobim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itapagipe",
+      "official_gazette_url": "https://www.itapagipe.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Itapecerica",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itapeva",
+      "official_gazette_url": "https://itapeva.mg.gov.br/secretaria-municipal-de-obras/transparencia-das-obras/"
+    },
+    {
+      "name": "Itatiaiuçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itaú de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itaúna",
+      "official_gazette_url": "https://www.itauna.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Itaverava",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itinga",
+      "official_gazette_url": "https://www.itinga.mg.gov.br/diario"
+    },
+    {
+      "name": "Itueta",
+      "official_gazette_url": "https://www.itueta.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Ituiutaba",
+      "official_gazette_url": "https://www.ituiutaba.mg.gov.br/diariooficial/"
+    },
+    {
+      "name": "Itumirim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Iturama",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itutinga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jaboticatubas",
+      "official_gazette_url": "https://www.jaboticatubas.mg.gov.br/"
+    },
+    {
+      "name": "Jacinto",
+      "official_gazette_url": "https://jacinto.mg.gov.br/documentos-e-informacoes-sigilosas/"
+    },
+    {
+      "name": "Jacuí",
+      "official_gazette_url": "https://www.jacui.mg.gov.br/legislacao"
+    },
+    {
+      "name": "Jacutinga",
+      "official_gazette_url": "https://www.jacutinga.mg.gov.br/diariooficial/"
+    },
+    {
+      "name": "Jaguaraçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jaíba",
+      "official_gazette_url": "https://www.jaiba.mg.gov.br/atos-oficiais"
+    },
+    {
+      "name": "Jampruca",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Janaúba",
+      "official_gazette_url": "https://janauba.mg.gov.br/transparencia"
+    },
+    {
+      "name": "Januária",
+      "official_gazette_url": "https://www.januaria.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Japaraíba",
+      "official_gazette_url": "https://www.japaraiba.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Japonvar",
+      "official_gazette_url": "https://japonvar.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Jeceaba",
+      "official_gazette_url": "https://diariooficial.jeceaba.mg.gov.br/"
+    },
+    {
+      "name": "Jenipapo de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jequeri",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Jequitaí",
+      "official_gazette_url": "https://jequitai.mg.gov.br/"
+    },
+    {
+      "name": "Jequitibá",
+      "official_gazette_url": "https://jequitiba.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Jequitinhonha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jesuânia",
+      "official_gazette_url": "https://www.jesuania.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Joaíma",
+      "official_gazette_url": "https://www.joaima.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Joanésia",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "João Monlevade",
+      "official_gazette_url": null
+    },
+    {
+      "name": "João Pinheiro",
+      "official_gazette_url": "https://www.joaopinheiro.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Joaquim Felício",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jordânia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "José Gonçalves de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "José Raydan",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Josenópolis",
+      "official_gazette_url": "https://www.josenopolis.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Juatuba",
+      "official_gazette_url": "https://www.juatuba.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Juiz de Fora",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Juramento",
+      "official_gazette_url": "https://juramento.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Juruaia",
+      "official_gazette_url": "https://www.juruaia.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Juvenília",
+      "official_gazette_url": "https://www.juvenilia.mg.gov.br/"
+    },
+    {
+      "name": "Ladainha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lagamar",
+      "official_gazette_url": "https://www.lagamar.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Lagoa da Prata",
+      "official_gazette_url": "https://www.lagoadaprata.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Lagoa dos Patos",
+      "official_gazette_url": "https://www.lagoadospatos.mg.gov.br/?pagina=404"
+    },
+    {
+      "name": "Lagoa Dourada",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lagoa Formosa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lagoa Grande",
+      "official_gazette_url": "https://lagoagrande.onlyoffice.com/rooms/shared/1217845/filter?folder=1217845&searchArea=3&key=aUNCVTRSYkJZMVMxOGJPZjlnek1XS20zNzMrQWlKN0pXS2tuR01BUEVpcz0_ImQzNTdmOTZhLTcxZjYtNGQ5YS1hODhmLTVkM2VhNTgwOTM4NCI&page=1&sortby=DateAndTime&sortorder=descending"
+    },
+    {
+      "name": "Lagoa Santa",
+      "official_gazette_url": "https://www.lagoasanta.mg.gov.br/publicacoes"
+    },
+    {
+      "name": "Lajinha",
+      "official_gazette_url": "https://www.lajinha.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Lambari",
+      "official_gazette_url": "https://www.lambari.mg.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Lamim",
+      "official_gazette_url": "https://lamim.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Laranjal",
+      "official_gazette_url": "https://pm-laranjal.publicacao.siplanweb.com.br"
+    },
+    {
+      "name": "Lassance",
+      "official_gazette_url": "https://lassance.mg.gov.br/servicos/diario-oficial/"
+    },
+    {
+      "name": "Lavras",
+      "official_gazette_url": "https://lavras.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Leandro Ferreira",
+      "official_gazette_url": "https://www.leandroferreira.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Leme do Prado",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Leopoldina",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Liberdade",
+      "official_gazette_url": "https://liberdade.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Lima Duarte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Limeira do Oeste",
+      "official_gazette_url": "https://www.limeiradooeste.mg.gov.br/legislacao-turismo/"
+    },
+    {
+      "name": "Lontra",
+      "official_gazette_url": "https://www.lontra.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Luisburgo",
+      "official_gazette_url": "https://www.luisburgo.mg.gov.br/"
+    },
+    {
+      "name": "Luislândia",
+      "official_gazette_url": "https://www.luislandia.mg.gov.br/cgi-sys/suspendedpage.cgi"
+    },
+    {
+      "name": "Luminárias",
+      "official_gazette_url": "https://luminarias.mg.gov.br/diario_oficial/"
+    },
+    {
+      "name": "Luz",
+      "official_gazette_url": "https://www.luz.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Machacalis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Machado",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Madre de Deus de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Malacacheta",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mamonas",
+      "official_gazette_url": "https://mamonas.mg.gov.br/wp-content/uploads/2023/07/publicacoes.svg"
+    },
+    {
+      "name": "Manga",
+      "official_gazette_url": "https://www.manga.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Manhuaçu",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Manhumirim",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Mantena",
+      "official_gazette_url": "https://www.mantena.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Mar de Espanha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Maravilhas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Maria da Fé",
+      "official_gazette_url": "https://www.mariadafe.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Mariana",
+      "official_gazette_url": "https://www.mariana.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Marilac",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mário Campos",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Maripá de Minas",
+      "official_gazette_url": "https://maripademinas.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Marliéria",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Marmelópolis",
+      "official_gazette_url": "https://www.marmelopolis.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Martinho Campos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Martins Soares",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mata Verde",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Materlândia",
+      "official_gazette_url": "https://www.materlandia.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Mateus Leme",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mathias Lobato",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Matias Barbosa",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Matias Cardoso",
+      "official_gazette_url": "https://www.matiascardoso.mg.gov.br/atos-oficiais/"
+    },
+    {
+      "name": "Matipó",
+      "official_gazette_url": "https://www.matipo.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Mato Verde",
+      "official_gazette_url": "https://www.matoverde.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Matozinhos",
+      "official_gazette_url": "https://www.matozinhos.mg.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Matutina",
+      "official_gazette_url": "https://transparencia-hd.com.br"
+    },
+    {
+      "name": "Medeiros",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Medina",
+      "official_gazette_url": "https://www.medina.mg.gov.br/diarios-oficiais"
+    },
+    {
+      "name": "Mendes Pimentel",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mercês",
+      "official_gazette_url": "https://www.merces.mg.gov.br/"
+    },
+    {
+      "name": "Mesquita",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Minas Novas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Minduri",
+      "official_gazette_url": "http://www.minduri.mg.gov.br/v1/"
+    },
+    {
+      "name": "Mirabela",
+      "official_gazette_url": "https://mirabela.mg.gov.br/legislacao/"
+    },
+    {
+      "name": "Miradouro",
+      "official_gazette_url": "https://www.miradouro.mg.gov.br/transparencia/diario-oficial/"
+    },
+    {
+      "name": "Miraí",
+      "official_gazette_url": "https://www.mirai.mg.gov.br/"
+    },
+    {
+      "name": "Miravânia",
+      "official_gazette_url": "https://miravania.mg.gov.br/"
+    },
+    {
+      "name": "Moeda",
+      "official_gazette_url": "https://moeda.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Moema",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Monjolos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Monsenhor Paulo",
+      "official_gazette_url": "https://www.monsenhorpaulo.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Montalvânia",
+      "official_gazette_url": "https://www.montalvania.mg.gov.br/otrabalhocontinua/index.php"
+    },
+    {
+      "name": "Monte Alegre de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Monte Azul",
+      "official_gazette_url": "https://monteazul.mg.gov.br/publicacoes-de-relatorios-contabeis-2021-2022"
+    },
+    {
+      "name": "Monte Belo",
+      "official_gazette_url": "https://montebelo.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Monte Carmelo",
+      "official_gazette_url": "https://www.montecarmelo.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Monte Formoso",
+      "official_gazette_url": "https://www.monteformoso.mg.gov.br/transparencia"
+    },
+    {
+      "name": "Monte Santo de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Monte Sião",
+      "official_gazette_url": "https://www.montesiao.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Montes Claros",
+      "official_gazette_url": "https://www.montesclaros.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Montezuma",
+      "official_gazette_url": "https://www.montezuma.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Morada Nova de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Morro da Garça",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Morro do Pilar",
+      "official_gazette_url": "https://morrodopilar.mg.gov.br/servicos/publicacoes/"
+    },
+    {
+      "name": "Munhoz",
+      "official_gazette_url": "https://www.munhoz.mg.gov.br/diario_oficial"
+    },
+    {
+      "name": "Muriaé",
+      "official_gazette_url": "https://www.muriae.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Mutum",
+      "official_gazette_url": "https://mutum.mg.gov.br/publicacoes-de-extratos-de-contratos-dos-processo-administrativo-n-o-143-2024-pregao-eletronico-n-o-040-2024-e-processo-administrativo-n-o-018-2025-pregao-eletronico-n-o-010-2025/"
+    },
+    {
+      "name": "Muzambinho",
+      "official_gazette_url": "https://www.muzambinho.mg.gov.br/pagina-nao-encontrada"
+    },
+    {
+      "name": "Nacip Raydan",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nanuque",
+      "official_gazette_url": "https://www.nanuque.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Naque",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Natalândia",
+      "official_gazette_url": "https://www.natalandia.mg.gov.br/"
+    },
+    {
+      "name": "Natércia",
+      "official_gazette_url": "https://natercia.mg.gov.br/doar-e-um-ato-de-compaixao/"
+    },
+    {
+      "name": "Nazareno",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nepomuceno",
+      "official_gazette_url": "https://www.nepomuceno.mg.gov.br/portal/publicacoes/"
+    },
+    {
+      "name": "Ninheira",
+      "official_gazette_url": "https://www.ninheira.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Nova Belém",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Era",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Lima",
+      "official_gazette_url": "https://www.novalima.mg.gov.br/"
+    },
+    {
+      "name": "Nova Módica",
+      "official_gazette_url": "https://www.novamodica.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Nova Ponte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Porteirinha",
+      "official_gazette_url": "https://www.novaporteirinha.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Nova Resende",
+      "official_gazette_url": "https://www.novaresende.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Serrana",
+      "official_gazette_url": "https://www.novaserrana.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Nova União",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Novo Cruzeiro",
+      "official_gazette_url": "https://www.novocruzeiro.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Novo Oriente de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Novorizonte",
+      "official_gazette_url": "https://novorizonte.mg.gov.br/pagina-nao-encontrada"
+    },
+    {
+      "name": "Olaria",
+      "official_gazette_url": "https://www.olaria.mg.gov.br/wp-content/uploads/2017/08/transparencia.jpg"
+    },
+    {
+      "name": "Olhos-d'Água",
+      "official_gazette_url": "https://www.olhosdagua.mg.gov.br/publicacoes"
+    },
+    {
+      "name": "Olímpio Noronha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Oliveira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Oliveira Fortes",
+      "official_gazette_url": "https://oliveirafortes.mg.gov.br/servicos/publicacoes/"
+    },
+    {
+      "name": "Onça de Pitangui",
+      "official_gazette_url": "https://www.oncadopitangui.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Oratórios",
+      "official_gazette_url": "https://www.oratorios.mg.gov.br/"
+    },
+    {
+      "name": "Orizânia",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Ouro Branco",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Ouro Fino",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ouro Preto",
+      "official_gazette_url": "https://www.ouropreto.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Ouro Verde de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Padre Carvalho",
+      "official_gazette_url": "https://www.padrecarvalho.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Padre Paraíso",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Pai Pedro",
+      "official_gazette_url": "https://www.paipedro.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Paineiras",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Pains",
+      "official_gazette_url": "https://pains.mg.gov.br/"
+    },
+    {
+      "name": "Paiva",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Palma",
+      "official_gazette_url": "https://www.palma.mg.gov.br/"
+    },
+    {
+      "name": "Palmópolis",
+      "official_gazette_url": "https://www.palmopolis.mg.gov.br/diario"
+    },
+    {
+      "name": "Papagaios",
+      "official_gazette_url": "https://www.papagaios.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Pará de Minas",
+      "official_gazette_url": "https://parademinas.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Paracatu",
+      "official_gazette_url": "https://www.paracatu.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Paraguaçu",
+      "official_gazette_url": "https://paraguacu.mg.gov.br/site/"
+    },
+    {
+      "name": "Paraisópolis",
+      "official_gazette_url": "https://www.paraisopolis.mg.gov.br/2021/01/doacao-de-materiais-e-alimentos-para-as-familias-atingidas-pelas-chuvas/"
+    },
+    {
+      "name": "Paraopeba",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Passa Quatro",
+      "official_gazette_url": "https://www.passaquatro.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Passa Tempo",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Passa-Vinte",
+      "official_gazette_url": "https://www.passavinte.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Passabém",
+      "official_gazette_url": "https://www.passabem.mg.gov.br/transparencia"
+    },
+    {
+      "name": "Passos",
+      "official_gazette_url": "https://www.passos.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Patis",
+      "official_gazette_url": "https://www.patis.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Patos de Minas",
+      "official_gazette_url": "https://www.patosdeminas.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Patrocínio",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amm-mg/pesquisar"
+    },
+    {
+      "name": "Patrocínio do Muriaé",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paula Cândido",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paulistas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pavão",
+      "official_gazette_url": "https://pavao.mg.gov.br/diario_oficial/"
+    },
+    {
+      "name": "Peçanha",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Pedra Azul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pedra Bonita",
+      "official_gazette_url": "https://transparencia.caratinga.mg.gov.br/transparencia"
+    },
+    {
+      "name": "Pedra do Anta",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pedra do Indaiá",
+      "official_gazette_url": "https://www.pedradoindaia.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Pedra Dourada",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pedralva",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pedras de Maria da Cruz",
+      "official_gazette_url": "https://www.pedrasdemariadacruz.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Pedrinópolis",
+      "official_gazette_url": "https://www.pedrinopolis.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Pedro Leopoldo",
+      "official_gazette_url": "https://www.pedroleopoldo.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Pedro Teixeira",
+      "official_gazette_url": "https://www.pedroteixeira.mg.gov.br/atos-oficiais-dos-conselhos-municipais/"
+    },
+    {
+      "name": "Pequeri",
+      "official_gazette_url": "https://www.pequeri.mg.gov.br/site/"
+    },
+    {
+      "name": "Pequi",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Perdigão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Perdizes",
+      "official_gazette_url": "https://www.perdizes.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Perdões",
+      "official_gazette_url": "https://www.perdoes.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Periquito",
+      "official_gazette_url": "https://www.periquito.mg.gov.br/"
+    },
+    {
+      "name": "Pescador",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Piau",
+      "official_gazette_url": "https://www.piau.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Piedade de Caratinga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Piedade de Ponte Nova",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Piedade do Rio Grande",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Piedade dos Gerais",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pimenta",
+      "official_gazette_url": "https://inovarteinfo.com.br/diariooficial/cliente/index.php?p=1"
+    },
+    {
+      "name": "Pingo-d'Água",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Pintópolis",
+      "official_gazette_url": "https://pintopolis.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Piracema",
+      "official_gazette_url": "https://www.piracema.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Pirajuba",
+      "official_gazette_url": "https://www.pirajuba.mg.gov.br/transparencia"
+    },
+    {
+      "name": "Piranga",
+      "official_gazette_url": "https://www.piranga.mg.gov.br/"
+    },
+    {
+      "name": "Piranguçu",
+      "official_gazette_url": "https://www.pirangucu.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Piranguinho",
+      "official_gazette_url": "https://www.piranguinho.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Pirapetinga",
+      "official_gazette_url": "https://www.pirapetinga.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Pirapora",
+      "official_gazette_url": "https://www.pirapora.mg.gov.br/transparencia-pirapora/"
+    },
+    {
+      "name": "Piraúba",
+      "official_gazette_url": "https://www.pirauba.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Pitangui",
+      "official_gazette_url": "https://www.pitangui.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Piumhi",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Planura",
+      "official_gazette_url": "https://planura.mg.gov.br/donos-de-animais-soltos-no-buritis-sao-notificados-pela-secretaria-de-agricultura-e-meio-ambiente-e-policia-militar-de-planura/"
+    },
+    {
+      "name": "Poço Fundo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Poços de Caldas",
+      "official_gazette_url": "https://pocosdecaldas.mg.gov.br/glossario/diario-oficial/"
+    },
+    {
+      "name": "Pocrane",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Pompéu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ponte Nova",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Ponto Chique",
+      "official_gazette_url": "https://www.pontochique.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ponto dos Volantes",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Porteirinha",
+      "official_gazette_url": "https://www.porteirinha.mg.gov.br/"
+    },
+    {
+      "name": "Porto Firme",
+      "official_gazette_url": "https://www.portofirme.mg.gov.br/legislacao"
+    },
+    {
+      "name": "Poté",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pouso Alegre",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pouso Alto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Prados",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Prata",
+      "official_gazette_url": "https://prata.mg.gov.br/nao-encontrado/"
+    },
+    {
+      "name": "Pratápolis",
+      "official_gazette_url": "https://pratapolis.mg.gov.br/"
+    },
+    {
+      "name": "Pratinha",
+      "official_gazette_url": "http://www.pratinha.mg.gov.br/"
+    },
+    {
+      "name": "Presidente Bernardes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Presidente Juscelino",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Presidente Kubitschek",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Presidente Olegário",
+      "official_gazette_url": "https://www.presidenteolegario.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Prudente de Morais",
+      "official_gazette_url": "https://www.prudentedemorais.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Quartel Geral",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Queluzito",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Raposos",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Raul Soares",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Recreio",
+      "official_gazette_url": "https://www.recreio.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Reduto",
+      "official_gazette_url": "https://www.reduto.mg.gov.br/"
+    },
+    {
+      "name": "Resende Costa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Resplendor",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Ressaquinha",
+      "official_gazette_url": "https://diariooficial.ressaquinha.mg.gov.br/"
+    },
+    {
+      "name": "Riachinho",
+      "official_gazette_url": "https://www.riachinho.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Riacho dos Machados",
+      "official_gazette_url": "https://riachodosmachados.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Ribeirão das Neves",
+      "official_gazette_url": "https://ribeiraodasneves.mg.gov.br/legislacao-e-comunicados/"
+    },
+    {
+      "name": "Ribeirão Vermelho",
+      "official_gazette_url": "https://ribeiraovermelho.mg.gov.br/diario-oficial-eletronico/"
+    },
+    {
+      "name": "Rio Acima",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio Casca",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio do Prado",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio Doce",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio Espera",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio Manso",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Rio Novo",
+      "official_gazette_url": "https://rionovo.mg.gov.br/wp-content/uploads/2021/11/legislacao.png"
+    },
+    {
+      "name": "Rio Paranaíba",
+      "official_gazette_url": "https://rioparanaiba.mg.gov.br/legislacao-municipal/"
+    },
+    {
+      "name": "Rio Pardo de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio Piracicaba",
+      "official_gazette_url": "https://www.riopiracicaba.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Rio Pomba",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Rio Preto",
+      "official_gazette_url": "https://www.riopreto.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Rio Vermelho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ritápolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rochedo de Minas",
+      "official_gazette_url": "https://www.rochedodeminas.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Rodeiro",
+      "official_gazette_url": "https://www.rodeiro.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Romaria",
+      "official_gazette_url": "https://romaria.mg.gov.br/"
+    },
+    {
+      "name": "Rosário da Limeira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rubelita",
+      "official_gazette_url": "https://www.rubelita.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Rubim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sabará",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sabinópolis",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Sacramento",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Salinas",
+      "official_gazette_url": "https://www.salinas.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Salto da Divisa",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Santa Bárbara",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Bárbara do Leste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Bárbara do Monte Verde",
+      "official_gazette_url": "https://www.santabarbaradomonteverde.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Santa Bárbara do Tugúrio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Cruz de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Cruz de Salinas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Cruz do Escalvado",
+      "official_gazette_url": "https://www.santacruzdoescalvado.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Santa Efigênia de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Fé de Minas",
+      "official_gazette_url": "https://www.santafedeminas.mg.gov.br/cgi-sys/suspendedpage.cgi"
+    },
+    {
+      "name": "Santa Helena de Minas",
+      "official_gazette_url": "https://santahelenademinas.mg.gov.br/legislacao/"
+    },
+    {
+      "name": "Santa Juliana",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Luzia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Margarida",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Santa Maria de Itabira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Maria do Salto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Maria do Suaçuí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Rita de Caldas",
+      "official_gazette_url": "https://santaritadecaldas.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Santa Rita de Ibitipoca",
+      "official_gazette_url": "https://santaritadeibitipoca.mg.gov.br/wp-content/uploads/2017/10/transparencia.jpg"
+    },
+    {
+      "name": "Santa Rita de Jacutinga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Rita de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Rita do Itueto",
+      "official_gazette_url": "https://santaritadoitueto.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Santa Rita do Sapucaí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Rosa da Serra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Vitória",
+      "official_gazette_url": "https://santavitoria.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Santana da Vargem",
+      "official_gazette_url": "https://www.santanadavargem.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Santana de Cataguases",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Santana de Pirapama",
+      "official_gazette_url": "https://www.santanadepirapama.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Santana do Deserto",
+      "official_gazette_url": "https://santanadodeserto.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Santana do Garambéu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santana do Jacaré",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santana do Manhuaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santana do Paraíso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santana do Riacho",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Santana dos Montes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio do Amparo",
+      "official_gazette_url": "https://santoantoniodoamparo.mg.gov.br/transparencia-saude/"
+    },
+    {
+      "name": "Santo Antônio do Aventureiro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio do Grama",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio do Itambé",
+      "official_gazette_url": "https://www.santoantoniodoitambe.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Santo Antônio do Jacinto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio do Monte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio do Retiro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio do Rio Abaixo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Hipólito",
+      "official_gazette_url": "https://santohipolito.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santos Dumont",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Bento Abade",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Brás do Suaçuí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Domingos das Dores",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "São Domingos do Prata",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "São Félix de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Francisco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Francisco de Paula",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Francisco de Sales",
+      "official_gazette_url": "https://www.saofranciscodesales.mg.gov.br/transparencia"
+    },
+    {
+      "name": "São Francisco do Glória",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "São Geraldo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Geraldo da Piedade",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Geraldo do Baixio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Gonçalo do Abaeté",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Gonçalo do Pará",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "São Gonçalo do Rio Abaixo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Gonçalo do Rio Preto",
+      "official_gazette_url": "https://saogoncalodoriopreto.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "São Gonçalo do Sapucaí",
+      "official_gazette_url": "https://saogoncalodosapucai.mg.gov.br/site/"
+    },
+    {
+      "name": "São Gotardo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João Batista do Glória",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João da Lagoa",
+      "official_gazette_url": "https://saojoaodalagoa.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "São João da Mata",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João da Ponte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João das Missões",
+      "official_gazette_url": "https://saojoaodasmissoes.mg.gov.br"
+    },
+    {
+      "name": "São João del Rei",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João do Manhuaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João do Manteninha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João do Oriente",
+      "official_gazette_url": "https://www.saojoaodooriente.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "São João do Pacuí",
+      "official_gazette_url": "https://www.saojoaodopacui.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "São João do Paraíso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João Evangelista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João Nepomuceno",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Joaquim de Bicas",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "São José da Barra",
+      "official_gazette_url": "https://www.saojosedabarra.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "São José da Lapa",
+      "official_gazette_url": "https://www.saojosedalapa.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "São José da Safira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José da Varginha",
+      "official_gazette_url": "https://www.saojosedavarginha.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "São José do Alegre",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José do Divino",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José do Goiabal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José do Jacuri",
+      "official_gazette_url": "https://www.saojosedojacuri.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "São José do Mantimento",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Lourenço",
+      "official_gazette_url": "https://www.saolourenco.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São Miguel do Anta",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Pedro da União",
+      "official_gazette_url": "https://www.saopedrodauniao.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São Pedro do Suaçuí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Pedro dos Ferros",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Romão",
+      "official_gazette_url": "https://www.saoromao.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "São Roque de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Sebastião da Bela Vista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Sebastião da Vargem Alegre",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Sebastião do Anta",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Sebastião do Maranhão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Sebastião do Oeste",
+      "official_gazette_url": "https://www.saosebastiaodooeste.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "São Sebastião do Paraíso",
+      "official_gazette_url": "https://www.ssparaiso.mg.gov.br/ops/404"
+    },
+    {
+      "name": "São Sebastião do Rio Preto",
+      "official_gazette_url": "https://www.saosebastiaodoriopreto.mg.gov.br/transparencia"
+    },
+    {
+      "name": "São Sebastião do Rio Verde",
+      "official_gazette_url": "https://www.saosebastiaodorioverde.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São Thomé das Letras",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Tiago",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Tomás de Aquino",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Vicente de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sapucaí-Mirim",
+      "official_gazette_url": "https://www.sapucaimirim.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Sardoá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sarzedo",
+      "official_gazette_url": "https://sarzedo.mg.gov.br/downloads/"
+    },
+    {
+      "name": "Sem-Peixe",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Senador Amaral",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Senador Cortes",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Senador Firmino",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Senador José Bento",
+      "official_gazette_url": "https://senadorjosebento.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Senador Modestino Gonçalves",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Senhora de Oliveira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Senhora do Porto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Senhora dos Remédios",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sericita",
+      "official_gazette_url": "https://www.sericita.mg.gov.br/"
+    },
+    {
+      "name": "Seritinga",
+      "official_gazette_url": "https://www.seritinga.mg.gov.br/"
+    },
+    {
+      "name": "Serra Azul de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Serra da Saudade",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Serra do Salitre",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Serra dos Aimorés",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Serrania",
+      "official_gazette_url": "https://www.serrania.mg.gov.br/pagina-nao-encontrada"
+    },
+    {
+      "name": "Serranópolis de Minas",
+      "official_gazette_url": "https://www.serranopolisdeminas.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Serranos",
+      "official_gazette_url": "https://serranos.mg.gov.br/diario-oficial-eletronico/"
+    },
+    {
+      "name": "Serro",
+      "official_gazette_url": "https://www.serro.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Sete Lagoas",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Setubinha",
+      "official_gazette_url": "https://setubinha.mg.gov.br/legislacao/"
+    },
+    {
+      "name": "Silveirânia",
+      "official_gazette_url": "https://silveirania.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Silvianópolis",
+      "official_gazette_url": "https://www.silvianopolis.mg.gov.br/"
+    },
+    {
+      "name": "Simão Pereira",
+      "official_gazette_url": "https://www.simaopereira.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Simonésia",
+      "official_gazette_url": "https://www.simonesia.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Sobrália",
+      "official_gazette_url": "https://www.sobralia.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Soledade de Minas",
+      "official_gazette_url": "https://www.soledadedeminas.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Tabuleiro",
+      "official_gazette_url": "http://tabuleiro.mg.gov.br/oficial/"
+    },
+    {
+      "name": "Taiobeiras",
+      "official_gazette_url": "https://www.taiobeiras.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Taparuba",
+      "official_gazette_url": "https://taparuba.mg.gov.br/publicacoes/"
+    },
+    {
+      "name": "Tapira",
+      "official_gazette_url": "https://www.tapira.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Tapiraí",
+      "official_gazette_url": "https://www.tapirai.mg.gov.br/publicacoes-oficiais/"
+    },
+    {
+      "name": "Taquaraçu de Minas",
+      "official_gazette_url": "https://www.taquaracudeminas.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Tarumirim",
+      "official_gazette_url": "https://www.tarumirim.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Teixeiras",
+      "official_gazette_url": "https://teixeiras.mg.gov.br/servicos/diario-oficial/"
+    },
+    {
+      "name": "Teófilo Otoni",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Timóteo",
+      "official_gazette_url": "https://transparencia.betha.cloud/#/6m9_x1sRV0e9uiLPuMmC1Q==/diario-oficial"
+    },
+    {
+      "name": "Tiradentes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tiros",
+      "official_gazette_url": "https://www.tiros.mg.gov.br/diariooficial/"
+    },
+    {
+      "name": "Tocantins",
+      "official_gazette_url": "https://www.tocantins.mg.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Tocos do Moji",
+      "official_gazette_url": "https://tocosdomoji.mg.gov.br/legislacao-municipal/"
+    },
+    {
+      "name": "Toledo",
+      "official_gazette_url": "http://toledo.mg.gov.br/Opps/"
+    },
+    {
+      "name": "Tombos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Três Corações",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Três Marias",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Três Pontas",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Tumiritinga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tupaciguara",
+      "official_gazette_url": "https://www.tupaciguara.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Turmalina",
+      "official_gazette_url": "https://www.turmalina.mg.gov.br/diarios-oficiais"
+    },
+    {
+      "name": "Turvolândia",
+      "official_gazette_url": "https://www.turvolandia.mg.gov.br/"
+    },
+    {
+      "name": "Ubá",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Ubaí",
+      "official_gazette_url": "https://ubai.mg.gov.br/domingo-tambem-e-dia-de-copinha/"
+    },
+    {
+      "name": "Ubaporanga",
+      "official_gazette_url": "https://www.ubaporanga.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Uberaba",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/uberaba"
+    },
+    {
+      "name": "Uberlândia",
+      "official_gazette_url": "https://www.uberlandia.mg.gov.br/?post_type=diariooficial"
+    },
+    {
+      "name": "Umburatiba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Unaí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "União de Minas",
+      "official_gazette_url": "https://www.uniaodeminas.mg.gov.br/transparencia"
+    },
+    {
+      "name": "Uruana de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Urucânia",
+      "official_gazette_url": "https://www.urucania.mg.gov.br/"
+    },
+    {
+      "name": "Urucuia",
+      "official_gazette_url": "https://www.urucuia.mg.gov.br/"
+    },
+    {
+      "name": "Vargem Alegre",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Vargem Bonita",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Vargem Grande do Rio Pardo",
+      "official_gazette_url": "https://vargemgrandedoriopardo.mg.gov.br/transparencia/"
+    },
+    {
+      "name": "Varginha",
+      "official_gazette_url": "https://www.varginha.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Varjão de Minas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Várzea da Palma",
+      "official_gazette_url": "https://www.varzeadapalma.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Varzelândia",
+      "official_gazette_url": "https://www.varzelandia.mg.gov.br/legislacao/"
+    },
+    {
+      "name": "Vazante",
+      "official_gazette_url": "https://www.vazante.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Verdelândia",
+      "official_gazette_url": "https://www.verdelandia.mg.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Veredinha",
+      "official_gazette_url": "https://veredinha.mg.gov.br/diario-oficial-eletronico/"
+    },
+    {
+      "name": "Veríssimo",
+      "official_gazette_url": "https://www.verissimo.mg.gov.br/"
+    },
+    {
+      "name": "Vermelho Novo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Vespasiano",
+      "official_gazette_url": "https://www.vespasiano.mg.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Viçosa",
+      "official_gazette_url": "https://www.google.com"
+    },
+    {
+      "name": "Vieiras",
+      "official_gazette_url": "https://www.vieiras.mg.gov.br/"
+    },
+    {
+      "name": "Virgem da Lapa",
+      "official_gazette_url": "https://www.virgemdalapa.mg.gov.br/diario-oficial"
+    },
+    {
+      "name": "Virgínia",
+      "official_gazette_url": "https://www.virginia.mg.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Virginópolis",
+      "official_gazette_url": "https://www.virginopolis.mg.gov.br/diarios-oficiais"
+    },
+    {
+      "name": "Virgolândia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Visconde do Rio Branco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Volta Grande",
+      "official_gazette_url": "https://voltagrande.mg.gov.br/atos-oficiais/"
+    },
+    {
+      "name": "Wenceslau Braz",
+      "official_gazette_url": "https://www.wenceslaubraz.mg.gov.br/portal/diario-oficial"
+    }
+  ]
+}

@@ -1,0 +1,1187 @@
+{
+  "successful": [
+    {
+      "spiderId": "ac_acrelandia",
+      "territoryId": "1200013",
+      "gazetteCount": 8,
+      "ocrResults": [
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_assis_brasil",
+      "territoryId": "1200054",
+      "gazetteCount": 12,
+      "ocrResults": [
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_brasileia",
+      "territoryId": "1200104",
+      "gazetteCount": 8,
+      "ocrResults": [
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_bujari",
+      "territoryId": "1200138",
+      "gazetteCount": 11,
+      "ocrResults": [
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_capixaba",
+      "territoryId": "1200179",
+      "gazetteCount": 11,
+      "ocrResults": [
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_cruzeiro_do_sul",
+      "territoryId": "1200203",
+      "gazetteCount": 16,
+      "ocrResults": [
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_epitaciolandia",
+      "territoryId": "1200252",
+      "gazetteCount": 8,
+      "ocrResults": [
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_feijo",
+      "territoryId": "1200302",
+      "gazetteCount": 8,
+      "ocrResults": [
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_jordao",
+      "territoryId": "1200328",
+      "gazetteCount": 8,
+      "ocrResults": [
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_mancio_lima",
+      "territoryId": "1200336",
+      "gazetteCount": 8,
+      "ocrResults": [
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_manoel_urbano",
+      "territoryId": "1200344",
+      "gazetteCount": 8,
+      "ocrResults": [
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_marechal_thaumaturgo",
+      "territoryId": "1200351",
+      "gazetteCount": 7,
+      "ocrResults": [
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_porto_acre",
+      "territoryId": "1200393",
+      "gazetteCount": 4,
+      "ocrResults": [
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_porto_walter",
+      "territoryId": "1200401",
+      "gazetteCount": 3,
+      "ocrResults": [
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_rio_branco",
+      "territoryId": "1200427",
+      "gazetteCount": 8,
+      "ocrResults": [
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_rodrigues_alves",
+      "territoryId": "1200435",
+      "gazetteCount": 3,
+      "ocrResults": [
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_santa_rosa_do_purus",
+      "territoryId": "1200450",
+      "gazetteCount": 3,
+      "ocrResults": [
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_sena_madureira",
+      "territoryId": "1200500",
+      "gazetteCount": 4,
+      "ocrResults": [
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_senador_guiomard",
+      "territoryId": "1200609",
+      "gazetteCount": 4,
+      "ocrResults": [
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "ac_xapuri",
+      "territoryId": "1200807",
+      "gazetteCount": 4,
+      "ocrResults": [
+        {
+          "id": "fbf8a4b2-aae4-46a1-979a-1ced034dbc09",
+          "gazetteId": "56ea41e6-d81b-410d-ad95-a6d9aea3aeda",
+          "textLength": 883426,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e737289b-5895-48de-9d08-730c02a88ac0",
+          "gazetteId": "f5050538-c2ef-41f6-b7be-82120d5b2b2d",
+          "textLength": 35845,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "352ebfd4-23e0-4440-9c40-246be9580807",
+          "gazetteId": "deeeba0a-001f-40e2-93d7-4830d70dc42f",
+          "textLength": 1944450,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9170e97d-f4dd-4c63-aeb4-f16ae8fbc1a2",
+          "gazetteId": "0fba8fb2-7b6e-4ca9-9334-d404a074af97",
+          "textLength": 1620398,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    }
+  ],
+  "failed": [],
+  "noResults": [
+    {
+      "spiderId": "ac_placido_de_castro",
+      "territoryId": "1200385",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "ac_tarauaca",
+      "territoryId": "1200708",
+      "reason": "No gazettes found in the specified period"
+    }
+  ],
+  "summary": {
+    "totalCities": 22,
+    "successful": 20,
+    "failed": 0,
+    "noResults": 2,
+    "executionTimeMs": 1487813,
+    "timedOut": true
+  }
+}

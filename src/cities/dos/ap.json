@@ -1,0 +1,69 @@
+{
+  "name": "Amapá",
+  "cities": [
+    {
+      "name": "Amapá",
+      "official_gazette_url": "https://www.amapa.ap.gov.br/diario-oficial"
+    },
+    {
+      "name": "Calçoene",
+      "official_gazette_url": "https://www.calcoene.ap.gov.br/404"
+    },
+    {
+      "name": "Cutias",
+      "official_gazette_url": "https://www.cutias.ap.gov.br/404"
+    },
+    {
+      "name": "Ferreira Gomes",
+      "official_gazette_url": "https://www.ferreiragomes.ap.gov.br/404"
+    },
+    {
+      "name": "Itaubal",
+      "official_gazette_url": "https://www.itaubal.ap.gov.br/diario-oficial"
+    },
+    {
+      "name": "Laranjal do Jari",
+      "official_gazette_url": "https://laranjaldojari.ap.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Macapá",
+      "official_gazette_url": "http://macapa.ap.gov.br/page/1"
+    },
+    {
+      "name": "Mazagão",
+      "official_gazette_url": "https://www.mazagao.ap.gov.br/404"
+    },
+    {
+      "name": "Oiapoque",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pedra Branca do Amapari",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Porto Grande",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pracuúba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santana",
+      "official_gazette_url": "https://www.santana.ap.gov.br/wp-admin/admin-ajax.php?action=datatables_endpoint"
+    },
+    {
+      "name": "Serra do Navio",
+      "official_gazette_url": "https://www.serradonavio.ap.gov.br/404"
+    },
+    {
+      "name": "Tartarugalzinho",
+      "official_gazette_url": "https://www.tartarugalzinho.ap.gov.br"
+    },
+    {
+      "name": "Vitória do Jari",
+      "official_gazette_url": "https://vitoriadojari.ap.gov.br/diario-oficial/"
+    }
+  ]
+}
