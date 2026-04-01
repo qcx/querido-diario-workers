@@ -1,0 +1,989 @@
+{
+  "name": "Goiás",
+  "cities": [
+    {
+      "name": "Abadia de Goiás",
+      "official_gazette_url": "https://abadiadegoias.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Abadiânia",
+      "official_gazette_url": "https://www.abadiania.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Acreúna",
+      "official_gazette_url": "https://acreuna.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Adelândia",
+      "official_gazette_url": "https://adelandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Água Fria de Goiás",
+      "official_gazette_url": "https://aguafriadegoias.go.gov.br"
+    },
+    {
+      "name": "Água Limpa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Águas Lindas de Goiás",
+      "official_gazette_url": "https://aguaslindasdegoias.go.gov.br/portal/diario-oficial-2/"
+    },
+    {
+      "name": "Alexânia",
+      "official_gazette_url": "https://alexania.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Aloândia",
+      "official_gazette_url": "https://aloandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Alto Horizonte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alto Paraíso de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alvorada do Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Amaralina",
+      "official_gazette_url": "https://www.amaralina.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Americano do Brasil",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Amorinópolis",
+      "official_gazette_url": "https://amorinopolis.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Anápolis",
+      "official_gazette_url": "https://www.anapolis.go.gov.br/portal/diario-oficial-3/"
+    },
+    {
+      "name": "Anhanguera",
+      "official_gazette_url": "https://anhanguera.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Anicuns",
+      "official_gazette_url": "https://anicuns.go.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Aparecida de Goiânia",
+      "official_gazette_url": "https://webio.aparecida.go.gov.br/api/diof/lista"
+    },
+    {
+      "name": "Aparecida do Rio Doce",
+      "official_gazette_url": "https://aparecidadoriodoce.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Aporé",
+      "official_gazette_url": "https://www.apore.go.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Araçu",
+      "official_gazette_url": "https://aracu.go.gov.br"
+    },
+    {
+      "name": "Aragarças",
+      "official_gazette_url": "https://aragarcas.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Aragoiânia",
+      "official_gazette_url": "https://aragoiania.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Araguapaz",
+      "official_gazette_url": "https://araguapaz.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Arenópolis",
+      "official_gazette_url": "https://arenopolis.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Aruanã",
+      "official_gazette_url": "https://www.aruana.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Aurilândia",
+      "official_gazette_url": "https://aurilandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Avelinópolis",
+      "official_gazette_url": "https://www.avelinopolis.go.gov.br/legislacao/"
+    },
+    {
+      "name": "Baliza",
+      "official_gazette_url": "https://baliza.go.gov.br"
+    },
+    {
+      "name": "Barro Alto",
+      "official_gazette_url": "https://www.barroalto.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Bela Vista de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Jardim de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Jesus de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bonfinópolis",
+      "official_gazette_url": "https://www.bonfinopolis.go.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Bonópolis",
+      "official_gazette_url": "https://www.bonopolis.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Brazabrantes",
+      "official_gazette_url": "https://brazabrantes.go.gov.br/"
+    },
+    {
+      "name": "Britânia",
+      "official_gazette_url": "https://www.britania.go.gov.br/diario-oficial-estado-de-goias-novo-decreto-estadual-no-9-875/"
+    },
+    {
+      "name": "Buriti Alegre",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Buriti de Goiás",
+      "official_gazette_url": "https://buritidegoias.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Buritinópolis",
+      "official_gazette_url": "https://www.buritinopolis.go.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Cabeceiras",
+      "official_gazette_url": "https://cabeceiras.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Cachoeira Alta",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cachoeira de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cachoeira Dourada",
+      "official_gazette_url": "https://cachoeiradourada.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Caçu",
+      "official_gazette_url": "https://www.cacu.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Caiapônia",
+      "official_gazette_url": "https://caiaponia.go.gov.br/"
+    },
+    {
+      "name": "Caldas Novas",
+      "official_gazette_url": "https://www.caldasnovas.go.gov.br/servico/diario-oficial/"
+    },
+    {
+      "name": "Caldazinha",
+      "official_gazette_url": "https://caldazinha.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Campestre de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campinaçu",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/agm/pesquisar?entidadeUsuaria=PREFEITURA+MUNICIPAL+DE+CAMPINA%C3%87U&titulo=&nome_orgao=&dataInicio=01%2F01%2F2019&dataFim=31%2F12%2F2019&Enviar=&_token=UqXPkzd7zzoYMUQkX3H72ZEE_-K03_5M0a_WV4VaUFU"
+    },
+    {
+      "name": "Campinorte",
+      "official_gazette_url": "https://campinorte.go.gov.br/"
+    },
+    {
+      "name": "Campo Alegre de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campos Limpo de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campos Belos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campos Verdes",
+      "official_gazette_url": "https://camposverdes.go.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Carmo do Rio Verde",
+      "official_gazette_url": "https://www.carmodorioverde.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Castelândia",
+      "official_gazette_url": "https://castelandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Catalão",
+      "official_gazette_url": "https://www.catalao.go.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Caturaí",
+      "official_gazette_url": "https://caturai.go.gov.br/diario-oficial-do-estado-publica-convenios-do-governo-estadual-com-a-prefeitura/"
+    },
+    {
+      "name": "Cavalcante",
+      "official_gazette_url": "https://cavalcante.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Ceres",
+      "official_gazette_url": "https://ceres.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Cezarina",
+      "official_gazette_url": "https://cezarina.go.gov.br/galeria/transparencia/"
+    },
+    {
+      "name": "Chapadão do Céu",
+      "official_gazette_url": "https://chapadaodoceu.go.gov.br/portal/diario-oficial/"
+    },
+    {
+      "name": "Cidade Ocidental",
+      "official_gazette_url": "https://cidadeocidental.go.gov.br/transparencia-site-anterior/diario-oficial/"
+    },
+    {
+      "name": "Cocalzinho de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Colinas do Sul",
+      "official_gazette_url": "https://colinasdosul.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Córrego do Ouro",
+      "official_gazette_url": "https://corregodoouro.go.gov.br"
+    },
+    {
+      "name": "Corumbá de Goiás",
+      "official_gazette_url": "https://corumbadegoias.go.gov.br/transparencia-em-acao-confira-como-foi-as-audiencias-publicas-sobre-a-ldo-e-a-prestacao-de-contas/"
+    },
+    {
+      "name": "Corumbaíba",
+      "official_gazette_url": "https://www.corumbaiba.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Cristalina",
+      "official_gazette_url": "https://cristalina.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Cristianópolis",
+      "official_gazette_url": "https://cristianopolis.go.gov.br/2021/10/13/dose-de-reforco/"
+    },
+    {
+      "name": "Crixás",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/fgm/o-que-e"
+    },
+    {
+      "name": "Cromínia",
+      "official_gazette_url": "https://crominia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Cumari",
+      "official_gazette_url": "https://cumari.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Damianópolis",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/agm/pesquisar"
+    },
+    {
+      "name": "Damolândia",
+      "official_gazette_url": "https://damolandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Davinópolis",
+      "official_gazette_url": "https://davinopolis.go.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Diorama",
+      "official_gazette_url": "https://diorama.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Divinópolis de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Doverlândia",
+      "official_gazette_url": "https://doverlandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Edealina",
+      "official_gazette_url": "https://edealina.go.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Edéia",
+      "official_gazette_url": "https://www.edeia.go.gov.br/404"
+    },
+    {
+      "name": "Estrela do Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Faina",
+      "official_gazette_url": "https://faina.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Fazenda Nova",
+      "official_gazette_url": "https://www.fazendanova.go.gov.br"
+    },
+    {
+      "name": "Firminópolis",
+      "official_gazette_url": "https://firminopolis.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Flores de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Formosa",
+      "official_gazette_url": "https://formosa.go.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Formoso",
+      "official_gazette_url": "https://www.formoso.go.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Gameleira de Goiás",
+      "official_gazette_url": "https://www.gameleiradegoias.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Goianápolis",
+      "official_gazette_url": "https://goianapolis.go.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Goiandira",
+      "official_gazette_url": "https://goiandira.go.gov.br/publicacoes/diario-oficial-do-estado-doe-diario-de-circulacao-local/"
+    },
+    {
+      "name": "Goianésia",
+      "official_gazette_url": "https://goianesia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Goiânia",
+      "official_gazette_url": "https://www.goiania.go.gov.br/sing_servicos/diario-oficial/"
+    },
+    {
+      "name": "Goianira",
+      "official_gazette_url": "https://goianira.go.gov.br/publicacoes/"
+    },
+    {
+      "name": "Goiás",
+      "official_gazette_url": "https://www.goias.go.gov.br/publicacoes/"
+    },
+    {
+      "name": "Goiatuba",
+      "official_gazette_url": "https://goiatuba.go.gov.br/portal/diario-oficial/"
+    },
+    {
+      "name": "Gouvelândia",
+      "official_gazette_url": "https://gouvelandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Guapó",
+      "official_gazette_url": "https://guapo.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Guaraíta",
+      "official_gazette_url": "https://www.guaraita.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Guarani de Goiás",
+      "official_gazette_url": "https://guaranidegoias.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Guarinos",
+      "official_gazette_url": "https://guarinos.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Heitoraí",
+      "official_gazette_url": "https://diariooficial.abc.go.gov.br/"
+    },
+    {
+      "name": "Hidrolândia",
+      "official_gazette_url": "https://www.hidrolandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Hidrolina",
+      "official_gazette_url": "https://hidrolina.go.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Iaciara",
+      "official_gazette_url": "https://iaciara.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Inaciolândia",
+      "official_gazette_url": "https://inaciolandia.go.gov.br/conselho-municipal-de-educacao/publicacoes-cme/"
+    },
+    {
+      "name": "Indiara",
+      "official_gazette_url": "https://indiara.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Inhumas",
+      "official_gazette_url": "https://inhumas.go.gov.br/publicacoes/"
+    },
+    {
+      "name": "Ipameri",
+      "official_gazette_url": "https://ipameri.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Ipiranga de Goiás",
+      "official_gazette_url": "https://ipirangadegoias.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Iporá",
+      "official_gazette_url": "https://ipora.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Israelândia",
+      "official_gazette_url": "https://israelandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Itaberaí",
+      "official_gazette_url": "https://itaberai.go.gov.br"
+    },
+    {
+      "name": "Itaguari",
+      "official_gazette_url": "https://itaguari.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Itaguaru",
+      "official_gazette_url": "https://itaguaru.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Itajá",
+      "official_gazette_url": "https://itaja.go.gov.br/portal/diario-oficial/"
+    },
+    {
+      "name": "Itapaci",
+      "official_gazette_url": "https://itapaci.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Itapirapuã",
+      "official_gazette_url": "https://itapirapua.go.gov.br/documentacao-de-avaliacao-e-inscricao-do-carnaval-de-itapirapua-2023/"
+    },
+    {
+      "name": "Itapuranga",
+      "official_gazette_url": "https://itapuranga.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Itarumã",
+      "official_gazette_url": "https://itaruma.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Itauçu",
+      "official_gazette_url": "https://itaucu.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Itumbiara",
+      "official_gazette_url": "https://itumbiara.go.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Ivolândia",
+      "official_gazette_url": "https://ivolandia.go.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Jandaia",
+      "official_gazette_url": "https://www.jandaia.go.gov.br/legislacao/"
+    },
+    {
+      "name": "Jaraguá",
+      "official_gazette_url": "https://jaragua.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Jataí",
+      "official_gazette_url": "https://www.jatai.go.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Jaupaci",
+      "official_gazette_url": "https://www.jaupaci.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Jesúpolis",
+      "official_gazette_url": "https://jesupolis.go.gov.br/video/doacao-de-cestas/"
+    },
+    {
+      "name": "Joviânia",
+      "official_gazette_url": "https://joviania.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Jussara",
+      "official_gazette_url": "https://jussara.go.gov.br/"
+    },
+    {
+      "name": "Lagoa Santa",
+      "official_gazette_url": "https://lagoasanta.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Leopoldo de Bulhões",
+      "official_gazette_url": "https://leopoldodebulhoes.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Luziânia",
+      "official_gazette_url": "https://www.luziania.go.gov.br/publicacoes-por-autores/"
+    },
+    {
+      "name": "Mairipotaba",
+      "official_gazette_url": "https://mairipotaba.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Mambaí",
+      "official_gazette_url": "https://mambai.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Mara Rosa",
+      "official_gazette_url": "https://mararosa.go.gov.br/legislacao/"
+    },
+    {
+      "name": "Marzagão",
+      "official_gazette_url": "https://marzagao.go.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Matrinchã",
+      "official_gazette_url": "https://www.matrincha.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Maurilândia",
+      "official_gazette_url": "https://maurilandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Mimoso de Goiás",
+      "official_gazette_url": "https://mimosodegoias.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Minaçu",
+      "official_gazette_url": "https://minacu.go.gov.br/portal/diario-oficial/"
+    },
+    {
+      "name": "Mineiros",
+      "official_gazette_url": "https://mineiros.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Moiporá",
+      "official_gazette_url": "https://moipora.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Monte Alegre de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Montes Claros de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Montividiu",
+      "official_gazette_url": "https://montividiu.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Montividiu do Norte",
+      "official_gazette_url": "https://montividiudonorte.go.gov.br/publicacoes/"
+    },
+    {
+      "name": "Morrinhos",
+      "official_gazette_url": "https://morrinhos.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Morro Agudo de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mossâmedes",
+      "official_gazette_url": "https://www.mossamedes.go.gov.br/legislacao/"
+    },
+    {
+      "name": "Mozarlândia",
+      "official_gazette_url": "https://mozarlandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Mundo Novo",
+      "official_gazette_url": "https://mundonovo.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Mutunópolis",
+      "official_gazette_url": "https://mutunopolis.go.gov.br/doacoes-para-bazar-beneficente/"
+    },
+    {
+      "name": "Nazário",
+      "official_gazette_url": "https://www.nazario.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Nerópolis",
+      "official_gazette_url": "https://neropolis.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Niquelândia",
+      "official_gazette_url": "https://niquelandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Nova América",
+      "official_gazette_url": "https://www.novaamerica.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Nova Aurora",
+      "official_gazette_url": "https://novaaurora.go.gov.br/transparencia-e-responsabilidade-confira-oficio-agehab/"
+    },
+    {
+      "name": "Nova Crixás",
+      "official_gazette_url": "https://novacrixas.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Nova Glória",
+      "official_gazette_url": "https://novagloria.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Nova Iguaçu de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Roma",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Veneza",
+      "official_gazette_url": "https://novaveneza.go.gov.br/legislacao/"
+    },
+    {
+      "name": "Novo Brasil",
+      "official_gazette_url": "https://www.novobrasil.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Novo Gama",
+      "official_gazette_url": "https://www.novogama.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Novo Planalto",
+      "official_gazette_url": "https://novoplanalto.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Orizona",
+      "official_gazette_url": "https://orizona.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Ouro Verde de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ouvidor",
+      "official_gazette_url": "https://www.ouvidor.go.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Padre Bernardo",
+      "official_gazette_url": "https://padrebernardo.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Palestina de Goiás",
+      "official_gazette_url": "https://palestinadegoias.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Palmeiras de Goiás",
+      "official_gazette_url": "https://palmeirasdegoias.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Palmelo",
+      "official_gazette_url": "https://www.palmelo.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Palminópolis",
+      "official_gazette_url": "https://palminopolis.go.gov.br/publicacoes/"
+    },
+    {
+      "name": "Panamá",
+      "official_gazette_url": "https://panama.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Paranaiguara",
+      "official_gazette_url": "https://paranaiguara.go.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Paraúna",
+      "official_gazette_url": "https://www.parauna.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Perolândia",
+      "official_gazette_url": "https://perolandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Petrolina de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pilar de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Piracanjuba",
+      "official_gazette_url": "https://piracanjuba.go.gov.br/"
+    },
+    {
+      "name": "Piranhas",
+      "official_gazette_url": "https://piranhas.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Pirenópolis",
+      "official_gazette_url": "https://pirenopolis.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Pires do Rio",
+      "official_gazette_url": "https://piresdorio.go.gov.br/aviso/publicacoes-locacao-ao-aviso-de-pregao-eletronico-008-2026-fme/"
+    },
+    {
+      "name": "Planaltina",
+      "official_gazette_url": "https://planaltina.go.gov.br"
+    },
+    {
+      "name": "Pontalina",
+      "official_gazette_url": "https://pontalina.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Porangatu",
+      "official_gazette_url": "https://porangatu.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Porteirão",
+      "official_gazette_url": "https://www.porteirao.go.gov.br"
+    },
+    {
+      "name": "Portelândia",
+      "official_gazette_url": "https://portelandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Posse",
+      "official_gazette_url": "https://posse.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Professor Jamil",
+      "official_gazette_url": "https://professorjamil.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Quirinópolis",
+      "official_gazette_url": "https://quirinopolis.go.gov.br"
+    },
+    {
+      "name": "Rialma",
+      "official_gazette_url": "https://rialma.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Rianápolis",
+      "official_gazette_url": "https://rianapolis.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Rio Quente",
+      "official_gazette_url": "https://rioquente.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Rio Verde",
+      "official_gazette_url": "https://www.rioverde.go.gov.br/widget/transparencia/"
+    },
+    {
+      "name": "Rubiataba",
+      "official_gazette_url": "https://rubiataba.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Sanclerlândia",
+      "official_gazette_url": "https://sanclerlandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Santa Bárbara de Goiás",
+      "official_gazette_url": "https://santabarbaradegoias.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Santa Cruz de Goiás",
+      "official_gazette_url": "https://santacruzdegoias.go.gov.br/legislacao/"
+    },
+    {
+      "name": "Santa Fé de Goiás",
+      "official_gazette_url": "https://santafedegoias.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Santa Helena de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Isabel",
+      "official_gazette_url": "https://santaisabel.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Santa Rita do Araguaia",
+      "official_gazette_url": "https://santaritadoaraguaia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Santa Rita do Novo Destino",
+      "official_gazette_url": "https://www.santaritadonovodestino.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Santa Rosa de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Tereza de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Terezinha de Goiás",
+      "official_gazette_url": "https://www.santaterezinhadegoias.go.gov.br"
+    },
+    {
+      "name": "Santo Antônio da Barra",
+      "official_gazette_url": "https://santoantoniodabarra.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Santo Antônio de Goiás",
+      "official_gazette_url": "https://santoantoniodegoias.go.gov.br"
+    },
+    {
+      "name": "Santo Antônio do Descoberto",
+      "official_gazette_url": "https://santoantoniododescoberto.go.gov.br/diario-oficial/"
+    },
+    {
+      "name": "São Domingos",
+      "official_gazette_url": "https://saodomingos.go.gov.br/transparencia/"
+    },
+    {
+      "name": "São Francisco de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João d'Aliança",
+      "official_gazette_url": "https://www.saojoaodalianca.go.gov.br/transparencia/"
+    },
+    {
+      "name": "São João da Paraúna",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Luís de Montes Belos",
+      "official_gazette_url": "https://saoluisdemontesbelos.go.gov.br/transparencia/"
+    },
+    {
+      "name": "São Luíz do Norte",
+      "official_gazette_url": "https://saoluizdonorte.go.gov.br/transparencia/"
+    },
+    {
+      "name": "São Miguel do Araguaia",
+      "official_gazette_url": "https://saomigueldoaraguaia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "São Miguel do Passa Quatro",
+      "official_gazette_url": "https://saomigueldopassaquatro.go.gov.br/transparencia/"
+    },
+    {
+      "name": "São Patrício",
+      "official_gazette_url": "https://saopatricio.go.gov.br/transparencia/"
+    },
+    {
+      "name": "São Simão",
+      "official_gazette_url": "https://saosimao.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Senador Canedo",
+      "official_gazette_url": "https://senadorcanedo.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Serranópolis",
+      "official_gazette_url": "https://www.serranopolis.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Silvânia",
+      "official_gazette_url": "https://silvania.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Simolândia",
+      "official_gazette_url": "https://simolandia.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Sítio d'Abadia",
+      "official_gazette_url": "https://www.sitiodabadia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Taquaral de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Teresina de Goiás",
+      "official_gazette_url": "https://www.teresinadegoias.go.gov.br"
+    },
+    {
+      "name": "Terezópolis de Goiás",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Três Ranchos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Trindade",
+      "official_gazette_url": "https://trindade.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Trombas",
+      "official_gazette_url": "https://www.trombas.go.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Turvânia",
+      "official_gazette_url": "https://turvania.go.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Turvelândia",
+      "official_gazette_url": "https://turvelandia.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Uirapuru",
+      "official_gazette_url": "https://uirapuru.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Uruaçu",
+      "official_gazette_url": "https://uruacu.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Uruana",
+      "official_gazette_url": "https://uruana.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Urutaí",
+      "official_gazette_url": "https://urutai.go.gov.br/"
+    },
+    {
+      "name": "Valparaíso de Goiás",
+      "official_gazette_url": "https://valparaisodegoias.go.gov.br/portal/diario-oficial/"
+    },
+    {
+      "name": "Varjão",
+      "official_gazette_url": "https://varjao.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Vianópolis",
+      "official_gazette_url": "https://vianopolis.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Vicentinópolis",
+      "official_gazette_url": "https://vicentinopolis.go.gov.br/transparencia/"
+    },
+    {
+      "name": "Vila Boa",
+      "official_gazette_url": "https://www.vilaboa.go.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Vila Propício",
+      "official_gazette_url": "https://vilapropicio.go.gov.br/transparencia/"
+    }
+  ]
+}

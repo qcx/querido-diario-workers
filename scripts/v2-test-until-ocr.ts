@@ -16,8 +16,57 @@ import { eq, and, gte, lte, like, sql } from 'drizzle-orm';
 import * as schema from '../src/services/database/schema';
 import Database from 'better-sqlite3';
 import type { D1Database } from '@cloudflare/workers-types';
-import { existsSync, readFileSync } from 'fs';
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'fs';
 import { join } from 'path';
+
+// ============================================================================
+// V2 CONFIG RESOLUTION
+// ============================================================================
+
+interface V2TerritoryConfig {
+  id: string;
+  name: string;
+  territoryId: string;
+  stateCode: string;
+  active: boolean;
+  spiders: Array<{ spiderType: string; [key: string]: any }>;
+}
+
+function loadV2ConfigMap(): Map<string, string> {
+  const configDir = join(process.cwd(), 'src', 'spiders', 'v2', 'configs');
+  const map = new Map<string, string>();
+
+  if (!existsSync(configDir)) {
+    console.warn(`⚠️  V2 config directory not found: ${configDir}`);
+    return map;
+  }
+
+  const files = readdirSync(configDir).filter(f => f.endsWith('.json'));
+
+  for (const file of files) {
+    try {
+      const content = readFileSync(join(configDir, file), 'utf8');
+      const territories: V2TerritoryConfig[] = JSON.parse(content);
+      for (const territory of territories) {
+        map.set(territory.id, territory.territoryId);
+      }
+    } catch {
+      // skip malformed files
+    }
+  }
+
+  return map;
+}
+
+const v2ConfigMap = loadV2ConfigMap();
+
+function resolveCityConfig(cityId: string): CityConfig {
+  const territoryId = v2ConfigMap.get(cityId);
+  if (territoryId) {
+    return { spiderId: cityId, territoryId };
+  }
+  return { spiderId: cityId, territoryId: cityId };
+}
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -107,9 +156,9 @@ interface CityStatus {
 // ============================================================================
 
 const DEFAULT_CITIES: CityConfig[] = [
-  { spiderId: 'sp_3550308', territoryId: 'sp_3550308' }, // São Paulo
-  { spiderId: 'rj_3304557', territoryId: 'rj_3304557' }, // Rio de Janeiro
-  { spiderId: 'mg_3106200', territoryId: 'mg_3106200' }, // Belo Horizonte
+  resolveCityConfig('sp_3550308'), // São Paulo
+  resolveCityConfig('rj_3304557'), // Rio de Janeiro
+  resolveCityConfig('mg_3106200'), // Belo Horizonte
 ];
 
 const CONFIG = {
@@ -247,7 +296,7 @@ function createD1Adapter(sqliteDb: Database.Database): D1Database {
             },
             raw: () => {
               try {
-                return bound.raw() as unknown[][];
+                return bound.raw(true).all() as unknown[][];
               } catch (err: any) {
                 throw err;
               }
@@ -270,7 +319,7 @@ function createD1Adapter(sqliteDb: Database.Database): D1Database {
           }
         },
         all: <T = unknown>() => ({ results: stmt.all() as T[] }),
-        raw: () => stmt.raw() as unknown[][],
+        raw: () => stmt.raw(true).all() as unknown[][],
       };
       return preparedStatement;
     },
@@ -415,7 +464,7 @@ async function checkCityStatus(
       )
       .where(
         and(
-          eq(schema.gazetteCrawls.spiderId, spiderId),
+          like(schema.gazetteCrawls.spiderId, `${spiderId}%`),
           eq(schema.gazetteCrawls.territoryId, territoryId),
           gte(schema.gazetteRegistry.publicationDate, startDate),
           lte(schema.gazetteRegistry.publicationDate, endDate)
@@ -730,11 +779,8 @@ function displayResults(result: TestResult): void {
  * Save results to JSON file
  */
 function saveResults(result: TestResult, filename: string): void {
-  const fs = require('fs');
-  const path = require('path');
-  
-  const outputPath = path.join(process.cwd(), filename);
-  fs.writeFileSync(outputPath, JSON.stringify(result, null, 2));
+  const outputPath = join(process.cwd(), filename);
+  writeFileSync(outputPath, JSON.stringify(result, null, 2));
   
   log.success(`Results saved to ${outputPath}`);
 }
@@ -750,12 +796,18 @@ function parseArgs(): {
   cities: CityConfig[];
   timeout: number;
   outputFile?: string;
+  apiUrl?: string;
+  dbPath?: string;
+  days?: number;
   help: boolean;
 } {
   const args = process.argv.slice(2);
   let cities = DEFAULT_CITIES;
   let timeout = CONFIG.timeout;
   let outputFile: string | undefined;
+  let apiUrl: string | undefined;
+  let dbPath: string | undefined;
+  let days: number | undefined;
   let help = false;
 
   for (let i = 0; i < args.length; i++) {
@@ -764,10 +816,7 @@ function parseArgs(): {
     switch (arg) {
       case '--cities':
         const cityIds = args[++i].split(',');
-        cities = cityIds.map(id => ({
-          spiderId: id.trim(),
-          territoryId: id.trim(),
-        }));
+        cities = cityIds.map(id => resolveCityConfig(id.trim()));
         break;
 
       case '--timeout':
@@ -778,6 +827,18 @@ function parseArgs(): {
         outputFile = args[++i];
         break;
 
+      case '--api-url':
+        apiUrl = args[++i];
+        break;
+
+      case '--db-path':
+        dbPath = args[++i];
+        break;
+
+      case '--days':
+        days = parseInt(args[++i]);
+        break;
+
       case '--help':
       case '-h':
         help = true;
@@ -785,7 +846,7 @@ function parseArgs(): {
     }
   }
 
-  return { cities, timeout, outputFile, help };
+  return { cities, timeout, outputFile, apiUrl, dbPath, days, help };
 }
 
 /**
@@ -796,23 +857,34 @@ function showHelp(): void {
 🧪 V2 SPIDER TESTING SCRIPT
 
 Tests the complete v2 spider crawl → OCR pipeline for specified cities.
+City IDs (e.g. ac_acrelandia) are automatically resolved to their IBGE
+territory IDs from the v2 config files in src/spiders/v2/configs/.
 
 USAGE:
   npx tsx scripts/v2-test-until-ocr.ts [OPTIONS]
 
 OPTIONS:
   --cities <ids>        Comma-separated list of city IDs (default: ${DEFAULT_CITIES.map(c => c.spiderId).join(',')})
+  --api-url <url>       API endpoint URL (default: http://localhost:8787)
+  --db-path <path>      Path to local SQLite database file (default: from .dev.vars)
+  --days <n>            Number of days to check (default: 10)
   --timeout <minutes>   Timeout in minutes (default: 15)
   --output <file>       Save results to JSON file (default: display only)
   --help, -h           Show this help message
 
 ENVIRONMENT VARIABLES:
-  API_URL              API endpoint URL (default: http://localhost:8787)
-  DATABASE_URL         Database connection URL (required)
+  API_URL              API endpoint URL (overridden by --api-url)
+  LOCAL_DB_PATH        Path to local SQLite database file (overridden by --db-path)
 
 EXAMPLES:
   # Test default cities
   npx tsx scripts/v2-test-until-ocr.ts
+
+  # Test AC cities against local dev server
+  npx tsx scripts/v2-test-until-ocr.ts --cities ac_acrelandia,ac_rio_branco --api-url http://localhost:8787
+
+  # Test with explicit DB path and last 5 days
+  npx tsx scripts/v2-test-until-ocr.ts --cities ac_rio_branco --db-path .wrangler/state/v3/d1/miniflare-D1DatabaseObject/abc123.sqlite --days 5
 
   # Test specific cities with custom timeout
   npx tsx scripts/v2-test-until-ocr.ts --cities sp_3550308,rj_3304557 --timeout 20
@@ -821,7 +893,7 @@ EXAMPLES:
   npx tsx scripts/v2-test-until-ocr.ts --output test-results.json
 
   # Test against production
-  API_URL=https://worker.example.com npx tsx scripts/v2-test-until-ocr.ts
+  npx tsx scripts/v2-test-until-ocr.ts --api-url https://worker.example.com
 `);
 }
 
@@ -833,7 +905,17 @@ async function main(): Promise<void> {
   const startTime = Date.now();
 
   // Parse arguments
-  const { cities, timeout, outputFile, help } = parseArgs();
+  const { cities, timeout, outputFile, apiUrl, dbPath, days, help } = parseArgs();
+
+  if (apiUrl) {
+    CONFIG.apiUrl = apiUrl;
+  }
+  if (dbPath) {
+    CONFIG.localDbPath = dbPath;
+  }
+  if (days) {
+    CONFIG.daysToCheck = days;
+  }
 
   if (help) {
     showHelp();
@@ -847,6 +929,13 @@ async function main(): Promise<void> {
   log.info(`API URL: ${CONFIG.apiUrl}`);
   log.info(`Cities to test: ${cities.length}`);
   log.info(`Timeout: ${formatDuration(timeout)}`);
+  log.info('');
+
+  log.info('Resolved city configurations:');
+  for (const city of cities) {
+    const resolved = city.spiderId !== city.territoryId ? `→ territory ${city.territoryId}` : '(no v2 config found, using as-is)';
+    log.info(`  ${city.spiderId} ${resolved}`);
+  }
   log.info('');
 
   try {

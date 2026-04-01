@@ -1,0 +1,149 @@
+{
+  "name": "Distrito Federal",
+  "cities": [
+    {
+      "name": "Águas Claras",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Arniqueira",
+      "official_gazette_url": "https://www.arniqueira.df.gov.br/"
+    },
+    {
+      "name": "Brasília",
+      "official_gazette_url": "https://dodf.df.gov.br/"
+    },
+    {
+      "name": "Brazlândia",
+      "official_gazette_url": "https://www.brazlandia.df.gov.br/"
+    },
+    {
+      "name": "Candangolândia",
+      "official_gazette_url": "https://www.candangolandia.df.gov.br/"
+    },
+    {
+      "name": "Ceilândia",
+      "official_gazette_url": "https://www.ceilandia.df.gov.br/"
+    },
+    {
+      "name": "Cruzeiro",
+      "official_gazette_url": "https://www.cruzeiro.df.gov.br/"
+    },
+    {
+      "name": "Estrutural",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Fercal",
+      "official_gazette_url": "https://www.fercal.df.gov.br/"
+    },
+    {
+      "name": "Gama",
+      "official_gazette_url": "https://www.gama.df.gov.br/"
+    },
+    {
+      "name": "Guará",
+      "official_gazette_url": "https://www.guara.df.gov.br/"
+    },
+    {
+      "name": "Itapoã",
+      "official_gazette_url": "https://www.itapoa.df.gov.br/"
+    },
+    {
+      "name": "Jardim Botânico",
+      "official_gazette_url": "https://www.jardimbotanico.df.gov.br/pesquisa/publicacoes-jbb/"
+    },
+    {
+      "name": "Lago Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lago Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Núcleo Bandeirante",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Octogonal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paranoá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Park Way",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Planaltina",
+      "official_gazette_url": "https://www.planaltina.df.gov.br/"
+    },
+    {
+      "name": "Plano Piloto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pôr do Sol",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Recanto das Emas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Riacho Fundo II",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Riacho Fundo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Samambaia",
+      "official_gazette_url": "https://www.samambaia.df.gov.br/"
+    },
+    {
+      "name": "Santa Maria",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Sebastião",
+      "official_gazette_url": null
+    },
+    {
+      "name": "SIA",
+      "official_gazette_url": "https://www.sia.df.gov.br/"
+    },
+    {
+      "name": "Sobradinho II",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sobradinho",
+      "official_gazette_url": "https://www.sobradinho.df.gov.br/"
+    },
+    {
+      "name": "Sol Nascente",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sudoeste",
+      "official_gazette_url": "https://www.sudoeste.df.gov.br/"
+    },
+    {
+      "name": "Taguatinga",
+      "official_gazette_url": "https://www.taguatinga.df.gov.br/"
+    },
+    {
+      "name": "Varjão",
+      "official_gazette_url": "https://www.varjao.df.gov.br/"
+    },
+    {
+      "name": "Vicente Pires",
+      "official_gazette_url": "https://www.vicentepires.df.gov.br/legislacao"
+    }
+  ]
+}

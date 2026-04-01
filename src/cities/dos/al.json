@@ -1,0 +1,569 @@
+{
+  "name": "Alagoas", // also have a state level: http://diario.imprensaoficial.al.gov.br/
+  "cities": [
+    {
+      "name": "Água Branca",
+      "official_gazette_url": "https://portal.aguabranca.al.gov.br/publicacoes-oficiais/PO"
+    },
+    {
+      "name": "Água Branca",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Anadia",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Arapiraca",
+      "official_gazette_url": "https://arapiraca.publicabrasil.net/"
+    },
+    {
+      "name": "Arapiraca",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Atalaia",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Barra de Santo Antônio",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Barra de São Miguel",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Batalha",
+      "official_gazette_url":  "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Belém",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Belo Monte",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Boca da Mata",
+      "official_gazette_url": "https://www.bocadamata.al.gov.br/portaltransparencia/?servico=cidadao/diariooficial"
+    },
+    {
+      "name": "Boca da Mata",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Branquinha",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Cacimbinhas",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Cajueiro",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Campestre",
+      "official_gazette_url": "https://diario.campestre.al.gov.br/"
+    },
+    {
+      "name": "Campestre",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Campo Alegre",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Campo Grande",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Canapi",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Capela",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Carneiros",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Chã Preta",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Coité do Nóia",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Colônia Leopoldina",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Coqueiro Seco",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Coruripe",
+      "official_gazette_url": "https://diario.coruripe.al.gov.br/"
+    },
+    {
+      "name": "Coruripe",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Craíbas",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Delmiro Gouveia",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Dois Riachos",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Estrela de Alagoas",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Feira Grande",
+      "official_gazette_url": "https://portal.feiragrande.al.gov.br/publicacoes-oficiais"
+    },
+    {
+      "name": "Feira Grande",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Feliz Deserto",
+      "official_gazette_url": "https://municipioonline.com.br/al/prefeitura/felizdeserto/cidadao/diariooficial"
+    },
+    {
+      "name": "Feliz Deserto",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Flexeiras",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Girau do Ponciano",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Ibateguara",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Igaci",
+      "official_gazette_url": "https://diario.igaci.al.gov.br"
+    },
+    {
+      "name": "Igaci",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Igreja Nova",
+      "official_gazette_url":  "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Inhapi",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Jacaré dos Homens",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Jacuípe",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Japaratinga",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Jaramataia",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Jequiá da Praia",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Joaquim Gomes",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Joaquim Gomes",
+      "official_gazette_url": "https://diario.joaquimgomes.al.gov.br/"
+    },
+    {
+      "name": "Jundiá",
+      "official_gazette_url": "https://www.jundia.al.gov.br/diario-municipalx"
+    },
+    {
+      "name": "Jundiá",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Junqueiro",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Junqueiro",
+      "official_gazette_url": "https://www.municipioonline.com.br/al/prefeitura/junqueiro/cidadao/diariooficialr"
+    },
+    {
+      "name": "Lagoa da Canoa",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Lagoa da Canoa",
+      "official_gazette_url": "hhttps://municipioonline.com.br/al/prefeitura/lagoadacanoa/cidadao/diariooficial"
+    },
+    {
+      "name": "Limoeiro de Anadia",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Maceió",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/maceio/pesquisar"
+    },
+    {
+      "name": "Major Isidoro",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Mar Vermelho",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Maragogi",
+      "official_gazette_url": "https://diario.maragogi.al.gov.br/"
+    },
+    {
+      "name": "Maragogi",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Maravilha",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Marechal Deodoro",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Maribondo",
+      "official_gazette_url":  "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Mata Grande",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Matriz de Camaragibe",
+      "official_gazette_url":  "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Matriz de Camaragibe",
+      "official_gazette_url":  "https://www.matrizdecamaragibe.al.gov.br/concursos"
+    },
+    {
+      "name": "Messias",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Minador do Negrão",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Monteirópolis",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Murici",
+      "official_gazette_url": "https://diario.murici.al.gov.br"
+    },
+    {
+      "name": "Murici",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Novo Lino",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Novo Lino",
+      "official_gazette_url": "https://novolino.cr2.site/portal-da-transparencia/concursos-e-pss/"
+    },
+    {
+      "name": "Olho d'Água das Flores",
+      "official_gazette_url":  "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Olho d'Água do Casado",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Olho d'Água do Casado",
+      "official_gazette_url": "https://municipioonline.com.br/al/prefeitura/olhodaguadocasado/cidadao/diariooficial"
+    },
+    {
+      "name": "Olho d'Água Grande",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Olivença",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Ouro Branco",
+      "official_gazette_url": "https://portal.ourobranco.al.gov.br/publicacoes-oficiais"
+    },
+    {
+      "name": "Ouro Branco",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Palestina",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/"
+    },
+    {
+      "name": "Palmeira dos Índios",
+      "official_gazette_url": "https://sai.io.org.br/al/palmeiradosindios/site/DiarioOficial"
+    },
+    {
+      "name": "Palmeira dos Índios",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Pão de Açúcar",
+      "official_gazette_url": "https://diario.paodeacucar.al.gov.br/"
+    },
+    {
+      "name": "Pão de Açúcar",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Pariconha",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Paripueira",
+      "official_gazette_url": "https://app.kalana.com.br/?c=35561471000153&r=diariooficial&u=0000"
+    },
+    {
+      "name": "Paripueira",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Passo de Camaragibe",
+      "official_gazette_url": "https://www.municipioonline.com.br/al/autarquia/passodecamaragibe/cidadao/diariooficial"
+    },
+    {
+      "name": "Passo de Camaragibe",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Paulo Jacinto",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Paulo Jacinto",
+      "official_gazette_url": "https://www.municipioonline.com.br/al/prefeitura/paulojacinto/cidadao/diariooficial"
+    },
+    {
+      "name": "Penedo",
+      "official_gazette_url": "https://sai.io.org.br/al/penedo/Site/DiarioOficial"
+    },
+    {
+      "name": "Penedo",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Piaçabuçu",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Piaçabuçu",
+      "official_gazette_url": "https://municipioonline.com.br/al/prefeitura/piacabucu/cidadao/diariooficial"
+    },
+    {
+      "name": "Pilar",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Pindoba",
+      "official_gazette_url": "https://diario.pindoba.al.gov.br/"
+    },
+    {
+      "name": "Pindoba",
+      "official_gazette_url": "https://diario.pindoba.al.gov.br/"
+    },
+    {
+      "name": "Piranhas",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Poço das Trincheiras",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Porto Calvo",
+      "official_gazette_url": "https://portocalvo.al.gov.br/transparencia/index.php?route=editais"
+    },
+    {
+      "name": "Porto Calvo",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Porto de Pedras",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Porto Real do Colégio",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Quebrangulo",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Quebrangulo",
+      "official_gazette_url": "https://municipioonline.com.br/al/prefeitura/quebrangulo/cidadao/diariooficial"
+    },
+    {
+      "name": "Rio Largo",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Rio Largo",
+      "official_gazette_url": "https://municipioonline.com.br/al/prefeitura/riolargo/cidadao/diariooficial"
+    },
+    {
+      "name": "Roteiro",
+      "official_gazette_url": "https://roteiro.al.gov.br/transparencia/_view/_demostrativos/diario_oficial.php"
+    },
+    {
+      "name": "Roteiro",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Santa Luzia do Norte",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Santana do Ipanema",
+      "official_gazette_url": "https://www.municipioonline.com.br/al/prefeitura/Santanadoipanema/cidadao/diariooficial"
+    },
+    {
+      "name": "Santana do Ipanema",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Santana do Mundaú",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "São Brás",
+      "official_gazette_url": "https://agportal.agapesistemas.com.br/DiarioOficial/?alias=pmsaobras"
+    },
+    {
+      "name": "São Brás",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "São José da Laje",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "São José da Tapera",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "São Luís do Quitunde",
+      "official_gazette_url": "https://www.municipioonline.com.br/al/prefeitura/saoluisdoquitunde/cidadao/diariooficial"
+    },
+    {
+      "name": "São Luís do Quitunde",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "São Luís do Quitunde",
+      "official_gazette_url": "https://saoluisdoquitunde.al.gov.br/portaltransparencia/?servico=cidadao/diariooficial"
+    },
+    {
+      "name": "São Miguel dos Campos",
+      "official_gazette_url": "https://www.municipioonline.com.br/al/prefeitura/saomigueldoscampos/cidadao/diariooficial"
+    },
+    {
+      "name": "São Miguel dos Campos",
+      "official_gazette_url": "https://kalana.com.br/mobiledados"
+    },
+    {
+      "name": "São Miguel dos Milagres",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "São Sebastião",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Satuba",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Senador Rui Palmeira",
+      "official_gazette_url": "https://municipioonline.com.br/al/prefeitura/senadorruipalmeira/cidadao/diariooficial"
+    },
+    {
+      "name": "Senador Rui Palmeira",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Tanque d'Arca",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Taquarana",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Teotônio Vilela",
+      "official_gazette_url": "https://www.municipioonline.com.br/al/prefeitura/teotoniovilela/cidadao/diariooficial"
+    },
+    {
+      "name": "Teotônio Vilela",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Traipu",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "União dos Palmares",
+      "official_gazette_url": "https://www.diariomunicipal-al.com.br/uniao/"
+    },
+    {
+      "name": "União dos Palmares",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Viçosa",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/ama/pesquisar"
+    },
+    {
+      "name": "Viçosa",
+      "official_gazette_url": "https://www.municipioonline.com.br/al/prefeitura/vicosa/cidadao/diariooficial"
+    }
+  ]
+}

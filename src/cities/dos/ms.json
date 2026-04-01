@@ -1,0 +1,313 @@
+{
+  "name": "Mato Grosso do Sul",
+  "cities": [
+    {
+      "name": "Água Clara",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alcinópolis",
+      "official_gazette_url": "https://alcinopolis.ms.gov.br/404.html"
+    },
+    {
+      "name": "Amambaí",
+      "official_gazette_url": "https://www.amambai.ms.gov.br/diario-oficial"
+    },
+    {
+      "name": "Anastácio",
+      "official_gazette_url": "https://www.anastacio.ms.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Anaurilândia",
+      "official_gazette_url": "https://www.publicacoesmunicipais.inf.br/transparencia/anaurilandia/diario-oficial"
+    },
+    {
+      "name": "Angélica",
+      "official_gazette_url": "https://www.diariooficialms.com.br/angelica"
+    },
+    {
+      "name": "Antônio João",
+      "official_gazette_url": "https://www.antoniojoao.ms.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Aparecida do Taboado",
+      "official_gazette_url": "https://www.aparecidadotaboado.ms.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Aquidauana",
+      "official_gazette_url": "https://aquidauana.ms.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Aral Moreira",
+      "official_gazette_url": "https://aralmoreira.ms.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Bandeirantes",
+      "official_gazette_url": "https://www.diariooficialms.com.br/bandeirantes"
+    },
+    {
+      "name": "Bataguassu",
+      "official_gazette_url": "https://www.bataguassu.ms.gov.br/linksuteis/diario-oficial/"
+    },
+    {
+      "name": "Bataiporã",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bela Vista",
+      "official_gazette_url": "https://www.belavista.ms.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Bodoquena",
+      "official_gazette_url": "https://diariooficialms.com.br/assomasul"
+    },
+    {
+      "name": "Bonito",
+      "official_gazette_url": "https://www.diariooficial.ms.gov.br/"
+    },
+    {
+      "name": "Brasilândia",
+      "official_gazette_url": "https://www.brasilandia.ms.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Caarapó",
+      "official_gazette_url": "https://www.caarapo.ms.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Camapuã",
+      "official_gazette_url": "https://camapua.ms.gov.br/arquivo/3938"
+    },
+    {
+      "name": "Campo Grande",
+      "official_gazette_url": "https://diogrande.campogrande.ms.gov.br/"
+    },
+    {
+      "name": "Caracol",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cassilândia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Chapadão do Sul",
+      "official_gazette_url": "https://www.chapadaodosul.ms.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Corguinho",
+      "official_gazette_url": "https://www.corguinho.ms.gov.br/diario-oficial"
+    },
+    {
+      "name": "Coronel Sapucaia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Corumbá",
+      "official_gazette_url": "https://do.corumba.ms.gov.br"
+    },
+    {
+      "name": "Costa Rica",
+      "official_gazette_url": "https://www.costarica.ms.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Coxim",
+      "official_gazette_url": "https://coxim.ms.gov.br/wp-content/uploads/2026/02/Diario-oficial.png"
+    },
+    {
+      "name": "Deodápolis",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/deodapolis"
+    },
+    {
+      "name": "Dois Irmãos do Buriti",
+      "official_gazette_url": "https://www.doisirmaosdoburiti.ms.gov.br/transparencia"
+    },
+    {
+      "name": "Douradina",
+      "official_gazette_url": "https://www.publicacoesmunicipais.inf.br/transparencia/douradina/diario-oficial"
+    },
+    {
+      "name": "Dourados",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Eldorado",
+      "official_gazette_url": "https://diariooficialms.com.br/assomasul"
+    },
+    {
+      "name": "Fátima do Sul",
+      "official_gazette_url": "https://www.fatimadosul.ms.gov.br/portal/diario-oficial/"
+    },
+    {
+      "name": "Glória de Dourados",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/gloria_de_dourados"
+    },
+    {
+      "name": "Guia Lopes da Laguna",
+      "official_gazette_url": "https://www.guialopesdalaguna.ms.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Iguatemi",
+      "official_gazette_url": "https://www.iguatemi.ms.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Inocência",
+      "official_gazette_url": "https://www.inocencia.ms.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Itaporã",
+      "official_gazette_url": "https://www.itapora.ms.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Itaquiraí",
+      "official_gazette_url": "https://diariooficialms.com.br/itaquirai"
+    },
+    {
+      "name": "Ivinhema",
+      "official_gazette_url": "https://www.ivinhema.ms.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Japorã",
+      "official_gazette_url": "https://diariooficialms.com.br/assomasul"
+    },
+    {
+      "name": "Jaraguari",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jardim",
+      "official_gazette_url": "https://www.jardim.ms.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Jateí",
+      "official_gazette_url": "https://www.jatei.ms.gov.br/transparencia/"
+    },
+    {
+      "name": "Juti",
+      "official_gazette_url": "https://www.juti.ms.gov.br/dois-onibus-do-transporte-escolar-sao-alvos-de-vandalismo-em-frente-ao-paco-municipal/"
+    },
+    {
+      "name": "Ladário",
+      "official_gazette_url": "https://www.ladario.ms.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Laguna Carapã",
+      "official_gazette_url": "https://www.lagunacarapa.ms.gov.br/publicacoes"
+    },
+    {
+      "name": "Maracaju",
+      "official_gazette_url": "https://www.maracaju.ms.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Miranda",
+      "official_gazette_url": "https://www.miranda.ms.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Mundo Novo",
+      "official_gazette_url": "https://www.mundonovo.ms.gov.br/transparencia/"
+    },
+    {
+      "name": "Naviraí",
+      "official_gazette_url": "https://diariooficialms.com.br/assomasul/"
+    },
+    {
+      "name": "Nioaque",
+      "official_gazette_url": "https://www.nioaque.ms.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Nova Alvorada do Sul",
+      "official_gazette_url": "https://www.novaalvoradadosul.ms.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Andradina",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Novo Horizonte do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paranaíba",
+      "official_gazette_url": "https://www.paranaiba.ms.gov.br/portal/wp-content/uploads/2022/08/diario-oficial.jpg"
+    },
+    {
+      "name": "Paranhos",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/paranhos"
+    },
+    {
+      "name": "Pedro Gomes",
+      "official_gazette_url": "https://www.pedrogomes.ms.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Ponta Porã",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Porto Murtinho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ribas do Rio Pardo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio Brilhante",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/rio_brilhante"
+    },
+    {
+      "name": "Rio Negro",
+      "official_gazette_url": "https://www.rionegro.ms.gov.br/publicacoes"
+    },
+    {
+      "name": "Rio Verde de Mato Grosso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rochedo",
+      "official_gazette_url": "https://www.rochedo.ms.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santa Rita do Pardo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Gabriel do Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Selvíria",
+      "official_gazette_url": "https://www.selviria.ms.gov.br/"
+    },
+    {
+      "name": "Sete Quedas",
+      "official_gazette_url": "https://www.setequedas.ms.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Sidrolândia",
+      "official_gazette_url": "https://diariooficialms.com.br/assomasul"
+    },
+    {
+      "name": "Sonora",
+      "official_gazette_url": "https://diariooficialms.com.br/assomasul"
+    },
+    {
+      "name": "Tacuru",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Taquarussu",
+      "official_gazette_url": "https://taquarussu.ms.gov.br/servico/diario-oficial/"
+    },
+    {
+      "name": "Terenos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Três Lagoas",
+      "official_gazette_url": "https://www.treslagoas.ms.gov.br/diario-oficial-da-uniao-publica-portaria-que-reconhece-situacao-de-emergencia-em-tres-lagoas/"
+    },
+    {
+      "name": "Vicentina",
+      "official_gazette_url": "https://do.vicentina.ms.gov.br"
+    }
+  ]
+}

@@ -1,0 +1,1601 @@
+{
+  "name": "Paraná",
+  "cities": [
+    {
+      "name": "Abatiá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Adrianópolis",
+      "official_gazette_url": "https://www.adrianopolis.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Agudos do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Almirante Tamandaré",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Altamira do Paraná",
+      "official_gazette_url": "https://www.altamiradoparana.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Alto Paraná",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alto Piquiri",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Altônia",
+      "official_gazette_url": "https://www.altonia.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Alvorada do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Amaporã",
+      "official_gazette_url": "https://www.amapora.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ampére",
+      "official_gazette_url": "https://www.ampere.pr.gov.br/"
+    },
+    {
+      "name": "Anahy",
+      "official_gazette_url": "https://anahy.atende.net/cidadao"
+    },
+    {
+      "name": "Andirá",
+      "official_gazette_url": "https://andira.pr.gov.br/servicos/diario-oficial"
+    },
+    {
+      "name": "Ângulo",
+      "official_gazette_url": "https://diario.angulo.pr.gov.br/"
+    },
+    {
+      "name": "Antonina",
+      "official_gazette_url": "https://www.antonina.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Antônio Olinto",
+      "official_gazette_url": "https://antonioolinto.pr.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Apucarana",
+      "official_gazette_url": "https://apucarana.atende.net/diariooficial"
+    },
+    {
+      "name": "Arapongas",
+      "official_gazette_url": "https://arapongas.atende.net/diariooficial"
+    },
+    {
+      "name": "Arapoti",
+      "official_gazette_url": "https://www.arapoti.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Arapuã",
+      "official_gazette_url": "https://arapua.pr.gov.br/"
+    },
+    {
+      "name": "Araruna",
+      "official_gazette_url": "https://www.araruna.pr.gov.br/"
+    },
+    {
+      "name": "Araucária",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ariranha do Ivaí",
+      "official_gazette_url": "https://www.ariranhadoivai.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Assaí",
+      "official_gazette_url": "https://www.assai.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Assis Chateaubriand",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Astorga",
+      "official_gazette_url": "https://www.astorga.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Atalaia",
+      "official_gazette_url": "https://diario.atalaia.pr.gov.br/"
+    },
+    {
+      "name": "Balsa Nova",
+      "official_gazette_url": "https://www.balsanova.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Bandeirantes",
+      "official_gazette_url": "https://www.bandeirantes.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Barbosa Ferraz",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Barra do Jacaré",
+      "official_gazette_url": "https://www.barradojacare.pr.gov.br/transparencia"
+    },
+    {
+      "name": "Barracão",
+      "official_gazette_url": "https://barracao.pr.gov.br/"
+    },
+    {
+      "name": "Bela Vista da Caroba",
+      "official_gazette_url": "https://www.belavistadacaroba.pr.gov.br/publicacoes"
+    },
+    {
+      "name": "Bela Vista do Paraíso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bituruna",
+      "official_gazette_url": "https://www.bituruna.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Boa Esperança",
+      "official_gazette_url": "https://boaesperanca.pr.gov.br/home/"
+    },
+    {
+      "name": "Boa Esperança do Iguaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Boa Ventura de São Roque",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Boa Vista da Aparecida",
+      "official_gazette_url": "https://www.boavistadaaparecida.pr.gov.br/transparencia"
+    },
+    {
+      "name": "Bocaiúva do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Jesus do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Sucesso",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Sucesso do Sul",
+      "official_gazette_url": "https://bomsucessodosul.pr.gov.br/wp-content/uploads/2023/09/Diario-Oficial.jpg"
+    },
+    {
+      "name": "Borrazópolis",
+      "official_gazette_url": "https://borrazopolis.pr.gov.br/servicos/diario-eletronico-do-municipio-de-borrazopolis/"
+    },
+    {
+      "name": "Braganey",
+      "official_gazette_url": "https://www.pmbraganey.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Brasilândia do Sul",
+      "official_gazette_url": "https://www.brasilandiadosul.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Cafeara",
+      "official_gazette_url": "https://www.cafeara.pr.gov.br/diario_oficial"
+    },
+    {
+      "name": "Cafelândia",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/cafelandia"
+    },
+    {
+      "name": "Cafezal do Sul",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/cafezal_do_sul"
+    },
+    {
+      "name": "Califórnia",
+      "official_gazette_url": "https://www.california.pr.gov.br/"
+    },
+    {
+      "name": "Cambará",
+      "official_gazette_url": "https://diario.cambara.pr.gov.br/"
+    },
+    {
+      "name": "Cambé",
+      "official_gazette_url": "https://www.cambe.pr.gov.br/"
+    },
+    {
+      "name": "Cambira",
+      "official_gazette_url": "https://www.cambira.pr.gov.br/diariooficial/"
+    },
+    {
+      "name": "Campina da Lagoa",
+      "official_gazette_url": "http://www.campinadalagoa.pr.gov.br/transparencia/"
+    },
+    {
+      "name": "Campina do Simão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campina Grande do Sul",
+      "official_gazette_url": "https://www.campinagrandedosul.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Campo Bonito",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campo do Tenente",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campo Largo",
+      "official_gazette_url": "https://campolargo.atende.net/diariooficial"
+    },
+    {
+      "name": "Campo Magro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campo Mourão",
+      "official_gazette_url": "https://campomourao.atende.net/diariooficial"
+    },
+    {
+      "name": "Cândido de Abreu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Candói",
+      "official_gazette_url": "https://portal.candoi.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cantagalo",
+      "official_gazette_url": "https://www.cantagalo.pr.gov.br/diario_oficial"
+    },
+    {
+      "name": "Capanema",
+      "official_gazette_url": "https://www.capanema.pr.gov.br/diariooficial"
+    },
+    {
+      "name": "Capitão Leônidas Marques",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Carambeí",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/carambei"
+    },
+    {
+      "name": "Carlópolis",
+      "official_gazette_url": "https://www.carlopolis.pr.gov.br/"
+    },
+    {
+      "name": "Cascavel",
+      "official_gazette_url": "https://prefa.cascavel.pr.gov.br/"
+    },
+    {
+      "name": "Castro",
+      "official_gazette_url": "https://castro.atende.net/diariooficial"
+    },
+    {
+      "name": "Catanduvas",
+      "official_gazette_url": "https://www.catanduvas.pr.gov.br/diario_oficial"
+    },
+    {
+      "name": "Centenário do Sul",
+      "official_gazette_url": "https://www.centenariodosul.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cerro Azul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Céu Azul",
+      "official_gazette_url": "https://www.ceuazul.pr.gov.br/transparencia"
+    },
+    {
+      "name": "Chopinzinho",
+      "official_gazette_url": "https://www.chopinzinho.pr.gov.br/diario_oficial"
+    },
+    {
+      "name": "Cianorte",
+      "official_gazette_url": "https://www.cianorte.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Cidade Gaúcha",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Clevelândia",
+      "official_gazette_url": "https://www.clevelandia.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Colombo",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/pesquisar"
+    },
+    {
+      "name": "Colorado",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/"
+    },
+    {
+      "name": "Congonhinhas",
+      "official_gazette_url": "https://congonhinhas.pr.gov.br/portal-da-transparencia/diario-oficial-do-municipio/"
+    },
+    {
+      "name": "Conselheiro Mairinck",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Contenda",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/pesquisar"
+    },
+    {
+      "name": "Corbélia",
+      "official_gazette_url": "https://corbelia.atende.net/diariooficial"
+    },
+    {
+      "name": "Cornélio Procópio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Coronel Domingos Soares",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Coronel Vivida",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Corumbataí do Sul",
+      "official_gazette_url": "https://www.corumbataidosul.pr.gov.br/transparencia"
+    },
+    {
+      "name": "Cruz Machado",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cruzeiro do Iguaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cruzeiro do Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cruzeiro do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cruzmaltina",
+      "official_gazette_url": "https://www.cruzmaltina.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Curitiba",
+      "official_gazette_url": "https://legisladocexterno.curitiba.pr.gov.br/DiarioConsultaExterna_Pesquisa.aspx"
+    },
+    {
+      "name": "Curiúva",
+      "official_gazette_url": "https://www.curiuva.pr.gov.br/"
+    },
+    {
+      "name": "Diamante d'Oeste",
+      "official_gazette_url": "https://diamantedoeste.pr.gov.br/publicacoes/"
+    },
+    {
+      "name": "Diamante do Norte",
+      "official_gazette_url": "https://www.diamantedonorte.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Diamante do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Dois Vizinhos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Douradina",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Doutor Camargo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Doutor Ulysses",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Enéas Marques",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Engenheiro Beltrão",
+      "official_gazette_url": "https://www.engenheirobeltrao.pr.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Entre Rios do Oeste",
+      "official_gazette_url": "https://www.entreriosdooeste.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Esperança Nova",
+      "official_gazette_url": "https://www.esperancanova.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Espigão Alto do Iguaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Farol",
+      "official_gazette_url": "https://www.farol.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Faxinal",
+      "official_gazette_url": "https://www.faxinal.pr.gov.br/diario_oficial"
+    },
+    {
+      "name": "Fazenda Rio Grande",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Fênix",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Fernandes Pinheiro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Figueira",
+      "official_gazette_url": "https://www.ingadigital.com.br/transparencia/?id_cliente=11996&sessao=b054603368d1b0"
+    },
+    {
+      "name": "Flor da Serra do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Floraí",
+      "official_gazette_url": "https://www.florai.pr.gov.br/"
+    },
+    {
+      "name": "Floresta",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Florestópolis",
+      "official_gazette_url": "https://www.florestopolis.pr.gov.br/"
+    },
+    {
+      "name": "Flórida",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Formosa do Oeste",
+      "official_gazette_url": "https://www.formosadooeste.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Foz do Iguaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Foz do Jordão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Francisco Alves",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Francisco Beltrão",
+      "official_gazette_url": "https://franciscobeltrao.pr.gov.br/diario-oficial-do-municipio/"
+    },
+    {
+      "name": "General Carneiro",
+      "official_gazette_url": "https://www.generalcarneiro.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Godoy Moreira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Goioerê",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Goioxim",
+      "official_gazette_url": "https://www.goioxim.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Grandes Rios",
+      "official_gazette_url": "https://www.grandesrios.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Guaíra",
+      "official_gazette_url": "https://www.guaira.pr.gov.br/login"
+    },
+    {
+      "name": "Guairaçá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Guamiranga",
+      "official_gazette_url": "https://www.guamiranga.pr.gov.br/"
+    },
+    {
+      "name": "Guapirama",
+      "official_gazette_url": "https://www.guapirama.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Guaporema",
+      "official_gazette_url": "https://www.guaporema.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Guaraci",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/pesquisar?busca_avancada%5BentidadeUsuaria%5D=7422"
+    },
+    {
+      "name": "Guaraniaçu",
+      "official_gazette_url": "https://guaraniacu.atende.net/diariooficial"
+    },
+    {
+      "name": "Guarapuava",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Guaraqueçaba",
+      "official_gazette_url": "https://diario.guaraquecaba.pr.gov.br/"
+    },
+    {
+      "name": "Guaratuba",
+      "official_gazette_url": "https://www.guaratuba.pr.gov.br/transparencia/"
+    },
+    {
+      "name": "Honório Serpa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ibaiti",
+      "official_gazette_url": "https://www.ibaiti.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ibema",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ibiporã",
+      "official_gazette_url": "https://diario.ibipora.pr.gov.br/"
+    },
+    {
+      "name": "Icaraíma",
+      "official_gazette_url": "https://www.icaraima.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Iguaraçu",
+      "official_gazette_url": "https://www.iguaracu.pr.gov.br/"
+    },
+    {
+      "name": "Iguatu",
+      "official_gazette_url": "https://www.iguatu.pr.gov.br/"
+    },
+    {
+      "name": "Imbaú",
+      "official_gazette_url": "https://www.imbau.pr.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Imbituva",
+      "official_gazette_url": "https://www.imbituva.pr.gov.br/"
+    },
+    {
+      "name": "Inácio Martins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Inajá",
+      "official_gazette_url": "https://www.inaja.pr.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Indianópolis",
+      "official_gazette_url": "https://www.indianopolis.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ipiranga",
+      "official_gazette_url": "https://doem.org.br/pr/ipiranga"
+    },
+    {
+      "name": "Iporã",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/pesquisar"
+    },
+    {
+      "name": "Iracema do Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Irati",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Iretama",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itaguajé",
+      "official_gazette_url": "https://www.itaguaje.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Itaipulândia",
+      "official_gazette_url": "https://www.itaipulandia.pr.gov.br/diario_oficial"
+    },
+    {
+      "name": "Itambaracá",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/pesquisar?busca_avancada%5B__paper%5D=1&busca_avancada%5BentidadeUsuaria%5D=16731"
+    },
+    {
+      "name": "Itambé",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/"
+    },
+    {
+      "name": "Itapejara d'Oeste",
+      "official_gazette_url": "https://www.itapejaradoeste.pr.gov.br/legislacao"
+    },
+    {
+      "name": "Itaperuçu",
+      "official_gazette_url": "https://itaperucu.pr.gov.br/publicacoes-oficiais/"
+    },
+    {
+      "name": "Itaúna do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ivaí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ivaiporã",
+      "official_gazette_url": "https://www.ivaipora.pr.gov.br/"
+    },
+    {
+      "name": "Ivaté",
+      "official_gazette_url": "https://www.ivate.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Ivatuba",
+      "official_gazette_url": "https://www.ivatuba.pr.gov.br/"
+    },
+    {
+      "name": "Jaboti",
+      "official_gazette_url": "http://www.jaboti.pr.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Jacarezinho",
+      "official_gazette_url": "https://www.jacarezinho.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Jaguapitã",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/pesquisar?entidadeUsuaria=Jaguapit%C3%A3&titulo=&nome_orgao=&dataInicio=01%2F01%2F2005&dataFim=31%2F12%2F2025&Enviar=&_token=4c_8XfMiXXc7yCi8iv0Ft3qNz_LAK-2NiQCjOm9pbj0"
+    },
+    {
+      "name": "Jaguariaíva",
+      "official_gazette_url": "https://www.jaguariaiva.pr.gov.br/index.php/diario-oficial#t3-mainbody"
+    },
+    {
+      "name": "Jandaia do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Janiópolis",
+      "official_gazette_url": "https://janiopolis.pr.gov.br/transparencia"
+    },
+    {
+      "name": "Japira",
+      "official_gazette_url": "https://www.japira.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Japurá",
+      "official_gazette_url": "https://www.japura.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Jardim Alegre",
+      "official_gazette_url": "https://www.jardimalegre.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Jardim Olinda",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jataizinho",
+      "official_gazette_url": "https://www.jataizinho.pr.gov.br/diariooficial/"
+    },
+    {
+      "name": "Jesuítas",
+      "official_gazette_url": "https://www.jesuitas.pr.gov.br/"
+    },
+    {
+      "name": "Joaquim Távora",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jundiaí do Sul",
+      "official_gazette_url": "https://www.jundiaidosul.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Juranda",
+      "official_gazette_url": "https://juranda.atende.net/diariooficial"
+    },
+    {
+      "name": "Jussara",
+      "official_gazette_url": "https://www.jussara.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Kaloré",
+      "official_gazette_url": "https://www.kalore.pr.gov.br/transparencia/"
+    },
+    {
+      "name": "Lapa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Laranjal",
+      "official_gazette_url": "https://www.laranjal.pr.gov.br/diario_oficial"
+    },
+    {
+      "name": "Laranjeiras do Sul",
+      "official_gazette_url": "https://www.laranjeirasdosul.pr.gov.br/transparencia/"
+    },
+    {
+      "name": "Leópolis",
+      "official_gazette_url": "http://www.leopolis.pr.gov.br/index.php?sessao=b054603368ixb0&id=1675"
+    },
+    {
+      "name": "Lidianópolis",
+      "official_gazette_url": "https://www.lidianopolis.pr.gov.br/diariooficial/"
+    },
+    {
+      "name": "Lindoeste",
+      "official_gazette_url": "https://www.lindoeste.pr.gov.br/"
+    },
+    {
+      "name": "Loanda",
+      "official_gazette_url": "https://www.loanda.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Lobato",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/pesquisar?fillgrid=true&municipio=&entidadeUsuaria=PREFEITURA+MUNICIPAL+DE+LOBATO&titulo=&nome_orgao=&dataInicio=&dataFim="
+    },
+    {
+      "name": "Londrina",
+      "official_gazette_url": "https://www2.londrina.pr.gov.br/jornaloficial"
+    },
+    {
+      "name": "Luiziana",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lunardelli",
+      "official_gazette_url": "http://lunardelli.pr.gov.br/transparencia/"
+    },
+    {
+      "name": "Lupionópolis",
+      "official_gazette_url": "https://www.lupionopolis.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Mallet",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mamborê",
+      "official_gazette_url": "https://mambore.atende.net/diariooficial"
+    },
+    {
+      "name": "Mandaguaçu",
+      "official_gazette_url": "https://www.mandaguacu.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Mandaguari",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/pesquisar?entidadeUsuaria=Mandaguari"
+    },
+    {
+      "name": "Mandirituba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Manfrinópolis",
+      "official_gazette_url": "https://www.manfrinopolis.pr.gov.br/"
+    },
+    {
+      "name": "Mangueirinha",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/"
+    },
+    {
+      "name": "Manoel Ribas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Marechal Cândido Rondon",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Maria Helena",
+      "official_gazette_url": "https://www.mariahelena.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Marialva",
+      "official_gazette_url": "http://www.ingadigital.com.br/transparencia/?id_cliente=1058&sessao=3e46ddce55d13e"
+    },
+    {
+      "name": "Marilândia do Sul",
+      "official_gazette_url": "https://plenussistemas.dioenet.com.br/list/marilandia-do-sul"
+    },
+    {
+      "name": "Marilena",
+      "official_gazette_url": "https://marilena.pr.gov.br/downloads/"
+    },
+    {
+      "name": "Mariluz",
+      "official_gazette_url": "https://www.mariluz.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Maringá",
+      "official_gazette_url": "https://venus.maringa.pr.gov.br/orgao_oficial/"
+    },
+    {
+      "name": "Mariópolis",
+      "official_gazette_url": "https://www.mariopolis.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Maripá",
+      "official_gazette_url": "https://maripa.atende.net/diariooficial"
+    },
+    {
+      "name": "Marmeleiro",
+      "official_gazette_url": "https://www.marmeleiro.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Marquinho",
+      "official_gazette_url": "https://portal.marquinho.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Marumbi",
+      "official_gazette_url": "https://diario.marumbi.pr.gov.br/"
+    },
+    {
+      "name": "Matelândia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Matinhos",
+      "official_gazette_url": "https://matinhos.pr.gov.br/transparencia"
+    },
+    {
+      "name": "Mato Rico",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mauá da Serra",
+      "official_gazette_url": "https://www.mauadaserra.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Medianeira",
+      "official_gazette_url": "https://www.medianeira.pr.gov.br/"
+    },
+    {
+      "name": "Mercedes",
+      "official_gazette_url": "https://mercedes.atende.net/diariooficial/edicao"
+    },
+    {
+      "name": "Mirador",
+      "official_gazette_url": "http://www.ingadigital.com.br/transparencia/?id_cliente=11945"
+    },
+    {
+      "name": "Miraselva",
+      "official_gazette_url": "https://www.miraselva.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Missal",
+      "official_gazette_url": "https://www.missal.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Moreira Sales",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Morretes",
+      "official_gazette_url": "https://www.morretes.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Munhoz de Melo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nossa Senhora das Graças",
+      "official_gazette_url": "http://www2.nossasenhoradasgracas.pr.gov.br/publicacoes"
+    },
+    {
+      "name": "Nova Aliança do Ivaí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova América da Colina",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Aurora",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Cantu",
+      "official_gazette_url": "https://www.novacantu.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Esperança",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Esperança do Sudoeste",
+      "official_gazette_url": "https://www.novaesperancadosudoeste.pr.gov.br/transparencia"
+    },
+    {
+      "name": "Nova Fátima",
+      "official_gazette_url": "https://www.novafatima.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Nova Laranjeiras",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Londrina",
+      "official_gazette_url": "https://www.novalondrina.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nova Olímpia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Prata do Iguaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Santa Bárbara",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Santa Rosa",
+      "official_gazette_url": "https://www.novasantarosa.pr.gov.br/publicacoes/pages/login.php"
+    },
+    {
+      "name": "Nova Tebas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Novo Itacolomi",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ortigueira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ourizona",
+      "official_gazette_url": "https://www.ourizona.pr.gov.br/"
+    },
+    {
+      "name": "Ouro Verde do Oeste",
+      "official_gazette_url": "https://ouroverdedooeste.atende.net/diariooficial"
+    },
+    {
+      "name": "Paiçandu",
+      "official_gazette_url": "https://www.paicandu.pr.gov.br/"
+    },
+    {
+      "name": "Palmas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Palmeira",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/pesquisar"
+    },
+    {
+      "name": "Palmital",
+      "official_gazette_url": "https://www.palmital.pr.gov.br/"
+    },
+    {
+      "name": "Palotina",
+      "official_gazette_url": "https://www.palotina.pr.gov.br/transparencia"
+    },
+    {
+      "name": "Paraíso do Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paranacity",
+      "official_gazette_url": "https://www.paranacity.pr.gov.br/diario_oficial"
+    },
+    {
+      "name": "Paranaguá",
+      "official_gazette_url": "https://www.paranagua.pr.gov.br/servicos/diario-oficial"
+    },
+    {
+      "name": "Paranapoema",
+      "official_gazette_url": "https://www.paranapoema.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Paranavaí",
+      "official_gazette_url": "https://www.paranavai.pr.gov.br/diariooficial"
+    },
+    {
+      "name": "Pato Bragado",
+      "official_gazette_url": "https://patobragado.atende.net/transparencia"
+    },
+    {
+      "name": "Pato Branco",
+      "official_gazette_url": "https://patobranco.pr.gov.br/legislacao-de-pato-branco/"
+    },
+    {
+      "name": "Paula Freitas",
+      "official_gazette_url": "https://www.paulafreitas.pr.gov.br/publicacoes/"
+    },
+    {
+      "name": "Paulo Frontin",
+      "official_gazette_url": "https://www.paulofrontin.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Peabiru",
+      "official_gazette_url": "https://diario.peabiru.pr.gov.br/"
+    },
+    {
+      "name": "Perobal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pérola",
+      "official_gazette_url": "https://www.perola.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Pérola d'Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Piên",
+      "official_gazette_url": "https://www.pien.pr.gov.br/ops/404"
+    },
+    {
+      "name": "Pinhais",
+      "official_gazette_url": "https://pinhais.atende.net/diariooficial"
+    },
+    {
+      "name": "Pinhal de São Bento",
+      "official_gazette_url": "https://www.pinhaldesaobento.pr.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Pinhalão",
+      "official_gazette_url": "https://www.pinhalao.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Pinhão",
+      "official_gazette_url": "https://pinhao.oxy.elotech.com.br/portaltransparencia/1/publicacoes/1001"
+    },
+    {
+      "name": "Piraí do Sul",
+      "official_gazette_url": "https://www.piraidosul.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Piraquara",
+      "official_gazette_url": "https://www.piraquara.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Pitanga",
+      "official_gazette_url": "https://www.pitanga.pr.gov.br/noticias/diario-oficial"
+    },
+    {
+      "name": "Pitangueiras",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/pesquisar?fillgrid=true&municipio=&entidadeUsuaria=pitangueiras&titulo=&nome_orgao=&data_circulacao="
+    },
+    {
+      "name": "Planaltina do Paraná",
+      "official_gazette_url": "https://www.planaltinadoparana.pr.gov.br/publicacoes"
+    },
+    {
+      "name": "Planalto",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/pesquisar"
+    },
+    {
+      "name": "Ponta Grossa",
+      "official_gazette_url": "https://www.pontagrossa.pr.gov.br/transparencia-pg/"
+    },
+    {
+      "name": "Pontal do Paraná",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Porecatu",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/pesquisar?busca_avancada%5Bpage%5D=&busca_avancada%5BentidadeUsuaria%5D=51405&busca_avancada%5Bnome_orgao%5D=14054"
+    },
+    {
+      "name": "Porto Amazonas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Porto Barreiro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Porto Rico",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Porto Vitória",
+      "official_gazette_url": "https://portovitoria.pr.gov.br/atos-oficiais/"
+    },
+    {
+      "name": "Prado Ferreira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pranchita",
+      "official_gazette_url": "https://www.pranchita.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Presidente Castelo Branco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Primeiro de Maio",
+      "official_gazette_url": "https://www.primeirodemaio.pr.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Prudentópolis",
+      "official_gazette_url": "https://diario.prudentopolis.pr.gov.br/"
+    },
+    {
+      "name": "Quarto Centenário",
+      "official_gazette_url": "https://www.quartocentenario.pr.gov.br/transparencia/"
+    },
+    {
+      "name": "Quatiguá",
+      "official_gazette_url": "https://www.quatigua.pr.gov.br/"
+    },
+    {
+      "name": "Quatro Barras",
+      "official_gazette_url": "https://www.quatrobarras.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Quatro Pontes",
+      "official_gazette_url": "https://www.quatropontes.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Quedas do Iguaçu",
+      "official_gazette_url": "https://www.quedasdoiguacu.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Querência do Norte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Quinta do Sol",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Quitandinha",
+      "official_gazette_url": "https://www.quitandinha.pr.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Ramilândia",
+      "official_gazette_url": "https://diario.ramilandia.pr.gov.br/"
+    },
+    {
+      "name": "Rancho Alegre",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rancho Alegre d'Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Realeza",
+      "official_gazette_url": "https://www.realeza.pr.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Rebouças",
+      "official_gazette_url": "https://reboucas.pr.gov.br/portal-da-transparencia/atos-normativos/"
+    },
+    {
+      "name": "Renascença",
+      "official_gazette_url": "https://www.renascenca.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Reserva",
+      "official_gazette_url": "https://reserva.pr.gov.br/legislacao/"
+    },
+    {
+      "name": "Reserva do Iguaçu",
+      "official_gazette_url": "https://www.reservadoiguacu.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Ribeirão Claro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ribeirão do Pinhal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio Azul",
+      "official_gazette_url": "https://www.rioazul.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Rio Bom",
+      "official_gazette_url": "https://www.riobom.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Rio Bonito do Iguaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio Branco do Ivaí",
+      "official_gazette_url": "https://www.riobrancodoivai.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Rio Branco do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio Negro",
+      "official_gazette_url": "https://rionegro.pr.gov.br/transparencia/"
+    },
+    {
+      "name": "Rolândia",
+      "official_gazette_url": "https://www.rolandia.pr.gov.br/diario_oficial"
+    },
+    {
+      "name": "Roncador",
+      "official_gazette_url": "https://www.roncador.pr.gov.br/"
+    },
+    {
+      "name": "Rondon",
+      "official_gazette_url": "https://www.rondon.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Rosário do Ivaí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sabáudia",
+      "official_gazette_url": "https://www.sabaudia.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Salgado Filho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Salto do Itararé",
+      "official_gazette_url": "https://www.saltodoitarare.pr.gov.br/transparencia"
+    },
+    {
+      "name": "Salto do Lontra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Amélia",
+      "official_gazette_url": "https://www.santaamelia.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Santa Cecília do Pavão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Cruz Monte Castelo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Fé",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Helena",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Inês",
+      "official_gazette_url": "https://santaines.pr.gov.br/governo/publicacoes"
+    },
+    {
+      "name": "Santa Isabel do Ivaí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Izabel do Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Lúcia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Maria do Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Mariana",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Mônica",
+      "official_gazette_url": "https://www.santamonica.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Santa Tereza do Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Terezinha de Itaipu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santana do Itararé",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio da Platina",
+      "official_gazette_url": "https://www.santoantoniodaplatina.pr.gov.br/transparencia"
+    },
+    {
+      "name": "Santo Antônio do Caiuá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio do Paraíso",
+      "official_gazette_url": "https://www.pmsantoantoniodoparaiso.pr.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Santo Antônio do Sudoeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Inácio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Carlos do Ivaí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Jerônimo da Serra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João do Caiuá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João do Ivaí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João do Triunfo",
+      "official_gazette_url": "https://www.sjtriunfo.pr.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "São Jorge d'Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Jorge do Ivaí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Jorge do Patrocínio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José da Boa Vista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José das Palmeiras",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José dos Pinhais",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Manoel do Paraná",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Mateus do Sul",
+      "official_gazette_url": "https://www.saomateusdosul.pr.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "São Miguel do Iguaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Pedro do Iguaçu",
+      "official_gazette_url": "https://www.saopedrodoiguacu.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "São Pedro do Ivaí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Pedro do Paraná",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Sebastião da Amoreira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Tomé",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sapopema",
+      "official_gazette_url": "https://www.sapopema.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Sarandi",
+      "official_gazette_url": "https://www.sarandi.pr.gov.br/"
+    },
+    {
+      "name": "Saudade do Iguaçu",
+      "official_gazette_url": "https://www.saudadedoiguacu.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Sengés",
+      "official_gazette_url": "https://www.senges.pr.gov.br/portal/"
+    },
+    {
+      "name": "Serranópolis do Iguaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sertaneja",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sertanópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Siqueira Campos",
+      "official_gazette_url": "https://www.siqueiracampos.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Sulina",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/pesquisar"
+    },
+    {
+      "name": "Tamarana",
+      "official_gazette_url": "https://tamarana.pr.gov.br/"
+    },
+    {
+      "name": "Tamboara",
+      "official_gazette_url": "https://doem.org.br/pr/tamboara"
+    },
+    {
+      "name": "Tapejara",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tapira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Teixeira Soares",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Telêmaco Borba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Terra Boa",
+      "official_gazette_url": "https://terraboa.pr.gov.br/diario-oficial-eletronico/"
+    },
+    {
+      "name": "Terra Rica",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Terra Roxa",
+      "official_gazette_url": "https://www.terraroxa.pr.gov.br/transparencia"
+    },
+    {
+      "name": "Tibagi",
+      "official_gazette_url": "https://diario.tibagi.pr.gov.br/"
+    },
+    {
+      "name": "Tijucas do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Toledo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tomazina",
+      "official_gazette_url": "https://www.tomazina.pr.gov.br/diario-oficial"
+    },
+    {
+      "name": "Três Barras do Paraná",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tunas do Paraná",
+      "official_gazette_url": "https://www.tunasdoparana.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Tuneiras do Oeste",
+      "official_gazette_url": "https://www.tuneirasdooeste.pr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Tupãssi",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Turvo",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/pesquisar"
+    },
+    {
+      "name": "Ubiratã",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Umuarama",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/"
+    },
+    {
+      "name": "União da Vitória",
+      "official_gazette_url": "https://uniaodavitoria.pr.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Uniflor",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Uraí",
+      "official_gazette_url": "https://www.urai.pr.gov.br/diariooficial/"
+    },
+    {
+      "name": "Ventania",
+      "official_gazette_url": "https://www.ventania.pr.gov.br/diario_oficial"
+    },
+    {
+      "name": "Vera Cruz do Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Verê",
+      "official_gazette_url": "https://www.vere.pr.gov.br/"
+    },
+    {
+      "name": "Vila Alta",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Virmond",
+      "official_gazette_url": "https://www.virmond.pr.gov.br/"
+    },
+    {
+      "name": "Vitorino",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amp/"
+    },
+    {
+      "name": "Wenceslau Braz",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Xambrê",
+      "official_gazette_url": "https://www.xambre.pr.gov.br/transparencia"
+    }
+  ]
+}

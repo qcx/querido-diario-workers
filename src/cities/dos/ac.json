@@ -1,0 +1,93 @@
+{
+  "name": "Acre",
+  "cities": [
+    {
+      "name": "Acrelândia",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Assis Brasil",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Brasiléia",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Bujari",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Capixaba",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Cruzeiro do Sul",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Epitaciolândia",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Feijó",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Jordão",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Mâncio Lima",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Manoel Urbano",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Marechal Thaumaturgo",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Plácido de Castro",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Porto Acre",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Porto Walter",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Rio Branco",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Rodrigues Alves",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Santa Rosa do Purus",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Sena Madureira",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Senador Guiomard",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Tarauacá",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    },
+    {
+      "name": "Xapuri",
+      "official_gazette_url": "https://diario.ac.gov.br/"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Roraima",
+  "cities": [
+    {
+      "name": "Alto Alegre",
+      "official_gazette_url": "https://www.altoalegre.rr.gov.br/transparencia"
+    },
+    {
+      "name": "Amajari",
+      "official_gazette_url": "https://www.amajari.rr.gov.br/"
+    },
+    {
+      "name": "Boa Vista",
+      "official_gazette_url": "https://publicacoes.boavista.rr.gov.br/api/v1/diarios"
+    },
+    {
+      "name": "Bonfim",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amr/"
+    },
+    {
+      "name": "Cantá",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amr/"
+    },
+    {
+      "name": "Caracaraí",
+      "official_gazette_url": "https://www.caracarai.rr.gov.br/atos-oficiais"
+    },
+    {
+      "name": "Caroebe",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amr/"
+    },
+    {
+      "name": "Iracema",
+      "official_gazette_url": "https://www.iracema.rr.gov.br/atos-oficiais"
+    },
+    {
+      "name": "Mucajaí",
+      "official_gazette_url": "https://www.mucajai.rr.gov.br/"
+    },
+    {
+      "name": "Normandia",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amr/pesquisar"
+    },
+    {
+      "name": "Pacaraima",
+      "official_gazette_url": "https://www.pacaraima.rr.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Rorainópolis",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/amr/pesquisar"
+    },
+    {
+      "name": "São João da Baliza",
+      "official_gazette_url": "https://saojoaodabaliza.rr.gov.br/transparencia/"
+    },
+    {
+      "name": "São Luiz",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Uiramutã",
+      "official_gazette_url": null
+    }
+  ]
+}

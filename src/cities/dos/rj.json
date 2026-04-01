@@ -1,0 +1,373 @@
+{
+  "name": "Rio de Janeiro",
+  "cities": [
+    {
+      "name": "Angra dos Reis",
+      "official_gazette_url": "https://angra.rj.gov.br/boletim-oficial"
+    },
+    {
+      "name": "Aperibé",
+      "official_gazette_url": "https://www.aperibe.rj.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Araruama",
+      "official_gazette_url": "https://www.araruama.rj.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Areal",
+      "official_gazette_url": "https://www.areal.rj.gov.br"
+    },
+    {
+      "name": "Armação de Búzios",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Arraial do Cabo",
+      "official_gazette_url": "https://portal.arraial.rj.gov.br/diarios_oficiais_web/"
+    },
+    {
+      "name": "Barra do Piraí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Barra Mansa",
+      "official_gazette_url": "https://www.barramansa.rj.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Belford Roxo",
+      "official_gazette_url": "https://www.belfordr.instartecnologia.com.br/portal/diario-oficial"
+    },
+    {
+      "name": "Bom Jardim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Jesus do Itabapoana",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cabo Frio",
+      "official_gazette_url": "https://www.cabofrio.instartecnologia.com.br/portal/diario-oficial"
+    },
+    {
+      "name": "Cachoeiras de Macacu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cambuci",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campos dos Goytacazes",
+      "official_gazette_url": "https://www.campos.rj.gov.br/diario-oficial.php"
+    },
+    {
+      "name": "Cantagalo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Carapebus",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cardoso Moreira",
+      "official_gazette_url": "https://www.cardosomoreira.rj.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Carmo",
+      "official_gazette_url": "https://www.carmo.rj.gov.br/transparencia"
+    },
+    {
+      "name": "Casimiro de Abreu",
+      "official_gazette_url": "https://www.transparencia.casimirodeabreu.rj.gov.br"
+    },
+    {
+      "name": "Comendador Levy Gasparian",
+      "official_gazette_url": "https://www.comendadorlevygasparian.rj.gov.br"
+    },
+    {
+      "name": "Conceição de Macabu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cordeiro",
+      "official_gazette_url": "https://www.transparencia.cordeiro.rj.gov.br"
+    },
+    {
+      "name": "Duas Barras",
+      "official_gazette_url": "https://www.duasbarras.rj.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Duque de Caxias",
+      "official_gazette_url": "https://duquedecaxias.rj.gov.br/portal/boletim-oficial.html"
+    },
+    {
+      "name": "Engenheiro Paulo de Frontin",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Guapimirim",
+      "official_gazette_url": "https://guapimirim.rj.gov.br/transparencia/"
+    },
+    {
+      "name": "Iguaba Grande",
+      "official_gazette_url": "https://portal.iguaba.rj.gov.br"
+    },
+    {
+      "name": "Itaboraí",
+      "official_gazette_url": "https://site.ib.itaborai.rj.gov.br/"
+    },
+    {
+      "name": "Itaguaí",
+      "official_gazette_url": "https://portal.transparencia.itaguai.rj.gov.br"
+    },
+    {
+      "name": "Italva",
+      "official_gazette_url": "https://www.italva.rj.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Itaocara",
+      "official_gazette_url": "https://www.itaocara.rj.gov.br/diario-oficial-eletronico"
+    },
+    {
+      "name": "Itaperuna",
+      "official_gazette_url": "https://www.itaperuna.rj.gov.br/pmi/atos-oficiais"
+    },
+    {
+      "name": "Itatiaia",
+      "official_gazette_url": "https://itatiaia.rj.gov.br/boletim-/diario-oficial-ano-vii-edicao-no-013-itatiaia-rj-23-de-janeiro-de-2025"
+    },
+    {
+      "name": "Japeri",
+      "official_gazette_url": "https://japeri.rj.gov.br/service/diario-oficial/"
+    },
+    {
+      "name": "Laje do Muriaé",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Macaé",
+      "official_gazette_url": "https://do.macae.rj.gov.br/index/listarajax"
+    },
+    {
+      "name": "Macuco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Magé",
+      "official_gazette_url": "https://mage.rj.gov.br/transparencia/"
+    },
+    {
+      "name": "Mangaratiba",
+      "official_gazette_url": "https://mangaratiba.rj.gov.br/novoportal/publicacoes"
+    },
+    {
+      "name": "Maricá",
+      "official_gazette_url": "https://www.marica.rj.gov.br/wp-content/uploads/2022/07/dia%CC%81rio-oficial.png"
+    },
+    {
+      "name": "Mendes",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aemerj/pesquisar?busca_avancada%5B__paper%5D=1&busca_avancada%5BentidadeUsuaria%5D=342&busca_avancada%5Bnome_orgao%5D=&busca_avancada%5Btitulo%5D=&busca_avancada%5Btexto%5D=&busca_avancada%5BdataInicio%5D=27%2F05%2F2024"
+    },
+    {
+      "name": "Mesquita",
+      "official_gazette_url": "https://transparencia.mesquita.rj.gov.br"
+    },
+    {
+      "name": "Miguel Pereira",
+      "official_gazette_url": "https://transparencia.miguelpereira.rj.gov.br"
+    },
+    {
+      "name": "Miracema",
+      "official_gazette_url": "https://www.miracema.rj.gov.br/transparencia/exibir/20/0/1/boletim-oficial"
+    },
+    {
+      "name": "Natividade",
+      "official_gazette_url": "https://www.natividade.rj.gov.br/diario-oficial"
+    },
+    {
+      "name": "Nilópolis",
+      "official_gazette_url": "https://nilopolis.rj.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Niterói",
+      "official_gazette_url": "https://diariooficial.niteroi.rj.gov.br"
+    },
+    {
+      "name": "Nova Friburgo",
+      "official_gazette_url": "https://plenussistemas.dioenet.com.br/list/nova-friburgo"
+    },
+    {
+      "name": "Nova Iguaçu",
+      "official_gazette_url": "https://www.novaiguacu.rj.gov.br/diario-oficial"
+    },
+    {
+      "name": "Paracambi",
+      "official_gazette_url": "https://paracambi.rj.gov.br/diario-oficial-eletronico-2020/"
+    },
+    {
+      "name": "Paraíba do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Parati",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paty do Alferes",
+      "official_gazette_url": "https://patydoalferes.rj.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Petrópolis",
+      "official_gazette_url": "https://www.petropolis.rj.gov.br/pmp/index.php/servicos-cidadao/diario-oficial-artigo"
+    },
+    {
+      "name": "Pinheiral",
+      "official_gazette_url": "https://www.pinheiral.rj.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Piraí",
+      "official_gazette_url": "https://www.pirai.rj.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Porciúncula",
+      "official_gazette_url": "https://www.porciuncula.rj.gov.br/login"
+    },
+    {
+      "name": "Porto Real",
+      "official_gazette_url": "https://www.portoreal.rj.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Quatis",
+      "official_gazette_url": "https://transparencia.quatis.rj.gov.br"
+    },
+    {
+      "name": "Queimados",
+      "official_gazette_url": "https://transparencia.queimados.rj.gov.br"
+    },
+    {
+      "name": "Quissamã",
+      "official_gazette_url": "https://portal.quissama.rj.gov.br"
+    },
+    {
+      "name": "Resende",
+      "official_gazette_url": "https://resende.rj.gov.br/blogtransparencia/page/boletim_oficial.asp"
+    },
+    {
+      "name": "Rio Bonito",
+      "official_gazette_url": "https://www.riobonito.rj.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Rio Claro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio das Flores",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio das Ostras",
+      "official_gazette_url": "https://www.riodasostras.rj.gov.br/transparencia/"
+    },
+    {
+      "name": "Rio de Janeiro",
+      "official_gazette_url": "https://doweb.rio.rj.gov.br"
+    },
+    {
+      "name": "Santa Maria Madalena",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio de Pádua",
+      "official_gazette_url": "https://www.santoantoniodepadua.rj.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São Fidélis",
+      "official_gazette_url": "https://saofidelis.rj.gov.br/wp-content/uploads/2019/05/Diario-Oficial.png"
+    },
+    {
+      "name": "São Francisco de Itabapoana",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Gonçalo",
+      "official_gazette_url": "https://www.saogoncalo.rj.gov.br/servico/diario-oficial/"
+    },
+    {
+      "name": "São João da Barra",
+      "official_gazette_url": "https://www.sjb.rj.gov.br"
+    },
+    {
+      "name": "São João de Meriti",
+      "official_gazette_url": "https://transparencia.meriti.rj.gov.br"
+    },
+    {
+      "name": "São José de Ubá",
+      "official_gazette_url": "https://www.saojosedeuba.rj.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São José do Vale do Rio Preto",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/sao_jose_do_vale_do_rio_preto"
+    },
+    {
+      "name": "São Pedro da Aldeia",
+      "official_gazette_url": "https://transparencia.pmspa.rj.gov.br"
+    },
+    {
+      "name": "São Sebastião do Alto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sapucaia",
+      "official_gazette_url": "https://www.sapucaia.rj.gov.br"
+    },
+    {
+      "name": "Saquarema",
+      "official_gazette_url": "https://dos.saquarema.rj.gov.br/"
+    },
+    {
+      "name": "Seropédica",
+      "official_gazette_url": "https://portaltransparencia.seropedica.rj.gov.br/boletim_oficial_view"
+    },
+    {
+      "name": "Silva Jardim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sumidouro",
+      "official_gazette_url": "https://plenussistemas.dioenet.com.br/list/sumidouro"
+    },
+    {
+      "name": "Tanguá",
+      "official_gazette_url": "https://tangua.rj.gov.br/legislacao-da-politica-municipal-de-saneamento-basico/"
+    },
+    {
+      "name": "Teresópolis",
+      "official_gazette_url": "https://www.teresopolis.rj.gov.br/transparencia/diario-oficial/"
+    },
+    {
+      "name": "Trajano de Morais",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Três Rios",
+      "official_gazette_url": "https://tresrios.rj.gov.br/legislacao-municipal/"
+    },
+    {
+      "name": "Valença",
+      "official_gazette_url": "https://valenca.rj.gov.br/inicio"
+    },
+    {
+      "name": "Varre-Sai",
+      "official_gazette_url": "https://varresai.rj.gov.br"
+    },
+    {
+      "name": "Vassouras",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/aemerj/pesquisar?busca_avancada%5B__paper%5D=1&busca_avancada%5BentidadeUsuaria%5D=41297"
+    },
+    {
+      "name": "Volta Redonda",
+      "official_gazette_url": "https://www.voltaredonda.rj.gov.br/diario-oficial/"
+    }
+  ]
+}

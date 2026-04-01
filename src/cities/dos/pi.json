@@ -1,0 +1,893 @@
+{
+  "name": "Piauí",
+  "cities": [
+    {
+      "name": "Acauã",
+      "official_gazette_url": "https://www.acaua.pi.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Agricolândia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Água Branca",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alagoinha do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alegrete do Piauí",
+      "official_gazette_url": "https://alegretedopiaui.pi.gov.br/alegretedopiaui/portalnoticias"
+    },
+    {
+      "name": "Alto Longá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Altos",
+      "official_gazette_url": "https://altos.pi.gov.br/"
+    },
+    {
+      "name": "Alvorada do Gurguéia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Amarante",
+      "official_gazette_url": "https://amarante.pi.gov.br/amarante"
+    },
+    {
+      "name": "Angical do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Anísio de Abreu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Antônio Almeida",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Aroazes",
+      "official_gazette_url": "https://aroazes.pi.gov.br/aroazes/portalnoticias"
+    },
+    {
+      "name": "Arraial",
+      "official_gazette_url": "https://arraial.pi.gov.br/arraial"
+    },
+    {
+      "name": "Assunção do Piauí",
+      "official_gazette_url": "https://www.assuncaodopiaui.pi.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Avelino Lopes",
+      "official_gazette_url": "https://www.avelinolopes.pi.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Baixa Grande do Ribeiro",
+      "official_gazette_url": "https://www.baixagrandedoribeiro.pi.gov.br/transparencia/"
+    },
+    {
+      "name": "Barra d'Alcântara",
+      "official_gazette_url": "https://barradalcantara.pi.gov.br/publicacoes/"
+    },
+    {
+      "name": "Barras",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Barreiras do Piauí",
+      "official_gazette_url": "https://www.barreirasdopiaui.pi.gov.br/diario-oficial"
+    },
+    {
+      "name": "Barro Duro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Batalha",
+      "official_gazette_url": "https://batalha.pi.gov.br/batalha"
+    },
+    {
+      "name": "Bela Vista do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Belém do Piauí",
+      "official_gazette_url": "https://www.belemdopiaui.pi.gov.br/diario-oficial"
+    },
+    {
+      "name": "Beneditinos",
+      "official_gazette_url": "https://beneditinos.pi.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Bertolínia",
+      "official_gazette_url": "https://bertolinia.pi.gov.br/bertolinia/portalnoticias"
+    },
+    {
+      "name": "Betânia do Piauí",
+      "official_gazette_url": "https://www.betaniadopiaui.pi.gov.br/publicacoes"
+    },
+    {
+      "name": "Boa Hora",
+      "official_gazette_url": "https://boahora.pi.gov.br/publicacoes/"
+    },
+    {
+      "name": "Bocaina",
+      "official_gazette_url": "https://www.bocaina.pi.gov.br/index.php/servicos/diario-oficial"
+    },
+    {
+      "name": "Bom Jesus",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Princípio do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bonfim do Piauí",
+      "official_gazette_url": "https://bonfimdopiaui.pi.gov.br/bonfimdopiaui/portalnoticias"
+    },
+    {
+      "name": "Boqueirão do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Brasileira",
+      "official_gazette_url": "https://brasileira.pi.gov.br/brasileira"
+    },
+    {
+      "name": "Brejo do Piauí",
+      "official_gazette_url": "https://brejodopiaui.pi.gov.br/brejodopiaui/portalnoticias"
+    },
+    {
+      "name": "Buriti dos Lopes",
+      "official_gazette_url": "https://www.buritidoslopes.pi.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Buriti dos Montes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cabeceiras do Piauí",
+      "official_gazette_url": "https://www.cabeceirasdopiaui.pi.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cajazeiras do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cajueiro da Praia",
+      "official_gazette_url": "https://www.cajueirodapraia.pi.gov.br/diario-oficial"
+    },
+    {
+      "name": "Caldeirão Grande do Piauí",
+      "official_gazette_url": "https://caldeiraograndedopiaui.pi.gov.br/caldeiraograndedopiaui/portalnoticias"
+    },
+    {
+      "name": "Campinas do Piauí",
+      "official_gazette_url": "https://campinasdopiaui.pi.gov.br/campinasdopiaui/portalnoticias"
+    },
+    {
+      "name": "Campo Alegre do Fidalgo",
+      "official_gazette_url": "https://campoalegredofidalgo.pi.gov.br/transparencia/"
+    },
+    {
+      "name": "Campo Grande do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campo Largo do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campo Maior",
+      "official_gazette_url": "https://www.campomaior.pi.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Canavieira",
+      "official_gazette_url": "https://canavieira.pi.gov.br/canavieira"
+    },
+    {
+      "name": "Canto do Buriti",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Capitão de Campos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Capitão Gervásio Oliveira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Caracol",
+      "official_gazette_url": "https://sggp.com.br/diario/Diario-oficial-caracol"
+    },
+    {
+      "name": "Caraúbas do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Caridade do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Castelo do Piauí",
+      "official_gazette_url": "https://castelodopiaui.pi.gov.br/transparencia"
+    },
+    {
+      "name": "Caxingó",
+      "official_gazette_url": "https://www.caxingo.pi.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cocal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cocal de Telha",
+      "official_gazette_url": "http://www.diarioficialdosmunicipios.org/"
+    },
+    {
+      "name": "Cocal dos Alves",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Coivaras",
+      "official_gazette_url": "https://coivaras.pi.gov.br/coivaras/portalnoticias"
+    },
+    {
+      "name": "Colônia do Gurguéia",
+      "official_gazette_url": "https://diariooficialdasprefeituras.org/piaui/index"
+    },
+    {
+      "name": "Colônia do Piauí",
+      "official_gazette_url": "https://coloniadopiaui.pi.gov.br/coloniadopiaui/portalnoticias"
+    },
+    {
+      "name": "Conceição do Canindé",
+      "official_gazette_url": "https://conceicaodocaninde.pi.gov.br/conceicaodocaninde/portalnoticias"
+    },
+    {
+      "name": "Coronel José Dias",
+      "official_gazette_url": "https://www.coroneljosedias.pi.gov.br/publicacoes/"
+    },
+    {
+      "name": "Corrente",
+      "official_gazette_url": "https://corrente.pi.gov.br/corrente/portalnoticias"
+    },
+    {
+      "name": "Cristalândia do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cristino Castro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Curimatá",
+      "official_gazette_url": "https://curimata.pi.gov.br/documentos-e-informacoes-sigilosas/"
+    },
+    {
+      "name": "Currais",
+      "official_gazette_url": "https://currais.pi.gov.br/currais/portalnoticias"
+    },
+    {
+      "name": "Curral Novo do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Curralinhos",
+      "official_gazette_url": "https://curralinhos.pi.gov.br/"
+    },
+    {
+      "name": "Demerval Lobão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Dirceu Arcoverde",
+      "official_gazette_url": "https://www.dirceuarcoverde.pi.gov.br/publicacoes/"
+    },
+    {
+      "name": "Dom Expedito Lopes",
+      "official_gazette_url": "https://domexpeditolopes.pi.gov.br/publicacoes/"
+    },
+    {
+      "name": "Dom Inocêncio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Domingos Mourão",
+      "official_gazette_url": "http://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php"
+    },
+    {
+      "name": "Elesbão Veloso",
+      "official_gazette_url": "https://elesbaoveloso.pi.gov.br#diario-oficial"
+    },
+    {
+      "name": "Eliseu Martins",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Esperantina",
+      "official_gazette_url": "http://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php"
+    },
+    {
+      "name": "Fartura do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Flores do Piauí",
+      "official_gazette_url": "https://floresdopiaui.pi.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Floresta do Piauí",
+      "official_gazette_url": "https://florestadopiaui.pi.gov.br/florestadopiaui/portalnoticias"
+    },
+    {
+      "name": "Floriano",
+      "official_gazette_url": "https://www.floriano.pi.gov.br/"
+    },
+    {
+      "name": "Francinópolis",
+      "official_gazette_url": "https://www.francinopolis.pi.gov.br/diario-oficial"
+    },
+    {
+      "name": "Francisco Ayres",
+      "official_gazette_url": "https://www.franciscoayres.pi.gov.br/unidade-gestora-invalid"
+    },
+    {
+      "name": "Francisco Macedo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Francisco Santos",
+      "official_gazette_url": "https://franciscosantos.pi.gov.br/franciscosantos/portalnoticias"
+    },
+    {
+      "name": "Fronteiras",
+      "official_gazette_url": "https://fronteiras.pi.gov.br/fronteiras/portalnoticias"
+    },
+    {
+      "name": "Geminiano",
+      "official_gazette_url": "https://www.geminiano.pi.gov.br/diario-oficial"
+    },
+    {
+      "name": "Gilbués",
+      "official_gazette_url": "https://www.gilbues.pi.gov.br/diario-oficial"
+    },
+    {
+      "name": "Guadalupe",
+      "official_gazette_url": "https://guadalupe.pi.gov.br/guadalupe"
+    },
+    {
+      "name": "Guaribas",
+      "official_gazette_url": "https://www.guaribas.pi.gov.br/"
+    },
+    {
+      "name": "Hugo Napoleão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ilha Grande",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Inhuma",
+      "official_gazette_url": "https://www.diarioficialdosmunicipios.org/"
+    },
+    {
+      "name": "Ipiranga do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Isaías Coelho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itainópolis",
+      "official_gazette_url": "https://www.itainopolis.pi.gov.br/"
+    },
+    {
+      "name": "Itaueira",
+      "official_gazette_url": "https://itaueira.pi.gov.br/itaueira"
+    },
+    {
+      "name": "Jacobina do Piauí",
+      "official_gazette_url": "https://jacobinadopiaui.pi.gov.br/publicacoes/"
+    },
+    {
+      "name": "Jaicós",
+      "official_gazette_url": "https://jaicos.pi.gov.br/jaicos"
+    },
+    {
+      "name": "Jardim do Mulato",
+      "official_gazette_url": "https://www.jardimdomulato.pi.gov.br/unidade-gestora-invalid"
+    },
+    {
+      "name": "Jatobá do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jerumenha",
+      "official_gazette_url": "https://jerumenha.pi.gov.br/jerumenha"
+    },
+    {
+      "name": "João Costa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Joaquim Pires",
+      "official_gazette_url": "https://www.joaquimpires.pi.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Joca Marques",
+      "official_gazette_url": "https://jocamarques.pi.gov.br/jocamarques/portalnoticias"
+    },
+    {
+      "name": "José de Freitas",
+      "official_gazette_url": "https://www.josedefreitas.pi.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Juazeiro do Piauí",
+      "official_gazette_url": "https://www.juazeirodopiaui.pi.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Júlio Borges",
+      "official_gazette_url": "https://julioborges.pi.gov.br/julioborges/portalnoticias"
+    },
+    {
+      "name": "Jurema",
+      "official_gazette_url": "https://jurema.pi.gov.br/jurema"
+    },
+    {
+      "name": "Lagoa Alegre",
+      "official_gazette_url": "https://lagoaalegre.pi.gov.br/lagoaalegre/portalnoticias"
+    },
+    {
+      "name": "Lagoa de São Francisco",
+      "official_gazette_url": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php"
+    },
+    {
+      "name": "Lagoa do Barro do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lagoa do Piauí",
+      "official_gazette_url": "https://lagoadopiaui.pi.gov.br/atos-oficiais/"
+    },
+    {
+      "name": "Lagoa do Sítio",
+      "official_gazette_url": "https://www.lagoadositio.pi.gov.br/diario-oficial"
+    },
+    {
+      "name": "Lagoinha do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Landri Sales",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Luís Correia",
+      "official_gazette_url": "https://www.luiscorreia.pi.gov.br/transparencia/"
+    },
+    {
+      "name": "Luzilândia",
+      "official_gazette_url": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php"
+    },
+    {
+      "name": "Madeiro",
+      "official_gazette_url": "https://www.madeiro.pi.gov.br/publicacoes/"
+    },
+    {
+      "name": "Manoel Emídio",
+      "official_gazette_url": "https://manoelemidio.pi.gov.br/manoelemidio/portalnoticias"
+    },
+    {
+      "name": "Marcolândia",
+      "official_gazette_url": "https://marcolandia.pi.gov.br/marcolandia/portalnoticias"
+    },
+    {
+      "name": "Marcos Parente",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Massapê do Piauí",
+      "official_gazette_url": "https://sggp.com.br/diario/diario-oficial-prefeitura-massape-pi"
+    },
+    {
+      "name": "Matias Olímpio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Miguel Alves",
+      "official_gazette_url": "https://miguelalves.pi.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Miguel Leão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Milton Brandão",
+      "official_gazette_url": "http://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php"
+    },
+    {
+      "name": "Monsenhor Gil",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Monsenhor Hipólito",
+      "official_gazette_url": "https://monsenhorhipolito.pi.gov.br/monsenhorhipolito/portalnoticias"
+    },
+    {
+      "name": "Monte Alegre do Piauí",
+      "official_gazette_url": "https://www.montealegredopiaui.pi.gov.br/publicacoes/"
+    },
+    {
+      "name": "Morro Cabeça no Tempo",
+      "official_gazette_url": "https://www.morrocabecanotempo.pi.gov.br/publicacoes/"
+    },
+    {
+      "name": "Morro do Chapéu do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Murici dos Portelas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nazaré do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nossa Senhora de Nazaré",
+      "official_gazette_url": "https://www.nossasenhoradenazare.pi.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nossa Senhora dos Remédios",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Santa Rita",
+      "official_gazette_url": "https://sggp.com.br/diario/prefeitura-nova-santa-rita"
+    },
+    {
+      "name": "Novo Oriente do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Novo Santo Antônio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Oeiras",
+      "official_gazette_url": "https://oeiras.pi.gov.br/oeiras"
+    },
+    {
+      "name": "Olho d'Água do Piauí",
+      "official_gazette_url": "https://olhodaguadopiaui.pi.gov.br/transparencia/"
+    },
+    {
+      "name": "Padre Marcos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paes Landim",
+      "official_gazette_url": "https://sggp.com.br/diario/prefeitura-paes-landim"
+    },
+    {
+      "name": "Pajeú do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Palmeira do Piauí",
+      "official_gazette_url": "http://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/ConPublicacaoGeral.php"
+    },
+    {
+      "name": "Palmeirais",
+      "official_gazette_url": "https://www.palmeirais.pi.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Paquetá",
+      "official_gazette_url": "https://www.paqueta.pi.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Parnaguá",
+      "official_gazette_url": "https://www.parnagua.pi.gov.br/publicacoes/"
+    },
+    {
+      "name": "Parnaíba",
+      "official_gazette_url": "https://www.parnaiba.pi.gov.br/legislacao"
+    },
+    {
+      "name": "Passagem Franca do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Patos do Piauí",
+      "official_gazette_url": "https://patosdopiaui.pi.gov.br/patosdopiaui/portalnoticias"
+    },
+    {
+      "name": "Pau d'Arco do Piauí",
+      "official_gazette_url": "https://paudarcodopiaui.pi.gov.br/publicacoes/"
+    },
+    {
+      "name": "Paulistana",
+      "official_gazette_url": "https://paulistana.pi.gov.br/diario-oficial"
+    },
+    {
+      "name": "Pavussu",
+      "official_gazette_url": "https://pavussu.pi.gov.br/pavussu/portalnoticias"
+    },
+    {
+      "name": "Pedro II",
+      "official_gazette_url": "https://www.diarioficialdosmunicipios.org/"
+    },
+    {
+      "name": "Pedro Laurentino",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Picos",
+      "official_gazette_url": "https://picos.pi.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Pimenteiras",
+      "official_gazette_url": "https://www.pimenteiras.pi.gov.br/diario-oficial"
+    },
+    {
+      "name": "Pio IX",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Piracuruca",
+      "official_gazette_url": "https://piracuruca.pi.gov.br/piracuruca"
+    },
+    {
+      "name": "Piripiri",
+      "official_gazette_url": "https://www.piripiri.pi.gov.br/diario-oficial"
+    },
+    {
+      "name": "Porto",
+      "official_gazette_url": "https://www.porto.pi.gov.br/404"
+    },
+    {
+      "name": "Porto Alegre do Piauí",
+      "official_gazette_url": "https://portoalegredopiaui.pi.gov.br/publicacoes/"
+    },
+    {
+      "name": "Prata do Piauí",
+      "official_gazette_url": "https://pratadopiaui.pi.gov.br/pratadopiaui/portalnoticias"
+    },
+    {
+      "name": "Queimada Nova",
+      "official_gazette_url": "https://queimadanova.pi.gov.br/publicacoes/"
+    },
+    {
+      "name": "Redenção do Gurguéia",
+      "official_gazette_url": "https://redencaodogurgueia.pi.gov.br/redencaodogurgueia/portalnoticias"
+    },
+    {
+      "name": "Regeneração",
+      "official_gazette_url": "https://regeneracao.pi.gov.br/publicacoes/"
+    },
+    {
+      "name": "Riacho Frio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ribeira do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ribeiro Gonçalves",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio Grande do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Cruz do Piauí",
+      "official_gazette_url": "https://santacruzdopiaui.pi.gov.br/santacruzdopiaui/portalnoticias"
+    },
+    {
+      "name": "Santa Cruz dos Milagres",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Filomena",
+      "official_gazette_url": "https://santafilomena.pi.gov.br/santafilomena/portalnoticias"
+    },
+    {
+      "name": "Santa Luz",
+      "official_gazette_url": "https://www.diarioficialdosmunicipios.org/consulta/ConPublicacaoGeral/"
+    },
+    {
+      "name": "Santa Rosa do Piauí",
+      "official_gazette_url": "https://santarosadopiaui.pi.gov.br/santarosadopiaui/portalnoticias"
+    },
+    {
+      "name": "Santana do Piauí",
+      "official_gazette_url": "https://www.santanadopiaui.pi.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santo Antônio de Lisboa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio dos Milagres",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Inácio do Piauí",
+      "official_gazette_url": "https://santoinaciodopiaui.pi.gov.br/santoinaciodopiaui/portalnoticias"
+    },
+    {
+      "name": "São Braz do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Félix do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Francisco de Assis do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Francisco do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Gonçalo do Gurguéia",
+      "official_gazette_url": "https://saogoncalodogurgueia.pi.gov.br/saogoncalodogurgueia/portalnoticias"
+    },
+    {
+      "name": "São Gonçalo do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João da Canabrava",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João da Fronteira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João da Serra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João da Varjota",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João do Arraial",
+      "official_gazette_url": "https://saojoaodoarraial.pi.gov.br/saojoaodoarraial/portalnoticias"
+    },
+    {
+      "name": "São João do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José do Divino",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José do Peixe",
+      "official_gazette_url": "https://www.saojosedopeixe.pi.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São José do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Julião",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Lourenço do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Luis do Piauí",
+      "official_gazette_url": "https://saoluisdopiaui.pi.gov.br/saoluisdopiaui/portalnoticias"
+    },
+    {
+      "name": "São Miguel da Baixa Grande",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Miguel do Fidalgo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Miguel do Tapuio",
+      "official_gazette_url": "https://www.saomigueldotapuio.pi.gov.br/transparencia"
+    },
+    {
+      "name": "São Pedro do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Raimundo Nonato",
+      "official_gazette_url": "https://saoraimundononato.pi.gov.br/transparencia"
+    },
+    {
+      "name": "Sebastião Barros",
+      "official_gazette_url": "https://sebastiaobarros.pi.gov.br/sebastiaobarros/portalnoticias"
+    },
+    {
+      "name": "Sebastião Leal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sigefredo Pacheco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Simões",
+      "official_gazette_url": "https://dom.prefeitura.app/diario/simoes"
+    },
+    {
+      "name": "Simplício Mendes",
+      "official_gazette_url": "https://simpliciomendes.pi.gov.br/simpliciomendes/portalnoticias"
+    },
+    {
+      "name": "Socorro do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sussuapara",
+      "official_gazette_url": "https://sussuapara.pi.gov.br/sussuapara/portalnoticias"
+    },
+    {
+      "name": "Tamboril do Piauí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tanque do Piauí",
+      "official_gazette_url": "https://diariooficialdasprefeituras.org/piaui/index"
+    },
+    {
+      "name": "Teresina",
+      "official_gazette_url": "https://dom.pmt.pi.gov.br/"
+    },
+    {
+      "name": "União",
+      "official_gazette_url": "https://www.uniao.pi.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Uruçuí",
+      "official_gazette_url": "https://www.urucui.pi.gov.br/transparencia/"
+    },
+    {
+      "name": "Valença do Piauí",
+      "official_gazette_url": "https://www.valencadopiaui.pi.gov.br/diario-oficial"
+    },
+    {
+      "name": "Várzea Branca",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Várzea Grande",
+      "official_gazette_url": "https://www.varzeagrande.pi.gov.br/diario-oficial"
+    },
+    {
+      "name": "Vera Mendes",
+      "official_gazette_url": "https://www.veramendes.pi.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Vila Nova do Piauí",
+      "official_gazette_url": "https://www.vilanovadopiaui.pi.gov.br/transparencia/"
+    },
+    {
+      "name": "Wall Ferraz",
+      "official_gazette_url": "https://wallferraz.pi.gov.br/wallferraz/portalnoticias"
+    }
+  ]
+}

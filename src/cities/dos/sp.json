@@ -1,0 +1,2585 @@
+{
+  "name": "São Paulo",
+  "cities": [
+    {
+      "name": "Adamantina",
+      "official_gazette_url": "https://www.adamantina.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Adolfo",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/adolfo"
+    },
+    {
+      "name": "Aguaí",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/aguai"
+    },
+    {
+      "name": "Águas da Prata",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/aguas_da_prata"
+    },
+    {
+      "name": "Águas de Lindóia",
+      "official_gazette_url": "https://www.aguasdelindoia.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Águas de Santa Bárbara",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Águas de São Pedro",
+      "official_gazette_url": "https://www.aguasdesaopedro.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Agudos",
+      "official_gazette_url": "https://www.agudos.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Alambari",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alfredo Marcondes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Altair",
+      "official_gazette_url": "https://www.altair.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Altinópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Alto Alegre",
+      "official_gazette_url": "https://www.altoalegre.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Alumínio",
+      "official_gazette_url": "https://www.aluminio.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Álvares Florence",
+      "official_gazette_url": "https://www.alvaresflorence.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Álvares Machado",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Álvaro de Carvalho",
+      "official_gazette_url": "https://www.alvarodecarvalho.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Alvinlândia",
+      "official_gazette_url": "https://www.alvinlandia.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Americana",
+      "official_gazette_url": "https://www.americana.sp.gov.br/"
+    },
+    {
+      "name": "Américo Brasiliense",
+      "official_gazette_url": "https://americobrasiliense.atende.net/transparencia"
+    },
+    {
+      "name": "Américo de Campos",
+      "official_gazette_url": "https://www.americodecampos.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Amparo",
+      "official_gazette_url": "https://imprensaoficialmunicipal.com.br/amparo"
+    },
+    {
+      "name": "Analândia",
+      "official_gazette_url": "https://www.analandia.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Andradina",
+      "official_gazette_url": "https://www.andradina.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Angatuba",
+      "official_gazette_url": "https://www.angatuba.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Anhembi",
+      "official_gazette_url": "https://www.anhembi.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Anhumas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Aparecida",
+      "official_gazette_url": "https://www.aparecida.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Aparecida d'Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Apiaí",
+      "official_gazette_url": "https://apiai.sp.gov.br/portal/diario-oficial-eletronico/"
+    },
+    {
+      "name": "Araçariguama",
+      "official_gazette_url": "https://www.aracariguama.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Araçatuba",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/aracatuba"
+    },
+    {
+      "name": "Araçoiaba da Serra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Aramina",
+      "official_gazette_url": "https://aramina.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Arandu",
+      "official_gazette_url": "https://www.arandu.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Arapeí",
+      "official_gazette_url": "https://www.arapei.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Araraquara",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Araras",
+      "official_gazette_url": "https://assistechpublicacoes.com.br/app/pmararassp/diario-oficial"
+    },
+    {
+      "name": "Arco-Íris",
+      "official_gazette_url": "https://www.arcoiris.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Arealva",
+      "official_gazette_url": "https://www.arealva.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Areias",
+      "official_gazette_url": "https://www.areias.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Areiópolis",
+      "official_gazette_url": "https://www.areiopolis.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Ariranha",
+      "official_gazette_url": "https://www.ariranha.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Artur Nogueira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Arujá",
+      "official_gazette_url": "https://www.prefeituradearuja.sp.gov.br/"
+    },
+    {
+      "name": "Aspásia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Assis",
+      "official_gazette_url": "https://www.assis.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Atibaia",
+      "official_gazette_url": "https://www.atibaia.sp.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Auriflama",
+      "official_gazette_url": "https://www.auriflama.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Avaí",
+      "official_gazette_url": "https://www.avai.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Avanhandava",
+      "official_gazette_url": "https://www.avanhandava.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Avaré",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/avare"
+    },
+    {
+      "name": "Bady Bassitt",
+      "official_gazette_url": "https://www.badybassitt.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Balbinos",
+      "official_gazette_url": "https://www.balbinos.sp.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Bálsamo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bananal",
+      "official_gazette_url": "https://www.bananal.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Barão de Antonina",
+      "official_gazette_url": "https://www.baraodeantonina.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Barbosa",
+      "official_gazette_url": "https://www.barbosa.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Bariri",
+      "official_gazette_url": "https://www.bariri.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Barra Bonita",
+      "official_gazette_url": "https://www.barrabonita.sp.gov.br"
+    },
+    {
+      "name": "Barra do Chapéu",
+      "official_gazette_url": "https://www.barradochapeu.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Barra do Turvo",
+      "official_gazette_url": "https://www.barradoturvo.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Barretos",
+      "official_gazette_url": "https://www.barretos.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Barrinha",
+      "official_gazette_url": "https://portal.barrinha.sp.gov.br/"
+    },
+    {
+      "name": "Barueri",
+      "official_gazette_url": "https://portal.barueri.sp.gov.br/diario"
+    },
+    {
+      "name": "Bastos",
+      "official_gazette_url": "https://www.bastos.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Batatais",
+      "official_gazette_url": "https://www.batatais.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Bauru",
+      "official_gazette_url": "https://www2.bauru.sp.gov.br/juridico/diariooficial.aspx"
+    },
+    {
+      "name": "Bebedouro",
+      "official_gazette_url": "https://www.bebedouro.sp.gov.br/portal/"
+    },
+    {
+      "name": "Bento de Abreu",
+      "official_gazette_url": "https://www.bentodeabreu.sp.gov.br/imprensa/publicacoes-legais/"
+    },
+    {
+      "name": "Bernardino de Campos",
+      "official_gazette_url": "https://www.bernardinodecampos.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Bertioga",
+      "official_gazette_url": "https://www.bertioga.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Bilac",
+      "official_gazette_url": "https://www.bilac.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Birigui",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/birigui"
+    },
+    {
+      "name": "Biritiba-Mirim",
+      "official_gazette_url": "https://www.biritibamirim.sp.gov.br/publicacoes/"
+    },
+    {
+      "name": "Boa Esperança do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bocaina",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bofete",
+      "official_gazette_url": "https://www.bofete.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Boituva",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Jesus dos Perdões",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Bom Sucesso de Itararé",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Borá",
+      "official_gazette_url": "https://www.bora.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Boracéia",
+      "official_gazette_url": "https://www.boraceia.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Borborema",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Borebi",
+      "official_gazette_url": "https://s58.asp.srv.br/diariooficial.pm.borebi.sp/com.asp.diariooficial.diariooficialeletronico"
+    },
+    {
+      "name": "Botucatu",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/botucatu"
+    },
+    {
+      "name": "Bragança Paulista",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/braganca_paulista"
+    },
+    {
+      "name": "Braúna",
+      "official_gazette_url": "https://www.brauna.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Brejo Alegre",
+      "official_gazette_url": "http://www.brejoalegre.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Brodowski",
+      "official_gazette_url": "https://imprensaoficialmunicipal.com.br/brodowski"
+    },
+    {
+      "name": "Brotas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Buri",
+      "official_gazette_url": "https://www.buri.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Buritama",
+      "official_gazette_url": "https://buritama.sp.gov.br/wp-content/uploads/2020/12/diario_oficial.png"
+    },
+    {
+      "name": "Buritizal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cabrália Paulista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cabreúva",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/cabreuva"
+    },
+    {
+      "name": "Caçapava",
+      "official_gazette_url": "https://cacapava.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cachoeira Paulista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Caconde",
+      "official_gazette_url": "https://www.caconde.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Cafelândia",
+      "official_gazette_url": "https://www.cafelandia.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Caiabu",
+      "official_gazette_url": "https://www.caiabu.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Caieiras",
+      "official_gazette_url": "https://www.caieiras.sp.gov.br/"
+    },
+    {
+      "name": "Caiuá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cajamar",
+      "official_gazette_url": "https://cajamar.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Cajati",
+      "official_gazette_url": "https://www.cajati.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cajobi",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cajuru",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Campina do Monte Alegre",
+      "official_gazette_url": "https://www.campinadomontealegre.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Campinas",
+      "official_gazette_url": "https://portal-api.campinas.sp.gov.br"
+    },
+    {
+      "name": "Campo Limpo Paulista",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/campo_limpo_paulista"
+    },
+    {
+      "name": "Campos do Jordão",
+      "official_gazette_url": "https://www.camposdojordao.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Campos Novos Paulista",
+      "official_gazette_url": "https://www.camposnovospaulista.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cananéia",
+      "official_gazette_url": "https://cananeia.sp.gov.br#diario-oficial"
+    },
+    {
+      "name": "Canas",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cândido Mota",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cândido Rodrigues",
+      "official_gazette_url": "https://www.candidorodrigues.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Canitar",
+      "official_gazette_url": "https://www.canitar.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Capão Bonito",
+      "official_gazette_url": "https://capaobonito.sp.gov.br/publicacoes/"
+    },
+    {
+      "name": "Capela do Alto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Capivari",
+      "official_gazette_url": "https://capivari.sp.gov.br/portal/servicos/diario-oficial/"
+    },
+    {
+      "name": "Caraguatatuba",
+      "official_gazette_url": "https://diariooficial.caraguatatuba.sp.gov.br/public/consulta"
+    },
+    {
+      "name": "Carapicuíba",
+      "official_gazette_url": "https://diariooficial.carapicuiba.sp.gov.br/"
+    },
+    {
+      "name": "Cardoso",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/cardoso"
+    },
+    {
+      "name": "Casa Branca",
+      "official_gazette_url": "https://www.casabranca.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cássia dos Coqueiros",
+      "official_gazette_url": "https://cassiadoscoqueiros.sp.gov.br/transparencia/"
+    },
+    {
+      "name": "Castilho",
+      "official_gazette_url": "https://www.castilho.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Catanduva",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/catanduva"
+    },
+    {
+      "name": "Catiguá",
+      "official_gazette_url": "https://www.catigua.sp.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Cedral",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Cerqueira César",
+      "official_gazette_url": "https://www.cerqueiracesar.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cerquilho",
+      "official_gazette_url": "https://www.cerquilho.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cesário Lange",
+      "official_gazette_url": "https://www.cesariolange.sp.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Charqueada",
+      "official_gazette_url": "https://www.charqueada.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Chavantes",
+      "official_gazette_url": "https://www.chavantes.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Clementina",
+      "official_gazette_url": "https://www.clementina.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Colina",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Colômbia",
+      "official_gazette_url": "https://www.colombia.sp.gov.br/Noticia"
+    },
+    {
+      "name": "Conchal",
+      "official_gazette_url": "https://www.conchal.sp.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Conchas",
+      "official_gazette_url": "https://www.conchas.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Cordeirópolis",
+      "official_gazette_url": "https://www.cordeiropolis.sp.gov.br/dobradinha-de-ouro-cordeiropolense-conquista-dois-campeonatos-neste-fim-de-semana/"
+    },
+    {
+      "name": "Coroados",
+      "official_gazette_url": "https://www.coroados.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Coronel Macedo",
+      "official_gazette_url": "http://www.coronelmacedo.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Corumbataí",
+      "official_gazette_url": "https://www.corumbatai.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Cosmópolis",
+      "official_gazette_url": "https://cosmopolis.sp.gov.br/doacao-de-sangue/"
+    },
+    {
+      "name": "Cosmorama",
+      "official_gazette_url": "http://www.cosmorama.sp.gov.br/error.jsf"
+    },
+    {
+      "name": "Cotia",
+      "official_gazette_url": "https://cotia.sp.gov.br/transparencia-covid19/"
+    },
+    {
+      "name": "Cravinhos",
+      "official_gazette_url": "https://cravinhos.sp.gov.br/"
+    },
+    {
+      "name": "Cristais Paulista",
+      "official_gazette_url": "https://www.cristaispaulista.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Cruzália",
+      "official_gazette_url": "https://www.cruzalia.sp.gov.br/"
+    },
+    {
+      "name": "Cruzeiro",
+      "official_gazette_url": "https://www.cruzeiro.sp.gov.br/documento-tecnico-covid-19-para-pessoas-com-comorbidades/"
+    },
+    {
+      "name": "Cubatão",
+      "official_gazette_url": "https://diariooficial.cubatao.sp.gov.br/"
+    },
+    {
+      "name": "Cunha",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/cunha"
+    },
+    {
+      "name": "Descalvado",
+      "official_gazette_url": "https://www.descalvado.sp.gov.br/novoportal/prefeitura/"
+    },
+    {
+      "name": "Diadema",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Dirce Reis",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/dirce_reis"
+    },
+    {
+      "name": "Divinolândia",
+      "official_gazette_url": "https://www.divinolandia.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Dobrada",
+      "official_gazette_url": "https://www.dobrada.sp.gov.br/"
+    },
+    {
+      "name": "Dois Córregos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Dolcinópolis",
+      "official_gazette_url": "https://www.dolcinopolis.sp.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Dourado",
+      "official_gazette_url": "https://www.dourado.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Dracena",
+      "official_gazette_url": "https://www.dracena.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Duartina",
+      "official_gazette_url": "https://www.duartina.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Dumont",
+      "official_gazette_url": "https://www.dumont.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Echaporã",
+      "official_gazette_url": "https://www.echapora.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Eldorado",
+      "official_gazette_url": "https://www.eldorado.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Elias Fausto",
+      "official_gazette_url": "https://www.eliasfausto.sp.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Elisiário",
+      "official_gazette_url": "https://imprensaoficialmunicipal.com.br/elisiario"
+    },
+    {
+      "name": "Embaúba",
+      "official_gazette_url": "https://www.embauba.sp.gov.br/transparencia/diario-oficial-eletronico"
+    },
+    {
+      "name": "Embu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Embu-Guaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Emilianópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Engenheiro Coelho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Espírito Santo do Pinhal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Espírito Santo do Turvo",
+      "official_gazette_url": "https://www.espiritosantodoturvo.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Estiva Gerbi",
+      "official_gazette_url": "https://www.estivagerbi.sp.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Estrela d'Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Estrela do Norte",
+      "official_gazette_url": "https://www.estreladonorte.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Euclides da Cunha Paulista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Fartura",
+      "official_gazette_url": "https://www.fartura.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Fernando Prestes",
+      "official_gazette_url": "https://www.fernandoprestes.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Fernandópolis",
+      "official_gazette_url": "https://www.fernandopolis.sp.gov.br/publicacoes/?categoria=diario-oficial&titulo=&objeto=&data=&pagina=1"
+    },
+    {
+      "name": "Fernão",
+      "official_gazette_url": "https://www.fernao.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ferraz de Vasconcelos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Flora Rica",
+      "official_gazette_url": "https://www.florarica.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Floreal",
+      "official_gazette_url": "https://www.floreal.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Florínia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Flórida Paulista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Franca",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Francisco Morato",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Franco da Rocha",
+      "official_gazette_url": "https://www.francodarocha.sp.gov.br/noticia/2016/06/06/diario-oficial-da-uniao-publica-portaria-que-reconhece-estado-de-emergencia-de-franco-da-rocha-por-causa-das-enchentes/"
+    },
+    {
+      "name": "Gabriel Monteiro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Gália",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/galia"
+    },
+    {
+      "name": "Garça",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/garca"
+    },
+    {
+      "name": "Gastão Vidigal",
+      "official_gazette_url": "https://www.gastaovidigal.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Gavião Peixoto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "General Salgado",
+      "official_gazette_url": "https://www.generalsalgado.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Getulina",
+      "official_gazette_url": "https://www.getulina.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Glicério",
+      "official_gazette_url": "https://www.glicerio.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Guaiçara",
+      "official_gazette_url": "https://www.guaicara.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Guaimbê",
+      "official_gazette_url": "https://www.guaimbe.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Guaíra",
+      "official_gazette_url": "https://www.guaira.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Guapiaçu",
+      "official_gazette_url": "https://guapiacu.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Guapiara",
+      "official_gazette_url": "https://www.guapiara.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Guará",
+      "official_gazette_url": "https://www.guara.sp.gov.br/"
+    },
+    {
+      "name": "Guaraçaí",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/guaracai"
+    },
+    {
+      "name": "Guaraci",
+      "official_gazette_url": "https://www.guaraci.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Guarani d'Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Guarantã",
+      "official_gazette_url": "https://www.guaranta.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Guararapes",
+      "official_gazette_url": "https://www.guararapes.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Guararema",
+      "official_gazette_url": "https://www.guararema.sp.gov.br/diariooficial"
+    },
+    {
+      "name": "Guaratinguetá",
+      "official_gazette_url": "https://guaratingueta.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Guareí",
+      "official_gazette_url": "https://www.guarei.sp.gov.br/"
+    },
+    {
+      "name": "Guariba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Guarujá",
+      "official_gazette_url": "https://www.guaruja.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Guarulhos",
+      "official_gazette_url": "https://diariooficial.guarulhos.sp.gov.br/index.php"
+    },
+    {
+      "name": "Guatapará",
+      "official_gazette_url": "https://guatapara.sp.gov.br/transparencia/"
+    },
+    {
+      "name": "Guzolândia",
+      "official_gazette_url": "https://guzolandia.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Herculândia",
+      "official_gazette_url": "https://www.herculandia.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Holambra",
+      "official_gazette_url": "https://www.holambra.sp.gov.br/diario-oficial.html"
+    },
+    {
+      "name": "Hortolândia",
+      "official_gazette_url": "https://diariooficial.hortolandia.sp.gov.br/"
+    },
+    {
+      "name": "Iacanga",
+      "official_gazette_url": "https://www.iacanga.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Iacri",
+      "official_gazette_url": "https://www.iacri.sp.gov.br/transparencia/"
+    },
+    {
+      "name": "Iaras",
+      "official_gazette_url": "https://www.iaras.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ibaté",
+      "official_gazette_url": "https://www.ibate.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Ibirá",
+      "official_gazette_url": "https://www.ibira.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Ibirarema",
+      "official_gazette_url": "https://ibirarema.sp.gov.br/diarios_oficiais/diario-oficial-de-municipio/"
+    },
+    {
+      "name": "Ibitinga",
+      "official_gazette_url": "https://www.ibitinga.instarbr.com.br/portal/diario-oficial"
+    },
+    {
+      "name": "Ibiúna",
+      "official_gazette_url": "https://ibiuna.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Icém",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Iepê",
+      "official_gazette_url": "https://www.iepe.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Igaraçu do Tietê",
+      "official_gazette_url": "https://www.igaracudotiete.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Igarapava",
+      "official_gazette_url": "https://www.igarapava.sp.gov.br/"
+    },
+    {
+      "name": "Igaratá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Iguape",
+      "official_gazette_url": "https://www.iguape.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Ilha Comprida",
+      "official_gazette_url": "https://www.ilhacomprida.sp.gov.br/Erro/?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Ilha Solteira",
+      "official_gazette_url": "https://ilhasolteira.sp.gov.br#diario-oficial"
+    },
+    {
+      "name": "Ilhabela",
+      "official_gazette_url": "https://www.ilhabela.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Indaiatuba",
+      "official_gazette_url": "https://www.indaiatuba.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Indiana",
+      "official_gazette_url": "https://www.indiana.sp.gov.br"
+    },
+    {
+      "name": "Indiaporã",
+      "official_gazette_url": "https://www.indiapora.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Inúbia Paulista",
+      "official_gazette_url": "https://www.inubiapaulista.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ipauçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Iperó",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ipeúna",
+      "official_gazette_url": "https://imprensaoficialmunicipal.com.br/ipeuna"
+    },
+    {
+      "name": "Ipiguá",
+      "official_gazette_url": "https://www.ipigua.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Iporanga",
+      "official_gazette_url": "https://iporanga.sp.gov.br/site3/"
+    },
+    {
+      "name": "Ipuã",
+      "official_gazette_url": "https://www.ipua.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Iracemápolis",
+      "official_gazette_url": "https://www.iracemapolis.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Irapuã",
+      "official_gazette_url": "https://irapua.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Irapuru",
+      "official_gazette_url": "http://www.irapuru.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Itaberá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itaí",
+      "official_gazette_url": "https://www.itai.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Itajobi",
+      "official_gazette_url": "https://www.itajobi.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Itaju",
+      "official_gazette_url": "https://www.itaju.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Itanhaém",
+      "official_gazette_url": "https://www.itanhaem.sp.gov.br/boletim-oficial/edicao-970/"
+    },
+    {
+      "name": "Itaóca",
+      "official_gazette_url": "https://www.itaoca.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Itapecerica da Serra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itapetininga",
+      "official_gazette_url": "https://www.itapetininga.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Itapeva",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/itapeva"
+    },
+    {
+      "name": "Itapevi",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/itapevi"
+    },
+    {
+      "name": "Itapira",
+      "official_gazette_url": "https://itapira.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Itapirapuã Paulista",
+      "official_gazette_url": "https://www.itapirapuapaulista.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Itápolis",
+      "official_gazette_url": "https://www.itapolis.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Itaporanga",
+      "official_gazette_url": "https://www.itaporanga.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Itapuí",
+      "official_gazette_url": "https://www.itapui.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Itapura",
+      "official_gazette_url": "https://www.itapura.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Itaquaquecetuba",
+      "official_gazette_url": "https://www.itaquaquecetuba.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Itararé",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Itariri",
+      "official_gazette_url": "https://www.itariri.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Itatiba",
+      "official_gazette_url": "https://www.itatiba.sp.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Itatinga",
+      "official_gazette_url": "https://www.itatinga.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Itirapina",
+      "official_gazette_url": "https://www.itirapina.sp.gov.br/"
+    },
+    {
+      "name": "Itirapuã",
+      "official_gazette_url": "https://s58.asp.srv.br/diariooficial.pm.itirapua.sp/com.asp.diariooficial.diariooficialeletronico"
+    },
+    {
+      "name": "Itobi",
+      "official_gazette_url": "https://www.itobi.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Itu",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/itu"
+    },
+    {
+      "name": "Itupeva",
+      "official_gazette_url": "https://www.itupeva.sp.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Ituverava",
+      "official_gazette_url": "https://www.ituverava.sp.gov.br/diario-oficial-eletronico/"
+    },
+    {
+      "name": "Jaborandi",
+      "official_gazette_url": "https://imprensaoficialmunicipal.com.br/jaborandi"
+    },
+    {
+      "name": "Jaboticabal",
+      "official_gazette_url": "https://www.jaboticabal.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Jacareí",
+      "official_gazette_url": "https://www.jacarei.sp.gov.br/transparencia/"
+    },
+    {
+      "name": "Jaci",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jacupiranga",
+      "official_gazette_url": "https://www.jacupiranga.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Jaguariúna",
+      "official_gazette_url": "https://municipio.jaguariuna.sp.gov.br/transparencia/"
+    },
+    {
+      "name": "Jales",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jambeiro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jandira",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/jandira"
+    },
+    {
+      "name": "Jardinópolis",
+      "official_gazette_url": "https://www.jardinopolis.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Jarinu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jaú",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/jau"
+    },
+    {
+      "name": "Jeriquara",
+      "official_gazette_url": "https://www.jeriquara.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Joanópolis",
+      "official_gazette_url": "https://www.joanopolis.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "João Ramalho",
+      "official_gazette_url": "https://www.joaoramalho.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "José Bonifácio",
+      "official_gazette_url": "https://www.josebonifacio.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Júlio Mesquita",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Jumirim",
+      "official_gazette_url": "https://www.jumirim.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Jundiaí",
+      "official_gazette_url": "https://imprensaoficial.jundiai.sp.gov.br/"
+    },
+    {
+      "name": "Junqueirópolis",
+      "official_gazette_url": "https://www.junqueiropolis.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Juquiá",
+      "official_gazette_url": "https://www.juquia.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Juquitiba",
+      "official_gazette_url": "https://juquitiba.sp.gov.br/legislacao/"
+    },
+    {
+      "name": "Lagoinha",
+      "official_gazette_url": "https://www.lagoinha.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Laranjal Paulista",
+      "official_gazette_url": "https://www.laranjalpaulista.sp.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Lavínia",
+      "official_gazette_url": "http://www.lavinia.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Lavrinhas",
+      "official_gazette_url": "https://www.lavrinhas.sp.gov.br/transparencia/"
+    },
+    {
+      "name": "Leme",
+      "official_gazette_url": "https://www.leme.sp.gov.br/index.php?publicacoes/diario-oficial"
+    },
+    {
+      "name": "Lençóis Paulista",
+      "official_gazette_url": "https://www.lencoispaulista.sp.gov.br/transparencia"
+    },
+    {
+      "name": "Limeira",
+      "official_gazette_url": "https://www.limeira.sp.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Lindóia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Lins",
+      "official_gazette_url": "https://www.lins.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Lorena",
+      "official_gazette_url": "http://www.lorena.sp.gov.br/transparencia/"
+    },
+    {
+      "name": "Lourdes",
+      "official_gazette_url": "https://www.lourdes.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Louveira",
+      "official_gazette_url": "https://www.louveira.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Lucélia",
+      "official_gazette_url": "https://www.lucelia.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Lucianópolis",
+      "official_gazette_url": "https://www.lucianopolis.sp.gov.br/servicos/diario-oficial-eletronico"
+    },
+    {
+      "name": "Luís Antônio",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Luiziânia",
+      "official_gazette_url": "https://www.luiziania.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Lupércio",
+      "official_gazette_url": "https://www.lupercio.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Lutécia",
+      "official_gazette_url": "https://www.lutecia.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Macatuba",
+      "official_gazette_url": "https://www.diariomunicipal.com.br/macatuba"
+    },
+    {
+      "name": "Macaubal",
+      "official_gazette_url": "https://macaubal.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Macedônia",
+      "official_gazette_url": "https://www.macedonia.sp.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Magda",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mairinque",
+      "official_gazette_url": "https://www.mairinque.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Mairiporã",
+      "official_gazette_url": "https://www.mairipora.sp.gov.br/"
+    },
+    {
+      "name": "Manduri",
+      "official_gazette_url": "https://www.manduri.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Marabá Paulista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Maracaí",
+      "official_gazette_url": "https://www.maracai.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Marapoama",
+      "official_gazette_url": "https://www.marapoama.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Mariápolis",
+      "official_gazette_url": "https://diariooficial.novoserv.com.br/pesquisadiariooficial.aspx?pmmariapolis"
+    },
+    {
+      "name": "Marília",
+      "official_gazette_url": "https://www.marilia.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Marinópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Martinópolis",
+      "official_gazette_url": "https://www.martinopolis.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Matão",
+      "official_gazette_url": "https://www.matao.sp.gov.br/diariooficial"
+    },
+    {
+      "name": "Mauá",
+      "official_gazette_url": "https://dom.maua.sp.gov.br/"
+    },
+    {
+      "name": "Mendonça",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Meridiano",
+      "official_gazette_url": "https://meridiano.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Mesópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Miguelópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mineiros do Tietê",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mira Estrela",
+      "official_gazette_url": "https://www.miraestrela.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Miracatu",
+      "official_gazette_url": "https://diario.miracatu.sp.gov.br/"
+    },
+    {
+      "name": "Mirandópolis",
+      "official_gazette_url": "https://www.mirandopolis.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Mirante do Paranapanema",
+      "official_gazette_url": "https://www.mirantedoparanapanema.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Mirassol",
+      "official_gazette_url": "https://www.mirassol.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Mirassolândia",
+      "official_gazette_url": "https://www.mirassolandia.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Mococa",
+      "official_gazette_url": "https://www.mococa.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Mogi das Cruzes",
+      "official_gazette_url": "https://www.mogidascruzes.sp.gov.br/noticias"
+    },
+    {
+      "name": "Mogi-Guaçu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Mogi-Mirim",
+      "official_gazette_url": "https://www.mogimirim.sp.gov.br/transparencia"
+    },
+    {
+      "name": "Mombuca",
+      "official_gazette_url": "https://www.mombuca.sp.gov.br/site/Home-Level_Detail"
+    },
+    {
+      "name": "Monções",
+      "official_gazette_url": "https://www.moncoes.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Mongaguá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Monte Alegre do Sul",
+      "official_gazette_url": "https://www.montealegredosul.sp.gov.br/atos-oficiais"
+    },
+    {
+      "name": "Monte Alto",
+      "official_gazette_url": "https://www.montealto.instaridc.com.br/portal/diario-oficial"
+    },
+    {
+      "name": "Monte Aprazível",
+      "official_gazette_url": "https://www.monteaprazivel.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Monte Azul Paulista",
+      "official_gazette_url": "https://www.monteazulpaulista.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Monte Castelo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Monte Mor",
+      "official_gazette_url": "https://www.montemor.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Monteiro Lobato",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/monteiro_lobato"
+    },
+    {
+      "name": "Morro Agudo",
+      "official_gazette_url": "https://www.morroagudo.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Morungaba",
+      "official_gazette_url": "https://www.morungaba.sp.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Motuca",
+      "official_gazette_url": "https://imprensaoficialmunicipal.com.br/motuca"
+    },
+    {
+      "name": "Murutinga do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nantes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Narandiba",
+      "official_gazette_url": "https://www.donarandiba.com.br/paginas/diario.php"
+    },
+    {
+      "name": "Natividade da Serra",
+      "official_gazette_url": "https://www.natividadedaserra.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Nazaré Paulista",
+      "official_gazette_url": "https://www.nazarepaulista.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Neves Paulista",
+      "official_gazette_url": "https://www.nevespaulista.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Nhandeara",
+      "official_gazette_url": "https://www.nhandeara.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Nipoã",
+      "official_gazette_url": "https://www.nipoa.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Nova Aliança",
+      "official_gazette_url": "https://novaalianca.sp.gov.br/imprensa/publicacoes-legais/"
+    },
+    {
+      "name": "Nova Campina",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Canaã Paulista",
+      "official_gazette_url": "https://novacanaapaulista.sp.gov.br/transparencia/"
+    },
+    {
+      "name": "Nova Castilho",
+      "official_gazette_url": "https://www.novacastilho.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Nova Europa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Granada",
+      "official_gazette_url": "https://www.novagranada.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Nova Guataporanga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nova Independência",
+      "official_gazette_url": "https://www.novaindependencia.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Nova Luzitânia",
+      "official_gazette_url": "https://www.novaluzitania.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Nova Odessa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Novais",
+      "official_gazette_url": "https://www.novais.sp.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Novo Horizonte",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Nuporanga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ocauçu",
+      "official_gazette_url": "https://www.ocaucu.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Óleo",
+      "official_gazette_url": "https://www.pmoleo.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Olímpia",
+      "official_gazette_url": "https://www.olimpia.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Onda Verde",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Oriente",
+      "official_gazette_url": "https://www.oriente.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Orindiúva",
+      "official_gazette_url": "https://orindiuva.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Orlândia",
+      "official_gazette_url": "https://www.orlandia.sp.gov.br/"
+    },
+    {
+      "name": "Osasco",
+      "official_gazette_url": "https://osasco.sp.gov.br/imprensa-oficial/"
+    },
+    {
+      "name": "Oscar Bressane",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Osvaldo Cruz",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ourinhos",
+      "official_gazette_url": "https://www.ourinhos.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Ouro Verde",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ouroeste",
+      "official_gazette_url": "https://www.ouroeste.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Pacaembu",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Palestina",
+      "official_gazette_url": "https://ediariooficial.bwinformatica.com.br/Portal/DiarioOficial/?idEmpresa=5"
+    },
+    {
+      "name": "Palmares Paulista",
+      "official_gazette_url": "https://imprensaoficialmunicipal.com.br/palmarespaulista"
+    },
+    {
+      "name": "Palmeira d'Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Palmital",
+      "official_gazette_url": "https://www.palmital.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Panorama",
+      "official_gazette_url": "https://www.panorama.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Paraguaçu Paulista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Paraibuna",
+      "official_gazette_url": "https://paraibuna.sp.gov.br/diario-oficial-eletronico/diario-oficial-eletronico"
+    },
+    {
+      "name": "Paraíso",
+      "official_gazette_url": "https://www.paraiso.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Paranapanema",
+      "official_gazette_url": "https://www.paranapanema.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Paranapuã",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Parapuã",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pardinho",
+      "official_gazette_url": "https://www.pardinho.sp.gov.br/transparencia/"
+    },
+    {
+      "name": "Pariquera-Açu",
+      "official_gazette_url": "https://www.pariqueraacu.sp.gov.br/site/2021/atos-oficiais/"
+    },
+    {
+      "name": "Parisi",
+      "official_gazette_url": "https://www.parisi.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Patrocínio Paulista",
+      "official_gazette_url": "https://www.patrociniopaulista.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Paulicéia",
+      "official_gazette_url": "https://imprensaoficialmunicipal.com.br/pauliceia"
+    },
+    {
+      "name": "Paulínia",
+      "official_gazette_url": "https://www.paulinia.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Paulistânia",
+      "official_gazette_url": "https://www.paulistania.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Paulo de Faria",
+      "official_gazette_url": "https://www.paulodefaria.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Pederneiras",
+      "official_gazette_url": "https://www.pederneiras.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Pedra Bela",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pedranópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pedregulho",
+      "official_gazette_url": "https://www.pedregulho.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Pedreira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pedrinhas Paulista",
+      "official_gazette_url": "https://www.pedrinhaspaulista.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Pedro de Toledo",
+      "official_gazette_url": "https://www.pedrodetoledo.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Penápolis",
+      "official_gazette_url": "https://www.penapolis.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Pereira Barreto",
+      "official_gazette_url": "https://pereirabarreto.sp.gov.br/noticias/prefeitura/diario-oficial-eletronico-nao-tera-edicao-nesta-quarta-feira-01-06-2016"
+    },
+    {
+      "name": "Pereiras",
+      "official_gazette_url": "https://www.pereiras.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Peruíbe",
+      "official_gazette_url": "https://www.peruibe.sp.gov.br/diario-oficial-do-municipio-dom-e/"
+    },
+    {
+      "name": "Piacatu",
+      "official_gazette_url": "https://www.piacatu.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Piedade",
+      "official_gazette_url": "https://www.piedade.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Pilar do Sul",
+      "official_gazette_url": "https://www.pilardosul.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Pindamonhangaba",
+      "official_gazette_url": "https://www.pindamonhangaba.sp.gov.br/Erro/?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Pindorama",
+      "official_gazette_url": "https://www.pindorama.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Pinhalzinho",
+      "official_gazette_url": "https://www.pinhalzinho.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Piquerobi",
+      "official_gazette_url": "http://www.piquerobi.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Piquete",
+      "official_gazette_url": "https://www.piquete.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Piracaia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Piracicaba",
+      "official_gazette_url": "https://piracicaba.sp.gov.br/noticias/diario-oficial-passa-a-ser-publicado-apenas-em-formato-eletronico/"
+    },
+    {
+      "name": "Piraju",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pirajuí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pirangi",
+      "official_gazette_url": "https://www.pirangi.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Pirapora do Bom Jesus",
+      "official_gazette_url": "https://www.piraporadobomjesus.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Pirapozinho",
+      "official_gazette_url": "https://www.pirapozinho.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Pirassununga",
+      "official_gazette_url": "https://www.pirassununga.sp.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Piratininga",
+      "official_gazette_url": "https://www.piratininga.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Pitangueiras",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Planalto",
+      "official_gazette_url": "https://www.planalto.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Platina",
+      "official_gazette_url": "https://www.platina.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Poá",
+      "official_gazette_url": "https://poa.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Poloni",
+      "official_gazette_url": "https://www.poloni.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Pompéia",
+      "official_gazette_url": "https://www.pompeia.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Pongaí",
+      "official_gazette_url": "https://www.pongai.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Pontal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pontalinda",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Pontes Gestal",
+      "official_gazette_url": "https://www.pontesgestal.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Populina",
+      "official_gazette_url": "https://www.populina.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Porangaba",
+      "official_gazette_url": "http://www.porangaba.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Porto Feliz",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Porto Ferreira",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Potim",
+      "official_gazette_url": "https://www.potim.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Potirendaba",
+      "official_gazette_url": "https://www.potirendaba.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Pracinha",
+      "official_gazette_url": "https://www.pracinha.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Pradópolis",
+      "official_gazette_url": "https://diariooficial.pradopolis.sp.gov.br/"
+    },
+    {
+      "name": "Praia Grande",
+      "official_gazette_url": "https://www.praiagrande.sp.gov.br/publicacoes/"
+    },
+    {
+      "name": "Pratânia",
+      "official_gazette_url": "https://www.pratania.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Presidente Alves",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Presidente Bernardes",
+      "official_gazette_url": "https://www.presidentebernardes.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Presidente Epitácio",
+      "official_gazette_url": "https://www.presidenteepitacio.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Presidente Prudente",
+      "official_gazette_url": "https://www.presidenteprudente.sp.gov.br/transparencia/status/404"
+    },
+    {
+      "name": "Presidente Venceslau",
+      "official_gazette_url": "https://www.presidentevenceslau.sp.gov.br/pagina/principal"
+    },
+    {
+      "name": "Promissão",
+      "official_gazette_url": "https://www.promissao.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Quadra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Quatá",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/quata"
+    },
+    {
+      "name": "Queiroz",
+      "official_gazette_url": "https://www.queiroz.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Queluz",
+      "official_gazette_url": "https://www.queluz.sp.gov.br/transparencia/"
+    },
+    {
+      "name": "Quintana",
+      "official_gazette_url": "https://www.quintana.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Rafard",
+      "official_gazette_url": "https://rafard.sp.gov.br/transparencia/publicacoes-e-concursos/publicacoes/"
+    },
+    {
+      "name": "Rancharia",
+      "official_gazette_url": "https://www.rancharia.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Redenção da Serra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Regente Feijó",
+      "official_gazette_url": "https://www.regentefeijo.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Reginópolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Registro",
+      "official_gazette_url": "https://diario.registro.sp.gov.br/"
+    },
+    {
+      "name": "Restinga",
+      "official_gazette_url": "https://www.restinga.sp.gov.br/"
+    },
+    {
+      "name": "Ribeira",
+      "official_gazette_url": "http://institucionalribeira.sp.gov.br/transparencia/"
+    },
+    {
+      "name": "Ribeirão Bonito",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ribeirão Branco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ribeirão Corrente",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Ribeirão do Sul",
+      "official_gazette_url": "https://www.ribeiraodosul.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ribeirão dos Índios",
+      "official_gazette_url": "https://imprensaoficialmunicipal.com.br/ribeirao_dos_indios"
+    },
+    {
+      "name": "Ribeirão Grande",
+      "official_gazette_url": "https://ribeiraogrande.sp.gov.br/publicacoes/"
+    },
+    {
+      "name": "Ribeirão Pires",
+      "official_gazette_url": "https://www.ribeiraopires.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Ribeirão Preto",
+      "official_gazette_url": "https://www.ribeiraopreto.sp.gov.br/transparencia/"
+    },
+    {
+      "name": "Rifaina",
+      "official_gazette_url": "https://www.rifaina.sp.gov.br/"
+    },
+    {
+      "name": "Rincão",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/rincao"
+    },
+    {
+      "name": "Rinópolis",
+      "official_gazette_url": "https://www.rinopolis.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Rio Claro",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/rio_claro"
+    },
+    {
+      "name": "Rio das Pedras",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Rio Grande da Serra",
+      "official_gazette_url": "https://www.riograndedaserra.sp.gov.br/noticia/diario-oficial-04-08-2022-edicao-no-01/"
+    },
+    {
+      "name": "Riolândia",
+      "official_gazette_url": "https://riolandia.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Riversul",
+      "official_gazette_url": "https://www.riversul.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Rosana",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/rosana"
+    },
+    {
+      "name": "Roseira",
+      "official_gazette_url": "https://www.roseira.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Rubiácea",
+      "official_gazette_url": "https://www.rubiacea.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Rubinéia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sabino",
+      "official_gazette_url": "https://www.sabino.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Sagres",
+      "official_gazette_url": "https://www.sagres.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Sales",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sales Oliveira",
+      "official_gazette_url": "https://www.salesoliveira.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Salesópolis",
+      "official_gazette_url": "https://www.salesopolis.sp.gov.br/"
+    },
+    {
+      "name": "Salmourão",
+      "official_gazette_url": "https://www.salmourao.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Saltinho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Salto",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/salto"
+    },
+    {
+      "name": "Salto de Pirapora",
+      "official_gazette_url": "https://www.saltodepirapora.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Salto Grande",
+      "official_gazette_url": "https://www.pmsaltogrande.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Sandovalina",
+      "official_gazette_url": "https://www.sandovalina.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Santa Adélia",
+      "official_gazette_url": "https://www.santaadelia.sp.gov.br/Erro?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santa Albertina",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Bárbara d'Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Branca",
+      "official_gazette_url": "https://santabranca.sp.gov.br/diario-oficial-2022/"
+    },
+    {
+      "name": "Santa Clara d'Oeste",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Cruz da Conceição",
+      "official_gazette_url": "https://santacruzdaconceicao.sp.gov.br/legislacao/publicacoes/"
+    },
+    {
+      "name": "Santa Cruz da Esperança",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Cruz das Palmeiras",
+      "official_gazette_url": "https://www.santacruzdaspalmeiras.sp.gov.br/publicacoes"
+    },
+    {
+      "name": "Santa Cruz do Rio Pardo",
+      "official_gazette_url": "https://www.santacruzdoriopardo.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santa Ernestina",
+      "official_gazette_url": "https://www.santaernestina.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Santa Fé do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Gertrudes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Isabel",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Lúcia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Maria da Serra",
+      "official_gazette_url": "https://www.santamariadaserra.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Santa Mercedes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Rita d'Oeste",
+      "official_gazette_url": "https://www.santaritadoeste.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Santa Rita do Passa Quatro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Rosa de Viterbo",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santa Salete",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santana da Ponte Pensa",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santana de Parnaíba",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Anastácio",
+      "official_gazette_url": "https://www.santoanastacio.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Santo André",
+      "official_gazette_url": "http://web.santoandre.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Santo Antônio da Alegria",
+      "official_gazette_url": "https://www.santoantoniodaalegria.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Santo Antônio de Posse",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio do Aracanguá",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio do Jardim",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Antônio do Pinhal",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santo Expedito",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santópolis do Aguapeí",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Santos",
+      "official_gazette_url": "https://diariooficial.santos.sp.gov.br"
+    },
+    {
+      "name": "São Bento do Sapucaí",
+      "official_gazette_url": "https://saobentodosapucai.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "São Bernardo do Campo",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/sao_bernardo_do_campo"
+    },
+    {
+      "name": "São Caetano do Sul",
+      "official_gazette_url": "https://www.saocaetanodosul.sp.gov.br/login"
+    },
+    {
+      "name": "São Carlos",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Francisco",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João da Boa Vista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João das Duas Pontes",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João de Iracema",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São João do Pau d'Alho",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Joaquim da Barra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José da Bela Vista",
+      "official_gazette_url": "https://www.saojosedabelavista.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São José do Barreiro",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José do Rio Pardo",
+      "official_gazette_url": "https://saojosedoriopardo.sp.gov.br/publicacoes-oficiais-decretos-home/"
+    },
+    {
+      "name": "São José do Rio Preto",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São José dos Campos",
+      "official_gazette_url": "https://diariodomunicipio.sjc.sp.gov.br"
+    },
+    {
+      "name": "São Lourenço da Serra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Luís do Paraitinga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Manuel",
+      "official_gazette_url": "http://www.saomanuel.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "São Miguel Arcanjo",
+      "official_gazette_url": "https://www.saomiguelarcanjo.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "São Paulo",
+      "official_gazette_url": "https://www.sp.gov.br/sp"
+    },
+    {
+      "name": "São Pedro",
+      "official_gazette_url": "https://www.saopedro.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "São Pedro do Turvo",
+      "official_gazette_url": "https://www.saopedrodoturvo.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "São Roque",
+      "official_gazette_url": "https://www.saoroque.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "São Sebastião",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Sebastião da Grama",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Simão",
+      "official_gazette_url": null
+    },
+    {
+      "name": "São Vicente",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Sarapuí",
+      "official_gazette_url": "https://www.sarapui.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Sarutaiá",
+      "official_gazette_url": "https://www.sarutaia.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Sebastianópolis do Sul",
+      "official_gazette_url": "https://www.sebastianopolisdosul.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Serra Azul",
+      "official_gazette_url": "https://serraazul.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Serra Negra",
+      "official_gazette_url": "https://www.serranegra.sp.gov.br/Erro/?aspxerrorpath=/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Serrana",
+      "official_gazette_url": "https://www.serrana.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Sertãozinho",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/sertaozinho"
+    },
+    {
+      "name": "Sete Barras",
+      "official_gazette_url": "https://www.setebarras.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Severínia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Silveiras",
+      "official_gazette_url": "https://silveiras.sp.gov.br/site/"
+    },
+    {
+      "name": "Socorro",
+      "official_gazette_url": "https://diariooficial.socorro.sp.gov.br/"
+    },
+    {
+      "name": "Sorocaba",
+      "official_gazette_url": "https://sorocaba.sp.gov.br/transparencia/"
+    },
+    {
+      "name": "Sud Mennucci",
+      "official_gazette_url": "https://www.sudmennucci.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Sumaré",
+      "official_gazette_url": "https://www.sumare.sp.gov.br/Diario.Oficial.php?edicao=todas"
+    },
+    {
+      "name": "Suzanápolis",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Suzano",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Tabapuã",
+      "official_gazette_url": "https://www.tabapua.sp.gov.br/transparencia/diario-oficial"
+    },
+    {
+      "name": "Tabatinga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Taboão da Serra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Taciba",
+      "official_gazette_url": "https://www.taciba.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Taguaí",
+      "official_gazette_url": "https://www.taguai.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Taiaçu",
+      "official_gazette_url": "https://www.taiacu.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Taiúva",
+      "official_gazette_url": "https://www.taiuva.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Tambaú",
+      "official_gazette_url": "https://www.tambau.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Tanabi",
+      "official_gazette_url": "https://tanabi.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Tapiraí",
+      "official_gazette_url": "https://www.tapirai.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Tapiratiba",
+      "official_gazette_url": "https://www.tapiratiba.sp.gov.br/"
+    },
+    {
+      "name": "Taquaral",
+      "official_gazette_url": "https://www.taquaral.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Taquaritinga",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Taquarituba",
+      "official_gazette_url": "https://www.taquarituba.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Taquarivaí",
+      "official_gazette_url": "https://www.taquarivai.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Tarabai",
+      "official_gazette_url": "https://www.tarabai.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Tarumã",
+      "official_gazette_url": "https://www.taruma.sp.gov.br/publicacoes"
+    },
+    {
+      "name": "Tatuí",
+      "official_gazette_url": "https://tatui.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Taubaté",
+      "official_gazette_url": "https://plenussistemas.dioenet.com.br/list/taubate"
+    },
+    {
+      "name": "Tejupá",
+      "official_gazette_url": "https://www.tejupa.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Teodoro Sampaio",
+      "official_gazette_url": "https://www.teodorosampaio.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Terra Roxa",
+      "official_gazette_url": "https://www.terraroxa.sp.gov.br/portal/diario-oficial/"
+    },
+    {
+      "name": "Tietê",
+      "official_gazette_url": "https://www.tiete.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Timburi",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Torre de Pedra",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Torrinha",
+      "official_gazette_url": "https://www.torrinha.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Trabiju",
+      "official_gazette_url": "https://trabiju.sp.gov.br/cidadao/pnab/publicacoes/"
+    },
+    {
+      "name": "Tremembé",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/tremembe"
+    },
+    {
+      "name": "Três Fronteiras",
+      "official_gazette_url": "https://www.tresfronteiras.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Tuiuti",
+      "official_gazette_url": "https://tuiuti.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Tupã",
+      "official_gazette_url": "https://www.tupa.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Tupi Paulista",
+      "official_gazette_url": "https://www.tupipaulista.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Turiúba",
+      "official_gazette_url": "https://www.turiuba.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Turmalina",
+      "official_gazette_url": "https://www.turmalina.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ubarana",
+      "official_gazette_url": "https://www.ubarana.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Ubatuba",
+      "official_gazette_url": "https://www.ubatuba.sp.gov.br/diario-oficial/"
+    },
+    {
+      "name": "Ubirajara",
+      "official_gazette_url": "https://www.ubirajara.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Uchoa",
+      "official_gazette_url": "https://www.uchoa.sp.gov.br/transparencia"
+    },
+    {
+      "name": "União Paulista",
+      "official_gazette_url": "https://uniaopaulista.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Urânia",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Uru",
+      "official_gazette_url": "https://www.uru.sp.gov.br/diariooficial/"
+    },
+    {
+      "name": "Urupês",
+      "official_gazette_url": "https://www.urupes.sp.gov.br/transparencia/diario-oficial/"
+    },
+    {
+      "name": "Valentim Gentil",
+      "official_gazette_url": "https://www.valentimgentil.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Valinhos",
+      "official_gazette_url": "https://www.valinhos.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Valparaíso",
+      "official_gazette_url": "https://www.valparaiso.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Vargem",
+      "official_gazette_url": "https://www.vargem.sp.gov.br/diario-oficial"
+    },
+    {
+      "name": "Vargem Grande do Sul",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Vargem Grande Paulista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Várzea Paulista",
+      "official_gazette_url": null
+    },
+    {
+      "name": "Vera Cruz",
+      "official_gazette_url": "https://www.veracruz.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Vinhedo",
+      "official_gazette_url": "https://www.vinhedo.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Viradouro",
+      "official_gazette_url": "https://viradouro.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Vista Alegre do Alto",
+      "official_gazette_url": "https://www.vistaalegredoalto.sp.gov.br/publicacoes/diario-oficial"
+    },
+    {
+      "name": "Vitória Brasil",
+      "official_gazette_url": "https://www.vitoriabrasil.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Votorantim",
+      "official_gazette_url": "https://www.votorantim.sp.gov.br/portal/diario-oficial"
+    },
+    {
+      "name": "Votuporanga",
+      "official_gazette_url": "https://www.imprensaoficialmunicipal.com.br/votuporanga"
+    },
+    {
+      "name": "Zacarias",
+      "official_gazette_url": "https://www.zacarias.sp.gov.br/portal/diario-oficial"
+    }
+  ]
+}
