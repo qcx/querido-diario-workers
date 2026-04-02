@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ma_afonso_cunha",
+    "name": "Afonso Cunha - MA",
+    "territoryId": "2100105",
+    "startDate": "2020-07-30",
+    "spiderType": "siganet",
+    "config": {
+      "type": "siganet",
+      "baseUrl": "https://transparencia.afonsocunha.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ma_axixa",
+    "name": "Axixa - MA",
+    "territoryId": "2101103",
+    "startDate": "2021-03-31",
+    "spiderType": "siganet",
+    "config": {
+      "type": "siganet",
+      "baseUrl": "https://transparencia.axixa.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ma_bacuri",
+    "name": "Bacuri - MA",
+    "territoryId": "2101301",
+    "startDate": "2017-03-30",
+    "spiderType": "siganet",
+    "config": {
+      "type": "siganet",
+      "baseUrl": "https://bacuri.ma.gov.br/diario/diario"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ma_boa_vista_do_gurupi",
+    "name": "Boa Vista Do Gurupi - MA",
+    "territoryId": "2101970",
+    "startDate": "2019-07-03",
+    "spiderType": "siganet",
+    "config": {
+      "type": "siganet",
+      "baseUrl": "https://transparencia.boavistadogurupi.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ma_coroata",
+    "name": "Coroata - MA",
+    "territoryId": "2103604",
+    "startDate": "2017-07-28",
+    "spiderType": "siganet",
+    "config": {
+      "type": "siganet",
+      "baseUrl": "https://coroata.ma.gov.br/diario/diario"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ma_duque_bacelar",
+    "name": "Duque Bacelar - MA",
+    "territoryId": "2103901",
+    "startDate": "2018-06-01",
+    "spiderType": "siganet",
+    "config": {
+      "type": "siganet",
+      "baseUrl": "https://transparencia.duquebacelar.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ma_nina_rodrigues",
+    "name": "Nina Rodrigues - MA",
+    "territoryId": "2107209",
+    "startDate": "2019-02-07",
+    "spiderType": "siganet",
+    "config": {
+      "type": "siganet",
+      "baseUrl": "https://transparencia.ninarodrigues.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ma_sao_vicente_ferrer",
+    "name": "Sao Vicente Ferrer - MA",
+    "territoryId": "2111706",
+    "startDate": "2021-04-26",
+    "spiderType": "siganet",
+    "config": {
+      "type": "siganet",
+      "baseUrl": "https://saovicenteferrer.ma.gov.br/diario/diario"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ma_viana",
+    "name": "Viana - MA",
+    "territoryId": "2112803",
+    "startDate": "2018-01-18",
+    "spiderType": "siganet",
+    "config": {
+      "type": "siganet",
+      "baseUrl": "https://transparencia.viana.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ma_ze_doca",
+    "name": "Ze Doca - MA",
+    "territoryId": "2114007",
+    "startDate": "2018-06-04",
+    "spiderType": "siganet",
+    "config": {
+      "type": "siganet",
+      "baseUrl": "https://transparencia.zedoca.ma.gov.br/acessoInformacao/diario/diario"
+    },
+    "gazetteScope": "city"
+  }
+]

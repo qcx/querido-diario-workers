@@ -1,0 +1,50 @@
+[
+  {
+    "id": "rj_nova_friburgo",
+    "name": "Nova Friburgo - RJ",
+    "territoryId": "3303401",
+    "spiderType": "dioenet",
+    "startDate": "2019-10-17",
+    "config": {
+      "type": "dioenet",
+      "baseUrl": "https://plenussistemas.dioenet.com.br/list/nova-friburgo"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "rj_sumidouro",
+    "name": "Sumidouro - RJ",
+    "territoryId": "3305703",
+    "spiderType": "dioenet",
+    "startDate": "2021-07-26",
+    "config": {
+      "type": "dioenet",
+      "baseUrl": "https://plenussistemas.dioenet.com.br/list/sumidouro"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "sp_taubate",
+    "name": "Taubaté - SP",
+    "territoryId": "3554102",
+    "spiderType": "dioenet",
+    "startDate": "2022-12-08",
+    "config": {
+      "type": "dioenet",
+      "baseUrl": "https://plenussistemas.dioenet.com.br/list/taubate"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "pr_marilandia_do_sul",
+    "name": "Marilândia do Sul - PR",
+    "territoryId": "4114906",
+    "spiderType": "dioenet",
+    "startDate": "2019-12-17",
+    "config": {
+      "type": "dioenet",
+      "baseUrl": "https://plenussistemas.dioenet.com.br/list/marilandia-do-sul"
+    },
+    "gazetteScope": "city"
+  }
+]

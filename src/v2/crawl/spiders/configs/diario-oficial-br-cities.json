@@ -1,0 +1,122 @@
+[
+  {
+    "id": "to_aguiarnopolis",
+    "name": "Aguiarnópolis - TO",
+    "territoryId": "1700301",
+    "spiderType": "diario_oficial_br",
+    "startDate": "2020-01-23",
+    "config": {
+      "type": "diario_oficial_br",
+      "baseUrl": "https://diariooficial.aguiarnopolis.to.gov.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_campos_lindos",
+    "name": "Campos Lindos - TO",
+    "territoryId": "1703842",
+    "spiderType": "diario_oficial_br",
+    "startDate": "2021-05-31",
+    "config": {
+      "type": "diario_oficial_br",
+      "baseUrl": "https://camposlindos.diariooficialbr.com.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_caseara",
+    "name": "Caseara - TO",
+    "territoryId": "1703909",
+    "spiderType": "diario_oficial_br",
+    "startDate": "2019-06-26",
+    "config": {
+      "type": "diario_oficial_br",
+      "baseUrl": "https://caseara.diariooficialbr.com.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_goiatins",
+    "name": "Goiatins - TO",
+    "territoryId": "1709005",
+    "spiderType": "diario_oficial_br",
+    "startDate": "2021-01-14",
+    "config": {
+      "type": "diario_oficial_br",
+      "baseUrl": "https://goiatins.diariooficialbr.com.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_miracema_do_tocantins",
+    "name": "Miracema do Tocantins - TO",
+    "territoryId": "1713205",
+    "spiderType": "diario_oficial_br",
+    "startDate": "2023-01-16",
+    "config": {
+      "type": "diario_oficial_br",
+      "baseUrl": "https://miracema.diariooficialbr.com.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_muricilandia",
+    "name": "Muricilândia - TO",
+    "territoryId": "1713957",
+    "spiderType": "diario_oficial_br",
+    "startDate": "2019-07-02",
+    "config": {
+      "type": "diario_oficial_br",
+      "baseUrl": "https://muricilandia.diariooficialbr.com.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_peixe",
+    "name": "Peixe - TO",
+    "territoryId": "1716604",
+    "spiderType": "diario_oficial_br",
+    "startDate": "2022-03-30",
+    "config": {
+      "type": "diario_oficial_br",
+      "baseUrl": "https://peixe.diariooficialbr.com.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_santa_fe_do_araguaia",
+    "name": "Santa Fé do Araguaia - TO",
+    "territoryId": "1718865",
+    "spiderType": "diario_oficial_br",
+    "startDate": "2021-02-05",
+    "config": {
+      "type": "diario_oficial_br",
+      "baseUrl": "https://santafedoaraguaia.diariooficialbr.com.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_talisma",
+    "name": "Talismã - TO",
+    "territoryId": "1720978",
+    "spiderType": "diario_oficial_br",
+    "startDate": "2020-01-02",
+    "config": {
+      "type": "diario_oficial_br",
+      "baseUrl": "https://talisma.diariooficialbr.com.br"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "to_tocantinia",
+    "name": "Tocantínia - TO",
+    "territoryId": "1721109",
+    "spiderType": "diario_oficial_br",
+    "startDate": "2017-03-21",
+    "config": {
+      "type": "diario_oficial_br",
+      "baseUrl": "https://tocantinia.diariooficialbr.com.br"
+    },
+    "gazetteScope": "city"
+  }
+]

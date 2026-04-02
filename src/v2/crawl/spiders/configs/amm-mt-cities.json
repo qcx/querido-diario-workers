@@ -1,0 +1,41 @@
+{
+  "total": 3,
+  "municipalities": [
+    {
+      "id": "mt_5101837",
+      "name": "Boa Esperança do Norte",
+      "stateCode": "MT",
+      "territoryId": "5101837",
+      "spiderType": "amm-mt",
+      "config": {
+        "url": "https://amm.diariomunicipal.org/",
+        "cityName": "BOA ESPERANCA DO NORTE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "mt_5103361",
+      "name": "Conquista D'Oeste",
+      "stateCode": "MT",
+      "territoryId": "5103361",
+      "spiderType": "amm-mt",
+      "config": {
+        "url": "https://amm.diariomunicipal.org/",
+        "cityName": "CONQUISTA D'OESTE"
+      },
+      "gazetteScope": "city"
+    },
+    {
+      "id": "mt_5107800",
+      "name": "Santo Antônio de Leverger",
+      "stateCode": "MT",
+      "territoryId": "5107800",
+      "spiderType": "amm-mt",
+      "config": {
+        "url": "https://amm.diariomunicipal.org/",
+        "cityName": "SANTO ANTONIO DE LEVERGER"
+      },
+      "gazetteScope": "city"
+    }
+  ]
+}

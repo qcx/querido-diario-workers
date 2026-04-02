@@ -1,0 +1,674 @@
+[
+  {
+    "id": "ba_acajutiba",
+    "name": "Acajutiba - BA",
+    "territoryId": "2900306",
+    "spiderType": "doem",
+    "startDate": "2013-01-30",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/acajutiba"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_alagoinhas",
+    "name": "Alagoinhas - BA",
+    "territoryId": "2900702",
+    "spiderType": "doem",
+    "startDate": "2015-01-28",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/alagoinhas"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_alcobaca",
+    "name": "Alcobaca - BA",
+    "territoryId": "2900801",
+    "spiderType": "doem",
+    "startDate": "2017-03-03",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/alcobaca"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_angical",
+    "name": "Angical - BA",
+    "territoryId": "2901403",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/angical"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_banzae",
+    "name": "Banzae - BA",
+    "territoryId": "2902658",
+    "spiderType": "doem",
+    "startDate": "2017-02-02",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/banzae"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_barrocas_2017",
+    "name": "Barrocas - BA",
+    "territoryId": "2903276",
+    "spiderType": "doem",
+    "startDate": "2017-01-02",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/barrocas"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_brotas_de_macaubas",
+    "name": "Brotasdemacaubas - BA",
+    "territoryId": "2904506",
+    "spiderType": "doem",
+    "startDate": "2019-08-13",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/brotasdemacaubas"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_cachoeira_2017",
+    "name": "Cachoeira - BA",
+    "territoryId": "2904902",
+    "spiderType": "doem",
+    "startDate": "2017-01-03",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/cachoeira"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_cacule_2014",
+    "name": "Cacule - BA",
+    "territoryId": "2905008",
+    "spiderType": "doem",
+    "startDate": "2014-01-02",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/cacule"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_caetite",
+    "name": "Caetite - BA",
+    "territoryId": "2905206",
+    "spiderType": "doem",
+    "startDate": "2021-04-27",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/caetite"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_camamu_2017",
+    "name": "Camamu - BA",
+    "territoryId": "2905800",
+    "spiderType": "doem",
+    "startDate": "2017-01-03",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/camamu"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_campo_alegre_de_lourdes",
+    "name": "Campoalegredelourdes - BA",
+    "territoryId": "2905909",
+    "spiderType": "doem",
+    "startDate": "2020-11-30",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/campoalegredelourdes"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_campo_formoso",
+    "name": "Campoformoso - BA",
+    "territoryId": "2906006",
+    "spiderType": "doem",
+    "startDate": "2013-01-31",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/campoformoso"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_canudos",
+    "name": "Canudos - BA",
+    "territoryId": "2906824",
+    "spiderType": "doem",
+    "startDate": "2013-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/canudos"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_catolandia_2015",
+    "name": "Catolandia - BA",
+    "territoryId": "2907400",
+    "spiderType": "doem",
+    "startDate": "2015-05-06",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/catolandia"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_catu_2014",
+    "name": "Catu - BA",
+    "territoryId": "2907509",
+    "spiderType": "doem",
+    "startDate": "2014-07-17",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/catu"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_cicero_dantas",
+    "name": "Cicerodantas - BA",
+    "territoryId": "2907806",
+    "spiderType": "doem",
+    "startDate": "2012-01-03",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/cicerodantas"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_cipo",
+    "name": "Cipo - BA",
+    "territoryId": "2907905",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/cipo"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_correntina_2025",
+    "name": "Correntina - BA",
+    "territoryId": "2909307",
+    "spiderType": "doem",
+    "startDate": "2025-01-01",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/correntina"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_cotegipe",
+    "name": "Cotegipe - BA",
+    "territoryId": "2909406",
+    "spiderType": "doem",
+    "startDate": "2023-01-05",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/cotegipe"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_cristopolis",
+    "name": "Cristopolis - BA",
+    "territoryId": "2909703",
+    "spiderType": "doem",
+    "startDate": "2021-01-12",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/cristopolis"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_cruz_das_almas",
+    "name": "Cruzdasalmas - BA",
+    "territoryId": "2909802",
+    "spiderType": "doem",
+    "startDate": "2021-04-01",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/cruzdasalmas"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_esplanada",
+    "name": "Esplanada - BA",
+    "territoryId": "2910602",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/esplanada"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_formosa_do_rio_preto",
+    "name": "Formosadoriopreto - BA",
+    "territoryId": "2911105",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/formosadoriopreto"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_inhambupe",
+    "name": "Inhambupe - BA",
+    "territoryId": "2913705",
+    "spiderType": "doem",
+    "startDate": "2013-01-02",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/inhambupe"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_ipiau",
+    "name": "Ipiau - BA",
+    "territoryId": "2913903",
+    "spiderType": "doem",
+    "startDate": "2016-05-09",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/ipiau"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_irara",
+    "name": "Irara - BA",
+    "territoryId": "2914505",
+    "spiderType": "doem",
+    "startDate": "2014-04-24",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/irara"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_itaberaba",
+    "name": "Itaberaba - BA",
+    "territoryId": "2914703",
+    "spiderType": "doem",
+    "startDate": "2022-07-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/itaberaba"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_itamaraju",
+    "name": "Itamaraju - BA",
+    "territoryId": "2915601",
+    "spiderType": "doem",
+    "startDate": "2008-03-28",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/itamaraju"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_itapetinga",
+    "name": "Itapetinga - BA",
+    "territoryId": "2916401",
+    "spiderType": "doem",
+    "startDate": "2010-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/itapetinga"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_itapicuru",
+    "name": "Itapicuru - BA",
+    "territoryId": "2916500",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/itapicuru"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_ituacu",
+    "name": "Ituacu - BA",
+    "territoryId": "2917201",
+    "spiderType": "doem",
+    "startDate": "2015-02-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/ituacu"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_jaguaquara",
+    "name": "Jaguaquara - BA",
+    "territoryId": "2917607",
+    "spiderType": "doem",
+    "startDate": "2021-04-05",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/jaguaquara"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_juazeiro",
+    "name": "Juazeiro - BA",
+    "territoryId": "2918407",
+    "spiderType": "doem",
+    "startDate": "2013-02-01",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/juazeiro"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_laje",
+    "name": "Laje - BA",
+    "territoryId": "2918803",
+    "spiderType": "doem",
+    "startDate": "2020-01-08",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/laje"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_lajedao",
+    "name": "Lajedao - BA",
+    "territoryId": "2918902",
+    "spiderType": "doem",
+    "startDate": "2021-04-14",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/lajedao"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_macajuba",
+    "name": "Macajuba - BA",
+    "territoryId": "2919603",
+    "spiderType": "doem",
+    "startDate": "2014-03-17",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/macajuba"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_mascote",
+    "name": "Mascote - BA",
+    "territoryId": "2920908",
+    "spiderType": "doem",
+    "startDate": "2010-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/mascote"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_monte_santo",
+    "name": "Montesanto - BA",
+    "territoryId": "2921500",
+    "spiderType": "doem",
+    "startDate": "2021-01-02",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/montesanto"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_morro_do_chapeu",
+    "name": "Morrodochapeu - BA",
+    "territoryId": "2921708",
+    "spiderType": "doem",
+    "startDate": "2021-01-06",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/morrodochapeu"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_mucuri",
+    "name": "Mucuri - BA",
+    "territoryId": "2922003",
+    "spiderType": "doem",
+    "startDate": "2011-04-05",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/mucuri"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_prado",
+    "name": "Prado - BA",
+    "territoryId": "2925501",
+    "spiderType": "doem",
+    "startDate": "2013-02-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/prado"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_santa_cruz_cabralia",
+    "name": "Santacruzcabralia - BA",
+    "territoryId": "2927705",
+    "spiderType": "doem",
+    "startDate": "2017-01-09",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/santacruzcabralia"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_santa_luzia_2021",
+    "name": "Santaluzia - BA",
+    "territoryId": "2928059",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/santaluzia"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_santa_rita_de_cassia",
+    "name": "Santaritadecassia - BA",
+    "territoryId": "2928406",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/santaritadecassia"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_santo_estevao",
+    "name": "Santoestevao - BA",
+    "territoryId": "2928802",
+    "spiderType": "doem",
+    "startDate": "2017-01-06",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/santoestevao"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_satiro_dias",
+    "name": "Satirodias - BA",
+    "territoryId": "2929701",
+    "spiderType": "doem",
+    "startDate": "2021-03-30",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/satirodias"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_senhor_do_bonfim",
+    "name": "Senhordobonfim - BA",
+    "territoryId": "2930105",
+    "spiderType": "doem",
+    "startDate": "2013-01-03",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/senhordobonfim"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_sento_se",
+    "name": "Sentose - BA",
+    "territoryId": "2930204",
+    "spiderType": "doem",
+    "startDate": "2017-01-02",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/sentose"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_tapiramuta",
+    "name": "Tapiramuta - BA",
+    "territoryId": "2931301",
+    "spiderType": "doem",
+    "startDate": "2021-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/tapiramuta"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_teolandia",
+    "name": "Teolandia - BA",
+    "territoryId": "2931608",
+    "spiderType": "doem",
+    "startDate": "2014-01-15",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/teolandia"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "ba_tucano",
+    "name": "Tucano - BA",
+    "territoryId": "2931905",
+    "spiderType": "doem",
+    "startDate": "2013-01-04",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "ba/tucano"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "pe_petrolina",
+    "name": "Petrolina - PE",
+    "territoryId": "2611101",
+    "spiderType": "doem",
+    "startDate": "2014-03-06",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "pe/petrolina"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "pr_ipiranga",
+    "name": "Ipiranga - PR",
+    "territoryId": "4110508",
+    "spiderType": "doem",
+    "startDate": "2015-09-28",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "pr/ipiranga"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "pr_tamboara",
+    "name": "Tamboara - PR",
+    "territoryId": "4126702",
+    "spiderType": "doem",
+    "startDate": "2022-08-22",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "pr/tamboara"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "se_nossa_senhora_do_socorro",
+    "name": "Nossasenhoradosocorro - SE",
+    "territoryId": "2804805",
+    "spiderType": "doem",
+    "startDate": "2022-11-07",
+    "config": {
+      "type": "doem",
+      "stateCityUrlPart": "se/nossasenhoradosocorro"
+    },
+    "gazetteScope": "city"
+  }
+]

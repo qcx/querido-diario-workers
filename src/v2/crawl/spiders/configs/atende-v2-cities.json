@@ -1,0 +1,266 @@
+[
+  {
+    "id": "pr_apucarana",
+    "name": "Apucarana - PR",
+    "territoryId": "4101408",
+    "startDate": "2022-02-23",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "apucarana"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "pr_arapongas",
+    "name": "Arapongas - PR",
+    "territoryId": "4101507",
+    "startDate": "2009-02-11",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "arapongas"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "pr_campo_largo",
+    "name": "Campo Largo - PR",
+    "territoryId": "4104204",
+    "startDate": "2006-01-20",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "campolargo"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "pr_campo_mourao",
+    "name": "Campo Mourao - PR",
+    "territoryId": "4104303",
+    "startDate": "2012-02-03",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "campomourao"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "pr_castro",
+    "name": "Castro - PR",
+    "territoryId": "4104907",
+    "startDate": "2010-06-04",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "castro"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "pr_corbelia",
+    "name": "Corbelia - PR",
+    "territoryId": "4106308",
+    "startDate": "2015-11-20",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "corbelia"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "pr_guaraniacu",
+    "name": "Guaraniacu - PR",
+    "territoryId": "4109302",
+    "startDate": "2021-05-03",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "guaraniacu"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "pr_juranda",
+    "name": "Juranda - PR",
+    "territoryId": "4112959",
+    "startDate": "2021-03-24",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "juranda"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "pr_mambore",
+    "name": "Mambore - PR",
+    "territoryId": "4114005",
+    "startDate": "2020-05-25",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "mambore"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "pr_ouro_verde_do_oeste",
+    "name": "Ouro Verde Do Oeste - PR",
+    "territoryId": "4117453",
+    "startDate": "2021-03-31",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "ouroverdedooeste"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "pr_pinhais",
+    "name": "Pinhais - PR",
+    "territoryId": "4119152",
+    "startDate": "2017-05-26",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "pinhais"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "rs_bento_goncalves",
+    "name": "Bento Goncalves - RS",
+    "territoryId": "4302105",
+    "startDate": "2019-04-01",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "bentogoncalves"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "rs_camaqua",
+    "name": "Camaqua - RS",
+    "territoryId": "4303509",
+    "startDate": "2019-07-25",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "camaqua"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "rs_candelaria",
+    "name": "Candelaria - RS",
+    "territoryId": "4304200",
+    "startDate": "2019-05-07",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "candelaria"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "rs_dois_irmaos",
+    "name": "Dois Irmaos - RS",
+    "territoryId": "4306403",
+    "startDate": "2020-01-07",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "doisirmaos"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "rs_estrela",
+    "name": "Estrela - RS",
+    "territoryId": "4307807",
+    "startDate": "2021-03-29",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "estrela"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "rs_gravatai",
+    "name": "Gravatai - RS",
+    "territoryId": "4309209",
+    "startDate": "2015-05-04",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "gravatai"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "rs_horizontina",
+    "name": "Horizontina - RS",
+    "territoryId": "4309605",
+    "startDate": "2016-06-15",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "horizontina"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "rs_panambi",
+    "name": "Panambi - RS",
+    "territoryId": "4313904",
+    "startDate": "2021-04-14",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "panambi"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "rs_santa_rosa",
+    "name": "Santa Rosa - RS",
+    "territoryId": "4317202",
+    "startDate": "2022-08-23",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "santarosa"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "rs_sao_joao_do_polesine",
+    "name": "Sao Joao Do Polesine - RS",
+    "territoryId": "4318432",
+    "startDate": "2021-05-28",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "saojoaodopolesine"
+    },
+    "gazetteScope": "city"
+  },
+  {
+    "id": "rs_sobradinho",
+    "name": "Sobradinho - RS",
+    "territoryId": "4320701",
+    "startDate": "2020-03-05",
+    "spiderType": "atende_v2",
+    "config": {
+      "type": "atende_v2",
+      "citySubdomain": "sobradinho"
+    },
+    "gazetteScope": "city"
+  }
+]

@@ -2,7 +2,7 @@
   // Goodfellow Worker - Unified Configuration  
   "name": "goodfellow-prod",
   "account_id": "dd6e3021bfaef6eec1a68e26a593f4ca",
-  "main": "src/goodfellow-worker.ts",
+  "main": "src/v2/server.ts",
   "compatibility_date": "2024-10-01",
   "compatibility_flags": ["nodejs_compat"],
 
