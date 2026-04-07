@@ -6,6 +6,9 @@ import { logger } from "../utils/logger";
 
 // V2 spider classes
 import { AcreSpider as V2AcreSpider } from "./v2/base/acre-spider";
+import { SigpubAcSpider } from "./v2/base/sigpub-ac";
+import { AgapeSpider as V2AgapeSpider } from "./v2/base/agape-spider";
+import { KalanaSpider as V2KalanaSpider } from "./v2/base/kalana-spider";
 
 // Import the original v1 registry class
 import doemCitiesConfig from "./configs/doem-cities.json";
@@ -797,6 +800,15 @@ export class SpiderRegistryManager {
         const spider = new V2AcreSpider(config, dateRange, browser);
         if (browser) spider.setBrowser(browser);
         return spider as unknown as BaseSpider;
+      }
+      case "sigpub-ac":
+        return new SigpubAcSpider(config, dateRange) as unknown as BaseSpider;
+      case "agape":
+        return new V2AgapeSpider(config, dateRange) as unknown as BaseSpider;
+      case "kalana": {
+        const kalSpider = new V2KalanaSpider(config, dateRange, browser);
+        if (browser) kalSpider.setBrowser(browser);
+        return kalSpider as unknown as BaseSpider;
       }
       default:
         return null;

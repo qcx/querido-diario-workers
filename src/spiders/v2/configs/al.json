@@ -1,5 +1,982 @@
 [
   {
+    "id": "al_agua_branca",
+    "name": "Água Branca - AL",
+    "territoryId": "2700102",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "7133",
+          "cityName": "Água Branca"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_anadia",
+    "name": "Anadia - AL",
+    "territoryId": "2700201",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "4913",
+          "cityName": "Anadia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_arapiraca",
+    "name": "Arapiraca - AL",
+    "territoryId": "2700300",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3910",
+          "cityName": "Arapiraca"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_atalaia",
+    "name": "Atalaia - AL",
+    "territoryId": "2700409",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3786",
+          "cityName": "Atalaia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_barra_de_santo_antonio",
+    "name": "Barra de Santo Antônio - AL",
+    "territoryId": "2700508",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3644",
+          "cityName": "Barra de Santo Antônio"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_barra_de_sao_miguel",
+    "name": "Barra de São Miguel - AL",
+    "territoryId": "2700607",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2224",
+          "cityName": "Barra de São Miguel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_batalha",
+    "name": "Batalha - AL",
+    "territoryId": "2700706",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "4828",
+          "cityName": "Batalha"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_belem",
+    "name": "Belém - AL",
+    "territoryId": "2700805",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "9056",
+          "cityName": "Belém"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_belo_monte",
+    "name": "Belo Monte - AL",
+    "territoryId": "2700904",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6177",
+          "cityName": "Belo Monte"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_boca_da_mata",
+    "name": "Boca da Mata - AL",
+    "territoryId": "2701001",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3563",
+          "cityName": "Boca da Mata"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_branquinha",
+    "name": "Branquinha - AL",
+    "territoryId": "2701100",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3868",
+          "cityName": "Branquinha"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_cacimbinhas",
+    "name": "Cacimbinhas - AL",
+    "territoryId": "2701209",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6241",
+          "cityName": "Cacimbinhas"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_cajueiro",
+    "name": "Cajueiro - AL",
+    "territoryId": "2701308",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3502",
+          "cityName": "Cajueiro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_campestre",
+    "name": "Campestre - AL",
+    "territoryId": "2701357",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6101",
+          "cityName": "Campestre"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_campo_alegre",
+    "name": "Campo Alegre - AL",
+    "territoryId": "2701407",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3779",
+          "cityName": "Campo Alegre"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_campo_grande",
+    "name": "Campo Grande - AL",
+    "territoryId": "2701506",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6013",
+          "cityName": "Campo Grande"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_canapi",
+    "name": "Canapi - AL",
+    "territoryId": "2701605",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "8783",
+          "cityName": "Canapi"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_capela",
+    "name": "Capela - AL",
+    "territoryId": "2701704",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6060",
+          "cityName": "Capela"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_carneiros",
+    "name": "Carneiros - AL",
+    "territoryId": "2701803",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6962",
+          "cityName": "Carneiros"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_cha_preta",
+    "name": "Chã Preta - AL",
+    "territoryId": "2701902",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3824",
+          "cityName": "Chã Preta"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_coite_do_noia",
+    "name": "Coité do Nóia - AL",
+    "territoryId": "2702009",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "5849",
+          "cityName": "Coité do Nóia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_colonia_leopoldina",
+    "name": "Colônia Leopoldina - AL",
+    "territoryId": "2702108",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6317",
+          "cityName": "Colônia Leopoldina"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_coqueiro_seco",
+    "name": "Coqueiro Seco - AL",
+    "territoryId": "2702207",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6082",
+          "cityName": "Coqueiro Seco"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_coruripe",
+    "name": "Coruripe - AL",
+    "territoryId": "2702306",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "prefeituracoruripe",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "prefeituracoruripe",
+          "baseUrl": "https://diario.coruripe.al.gov.br",
+          "cityName": "Coruripe"
+        }
+      },
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2976",
+          "cityName": "Coruripe"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_craibas",
+    "name": "Craíbas - AL",
+    "territoryId": "2702355",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "5914",
+          "cityName": "Craíbas"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_delmiro_gouveia",
+    "name": "Delmiro Gouveia - AL",
+    "territoryId": "2702405",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2097",
+          "cityName": "Delmiro Gouveia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_dois_riachos",
+    "name": "Dois Riachos - AL",
+    "territoryId": "2702504",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6162",
+          "cityName": "Dois Riachos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_estrela_de_alagoas",
+    "name": "Estrela de Alagoas - AL",
+    "territoryId": "2702553",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "8905",
+          "cityName": "Estrela de Alagoas"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_feira_grande",
+    "name": "Feira Grande - AL",
+    "territoryId": "2702603",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "4864",
+          "cityName": "Feira Grande"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_feliz_deserto",
+    "name": "Feliz Deserto - AL",
+    "territoryId": "2702702",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3552",
+          "cityName": "Feliz Deserto"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_flexeiras",
+    "name": "Flexeiras - AL",
+    "territoryId": "2702801",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3840",
+          "cityName": "Flexeiras"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_girau_do_ponciano",
+    "name": "Girau do Ponciano - AL",
+    "territoryId": "2702900",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3013",
+          "cityName": "Girau do Ponciano"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_ibateguara",
+    "name": "Ibateguara - AL",
+    "territoryId": "2703007",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3594",
+          "cityName": "Ibateguara"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_igaci",
+    "name": "Igaci - AL",
+    "territoryId": "2703106",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6276",
+          "cityName": "Igaci"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_igreja_nova",
+    "name": "Igreja Nova - AL",
+    "territoryId": "2703205",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "4866",
+          "cityName": "Igreja Nova"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_inhapi",
+    "name": "Inhapi - AL",
+    "territoryId": "2703304",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "8756",
+          "cityName": "Inhapi"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_jacare_dos_homens",
+    "name": "Jacaré dos Homens - AL",
+    "territoryId": "2703403",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6323",
+          "cityName": "Jacaré dos Homens"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_jacuipe",
+    "name": "Jacuípe - AL",
+    "territoryId": "2703502",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6113",
+          "cityName": "Jacuípe"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_japaratinga",
+    "name": "Japaratinga - AL",
+    "territoryId": "2703601",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "8810",
+          "cityName": "Japaratinga"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_jaramataia",
+    "name": "Jaramataia - AL",
+    "territoryId": "2703700",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6041",
+          "cityName": "Jaramataia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_jequia_da_praia",
+    "name": "Jequiá da Praia - AL",
+    "territoryId": "2703759",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2237",
+          "cityName": "Jequiá da Praia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_joaquim_gomes",
+    "name": "Joaquim Gomes - AL",
+    "territoryId": "2703809",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "7094",
+          "cityName": "Joaquim Gomes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_jundia",
+    "name": "Jundiá - AL",
+    "territoryId": "2703908",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6346",
+          "cityName": "Jundiá"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_junqueiro",
+    "name": "Junqueiro - AL",
+    "territoryId": "2704005",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3523",
+          "cityName": "Junqueiro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_lagoa_da_canoa",
+    "name": "Lagoa da Canoa - AL",
+    "territoryId": "2704104",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "4224",
+          "cityName": "Lagoa da Canoa"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_limoeiro_de_anadia",
+    "name": "Limoeiro de Anadia - AL",
+    "territoryId": "2704203",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3897",
+          "cityName": "Limoeiro de Anadia"
+        }
+      }
+    ]
+  },
+  {
     "id": "al_maceio",
     "name": "Maceió - AL",
     "territoryId": "2704302",
@@ -21,43 +998,400 @@
     ]
   },
   {
-    "id": "al_arapiraca",
-    "name": "Arapiraca - AL",
-    "territoryId": "2700300",
+    "id": "al_major_isidoro",
+    "name": "Major Isidoro - AL",
+    "territoryId": "2704401",
     "stateCode": "AL",
     "active": true,
     "spiders": [
       {
-        "spiderType": "sigpub",
+        "spiderType": "sigpub-ac",
         "priority": 1,
         "active": true,
         "gazetteScope": "city",
         "config": {
           "type": "sigpub",
           "url": "https://www.diariomunicipal.com.br/ama/",
-          "entityId": "3910",
-          "cityName": "Arapiraca"
+          "entityId": "3745",
+          "cityName": "Major Isidoro"
         }
       }
     ]
   },
   {
-    "id": "al_rio_largo",
-    "name": "Rio Largo - AL",
-    "territoryId": "2707701",
+    "id": "al_mar_vermelho",
+    "name": "Mar Vermelho - AL",
+    "territoryId": "2704906",
     "stateCode": "AL",
     "active": true,
     "spiders": [
       {
-        "spiderType": "sigpub",
+        "spiderType": "sigpub-ac",
         "priority": 1,
         "active": true,
         "gazetteScope": "city",
         "config": {
           "type": "sigpub",
           "url": "https://www.diariomunicipal.com.br/ama/",
-          "entityId": "2169",
-          "cityName": "Rio Largo"
+          "entityId": "6092",
+          "cityName": "Mar Vermelho"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_maragogi",
+    "name": "Maragogi - AL",
+    "territoryId": "2704500",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2398",
+          "cityName": "Maragogi"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_maravilha",
+    "name": "Maravilha - AL",
+    "territoryId": "2704609",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6979",
+          "cityName": "Maravilha"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_marechal_deodoro",
+    "name": "Marechal Deodoro - AL",
+    "territoryId": "2704708",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2997",
+          "cityName": "Marechal Deodoro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_maribondo",
+    "name": "Maribondo - AL",
+    "territoryId": "2704807",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3939",
+          "cityName": "Maribondo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_mata_grande",
+    "name": "Mata Grande - AL",
+    "territoryId": "2705002",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "10314",
+          "cityName": "Mata Grande"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_matriz_de_camaragibe",
+    "name": "Matriz de Camaragibe - AL",
+    "territoryId": "2705101",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "4152",
+          "cityName": "Matriz de Camaragibe"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_messias",
+    "name": "Messias - AL",
+    "territoryId": "2705200",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3796",
+          "cityName": "Messias"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_minador_do_negrao",
+    "name": "Minador do Negrão - AL",
+    "territoryId": "2705309",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3923",
+          "cityName": "Minador do Negrão"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_monteiropolis",
+    "name": "Monteirópolis - AL",
+    "territoryId": "2705408",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6141",
+          "cityName": "Monteirópolis"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_murici",
+    "name": "Murici - AL",
+    "territoryId": "2705507",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3088",
+          "cityName": "Murici"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_novo_lino",
+    "name": "Novo Lino - AL",
+    "territoryId": "2705606",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3367",
+          "cityName": "Novo Lino"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_olho_dagua_das_flores",
+    "name": "Olho d'Água das Flores - AL",
+    "territoryId": "2705705",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3128",
+          "cityName": "Olho d'Água das Flores"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_olho_dagua_do_casado",
+    "name": "Olho d'Água do Casado - AL",
+    "territoryId": "2705804",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6919",
+          "cityName": "Olho d'Água do Casado"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_olho_dagua_grande",
+    "name": "Olho d'Água Grande - AL",
+    "territoryId": "2705903",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "7031",
+          "cityName": "Olho d'Água Grande"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_olivenca",
+    "name": "Olivença - AL",
+    "territoryId": "2706000",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "9158",
+          "cityName": "Olivença"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_ouro_branco",
+    "name": "Ouro Branco - AL",
+    "territoryId": "2706109",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3954",
+          "cityName": "Ouro Branco"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_palestina",
+    "name": "Palestina - AL",
+    "territoryId": "2706208",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "9238",
+          "cityName": "Palestina"
         }
       }
     ]
@@ -84,42 +1418,106 @@
     ]
   },
   {
-    "id": "al_marechal_deodoro",
-    "name": "Marechal Deodoro - AL",
-    "territoryId": "2704708",
+    "id": "al_pao_de_acucar",
+    "name": "Pão de Açúcar - AL",
+    "territoryId": "2706406",
     "stateCode": "AL",
     "active": true,
     "spiders": [
       {
-        "spiderType": "sigpub",
+        "spiderType": "sigpub-ac",
         "priority": 1,
         "active": true,
         "gazetteScope": "city",
         "config": {
           "type": "sigpub",
           "url": "https://www.diariomunicipal.com.br/ama/",
-          "entityId": "2997",
-          "cityName": "Marechal Deodoro"
+          "entityId": "3240",
+          "cityName": "Pão de Açúcar"
         }
       }
     ]
   },
   {
-    "id": "al_uniao_dos_palmares",
-    "name": "União dos Palmares - AL",
-    "territoryId": "2709301",
+    "id": "al_pariconha",
+    "name": "Pariconha - AL",
+    "territoryId": "2706422",
     "stateCode": "AL",
     "active": true,
     "spiders": [
       {
-        "spiderType": "diariomunicipalalwordpress",
+        "spiderType": "sigpub-ac",
         "priority": 1,
         "active": true,
         "gazetteScope": "city",
         "config": {
-          "type": "diariomunicipalalwordpress",
-          "baseUrl": "https://www.diariomunicipal-al.com.br/uniao/",
-          "cityName": "União dos Palmares"
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "4034",
+          "cityName": "Pariconha"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_paripueira",
+    "name": "Paripueira - AL",
+    "territoryId": "2706448",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "kalana",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "kalana",
+          "cnpj": "35561471000153",
+          "cityName": "Paripueira",
+          "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_passo_de_camaragibe",
+    "name": "Passo de Camaragibe - AL",
+    "territoryId": "2706505",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3582",
+          "cityName": "Passo de Camaragibe"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_paulo_jacinto",
+    "name": "Paulo Jacinto - AL",
+    "territoryId": "2706604",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3572",
+          "cityName": "Paulo Jacinto"
         }
       }
     ]
@@ -141,6 +1539,396 @@
           "clientId": "11064",
           "cityName": "Penedo",
           "requiresClientRendering": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_piacabucu",
+    "name": "Piaçabuçu - AL",
+    "territoryId": "2706802",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3626",
+          "cityName": "Piaçabuçu"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_pilar",
+    "name": "Pilar - AL",
+    "territoryId": "2706901",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3849",
+          "cityName": "Pilar"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_pindoba",
+    "name": "Pindoba - AL",
+    "territoryId": "2707008",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6315",
+          "cityName": "Pindoba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_piranhas",
+    "name": "Piranhas - AL",
+    "territoryId": "2707107",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6947",
+          "cityName": "Piranhas"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_poco_das_trincheiras",
+    "name": "Poço das Trincheiras - AL",
+    "territoryId": "2707206",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "7018",
+          "cityName": "Poço das Trincheiras"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_porto_calvo",
+    "name": "Porto Calvo - AL",
+    "territoryId": "2707305",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3698",
+          "cityName": "Porto Calvo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_porto_de_pedras",
+    "name": "Porto de Pedras - AL",
+    "territoryId": "2707404",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "7052",
+          "cityName": "Porto de Pedras"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_porto_real_do_colegio",
+    "name": "Porto Real do Colégio - AL",
+    "territoryId": "2707503",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "7073",
+          "cityName": "Porto Real do Colégio"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_quebrangulo",
+    "name": "Quebrangulo - AL",
+    "territoryId": "2707602",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3210",
+          "cityName": "Quebrangulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_rio_largo",
+    "name": "Rio Largo - AL",
+    "territoryId": "2707701",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2169",
+          "cityName": "Rio Largo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_roteiro",
+    "name": "Roteiro - AL",
+    "territoryId": "2707800",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "4343",
+          "cityName": "Roteiro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_santa_luzia_do_norte",
+    "name": "Santa Luzia do Norte - AL",
+    "territoryId": "2707909",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2282",
+          "cityName": "Santa Luzia do Norte"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_santana_do_ipanema",
+    "name": "Santana do Ipanema - AL",
+    "territoryId": "2708006",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "2115",
+          "cityName": "Santana do Ipanema"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_santana_do_mundau",
+    "name": "Santana do Mundaú - AL",
+    "territoryId": "2708105",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6049",
+          "cityName": "Santana do Mundaú"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_sao_bras",
+    "name": "São Brás - AL",
+    "territoryId": "2708204",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "agape",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "agape",
+          "alias": "pmsaobras",
+          "cityName": "São Brás"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_sao_jose_da_laje",
+    "name": "São José da Laje - AL",
+    "territoryId": "2708303",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "4013",
+          "cityName": "São José da Laje"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_sao_jose_da_tapera",
+    "name": "São José da Tapera - AL",
+    "territoryId": "2708402",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6355",
+          "cityName": "São José da Tapera"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_sao_luis_do_quitunde",
+    "name": "São Luís do Quitunde - AL",
+    "territoryId": "2708501",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "3tecnos",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "3tecnos",
+          "urlUf": "al",
+          "urlCity": "saoluisdoquitunde",
+          "requiresClientRendering": true
+        },
+        "description": "Diário Oficial de São Luís do Quitunde via 3Tecnos/MunicipioOnline - requer browser rendering"
+      },
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 2,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "4157",
+          "cityName": "São Luís do Quitunde"
         }
       }
     ]
@@ -168,63 +1956,127 @@
     ]
   },
   {
-    "id": "al_delmiro_gouveia",
-    "name": "Delmiro Gouveia - AL",
-    "territoryId": "2702405",
+    "id": "al_sao_miguel_dos_milagres",
+    "name": "São Miguel dos Milagres - AL",
+    "territoryId": "2708709",
     "stateCode": "AL",
     "active": true,
     "spiders": [
       {
-        "spiderType": "sigpub",
+        "spiderType": "sigpub-ac",
         "priority": 1,
         "active": true,
         "gazetteScope": "city",
         "config": {
           "type": "sigpub",
           "url": "https://www.diariomunicipal.com.br/ama/",
-          "entityId": "2097",
-          "cityName": "Delmiro Gouveia"
+          "entityId": "4206",
+          "cityName": "São Miguel dos Milagres"
         }
       }
     ]
   },
   {
-    "id": "al_coruripe",
-    "name": "Coruripe - AL",
-    "territoryId": "2702306",
+    "id": "al_sao_sebastiao",
+    "name": "São Sebastião - AL",
+    "territoryId": "2708808",
     "stateCode": "AL",
     "active": true,
     "spiders": [
       {
-        "spiderType": "prefeituracoruripe",
-        "priority": 1,
-        "active": true,
-        "gazetteScope": "city",
-        "config": {
-          "type": "prefeituracoruripe",
-          "baseUrl": "https://diario.coruripe.al.gov.br",
-          "cityName": "Coruripe"
-        }
-      }
-    ]
-  },
-  {
-    "id": "al_santana_do_ipanema",
-    "name": "Santana do Ipanema - AL",
-    "territoryId": "2708006",
-    "stateCode": "AL",
-    "active": true,
-    "spiders": [
-      {
-        "spiderType": "sigpub",
+        "spiderType": "sigpub-ac",
         "priority": 1,
         "active": true,
         "gazetteScope": "city",
         "config": {
           "type": "sigpub",
           "url": "https://www.diariomunicipal.com.br/ama/",
-          "entityId": "2168",
-          "cityName": "Santana do Ipanema"
+          "entityId": "6027",
+          "cityName": "São Sebastião"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_satuba",
+    "name": "Satuba - AL",
+    "territoryId": "2708907",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3761",
+          "cityName": "Satuba"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_senador_rui_palmeira",
+    "name": "Senador Rui Palmeira - AL",
+    "territoryId": "2708956",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "6344",
+          "cityName": "Senador Rui Palmeira"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_tanque_darca",
+    "name": "Tanque d'Arca - AL",
+    "territoryId": "2709004",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "7000",
+          "cityName": "Tanque d'Arca"
+        }
+      }
+    ]
+  },
+  {
+    "id": "al_taquarana",
+    "name": "Taquarana - AL",
+    "territoryId": "2709103",
+    "stateCode": "AL",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-ac",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/ama/",
+          "entityId": "3149",
+          "cityName": "Taquarana"
         }
       }
     ]
@@ -237,7 +2089,7 @@
     "active": true,
     "spiders": [
       {
-        "spiderType": "sigpub",
+        "spiderType": "sigpub-ac",
         "priority": 1,
         "active": true,
         "gazetteScope": "city",
@@ -251,191 +2103,63 @@
     ]
   },
   {
-    "id": "al_atalaia",
-    "name": "Atalaia - AL",
-    "territoryId": "2700409",
+    "id": "al_traipu",
+    "name": "Traipu - AL",
+    "territoryId": "2709202",
     "stateCode": "AL",
     "active": true,
     "spiders": [
       {
-        "spiderType": "sigpub",
+        "spiderType": "sigpub-ac",
         "priority": 1,
         "active": true,
         "gazetteScope": "city",
         "config": {
           "type": "sigpub",
           "url": "https://www.diariomunicipal.com.br/ama/",
-          "entityId": "2065",
-          "cityName": "Atalaia"
+          "entityId": "8860",
+          "cityName": "Traipu"
         }
       }
     ]
   },
   {
-    "id": "al_girau_do_ponciano",
-    "name": "Girau do Ponciano - AL",
-    "territoryId": "2702900",
+    "id": "al_uniao_dos_palmares",
+    "name": "União dos Palmares - AL",
+    "territoryId": "2709301",
     "stateCode": "AL",
     "active": true,
     "spiders": [
       {
-        "spiderType": "sigpub",
+        "spiderType": "diariomunicipalalwordpress",
         "priority": 1,
         "active": true,
         "gazetteScope": "city",
         "config": {
-          "type": "sigpub",
-          "url": "https://www.diariomunicipal.com.br/ama/",
-          "entityId": "3013",
-          "cityName": "Girau do Ponciano"
+          "type": "diariomunicipalalwordpress",
+          "baseUrl": "https://www.diariomunicipal-al.com.br/uniao/",
+          "cityName": "União dos Palmares"
         }
       }
     ]
   },
   {
-    "id": "al_pilar",
-    "name": "Pilar - AL",
-    "territoryId": "2706901",
+    "id": "al_vicosa",
+    "name": "Viçosa - AL",
+    "territoryId": "2709400",
     "stateCode": "AL",
     "active": true,
     "spiders": [
       {
-        "spiderType": "sigpub",
+        "spiderType": "sigpub-ac",
         "priority": 1,
         "active": true,
         "gazetteScope": "city",
         "config": {
           "type": "sigpub",
           "url": "https://www.diariomunicipal.com.br/ama/",
-          "entityId": "2155",
-          "cityName": "Pilar"
-        }
-      }
-    ]
-  },
-  {
-    "id": "al_maragogi",
-    "name": "Maragogi - AL",
-    "territoryId": "2704500",
-    "stateCode": "AL",
-    "active": true,
-    "spiders": [
-      {
-        "spiderType": "sigpub",
-        "priority": 1,
-        "active": true,
-        "gazetteScope": "city",
-        "config": {
-          "type": "sigpub",
-          "url": "https://www.diariomunicipal.com.br/ama/",
-          "entityId": "2398",
-          "cityName": "Maragogi"
-        }
-      }
-    ]
-  },
-  {
-    "id": "al_campo_alegre",
-    "name": "Campo Alegre - AL",
-    "territoryId": "2701407",
-    "stateCode": "AL",
-    "active": true,
-    "spiders": [
-      {
-        "spiderType": "sigpub",
-        "priority": 1,
-        "active": true,
-        "gazetteScope": "city",
-        "config": {
-          "type": "sigpub",
-          "url": "https://www.diariomunicipal.com.br/ama/",
-          "entityId": "2073",
-          "cityName": "Campo Alegre"
-        }
-      }
-    ]
-  },
-  {
-    "id": "al_sao_sebastiao",
-    "name": "São Sebastião - AL",
-    "territoryId": "2708808",
-    "stateCode": "AL",
-    "active": true,
-    "spiders": [
-      {
-        "spiderType": "sigpub",
-        "priority": 1,
-        "active": true,
-        "gazetteScope": "city",
-        "config": {
-          "type": "sigpub",
-          "url": "https://www.diariomunicipal.com.br/ama/",
-          "entityId": "2172",
-          "cityName": "São Sebastião"
-        }
-      }
-    ]
-  },
-  {
-    "id": "al_sao_luis_do_quitunde",
-    "name": "São Luís do Quitunde - AL",
-    "territoryId": "2708501",
-    "stateCode": "AL",
-    "active": true,
-    "spiders": [
-      {
-        "spiderType": "3tecnos",
-        "priority": 1,
-        "active": true,
-        "gazetteScope": "city",
-        "config": {
-          "type": "3tecnos",
-          "urlUf": "al",
-          "urlCity": "saoluisdoquitunde",
-          "requiresClientRendering": true
-        },
-        "description": "Diário Oficial de São Luís do Quitunde via 3Tecnos/MunicipioOnline - requer browser rendering"
-      }
-    ]
-  },
-  {
-    "id": "al_sao_jose_da_tapera",
-    "name": "São José da Tapera - AL",
-    "territoryId": "2708402",
-    "stateCode": "AL",
-    "active": true,
-    "spiders": [
-      {
-        "spiderType": "sigpub",
-        "priority": 1,
-        "active": true,
-        "gazetteScope": "city",
-        "config": {
-          "type": "sigpub",
-          "url": "https://www.diariomunicipal.com.br/ama/",
-          "entityId": "2170",
-          "cityName": "São José da Tapera"
-        }
-      }
-    ]
-  },
-  {
-    "id": "al_craibas",
-    "name": "Craíbas - AL",
-    "territoryId": "2702355",
-    "stateCode": "AL",
-    "active": true,
-    "spiders": [
-      {
-        "spiderType": "sigpub",
-        "priority": 1,
-        "active": true,
-        "gazetteScope": "city",
-        "config": {
-          "type": "sigpub",
-          "url": "https://www.diariomunicipal.com.br/ama/",
-          "entityId": "2093",
-          "cityName": "Craíbas"
+          "entityId": "3308",
+          "cityName": "Viçosa"
         }
       }
     ]

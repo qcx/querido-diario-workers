@@ -1,0 +1,1328 @@
+{
+  "successful": [
+    {
+      "spiderId": "al_agua_branca",
+      "territoryId": "2700102",
+      "gazetteCount": 2,
+      "ocrResults": [
+        {
+          "id": "3a9458fb-a15d-4f7d-ba60-61f4794a9ece",
+          "gazetteId": "6cf588f3-1e50-419c-95fd-0f44fab3ddfd",
+          "textLength": 1103,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "3a9458fb-a15d-4f7d-ba60-61f4794a9ece",
+          "gazetteId": "6cf588f3-1e50-419c-95fd-0f44fab3ddfd",
+          "textLength": 1103,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "al_anadia",
+      "territoryId": "2700201",
+      "gazetteCount": 2,
+      "ocrResults": [
+        {
+          "id": "d66b867f-4cda-4191-be6e-d8848bf9b911",
+          "gazetteId": "f49cb7bc-26ae-48cc-870d-1e20a4d43f68",
+          "textLength": 1252,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "d66b867f-4cda-4191-be6e-d8848bf9b911",
+          "gazetteId": "f49cb7bc-26ae-48cc-870d-1e20a4d43f68",
+          "textLength": 1252,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "al_arapiraca",
+      "territoryId": "2700300",
+      "gazetteCount": 46,
+      "ocrResults": [
+        {
+          "id": "e31347ea-7fd8-4869-9f68-91a370f76f50",
+          "gazetteId": "56ff3b3b-edf9-4af9-be5f-90e94d3dc1cd",
+          "textLength": 1657,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "497a91a0-c3bc-4694-a473-a9ac374de796",
+          "gazetteId": "f9f15551-962d-428b-ad70-895eb32f9f0f",
+          "textLength": 1549,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "713db2e2-5a07-490f-9ebc-0e2923f0b4cb",
+          "gazetteId": "87aac0ce-7ad8-4243-8180-d13ebcacb1e7",
+          "textLength": 2881,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "3ea33799-a256-40cd-a8f3-9660d6e79b99",
+          "gazetteId": "3b11a4e9-621a-4d36-bb9a-f3614bf2dd70",
+          "textLength": 1195,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "1d019f94-59d8-4c97-8970-86475a0c3e5c",
+          "gazetteId": "1505f810-555c-4e2c-a920-9eb190a66639",
+          "textLength": 1524,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "04c3b4cf-3369-40fa-a69c-4d1db716ceb6",
+          "gazetteId": "1c887ab7-fd4f-4370-965e-f50094194427",
+          "textLength": 2770,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "4cd3b814-552d-4a96-9476-d774d0f2966b",
+          "gazetteId": "81195209-25c7-49ea-8450-c2f09ce16358",
+          "textLength": 2695,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "21a44ff0-72e7-43db-9e4b-99cc66e13362",
+          "gazetteId": "9675f0e2-0ce6-42c7-92a8-22a6344eb1b0",
+          "textLength": 1093,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "191cd0e2-85e7-4449-8a80-53bf21298afb",
+          "gazetteId": "7c15f260-fcec-4898-86a6-43c79187bcb4",
+          "textLength": 2742,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "09f413d7-6ad3-4630-b25a-e347f3572c5f",
+          "gazetteId": "9c35d78c-1ff0-48c3-991e-a874feca1733",
+          "textLength": 1576,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "713db2e2-5a07-490f-9ebc-0e2923f0b4cb",
+          "gazetteId": "87aac0ce-7ad8-4243-8180-d13ebcacb1e7",
+          "textLength": 2881,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "3ea33799-a256-40cd-a8f3-9660d6e79b99",
+          "gazetteId": "3b11a4e9-621a-4d36-bb9a-f3614bf2dd70",
+          "textLength": 1195,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e31347ea-7fd8-4869-9f68-91a370f76f50",
+          "gazetteId": "56ff3b3b-edf9-4af9-be5f-90e94d3dc1cd",
+          "textLength": 1657,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "09f413d7-6ad3-4630-b25a-e347f3572c5f",
+          "gazetteId": "9c35d78c-1ff0-48c3-991e-a874feca1733",
+          "textLength": 1576,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "497a91a0-c3bc-4694-a473-a9ac374de796",
+          "gazetteId": "f9f15551-962d-428b-ad70-895eb32f9f0f",
+          "textLength": 1549,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "3d70be08-87e6-4a31-a100-07fe16a19ab0",
+          "gazetteId": "5efeaa8f-5714-4051-94a0-c082eba0eff6",
+          "textLength": 1014,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "c7d05287-81a4-497c-8f57-29d3c4e15a20",
+          "gazetteId": "20b5d2ed-51f8-4488-9b03-19ab76284cc2",
+          "textLength": 2776,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "cd433aae-c9ce-4db0-a54c-030373b88838",
+          "gazetteId": "8b790f41-5d85-49eb-a2f7-0ddd974f9858",
+          "textLength": 1126,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "1d019f94-59d8-4c97-8970-86475a0c3e5c",
+          "gazetteId": "1505f810-555c-4e2c-a920-9eb190a66639",
+          "textLength": 1524,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "04c3b4cf-3369-40fa-a69c-4d1db716ceb6",
+          "gazetteId": "1c887ab7-fd4f-4370-965e-f50094194427",
+          "textLength": 2770,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "853aea0c-c795-4955-a0f8-0a5011a7a752",
+          "gazetteId": "b013b234-c05b-419f-96ff-f7defb355a4c",
+          "textLength": 2376,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "c92a5939-cbcb-490f-8b79-99cbcabbc578",
+          "gazetteId": "8ae03b56-7df2-457e-b58e-6bb0db271bd1",
+          "textLength": 1018,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "ca4f6afd-7d26-4649-93ac-9f9492c024a2",
+          "gazetteId": "a652e53e-9a31-4009-8c7b-d323d0dfbff3",
+          "textLength": 1901,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e31347ea-7fd8-4869-9f68-91a370f76f50",
+          "gazetteId": "56ff3b3b-edf9-4af9-be5f-90e94d3dc1cd",
+          "textLength": 1657,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "497a91a0-c3bc-4694-a473-a9ac374de796",
+          "gazetteId": "f9f15551-962d-428b-ad70-895eb32f9f0f",
+          "textLength": 1549,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "713db2e2-5a07-490f-9ebc-0e2923f0b4cb",
+          "gazetteId": "87aac0ce-7ad8-4243-8180-d13ebcacb1e7",
+          "textLength": 2881,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "3ea33799-a256-40cd-a8f3-9660d6e79b99",
+          "gazetteId": "3b11a4e9-621a-4d36-bb9a-f3614bf2dd70",
+          "textLength": 1195,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "1d019f94-59d8-4c97-8970-86475a0c3e5c",
+          "gazetteId": "1505f810-555c-4e2c-a920-9eb190a66639",
+          "textLength": 1524,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "04c3b4cf-3369-40fa-a69c-4d1db716ceb6",
+          "gazetteId": "1c887ab7-fd4f-4370-965e-f50094194427",
+          "textLength": 2770,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "4cd3b814-552d-4a96-9476-d774d0f2966b",
+          "gazetteId": "81195209-25c7-49ea-8450-c2f09ce16358",
+          "textLength": 2695,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "21a44ff0-72e7-43db-9e4b-99cc66e13362",
+          "gazetteId": "9675f0e2-0ce6-42c7-92a8-22a6344eb1b0",
+          "textLength": 1093,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "191cd0e2-85e7-4449-8a80-53bf21298afb",
+          "gazetteId": "7c15f260-fcec-4898-86a6-43c79187bcb4",
+          "textLength": 2742,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "09f413d7-6ad3-4630-b25a-e347f3572c5f",
+          "gazetteId": "9c35d78c-1ff0-48c3-991e-a874feca1733",
+          "textLength": 1576,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "713db2e2-5a07-490f-9ebc-0e2923f0b4cb",
+          "gazetteId": "87aac0ce-7ad8-4243-8180-d13ebcacb1e7",
+          "textLength": 2881,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "3ea33799-a256-40cd-a8f3-9660d6e79b99",
+          "gazetteId": "3b11a4e9-621a-4d36-bb9a-f3614bf2dd70",
+          "textLength": 1195,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "e31347ea-7fd8-4869-9f68-91a370f76f50",
+          "gazetteId": "56ff3b3b-edf9-4af9-be5f-90e94d3dc1cd",
+          "textLength": 1657,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "09f413d7-6ad3-4630-b25a-e347f3572c5f",
+          "gazetteId": "9c35d78c-1ff0-48c3-991e-a874feca1733",
+          "textLength": 1576,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "497a91a0-c3bc-4694-a473-a9ac374de796",
+          "gazetteId": "f9f15551-962d-428b-ad70-895eb32f9f0f",
+          "textLength": 1549,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "3d70be08-87e6-4a31-a100-07fe16a19ab0",
+          "gazetteId": "5efeaa8f-5714-4051-94a0-c082eba0eff6",
+          "textLength": 1014,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "c7d05287-81a4-497c-8f57-29d3c4e15a20",
+          "gazetteId": "20b5d2ed-51f8-4488-9b03-19ab76284cc2",
+          "textLength": 2776,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "cd433aae-c9ce-4db0-a54c-030373b88838",
+          "gazetteId": "8b790f41-5d85-49eb-a2f7-0ddd974f9858",
+          "textLength": 1126,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "1d019f94-59d8-4c97-8970-86475a0c3e5c",
+          "gazetteId": "1505f810-555c-4e2c-a920-9eb190a66639",
+          "textLength": 1524,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "04c3b4cf-3369-40fa-a69c-4d1db716ceb6",
+          "gazetteId": "1c887ab7-fd4f-4370-965e-f50094194427",
+          "textLength": 2770,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "853aea0c-c795-4955-a0f8-0a5011a7a752",
+          "gazetteId": "b013b234-c05b-419f-96ff-f7defb355a4c",
+          "textLength": 2376,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "c92a5939-cbcb-490f-8b79-99cbcabbc578",
+          "gazetteId": "8ae03b56-7df2-457e-b58e-6bb0db271bd1",
+          "textLength": 1018,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "ca4f6afd-7d26-4649-93ac-9f9492c024a2",
+          "gazetteId": "a652e53e-9a31-4009-8c7b-d323d0dfbff3",
+          "textLength": 1901,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "al_atalaia",
+      "territoryId": "2700409",
+      "gazetteCount": 18,
+      "ocrResults": [
+        {
+          "id": "0782e286-6397-4f6b-aa83-009f3cb6b4f3",
+          "gazetteId": "cbeff42b-c81c-480a-bf33-68bcc129465d",
+          "textLength": 1798,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "ba7658b6-f4cb-41a2-8724-a46169ba4bb3",
+          "gazetteId": "197a4511-5de9-44da-8e6a-b538fec790e4",
+          "textLength": 2213,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "b8f4751a-bff7-4063-933e-dc904f7d2f86",
+          "gazetteId": "3a2fe730-3d1c-47ed-a3a9-2e9724c2dc20",
+          "textLength": 2185,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "3ef2201b-67b5-4f70-97fe-4125855943a2",
+          "gazetteId": "57fa4667-ab73-4964-bd95-60e5685ef1f9",
+          "textLength": 2234,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "3a023447-f4ff-473d-8351-ffc2d12931d0",
+          "gazetteId": "1239d809-b8e2-4c28-873a-1925cef16e4a",
+          "textLength": 1161,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "ee502ccc-a0e6-4a73-a92a-8b6126d16977",
+          "gazetteId": "7b3c57f9-2d90-40eb-8cfb-6454483b44c7",
+          "textLength": 2418,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fe23aedd-1130-46e6-90f8-b4298a4ceba9",
+          "gazetteId": "ede542dd-bf34-44f0-b1ba-48b35283bf17",
+          "textLength": 2419,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "98043f9a-cfaa-48d3-984c-239a8a273a7f",
+          "gazetteId": "9715df95-89d4-443b-845e-a62359ced4c7",
+          "textLength": 2227,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "1120717b-d082-440f-99e1-794b432ae9fe",
+          "gazetteId": "5ff1b6ad-05b8-4139-a984-e560d0c7f2dd",
+          "textLength": 2123,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "0782e286-6397-4f6b-aa83-009f3cb6b4f3",
+          "gazetteId": "cbeff42b-c81c-480a-bf33-68bcc129465d",
+          "textLength": 1798,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "ba7658b6-f4cb-41a2-8724-a46169ba4bb3",
+          "gazetteId": "197a4511-5de9-44da-8e6a-b538fec790e4",
+          "textLength": 2213,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "b8f4751a-bff7-4063-933e-dc904f7d2f86",
+          "gazetteId": "3a2fe730-3d1c-47ed-a3a9-2e9724c2dc20",
+          "textLength": 2185,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "3ef2201b-67b5-4f70-97fe-4125855943a2",
+          "gazetteId": "57fa4667-ab73-4964-bd95-60e5685ef1f9",
+          "textLength": 2234,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "3a023447-f4ff-473d-8351-ffc2d12931d0",
+          "gazetteId": "1239d809-b8e2-4c28-873a-1925cef16e4a",
+          "textLength": 1161,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "ee502ccc-a0e6-4a73-a92a-8b6126d16977",
+          "gazetteId": "7b3c57f9-2d90-40eb-8cfb-6454483b44c7",
+          "textLength": 2418,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "fe23aedd-1130-46e6-90f8-b4298a4ceba9",
+          "gazetteId": "ede542dd-bf34-44f0-b1ba-48b35283bf17",
+          "textLength": 2419,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "98043f9a-cfaa-48d3-984c-239a8a273a7f",
+          "gazetteId": "9715df95-89d4-443b-845e-a62359ced4c7",
+          "textLength": 2227,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "1120717b-d082-440f-99e1-794b432ae9fe",
+          "gazetteId": "5ff1b6ad-05b8-4139-a984-e560d0c7f2dd",
+          "textLength": 2123,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "al_barra_de_santo_antonio",
+      "territoryId": "2700508",
+      "gazetteCount": 2,
+      "ocrResults": [
+        {
+          "id": "bebe9a1a-9b57-4efc-a4f6-3f41dca9a13b",
+          "gazetteId": "3cdbfc25-2302-480c-977c-c7fdd0927180",
+          "textLength": 1899,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "bebe9a1a-9b57-4efc-a4f6-3f41dca9a13b",
+          "gazetteId": "3cdbfc25-2302-480c-977c-c7fdd0927180",
+          "textLength": 1899,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "al_barra_de_sao_miguel",
+      "territoryId": "2700607",
+      "gazetteCount": 10,
+      "ocrResults": [
+        {
+          "id": "9b8c807a-e186-443d-aec4-5ca85ab9f63f",
+          "gazetteId": "a0dbf296-95e5-4980-8eda-85bcf90c1d56",
+          "textLength": 1461,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "b98d4cac-9443-476d-a009-a8d1918c18dd",
+          "gazetteId": "087c544d-07a3-4fe5-a3af-78b8df7b855a",
+          "textLength": 1746,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "2095a8bb-b035-428d-adf2-6a49feded705",
+          "gazetteId": "c50f23c7-9bea-4057-bd89-99b35b4af257",
+          "textLength": 1421,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "65fa015d-5cfc-47b7-bef6-3ddd8537fd54",
+          "gazetteId": "6a716b25-83b3-4c0e-a7c4-6c16377845a0",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "521f4626-c103-4dc3-b5ed-f211478a40aa",
+          "gazetteId": "32b112ed-cb33-4136-8ace-69592c93398d",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "9b8c807a-e186-443d-aec4-5ca85ab9f63f",
+          "gazetteId": "a0dbf296-95e5-4980-8eda-85bcf90c1d56",
+          "textLength": 1461,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "b98d4cac-9443-476d-a009-a8d1918c18dd",
+          "gazetteId": "087c544d-07a3-4fe5-a3af-78b8df7b855a",
+          "textLength": 1746,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "2095a8bb-b035-428d-adf2-6a49feded705",
+          "gazetteId": "c50f23c7-9bea-4057-bd89-99b35b4af257",
+          "textLength": 1421,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "65fa015d-5cfc-47b7-bef6-3ddd8537fd54",
+          "gazetteId": "6a716b25-83b3-4c0e-a7c4-6c16377845a0",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "521f4626-c103-4dc3-b5ed-f211478a40aa",
+          "gazetteId": "32b112ed-cb33-4136-8ace-69592c93398d",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "al_belem",
+      "territoryId": "2700805",
+      "gazetteCount": 6,
+      "ocrResults": [
+        {
+          "id": "4929d953-d72b-46b1-986f-db42601f0c67",
+          "gazetteId": "0a4f280f-0b74-4902-b10c-a9133078b5b7",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "643dc1cf-7dcf-4c93-8b83-940b208de447",
+          "gazetteId": "cc16c1e5-ba9a-4c06-9309-3c21aea7c07a",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "88e30988-6c8c-43d1-98d3-18e2bd10094e",
+          "gazetteId": "d9a700e2-e07e-4aca-8131-538ed7dd1978",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "4929d953-d72b-46b1-986f-db42601f0c67",
+          "gazetteId": "0a4f280f-0b74-4902-b10c-a9133078b5b7",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "643dc1cf-7dcf-4c93-8b83-940b208de447",
+          "gazetteId": "cc16c1e5-ba9a-4c06-9309-3c21aea7c07a",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "88e30988-6c8c-43d1-98d3-18e2bd10094e",
+          "gazetteId": "d9a700e2-e07e-4aca-8131-538ed7dd1978",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "al_belo_monte",
+      "territoryId": "2700904",
+      "gazetteCount": 2,
+      "ocrResults": [
+        {
+          "id": "10419a12-d127-45f5-b20b-e01a7737cfc6",
+          "gazetteId": "358d49e9-89b8-4142-b695-26b598b6ffb6",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "10419a12-d127-45f5-b20b-e01a7737cfc6",
+          "gazetteId": "358d49e9-89b8-4142-b695-26b598b6ffb6",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    },
+    {
+      "spiderId": "al_boca_da_mata",
+      "territoryId": "2701001",
+      "gazetteCount": 4,
+      "ocrResults": [
+        {
+          "id": "308e4107-0a1e-472d-87fe-952f7f1a45c9",
+          "gazetteId": "699494be-80d3-4340-99c2-0754edf060d8",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "812c1124-3843-4503-adc6-ba11762d1299",
+          "gazetteId": "f049909c-5d0b-4f81-b7db-5f2294ab84e5",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "308e4107-0a1e-472d-87fe-952f7f1a45c9",
+          "gazetteId": "699494be-80d3-4340-99c2-0754edf060d8",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        },
+        {
+          "id": "812c1124-3843-4503-adc6-ba11762d1299",
+          "gazetteId": "f049909c-5d0b-4f81-b7db-5f2294ab84e5",
+          "textLength": 1752,
+          "hasMarkdown": true,
+          "hasDiarioOficial": true
+        }
+      ]
+    }
+  ],
+  "failed": [
+    {
+      "spiderId": "al_cacimbinhas",
+      "territoryId": "2701209",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 4,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_campo_alegre",
+      "territoryId": "2701407",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 6,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_canapi",
+      "territoryId": "2701605",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 8,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_capela",
+      "territoryId": "2701704",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 2,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_coruripe",
+      "territoryId": "2702306",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 6,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_craibas",
+      "territoryId": "2702355",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 16,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_delmiro_gouveia",
+      "territoryId": "2702405",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 96,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_feira_grande",
+      "territoryId": "2702603",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 6,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_feliz_deserto",
+      "territoryId": "2702702",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 16,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_ibateguara",
+      "territoryId": "2703007",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 6,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_igreja_nova",
+      "territoryId": "2703205",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 16,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_inhapi",
+      "territoryId": "2703304",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 6,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_japaratinga",
+      "territoryId": "2703601",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 8,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_jequia_da_praia",
+      "territoryId": "2703759",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 8,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_lagoa_da_canoa",
+      "territoryId": "2704104",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 4,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_maceio",
+      "territoryId": "2704302",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 2,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_mar_vermelho",
+      "territoryId": "2704906",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 4,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_maravilha",
+      "territoryId": "2704609",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 4,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_marechal_deodoro",
+      "territoryId": "2704708",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 34,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_maribondo",
+      "territoryId": "2704807",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 8,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_mata_grande",
+      "territoryId": "2705002",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 2,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_messias",
+      "territoryId": "2705200",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 2,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_monteiropolis",
+      "territoryId": "2705408",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 6,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_novo_lino",
+      "territoryId": "2705606",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 6,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_olho_dagua_das_flores",
+      "territoryId": "2705705",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 8,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_olivenca",
+      "territoryId": "2706000",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 2,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_ouro_branco",
+      "territoryId": "2706109",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 22,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_pariconha",
+      "territoryId": "2706422",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 2,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_penedo",
+      "territoryId": "2706703",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 1,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_piacabucu",
+      "territoryId": "2706802",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 2,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_pilar",
+      "territoryId": "2706901",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 10,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_pindoba",
+      "territoryId": "2707008",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 2,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_piranhas",
+      "territoryId": "2707107",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 4,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_poco_das_trincheiras",
+      "territoryId": "2707206",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 10,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_porto_calvo",
+      "territoryId": "2707305",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 22,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_porto_de_pedras",
+      "territoryId": "2707404",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 4,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_porto_real_do_colegio",
+      "territoryId": "2707503",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 6,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_quebrangulo",
+      "territoryId": "2707602",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 2,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_rio_largo",
+      "territoryId": "2707701",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 14,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_santa_luzia_do_norte",
+      "territoryId": "2707909",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 6,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_santana_do_ipanema",
+      "territoryId": "2708006",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 14,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_santana_do_mundau",
+      "territoryId": "2708105",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 8,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_sao_jose_da_tapera",
+      "territoryId": "2708402",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 6,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_sao_luis_do_quitunde",
+      "territoryId": "2708501",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 2,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_sao_miguel_dos_milagres",
+      "territoryId": "2708709",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 4,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_sao_sebastiao",
+      "territoryId": "2708808",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 4,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_tanque_darca",
+      "territoryId": "2709004",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 2,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_taquarana",
+      "territoryId": "2709103",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 6,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_teotonio_vilela",
+      "territoryId": "2709152",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 2,
+      "hasGazette": true,
+      "hasOcr": false
+    },
+    {
+      "spiderId": "al_vicosa",
+      "territoryId": "2709400",
+      "reason": "Gazettes found but no OCR results",
+      "gazetteCount": 6,
+      "hasGazette": true,
+      "hasOcr": false
+    }
+  ],
+  "noResults": [
+    {
+      "spiderId": "al_batalha",
+      "territoryId": "2700706",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_branquinha",
+      "territoryId": "2701100",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_cajueiro",
+      "territoryId": "2701308",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_campestre",
+      "territoryId": "2701357",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_campo_grande",
+      "territoryId": "2701506",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_carneiros",
+      "territoryId": "2701803",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_cha_preta",
+      "territoryId": "2701902",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_coite_do_noia",
+      "territoryId": "2702009",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_colonia_leopoldina",
+      "territoryId": "2702108",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_coqueiro_seco",
+      "territoryId": "2702207",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_dois_riachos",
+      "territoryId": "2702504",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_estrela_de_alagoas",
+      "territoryId": "2702553",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_flexeiras",
+      "territoryId": "2702801",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_girau_do_ponciano",
+      "territoryId": "2702900",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_igaci",
+      "territoryId": "2703106",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_jacare_dos_homens",
+      "territoryId": "2703403",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_jacuipe",
+      "territoryId": "2703502",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_jaramataia",
+      "territoryId": "2703700",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_joaquim_gomes",
+      "territoryId": "2703809",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_jundia",
+      "territoryId": "2703908",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_junqueiro",
+      "territoryId": "2704005",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_limoeiro_de_anadia",
+      "territoryId": "2704203",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_major_isidoro",
+      "territoryId": "2704401",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_maragogi",
+      "territoryId": "2704500",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_matriz_de_camaragibe",
+      "territoryId": "2705101",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_minador_do_negrao",
+      "territoryId": "2705309",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_murici",
+      "territoryId": "2705507",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_olho_dagua_do_casado",
+      "territoryId": "2705804",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_olho_dagua_grande",
+      "territoryId": "2705903",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_palestina",
+      "territoryId": "2706208",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_palmeira_dos_indios",
+      "territoryId": "2706307",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_pao_de_acucar",
+      "territoryId": "2706406",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_passo_de_camaragibe",
+      "territoryId": "2706505",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_paulo_jacinto",
+      "territoryId": "2706604",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_roteiro",
+      "territoryId": "2707800",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_sao_jose_da_laje",
+      "territoryId": "2708303",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_sao_miguel_dos_campos",
+      "territoryId": "2708600",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_satuba",
+      "territoryId": "2708907",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_senador_rui_palmeira",
+      "territoryId": "2708956",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_traipu",
+      "territoryId": "2709202",
+      "reason": "No gazettes found in the specified period"
+    },
+    {
+      "spiderId": "al_uniao_dos_palmares",
+      "territoryId": "2709301",
+      "reason": "No gazettes found in the specified period"
+    }
+  ],
+  "summary": {
+    "totalCities": 100,
+    "successful": 9,
+    "failed": 50,
+    "noResults": 41,
+    "executionTimeMs": 1202243,
+    "timedOut": true
+  }
+}
