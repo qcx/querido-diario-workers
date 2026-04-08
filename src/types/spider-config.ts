@@ -17,6 +17,7 @@ export type SpiderType =
   | "diof"
   | "sigpub"
   | "sigpub-ac"
+  | "sigpub-csrf"
   | "sigpub_se"
   | "sigpub_mt"
   | "sigpub_pa"
