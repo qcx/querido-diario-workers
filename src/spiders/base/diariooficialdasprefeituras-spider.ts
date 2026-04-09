@@ -61,30 +61,32 @@ export class DiarioOficialDasPrefeiturasSpider extends BaseSpider {
   }
 
   /**
-   * Format date as DD-MM-YYYY for the platform's expected format
+   * Format date as DD-MM-YYYY for the platform's expected format.
+   * Uses UTC methods since BaseSpider stores dates at UTC midnight.
    */
   private formatDateForSearch(date: Date): string {
-    const day = date.getDate().toString().padStart(2, "0");
-    const month = (date.getMonth() + 1).toString().padStart(2, "0");
-    const year = date.getFullYear();
+    const day = date.getUTCDate().toString().padStart(2, "0");
+    const month = (date.getUTCMonth() + 1).toString().padStart(2, "0");
+    const year = date.getUTCFullYear();
     return `${day}-${month}-${year}`;
   }
 
   /**
-   * Parse date from DD-MM-YYYY format
+   * Parse date from DD-MM-YYYY format, returning UTC midnight.
    */
   private parseDateFromFormat(dateStr: string): Date | null {
     // Try DD-MM-YYYY format
     const ddmmyyyy = dateStr.match(/(\d{2})-(\d{2})-(\d{4})/);
     if (ddmmyyyy) {
       const [, day, month, year] = ddmmyyyy;
-      return new Date(`${year}-${month}-${day}`);
+      return new Date(Date.UTC(parseInt(year), parseInt(month) - 1, parseInt(day)));
     }
 
     // Try YYYY-MM-DD format
     const yyyymmdd = dateStr.match(/(\d{4})-(\d{2})-(\d{2})/);
     if (yyyymmdd) {
-      return new Date(dateStr);
+      const [, year, month, day] = yyyymmdd;
+      return new Date(Date.UTC(parseInt(year), parseInt(month) - 1, parseInt(day)));
     }
 
     return null;
@@ -97,37 +99,26 @@ export class DiarioOficialDasPrefeiturasSpider extends BaseSpider {
     const gazettes: Gazette[] = [];
 
     try {
-      // Build search URL with query parameters
-      // The platform uses Rails-style query params: q[unidade_gestora_cont]=CityName
+      // Build search URL with the platform's actual Ransack query params.
+      // The server-side city filter (q[unidade_id_eq]) requires a numeric ID
+      // that is loaded via JS, so we filter by city name client-side instead.
+      // Date field: q[edicao_data_gteq] / q[edicao_data_lteq] (not data_publicacao).
       const startDateStr = this.formatDateForSearch(this.startDate);
       const endDateStr = this.formatDateForSearch(this.endDate);
 
       const searchParams = new URLSearchParams();
       searchParams.append("utf8", "✓");
       searchParams.append("q[busca_avancada]", "true");
-      searchParams.append("q[unidade_gestora_cont]", this._cityName);
-      searchParams.append("q[data_publicacao_gteq]", startDateStr);
-      searchParams.append("q[data_publicacao_lteq]", endDateStr);
-
-      // Add entity filter if specified (Entidade: Câmara, Empresa privada, Prefeitura)
-      if (this._entidade) {
-        searchParams.append("q[entidade_cont]", this._entidade);
-      }
-
-      // Add classification filter if specified (Classificação do Ato)
-      // The platform supports filtering by act classification
-      if (this._classificacaoAto) {
-        const classifications = Array.isArray(this._classificacaoAto)
-          ? this._classificacaoAto
-          : [this._classificacaoAto];
-        for (const classification of classifications) {
-          searchParams.append("q[classificacao_cont]", classification);
-        }
-      }
+      searchParams.append("q[edicao_data_gteq]", startDateStr);
+      searchParams.append("q[edicao_data_lteq]", endDateStr);
+      // Keyword search scoped to city name to reduce irrelevant pages
+      searchParams.append("q[nome_or_arquivos_texto_cont]", this._cityName);
 
       let currentPage = 1;
       let hasMorePages = true;
-      const maxPages = 10; // Safety limit
+      const maxPages = 50;
+      let consecutiveEmptyPages = 0;
+      const maxConsecutiveEmpty = 3;
 
       const filterInfo = [
         `city: ${this._cityName}`,
@@ -492,9 +483,20 @@ export class DiarioOficialDasPrefeiturasSpider extends BaseSpider {
           `DiarioOficialDasPrefeituras: Found ${paginationLinks.length} pagination links, next: ${nextLinkHref}`,
         );
 
-        if (!nextLink || foundGazettesOnPage === 0) {
+        if (!nextLink) {
           hasMorePages = false;
+        } else if (foundGazettesOnPage === 0) {
+          consecutiveEmptyPages++;
+          if (consecutiveEmptyPages >= maxConsecutiveEmpty) {
+            logger.info(
+              `DiarioOficialDasPrefeituras: Stopping after ${maxConsecutiveEmpty} consecutive pages with no matches for ${this._cityName}`,
+            );
+            hasMorePages = false;
+          } else {
+            currentPage++;
+          }
         } else {
+          consecutiveEmptyPages = 0;
           currentPage++;
         }
       }
