@@ -24,7 +24,7 @@
     "name": "Feira de Santana - BA",
     "territoryId": "2910800",
     "stateCode": "BA",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturafeiradesantana",
@@ -64,7 +64,7 @@
     "name": "Camaçari - BA",
     "territoryId": "2905701",
     "stateCode": "BA",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituracamacari",
@@ -84,7 +84,7 @@
     "name": "Juazeiro - BA",
     "territoryId": "2918407",
     "stateCode": "BA",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "doem",
@@ -461,7 +461,7 @@
     "name": "Jacobina - BA",
     "territoryId": "2917508",
     "stateCode": "BA",
-    "active": true,
+    "active": false,
     "notes": "Usa plataforma acessoinformacao.com.br (mesma de Porto Seguro)",
     "spiders": [
       {
@@ -525,7 +525,7 @@
     "name": "Candeias - BA",
     "territoryId": "2906501",
     "stateCode": "BA",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "doem",
@@ -801,7 +801,7 @@
     "name": "Euclides da Cunha - BA",
     "territoryId": "2910701",
     "stateCode": "BA",
-    "active": true,
+    "active": false,
     "notes": "Portal IOP - última edição em 31/08/2022. Dados históricos disponíveis.",
     "spiders": [
       {
@@ -887,7 +887,7 @@
     "name": "Araci - BA",
     "territoryId": "2902005",
     "stateCode": "BA",
-    "active": true,
+    "active": false,
     "notes": "Usa plataforma INDAP (diario.indap.org.br). Parâmetros: estado_id=5, cidade_id=1853.",
     "spiders": [
       {
@@ -1146,7 +1146,7 @@
     "name": "Remanso - BA",
     "territoryId": "2926004",
     "stateCode": "BA",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "impublicacoes",
@@ -1309,7 +1309,7 @@
     "name": "Santaluz - BA",
     "territoryId": "2928000",
     "stateCode": "BA",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "indap",
@@ -1355,7 +1355,7 @@
     "name": "Cansanção - BA",
     "territoryId": "2906808",
     "stateCode": "BA",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "indap",
@@ -1557,7 +1557,7 @@
     "name": "Itiúba - BA",
     "territoryId": "2917003",
     "stateCode": "BA",
-    "active": true,
+    "active": false,
     "notes": "Usa plataforma INDAP (diario.indap.org.br). Requer renderização client-side.",
     "spiders": [
       {
@@ -1623,7 +1623,7 @@
     "name": "Riachão do Jacuípe - BA",
     "territoryId": "2926108",
     "stateCode": "BA",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "3tecnos",
@@ -2015,7 +2015,7 @@
     "name": "Ruy Barbosa - BA",
     "territoryId": "2927200",
     "stateCode": "BA",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "institutopublicacoes",
@@ -2325,7 +2325,7 @@
     "name": "Lapão - BA",
     "territoryId": "2919157",
     "stateCode": "BA",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "procede",

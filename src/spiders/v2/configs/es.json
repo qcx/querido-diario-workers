@@ -24,7 +24,7 @@
     "name": "Cariacica - ES",
     "territoryId": "3201308",
     "stateCode": "ES",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituracariacica",
@@ -120,7 +120,7 @@
     "name": "Vila Velha - ES",
     "territoryId": "3205200",
     "stateCode": "ES",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituravilavelha",
@@ -331,7 +331,7 @@
     "name": "Itapemirim - ES",
     "territoryId": "3202801",
     "stateCode": "ES",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "espirito_santo",
@@ -520,6 +520,25 @@
     "id": "es_ibatiba",
     "name": "Ibatiba - ES",
     "territoryId": "3202454",
+    "stateCode": "ES",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "amunes",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "amunes",
+          "power": "executive_legislative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es_sao_roque_do_canaa",
+    "name": "São Roque do Canaã - ES",
+    "territoryId": "3204955",
     "stateCode": "ES",
     "active": true,
     "spiders": [

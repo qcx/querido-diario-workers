@@ -65,7 +65,7 @@
     "name": "Parauapebas - PA",
     "territoryId": "1505536",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Diário em diario.parauapebas.pa.gov.br (MudBlazor). Spider específico diario_parauapebas_pa.",
     "spiders": [
       {
@@ -106,7 +106,7 @@
     "name": "Castanhal - PA",
     "territoryId": "1502400",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Diário Oficial em Google Sites: sites.google.com/castanhal.pa.gov.br/doc-diario-oficial-castanhal/inicio",
     "spiders": [
       {
@@ -962,7 +962,7 @@
     "name": "Redenção - PA",
     "territoryId": "1506138",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Legislações (Leis, Decretos, Portarias, Resoluções) em redencao.pa.gov.br/publicacoes/legislacoes. Spider instar para navegação; DO pode exigir spider específico.",
     "spiders": [
       {
@@ -983,7 +983,7 @@
     "name": "Santa Izabel do Pará - PA",
     "territoryId": "1506500",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Site prefeitura; DO a confirmar em navegação (não sigpub).",
     "spiders": [
       {
@@ -1026,7 +1026,7 @@
     "name": "Alenquer - PA",
     "territoryId": "1500404",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Site CR2; DO a confirmar em navegação (não sigpub).",
     "spiders": [
       {
@@ -1069,7 +1069,7 @@
     "name": "Acará - PA",
     "territoryId": "1500206",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "DO a confirmar em navegação (não sigpub).",
     "spiders": [
       {
@@ -1199,7 +1199,7 @@
     "name": "Augusto Corrêa - PA",
     "territoryId": "1500909",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Publicações oficiais em augustocorrea.pa.gov.br/c/publicacoes/ (WordPress).",
     "spiders": [
       {
@@ -1242,7 +1242,7 @@
     "name": "Pacajá - PA",
     "territoryId": "1505054",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Publicações oficiais em pacaja.pa.gov.br/c/publicacoes/ (WordPress).",
     "spiders": [
       {
@@ -1263,7 +1263,7 @@
     "name": "Porto de Moz - PA",
     "territoryId": "1505551",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Publicações oficiais em portodemoz.pa.gov.br/c/publicacoes/ (WordPress).",
     "spiders": [
       {
@@ -1325,7 +1325,7 @@
     "name": "Igarapé-Açu - PA",
     "territoryId": "1503200",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Publicações oficiais em prefeituradeigarapeacu.pa.gov.br/c/publicacoes/ (WordPress).",
     "spiders": [
       {
@@ -1400,7 +1400,7 @@
     "name": "Almeirim - PA",
     "territoryId": "1500503",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Leis e Atos Normativos em portal.cr2.co (entidade almeirim).",
     "spiders": [
       {
@@ -1421,7 +1421,7 @@
     "name": "Curralinho - PA",
     "territoryId": "1502806",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Publicações oficiais em pmcurralinho.pa.gov.br/c/publicacoes/demais (WordPress).",
     "spiders": [
       {
@@ -1442,7 +1442,7 @@
     "name": "Oeiras do Pará - PA",
     "territoryId": "1505205",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Publicações em oeirasdopara.pa.gov.br. WordPress com notícias e editais em /novo/category/editais. Pode exigir verificação.",
     "spiders": [
       {
@@ -1556,7 +1556,7 @@
     "name": "São Domingos do Capim - PA",
     "territoryId": "1507201",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Leis, Decretos, Portarias e Diárias em saodomingosdocapim.pa.gov.br (leis.php, decretos.php, portaria.php, diariaslista.php).",
     "spiders": [
       {
@@ -1619,7 +1619,7 @@
     "name": "Melgaço - PA",
     "territoryId": "1504505",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Publicações em melgaco.pa.gov.br com leis.php, decretos.php, portaria.php, diariaslista.php.",
     "spiders": [
       {
@@ -1661,7 +1661,7 @@
     "name": "Medicilândia - PA",
     "territoryId": "1504455",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Publicações oficiais em medicilandia.pa.gov.br/c/publicacoes/ (WordPress).",
     "spiders": [
       {
@@ -1723,7 +1723,7 @@
     "name": "Goianésia do Pará - PA",
     "territoryId": "1503093",
     "stateCode": "PA",
-    "active": true,
+    "active": false,
     "notes": "Publicações oficiais em goianesia.pa.gov.br/c/publicacoes/ (WordPress).",
     "spiders": [
       {

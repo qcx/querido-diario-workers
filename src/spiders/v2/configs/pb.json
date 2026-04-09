@@ -110,7 +110,7 @@
     "name": "Sousa - PB",
     "territoryId": "2516201",
     "stateCode": "PB",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeiturasousa",
@@ -217,7 +217,7 @@
     "name": "Queimadas - PB",
     "territoryId": "2512507",
     "stateCode": "PB",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "prefeituraqueimadaspb",
@@ -470,5 +470,25 @@
       }
     ],
     "notes": "Portal Ms Soluções com Diário Oficial. 283+ edições. Paginação via ?pagina=N. PDF via arquivos_download.php."
+  },
+  {
+    "id": "pb_bonito_de_santa_fe",
+    "name": "Bonito de Santa Fé - PB",
+    "territoryId": "2502409",
+    "stateCode": "PB",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famup/",
+          "cityName": "Bonito de Santa Fé"
+        }
+      }
+    ]
   }
 ]

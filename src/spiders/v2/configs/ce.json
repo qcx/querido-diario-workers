@@ -83,7 +83,7 @@
     "name": "Itapipoca - CE",
     "territoryId": "2306405",
     "stateCode": "CE",
-    "active": true,
+    "active": false,
     "notes": "Site não possui diário oficial consolidado. Extrai decretos publicados em /decretos.php",
     "spiders": [
       {
@@ -538,7 +538,7 @@
     "name": "Camocim - CE",
     "territoryId": "2302602",
     "stateCode": "CE",
-    "active": true,
+    "active": false,
     "notes": "Site WordPress com custom post type 'publicacoes'. Usa API REST para listar publicações e buscar PDFs anexados.",
     "spiders": [
       {
@@ -1564,6 +1564,48 @@
         "config": {
           "type": "assesi",
           "baseUrl": "https://www.aracoiaba.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_alto_santo",
+    "name": "Alto Santo - CE",
+    "territoryId": "2300705",
+    "stateCode": "CE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.altosanto.ce.gov.br/diariooficial.php",
+          "requiresClientRendering": false,
+          "searchAllSlugs": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce_guaiuba",
+    "name": "Guaiúba - CE",
+    "territoryId": "2304954",
+    "stateCode": "CE",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "assesi",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "assesi",
+          "baseUrl": "https://www.guaiuba.ce.gov.br/diariooficial.php",
           "requiresClientRendering": false,
           "searchAllSlugs": true
         }

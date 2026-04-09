@@ -46,7 +46,7 @@
     "name": "Canoas - RS",
     "territoryId": "4304606",
     "stateCode": "RS",
-    "active": true,
+    "active": false,
     "notes": "DOMC em sistemas.canoas.rs.gov.br/domc. API pública Laravel: /api/public/diary-by-day?day=DD/MM/YYYY.",
     "spiders": [
       {
@@ -88,7 +88,7 @@
     "name": "Santa Maria - RS",
     "territoryId": "4316907",
     "stateCode": "RS",
-    "active": true,
+    "active": false,
     "notes": "Santa Maria não possui DOM consolidado. Atos oficiais (editais) publicados em santamaria.rs.gov.br/editais com PDFs.",
     "spiders": [
       {
@@ -832,7 +832,7 @@
     "name": "Cachoeirinha - RS",
     "territoryId": "4303103",
     "stateCode": "RS",
-    "active": true,
+    "active": false,
     "notes": "Diário em cachoeirinha.atende.net/diariooficial. Plataforma Atende.net com API paginada.",
     "spiders": [
       {
@@ -873,7 +873,7 @@
     "name": "Bagé - RS",
     "territoryId": "4301602",
     "stateCode": "RS",
-    "active": true,
+    "active": false,
     "notes": "Diário via SERPRO DOE (cidadesdoe.serpro.gov.br). OutSystems SPA, requer browser.",
     "spiders": [
       {
@@ -1003,7 +1003,7 @@
     "name": "Sapiranga - RS",
     "territoryId": "4319901",
     "stateCode": "RS",
-    "active": true,
+    "active": false,
     "notes": "Diário via CESPRO (cespro.com.br). cdMunicipio=7946.",
     "spiders": [
       {
@@ -1024,7 +1024,7 @@
     "name": "Farroupilha - RS",
     "territoryId": "4307906",
     "stateCode": "RS",
-    "active": true,
+    "active": false,
     "notes": "Diário em pmfarroupilha.domeletronico.com.br. Plataforma Dom Eletrônico. Última edição: 27/03/2024.",
     "spiders": [
       {
@@ -1255,7 +1255,7 @@
     "name": "São Lourenço do Sul - RS",
     "territoryId": "4318804",
     "stateCode": "RS",
-    "active": true,
+    "active": false,
     "notes": "Diário em saolourencodosul.rs.gov.br/portal/diario-oficial. Plataforma Instar com listagem em HTML.",
     "spiders": [
       {
@@ -1828,6 +1828,406 @@
           "url": "https://www.diariomunicipal.com.br/famurs/",
           "entityId": "0",
           "cityName": "Três Passos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_arroio_do_padre",
+    "name": "Arroio do Padre - RS",
+    "territoryId": "4301073",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Arroio do Padre"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_caibate",
+    "name": "Caibaté - RS",
+    "territoryId": "4303301",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Caibaté"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_candido_godoi",
+    "name": "Cândido Godói - RS",
+    "territoryId": "4304309",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Cândido Godói"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_crissiumal",
+    "name": "Crissiumal - RS",
+    "territoryId": "4306007",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Crissiumal"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_cristal",
+    "name": "Cristal - RS",
+    "territoryId": "4306056",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Cristal"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_doutor_mauricio_cardoso",
+    "name": "Doutor Maurício Cardoso - RS",
+    "territoryId": "4306734",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Doutor Maurício Cardoso"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_erval_seco",
+    "name": "Erval Seco - RS",
+    "territoryId": "4307302",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Erval Seco"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_ibiraiaras",
+    "name": "Ibiraiaras - RS",
+    "territoryId": "4309902",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Ibiraiaras"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_independencia",
+    "name": "Independência - RS",
+    "territoryId": "4310405",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Independência"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_ivora",
+    "name": "Ivorá - RS",
+    "territoryId": "4310751",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Ivorá"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_julio_de_castilhos",
+    "name": "Júlio de Castilhos - RS",
+    "territoryId": "4311205",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Júlio de Castilhos"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_lagoao",
+    "name": "Lagoão - RS",
+    "territoryId": "4311254",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Lagoão"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_nova_candelaria",
+    "name": "Nova Candelária - RS",
+    "territoryId": "4313011",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Nova Candelária"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_nova_hartz",
+    "name": "Nova Hartz - RS",
+    "territoryId": "4313060",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Nova Hartz"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_pinhal_grande",
+    "name": "Pinhal Grande - RS",
+    "territoryId": "4314472",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Pinhal Grande"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_piratini",
+    "name": "Piratini - RS",
+    "territoryId": "4314605",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Piratini"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_salto_do_jacui",
+    "name": "Salto do Jacuí - RS",
+    "territoryId": "4316451",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Salto do Jacuí"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_santana_da_boa_vista",
+    "name": "Santana da Boa Vista - RS",
+    "territoryId": "4317004",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Santana da Boa Vista"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_sao_valerio_do_sul",
+    "name": "São Valério do Sul - RS",
+    "territoryId": "4319737",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "São Valério do Sul"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rs_tapejara",
+    "name": "Tapejara - RS",
+    "territoryId": "4320909",
+    "stateCode": "RS",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "state",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/famurs/",
+          "cityName": "Tapejara"
         }
       }
     ]

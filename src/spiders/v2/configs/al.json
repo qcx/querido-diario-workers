@@ -1401,7 +1401,7 @@
     "name": "Palmeira dos Índios - AL",
     "territoryId": "2706307",
     "stateCode": "AL",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioio",
@@ -1527,7 +1527,7 @@
     "name": "Penedo - AL",
     "territoryId": "2706703",
     "stateCode": "AL",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diarioio",
@@ -1981,7 +1981,7 @@
     "name": "São Sebastião - AL",
     "territoryId": "2708808",
     "stateCode": "AL",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "sigpub-ac",
@@ -2128,7 +2128,7 @@
     "name": "União dos Palmares - AL",
     "territoryId": "2709301",
     "stateCode": "AL",
-    "active": true,
+    "active": false,
     "spiders": [
       {
         "spiderType": "diariomunicipalalwordpress",
