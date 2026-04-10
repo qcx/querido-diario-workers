@@ -40,6 +40,14 @@ HTTP Request
 | **Analysis** | Análise por IA (OpenAI) com detecção de concursos, licitações, decretos, etc. Seção-aware via V2 analyzers. |
 | **Webhook** | Filtra por assinaturas, faz match de keywords e entrega notificações para endpoints configurados. |
 
+#### Fluxo de Crawl
+
+![Fluxo de Crawl](docs/images/fluxo-crawl.png)
+
+#### Fluxo de Análise (OCR → Analysis → Webhook)
+
+![Fluxo de Análise](docs/images/fluxo-analise.png)
+
 ## Estrutura do Repositório
 
 ```
