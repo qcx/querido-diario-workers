@@ -122,12 +122,28 @@ O script de dev configura automaticamente D1, R2, tunnel e variáveis de ambient
 
 ### Variáveis de Ambiente (`.dev.vars`)
 
+Copie o `.dev.vars.example` e preencha com suas chaves:
+
+```bash
+cp .dev.vars.example .dev.vars
+```
+
 ```
 MISTRAL_API_KEY=sua-chave-mistral
 OPENAI_API_KEY=sua-chave-openai
 API_KEY=chave-opcional-para-proteger-endpoints
 R2_PUBLIC_URL=configurado-automaticamente-pelo-dev-script
+LOCAL_DB_PATH=caminho-para-seu-sqlite-local
+ENVIRONMENT=development
 ```
+
+Para o `LOCAL_DB_PATH`, você precisa encontrar o arquivo `.sqlite` gerado pelo Wrangler na sua máquina. Rode o worker pelo menos uma vez (`bun run goodfellow:dev`) para que a pasta `.wrangler` seja criada, e depois execute:
+
+```bash
+find .wrangler -name "*.sqlite"
+```
+
+O resultado será algo como `.wrangler/state/v3/d1/miniflare-D1DatabaseObject/<hash>.sqlite`. Use esse caminho como valor de `LOCAL_DB_PATH`.
 
 ### Deploy
 
@@ -231,19 +247,6 @@ curl https://goodfellow-prod.qconcursos.workers.dev/spiders \
 | [docs/QUICK_START.md](docs/QUICK_START.md) | Guia rápido |
 | [src/spiders/v2/README.md](src/spiders/v2/README.md) | Sistema de spiders (como testar, criar, operar) |
 | [src/analyzers/v2/README.md](src/analyzers/v2/README.md) | Sistema de análise V2 |
-
-## Estimativa de Custos
-
-Processando ~1.000 diários/dia:
-
-| Serviço | Custo estimado |
-|---------|---------------|
-| Cloudflare (Workers + Queues + KV + R2) | ~$10-20/mês |
-| Mistral OCR (~3-5 páginas/diário) | ~$300-600/mês |
-| OpenAI (análise de conteúdo) | ~$50-100/mês |
-| **Total** | **~$360-720/mês** |
-
-A deduplicação inteligente reduz custos de OCR em ~40% ao reutilizar resultados já processados.
 
 ## License
 

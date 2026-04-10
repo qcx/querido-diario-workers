@@ -259,19 +259,6 @@ Flags:
 
 Faz POST para `/crawl` com `version: 'v2'`, depois fica polling o D1 local para validar que `gazette_registry` e `ocr_results` foram preenchidos corretamente.
 
-### Encontrar uma cidade
-
-```bash
-bun run find:city <nome-ou-id>
-
-# Exemplos:
-bun run find:city manaus
-bun run find:city 1302603
-bun run find:city salvador
-```
-
-Busca por ID, nome ou código IBGE. Mostra matches exatos e parciais com tipo de spider, ID e comando de teste.
-
 ## Como Adicionar uma Cidade
 
 1. Identifique o **estado** e o **código IBGE** do município
