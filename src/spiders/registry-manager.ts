@@ -7,6 +7,7 @@ import { logger } from "../utils/logger";
 // V2 spider classes
 import { AcreSpider as V2AcreSpider } from "./v2/base/acre-spider";
 import { SigpubAcSpider } from "./v2/base/sigpub-ac";
+import { SigpubCsrfSpider } from "./v2/base/sigpub-csrf";
 import { AgapeSpider as V2AgapeSpider } from "./v2/base/agape-spider";
 import { KalanaSpider as V2KalanaSpider } from "./v2/base/kalana-spider";
 
@@ -803,6 +804,8 @@ export class SpiderRegistryManager {
       }
       case "sigpub-ac":
         return new SigpubAcSpider(config, dateRange) as unknown as BaseSpider;
+      case "sigpub-csrf":
+        return new SigpubCsrfSpider(config, dateRange) as unknown as BaseSpider;
       case "agape":
         return new V2AgapeSpider(config, dateRange) as unknown as BaseSpider;
       case "kalana": {

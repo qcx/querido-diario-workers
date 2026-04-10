@@ -27,7 +27,7 @@
     "active": true,
     "spiders": [
       {
-        "spiderType": "sigpub",
+        "spiderType": "sigpub-csrf",
         "priority": 1,
         "active": true,
         "gazetteScope": "city",
@@ -36,6 +36,279 @@
           "url": "https://www.diariomunicipal.com.br/amr/",
           "entityId": "38433",
           "cityName": "Rorainópolis"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rr_alto_alegre",
+    "name": "Alto Alegre - RR",
+    "territoryId": "1400050",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-csrf",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amr/",
+          "entityId": "38968",
+          "cityName": "Alto Alegre"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rr_amajari",
+    "name": "Amajari - RR",
+    "territoryId": "1400027",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-csrf",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amr/",
+          "entityId": "17520",
+          "cityName": "Amajari"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rr_bonfim",
+    "name": "Bonfim - RR",
+    "territoryId": "1400159",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-csrf",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amr/",
+          "entityId": "17605",
+          "cityName": "Bonfim"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rr_canta",
+    "name": "Cantá - RR",
+    "territoryId": "1400175",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-csrf",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amr/",
+          "entityId": "21758",
+          "cityName": "Cantá"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rr_caracarai",
+    "name": "Caracaraí - RR",
+    "territoryId": "1400209",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-csrf",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amr/",
+          "entityId": "19717",
+          "cityName": "Caracaraí"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rr_caroebe",
+    "name": "Caroebe - RR",
+    "territoryId": "1400233",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-csrf",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amr/",
+          "entityId": "18421",
+          "cityName": "Caroebe"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rr_iracema",
+    "name": "Iracema - RR",
+    "territoryId": "1400282",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-csrf",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amr/",
+          "entityId": "19797",
+          "cityName": "Iracema"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rr_mucajai",
+    "name": "Mucajaí - RR",
+    "territoryId": "1400308",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-csrf",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amr/",
+          "entityId": "17484",
+          "cityName": "Mucajaí"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rr_normandia",
+    "name": "Normandia - RR",
+    "territoryId": "1400407",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-csrf",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amr/",
+          "entityId": "21730",
+          "cityName": "Normandia"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rr_pacaraima",
+    "name": "Pacaraima - RR",
+    "territoryId": "1400456",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-csrf",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amr/",
+          "entityId": "2733411",
+          "cityName": "Pacaraima"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rr_sao_joao_da_baliza",
+    "name": "São João da Baliza - RR",
+    "territoryId": "1400506",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-csrf",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amr/",
+          "entityId": "17917",
+          "cityName": "São João da Baliza"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rr_sao_luiz_do_anaua",
+    "name": "São Luiz do Anauá - RR",
+    "territoryId": "1400605",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-csrf",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amr/",
+          "entityId": "22936",
+          "cityName": "São Luiz do Anauá"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rr_uiramuta",
+    "name": "Uiramutã - RR",
+    "territoryId": "1400704",
+    "stateCode": "RR",
+    "active": true,
+    "spiders": [
+      {
+        "spiderType": "sigpub-csrf",
+        "priority": 1,
+        "active": true,
+        "gazetteScope": "city",
+        "config": {
+          "type": "sigpub",
+          "url": "https://www.diariomunicipal.com.br/amr/",
+          "entityId": "377412",
+          "cityName": "Uiramutã"
         }
       }
     ]
